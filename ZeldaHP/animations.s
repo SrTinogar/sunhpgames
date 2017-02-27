@@ -1,0 +1,305 @@
+HPHP48-W,*pÓ
+%ANIM%%%%%%%%%%%%%%%%%
+% R0 R1 R2 R3 R4 B D %
+% R0 string data     %
+% R1 X               %
+% R2 Y               %
+% R3 datas           %
+% R4 frames          %
+%%%%%%%%%%%%%%%%%%%%%%
+
+**ANIMATION
+
+D0= 001C9 A=DAT0.A D0=A
+D0=D0+ 2
+AD0EX R0=A AD0EX
+
+A=DAT0.P R4=A % FRAME
+D0=D0- 1
+
+A=DAT0.P LC 1 ?A=C.P
+{ GOSUBL PRINCESS }
+
+D0= 001C9 A=DAT0.A D0=A
+D0=D0+ 1 D0=D0+ 8 
+AD0EX R0=A AD0EX
+
+A=DAT0.P LC 2 ?A=C.P
+{ GOSUBL MARIO }
+
+RTN
+
+**PRINCESS
+%%%%% ANIMATION %%%%%%
+
+D0= 001CE A=DAT0.P
+LC A ?A‹C.P
+{ A++.P DAT0=A.P RTN }
+
+C=0.P DAT0=C.P
+D0= 001C9 A=DAT0.A D0=A
+D0=D0+ 2 A=DAT0.P
+
+?A=0.P { LC 1 } ELSE
+{ C=0.P } DAT0=C.P
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+D0= 001C9 A=DAT0.A D0=A
+D0=D0+ 2
+A=DAT0.P R4=A % FRAME
+D0=D0+ 1
+A=0.A A=DAT0.B R1=A %X
+D0=D0+ 2
+A=0.A A=DAT0.B R2=A %Y
+
+?ST=1.12
+{ C=R2 LA 00030
+?C<A.A { RTN } ELSE
+{ C=C-A.A R2=C } }
+
+A=0.A A=R4.P
+
+A=A+A.A C=A.A A=A+A.A
+A=A+C.A A=A+A.A %*12
+
+ASL.A % * 16 = 160
+B=A.A
+
+%%%%%% P1 GROB' %%%%%%
+D0= 001DA A=DAT0.A
+D0=A C=DAT0.A
+A=A+C.A A=A+10.A
+C=A.A C=C+B.A D=C.A
+
+%%%%%%%%%%%%%%%%%%%%%%
+% 00180.B = X.LINK   %
+% 00182.B = Y.LINK   %
+% R1 = X.PERSO       %
+% R2 = Y.PERSO       %
+%%%%%%%%%%%%%%%%%%%%%%
+
+ST=0.0 ST=0.1
+
+D0= 00180 A=DAT0.B
+C=R1 ?A<C.B
+{ ACEX.B ST=1.0 }
+
+A=A-C.B B=A.B %_X_%
+
+D0= 00182 A=DAT0.B
+C=R2 ?A<C.B
+{ ACEX.B ST=1.1 }
+
+A=A-C.B %_Y_%
+
+C=B.B
+
+?A<C.B
+{
+
+?ST=1.0
+{ LC 00480 } % GAUCHE
+ELSE
+{ LC 00180 } % DROITE
+
+} ELSE {
+
+?ST=1.1
+{ LC 00300 } % HAUT
+ELSE
+{ LC 00000 } % BAS
+}
+
+C=C+D.A R3=C % DATA
+
+GOSUB SOLS
+$0000000060000000007000000000FFFFC100000000000003000000000830FFFF0000000000000000000000000000000000000000000000000000000000000000
+*SOLS
+C=RSTK R4=C % SOL.X
+
+%%%%% MASK1 DISP %%%%%
+
+D0= 00176
+GOSUBL (X,Y)2 D0=A
+
+C=R3 D1=C D1=D1+ 8
+GOSUBL MASK2
+
+%%%%% FIRST DISP %%%%%
+
+D0= 00176
+GOSUBL (X,Y)2 D0=A
+
+C=R3 D1=C
+GOSUBL DISP2
+
+%%%%% MASK2 DISP %%%%%
+
+D0= 00162
+GOSUBL (X,Y)2 D0=A
+
+C=R3 D1=C D1=D1+ 8
+GOSUBL MASK2
+
+%%%% SECOND DISP %%%%%
+
+D0= 00162
+GOSUBL (X,Y)2 D0=A
+
+C=R3 D1=C D1=D1+ 4
+GOSUBL DISP2
+
+RTN
+
+**MARIO
+%%%%% ANIMATION %%%%%%
+
+D0= 001CF A=DAT0.P
+LC A ?A‹C.P
+{ A++.P DAT0=A.P RTN }
+
+C=0.P DAT0=C.P
+A=R0 AD0EX D0=D0+ 1
+A=DAT0.P
+
+?A=0.P { LC 1 } ELSE
+{ C=0.P } DAT0=C.P
+%%%%%%%%%%%%%%%%%%%%%%
+
+A=R0 AD0EX D0=D0+ 2
+A=0.A A=DAT0.B R1=A %X
+D0=D0+ 2
+A=0.A A=DAT0.B R2=A %Y
+
+?ST=1.12
+{ C=R2 LA 00030
+?C<A.A { RTN } ELSE
+{ C=C-A.A R2=C } }
+
+%%%%%% P1 GROB' %%%%%%
+D0= 001DA A=DAT0.A
+D0=A C=DAT0.A
+A=A+C.A A=A+5.A
+D0=A C=DAT0.A
+A=A+C.A A=A+10.A
+C=A.A D=C.A
+
+%%%%%%%%%%%%%%%%%%%%%%
+% 00180.B = X.MARIO  %
+% 00182.B = Y.MARIO  %
+% R1 = X.PERSO       %
+% R2 = Y.PERSO       %
+%%%%%%%%%%%%%%%%%%%%%%
+
+ST=0.0
+
+D0= 00180 A=DAT0.B
+C=R1 ?A<C.B
+{ ACEX.B ST=1.0 }
+
+A=A-C.B B=A.B %_X_%
+
+D0= 00182 A=DAT0.B
+C=R2 ?A<C.B
+{ ACEX.B }
+
+A=A-C.B %_Y_%
+C=B.B
+
+?A<C.B
+{
+?ST=1.0
+{ LC 00000 } % GAUCHE
+ELSE
+{ LC 00180 } % DROITE
+} ELSE {
+LC 000C0  % BAS
+}
+
+C=C+D.A R3=C % DATA
+
+GOSUB SOLS2
+$0000000060000000007000000000FFFFC100000000000003000000000830FFFF0000000000000000000000000000000000000000000000000000000000000000
+*SOLS2
+C=RSTK R4=C % SOL.X
+
+%%%%% MASK1 DISP %%%%%
+
+D0= 00176
+GOSUBL (X,Y)2 D0=A
+
+C=R3 D1=C D1=D1+ 8
+GOSUBL MASK2
+
+%%%%% FIRST DISP %%%%%
+
+D0= 00176
+GOSUBL (X,Y)2 D0=A
+
+C=R3 D1=C
+GOSUBL DISP2
+
+%%%%% MASK2 DISP %%%%%
+
+D0= 00162
+GOSUBL (X,Y)2 D0=A
+
+C=R3 D1=C D1=D1+ 8
+GOSUBL MASK2
+
+%%%% SECOND DISP %%%%%
+
+D0= 00162
+GOSUBL (X,Y)2 D0=A
+
+C=R3 D1=C D1=D1+ 4
+GOSUBL DISP2
+RTN
+
+**(X,Y)2
+A=DAT0.A C=R2 B=C.A
+CSL.A C=C+B.A C=C+C.A
+A=A+C.A C=R1 CSRB.A
+CSRB.A A=A+C.A
+RTN
+
+**MASK2
+LC F D=C.P
+C=R4 B=C.A
+
+DO {
+AD0EX C=B.A D0=C
+C=DAT0.A AD0EX
+
+A=0.A A=DAT1.4
+A=-A-1.A A=A&C.A
+P= 3 DAT0=A.WP P= 0
+
+D0=D0+ 34
+D1=D1+ 12
+B=B+4.A
+
+D--.P
+} WHILENC
+
+C=B.A R4=C
+RTN
+
+**DISP2
+LC F  D=C.P
+
+DO {
+A=0.A A=DAT1.4
+C=DAT0.A A=A!C.A
+DAT0=A.A
+
+D1=D1+ 12
+D0=D0+ 34
+
+D--.P
+} WHILENC
+RTN
+
+
+@
