@@ -15,26 +15,6 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %														%
-%	I have distributed this source code to show you why WARIOHP is a SHAREWARE	%
-%	game. Only ONE bad instruction then it is a MEMORY CLEAR for your HP48 ..	%
-%	Yes, only one bad instruction among millions I have written in this source.	%
-%	If you play and like this game, or if you want the re-usable source code	%
-%	with all gfxs, sounds, etc.. and the compiler then send me: $10 US at the	%
-%	following address:										%
-%														%
-%					Julien MEYER - HP48						%
-%					1 RUE DU PETIT BIARD						%
-%					95690 LABBEVILLE FRA						%
-%														%
-%	You may send to me an e-mail before registrering the game: sunhp@chez.com	%
-%	You have to send to me your mail address or e-mail to receive all files !!	%
-%														%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%														%
 %	FOR REGISTERED USER ONLY:									%
 %														%
 %	This is the WarioHP computer source. If you want to assemble the source,	%
