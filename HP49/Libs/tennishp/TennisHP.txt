@@ -1,0 +1,47 @@
+		*****************************************
+		*					*
+		*	      Tennis HP v1.0		*
+		* 	Copyright (c) 1997/99 Jadeware  *
+		*					*
+		*****************************************
+
+			This game is a freeware.
+
+		Tennis HP is a new sport game in grayscale for HP49G.
+		You play a tennis battle: Player1 Vs Player2
+		using these following keys:
+
+
+		FOR HP48 VERSION ONLY:
+		======================
+
+			 |--------|-----|-----|
+			 | Player | ONE | TWO |
+			 |--------|-----|-----|
+			 | UP     | [G] | [L] |
+			 | DOWN   | [S] | [X] |
+			 | RUN    | [N] | [Q] |
+			 |--------|-----|-----|
+
+
+		FOR HP49 VERSION ONLY:
+		======================
+
+			 |--------|-----|------|
+			 | Player | ONE | TWO  |
+			 |--------|-----|------|
+			 | UP     | [G] | [UP] |
+			 | DOWN   | [M] | [DW] |
+			 | RUN    | [K] | [RG] |
+			 |--------|-----|------|
+
+
+		Press [DROP] key to quit the game.
+		The play is over when a player gets 10 points.
+
+			      HAVE FUN !!
+
+	-----------------------------------------------------------
+	Julien MEYER - Alias: SunHP e-mail: jadeware@gmail.com
+		     Web site: http://www.jadegame.com
+	-----------------------------------------------------------

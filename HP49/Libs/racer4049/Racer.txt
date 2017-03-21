@@ -1,0 +1,53 @@
+	*****************************************
+	*	      RACER GX v1.1		*
+	* 		by SunHP		*
+	*****************************************
+
+		Copyright (c) 1997 by SunHP
+
+
+	This game is a Racing Freeware game.
+It looks like Micro-Machines, There are multi-tracks
+with best record for each one. If you put your name
+somewhere for a new time record, your name will be 
+writted in RACER game until somebody else beat your
+time record. So play RACER, and distribute it so we
+could see who is the best RACER player !!
+
+	You may be the RACER Championship winner !!
+
+RACER is a program for the HP48GX. It doesn't work in 
+port, only in HOME variable.
+
+		HOW to play RACER GAME:
+
+	First, when RACER appears, hit [B] to START
+a new game; hit [F] to quit RACER.
+When you start a new game, you can select one of 32 RACER
+tracks using [A] and [B] keys to choose. For each track,
+you could see best lap time, and the winner name. It
+looks like: 
+		Track #02
+		Best Lap: 00:06: 25
+		Name: HORN
+
+	When you track selection is done, hit [ENTER] and
+prepare to RACER Championship.. The Race begin !!
+You controle you RACER CAR with: [7] LEFT [8] RIGHT keys,
+and you Speed UP using [6] key.
+
+When you are racering, and when you want to return to RACER
+track selection's, hit [DROP] key to stop RACER Race.
+If your Lap Time is the best one, you may enter your pilot
+Name (only 4 letters) using arrows keys to choose a letter,
+and [ENTER] to write a letter.
+
+	This game is still under improvements, so I hope
+there aren't any problem using RACER 1.1 I hope the next
+RACER 2.0 version will run on HP48G.
+
+			Enjoy it !
+
+		Julien MEYER - SunHP
+
+E-mail: jadeware@gmail.com   Web: http://www.jadegame.com

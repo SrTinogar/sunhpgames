@@ -1,0 +1,100 @@
+		*************************************************
+		*						*
+		*		ANDROID for 48 & 49G		*
+		*		(c) Jadeware 1998/99		*
+		*						*
+		*************************************************
+
+	Well, you get ANDROID zip file, and now you want to play it.
+
+
+ONLY FOR THE 49G VERSION
+========================
+
+		[G] + [KPQR] make a hole in order to stop the ennemy
+		[R] Retry a level
+		[DROP] Back to the presentation
+
+
+ONLY FOR THE 48G VERSION
+========================
+
+		1) INSTALLATION
+
+	You've sent ANDROID.LIB on your HP48G(X) using Kermit or
+	Xmodem. ANDROID is a library object. Put it on the stack
+	then do BYTES. You must see:
+
+			2: 	  #ABD1h
+			1: 	   13428
+
+	If you don't, the file is corrupted, try to download another
+	version (at my site: http://www.jadeware.org) and retry.
+
+	Recall the library object in the stack, purge the variable
+	then do 0 (or 1 to install in unlocked Ram Card) then STO.
+	Turn OFF, then ON your HP48G(X). ANDROID is now installed.
+	Goto Library menu using [Right shift] + [2] and [NXT] until
+	you see ANDROID. You can play it right now.
+
+		2) ABOUT ANDROID.LIB
+
+	You may see 3 files in ANDROID.LIB They are:
+
+		[ANDROID] the video game
+		[EDITANDRO] the editor
+		[Info] More info in French about the game.
+
+		3) ANDROID
+
+	When you run ANDROID, during presentation hit [ENTER] to start
+	a new game, and [DROP] to stop playing ANDROID.
+	During a new game, ANDROID keys are:
+
+		[KPQR] move android
+		[ENTER] + [KPQR] make a hole in order to stop the ennemy
+		[DEL] Pause the game ON/OFF
+		[DROP] Retry a level
+		[ON] Back to the presentation
+
+	You start playing ANDROID with 6 lifes. You lose one life when
+	an ennemy cautch you. You have to pick up many presents in order
+	to get married with DAISY !! When you have picked up all presents
+	in the level, you may escape it in the Black Door. The game is
+	over when you lost all your lifes, or when you've finish all levels.
+
+		4) EDITANDRO
+
+	ANDROID game comes with his own level editor's in order to let you
+	editing your own new levels. All you have to do is to run EDITANDRO
+	The editor keys are:
+		
+		[KPQR] to move the cursor
+		{ [+] [-] } to choose a block
+		[+/-] to draw a block
+		[ENTER] Quit and Save
+
+	Play your new level(s) right now! Save them in ram, then put them
+	into the stack and run ANDROID. If you made great new levels,
+	please send them to me by e-mail, I probably put them into a next
+	game version :-)
+
+		5) Informations
+
+	You could see a summary in French of what I said here.
+
+
+	I wish you will enjoy playing ANDROID as much as I enjoyed
+	program it. If you have any remarks, please feel free to send
+	me an e-mail.
+
+
+
+			Enjoy it !
+
+
+		   Julien MEYER - Alias: SunHP
+
+----------------------------------------------------------------------------
+Mail: 	1 Rue du Petit Biard		E-mail: meyert@club-internet.fr
+	95690 Labbeville FRANCE		Web: http://www.chez.com/sunhp
