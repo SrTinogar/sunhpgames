@@ -1,0 +1,10 @@
+Bad characteres convertion
+==========================
+
+ç is ->
+ã is #
+ä is >=
+
+
+
+
