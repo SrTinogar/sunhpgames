@@ -6,16 +6,6 @@
 | www.jadeware.org
 \**************************/
 
-PS:je n'ai pas de HP49, juste un emulateur ..
-Aidez-moi à en acheter une.. j'ai fais un
-jeu: SuperMarioHP en shareware (50FF).
-
-*=======================*
-Julien Meyer
-1 rue du petit BIARD
-95690 LABBEVILLE FRANCE
-*=======================*
-
 
 =CLEARLCD	EQU	#261C5
 =MENUOFF	EQU	#2EEFC

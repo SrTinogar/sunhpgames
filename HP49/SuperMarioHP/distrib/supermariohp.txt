@@ -8,7 +8,7 @@
 		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-	SuperMarioHP is a new fast arcade SHAREWARE game for your Hp48g(X).
+	SuperMarioHP is a new fast arcade FREEWARE game for your Hp48g(X).
 
 
 Presentation
