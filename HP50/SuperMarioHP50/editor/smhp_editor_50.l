@@ -1,4 +1,4 @@
-Saturn Assembler                                       Thu Mar 23 00:45:54 2017
+Saturn Assembler                                       Thu Mar 23 00:51:23 2017
 V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    1
 
     1               * File  smhp_editor_50.s        1
@@ -265,7 +265,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
   261 0020D 818F01          A=A+    2       A
   262 00213 81AF02          R2=A.f  A
   263               * File  smhp_editor_50.s        105
-  264 00219 8E0000          GOSUBL  =CURSOR
+  264 00219 8E76FF          GOSUBL  =JUCURSOR
   265               * File  smhp_editor_50.s        106
   266 0021F 01              RTN
   267               * File  smhp_editor_50.s        107
@@ -302,7 +302,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
   298 00267 818F81          A=A-    2       A
   299 0026D 81AF02          R2=A.f  A
   300               * File  smhp_editor_50.s        118
-  301 00273 8E0000          GOSUBL  =CURSOR
+  301 00273 8ED0FF          GOSUBL  =JUCURSOR
   302               * File  smhp_editor_50.s        119
   303 00279 01              RTN
   304               * File  smhp_editor_50.s        120
@@ -345,7 +345,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
   341               * File  smhp_editor_50.s        133
   342 002CE 81AF02          R2=A.f  A
   343               * File  smhp_editor_50.s        134
-  344 002D4 8E0000          GOSUBL  =CURSOR
+  344 002D4 8ECAEF          GOSUBL  =JUCURSOR
   345               * File  smhp_editor_50.s        135
   346 002DA 01              RTN
   347               * File  smhp_editor_50.s        136
@@ -385,7 +385,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
   381               * File  smhp_editor_50.s        148
   382 0032B 81AF02          R2=A.f  A
   383               * File  smhp_editor_50.s        149
-  384 00331 8E0000          GOSUBL  =CURSOR
+  384 00331 8EF4EF          GOSUBL  =JUCURSOR
   385               * File  smhp_editor_50.s        150
   386 00337 01              RTN
   387               * File  smhp_editor_50.s        151
@@ -5665,7 +5665,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
  5655 01A1F 14B             A=DAT1  B
  5656 01A22 148             DAT0=A  B
  5657               * File  smhp_editor_50.s        372
- 5658 01A25 8E0000          GOSUBL  =CURSOR
+ 5658 01A25 8EB57E          GOSUBL  =JUCURSOR
  5659               * File  smhp_editor_50.s        373
  5660 01A2B 01              RTN
  5661               * File  smhp_editor_50.s        374
@@ -5958,7 +5958,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
  5942 01C60 00000           CON(5)  =SEMI
  5943               * File  smhp_editor_50.s        481
  5944 01C65 00000           CON(5)  =@
-Saturn Assembler                                       Thu Mar 23 00:45:54 2017
+Saturn Assembler                                       Thu Mar 23 00:51:23 2017
 V3.0.9 (04/15/2007)   Symbol Table                       smhp_editor_50 Page    2
 
  @                                 Ext                   -  5944
@@ -5970,8 +5970,6 @@ V3.0.9 (04/15/2007)   Symbol Table                       smhp_editor_50 Page    
                                         1039  1070
 =CUBE.M                            Rel    1614 #0000064E -  1045   115
 =CUBE.P                            Rel    1550 #0000060E -  1019   113
- CURSOR                            Ext                   -   264   301   344
-                                         384  5658
 =D.BLOC                            Rel    6012 #0000177C -  5289   972
 =D.PIT                             Rel    6275 #00001883 -  5397   976
 =D.SIZE                            Rel    6216 #00001848 -  5373   974
@@ -5995,7 +5993,8 @@ V3.0.9 (04/15/2007)   Symbol Table                       smhp_editor_50 Page    
                                         5363  5387  5412
 =INC                               Rel    6119 #000017E7 -  5330  5336
 =INI.STACK                         Rel    1683 #00000693 -  1076    74
-=JUCURSOR                          Rel     390 #00000186 -   192   123
+=JUCURSOR                          Rel     390 #00000186 -   192   123   264
+                                         301   344   384  5658
 =JUL1                              Abs     296 #00000128 -    17    79   157
 =JUL2                              Abs     288 #00000120 -    19    89
 =KEY                               Abs     527 #0000020F -    25   140   149
@@ -6125,7 +6124,7 @@ V3.0.9 (04/15/2007)   Symbol Table                       smhp_editor_50 Page    
  lBloB1Es                          Rel    1848 #00000738 -  1153  1153  1149
  lBloB1F                           Rel    1896 #00000768 -  1182
  lBloB1Fs                          Rel    5990 #00001766 -  5280  5280  1182
-Saturn Assembler                                       Thu Mar 23 00:45:54 2017
+Saturn Assembler                                       Thu Mar 23 00:51:23 2017
 V3.0.9 (04/15/2007)   Statistics                         smhp_editor_50 Page    3
 
 Input Parameters
