@@ -1,0 +1,104 @@
+/SLOAD:  Problem reading file _head.o
+/SLOAD:  Problem reading file _table.o
+/SLOAD:  Problem reading file _end.o
+Saturn Loader, Ver. version 3.0.9, 08/03/10
+
+
+Output Module:
+Module=smhp50ed.o
+  Start=00000 End=01C87 Length=01C88   Symbols=  56 References= 138
+  Date=Thu Mar 23 00:45:54 2017   Title=
+
+
+Source modules:
+Module=smhp_editor_50.o
+  Start=00000 End=01C69 Length=01C6A
+  Date=Thu Mar 23 00:45:54 2017   Title=                                        Thu Mar 23 00:45:54 2017
+
+Module=_config.o
+  Start=01C6A End=01C87 Length=0001E
+  Date=Thu Mar 23 00:45:54 2017   Title=                                        Thu Mar 23 00:45:54 2017
+
+Saturn Cross Reference Listing
+
+@                                *       - 01C65
+
+B                                = 0000F - 00032 00638 00663 0179A 01A1A 01A9F
+BCL                              * 01A9D - 01B2C 01B73
+
+CL.MEM                           * 0015F - 00089
+CONFIG                           * 01C6A -
+CUBE                             * 005D2 - 000B1 005AE 00648 0068D
+CUBE.M                           * 0064E - 000D5
+CUBE.P                           * 0060E - 000CF
+CURSOR                           *       - 0021B 00275 002D6 00333 01A27
+
+D.BLOC                           * 0177C - 005B4
+D.PIT                            * 01883 - 005C0
+D.SIZE                           * 01848 - 005BA
+D.X                              * 017B7 - 005C6
+D.Y                              * 0180D - 005CC
+DAT                              * 01983 - 0191F
+DISP.LEVEL                       * 01A2D - 000AB 01C0C 01C57
+DISP_N                           * 018C1 - 017B3 01809 01844 0187F 018BD 01918
+DOBINT                           *       - 01C74
+DOCODE                           *       - 00005
+DOCOL                            *       - 00000 01C6A
+DSP                              * 018D9 -
+
+EC1                              = 00000 - 00068 0008F 00161 00574 005DD 0177E
+                                 + 017B9 0180F 0184A 01885 01A2F 01B8D
+
+GETPTR                           *       - 00695 0071D
+GETPTRLOOP                       *       - 0015A
+GET_DAT                          * 0191D - 018C3
+
+HEXDCW                           = 2DEAA - 017A4 017FA 01835 01870 018AE
+HOMEDIR                          *       - 01C6F
+
+INC                              * 017E7 - 017F5
+INI.STACK                        * 00693 - 00072
+
+JUCURSOR                         * 00186 - 000E7
+JUL1                             = 00128 - 0007F 0013C
+JUL2                             = 00120 - 00099
+
+KEY                              = 0020F - 00116 00129 001C7 00228 00282 002E3
+                                 + 00615 00655 01991 01BC4 01C1C
+
+LCD                              * 000B5 - 0010B
+
+MKS                              * 006D9 - 006B0 006C2 006D3
+MKSTR                            = 05B7D - 00057 006DD
+
+NCURSER                          * 00194 - 001F3 0024D 002AB 00308 019D8
+
+QUIT                             * 00122 - 00131 00735
+
+RomId                            = 00200 -
+
+S                                = 00014 - 0003C 017DF 018A1 019A9 01B7A 01BD2
+                                 + 01C2A
+SAVPTR                           *       - 00011 0069C 0072F 00740
+SEMI                             *       - 01C60 01C83
+
+TAB                              * 00367 - 000B7
+TB                               * 0027B - 000FF
+TD                               * 001C0 - 000ED
+TDRAW                            * 0198A - 000C9
+TG                               * 00221 - 000F3
+TH                               * 002DC - 000F9
+TNEXT                            * 01BBD - 000BD
+TPREV                            * 01C15 - 000C3
+TQ                               * 0010F - 00105
+
+X                                = 00005 - 0001E 001D5 001F9 00236 00253 0033D
+                                 + 017D5 0199F 01A53
+X2                               = 00019 - 00046 0075A 01866 01BDC
+XEQSETLIB                        *       - 01C7E
+XY                               * 00339 - 0019C 019ED
+
+Y                                = 0000A - 00028 00290 002B1 002F1 0030E 0034D
+                                 + 0182B 01A6F
+
+/SLOAD:  End of Saturn Loader Execution
