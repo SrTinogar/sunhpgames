@@ -3,23 +3,23 @@ Saturn Loader, Ver. version 3.0.9, 08/03/10
 
 Output Module:
 Module=smhp50ed.o
-  Start=00000 End=0135D Length=0135E   Symbols=  52 References= 144
-  Date=Thu Mar 23 23:48:53 2017   Title=
+  Start=00000 End=01385 Length=01386   Symbols=  52 References= 145
+  Date=Fri Mar 24 00:35:52 2017   Title=
 
 
 Source modules:
 Module=smhp_editor_50.o
-  Start=00000 End=0135D Length=0135E
-  Date=Thu Mar 23 23:48:53 2017   Title=                                        Thu Mar 23 23:48:53 2017
+  Start=00000 End=01385 Length=01386
+  Date=Fri Mar 24 00:35:52 2017   Title=                                        Fri Mar 24 00:35:52 2017
 
 Saturn Cross Reference Listing
 
-@                                *       - 01359
+@                                *       - 01381
 
 AF                               * 001F0 - 00146 00175
 
-B                                = 80114 - 00048 00708 00751 00EBE 0113E 011C3
-BCL                              * 011C1 - 01250 01297
+B                                = 80114 - 00048 00708 00751 00EBE 01142 011C7
+BCL                              * 011C5 - 01278 012BF
 
 CUBE                             * 006B7 - 00120 00693 00736 0077B
 CUBE.M                           * 0073C - 001C2
@@ -31,7 +31,7 @@ D.SIZE                           * 00F6C - 0069F
 D.X                              * 00EDB - 006AB
 D.Y                              * 00F31 - 006B1
 DAT                              * 010A7 - 01043
-DISP.LEVEL                       * 01151 - 0011A 01300 0134B
+DISP.LEVEL                       * 01155 - 0011A 01328 01373
 DISP_N                           * 00FE5 - 00ED7 00F2D 00F68 00FA3 00FE1 0103C
 DOCODE                           *       - 00005
 DOCOL                            *       - 00000
@@ -40,7 +40,7 @@ DSP                              * 00FFD -
 EC0                              = 80100 - 00020 00096 000A0 00106 001F2
 EC1                              = 80105 - 0002A 000DA 000E4 00139 0015F 0018E
                                  + 00277 00659 006C2 00EA2 00EDD 00F33 00F6E
-                                 + 00FA9 01153
+                                 + 00FA9 0110B 01157
 
 FINALQUIT                        * 0023B -
 
@@ -54,10 +54,10 @@ HEXDCW                           = 2DEAA - 00EC8 00F1E 00F59 00F94 00FD2
 INC                              * 00F0B - 00F19
 INI.STACK                        * 00781 - 00066
 
-JUCURSOR                         * 00267 - 001C8 00300 0035A 003BB 00418 0114B
+JUCURSOR                         * 00267 - 001C8 00300 0035A 003BB 00418 0114F
 
 KEY                              = 0020F - 0021E 00231 002AC 0030D 00367 003C8
-                                 + 006FA 00743 010B5 012B8 01310
+                                 + 006FA 00743 010B5 012E0 01338
 
 LCD                              * 00124 - 001EC
 
@@ -68,11 +68,11 @@ NCURSER                          * 00275 - 002D8 00332 00390 003ED 010FC
 
 QUIT                             * 0022A - 00239 00823
 
-S                                = 80119 - 00052 00F03 00FC5 010CD 0129E 012C6
-                                 + 0131E
+S                                = 80119 - 00052 00F03 00FC5 010CD 012C6 012EE
+                                 + 01346
 SAVPTR                           *       - 00011 0078A 0081D 0082E
 SCREENADD                        = 00120 - 00110 00258
-SEMI                             *       - 01354
+SEMI                             *       - 0137C
 
 TAB                              * 0044C - 001A4
 TB                               * 00360 - 001E0
@@ -80,16 +80,16 @@ TD                               * 002A5 - 001CE
 TDRAW                            * 010AE - 001B6
 TG                               * 00306 - 001D4
 TH                               * 003C1 - 001DA
-TNEXT                            * 012B1 - 001AA
-TPREV                            * 01309 - 001B0
+TNEXT                            * 012D9 - 001AA
+TPREV                            * 01331 - 001B0
 TQ                               * 00217 - 001E6
 
 X                                = 8010A - 00034 002BA 002DE 0031B 00338 00422
-                                 + 00EF9 010C3 01177
-X2                               = 8011E - 0005C 00848 00F8A 012D0
-XY                               * 0041E - 00281 01111
+                                 + 00EF9 010C3 0117B
+X2                               = 8011E - 0005C 00848 00F8A 012F8
+XY                               * 0041E - 00281 01115
 
 Y                                = 8010F - 0003E 00375 00396 003D6 003F3 00432
-                                 + 00F4F 01193
+                                 + 00F4F 01197
 
 /SLOAD:  End of Saturn Loader Execution
