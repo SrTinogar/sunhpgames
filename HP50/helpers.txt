@@ -5,6 +5,23 @@ Bad characteres convertion
 ã is #
 ä is >=
 
+Address :
+
+HP48 -> HP50
+00120 -> 
+(Screen)
+
+00128 ->
+(Menu height)
+
+
+
+00128
+
+DC HEXDCW 2DEAA
+DC KEY    0020F
+DC MKSTR  05B7D
+
 
 
 
