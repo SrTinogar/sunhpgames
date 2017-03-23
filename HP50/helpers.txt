@@ -29,5 +29,10 @@ DC KEY    0020F
 DC MKSTR  05B7D
 
 
+Un écran HP48 mesure en mémoire 136x64 = 8704b = 2176q = #880h
+Un écran HP50 mesure en mémoire 136x80 = 10880b = 2720q = #AA0h
+
+
+
 
 
