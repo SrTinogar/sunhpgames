@@ -40,6 +40,8 @@ D0=(5)B DAT0=A.A
 D0=(5)S DAT0=A.A
 D0=(5)X2 DAT0=A.A
 
+GOSUBL INI.STACK
+
 LA 3F D0=(5)HEADERADD DAT0=A.B % set menu heigh to 0
 
 % create offscreen surface and store address
@@ -59,12 +61,7 @@ A=0.W
 { DAT0=A.W D0+16 C-1.X UPNC }
 
 
-GOSUBL INI.STACK
-
-%GOTO FINALQUIT
-
 GOSUBL DISP.LEVEL
-
 
 
 GOSUBL CUBE
@@ -80,11 +77,13 @@ GOSUBL CUBE.M
 LC 04000 { C-1.A UPNC }  % Slow up !
 
 GOSUBL JUCURSOR
+
 GOSUBL TD      % detect move right
 GOSUBL TG      % detect move left
 GOSUBL TH      % detect move up
 GOSUBL TB      % detect move down
 GOSUBL TQ      % detect press quit
+
 GOLONG LCD
 
 *TQ

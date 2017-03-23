@@ -4,13 +4,13 @@ Saturn Loader, Ver. version 3.0.9, 08/03/10
 Output Module:
 Module=smhp50ed.o
   Start=00000 End=012AB Length=012AC   Symbols=  50 References= 134
-  Date=Thu Mar 23 13:00:29 2017   Title=
+  Date=Thu Mar 23 16:42:17 2017   Title=
 
 
 Source modules:
 Module=smhp_editor_50.o
   Start=00000 End=012AB Length=012AC
-  Date=Thu Mar 23 13:00:29 2017   Title=                                        Thu Mar 23 13:00:29 2017
+  Date=Thu Mar 23 16:42:17 2017   Title=                                        Thu Mar 23 16:42:17 2017
 
 Saturn Cross Reference Listing
 
@@ -35,7 +35,7 @@ DOCODE                           *       - 00005
 DOCOL                            *       - 00000
 DSP                              * 00F1B -
 
-EC1                              = 80100 - 00020 00086 00090 000AA 00577 005E0
+EC1                              = 80100 - 00020 0008C 00096 000B0 00577 005E0
                                  + 00DC0 00DFB 00E51 00E8C 00EC7 01071 011CF
 
 FINALQUIT                        * 0015D -
@@ -44,11 +44,11 @@ GETPTR                           *       - 006A1 00729
 GETPTRLOOP                       *       - 00184
 GET_DAT                          * 00F5F - 00F05
 
-HEADERADD                        = 00128 - 00063 00166
+HEADERADD                        = 00128 - 00069 00166
 HEXDCW                           = 2DEAA - 00DE6 00E3C 00E77 00EB2 00EF0
 
 INC                              * 00E29 - 00E37
-INI.STACK                        * 0069F - 000CF
+INI.STACK                        * 0069F - 0005C
 
 JUCURSOR                         * 00189 - 00111 0021E 00278 002D9 00336 01069
 
@@ -57,7 +57,7 @@ KEY                              = 0020F - 00140 00153 001CA 0022B 00285 002E6
 
 LCD                              * 000DF - 00135
 
-MAKE$N                           *       - 00074 006E9
+MAKE$N                           *       - 0007A 006E9
 MKS                              * 006E5 - 006BC 006CE 006DF
 
 NCURSER                          * 00197 - 001F6 00250 002AE 0030B 0101A
@@ -67,7 +67,7 @@ QUIT                             * 0014C - 0015B 00741
 S                                = 80114 - 00048 00E21 00EE3 00FEB 011BC 01214
                                  + 0126C
 SAVPTR                           *       - 00011 006A8 0073B 0074C
-SCREENADD                        = 00120 - 0009A 0017A
+SCREENADD                        = 00120 - 000A0 0017A
 SEMI                             *       - 012A2
 
 TAB                              * 0036A - 000E1
