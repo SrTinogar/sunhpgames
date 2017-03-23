@@ -4,6 +4,9 @@ Bad characteres convertion
 ç is ->
 ã is #
 ä is >=
+‹ is #
+Š is >=
+‰ is <=
 
 Address :
 
@@ -13,6 +16,9 @@ HP48 -> HP50
 
 00128 ->
 (Menu height)
+
+05B7D -> 05B7D
+(Make String)
 
 
 
