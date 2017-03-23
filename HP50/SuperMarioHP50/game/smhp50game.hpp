@@ -26,3 +26,9 @@ DirPath=
 RPL_INCLUDE=
 SasmParams=
 LRFiles=
+[Files]
+file1=smhp_game_50.s
+[Edit]
+edit2=>smhp_game_50.s
+edit3=C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\editor\smhp_editor_50.s
+edit4=smhp_game_50.l

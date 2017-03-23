@@ -1,245 +1,245 @@
-Saturn Assembler                                       Thu Mar 23 15:15:07 2017
+Saturn Assembler                                       Thu Mar 23 15:17:47 2017
 V3.0.9 (04/15/2007)                                      smhp_game_50.a Page    1
 
-    1               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1
+    1               * File  smhp_game_50.s  1
     2
-    3               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2
+    3               * File  smhp_game_50.s  2
     4 00000 00000           CON(5)  =DOCOL
-    5               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     3
+    5               * File  smhp_game_50.s  3
     6 00005 00000           CON(5)  =DOCODE
     7 0000A 9E740           REL(5)  LBL000
-    8               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     4
+    8               * File  smhp_game_50.s  4
     9
-   10               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     5
-   11               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     6
-   12               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     7
-   13               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     8
-   14               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     9
-   15               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     10
-   16               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     11
-   17               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     12
-   18               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     13
+   10               * File  smhp_game_50.s  5
+   11               * File  smhp_game_50.s  6
+   12               * File  smhp_game_50.s  7
+   13               * File  smhp_game_50.s  8
+   14               * File  smhp_game_50.s  9
+   15               * File  smhp_game_50.s  10
+   16               * File  smhp_game_50.s  11
+   17               * File  smhp_game_50.s  12
+   18               * File  smhp_game_50.s  13
    19
-   20               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     14
-   21               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     15
+   20               * File  smhp_game_50.s  14
+   21               * File  smhp_game_50.s  15
    22
-   23               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     16
+   23               * File  smhp_game_50.s  16
    24               =CRC    EQU     #00104
-   25               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     17
+   25               * File  smhp_game_50.s  17
    26               =SCREENADD      EQU     #00120
-   27               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     18
+   27               * File  smhp_game_50.s  18
    28               =HEADERADD      EQU     #00128
-   29               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     19
+   29               * File  smhp_game_50.s  19
    30               =HEXDCW EQU     #2DEAA
-   31               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     20
+   31               * File  smhp_game_50.s  20
    32               =KEY    EQU     #0020F
-   33               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     21
-   34               =ECRAN  EQU     #8068D
-   35               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     22
+   33               * File  smhp_game_50.s  21
+   34               =ORIGSCREEN     EQU     #8068D
+   35               * File  smhp_game_50.s  22
    36
-   37               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     23
+   37               * File  smhp_game_50.s  23
    38               =SMAX   EQU     #F
-   39               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     24
+   39               * File  smhp_game_50.s  24
    40               =LMAX   EQU     #4
-   41               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     25
+   41               * File  smhp_game_50.s  25
    42
-   43               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     26
+   43               * File  smhp_game_50.s  26
    44                       ABASE   #80100
-   45               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     27
+   45               * File  smhp_game_50.s  27
    46               =FLAG01 ALLOC   4
-   47               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     28
+   47               * File  smhp_game_50.s  28
    48               =VIE    ALLOC   3
-   49               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     29
+   49               * File  smhp_game_50.s  29
    50               =MCLIPH ALLOC   2
-   51               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     30
+   51               * File  smhp_game_50.s  30
    52               =MCLIPB ALLOC   2
-   53               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     31
+   53               * File  smhp_game_50.s  31
    54               =MX     ALLOC   5
-   55               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     32
+   55               * File  smhp_game_50.s  32
    56               =MY     ALLOC   5
-   57               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     33
+   57               * File  smhp_game_50.s  33
    58               =COIN   ALLOC   3
-   59               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     34
+   59               * File  smhp_game_50.s  34
    60               =SCROL.COUNTER  ALLOC   1
-   61               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     35
+   61               * File  smhp_game_50.s  35
    62               =LEVEL.SURFACE  ALLOC   5
-   63               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     36
+   63               * File  smhp_game_50.s  36
    64               =LEVEL.DATA     ALLOC   5
-   65               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     37
+   65               * File  smhp_game_50.s  37
    66               =TICK   ALLOC   2
-   67               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     38
+   67               * File  smhp_game_50.s  38
    68               =TICK.COUNTER   ALLOC   2
-   69               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     39
+   69               * File  smhp_game_50.s  39
    70               =M.ANIM ALLOC   2
-   71               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     40
+   71               * File  smhp_game_50.s  40
    72               =T.ANIM ALLOC   2
-   73               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     41
+   73               * File  smhp_game_50.s  41
    74               =@LIFT  ALLOC   5
-   75               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     42
+   75               * File  smhp_game_50.s  42
    76               =POSX   ALLOC   3
-   77               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     43
+   77               * File  smhp_game_50.s  43
    78               =STAGE  ALLOC   3
-   79               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     44
+   79               * File  smhp_game_50.s  44
    80               =LEVEL  ALLOC   5
-   81               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     45
+   81               * File  smhp_game_50.s  45
    82               =CUBES  ALLOC   5
-   83               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     46
+   83               * File  smhp_game_50.s  46
    84               =MJUMP  ALLOC   2
-   85               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     47
+   85               * File  smhp_game_50.s  47
    86               =STACK  ALLOC   5
-   87               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     48
+   87               * File  smhp_game_50.s  48
    88               =START  ALLOC   5
-   89               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     49
+   89               * File  smhp_game_50.s  49
    90
-   91               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     50
+   91               * File  smhp_game_50.s  50
    92               =STABLE ALLOC   5
-   93               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     51
+   93               * File  smhp_game_50.s  51
    94               =STYPE  ALLOC   2
-   95               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     52
+   95               * File  smhp_game_50.s  52
    96               =SDATA  ALLOC   3
-   97               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     53
+   97               * File  smhp_game_50.s  53
    98               =SX     ALLOC   5
-   99               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     54
+   99               * File  smhp_game_50.s  54
   100               =SY     ALLOC   5
-  101               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     55
+  101               * File  smhp_game_50.s  55
   102               =AX     ALLOC   5
-  103               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     56
+  103               * File  smhp_game_50.s  56
   104               =AY     ALLOC   5
-  105               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     57
+  105               * File  smhp_game_50.s  57
   106
-  107               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     58
+  107               * File  smhp_game_50.s  58
   108 0000F 8F00000         GOSBVL  =SAVPTR
-  109               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     59
+  109               * File  smhp_game_50.s  59
   110 00016 808F            INTOFF
-  111               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     60
+  111               * File  smhp_game_50.s  60
   112 0001A 08              CLRST
-  113               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     61
+  113               * File  smhp_game_50.s  61
   114
-  115               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     62
+  115               * File  smhp_game_50.s  62
   116 0001C 8082210         LA(3)   1
             0
-  117               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     63
+  117               * File  smhp_game_50.s  63
   118 00024 1B33108         D0=(5)  (=STAGE)
   119 0002B 1503            DAT0=A  X
-  120               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     64
+  120               * File  smhp_game_50.s  64
   121 0002F 133             AD1EX
   122 00032 1B24108         D0=(5)  (=STACK)
   123 00039 140             DAT0=A  A
-  124               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     65
+  124               * File  smhp_game_50.s  65
   125
-  126               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     66
+  126               * File  smhp_game_50.s  66
   127 0003C         =NEXTUP
-  128               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     67
+  128               * File  smhp_game_50.s  67
   129 0003C 1B24108         D0=(5)  (=STACK)
   130 00043 142             A=DAT0  A
-  131               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     68
+  131               * File  smhp_game_50.s  68
   132 00046 131             D1=A
   133 00049 143             A=DAT1  A
-  134               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     69
+  134               * File  smhp_game_50.s  69
   135 0004C 8A8             ?A=0    A
   136 0004F 81              GOYES   =BAD
-  137               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     70
+  137               * File  smhp_game_50.s  70
   138 00051 130             D0=A
   139 00054 142             A=DAT0  A
-  140               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     71
+  140               * File  smhp_game_50.s  71
   141 00057 34C2A20         LC(5)   #02A2C
-  142               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     72
+  142               * File  smhp_game_50.s  72
   143 0005E 8A6             ?C#A    A
   144 00061 60              GOYES   =BAD
-  145               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     73
+  145               * File  smhp_game_50.s  73
   146
-  147               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     74
-  148               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     75
+  147               * File  smhp_game_50.s  74
+  148               * File  smhp_game_50.s  75
   149 00063 6210            SKIP{
-  150               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     76
+  150               * File  smhp_game_50.s  76
   151 00067         =BAD
-  152               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     77
+  152               * File  smhp_game_50.s  77
   153                       {
   154 00067 8E1CF1          GOSUBL  =KEYS
   155 0006D 49F             UPC
-  156               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     78
+  156               * File  smhp_game_50.s  78
   157                       }
   158 00070 8CCF21          GOLONG  =QUIT
-  159               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     79
-  160               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     80
+  159               * File  smhp_game_50.s  79
+  160               * File  smhp_game_50.s  80
   161
-  162               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     81
+  162               * File  smhp_game_50.s  81
   163                       }
   164 00076 143             A=DAT1  A
   165 00079 818F0F          A=A+    16      A
-  166               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     82
+  166               * File  smhp_game_50.s  82
   167 0007F 1B63108         D0=(5)  (=LEVEL)
   168 00086 140             DAT0=A  A
-  169               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     83
+  169               * File  smhp_game_50.s  83
   170
-  171               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     84
+  171               * File  smhp_game_50.s  84
   172 00089 3408520         LC(5)   (4800)*2
-  173               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     85
+  173               * File  smhp_game_50.s  85
   174 00090 8F00000         GOSBVL  =MAKE$N
-  175               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     86
+  175               * File  smhp_game_50.s  86
   176 00097 132             AD0EX
   177 0009A 130             D0=A
   178 0009D 100             R0=A
-  179               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     87
+  179               * File  smhp_game_50.s  87
   180
-  181               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     88
+  181               * File  smhp_game_50.s  88
   182 000A0 34B2100         LC(5)   (4800-1)/16
-  183               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     89
+  183               * File  smhp_game_50.s  89
   184 000A7 AF0             A=0     W
-  185               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     90
+  185               * File  smhp_game_50.s  90
   186                       {
-  187               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     91
+  187               * File  smhp_game_50.s  91
   188 000AA 1507            DAT0=A  W
-  189               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     92
+  189               * File  smhp_game_50.s  92
   190 000AE 16F             D0+     16
-  191               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     93
+  191               * File  smhp_game_50.s  93
   192 000B1 CE              C=C-    1       A
   193 000B3 56F             UPNC
-  194               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     94
-  195               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     95
+  194               * File  smhp_game_50.s  94
+  195               * File  smhp_game_50.s  95
   196
-  197               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     96
+  197               * File  smhp_game_50.s  96
   198                       }
   199 000B6 81AF10          A=R0.f  A
-  200               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     97
+  200               * File  smhp_game_50.s  97
   201 000BC E4              A=A+    1       A
   202 000BE 80840           ABIT=0  0
-  203               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     98
+  203               * File  smhp_game_50.s  98
   204 000C3 1BB2108         D0=(5)  (=@LIFT)
   205 000CA 140             DAT0=A  A
-  206               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     99
+  206               * File  smhp_game_50.s  99
   207 000CD 348C000         LC(5)   200
   208 000D4 CA              A=A+C   A
-  209               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     100
+  209               * File  smhp_game_50.s  100
   210 000D6 1BC4108         D0=(5)  (=STABLE)
   211 000DD 140             DAT0=A  A
-  212               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     101
+  212               * File  smhp_game_50.s  101
   213 000E0 348C000         LC(5)   200
   214 000E7 CA              A=A+C   A
-  215               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     102
+  215               * File  smhp_game_50.s  102
   216 000E9 100             R0=A
-  217               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     103
+  217               * File  smhp_game_50.s  103
   218 000EC 3408800         LC(5)   #880
   219 000F3 CA              A=A+C   A
-  220               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     104
+  220               * File  smhp_game_50.s  104
   221 000F5 101             R1=A
-  222               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     105
+  222               * File  smhp_game_50.s  105
   223 000F8 3408800         LC(5)   #880
   224 000FF CA              A=A+C   A
-  225               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     106
+  225               * File  smhp_game_50.s  106
   226 00101 1B91108         D0=(5)  (=LEVEL.SURFACE)
   227 00108 140             DAT0=A  A
-  228               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     107
+  228               * File  smhp_game_50.s  107
   229 0010B 3408800         LC(5)   #880
   230 00112 CA              A=A+C   A
-  231               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     108
+  231               * File  smhp_game_50.s  108
   232 00114 1BE1108         D0=(5)  (=LEVEL.DATA)
   233 0011B 140             DAT0=A  A
-  234               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     109
+  234               * File  smhp_game_50.s  109
   235
-  236               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     110
+  236               * File  smhp_game_50.s  110
   237 0011E 8E0AA0          SKUBL{
-  238               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     111
+  238               * File  smhp_game_50.s  111
   239 00124 E               NIBHEX  E
   240 00125 3               NIBHEX  3
   241 00126 E               NIBHEX  E
@@ -2960,19 +2960,19 @@ V3.0.9 (04/15/2007)                                      smhp_game_50.a Page    
  2956 00BC1 0               NIBHEX  0
  2957 00BC2 0               NIBHEX  0
  2958 00BC3 0               NIBHEX  0
- 2959               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     112
- 2960               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     113
+ 2959               * File  smhp_game_50.s  112
+ 2960               * File  smhp_game_50.s  113
  2961                       }
  2962 00BC4 07              C=RSTK
- 2963               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     114
- 2964               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     115
+ 2963               * File  smhp_game_50.s  114
+ 2964               * File  smhp_game_50.s  115
  2965 00BC6 10A             R2=C
- 2966               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     116
+ 2966               * File  smhp_game_50.s  116
  2967
- 2968               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     117
- 2969               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     118
+ 2968               * File  smhp_game_50.s  117
+ 2969               * File  smhp_game_50.s  118
  2970 00BC9 8E0460          SKUBL{
- 2971               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     119
+ 2971               * File  smhp_game_50.s  119
  2972 00BCF 0               NIBHEX  0
  2973 00BD0 0               NIBHEX  0
  2974 00BD1 0               NIBHEX  0
@@ -4573,1874 +4573,1874 @@ V3.0.9 (04/15/2007)                                      smhp_game_50.a Page    
  4569 0120C 0               NIBHEX  0
  4570 0120D 0               NIBHEX  0
  4571 0120E 8               NIBHEX  8
- 4572               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     120
- 4573               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     121
+ 4572               * File  smhp_game_50.s  120
+ 4573               * File  smhp_game_50.s  121
  4574                       }
  4575 0120F 07              C=RSTK
- 4576               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     122
- 4577               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     123
+ 4576               * File  smhp_game_50.s  122
+ 4577               * File  smhp_game_50.s  123
  4578 01211 1BB3108         D0=(5)  (=CUBES)
  4579 01218 144             DAT0=C  A
- 4580               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     124
+ 4580               * File  smhp_game_50.s  124
  4581
- 4582               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     125
+ 4582               * File  smhp_game_50.s  125
  4583 0121B 1F02100         D1=(5)  (=SCREENADD)
  4584 01222 31F3            LCHEX   3F
  4585 01226 14D             DAT1=C  B
- 4586               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     126
- 4587               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     127
+ 4586               * File  smhp_game_50.s  126
+ 4587               * File  smhp_game_50.s  127
  4588 01229 81AF10          A=R0.f  A
- 4589               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     128
+ 4589               * File  smhp_game_50.s  128
  4590 0122F 1B02100         D0=(5)  (=SCREENADD)
  4591 01236 140             DAT0=A  A
- 4592               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     129
+ 4592               * File  smhp_game_50.s  129
  4593
- 4594               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     130
+ 4594               * File  smhp_game_50.s  130
  4595 01239 8EC861          GOSUBL  =RESET.CONTER
- 4596               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     131
+ 4596               * File  smhp_game_50.s  131
  4597 0123F 8C9B61          GOLONG  =PRESENTATION
- 4598               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     132
+ 4598               * File  smhp_game_50.s  132
  4599
- 4600               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     133
+ 4600               * File  smhp_game_50.s  133
  4601 01245         =REPLAY
- 4602               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     134
+ 4602               * File  smhp_game_50.s  134
  4603 01245 1F63108         D1=(5)  (=LEVEL)
  4604 0124C 143             A=DAT1  A
  4605 0124F 131             D1=A
- 4606               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     135
+ 4606               * File  smhp_game_50.s  135
  4607 01252 1BE1108         D0=(5)  (=LEVEL.DATA)
  4608 01259 142             A=DAT0  A
  4609 0125C 130             D0=A
- 4610               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     136
+ 4610               * File  smhp_game_50.s  136
  4611 0125F 32005           LCHEX   500
  4612 01264 AB5             B=C     X
- 4613               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     137
+ 4613               * File  smhp_game_50.s  137
  4614 01267 3103            LCHEX   30
- 4615               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     138
+ 4615               * File  smhp_game_50.s  138
  4616                       {
- 4617               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     139
+ 4617               * File  smhp_game_50.s  139
  4618 0126B 14B             A=DAT1  B
- 4619               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     140
+ 4619               * File  smhp_game_50.s  140
  4620 0126E 966             ?C#A    B
  4621 01271 50              SKIPYES{
  4622 01273 AE0             A=0     B
- 4623               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     141
+ 4623               * File  smhp_game_50.s  141
  4624                       }
  4625 01276 148             DAT0=A  B
- 4626               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     142
+ 4626               * File  smhp_game_50.s  142
  4627 01279 161             D0+     2
  4628 0127C 171             D1+     2
- 4629               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     143
+ 4629               * File  smhp_game_50.s  143
  4630 0127F A3D             B=B-    1       X
  4631 01282 58E             UPNC
- 4632               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     144
- 4633               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     145
+ 4632               * File  smhp_game_50.s  144
+ 4633               * File  smhp_game_50.s  145
  4634
- 4635               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     146
+ 4635               * File  smhp_game_50.s  146
  4636                       }
  4637 01285 8EFFC0          GOSUBL  =CL_LIFT
- 4638               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     147
+ 4638               * File  smhp_game_50.s  147
  4639 0128B 8EC0C2          GOSUBL  =CLEAR.STABLE
- 4640               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     148
+ 4640               * File  smhp_game_50.s  148
  4641 01291 08              CLRST
- 4642               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     149
+ 4642               * File  smhp_game_50.s  149
  4643
- 4644               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     150
+ 4644               * File  smhp_game_50.s  150
  4645 01293 D0              A=0     A
- 4646               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     151
+ 4646               * File  smhp_game_50.s  151
  4647 01295 1B00108         D0=(5)  (=FLAG01)
  4648 0129C 1583            DAT0=A  4
- 4649               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     152
+ 4649               * File  smhp_game_50.s  152
  4650 012A0 1B81108         D0=(5)  (=SCROL.COUNTER)
  4651 012A7 1500            DAT0=A  P
- 4652               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     153
+ 4652               * File  smhp_game_50.s  153
  4653
- 4654               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     154
- 4655               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     155
+ 4654               * File  smhp_game_50.s  154
+ 4655               * File  smhp_game_50.s  155
  4656 012AB 1B72108         D0=(5)  (=M.ANIM)
  4657 012B2 148             DAT0=A  B
- 4658               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     156
+ 4658               * File  smhp_game_50.s  156
  4659 012B5 1B92108         D0=(5)  (=T.ANIM)
  4660 012BC 148             DAT0=A  B
- 4661               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     157
+ 4661               * File  smhp_game_50.s  157
  4662
- 4663               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     158
- 4664               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     159
+ 4663               * File  smhp_game_50.s  158
+ 4664               * File  smhp_game_50.s  159
  4665 012BF 1B70108         D0=(5)  (=MCLIPH)
  4666 012C6 148             DAT0=A  B
- 4667               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     160
+ 4667               * File  smhp_game_50.s  160
  4668 012C9 1B90108         D0=(5)  (=MCLIPB)
  4669 012D0 148             DAT0=A  B
- 4670               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     161
+ 4670               * File  smhp_game_50.s  161
  4671
- 4672               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     162
- 4673               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     163
+ 4672               * File  smhp_game_50.s  162
+ 4673               * File  smhp_game_50.s  163
  4674 012D3 8082140         LA(2)   04
- 4675               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     164
+ 4675               * File  smhp_game_50.s  164
  4676 012DA 1B32108         D0=(5)  (=TICK)
  4677 012E1 148             DAT0=A  B
- 4678               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     165
+ 4678               * File  smhp_game_50.s  165
  4679 012E4 1B52108         D0=(5)  (=TICK.COUNTER)
  4680 012EB 148             DAT0=A  B
- 4681               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     166
+ 4681               * File  smhp_game_50.s  166
  4682
- 4683               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     167
- 4684               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     168
+ 4683               * File  smhp_game_50.s  167
+ 4684               * File  smhp_game_50.s  168
  4685 012EE 8E3D50          GOSUBL  =DISP.COL.D
- 4686               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     169
+ 4686               * File  smhp_game_50.s  169
  4687 012F4 8ED340          GOSUBL  =DISP.LEVEL
- 4688               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     170
+ 4688               * File  smhp_game_50.s  170
  4689 012FA 8ED670          GOSUBL  =DISP.PANEL
- 4690               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     171
+ 4690               * File  smhp_game_50.s  171
  4691 01300 8ECA31          GOSUBL  =VIES
- 4692               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     172
+ 4692               * File  smhp_game_50.s  172
  4693 01306 8E0F31          GOSUBL  =COINS
- 4694               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     173
+ 4694               * File  smhp_game_50.s  173
  4695 0130C 8E6341          GOSUBL  =STAGES
- 4696               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     174
+ 4696               * File  smhp_game_50.s  174
  4697 01312 8EEB10          GOSUBL  =FLIP
- 4698               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     175
+ 4698               * File  smhp_game_50.s  175
  4699
- 4700               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     176
- 4701               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     177
+ 4700               * File  smhp_game_50.s  176
+ 4701               * File  smhp_game_50.s  177
  4702                       {
- 4703               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     178
+ 4703               * File  smhp_game_50.s  178
  4704 01318 8E1943          GOSUBL  =FLAGS
- 4705               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     179
+ 4705               * File  smhp_game_50.s  179
  4706 0131E 8EAA80          GOSUBL  =LIFTS
- 4707               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     180
+ 4707               * File  smhp_game_50.s  180
  4708 01324 8EF700          GOSUBL  =MARIO
- 4709               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     181
+ 4709               * File  smhp_game_50.s  181
  4710 0132A 8E4580          GOSUBL  =SPRITES
- 4711               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     182
+ 4711               * File  smhp_game_50.s  182
  4712 01330 8E0A10          GOSUBL  =FLIP
- 4713               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     183
+ 4713               * File  smhp_game_50.s  183
  4714
- 4715               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     184
+ 4715               * File  smhp_game_50.s  184
  4716 01336 348C000         LC(5)   200
  4717                       {
  4718 0133D CE              C=C-    1       A
  4719 0133F 5DF             UPNC
- 4720               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     185
+ 4720               * File  smhp_game_50.s  185
  4721
- 4722               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     186
+ 4722               * File  smhp_game_50.s  186
  4723                       }
  4724 01342 32010           LCHEX   010
  4725 01347 8FF0200         GOSBVL  =KEY
- 4726               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     187
+ 4726               * File  smhp_game_50.s  187
  4727 0134E 808B0           ?CBIT=1 0
  4728 01353 60              EXIT
- 4729               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     188
+ 4729               * File  smhp_game_50.s  188
  4730 01355 62CF            UP
- 4731               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     189
- 4732               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     190
+ 4731               * File  smhp_game_50.s  189
+ 4732               * File  smhp_game_50.s  190
  4733                       }
  4734 01359         =STOP
- 4735               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     191
+ 4735               * File  smhp_game_50.s  191
  4736                       {
  4737 01359 8EFCC0          GOSUBL  =KEYS
  4738 0135F 49F             UPC
- 4739               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     192
+ 4739               * File  smhp_game_50.s  192
  4740                       }
  4741 01362 8E3651          GOSUBL  =RESET.CONTER
- 4742               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     193
+ 4742               * File  smhp_game_50.s  193
  4743 01368 8C0951          GOLONG  =PRESENTATION
- 4744               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     194
+ 4744               * File  smhp_game_50.s  194
  4745
- 4746               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     195
+ 4746               * File  smhp_game_50.s  195
  4747 0136E         =QUIT
- 4748               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     196
+ 4748               * File  smhp_game_50.s  196
  4749 0136E 20              P=      0
  4750 01370 04              SETHEX
- 4751               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     197
- 4752               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     198
+ 4751               * File  smhp_game_50.s  197
+ 4752               * File  smhp_game_50.s  198
  4753                       {
  4754 01372 8E6BC0          GOSUBL  =KEYS
  4755 01378 49F             UPC
- 4756               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     199
+ 4756               * File  smhp_game_50.s  199
  4757                       }
  4758 0137B 3173            LCHEX   37
- 4759               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     200
+ 4759               * File  smhp_game_50.s  200
  4760 0137F 1B82100         D0=(5)  (=HEADERADD)
  4761 01386 1540            DAT0=C  P
- 4762               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     201
+ 4762               * File  smhp_game_50.s  201
  4763
- 4764               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     202
- 4765               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     203
- 4766               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     204
+ 4764               * File  smhp_game_50.s  202
+ 4765               * File  smhp_game_50.s  203
+ 4766               * File  smhp_game_50.s  204
  4767
- 4768               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     205
- 4769               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     206
- 4770 0138A 1BD8608         D0=(5)  (=ECRAN)
+ 4768               * File  smhp_game_50.s  205
+ 4769               * File  smhp_game_50.s  206
+ 4770 0138A 1BD8608         D0=(5)  (=ORIGSCREEN)
  4771 01391 142             A=DAT0  A
- 4772               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     207
+ 4772               * File  smhp_game_50.s  207
  4773 01394 1B02100         D0=(5)  (=SCREENADD)
  4774 0139B 140             DAT0=A  A
- 4775               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     208
- 4776               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     209
+ 4775               * File  smhp_game_50.s  208
+ 4776               * File  smhp_game_50.s  209
  4777 0139E 8080            INTON
- 4778               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     210
+ 4778               * File  smhp_game_50.s  210
  4779 013A2 8F00000         GOSBVL  =GETPTRLOOP
- 4780               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     211
+ 4780               * File  smhp_game_50.s  211
  4781
- 4782               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     212
+ 4782               * File  smhp_game_50.s  212
  4783 013A9         =MARIO
- 4784               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     213
- 4785               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     214
+ 4784               * File  smhp_game_50.s  213
+ 4785               * File  smhp_game_50.s  214
  4786 013A9 847             ST=0    7
- 4787               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     215
+ 4787               * File  smhp_game_50.s  215
  4788
- 4789               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     216
- 4790               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     217
+ 4789               * File  smhp_game_50.s  216
+ 4790               * File  smhp_game_50.s  217
  4791 013AC 1B90108         D0=(5)  (=MCLIPB)
- 4792               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     218
+ 4792               * File  smhp_game_50.s  218
  4793 013B3 14E             C=DAT0  B
  4794 013B6 AE7             D=C     B
- 4795               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     219
+ 4795               * File  smhp_game_50.s  219
  4796
- 4797               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     220
- 4798               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     221
+ 4797               * File  smhp_game_50.s  220
+ 4798               * File  smhp_game_50.s  221
  4799 013B9 81AF12          A=R2.f  A
  4800 013BF D2              C=0     A
- 4801               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     222
+ 4801               * File  smhp_game_50.s  222
  4802 013C1 1F72108         D1=(5)  (=M.ANIM)
  4803 013C8 14F             C=DAT1  B
- 4804               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     223
+ 4804               * File  smhp_game_50.s  223
  4805 013CB C6              C=C+C   A
  4806 013CD C6              C=C+C   A
  4807 013CF CA              A=A+C   A
- 4808               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     224
- 4809               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     225
+ 4808               * File  smhp_game_50.s  224
+ 4809               * File  smhp_game_50.s  225
  4810 013D1 D2              C=0     A
- 4811               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     226
+ 4811               * File  smhp_game_50.s  226
  4812 013D3 1F70108         D1=(5)  (=MCLIPH)
  4813 013DA 14F             C=DAT1  B
- 4814               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     227
+ 4814               * File  smhp_game_50.s  227
  4815 013DD D5              B=C     A
  4816 013DF F2              CSL     A
  4817 013E1 C9              C=C+B   A
- 4818               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     228
+ 4818               * File  smhp_game_50.s  228
  4819 013E3 C6              C=C+C   A
  4820 013E5 CA              A=A+C   A
- 4821               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     229
+ 4821               * File  smhp_game_50.s  229
  4822 013E7 104             R4=A
- 4823               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     230
+ 4823               * File  smhp_game_50.s  230
  4824
- 4825               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     231
+ 4825               * File  smhp_game_50.s  231
  4826 013EA 3190            LCHEX   09
- 4827               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     232
- 4828               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     233
+ 4827               * File  smhp_game_50.s  232
+ 4828               * File  smhp_game_50.s  233
  4829 013EE 9E5             ?B<C    B
  4830 013F1 60              SKIPYES{
- 4831               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     234
+ 4831               * File  smhp_game_50.s  234
  4832 013F3 6230            GOTO    =BIG_CLIP
- 4833               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     235
- 4834               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     236
+ 4833               * File  smhp_game_50.s  235
+ 4834               * File  smhp_game_50.s  236
  4835                       }
  4836 013F7 B69             C=C-B   B
  4837 013FA AE5             B=C     B
- 4838               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     237
+ 4838               * File  smhp_game_50.s  237
  4839
- 4840               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     238
- 4841               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     239
+ 4840               * File  smhp_game_50.s  238
+ 4841               * File  smhp_game_50.s  239
  4842 013FD AEB             C=D     B
- 4843               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     240
+ 4843               * File  smhp_game_50.s  240
  4844 01400 9ED             ?C>=B   B
  4845 01403 32              GOYES   =BIG_CLIP
- 4846               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     241
+ 4846               * File  smhp_game_50.s  241
  4847 01405 B61             B=B-C   B
- 4848               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     242
+ 4848               * File  smhp_game_50.s  242
  4849
- 4850               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     243
+ 4850               * File  smhp_game_50.s  243
  4851 01408 D0              A=0     A
  4852 0140A D2              C=0     A
- 4853               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     244
+ 4853               * File  smhp_game_50.s  244
  4854 0140C 1BB0108         D0=(5)  (=MX)
  4855 01413 14A             A=DAT0  B
- 4856               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     245
+ 4856               * File  smhp_game_50.s  245
  4857 01416 1B01108         D0=(5)  (=MY)
  4858 0141D 14E             C=DAT0  B
- 4859               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     246
+ 4859               * File  smhp_game_50.s  246
  4860 01420 8E2F70          GOSUBL  =DISP.A.C.R4.B
- 4861               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     247
+ 4861               * File  smhp_game_50.s  247
  4862
- 4863               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     248
+ 4863               * File  smhp_game_50.s  248
  4864 01426         =BIG_CLIP
- 4865               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     249
+ 4865               * File  smhp_game_50.s  249
  4866
- 4867               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     250
- 4868               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     251
+ 4867               * File  smhp_game_50.s  250
+ 4868               * File  smhp_game_50.s  251
  4869 01426 8E0472          GOSUBL  =TESTD
- 4870               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     252
+ 4870               * File  smhp_game_50.s  252
  4871 0142C 8EBE72          GOSUBL  =TESTG
- 4872               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     253
- 4873               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     254
+ 4872               * File  smhp_game_50.s  253
+ 4873               * File  smhp_game_50.s  254
  4874 01432 8E6FB0          GOSUBL  =KEYS
- 4875               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     255
- 4876               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     256
+ 4875               * File  smhp_game_50.s  255
+ 4876               * File  smhp_game_50.s  256
  4877 01438 4F0             SKIPC{
- 4878               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     257
+ 4878               * File  smhp_game_50.s  257
  4879 0143B AE0             A=0     B
- 4880               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     258
+ 4880               * File  smhp_game_50.s  258
  4881 0143E 1B72108         D0=(5)  (=M.ANIM)
  4882 01445 148             DAT0=A  B
- 4883               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     259
- 4884               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     260
- 4885               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     261
+ 4883               * File  smhp_game_50.s  259
+ 4884               * File  smhp_game_50.s  260
+ 4885               * File  smhp_game_50.s  261
  4886                       }
  4887 01448 32040           LCHEX   040
  4888 0144D 8FF0200         GOSBVL  =KEY
- 4889               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     262
- 4890               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     263
+ 4889               * File  smhp_game_50.s  262
+ 4890               * File  smhp_game_50.s  263
  4891 01454 808A4           ?CBIT=0 4
  4892 01459 B2              SKIPYES{
- 4893               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     264
- 4894               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     265
+ 4893               * File  smhp_game_50.s  264
+ 4894               * File  smhp_game_50.s  265
  4895 0145B 872             ?ST=1   2
  4896 0145E 92              EXIT
- 4897               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     266
+ 4897               * File  smhp_game_50.s  266
  4898 01460 852             ST=1    2
- 4899               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     267
- 4900               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     268
+ 4899               * File  smhp_game_50.s  267
+ 4900               * File  smhp_game_50.s  268
  4901 01463 870             ?ST=1   0
  4902 01466 12              EXIT
- 4903               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     269
+ 4903               * File  smhp_game_50.s  269
  4904 01468 873             ?ST=1   3
  4905 0146B C1              EXIT
- 4906               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     270
+ 4906               * File  smhp_game_50.s  270
  4907
- 4908               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     271
+ 4908               * File  smhp_game_50.s  271
  4909 0146D 850             ST=1    0
- 4910               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     272
- 4911               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     273
+ 4910               * File  smhp_game_50.s  272
+ 4911               * File  smhp_game_50.s  273
  4912 01470 851             ST=1    1
- 4913               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     274
+ 4913               * File  smhp_game_50.s  274
  4914 01473 AE0             A=0     B
- 4915               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     275
+ 4915               * File  smhp_game_50.s  275
  4916 01476 1B04108         D0=(5)  (=MJUMP)
  4917 0147D 148             DAT0=A  B
- 4918               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     276
- 4919               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     277
- 4920               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     278
+ 4918               * File  smhp_game_50.s  276
+ 4919               * File  smhp_game_50.s  277
+ 4920               * File  smhp_game_50.s  278
  4921 01480 6600            }SKELSE{
- 4922               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     279
+ 4922               * File  smhp_game_50.s  279
  4923 01484 842             ST=0    2
- 4924               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     280
- 4925               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     281
- 4926               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     282
+ 4924               * File  smhp_game_50.s  280
+ 4925               * File  smhp_game_50.s  281
+ 4926               * File  smhp_game_50.s  282
  4927                       }
- 4928               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     283
+ 4928               * File  smhp_game_50.s  283
  4929 01487 870             ?ST=1   0
  4930 0148A B2              SKIPYES{
- 4931               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     284
+ 4931               * File  smhp_game_50.s  284
  4932 0148C 873             ?ST=1   3
  4933 0148F B0              GOYES   =AC
- 4934               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     285
+ 4934               * File  smhp_game_50.s  285
  4935 01491 8ECAB0          GOSUBL  =SOL
- 4936               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     286
- 4937               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     287
+ 4936               * File  smhp_game_50.s  286
+ 4937               * File  smhp_game_50.s  287
  4938 01497 491             SKIPC{
- 4939               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     288
+ 4939               * File  smhp_game_50.s  288
  4940 0149A         =AC
- 4941               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     289
+ 4941               * File  smhp_game_50.s  289
  4942 0149A 850             ST=1    0
- 4943               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     290
- 4944               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     291
+ 4943               * File  smhp_game_50.s  290
+ 4944               * File  smhp_game_50.s  291
  4945 0149D 841             ST=0    1
- 4946               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     292
+ 4946               * File  smhp_game_50.s  292
  4947 014A0 8082180         LAHEX   08
- 4948               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     293
+ 4948               * File  smhp_game_50.s  293
  4949 014A7 1B04108         D0=(5)  (=MJUMP)
  4950 014AE 148             DAT0=A  B
- 4951               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     294
- 4952               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     295
+ 4951               * File  smhp_game_50.s  294
+ 4952               * File  smhp_game_50.s  295
  4953                       }
- 4954               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     296
- 4955               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     297
+ 4954               * File  smhp_game_50.s  296
+ 4955               * File  smhp_game_50.s  297
  4956 014B1 6900            }SKELSE{
- 4957               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     298
+ 4957               * File  smhp_game_50.s  298
  4958 014B5 8E5800          GOSUBL  =JUMPING
- 4959               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     299
- 4960               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     300
- 4961               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     301
+ 4959               * File  smhp_game_50.s  299
+ 4960               * File  smhp_game_50.s  300
+ 4961               * File  smhp_game_50.s  301
  4962                       }
  4963                       {
- 4964               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     302
+ 4964               * File  smhp_game_50.s  302
  4965 014BB 1B90108         D0=(5)  (=MCLIPB)
  4966 014C2 14A             A=DAT0  B
- 4967               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     303
+ 4967               * File  smhp_game_50.s  303
  4968 014C5 3190            LCHEX   09
- 4969               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     304
+ 4969               * File  smhp_game_50.s  304
  4970 014C9 9E2             ?A<C    B
  4971 014CC 80              EXIT
- 4972               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     305
+ 4972               * File  smhp_game_50.s  305
  4973 014CE 8CCC10          GOLONG  =MLOST
- 4974               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     306
- 4975               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     307
+ 4974               * File  smhp_game_50.s  306
+ 4975               * File  smhp_game_50.s  307
  4976                       }
  4977 014D4 01              RTN
- 4978               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     308
+ 4978               * File  smhp_game_50.s  308
  4979
- 4980               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     309
+ 4980               * File  smhp_game_50.s  309
  4981 014D6         =FLIP
- 4982               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     310
- 4983               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     311
- 4984               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     312
- 4985               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     313
- 4986               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     314
+ 4982               * File  smhp_game_50.s  310
+ 4983               * File  smhp_game_50.s  311
+ 4984               * File  smhp_game_50.s  312
+ 4985               * File  smhp_game_50.s  313
+ 4986               * File  smhp_game_50.s  314
  4987
- 4988               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     315
+ 4988               * File  smhp_game_50.s  315
  4989 014D6 1B02100         D0=(5)  (=SCREENADD)
  4990 014DD 1F82100         D1=(5)  (=HEADERADD)
- 4991               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     316
+ 4991               * File  smhp_game_50.s  316
  4992
- 4993               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     317
+ 4993               * File  smhp_game_50.s  317
  4994
- 4995               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     318
+ 4995               * File  smhp_game_50.s  318
  4996 014E4 AF0             A=0     W
  4997                       {
  4998 014E7 15B5            A=DAT1  6
  4999 014EB 97C             ?A#0    W
  5000 014EE 9F              UP
- 5001               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     319
+ 5001               * File  smhp_game_50.s  319
  5002                       }
  5003 014F0 119             C=R1
  5004 014F3 144             DAT0=C  A
- 5005               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     320
+ 5005               * File  smhp_game_50.s  320
  5006
- 5007               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     321
+ 5007               * File  smhp_game_50.s  321
  5008 014F6 1B91108         D0=(5)  (=LEVEL.SURFACE)
  5009 014FD 142             A=DAT0  A
  5010 01500 131             D1=A
- 5011               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     322
+ 5011               * File  smhp_game_50.s  322
  5012 01503 110             A=R0
  5013 01506 130             D0=A
- 5014               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     323
+ 5014               * File  smhp_game_50.s  323
  5015 01509 81AF21          AR1EX.f A
  5016 0150F 100             R0=A
- 5017               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     324
+ 5017               * File  smhp_game_50.s  324
  5018 01512 31F3            LCHEX   3F
- 5019               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     325
+ 5019               * File  smhp_game_50.s  325
  5020                       {
- 5021               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     326
+ 5021               * File  smhp_game_50.s  326
  5022 01516 1537            A=DAT1  W
  5023 0151A 1507            DAT0=A  W
- 5024               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     327
+ 5024               * File  smhp_game_50.s  327
  5025 0151E 16F             D0+     16
  5026 01521 17F             D1+     16
- 5027               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     328
+ 5027               * File  smhp_game_50.s  328
  5028 01524 15B9            A=DAT1  10
  5029 01528 1589            DAT0=A  10
- 5030               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     329
+ 5030               * File  smhp_game_50.s  329
  5031 0152C 16F161          D0+     18
  5032 01532 17F171          D1+     18
- 5033               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     330
+ 5033               * File  smhp_game_50.s  330
  5034 01538 A6E             C=C-    1       B
  5035 0153B 5AD             UPNC
- 5036               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     331
- 5037               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     332
+ 5036               * File  smhp_game_50.s  331
+ 5037               * File  smhp_game_50.s  332
  5038                       }
  5039 0153E 01              RTN
- 5040               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     333
+ 5040               * File  smhp_game_50.s  333
  5041
- 5042               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     334
+ 5042               * File  smhp_game_50.s  334
  5043 01540         =JUMPING
- 5044               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     335
- 5045               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     336
- 5046               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     337
+ 5044               * File  smhp_game_50.s  335
+ 5045               * File  smhp_game_50.s  336
+ 5046               * File  smhp_game_50.s  337
  5047 01540 871             ?ST=1   1
  5048 01543 F1              SKIPYES{
- 5049               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     338
+ 5049               * File  smhp_game_50.s  338
  5050 01545 873             ?ST=1   3
  5051 01548 33              EXIT
- 5052               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     339
+ 5052               * File  smhp_game_50.s  339
  5053 0154A 8E3FA0          GOSUBL  =SOL
  5054 01550 5A2             EXITNC
- 5055               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     340
+ 5055               * File  smhp_game_50.s  340
  5056 01553 840             ST=0    0
- 5057               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     341
- 5058               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     342
+ 5057               * File  smhp_game_50.s  341
+ 5058               * File  smhp_game_50.s  342
  5059 01556 8E67C0          GOSUBL  =FIXSOL
- 5060               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     343
+ 5060               * File  smhp_game_50.s  343
  5061 0155C 01              RTN
- 5062               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     344
- 5063               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     345
- 5064               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     346
+ 5062               * File  smhp_game_50.s  344
+ 5063               * File  smhp_game_50.s  345
+ 5064               * File  smhp_game_50.s  346
  5065 0155E 6C10            }SKELSE{
- 5066               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     347
- 5067               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     348
+ 5066               * File  smhp_game_50.s  347
+ 5067               * File  smhp_game_50.s  348
  5068 01562 873             ?ST=1   3
  5069 01565 61              EXIT
- 5070               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     349
+ 5070               * File  smhp_game_50.s  349
  5071 01567 8EE601          GOSUBL  =CIEL
- 5072               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     350
+ 5072               * File  smhp_game_50.s  350
  5073 0156D 5D0             EXITNC
- 5074               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     351
+ 5074               * File  smhp_game_50.s  351
  5075 01570 840             ST=0    0
- 5076               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     352
- 5077               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     353
+ 5076               * File  smhp_game_50.s  352
+ 5077               * File  smhp_game_50.s  353
  5078 01573 8E4AC0          GOSUBL  =FIXCIEL
- 5079               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     354
+ 5079               * File  smhp_game_50.s  354
  5080 01579 01              RTN
- 5081               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     355
- 5082               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     356
- 5083               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     357
+ 5081               * File  smhp_game_50.s  355
+ 5082               * File  smhp_game_50.s  356
+ 5083               * File  smhp_game_50.s  357
  5084                       }
- 5085               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     358
+ 5085               * File  smhp_game_50.s  358
  5086 0157B 7810            SKUB{
- 5087               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     359
- 5088               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     360
+ 5087               * File  smhp_game_50.s  359
+ 5088               * File  smhp_game_50.s  360
  5089 0157F 4               NIBHEX  4
  5090 01580 0               NIBHEX  0
  5091 01581 3               NIBHEX  3
  5092 01582 0               NIBHEX  0
  5093 01583 3               NIBHEX  3
  5094 01584 0               NIBHEX  0
- 5095               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     361
+ 5095               * File  smhp_game_50.s  361
  5096 01585 3               NIBHEX  3
  5097 01586 0               NIBHEX  0
  5098 01587 2               NIBHEX  2
  5099 01588 0               NIBHEX  0
  5100 01589 2               NIBHEX  2
  5101 0158A 0               NIBHEX  0
- 5102               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     362
+ 5102               * File  smhp_game_50.s  362
  5103 0158B 2               NIBHEX  2
  5104 0158C 0               NIBHEX  0
  5105 0158D 2               NIBHEX  2
  5106 0158E 0               NIBHEX  0
  5107 0158F 1               NIBHEX  1
  5108 01590 0               NIBHEX  0
- 5109               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     363
+ 5109               * File  smhp_game_50.s  363
  5110 01591 1               NIBHEX  1
  5111 01592 0               NIBHEX  0
  5112 01593 1               NIBHEX  1
  5113 01594 0               NIBHEX  0
  5114 01595 0               NIBHEX  0
  5115 01596 0               NIBHEX  0
- 5116               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     364
+ 5116               * File  smhp_game_50.s  364
  5117
- 5118               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     365
- 5119               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     366
+ 5118               * File  smhp_game_50.s  365
+ 5119               * File  smhp_game_50.s  366
  5120                       }
  5121 01597 07              C=RSTK
  5122 01599 D0              A=0     A
- 5123               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     367
+ 5123               * File  smhp_game_50.s  367
  5124 0159B 1B04108         D0=(5)  (=MJUMP)
  5125 015A2 14A             A=DAT0  B
- 5126               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     368
+ 5126               * File  smhp_game_50.s  368
  5127 015A5 C4              A=A+A   A
  5128 015A7 C2              C=C+A   A
  5129 015A9 134             D0=C
- 5130               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     369
+ 5130               * File  smhp_game_50.s  369
  5131 015AC D2              C=0     A
  5132 015AE 14E             C=DAT0  B
- 5133               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     370
- 5134               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     371
+ 5133               * File  smhp_game_50.s  370
+ 5134               * File  smhp_game_50.s  371
  5135 015B1 1B01108         D0=(5)  (=MY)
  5136 015B8 14A             A=DAT0  B
- 5137               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     372
- 5138               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     373
+ 5137               * File  smhp_game_50.s  372
+ 5138               * File  smhp_game_50.s  373
  5139 015BB 871             ?ST=1   1
  5140 015BE 34              SKIPYES{
- 5141               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     374
+ 5141               * File  smhp_game_50.s  374
  5142 015C0 AE7             D=C     B
- 5143               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     375
+ 5143               * File  smhp_game_50.s  375
  5144 015C3 1F70108         D1=(5)  (=MCLIPH)
  5145 015CA 14F             C=DAT1  B
- 5146               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     376
- 5147               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     377
+ 5146               * File  smhp_game_50.s  376
+ 5147               * File  smhp_game_50.s  377
  5148 015CD 96A             ?C=0    B
  5149 015D0 72              SKIPYES{
- 5150               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     378
- 5151               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     379
+ 5150               * File  smhp_game_50.s  378
+ 5151               * File  smhp_game_50.s  379
  5152 015D2 9E7             ?C>D    B
  5153 015D5 81              SKIPYES{
- 5154               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     380
+ 5154               * File  smhp_game_50.s  380
  5155 015D7 AE2             C=0     B
  5156 015DA 14D             DAT1=C  B
- 5157               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     381
+ 5157               * File  smhp_game_50.s  381
  5158 015DD B63             D=D-C   B
  5159 015E0 AEB             C=D     B
- 5160               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     382
+ 5160               * File  smhp_game_50.s  382
  5161 015E3 A6A             A=A+C   B
  5162 015E6 148             DAT0=A  B
- 5163               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     383
- 5164               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     384
- 5165               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     385
+ 5163               * File  smhp_game_50.s  383
+ 5164               * File  smhp_game_50.s  384
+ 5165               * File  smhp_game_50.s  385
  5166 015E9 6900            }SKELSE{
- 5167               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     386
+ 5167               * File  smhp_game_50.s  386
  5168 015ED B6B             C=C-D   B
  5169 015F0 14D             DAT1=C  B
- 5170               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     387
- 5171               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     388
+ 5170               * File  smhp_game_50.s  387
+ 5171               * File  smhp_game_50.s  388
  5172                       }
- 5173               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     389
- 5174               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     390
+ 5173               * File  smhp_game_50.s  389
+ 5174               * File  smhp_game_50.s  390
  5175 015F3 6900            }SKELSE{
- 5176               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     391
+ 5176               * File  smhp_game_50.s  391
  5177 015F7 AEB             C=D     B
- 5178               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     392
+ 5178               * File  smhp_game_50.s  392
  5179 015FA A6A             A=A+C   B
- 5180               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     393
- 5181               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     394
+ 5180               * File  smhp_game_50.s  393
+ 5181               * File  smhp_game_50.s  394
  5182                       }
- 5183               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     395
- 5184               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     396
+ 5183               * File  smhp_game_50.s  395
+ 5184               * File  smhp_game_50.s  396
  5185 015FD 6220            }SKELSE{
- 5186               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     397
- 5187               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     398
+ 5186               * File  smhp_game_50.s  397
+ 5187               * File  smhp_game_50.s  398
  5188 01601 9E2             ?C>A    B
  5189 01604 90              SKIPYES{
- 5190               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     399
+ 5190               * File  smhp_game_50.s  399
  5191 01606 B6A             A=A-C   B
- 5192               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     400
- 5193               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     401
- 5194               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     402
+ 5192               * File  smhp_game_50.s  400
+ 5193               * File  smhp_game_50.s  401
+ 5194               * File  smhp_game_50.s  402
  5195 01609 6610            }SKELSE{
- 5196               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     403
+ 5196               * File  smhp_game_50.s  403
  5197 0160D 1F70108         D1=(5)  (=MCLIPH)
  5198 01614 14B             A=DAT1  B
- 5199               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     404
+ 5199               * File  smhp_game_50.s  404
  5200 01617 A6A             A=A+C   B
  5201 0161A 149             DAT1=A  B
- 5202               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     405
+ 5202               * File  smhp_game_50.s  405
  5203 0161D AE0             A=0     B
- 5204               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     406
- 5205               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     407
+ 5204               * File  smhp_game_50.s  406
+ 5205               * File  smhp_game_50.s  407
  5206                       }
- 5207               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     408
- 5208               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     409
+ 5207               * File  smhp_game_50.s  408
+ 5208               * File  smhp_game_50.s  409
  5209                       }
  5210 01620 3104            LCHEX   40
- 5211               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     410
+ 5211               * File  smhp_game_50.s  410
  5212 01624 9EA             ?A<=C   B
  5213 01627 50              SKIPYES{
  5214 01629 AEA             A=C     B
- 5215               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     411
+ 5215               * File  smhp_game_50.s  411
  5216                       }
  5217 0162C 3163            LCHEX   36
- 5218               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     412
+ 5218               * File  smhp_game_50.s  412
  5219 01630 9EA             ?A<=C   B
  5220 01633 51              SKIPYES{
- 5221               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     413
+ 5221               * File  smhp_game_50.s  413
  5222 01635 AE5             B=C     B
  5223 01638 AE6             C=A     B
- 5224               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     414
+ 5224               * File  smhp_game_50.s  414
  5225 0163B B69             C=C-B   B
- 5226               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     415
+ 5226               * File  smhp_game_50.s  415
  5227 0163E 1F90108         D1=(5)  (=MCLIPB)
  5228 01645 14D             DAT1=C  B
- 5229               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     416
- 5230               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     417
+ 5229               * File  smhp_game_50.s  416
+ 5230               * File  smhp_game_50.s  417
  5231                       }
  5232 01648 148             DAT0=A  B
- 5233               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     418
- 5234               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     419
+ 5233               * File  smhp_game_50.s  418
+ 5234               * File  smhp_game_50.s  419
  5235 0164B 1B04108         D0=(5)  (=MJUMP)
  5236 01652 14A             A=DAT0  B
- 5237               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     420
- 5238               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     421
- 5239               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     422
+ 5237               * File  smhp_game_50.s  420
+ 5238               * File  smhp_game_50.s  421
+ 5239               * File  smhp_game_50.s  422
  5240 01655 861             ?ST=0   1
  5241 01658 C1              SKIPYES{
- 5242               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     423
+ 5242               * File  smhp_game_50.s  423
  5243 0165A 31B0            LC(2)   11
- 5244               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     424
+ 5244               * File  smhp_game_50.s  424
  5245 0165E 966             ?A#C    B
  5246 01661 90              SKIPYES{
  5247 01663 840             ST=0    0
- 5248               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     425
- 5249               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     426
+ 5248               * File  smhp_game_50.s  425
+ 5249               * File  smhp_game_50.s  426
  5250 01666 6900            }SKELSE{
  5251 0166A B64             A=A+    1       B
  5252 0166D 148             DAT0=A  B
- 5253               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     427
+ 5253               * File  smhp_game_50.s  427
  5254                       }
- 5255               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     428
- 5256               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     429
+ 5255               * File  smhp_game_50.s  428
+ 5256               * File  smhp_game_50.s  429
  5257 01670 6920            }SKELSE{
- 5258               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     430
+ 5258               * File  smhp_game_50.s  430
  5259 01674 96C             ?A#0    B
  5260 01677 D1              SKIPYES{
- 5261               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     431
- 5262               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     432
+ 5261               * File  smhp_game_50.s  431
+ 5262               * File  smhp_game_50.s  432
  5263 01679 873             ?ST=1   3
  5264 0167C E1              EXIT
- 5265               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     433
+ 5265               * File  smhp_game_50.s  433
  5266 0167E 8EFB90          GOSUBL  =SOL
  5267 01684 551             EXITNC
- 5268               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     434
+ 5268               * File  smhp_game_50.s  434
  5269 01687 840             ST=0    0
- 5270               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     435
- 5271               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     436
+ 5270               * File  smhp_game_50.s  435
+ 5271               * File  smhp_game_50.s  436
  5272 0168A 8E24B0          GOSUBL  =FIXSOL
- 5273               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     437
- 5274               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     438
- 5275               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     439
+ 5273               * File  smhp_game_50.s  437
+ 5274               * File  smhp_game_50.s  438
+ 5275               * File  smhp_game_50.s  439
  5276 01690 6900            }SKELSE{
- 5277               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     440
+ 5277               * File  smhp_game_50.s  440
  5278 01694 A6C             A=A-    1       B
  5279 01697 148             DAT0=A  B
- 5280               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     441
- 5281               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     442
+ 5280               * File  smhp_game_50.s  441
+ 5281               * File  smhp_game_50.s  442
  5282                       }
- 5283               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     443
+ 5283               * File  smhp_game_50.s  443
  5284                       }
  5285 0169A 01              RTN
- 5286               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     444
+ 5286               * File  smhp_game_50.s  444
  5287
- 5288               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     445
+ 5288               * File  smhp_game_50.s  445
  5289 0169C         =MLOST
- 5290               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     446
+ 5290               * File  smhp_game_50.s  446
  5291 0169C 07              C=RSTK
  5292 0169E 07              C=RSTK
- 5293               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     447
+ 5293               * File  smhp_game_50.s  447
  5294 016A0 8E03EF          GOSUBL  =FLIP
- 5295               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     448
+ 5295               * File  smhp_game_50.s  448
  5296
- 5297               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     449
- 5298               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     450
+ 5297               * File  smhp_game_50.s  449
+ 5298               * File  smhp_game_50.s  450
  5299 016A6 D0              A=0     A
  5300 016A8 D2              C=0     A
- 5301               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     451
+ 5301               * File  smhp_game_50.s  451
  5302 016AA 1FE1108         D1=(5)  (=LEVEL.DATA)
- 5303               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     452
+ 5303               * File  smhp_game_50.s  452
  5304 016B1 1B03108         D0=(5)  (=POSX)
  5305 016B8 1523            A=DAT0  X
- 5306               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     453
+ 5306               * File  smhp_game_50.s  453
  5307 016BC 32040           LC(3)   #40
- 5308               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     454
+ 5308               * File  smhp_game_50.s  454
  5309 016C1 9B2             ?A<C    X
  5310 016C4 A2              SKIPYES{
- 5311               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     455
+ 5311               * File  smhp_game_50.s  455
  5312 016C6 D0              A=0     A
  5313 016C8 1FE1108         D1=(5)  (=LEVEL.DATA)
- 5314               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     456
+ 5314               * File  smhp_game_50.s  456
  5315 016CF 1B03108         D0=(5)  (=POSX)
  5316 016D6 1523            A=DAT0  X
- 5317               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     457
+ 5317               * File  smhp_game_50.s  457
  5318 016DA C4              A=A+A   A
  5319 016DC 147             C=DAT1  A
- 5320               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     458
+ 5320               * File  smhp_game_50.s  458
  5321 016DF E2              C=C-A   A
  5322 016E1 145             DAT1=C  A
- 5323               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     459
+ 5323               * File  smhp_game_50.s  459
  5324 016E4 8E0021          GOSUBL  =RESET.1
- 5325               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     460
- 5326               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     461
- 5327               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     462
+ 5325               * File  smhp_game_50.s  460
+ 5326               * File  smhp_game_50.s  461
+ 5327               * File  smhp_game_50.s  462
  5328 016EA 6720            }SKELSE{
- 5329               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     463
+ 5329               * File  smhp_game_50.s  463
  5330 016EE D0              A=0     A
  5331 016F0 1FE1108         D1=(5)  (=LEVEL.DATA)
- 5332               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     464
+ 5332               * File  smhp_game_50.s  464
  5333 016F7 1B03108         D0=(5)  (=POSX)
  5334 016FE 1523            A=DAT0  X
- 5335               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     465
+ 5335               * File  smhp_game_50.s  465
  5336 01702 C4              A=A+A   A
  5337 01704 147             C=DAT1  A
- 5338               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     466
+ 5338               * File  smhp_game_50.s  466
  5339 01707 E2              C=C-A   A
  5340 01709 145             DAT1=C  A
- 5341               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     467
+ 5341               * File  smhp_game_50.s  467
  5342 0170C 8E8D11          GOSUBL  =RESET.1
- 5343               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     468
- 5344               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     469
+ 5343               * File  smhp_game_50.s  468
+ 5344               * File  smhp_game_50.s  469
  5345                       }
  5346 01712 1B40108         D0=(5)  (=VIE)
  5347 01719 14A             A=DAT0  B
- 5348               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     470
+ 5348               * File  smhp_game_50.s  470
  5349 0171C 968             ?A=0    B
  5350 0171F C0              SKIPYES{
- 5351               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     471
+ 5351               * File  smhp_game_50.s  471
  5352 01721 A6C             A=A-    1       B
- 5353               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     472
+ 5353               * File  smhp_game_50.s  472
  5354 01724 148             DAT0=A  B
- 5355               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     473
- 5356               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     474
- 5357               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     475
+ 5355               * File  smhp_game_50.s  473
+ 5356               * File  smhp_game_50.s  474
+ 5357               * File  smhp_game_50.s  475
  5358 01727 6900            }SKELSE{
- 5359               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     476
- 5360               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     477
+ 5359               * File  smhp_game_50.s  476
+ 5360               * File  smhp_game_50.s  477
  5361 0172B 8CC2CF          GOLONG  =STOP
- 5362               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     478
- 5363               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     479
+ 5362               * File  smhp_game_50.s  478
+ 5363               * File  smhp_game_50.s  479
  5364                       }
  5365 01731 8C21BF          GOLONG  =REPLAY
- 5366               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     480
+ 5366               * File  smhp_game_50.s  480
  5367
- 5368               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     481
+ 5368               * File  smhp_game_50.s  481
  5369 01737         =DISP.LEVEL
- 5370               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     482
+ 5370               * File  smhp_game_50.s  482
  5371 01737 1B91108         D0=(5)  (=LEVEL.SURFACE)
  5372 0173E 142             A=DAT0  A
- 5373               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     483
+ 5373               * File  smhp_game_50.s  483
  5374 01741 103             R3=A
- 5375               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     484
+ 5375               * File  smhp_game_50.s  484
  5376
- 5377               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     485
+ 5377               * File  smhp_game_50.s  485
  5378 01744 31D0            LC(2)   13
  5379 01748 AE7             D=C     B
- 5380               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     486
+ 5380               * File  smhp_game_50.s  486
  5381 0174B 3180            LC(2)   08
  5382 0174F AE5             B=C     B
- 5383               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     487
+ 5383               * File  smhp_game_50.s  487
  5384
- 5385               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     488
+ 5385               * File  smhp_game_50.s  488
  5386 01752 1BE1108         D0=(5)  (=LEVEL.DATA)
  5387 01759 142             A=DAT0  A
  5388 0175C 130             D0=A
- 5389               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     489
+ 5389               * File  smhp_game_50.s  489
  5390 0175F 136             CD0EX
  5391 01762 06              RSTK=C
  5392 01764 134             D0=C
- 5393               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     490
+ 5393               * File  smhp_game_50.s  490
  5394
- 5395               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     491
+ 5395               * File  smhp_game_50.s  491
  5396 01767         =BCL
- 5397               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     492
+ 5397               * File  smhp_game_50.s  492
  5398 01767 D0              A=0     A
  5399 01769 14A             A=DAT0  B
- 5400               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     493
- 5401               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     494
+ 5400               * File  smhp_game_50.s  493
+ 5401               * File  smhp_game_50.s  494
  5402 0176C 3191            LC(2)   25
- 5403               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     495
+ 5403               * File  smhp_game_50.s  495
  5404 01770 966             ?A#C    B
  5405 01773 A4              SKIPYES{
- 5406               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     496
+ 5406               * File  smhp_game_50.s  496
  5407 01775 80821D0         LA(2)   13
  5408 0177C AEB             C=D     B
  5409 0177F B6A             A=A-C   B
- 5410               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     497
+ 5410               * File  smhp_game_50.s  497
  5411 01782 F0              ASL     A
  5412 01784 819F0           ASRB.f  A
- 5413               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     498
+ 5413               * File  smhp_game_50.s  498
  5414 01789 1BB0108         D0=(5)  (=MX)
  5415 01790 148             DAT0=A  B
- 5416               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     499
+ 5416               * File  smhp_game_50.s  499
  5417
- 5418               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     500
+ 5418               * File  smhp_game_50.s  500
  5419 01793 8082180         LA(2)   08
  5420 0179A AE9             C=B     B
  5421 0179D B6A             A=A-C   B
- 5422               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     501
+ 5422               * File  smhp_game_50.s  501
  5423 017A0 F0              ASL     A
  5424 017A2 819F0           ASRB.f  A
  5425 017A7 818681          A=A-    2       B
- 5426               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     502
+ 5426               * File  smhp_game_50.s  502
  5427 017AD 1B01108         D0=(5)  (=MY)
  5428 017B4 148             DAT0=A  B
- 5429               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     503
+ 5429               * File  smhp_game_50.s  503
  5430 017B7 D0              A=0     A
- 5431               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     504
+ 5431               * File  smhp_game_50.s  504
  5432 017B9 6A50            GOTO    =NODISP
- 5433               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     505
- 5434               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     506
- 5435               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     507
+ 5433               * File  smhp_game_50.s  505
+ 5434               * File  smhp_game_50.s  506
+ 5435               * File  smhp_game_50.s  507
  5436                       }
  5437 017BD 31A1            LC(2)   26
- 5438               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     508
+ 5438               * File  smhp_game_50.s  508
  5439 017C1 966             ?A#C    B
  5440 017C4 A1              SKIPYES{
- 5441               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     509
+ 5441               * File  smhp_game_50.s  509
  5442 017C6 8082110         LA(2)   1
- 5443               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     510
+ 5443               * File  smhp_game_50.s  510
  5444 017CD 32462           LC(3)   #264
- 5445               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     511
+ 5445               * File  smhp_game_50.s  511
  5446 017D2 8EF8A2          GOSUBL  =ADDOBJET
- 5447               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     512
+ 5447               * File  smhp_game_50.s  512
  5448
- 5449               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     513
+ 5449               * File  smhp_game_50.s  513
  5450 017D8 D0              A=0     A
- 5451               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     514
+ 5451               * File  smhp_game_50.s  514
  5452 017DA 6930            GOTO    =NODISP
- 5453               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     515
- 5454               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     516
- 5455               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     517
+ 5453               * File  smhp_game_50.s  515
+ 5454               * File  smhp_game_50.s  516
+ 5455               * File  smhp_game_50.s  517
  5456                       }
  5457 017DE 31C2            LC(2)   44
- 5458               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     518
+ 5458               * File  smhp_game_50.s  518
  5459 017E2 966             ?A#C    B
  5460 017E5 A1              SKIPYES{
- 5461               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     519
+ 5461               * File  smhp_game_50.s  519
  5462 017E7 8082120         LA(2)   2
- 5463               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     520
+ 5463               * File  smhp_game_50.s  520
  5464 017EE 32072           LC(3)   #270
- 5465               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     521
+ 5465               * File  smhp_game_50.s  521
  5466 017F3 8EE6A2          GOSUBL  =ADDOBJET
- 5467               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     522
+ 5467               * File  smhp_game_50.s  522
  5468
- 5469               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     523
+ 5469               * File  smhp_game_50.s  523
  5470 017F9 D0              A=0     A
- 5471               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     524
+ 5471               * File  smhp_game_50.s  524
  5472 017FB 6810            GOTO    =NODISP
- 5473               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     525
- 5474               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     526
- 5475               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     527
+ 5473               * File  smhp_game_50.s  525
+ 5474               * File  smhp_game_50.s  526
+ 5475               * File  smhp_game_50.s  527
  5476                       }
  5477 017FF 3132            LC(2)   35
- 5478               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     528
+ 5478               * File  smhp_game_50.s  528
  5479 01803 966             ?A#C    B
  5480 01806 E0              SKIPYES{
- 5481               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     529
+ 5481               * File  smhp_game_50.s  529
  5482 01808 8EEE40          GOSUBL  =ADD_LIFT
- 5483               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     530
+ 5483               * File  smhp_game_50.s  530
  5484 0180E D0              A=0     A
- 5485               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     531
+ 5485               * File  smhp_game_50.s  531
  5486 01810 6300            GOTO    =NODISP
- 5487               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     532
- 5488               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     533
+ 5487               * File  smhp_game_50.s  532
+ 5488               * File  smhp_game_50.s  533
  5489
- 5490               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     534
+ 5490               * File  smhp_game_50.s  534
  5491                       }
  5492 01814         =NODISP
- 5493               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     535
+ 5493               * File  smhp_game_50.s  535
  5494 01814 1FB3108         D1=(5)  (=CUBES)
  5495 0181B 147             C=DAT1  A
- 5496               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     536
+ 5496               * File  smhp_game_50.s  536
  5497 0181E F0              ASL     A
  5498 01820 C4              A=A+A   A
- 5499               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     537
+ 5499               * File  smhp_game_50.s  537
  5500 01822 C2              C=C+A   A
  5501 01824 135             D1=C
- 5502               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     538
+ 5502               * File  smhp_game_50.s  538
  5503
- 5504               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     539
+ 5504               * File  smhp_game_50.s  539
  5505 01827 81AF13          A=R3.f  A
  5506 0182D 130             D0=A
- 5507               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     540
+ 5507               * File  smhp_game_50.s  540
  5508 01830 307             LCHEX   7
- 5509               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     541
+ 5509               * File  smhp_game_50.s  541
  5510                       {
- 5511               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     542
+ 5511               * File  smhp_game_50.s  542
  5512 01833 14B             A=DAT1  B
  5513 01836 148             DAT0=A  B
- 5514               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     543
+ 5514               * File  smhp_game_50.s  543
  5515 01839 16F16F1         D0+     34
             61
  5516 01842 173             D1+     4
  5517 01845 A0E             C=C-    1       P
- 5518               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     544
+ 5518               * File  smhp_game_50.s  544
  5519 01848 5AE             UPNC
- 5520               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     545
- 5521               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     546
+ 5520               * File  smhp_game_50.s  545
+ 5521               * File  smhp_game_50.s  546
  5522                       }
  5523 0184B         =NDISP
- 5524               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     547
+ 5524               * File  smhp_game_50.s  547
  5525 0184B 81AF13          A=R3.f  A
  5526 01851 818F01          A=A+    2       A
  5527 01857 103             R3=A
- 5528               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     548
+ 5528               * File  smhp_game_50.s  548
  5529 0185A 07              C=RSTK
  5530 0185C 818F21          C=C+    2       A
  5531 01862 06              RSTK=C
- 5532               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     549
+ 5532               * File  smhp_game_50.s  549
  5533 01864 134             D0=C
- 5534               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     550
+ 5534               * File  smhp_game_50.s  550
  5535
- 5536               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     551
+ 5536               * File  smhp_game_50.s  551
  5537 01867 A6F             D=D-    1       B
- 5538               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     552
+ 5538               * File  smhp_game_50.s  552
  5539 0186A 96B             ?D=0    B
  5540 0186D 60              SKIPYES{
  5541 0186F 67FE            GOTO    =BCL
- 5542               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     553
+ 5542               * File  smhp_game_50.s  553
  5543
- 5544               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     554
+ 5544               * File  smhp_game_50.s  554
  5545                       }
  5546 01873 31D0            LC(2)   13
  5547 01877 AE7             D=C     B
- 5548               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     555
+ 5548               * File  smhp_game_50.s  555
  5549
- 5550               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     556
+ 5550               * File  smhp_game_50.s  556
  5551 0187A 07              C=RSTK
- 5552               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     557
+ 5552               * File  smhp_game_50.s  557
  5553 0187C 8082404         LAHEX   00140
             100
  5554 01886 C2              C=C+A   A
- 5555               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     558
+ 5555               * File  smhp_game_50.s  558
  5556 01888 818FAF          C=C-    16      A
  5557 0188E 818FA9          C=C-    10      A
- 5558               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     559
+ 5558               * File  smhp_game_50.s  559
  5559 01894 06              RSTK=C
  5560 01896 134             D0=C
- 5561               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     560
+ 5561               * File  smhp_game_50.s  560
  5562
- 5563               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     561
+ 5563               * File  smhp_game_50.s  561
  5564 01899 81AF13          A=R3.f  A
  5565 0189F 818F8F          A=A-    16      A
  5566 018A5 818F89          A=A-    10      A
- 5567               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     562
+ 5567               * File  smhp_game_50.s  562
  5568 018AB 3401100         LCHEX   00110
  5569 018B2 CA              A=A+C   A
  5570 018B4 103             R3=A
- 5571               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     563
+ 5571               * File  smhp_game_50.s  563
  5572
- 5573               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     564
+ 5573               * File  smhp_game_50.s  564
  5574 018B7 A6D             B=B-    1       B
  5575 018BA 969             ?B=0    B
  5576 018BD 60              SKIPYES{
  5577 018BF 67AE            GOTO    =BCL
- 5578               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     565
+ 5578               * File  smhp_game_50.s  565
  5579                       }
  5580 018C3 07              C=RSTK
- 5581               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     566
+ 5581               * File  smhp_game_50.s  566
  5582 018C5 01              RTN
- 5583               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     567
+ 5583               * File  smhp_game_50.s  567
  5584
- 5585               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     568
+ 5585               * File  smhp_game_50.s  568
  5586 018C7         =DISP.COL.D
- 5587               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     569
+ 5587               * File  smhp_game_50.s  569
  5588
- 5589               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     570
+ 5589               * File  smhp_game_50.s  570
  5590 018C7 1B91108         D0=(5)  (=LEVEL.SURFACE)
  5591 018CE 146             C=DAT0  A
- 5592               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     571
+ 5592               * File  smhp_game_50.s  571
  5593 018D1 818F2F8         C=C+    26      A
             18F29
  5594 018DD D7              D=C     A
- 5595               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     572
+ 5595               * File  smhp_game_50.s  572
  5596
- 5597               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     573
+ 5597               * File  smhp_game_50.s  573
  5598 018DF 3180            LC(2)   8
  5599 018E3 AE5             B=C     B
- 5600               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     574
+ 5600               * File  smhp_game_50.s  574
  5601
- 5602               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     575
+ 5602               * File  smhp_game_50.s  575
  5603 018E6 1BE1108         D0=(5)  (=LEVEL.DATA)
  5604 018ED 142             A=DAT0  A
- 5605               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     576
+ 5605               * File  smhp_game_50.s  576
  5606 018F0 818F0F8         A=A+    26      A
             18F09
  5607 018FC 104             R4=A
- 5608               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     577
+ 5608               * File  smhp_game_50.s  577
  5609                       {
- 5610               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     578
+ 5610               * File  smhp_game_50.s  578
  5611 018FF 81AF1C          C=R4.f  A
  5612 01905 134             D0=C
- 5613               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     579
+ 5613               * File  smhp_game_50.s  579
  5614 01908 D0              A=0     A
  5615 0190A 14A             A=DAT0  B
- 5616               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     580
+ 5616               * File  smhp_game_50.s  580
  5617
- 5618               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     581
- 5619               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     582
+ 5618               * File  smhp_game_50.s  581
+ 5619               * File  smhp_game_50.s  582
  5620 0190D 31A1            LC(2)   26
- 5621               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     583
+ 5621               * File  smhp_game_50.s  583
  5622 01911 966             ?A#C    B
  5623 01914 A1              SKIPYES{
- 5624               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     584
+ 5624               * File  smhp_game_50.s  584
  5625 01916 8082110         LA(2)   1
- 5626               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     585
+ 5626               * File  smhp_game_50.s  585
  5627 0191D 32462           LC(3)   #264
- 5628               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     586
+ 5628               * File  smhp_game_50.s  586
  5629 01922 8EE092          GOSUBL  =ADDOBJET2
- 5630               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     587
+ 5630               * File  smhp_game_50.s  587
  5631
- 5632               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     588
+ 5632               * File  smhp_game_50.s  588
  5633 01928 D0              A=0     A
- 5634               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     589
+ 5634               * File  smhp_game_50.s  589
  5635 0192A 6930            GOTO    =NODISP2
- 5636               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     590
- 5637               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     591
- 5638               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     592
+ 5636               * File  smhp_game_50.s  590
+ 5637               * File  smhp_game_50.s  591
+ 5638               * File  smhp_game_50.s  592
  5639                       }
  5640 0192E 31C2            LC(2)   44
- 5641               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     593
+ 5641               * File  smhp_game_50.s  593
  5642 01932 966             ?A#C    B
  5643 01935 A1              SKIPYES{
- 5644               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     594
+ 5644               * File  smhp_game_50.s  594
  5645 01937 8082120         LA(2)   2
- 5646               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     595
+ 5646               * File  smhp_game_50.s  595
  5647 0193E 32072           LC(3)   #270
- 5648               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     596
+ 5648               * File  smhp_game_50.s  596
  5649 01943 8EDE82          GOSUBL  =ADDOBJET2
- 5650               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     597
+ 5650               * File  smhp_game_50.s  597
  5651
- 5652               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     598
+ 5652               * File  smhp_game_50.s  598
  5653 01949 D0              A=0     A
- 5654               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     599
+ 5654               * File  smhp_game_50.s  599
  5655 0194B 6810            GOTO    =NODISP2
- 5656               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     600
- 5657               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     601
- 5658               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     602
+ 5656               * File  smhp_game_50.s  600
+ 5657               * File  smhp_game_50.s  601
+ 5658               * File  smhp_game_50.s  602
  5659                       }
  5660 0194F 3132            LC(2)   35
- 5661               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     603
+ 5661               * File  smhp_game_50.s  603
  5662 01953 966             ?A#C    B
  5663 01956 E0              SKIPYES{
- 5664               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     604
+ 5664               * File  smhp_game_50.s  604
  5665 01958 8E9040          GOSUBL  =ADD2_LIFT
- 5666               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     605
+ 5666               * File  smhp_game_50.s  605
  5667 0195E D0              A=0     A
- 5668               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     606
+ 5668               * File  smhp_game_50.s  606
  5669 01960 6300            GOTO    =NODISP2
- 5670               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     607
- 5671               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     608
+ 5670               * File  smhp_game_50.s  607
+ 5671               * File  smhp_game_50.s  608
  5672
- 5673               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     609
+ 5673               * File  smhp_game_50.s  609
  5674                       }
  5675 01964         =NODISP2
- 5676               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     610
+ 5676               * File  smhp_game_50.s  610
  5677
- 5678               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     611
+ 5678               * File  smhp_game_50.s  611
  5679 01964 1FB3108         D1=(5)  (=CUBES)
  5680 0196B 147             C=DAT1  A
- 5681               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     612
+ 5681               * File  smhp_game_50.s  612
  5682 0196E F0              ASL     A
  5683 01970 C4              A=A+A   A
- 5684               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     613
+ 5684               * File  smhp_game_50.s  613
  5685 01972 C2              C=C+A   A
  5686 01974 135             D1=C
- 5687               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     614
+ 5687               * File  smhp_game_50.s  614
  5688 01977 DB              C=D     A
- 5689               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     615
+ 5689               * File  smhp_game_50.s  615
  5690 01979 134             D0=C
- 5691               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     616
+ 5691               * File  smhp_game_50.s  616
  5692 0197C 307             LCHEX   7
- 5693               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     617
+ 5693               * File  smhp_game_50.s  617
  5694                       {
- 5695               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     618
+ 5695               * File  smhp_game_50.s  618
  5696 0197F 14B             A=DAT1  B
  5697 01982 148             DAT0=A  B
- 5698               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     619
+ 5698               * File  smhp_game_50.s  619
  5699 01985 16F16F1         D0+     34
             61
  5700 0198E 173             D1+     4
  5701 01991 A0E             C=C-    1       P
- 5702               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     620
+ 5702               * File  smhp_game_50.s  620
  5703 01994 5AE             UPNC
- 5704               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     621
- 5705               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     622
+ 5704               * File  smhp_game_50.s  621
+ 5705               * File  smhp_game_50.s  622
  5706
- 5707               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     623
+ 5707               * File  smhp_game_50.s  623
  5708                       }
  5709 01997 3401100         LCHEX   00110
  5710 0199E C3              D=D+C   A
- 5711               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     624
+ 5711               * File  smhp_game_50.s  624
  5712
- 5713               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     625
+ 5713               * File  smhp_game_50.s  625
  5714 019A0 81AF1C          C=R4.f  A
- 5715               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     626
+ 5715               * File  smhp_game_50.s  626
  5716 019A6 8082404         LAHEX   00140
             100
  5717 019B0 C2              C=C+A   A
- 5718               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     627
+ 5718               * File  smhp_game_50.s  627
  5719 019B2 10C             R4=C
- 5720               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     628
+ 5720               * File  smhp_game_50.s  628
  5721 019B5 A6D             B=B-    1       B
  5722 019B8 969             ?B=0    B
  5723 019BB 60              SKIPYES{
  5724 019BD 614F            UP2
- 5725               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     629
+ 5725               * File  smhp_game_50.s  629
  5726                       }
- 5727               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     630
+ 5727               * File  smhp_game_50.s  630
  5728                       }
  5729 019C1 01              RTN
- 5730               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     631
+ 5730               * File  smhp_game_50.s  631
  5731
- 5732               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     632
+ 5732               * File  smhp_game_50.s  632
  5733 019C3         =SCROLG
- 5734               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     633
- 5735               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     634
+ 5734               * File  smhp_game_50.s  633
+ 5735               * File  smhp_game_50.s  634
  5736 019C3 857             ST=1    7
- 5737               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     635
- 5738               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     636
+ 5737               * File  smhp_game_50.s  635
+ 5738               * File  smhp_game_50.s  636
  5739 019C6 1B91108         D0=(5)  (=LEVEL.SURFACE)
  5740 019CD 142             A=DAT0  A
  5741 019D0 130             D0=A
- 5742               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     637
+ 5742               * File  smhp_game_50.s  637
  5743 019D3 31F3            LCHEX   3F
- 5744               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     638
+ 5744               * File  smhp_game_50.s  638
  5745                       {
- 5746               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     639
+ 5746               * File  smhp_game_50.s  639
  5747 019D7 1527            A=DAT0  W
  5748 019DB 81C             ASRB
  5749 019DE 158E            DAT0=A  15
- 5750               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     640
+ 5750               * File  smhp_game_50.s  640
  5751 019E2 16E             D0+     15
  5752 019E5 15AD            A=DAT0  14
  5753 019E9 81C             ASRB
- 5754               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     641
+ 5754               * File  smhp_game_50.s  641
  5755 019EC 158C            DAT0=A  13
- 5756               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     642
+ 5756               * File  smhp_game_50.s  642
  5757 019F0 16F162          D0+     19
- 5758               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     643
+ 5758               * File  smhp_game_50.s  643
  5759 019F6 A6E             C=C-    1       B
  5760 019F9 5DD             UPNC
- 5761               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     644
- 5762               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     645
- 5763               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     646
+ 5761               * File  smhp_game_50.s  644
+ 5762               * File  smhp_game_50.s  645
+ 5763               * File  smhp_game_50.s  646
  5764                       }
  5765 019FC 1B81108         D0=(5)  (=SCROL.COUNTER)
  5766 01A03 1520            A=DAT0  P
- 5767               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     647
+ 5767               * File  smhp_game_50.s  647
  5768 01A07 307             LCHEX   7
- 5769               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     648
+ 5769               * File  smhp_game_50.s  648
  5770 01A0A 902             ?A=C    P
  5771 01A0D D0              SKIPYES{
- 5772               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     649
+ 5772               * File  smhp_game_50.s  649
  5773 01A0F B04             A=A+    1       P
  5774 01A12 1500            DAT0=A  P
- 5775               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     650
- 5776               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     651
- 5777               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     652
+ 5775               * File  smhp_game_50.s  650
+ 5776               * File  smhp_game_50.s  651
+ 5777               * File  smhp_game_50.s  652
  5778 01A16 6450            }SKELSE{
- 5779               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     653
- 5780               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     654
+ 5779               * File  smhp_game_50.s  653
+ 5780               * File  smhp_game_50.s  654
  5781 01A1A A80             A=0     P
  5782 01A1D 1500            DAT0=A  P
- 5783               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     655
+ 5783               * File  smhp_game_50.s  655
  5784
- 5785               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     656
+ 5785               * File  smhp_game_50.s  656
  5786 01A21 1B03108         D0=(5)  (=POSX)
  5787 01A28 1523            A=DAT0  X
- 5788               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     657
+ 5788               * File  smhp_game_50.s  657
  5789 01A2C 32290           LC(3)   #92
- 5790               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     658
+ 5790               * File  smhp_game_50.s  658
  5791 01A31 9B2             ?A<C    X
  5792 01A34 71              SKIPYES{
- 5793               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     659
+ 5793               * File  smhp_game_50.s  659
  5794 01A36 854             ST=1    4
- 5795               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     660
+ 5795               * File  smhp_game_50.s  660
  5796 01A39 1B81108         D0=(5)  (=SCROL.COUNTER)
- 5797               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     661
+ 5797               * File  smhp_game_50.s  661
  5798 01A40 308             LCHEX   8
  5799 01A43 1540            DAT0=C  P
- 5800               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     662
- 5801               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     663
- 5802               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     664
+ 5800               * File  smhp_game_50.s  662
+ 5801               * File  smhp_game_50.s  663
+ 5802               * File  smhp_game_50.s  664
  5803 01A47 6D10            }SKELSE{
- 5804               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     665
+ 5804               * File  smhp_game_50.s  665
  5805 01A4B B34             A=A+    1       X
  5806 01A4E 1503            DAT0=A  X
- 5807               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     666
+ 5807               * File  smhp_game_50.s  666
  5808 01A52 1BE1108         D0=(5)  (=LEVEL.DATA)
  5809 01A59 142             A=DAT0  A
- 5810               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     667
+ 5810               * File  smhp_game_50.s  667
  5811 01A5C 818F01          A=A+    2       A
  5812 01A62 140             DAT0=A  A
- 5813               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     668
- 5814               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     669
+ 5813               * File  smhp_game_50.s  668
+ 5814               * File  smhp_game_50.s  669
  5815                       }
  5816 01A65 8EC5EF          GOSUBL  =DISP.COL.D
- 5817               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     670
- 5818               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     671
+ 5817               * File  smhp_game_50.s  670
+ 5818               * File  smhp_game_50.s  671
  5819                       }
  5820 01A6B 01              RTN
- 5821               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     672
+ 5821               * File  smhp_game_50.s  672
  5822
- 5823               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     673
+ 5823               * File  smhp_game_50.s  673
  5824 01A6D         =DISP.PANEL
- 5825               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     674
+ 5825               * File  smhp_game_50.s  674
  5826 01A6D 81AF1A          C=R2.f  A
  5827 01A73 818F2F8         C=C+    26      A
             18F29
  5828 01A7F 135             D1=C
- 5829               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     675
+ 5829               * File  smhp_game_50.s  675
  5830 01A82 D7              D=C     A
- 5831               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     676
+ 5831               * File  smhp_game_50.s  676
  5832 01A84 81AF10          A=R0.f  A
  5833 01A8A 818F0F8         A=A+    26      A
             18F09
  5834 01A96 130             D0=A
- 5835               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     677
+ 5835               * File  smhp_game_50.s  677
  5836 01A99 31F3            LCHEX   3F
- 5837               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     678
+ 5837               * File  smhp_game_50.s  678
  5838                       {
- 5839               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     679
+ 5839               * File  smhp_game_50.s  679
  5840 01A9D 15B7            A=DAT1  8
  5841 01AA1 1587            DAT0=A  8
- 5842               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     680
+ 5842               * File  smhp_game_50.s  680
  5843 01AA5 16F16F1         D0+     34
             61
  5844 01AAE 17F17F1         D1+     34
             71
- 5845               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     681
+ 5845               * File  smhp_game_50.s  681
  5846 01AB7 A6E             C=C-    1       B
  5847 01ABA 52E             UPNC
- 5848               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     682
- 5849               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     683
+ 5848               * File  smhp_game_50.s  682
+ 5849               * File  smhp_game_50.s  683
  5850                       }
  5851 01ABD DB              C=D     A
  5852 01ABF 135             D1=C
- 5853               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     684
+ 5853               * File  smhp_game_50.s  684
  5854 01AC2 81AF11          A=R1.f  A
- 5855               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     685
+ 5855               * File  smhp_game_50.s  685
  5856 01AC8 818F0F          A=A+    16      A
  5857 01ACE 818F09          A=A+    10      A
  5858 01AD4 130             D0=A
- 5859               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     686
+ 5859               * File  smhp_game_50.s  686
  5860 01AD7 31F3            LCHEX   3F
- 5861               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     687
+ 5861               * File  smhp_game_50.s  687
  5862                       {
- 5863               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     688
+ 5863               * File  smhp_game_50.s  688
  5864 01ADB 15B7            A=DAT1  8
  5865 01ADF 1587            DAT0=A  8
- 5866               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     689
+ 5866               * File  smhp_game_50.s  689
  5867 01AE3 16F16F1         D0+     34
             61
  5868 01AEC 17F17F1         D1+     34
             71
- 5869               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     690
+ 5869               * File  smhp_game_50.s  690
  5870 01AF5 A6E             C=C-    1       B
  5871 01AF8 52E             UPNC
- 5872               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     691
- 5873               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     692
+ 5872               * File  smhp_game_50.s  691
+ 5873               * File  smhp_game_50.s  692
  5874                       }
  5875 01AFB 01              RTN
- 5876               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     693
+ 5876               * File  smhp_game_50.s  693
  5877
- 5878               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     694
+ 5878               * File  smhp_game_50.s  694
  5879 01AFD         =NUMBER.AC
- 5880               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     695
+ 5880               * File  smhp_game_50.s  695
  5881 01AFD 90A             ?C=0    P
  5882 01B00 00              RTNYES
- 5883               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     696
+ 5883               * File  smhp_game_50.s  696
  5884
- 5885               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     697
- 5886               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     698
- 5887               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     699
+ 5885               * File  smhp_game_50.s  697
+ 5886               * File  smhp_game_50.s  698
+ 5887               * File  smhp_game_50.s  699
  5888
- 5889               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     700
+ 5889               * File  smhp_game_50.s  700
  5890 01B02 AF8             B=A     W
- 5891               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     701
+ 5891               * File  smhp_game_50.s  701
  5892 01B05 A87             D=C     P
- 5893               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     702
+ 5893               * File  smhp_game_50.s  702
  5894 01B08 D2              C=0     A
  5895 01B0A A8B             C=D     P
  5896 01B0D CE              C=C-    1       A
- 5897               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     703
+ 5897               * File  smhp_game_50.s  703
  5898 01B0F 81AF14          A=R4.f  A
  5899 01B15 CA              A=A+C   A
  5900 01B17 104             R4=A
- 5901               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     704
- 5902               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     705
+ 5901               * File  smhp_game_50.s  704
+ 5902               * File  smhp_game_50.s  705
  5903 01B1A 81AF12          A=R2.f  A
- 5904               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     706
+ 5904               * File  smhp_game_50.s  706
  5905 01B20 3467100         LCHEX   00176
  5906 01B27 CA              A=A+C   A
- 5907               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     707
+ 5907               * File  smhp_game_50.s  707
  5908 01B29 103             R3=A
- 5909               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     708
+ 5909               * File  smhp_game_50.s  708
  5910
- 5911               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     709
+ 5911               * File  smhp_game_50.s  709
  5912                       {
- 5913               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     710
+ 5913               * File  smhp_game_50.s  710
  5914 01B2C 90B             ?D=0    P
  5915 01B2F 35              EXIT
- 5916               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     711
+ 5916               * File  smhp_game_50.s  711
  5917 01B31 81AF1B          C=R3.f  A
- 5918               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     712
+ 5918               * File  smhp_game_50.s  712
  5919 01B37 D0              A=0     A
  5920 01B39 A84             A=B     P
- 5921               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     713
+ 5921               * File  smhp_game_50.s  713
  5922 01B3C C2              C=C+A   A
  5923 01B3E 135             D1=C
- 5924               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     714
+ 5924               * File  smhp_game_50.s  714
  5925
- 5926               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     715
+ 5926               * File  smhp_game_50.s  715
  5927 01B41 81AF14          A=R4.f  A
  5928 01B47 130             D0=A
  5929 01B4A 305             LCHEX   5
- 5930               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     716
+ 5930               * File  smhp_game_50.s  716
  5931                       {
- 5932               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     717
+ 5932               * File  smhp_game_50.s  717
  5933 01B4D 1530            A=DAT1  P
  5934 01B51 1500            DAT0=A  P
- 5935               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     718
+ 5935               * File  smhp_game_50.s  718
  5936 01B55 17F17F1         D1+     34
             71
  5937 01B5E 16F16F1         D0+     34
             61
  5938 01B67 A0E             C=C-    1       P
- 5939               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     719
+ 5939               * File  smhp_game_50.s  719
  5940 01B6A 52E             UPNC
- 5941               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     720
- 5942               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     721
+ 5941               * File  smhp_game_50.s  720
+ 5942               * File  smhp_game_50.s  721
  5943                       }
  5944 01B6D 81AF1C          C=R4.f  A
  5945 01B73 CE              C=C-    1       A
  5946 01B75 10C             R4=C
- 5947               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     722
+ 5947               * File  smhp_game_50.s  722
  5948 01B78 BF5             BSR     W
  5949 01B7B A0F             D=D-    1       P
  5950 01B7E 6DAF            UP
- 5951               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     723
- 5952               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     724
+ 5951               * File  smhp_game_50.s  723
+ 5952               * File  smhp_game_50.s  724
  5953                       }
  5954 01B82 01              RTN
- 5955               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     725
+ 5955               * File  smhp_game_50.s  725
  5956
- 5957               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     726
+ 5957               * File  smhp_game_50.s  726
  5958 01B84         =SPRITES
- 5959               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     727
+ 5959               * File  smhp_game_50.s  727
  5960 01B84 D2              C=0     A
  5961 01B86 10B             R3=C
- 5962               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     728
+ 5962               * File  smhp_game_50.s  728
  5963 01B89 30F             LC(1)   15
- 5964               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     729
+ 5964               * File  smhp_game_50.s  729
  5965                       {
- 5966               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     730
+ 5966               * File  smhp_game_50.s  730
  5967 01B8C 06              RSTK=C
- 5968               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     731
+ 5968               * File  smhp_game_50.s  731
  5969 01B8E 81AF1B          C=R3.f  A
- 5970               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     732
+ 5970               * File  smhp_game_50.s  732
  5971 01B94 8E8A20          GOSUBL  =SP.LOAD
- 5972               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     733
+ 5972               * File  smhp_game_50.s  733
  5973 01B9A 441             SKIPC{
- 5974               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     734
+ 5974               * File  smhp_game_50.s  734
  5975 01B9D 8E9220          GOSUBL  =DISP.SPRITE
- 5976               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     735
+ 5976               * File  smhp_game_50.s  735
  5977 01BA3 81AF1B          C=R3.f  A
- 5978               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     736
+ 5978               * File  smhp_game_50.s  736
  5979 01BA9 8E6530          GOSUBL  =SP.SAVE
- 5980               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     737
- 5981               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     738
+ 5980               * File  smhp_game_50.s  737
+ 5981               * File  smhp_game_50.s  738
  5982                       }
  5983 01BAF 81AF1B          C=R3.f  A
  5984 01BB5 818F2A          C=C+    11      A
  5985 01BBB 10B             R3=C
- 5986               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     739
+ 5986               * File  smhp_game_50.s  739
  5987 01BBE 07              C=RSTK
  5988 01BC0 90A             ?C=0    P
  5989 01BC3 90              EXIT
- 5990               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     740
+ 5990               * File  smhp_game_50.s  740
  5991 01BC5 A0E             C=C-    1       P
- 5992               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     741
+ 5992               * File  smhp_game_50.s  741
  5993 01BC8 63CF            UP
- 5994               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     742
- 5995               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     743
+ 5994               * File  smhp_game_50.s  742
+ 5995               * File  smhp_game_50.s  743
  5996                       }
  5997 01BCC 01              RTN
- 5998               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     744
+ 5998               * File  smhp_game_50.s  744
  5999
- 6000               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     745
+ 6000               * File  smhp_game_50.s  745
  6001 01BCE         =LIFTS
- 6002               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     746
+ 6002               * File  smhp_game_50.s  746
  6003 01BCE D2              C=0     A
  6004 01BD0 10B             R3=C
- 6005               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     747
+ 6005               * File  smhp_game_50.s  747
  6006 01BD3 304             LC(1)   (=LMAX)
- 6007               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     748
+ 6007               * File  smhp_game_50.s  748
  6008                       {
- 6009               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     749
+ 6009               * File  smhp_game_50.s  749
  6010 01BD6 06              RSTK=C
- 6011               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     750
+ 6011               * File  smhp_game_50.s  750
  6012 01BD8 81AF1B          C=R3.f  A
- 6013               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     751
+ 6013               * File  smhp_game_50.s  751
  6014 01BDE 8E82D1          GOSUBL  =LOAD_L
- 6015               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     752
+ 6015               * File  smhp_game_50.s  752
  6016 01BE4 441             SKIPC{
- 6017               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     753
+ 6017               * File  smhp_game_50.s  753
  6018 01BE7 8E6FD1          GOSUBL  =LIFT
- 6019               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     754
+ 6019               * File  smhp_game_50.s  754
  6020 01BED 81AF1B          C=R3.f  A
- 6021               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     755
+ 6021               * File  smhp_game_50.s  755
  6022 01BF3 8E18D1          GOSUBL  =SAVE_L
- 6023               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     756
- 6024               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     757
+ 6023               * File  smhp_game_50.s  756
+ 6024               * File  smhp_game_50.s  757
  6025                       }
  6026 01BF9 81AF1B          C=R3.f  A
  6027 01BFF 818F25          C=C+    6       A
  6028 01C05 10B             R3=C
- 6029               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     758
+ 6029               * File  smhp_game_50.s  758
  6030 01C08 07              C=RSTK
  6031 01C0A 90A             ?C=0    P
  6032 01C0D 90              EXIT
- 6033               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     759
+ 6033               * File  smhp_game_50.s  759
  6034 01C0F A0E             C=C-    1       P
- 6035               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     760
+ 6035               * File  smhp_game_50.s  760
  6036 01C12 63CF            UP
- 6037               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     761
- 6038               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     762
+ 6037               * File  smhp_game_50.s  761
+ 6038               * File  smhp_game_50.s  762
  6039                       }
  6040 01C16 01              RTN
- 6041               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     763
+ 6041               * File  smhp_game_50.s  763
  6042
- 6043               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     764
+ 6043               * File  smhp_game_50.s  764
  6044 01C18         =DISP.A.C.R4.B
- 6045               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     765
+ 6045               * File  smhp_game_50.s  765
  6046 01C18 D7              D=C     A
- 6047               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     766
+ 6047               * File  smhp_game_50.s  766
  6048 01C1A AE9             C=B     B
  6049 01C1D 06              RSTK=C
- 6050               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     767
+ 6050               * File  smhp_game_50.s  767
  6051 01C1F D8              B=A     A
- 6052               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     768
+ 6052               * File  smhp_game_50.s  768
  6053 01C21 DB              C=D     A
- 6054               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     769
- 6055               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     770
+ 6054               * File  smhp_game_50.s  769
+ 6055               * File  smhp_game_50.s  770
  6056 01C23 DA              A=C     A
  6057 01C25 F2              CSL     A
  6058 01C27 C2              C=C+A   A
- 6059               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     771
+ 6059               * File  smhp_game_50.s  771
  6060 01C29 C6              C=C+C   A
- 6061               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     772
+ 6061               * File  smhp_game_50.s  772
  6062 01C2B 81AF11          A=R1.f  A
  6063 01C31 CA              A=A+C   A
  6064 01C33 D9              C=B     A
- 6065               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     773
+ 6065               * File  smhp_game_50.s  773
  6066 01C35 D7              D=C     A
  6067 01C37 819F2           CSRB.f  A
  6068 01C3C 819F2           CSRB.f  A
- 6069               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     774
+ 6069               * File  smhp_game_50.s  774
  6070 01C41 CA              A=A+C   A
  6071 01C43 130             D0=A
- 6072               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     775
- 6073               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     776
+ 6072               * File  smhp_game_50.s  775
+ 6073               * File  smhp_game_50.s  776
  6074 01C46 81AF14          A=R4.f  A
  6075 01C4C 131             D1=A
- 6076               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     777
- 6077               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     778
+ 6076               * File  smhp_game_50.s  777
+ 6077               * File  smhp_game_50.s  778
  6078 01C4F 07              C=RSTK
  6079 01C51 AE5             B=C     B
- 6080               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     779
+ 6080               * File  smhp_game_50.s  779
  6081                       {
- 6082               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     780
+ 6082               * File  smhp_game_50.s  780
  6083 01C54 171             D1+     2
- 6084               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     781
+ 6084               * File  smhp_game_50.s  781
  6085
- 6086               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     782
+ 6086               * File  smhp_game_50.s  782
  6087 01C57 AB0             A=0     X
- 6088               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     783
+ 6088               * File  smhp_game_50.s  783
  6089 01C5A 14B             A=DAT1  B
- 6090               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     784
+ 6090               * File  smhp_game_50.s  784
  6091 01C5D A8B             C=D     P
- 6092               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     785
+ 6092               * File  smhp_game_50.s  785
  6093 01C60 808A0           ?CBIT#1 0
  6094 01C65 50              SKIPYES{
  6095 01C67 A34             A=A+A   X
- 6096               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     786
+ 6096               * File  smhp_game_50.s  786
  6097                       }
  6098 01C6A 808A1           ?CBIT#1 1
  6099 01C6F 80              SKIPYES{
  6100 01C71 A34             A=A+A   X
  6101 01C74 A34             A=A+A   X
- 6102               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     787
+ 6102               * File  smhp_game_50.s  787
  6103
- 6104               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     788
+ 6104               * File  smhp_game_50.s  788
  6105                       }
  6106 01C77 BBC             A=-A-1  X
- 6107               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     789
+ 6107               * File  smhp_game_50.s  789
  6108 01C7A 1563            C=DAT0  X
- 6109               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     790
+ 6109               * File  smhp_game_50.s  790
  6110 01C7E 0E32            C=C&A   X
- 6111               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     791
+ 6111               * File  smhp_game_50.s  791
  6112 01C82 06              RSTK=C
- 6113               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     792
+ 6113               * File  smhp_game_50.s  792
  6114 01C84 1C1             D1-     2
- 6115               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     793
+ 6115               * File  smhp_game_50.s  793
  6116
- 6117               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     794
+ 6117               * File  smhp_game_50.s  794
  6118 01C87 AB0             A=0     X
- 6119               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     795
+ 6119               * File  smhp_game_50.s  795
  6120 01C8A 14B             A=DAT1  B
- 6121               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     796
+ 6121               * File  smhp_game_50.s  796
  6122 01C8D A8B             C=D     P
- 6123               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     797
+ 6123               * File  smhp_game_50.s  797
  6124 01C90 808A0           ?CBIT#1 0
  6125 01C95 50              SKIPYES{
  6126 01C97 A34             A=A+A   X
- 6127               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     798
+ 6127               * File  smhp_game_50.s  798
  6128                       }
  6129 01C9A 808A1           ?CBIT#1 1
  6130 01C9F 80              SKIPYES{
  6131 01CA1 A34             A=A+A   X
  6132 01CA4 A34             A=A+A   X
- 6133               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     799
+ 6133               * File  smhp_game_50.s  799
  6134
- 6135               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     800
+ 6135               * File  smhp_game_50.s  800
  6136                       }
  6137 01CA7 07              C=RSTK
- 6138               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     801
+ 6138               * File  smhp_game_50.s  801
  6139 01CA9 0E3E            A=A!C   X
- 6140               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     802
+ 6140               * File  smhp_game_50.s  802
  6141 01CAD 1503            DAT0=A  X
- 6142               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     803
+ 6142               * File  smhp_game_50.s  803
  6143 01CB1 16F16F1         D0+     34
             61
  6144 01CBA 17F17F1         D1+     34
             71
- 6145               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     804
+ 6145               * File  smhp_game_50.s  804
  6146 01CC3 A0D             B=B-    1       P
  6147 01CC6 5D8             UPNC
- 6148               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     805
- 6149               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     806
+ 6148               * File  smhp_game_50.s  805
+ 6149               * File  smhp_game_50.s  806
  6150                       }
  6151 01CC9 01              RTN
- 6152               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     807
+ 6152               * File  smhp_game_50.s  807
  6153
- 6154               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     808
+ 6154               * File  smhp_game_50.s  808
  6155 01CCB         =CLEARED
- 6156               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     809
+ 6156               * File  smhp_game_50.s  809
  6157 01CCB 07              C=RSTK
  6158 01CCD 07              C=RSTK
  6159 01CCF 07              C=RSTK
- 6160               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     810
+ 6160               * File  smhp_game_50.s  810
  6161 01CD1 1B33108         D0=(5)  (=STAGE)
  6162 01CD8 1523            A=DAT0  X
- 6163               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     811
+ 6163               * File  smhp_game_50.s  811
  6164 01CDC B34             A=A+    1       X
  6165 01CDF 1503            DAT0=A  X
- 6166               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     812
+ 6166               * File  smhp_game_50.s  812
  6167
- 6168               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     813
+ 6168               * File  smhp_game_50.s  813
  6169 01CE3 1B24108         D0=(5)  (=STACK)
  6170 01CEA 142             A=DAT0  A
- 6171               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     814
+ 6171               * File  smhp_game_50.s  814
  6172 01CED 818F04          A=A+    5       A
  6173 01CF3 140             DAT0=A  A
- 6174               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     815
+ 6174               * File  smhp_game_50.s  815
  6175 01CF6 8C443E          GOLONG  =NEXTUP
- 6176               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     816
+ 6176               * File  smhp_game_50.s  816
  6177
- 6178               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     817
+ 6178               * File  smhp_game_50.s  817
  6179 01CFC         =ADD_LIFT
- 6180               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     818
- 6181               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     819
+ 6180               * File  smhp_game_50.s  818
+ 6181               * File  smhp_game_50.s  819
  6182 01CFC 1BB2108         D0=(5)  (=@LIFT)
- 6183               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     820
+ 6183               * File  smhp_game_50.s  820
  6184 01D03 142             A=DAT0  A
  6185 01D06 130             D0=A
- 6186               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     821
+ 6186               * File  smhp_game_50.s  821
  6187
- 6188               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     822
+ 6188               * File  smhp_game_50.s  822
  6189 01D09 A82             C=0     P
- 6190               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     823
+ 6190               * File  smhp_game_50.s  823
  6191                       {
- 6192               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     824
+ 6192               * File  smhp_game_50.s  824
  6193 01D0C 808204          LA(1)   (=LMAX)
- 6194               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     825
+ 6194               * File  smhp_game_50.s  825
  6195 01D12 902             ?C=A    P
  6196 01D15 00              RTNYES
- 6197               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     826
+ 6197               * File  smhp_game_50.s  826
  6198 01D17 1520            A=DAT0  P
  6199 01D1B 908             ?A=0    P
  6200 01D1E C0              EXIT
- 6201               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     827
+ 6201               * File  smhp_game_50.s  827
  6202 01D20 165             D0+     6
  6203 01D23 B06             C=C+    1       P
  6204 01D26 65EF            UP
- 6205               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     828
- 6206               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     829
+ 6205               * File  smhp_game_50.s  828
+ 6206               * File  smhp_game_50.s  829
  6207
- 6208               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     830
+ 6208               * File  smhp_game_50.s  830
  6209                       }
  6210 01D2A 301             LCHEX   1
  6211 01D2D 1540            DAT0=C  P
  6212 01D31 160             D0+     1
- 6213               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     831
- 6214               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     832
+ 6213               * File  smhp_game_50.s  831
+ 6214               * File  smhp_game_50.s  832
  6215
- 6216               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     833
+ 6216               * File  smhp_game_50.s  833
  6217 01D34 80821D0         LA(2)   13
  6218 01D3B AEB             C=D     B
  6219 01D3E B6A             A=A-C   B
- 6220               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     834
+ 6220               * File  smhp_game_50.s  834
  6221 01D41 F0              ASL     A
  6222 01D43 819F0           ASRB.f  A
- 6223               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     835
+ 6223               * File  smhp_game_50.s  835
  6224 01D48 148             DAT0=A  B
- 6225               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     836
+ 6225               * File  smhp_game_50.s  836
  6226 01D4B 161             D0+     2
- 6227               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     837
+ 6227               * File  smhp_game_50.s  837
  6228 01D4E 8082180         LA(2)   08
  6229 01D55 AE9             C=B     B
  6230 01D58 B6A             A=A-C   B
- 6231               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     838
+ 6231               * File  smhp_game_50.s  838
  6232 01D5B F0              ASL     A
  6233 01D5D 819F0           ASRB.f  A
- 6234               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     839
+ 6234               * File  smhp_game_50.s  839
  6235 01D62 148             DAT0=A  B
- 6236               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     840
+ 6236               * File  smhp_game_50.s  840
  6237 01D65 01              RTN
- 6238               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     841
+ 6238               * File  smhp_game_50.s  841
  6239
- 6240               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     842
+ 6240               * File  smhp_game_50.s  842
  6241 01D67         =ADD2_LIFT
- 6242               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     843
- 6243               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     844
+ 6242               * File  smhp_game_50.s  843
+ 6243               * File  smhp_game_50.s  844
  6244 01D67 1BB2108         D0=(5)  (=@LIFT)
- 6245               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     845
+ 6245               * File  smhp_game_50.s  845
  6246 01D6E 142             A=DAT0  A
  6247 01D71 130             D0=A
- 6248               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     846
+ 6248               * File  smhp_game_50.s  846
  6249
- 6250               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     847
+ 6250               * File  smhp_game_50.s  847
  6251 01D74 A82             C=0     P
- 6252               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     848
+ 6252               * File  smhp_game_50.s  848
  6253                       {
- 6254               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     849
+ 6254               * File  smhp_game_50.s  849
  6255 01D77 808204          LA(1)   (=LMAX)
- 6256               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     850
+ 6256               * File  smhp_game_50.s  850
  6257 01D7D 902             ?C=A    P
  6258 01D80 00              RTNYES
- 6259               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     851
+ 6259               * File  smhp_game_50.s  851
  6260 01D82 1520            A=DAT0  P
  6261 01D86 908             ?A=0    P
  6262 01D89 C0              EXIT
- 6263               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     852
+ 6263               * File  smhp_game_50.s  852
  6264 01D8B 165             D0+     6
  6265 01D8E B06             C=C+    1       P
  6266 01D91 65EF            UP
- 6267               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     853
- 6268               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     854
+ 6267               * File  smhp_game_50.s  853
+ 6268               * File  smhp_game_50.s  854
  6269
- 6270               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     855
+ 6270               * File  smhp_game_50.s  855
  6271                       }
  6272 01D95 301             LCHEX   1
  6273 01D98 1540            DAT0=C  P
  6274 01D9C 160             D0+     1
- 6275               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     856
- 6276               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     857
+ 6275               * File  smhp_game_50.s  856
+ 6276               * File  smhp_game_50.s  857
  6277
- 6278               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     858
+ 6278               * File  smhp_game_50.s  858
  6279 01D9F 80821D0         LA(2)   13
- 6280               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     859
+ 6280               * File  smhp_game_50.s  859
  6281 01DA6 F0              ASL     A
  6282 01DA8 819F0           ASRB.f  A
- 6283               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     860
+ 6283               * File  smhp_game_50.s  860
  6284 01DAD 148             DAT0=A  B
  6285 01DB0 161             D0+     2
- 6286               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     861
+ 6286               * File  smhp_game_50.s  861
  6287
- 6288               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     862
+ 6288               * File  smhp_game_50.s  862
  6289 01DB3 8082180         LA(2)   8
  6290 01DBA AE9             C=B     B
  6291 01DBD B6A             A=A-C   B
- 6292               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     863
+ 6292               * File  smhp_game_50.s  863
  6293 01DC0 F0              ASL     A
  6294 01DC2 819F0           ASRB.f  A
- 6295               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     864
+ 6295               * File  smhp_game_50.s  864
  6296 01DC7 148             DAT0=A  B
- 6297               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     865
+ 6297               * File  smhp_game_50.s  865
  6298 01DCA 01              RTN
- 6299               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     866
+ 6299               * File  smhp_game_50.s  866
  6300
- 6301               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     867
+ 6301               * File  smhp_game_50.s  867
  6302 01DCC         =DISP.SPRITE
- 6303               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     868
+ 6303               * File  smhp_game_50.s  868
  6304 01DCC 867             ?ST=0   7
  6305 01DCF E1              GOYES   =NDT.2
- 6306               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     869
- 6307               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     870
+ 6306               * File  smhp_game_50.s  869
+ 6307               * File  smhp_game_50.s  870
  6308 01DD1 1B65108         D0=(5)  (=SX)
  6309 01DD8 14A             A=DAT0  B
- 6310               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     871
- 6311               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     872
+ 6310               * File  smhp_game_50.s  871
+ 6311               * File  smhp_game_50.s  872
  6312 01DDB 96C             ?A#0    B
  6313 01DDE 90              SKIPYES{
- 6314               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     873
+ 6314               * File  smhp_game_50.s  873
  6315 01DE0 845             ST=0    5
- 6316               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     874
- 6317               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     875
- 6318               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     876
+ 6316               * File  smhp_game_50.s  874
+ 6317               * File  smhp_game_50.s  875
+ 6318               * File  smhp_game_50.s  876
  6319 01DE3 6900            }SKELSE{
- 6320               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     877
+ 6320               * File  smhp_game_50.s  877
  6321 01DE7 A6C             A=A-    1       B
  6322 01DEA 148             DAT0=A  B
- 6323               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     878
- 6324               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     879
+ 6323               * File  smhp_game_50.s  878
+ 6324               * File  smhp_game_50.s  879
  6325                       }
  6326 01DED         =NDT.2
- 6327               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     880
+ 6327               * File  smhp_game_50.s  880
  6328
- 6329               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     881
+ 6329               * File  smhp_game_50.s  881
  6330 01DED 81AF1B          C=R3.f  A
- 6331               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     882
+ 6331               * File  smhp_game_50.s  882
  6332 01DF3 1BC4108         D0=(5)  (=STABLE)
  6333 01DFA 142             A=DAT0  A
- 6334               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     883
+ 6334               * File  smhp_game_50.s  883
  6335 01DFD CA              A=A+C   A
  6336 01DFF 130             D0=A
  6337 01E02 160             D0+     1
  6338 01E05 D0              A=0     A
- 6339               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     884
+ 6339               * File  smhp_game_50.s  884
  6340 01E07 14A             A=DAT0  B
  6341 01E0A CC              A=A-    1       A
- 6342               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     885
+ 6342               * File  smhp_game_50.s  885
  6343 01E0C D6              C=A     A
  6344 01E0E C4              A=A+A   A
  6345 01E10 CA              A=A+C   A
  6346 01E12 C4              A=A+A   A
- 6347               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     886
+ 6347               * File  smhp_game_50.s  886
  6348
- 6349               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     887
+ 6349               * File  smhp_game_50.s  887
  6350 01E14 8EE100          SKUBL{
- 6351               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     888
+ 6351               * File  smhp_game_50.s  888
  6352 01E1A 8C4A02          GOLONG  =OBJ.TORTLE
- 6353               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     889
+ 6353               * File  smhp_game_50.s  889
  6354 01E20 8CA422          GOLONG  =OBJ.KOOPA
- 6355               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     890
+ 6355               * File  smhp_game_50.s  890
  6356 01E26 8CA662          GOLONG  =OBJ.CHAMP.UP
- 6357               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     891
+ 6357               * File  smhp_game_50.s  891
  6358 01E2C 8CC082          GOLONG  =OBJ.STAR.UP
- 6359               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     892
+ 6359               * File  smhp_game_50.s  892
  6360 01E32 8CA052          GOLONG  =OBJ.HEART.UP
- 6361               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     893
+ 6361               * File  smhp_game_50.s  893
  6362
- 6363               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     894
+ 6363               * File  smhp_game_50.s  894
  6364                       }
  6365 01E38 07              C=RSTK
  6366 01E3A C2              C=C+A   A
  6367 01E3C 81B3            PC=C
- 6368               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     895
+ 6368               * File  smhp_game_50.s  895
  6369 01E40         =FIN
- 6370               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     896
+ 6370               * File  smhp_game_50.s  896
  6371
- 6372               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     897
+ 6372               * File  smhp_game_50.s  897
  6373 01E40 01              RTN
- 6374               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     898
+ 6374               * File  smhp_game_50.s  898
  6375
- 6376               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     899
+ 6376               * File  smhp_game_50.s  899
  6377 01E42         =SP.LOAD
- 6378               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     900
+ 6378               * File  smhp_game_50.s  900
  6379 01E42 1BC4108         D0=(5)  (=STABLE)
  6380 01E49 142             A=DAT0  A
- 6381               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     901
+ 6381               * File  smhp_game_50.s  901
  6382 01E4C CA              A=A+C   A
  6383 01E4E 130             D0=A
  6384 01E51 1520            A=DAT0  P
- 6385               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     902
- 6386               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     903
+ 6385               * File  smhp_game_50.s  902
+ 6386               * File  smhp_game_50.s  903
  6387 01E55 90C             ?A#0    P
  6388 01E58 70              SKIPYES{
- 6389               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     904
+ 6389               * File  smhp_game_50.s  904
  6390 01E5A 845             ST=0    5
  6391 01E5D 02              RTNSC
- 6392               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     905
- 6393               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     906
+ 6392               * File  smhp_game_50.s  905
+ 6393               * File  smhp_game_50.s  906
  6394                       }
  6395 01E5F 855             ST=1    5
- 6396               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     907
+ 6396               * File  smhp_game_50.s  907
  6397
- 6398               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     908
+ 6398               * File  smhp_game_50.s  908
  6399 01E62 849             ST=0    9
  6400 01E65 84A             ST=0    10
- 6401               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     909
+ 6401               * File  smhp_game_50.s  909
  6402                       {
- 6403               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     910
+ 6403               * File  smhp_game_50.s  910
  6404 01E68 301             LCHEX   1
  6405 01E6B 906             ?A#C    P
  6406 01E6E 90              SKIPYES{
  6407 01E70 846             ST=0    6
  6408 01E73 6B40            EXIT2
- 6409               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     911
+ 6409               * File  smhp_game_50.s  911
  6410                       }
  6411 01E77 302             LCHEX   2
  6412 01E7A 906             ?A#C    P
  6413 01E7D 90              SKIPYES{
  6414 01E7F 856             ST=1    6
  6415 01E82 6C30            EXIT2
- 6416               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     912
+ 6416               * File  smhp_game_50.s  912
  6417                       }
  6418 01E86 303             LCHEX   3
  6419 01E89 906             ?A#C    P
  6420 01E8C 90              SKIPYES{
  6421 01E8E 859             ST=1    9
  6422 01E91 6D20            EXIT2
- 6423               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     913
+ 6423               * File  smhp_game_50.s  913
  6424                       }
  6425 01E95 304             LCHEX   4
  6426 01E98 906             ?A#C    P
@@ -6449,7 +6449,7 @@ V3.0.9 (04/15/2007)                                      smhp_game_50.a Page    
  6429 01EA0 859             ST=1    9
  6430 01EA3 85A             ST=1    10
  6431 01EA6 6810            EXIT2
- 6432               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     914
+ 6432               * File  smhp_game_50.s  914
  6433                       }
  6434 01EAA 305             LCHEX   5
  6435 01EAD 906             ?A#C    P
@@ -6458,1560 +6458,1560 @@ V3.0.9 (04/15/2007)                                      smhp_game_50.a Page    
  6438 01EB5 859             ST=1    9
  6439 01EB8 85A             ST=1    10
  6440 01EBB 6300            EXIT2
- 6441               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     915
+ 6441               * File  smhp_game_50.s  915
  6442                       }
- 6443               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     916
+ 6443               * File  smhp_game_50.s  916
  6444                       }
  6445 01EBF 162             D0+     3
- 6446               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     917
+ 6446               * File  smhp_game_50.s  917
  6447 01EC2 D0              A=0     A
- 6448               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     918
+ 6448               * File  smhp_game_50.s  918
  6449 01EC4 1523            A=DAT0  X
  6450 01EC8 104             R4=A
- 6451               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     919
+ 6451               * File  smhp_game_50.s  919
  6452 01ECB 162             D0+     3
- 6453               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     920
+ 6453               * File  smhp_game_50.s  920
  6454 01ECE 14A             A=DAT0  B
  6455 01ED1 161             D0+     2
- 6456               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     921
+ 6456               * File  smhp_game_50.s  921
  6457 01ED4 1F65108         D1=(5)  (=SX)
  6458 01EDB 149             DAT1=A  B
- 6459               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     922
+ 6459               * File  smhp_game_50.s  922
  6460
- 6461               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     923
+ 6461               * File  smhp_game_50.s  923
  6462 01EDE 14A             A=DAT0  B
  6463 01EE1 161             D0+     2
- 6464               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     924
+ 6464               * File  smhp_game_50.s  924
  6465 01EE4 1FB5108         D1=(5)  (=SY)
  6466 01EEB 149             DAT1=A  B
- 6467               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     925
+ 6467               * File  smhp_game_50.s  925
  6468
- 6469               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     926
+ 6469               * File  smhp_game_50.s  926
  6470 01EEE 1520            A=DAT0  P
- 6471               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     927
+ 6471               * File  smhp_game_50.s  927
  6472 01EF2 80862           ?ABIT=0 2
  6473 01EF7 90              SKIPYES{
  6474 01EF9 848             ST=0    8
- 6475               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     928
+ 6475               * File  smhp_game_50.s  928
  6476 01EFC 6600            }SKELSE{
  6477 01F00 858             ST=1    8
- 6478               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     929
+ 6478               * File  smhp_game_50.s  929
  6479                       }
  6480 01F03 03              RTNCC
- 6481               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     930
+ 6481               * File  smhp_game_50.s  930
  6482
- 6483               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     931
+ 6483               * File  smhp_game_50.s  931
  6484 01F05         =SP.SAVE
- 6485               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     932
+ 6485               * File  smhp_game_50.s  932
  6486 01F05 1BC4108         D0=(5)  (=STABLE)
  6487 01F0C 142             A=DAT0  A
- 6488               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     933
+ 6488               * File  smhp_game_50.s  933
  6489 01F0F CA              A=A+C   A
  6490 01F11 130             D0=A
- 6491               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     934
+ 6491               * File  smhp_game_50.s  934
  6492
- 6493               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     935
- 6494               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     936
+ 6493               * File  smhp_game_50.s  935
+ 6494               * File  smhp_game_50.s  936
  6495 01F14 875             ?ST=1   5
  6496 01F17 90              SKIPYES{
- 6497               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     937
- 6498               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     938
+ 6497               * File  smhp_game_50.s  937
+ 6498               * File  smhp_game_50.s  938
  6499 01F19 A82             C=0     P
- 6500               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     939
- 6501               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     940
- 6502               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     941
+ 6500               * File  smhp_game_50.s  939
+ 6501               * File  smhp_game_50.s  940
+ 6502               * File  smhp_game_50.s  941
  6503 01F1C 6920            }SKELSE{
- 6504               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     942
- 6505               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     943
+ 6504               * File  smhp_game_50.s  942
+ 6505               * File  smhp_game_50.s  943
  6506 01F20 876             ?ST=1   6
  6507 01F23 90              SKIPYES{
- 6508               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     944
+ 6508               * File  smhp_game_50.s  944
  6509 01F25 301             LCHEX   1
- 6510               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     945
- 6511               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     946
- 6512               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     947
+ 6510               * File  smhp_game_50.s  945
+ 6511               * File  smhp_game_50.s  946
+ 6512               * File  smhp_game_50.s  947
  6513 01F28 6600            }SKELSE{
- 6514               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     948
+ 6514               * File  smhp_game_50.s  948
  6515 01F2C 302             LCHEX   2
- 6516               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     949
- 6517               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     950
- 6518               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     951
+ 6516               * File  smhp_game_50.s  949
+ 6517               * File  smhp_game_50.s  950
+ 6518               * File  smhp_game_50.s  951
  6519                       }
  6520 01F2F 86A             ?ST#1   10
  6521 01F32 C0              SKIPYES{
  6522 01F34 818022          C=C+    3       P
  6523 01F3A 6B00            EXIT2
- 6524               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     952
+ 6524               * File  smhp_game_50.s  952
  6525                       }
  6526 01F3E 869             ?ST#1   9
  6527 01F41 50              SKIPYES{
  6528 01F43 303             LCHEX   3
- 6529               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     953
+ 6529               * File  smhp_game_50.s  953
  6530                       }
- 6531               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     954
+ 6531               * File  smhp_game_50.s  954
  6532                       }
  6533 01F46 1540            DAT0=C  P
- 6534               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     955
+ 6534               * File  smhp_game_50.s  955
  6535 01F4A 165             D0+     6
- 6536               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     956
+ 6536               * File  smhp_game_50.s  956
  6537
- 6538               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     957
+ 6538               * File  smhp_game_50.s  957
  6539 01F4D 1F65108         D1=(5)  (=SX)
  6540 01F54 14B             A=DAT1  B
- 6541               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     958
+ 6541               * File  smhp_game_50.s  958
  6542 01F57 148             DAT0=A  B
  6543 01F5A 161             D0+     2
- 6544               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     959
+ 6544               * File  smhp_game_50.s  959
  6545
- 6546               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     960
+ 6546               * File  smhp_game_50.s  960
  6547 01F5D 1FB5108         D1=(5)  (=SY)
  6548 01F64 14B             A=DAT1  B
- 6549               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     961
+ 6549               * File  smhp_game_50.s  961
  6550 01F67 148             DAT0=A  B
  6551 01F6A 161             D0+     2
- 6552               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     962
+ 6552               * File  smhp_game_50.s  962
  6553
- 6554               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     963
+ 6554               * File  smhp_game_50.s  963
  6555 01F6D 1520            A=DAT0  P
- 6556               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     964
+ 6556               * File  smhp_game_50.s  964
  6557 01F71 878             ?ST#0   8
  6558 01F74 B0              SKIPYES{
  6559 01F76 80842           ABIT=0  2
- 6560               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     965
+ 6560               * File  smhp_game_50.s  965
  6561 01F7B 6800            }SKELSE{
  6562 01F7F 80852           ABIT=1  2
- 6563               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     966
+ 6563               * File  smhp_game_50.s  966
  6564                       }
  6565 01F84 1500            DAT0=A  P
- 6566               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     967
+ 6566               * File  smhp_game_50.s  967
  6567 01F88 01              RTN
- 6568               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     968
+ 6568               * File  smhp_game_50.s  968
  6569
- 6570               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     969
+ 6570               * File  smhp_game_50.s  969
  6571 01F8A         =CL_LIFT
- 6572               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     970
+ 6572               * File  smhp_game_50.s  970
  6573 01F8A 1BB2108         D0=(5)  (=@LIFT)
- 6574               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     971
+ 6574               * File  smhp_game_50.s  971
  6575 01F91 142             A=DAT0  A
  6576 01F94 130             D0=A
- 6577               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     972
+ 6577               * File  smhp_game_50.s  972
  6578 01F97 AF2             C=0     W
- 6579               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     973
+ 6579               * File  smhp_game_50.s  973
  6580 01F9A 808204          LA(1)   (=LMAX)
- 6581               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     974
+ 6581               * File  smhp_game_50.s  974
  6582                       {
- 6583               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     975
+ 6583               * File  smhp_game_50.s  975
  6584 01FA0 908             ?A=0    P
  6585 01FA3 01              EXIT
- 6586               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     976
+ 6586               * File  smhp_game_50.s  976
  6587 01FA5 A0C             A=A-    1       P
- 6588               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     977
+ 6588               * File  smhp_game_50.s  977
  6589 01FA8 15C5            DAT0=C  6
  6590 01FAC 165             D0+     6
- 6591               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     978
+ 6591               * File  smhp_game_50.s  978
  6592 01FAF 60FF            UP
- 6593               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     979
- 6594               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     980
+ 6593               * File  smhp_game_50.s  979
+ 6594               * File  smhp_game_50.s  980
  6595                       }
  6596 01FB3 01              RTN
- 6597               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     981
+ 6597               * File  smhp_game_50.s  981
  6598
- 6599               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     982
+ 6599               * File  smhp_game_50.s  982
  6600 01FB5         =TORTLE_HIT
- 6601               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     983
- 6602               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     984
+ 6601               * File  smhp_game_50.s  983
+ 6602               * File  smhp_game_50.s  984
  6603 01FB5 879             ?ST=1   9
  6604 01FB8 90              SKIPYES{
- 6605               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     985
- 6606               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     986
+ 6605               * File  smhp_game_50.s  985
+ 6606               * File  smhp_game_50.s  986
  6607 01FBA 859             ST=1    9
- 6608               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     987
- 6609               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     988
- 6610               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     989
+ 6608               * File  smhp_game_50.s  987
+ 6609               * File  smhp_game_50.s  988
+ 6610               * File  smhp_game_50.s  989
  6611 01FBD 6920            }SKELSE{
- 6612               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     990
+ 6612               * File  smhp_game_50.s  990
  6613 01FC1 85A             ST=1    10
- 6614               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     991
- 6615               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     992
+ 6614               * File  smhp_game_50.s  991
+ 6615               * File  smhp_game_50.s  992
  6616 01FC4 1B65108         D0=(5)  (=SX)
  6617 01FCB 14A             A=DAT0  B
- 6618               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     993
+ 6618               * File  smhp_game_50.s  993
  6619 01FCE 1BB0108         D0=(5)  (=MX)
  6620 01FD5 14E             C=DAT0  B
- 6621               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     994
- 6622               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     995
+ 6621               * File  smhp_game_50.s  994
+ 6622               * File  smhp_game_50.s  995
  6623 01FD8 9E6             ?A>C    B
  6624 01FDB 90              SKIPYES{
- 6625               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     996
+ 6625               * File  smhp_game_50.s  996
  6626 01FDD 846             ST=0    6
- 6627               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     997
- 6628               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     998
- 6629               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     999
+ 6627               * File  smhp_game_50.s  997
+ 6628               * File  smhp_game_50.s  998
+ 6629               * File  smhp_game_50.s  999
  6630 01FE0 6600            }SKELSE{
- 6631               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1000
+ 6631               * File  smhp_game_50.s  1000
  6632 01FE4 856             ST=1    6
- 6633               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1001
- 6634               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1002
+ 6633               * File  smhp_game_50.s  1001
+ 6634               * File  smhp_game_50.s  1002
  6635                       }
- 6636               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1003
- 6637               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1004
+ 6636               * File  smhp_game_50.s  1003
+ 6637               * File  smhp_game_50.s  1004
  6638                       }
  6639 01FE7 873             ?ST=1   3
  6640 01FEA 00              RTNYES
- 6641               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1005
+ 6641               * File  smhp_game_50.s  1005
  6642 01FEC 850             ST=1    0
- 6643               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1006
+ 6643               * File  smhp_game_50.s  1006
  6644 01FEF 851             ST=1    1
- 6645               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1007
+ 6645               * File  smhp_game_50.s  1007
  6646 01FF2 8082120         LAHEX   02
- 6647               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1008
+ 6647               * File  smhp_game_50.s  1008
  6648 01FF9 1B04108         D0=(5)  (=MJUMP)
  6649 02000 148             DAT0=A  B
- 6650               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1009
+ 6650               * File  smhp_game_50.s  1009
  6651 02003 01              RTN
- 6652               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1010
+ 6652               * File  smhp_game_50.s  1010
  6653
- 6654               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1011
+ 6654               * File  smhp_game_50.s  1011
  6655 02005         =LOST_LIFE
- 6656               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1012
+ 6656               * File  smhp_game_50.s  1012
  6657 02005 873             ?ST=1   3
  6658 02008 00              RTNYES
- 6659               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1013
+ 6659               * File  smhp_game_50.s  1013
  6660 0200A 3400080         LCHEX   08000
  6661                       {
  6662 02011 CE              C=C-    1       A
  6663 02013 5DF             UPNC
- 6664               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1014
+ 6664               * File  smhp_game_50.s  1014
  6665                       }
  6666 02016 853             ST=1    3
- 6667               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1015
+ 6667               * File  smhp_game_50.s  1015
  6668
- 6669               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1016
+ 6669               * File  smhp_game_50.s  1016
  6670 02019 850             ST=1    0
- 6671               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1017
+ 6671               * File  smhp_game_50.s  1017
  6672 0201C 851             ST=1    1
- 6673               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1018
+ 6673               * File  smhp_game_50.s  1018
  6674 0201F AE0             A=0     B
- 6675               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1019
+ 6675               * File  smhp_game_50.s  1019
  6676 02022 1B04108         D0=(5)  (=MJUMP)
  6677 02029 148             DAT0=A  B
- 6678               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1020
+ 6678               * File  smhp_game_50.s  1020
  6679 0202C 01              RTN
- 6680               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1021
+ 6680               * File  smhp_game_50.s  1021
  6681
- 6682               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1022
+ 6682               * File  smhp_game_50.s  1022
  6683 0202E         =KEYS
- 6684               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1023
+ 6684               * File  smhp_game_50.s  1023
  6685 0202E 32FF1           LCHEX   1FF
- 6686               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1024
+ 6686               * File  smhp_game_50.s  1024
  6687 02033 8FF0200         GOSBVL  =KEY
- 6688               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1025
+ 6688               * File  smhp_game_50.s  1025
  6689 0203A 96A             ?C=0    B
  6690 0203D 40              SKIPYES{
  6691 0203F 02              RTNSC
- 6692               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1026
+ 6692               * File  smhp_game_50.s  1026
  6693                       }
  6694 02041 03              RTNCC
- 6695               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1027
+ 6695               * File  smhp_game_50.s  1027
  6696
- 6697               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1028
+ 6697               * File  smhp_game_50.s  1028
  6698 02043         =SOL
- 6699               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1029
+ 6699               * File  smhp_game_50.s  1029
  6700 02043 D0              A=0     A
  6701 02045 D2              C=0     A
- 6702               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1030
+ 6702               * File  smhp_game_50.s  1030
  6703 02047 1B70108         D0=(5)  (=MCLIPH)
  6704 0204E 14E             C=DAT0  B
- 6705               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1031
- 6706               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1032
+ 6705               * File  smhp_game_50.s  1031
+ 6706               * File  smhp_game_50.s  1032
  6707 02051 96A             ?C=0    B
  6708 02054 90              SKIPYES{
- 6709               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1033
- 6710               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1034
- 6711               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1035
- 6712               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1036
+ 6709               * File  smhp_game_50.s  1033
+ 6710               * File  smhp_game_50.s  1034
+ 6711               * File  smhp_game_50.s  1035
+ 6712               * File  smhp_game_50.s  1036
  6713 02056 AE0             A=0     B
- 6714               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1037
- 6715               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1038
- 6716               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1039
+ 6714               * File  smhp_game_50.s  1037
+ 6715               * File  smhp_game_50.s  1038
+ 6716               * File  smhp_game_50.s  1039
  6717 02059 6D00            }SKELSE{
- 6718               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1040
+ 6718               * File  smhp_game_50.s  1040
  6719 0205D 1B01108         D0=(5)  (=MY)
  6720 02064 14A             A=DAT0  B
- 6721               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1041
- 6722               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1042
+ 6721               * File  smhp_game_50.s  1041
+ 6722               * File  smhp_game_50.s  1042
  6723                       }
  6724 02067 818601          A=A+    2       B
- 6725               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1043
+ 6725               * File  smhp_game_50.s  1043
  6726 0206D AE6             C=A     B
- 6727               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1044
+ 6727               * File  smhp_game_50.s  1044
  6728 02070 819F0           ASRB.f  A
  6729 02075 819F0           ASRB.f  A
  6730 0207A 819F0           ASRB.f  A
- 6731               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1045
+ 6731               * File  smhp_game_50.s  1045
  6732 0207F F0              ASL     A
  6733 02081 819F0           ASRB.f  A
  6734 02086 E2              C=C-A   A
- 6735               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1046
+ 6735               * File  smhp_game_50.s  1046
  6736 02088 8082150         LA(2)   5
  6737 0208F 9EE             ?C<=A   B
  6738 02092 40              SKIPYES{
  6739 02094 03              RTNCC
- 6740               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1047
+ 6740               * File  smhp_game_50.s  1047
  6741
- 6742               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1048
+ 6742               * File  smhp_game_50.s  1048
  6743                       }
  6744 02096 85C             ST=1    12
- 6745               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1049
+ 6745               * File  smhp_game_50.s  1049
  6746 02099 84B             ST=0    11
- 6747               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1050
+ 6747               * File  smhp_game_50.s  1050
  6748
- 6749               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1051
+ 6749               * File  smhp_game_50.s  1051
  6750 0209C 1B01108         D0=(5)  (=MY)
  6751 020A3 14A             A=DAT0  B
- 6752               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1052
+ 6752               * File  smhp_game_50.s  1052
  6753 020A6 3163            LC(2)   54
  6754 020AA 9E2             ?A<C    B
  6755 020AD 40              SKIPYES{
  6756 020AF 03              RTNCC
- 6757               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1053
+ 6757               * File  smhp_game_50.s  1053
  6758
- 6759               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1054
- 6760               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1055
- 6761               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1056
+ 6759               * File  smhp_game_50.s  1054
+ 6760               * File  smhp_game_50.s  1055
+ 6761               * File  smhp_game_50.s  1056
  6762
- 6763               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1057
+ 6763               * File  smhp_game_50.s  1057
  6764                       }
  6765 020B1 D0              A=0     A
- 6766               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1058
+ 6766               * File  smhp_game_50.s  1058
  6767 020B3 1B70108         D0=(5)  (=MCLIPH)
  6768 020BA 14A             A=DAT0  B
- 6769               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1059
+ 6769               * File  smhp_game_50.s  1059
  6770 020BD 31A0            LCHEX   0A
  6771 020C1 9EA             ?A<=C   B
  6772 020C4 40              SKIPYES{
  6773 020C6 03              RTNCC
- 6774               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1060
+ 6774               * File  smhp_game_50.s  1060
  6775                       }
  6776 020C8 34A0000         LC(5)   10
  6777 020CF E2              C=C-A   A
- 6778               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1061
+ 6778               * File  smhp_game_50.s  1061
  6779
- 6780               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1062
+ 6780               * File  smhp_game_50.s  1062
  6781 020D1 D0              A=0     A
  6782 020D3 1B81108         D0=(5)  (=SCROL.COUNTER)
- 6783               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1063
+ 6783               * File  smhp_game_50.s  1063
  6784 020DA 1520            A=DAT0  P
  6785 020DE 818F04          A=A+    5       A
- 6786               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1064
+ 6786               * File  smhp_game_50.s  1064
  6787
- 6788               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1065
+ 6788               * File  smhp_game_50.s  1065
  6789 020E4 D8              B=A     A
  6790 020E6 D7              D=C     A
- 6791               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1066
+ 6791               * File  smhp_game_50.s  1066
  6792
- 6793               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1067
- 6794               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1068
+ 6793               * File  smhp_game_50.s  1067
+ 6794               * File  smhp_game_50.s  1068
  6795 020E8 D2              C=0     A
- 6796               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1069
+ 6796               * File  smhp_game_50.s  1069
  6797 020EA 1B01108         D0=(5)  (=MY)
  6798 020F1 14E             C=DAT0  B
- 6799               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1070
+ 6799               * File  smhp_game_50.s  1070
  6800 020F4 CB              C=C+D   A
- 6801               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1071
+ 6801               * File  smhp_game_50.s  1071
  6802
- 6803               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1072
+ 6803               * File  smhp_game_50.s  1072
  6804 020F6 819F2           CSRB.f  A
  6805 020FB 819F2           CSRB.f  A
  6806 02100 819F2           CSRB.f  A
- 6807               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1073
+ 6807               * File  smhp_game_50.s  1073
  6808 02105 F2              CSL     A
  6809 02107 DA              A=C     A
  6810 02109 F2              CSL     A
- 6811               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1074
+ 6811               * File  smhp_game_50.s  1074
  6812 0210B C4              A=A+A   A
  6813 0210D C4              A=A+A   A
  6814 0210F C2              C=C+A   A
- 6815               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1075
+ 6815               * File  smhp_game_50.s  1075
  6816
- 6817               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1076
+ 6817               * File  smhp_game_50.s  1076
  6818 02111 D0              A=0     A
- 6819               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1077
+ 6819               * File  smhp_game_50.s  1077
  6820 02113 1BB0108         D0=(5)  (=MX)
  6821 0211A 14A             A=DAT0  B
- 6822               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1078
+ 6822               * File  smhp_game_50.s  1078
  6823 0211D C0              A=A+B   A
- 6824               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1079
+ 6824               * File  smhp_game_50.s  1079
  6825 0211F 819F0           ASRB.f  A
  6826 02124 819F0           ASRB.f  A
  6827 02129 819F0           ASRB.f  A
- 6828               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1080
+ 6828               * File  smhp_game_50.s  1080
  6829 0212E C4              A=A+A   A
  6830 02130 C2              C=C+A   A
- 6831               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1081
+ 6831               * File  smhp_game_50.s  1081
  6832
- 6833               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1082
- 6834               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1083
+ 6833               * File  smhp_game_50.s  1082
+ 6834               * File  smhp_game_50.s  1083
  6835 02132 1BE1108         D0=(5)  (=LEVEL.DATA)
  6836 02139 142             A=DAT0  A
- 6837               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1084
+ 6837               * File  smhp_game_50.s  1084
  6838 0213C CA              A=A+C   A
  6839 0213E 130             D0=A
  6840 02141 81AF04          R4=A.f  A
- 6841               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1085
+ 6841               * File  smhp_game_50.s  1085
  6842 02147 D0              A=0     A
  6843 02149 14A             A=DAT0  B
- 6844               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1086
+ 6844               * File  smhp_game_50.s  1086
  6845
- 6846               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1087
- 6847               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1088
- 6848               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1089
+ 6846               * File  smhp_game_50.s  1087
+ 6847               * File  smhp_game_50.s  1088
+ 6848               * File  smhp_game_50.s  1089
  6849 0214C 81AF24          AR4EX.f A
- 6850               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1090
+ 6850               * File  smhp_game_50.s  1090
  6851 02152 3404100         LC(5)   320
  6852 02159 EA              A=A-C   A
- 6853               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1091
+ 6853               * File  smhp_game_50.s  1091
  6854 0215B 130             D0=A
  6855 0215E 14A             A=DAT0  B
- 6856               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1092
+ 6856               * File  smhp_game_50.s  1092
  6857 02161 3140            LC(2)   04
- 6858               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1093
+ 6858               * File  smhp_game_50.s  1093
  6859 02165 966             ?A#C    B
  6860 02168 E0              SKIPYES{
- 6861               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1094
+ 6861               * File  smhp_game_50.s  1094
  6862 0216A 8E59EF          GOSUBL  =LOST_LIFE
- 6863               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1095
+ 6863               * File  smhp_game_50.s  1095
  6864 02170 03              RTNCC
- 6865               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1096
- 6866               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1097
- 6867               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1098
+ 6865               * File  smhp_game_50.s  1096
+ 6866               * File  smhp_game_50.s  1097
+ 6867               * File  smhp_game_50.s  1098
  6868 02172 6900            }SKELSE{
- 6869               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1099
+ 6869               * File  smhp_game_50.s  1099
  6870 02176 81AF24          AR4EX.f A
- 6871               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1100
- 6872               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1101
+ 6871               * File  smhp_game_50.s  1100
+ 6872               * File  smhp_game_50.s  1101
  6873
- 6874               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1102
+ 6874               * File  smhp_game_50.s  1102
  6875                       }
  6876 0217C 3130            LC(2)   03
- 6877               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1103
+ 6877               * File  smhp_game_50.s  1103
  6878 02180 966             ?A#C    B
  6879 02183 C1              SKIPYES{
- 6880               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1104
- 6881               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1105
+ 6880               * File  smhp_game_50.s  1104
+ 6881               * File  smhp_game_50.s  1105
  6882 02185 873             ?ST=1   3
  6883 02188 00              RTNYES
- 6884               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1106
+ 6884               * File  smhp_game_50.s  1106
  6885 0218A 850             ST=1    0
- 6886               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1107
+ 6886               * File  smhp_game_50.s  1107
  6887 0218D 851             ST=1    1
- 6888               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1108
+ 6888               * File  smhp_game_50.s  1108
  6889 02190 AE0             A=0     B
- 6890               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1109
+ 6890               * File  smhp_game_50.s  1109
  6891 02193 1B04108         D0=(5)  (=MJUMP)
  6892 0219A 148             DAT0=A  B
- 6893               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1110
+ 6893               * File  smhp_game_50.s  1110
  6894 0219D 02              RTNSC
- 6895               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1111
- 6896               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1112
- 6897               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1113
+ 6895               * File  smhp_game_50.s  1111
+ 6896               * File  smhp_game_50.s  1112
+ 6897               * File  smhp_game_50.s  1113
  6898                       }
  6899 0219F 3170            LC(2)   07
  6900 021A3 966             ?A#C    B
  6901 021A6 80              SKIPYES{
  6902 021A8 8CAE50          GOLONG  =COINUP
- 6903               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1114
+ 6903               * File  smhp_game_50.s  1114
  6904
- 6905               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1115
+ 6905               * File  smhp_game_50.s  1115
  6906                       }
  6907 021AE 1FB3108         D1=(5)  (=CUBES)
  6908 021B5 147             C=DAT1  A
- 6909               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1116
+ 6909               * File  smhp_game_50.s  1116
  6910 021B8 F0              ASL     A
  6911 021BA C4              A=A+A   A
- 6912               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1117
+ 6912               * File  smhp_game_50.s  1117
  6913 021BC C2              C=C+A   A
  6914 021BE 135             D1=C
- 6915               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1118
+ 6915               * File  smhp_game_50.s  1118
  6916 021C1 171             D1+     2
  6917 021C4 14B             A=DAT1  B
- 6918               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1119
+ 6918               * File  smhp_game_50.s  1119
  6919
- 6920               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1120
+ 6920               * File  smhp_game_50.s  1120
  6921 021C7 80861           ?ABIT#1 1
  6922 021CC 40              SKIPYES{
  6923 021CE 02              RTNSC
- 6924               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1121
+ 6924               * File  smhp_game_50.s  1121
  6925                       }
  6926 021D0 03              RTNCC
- 6927               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1122
+ 6927               * File  smhp_game_50.s  1122
  6928
- 6929               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1123
+ 6929               * File  smhp_game_50.s  1123
  6930
- 6931               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1124
+ 6931               * File  smhp_game_50.s  1124
  6932 021D2         =FIXSOL
- 6933               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1125
+ 6933               * File  smhp_game_50.s  1125
  6934 021D2 1B01108         D0=(5)  (=MY)
  6935 021D9 14A             A=DAT0  B
- 6936               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1126
+ 6936               * File  smhp_game_50.s  1126
  6937
- 6938               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1127
- 6939               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1128
+ 6938               * File  smhp_game_50.s  1127
+ 6939               * File  smhp_game_50.s  1128
  6940
- 6941               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1129
+ 6941               * File  smhp_game_50.s  1129
  6942 021DC 818601          A=A+    2       B
- 6943               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1130
+ 6943               * File  smhp_game_50.s  1130
  6944 021E2 81960           ASRB.f  B
  6945 021E7 81960           ASRB.f  B
  6946 021EC 81960           ASRB.f  B
- 6947               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1131
+ 6947               * File  smhp_game_50.s  1131
  6948 021F1 F0              ASL     A
  6949 021F3 819F0           ASRB.f  A
- 6950               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1132
+ 6950               * File  smhp_game_50.s  1132
  6951 021F8 3120            LC(2)   02
- 6952               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1133
+ 6952               * File  smhp_game_50.s  1133
  6953 021FC 9E2             ?A<C    B
  6954 021FF C0              SKIPYES{
- 6955               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1134
+ 6955               * File  smhp_game_50.s  1134
  6956 02201 818681          A=A-    2       B
- 6957               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1135
- 6958               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1136
- 6959               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1137
+ 6957               * File  smhp_game_50.s  1135
+ 6958               * File  smhp_game_50.s  1136
+ 6959               * File  smhp_game_50.s  1137
  6960 02207 6010            }SKELSE{
- 6961               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1138
+ 6961               * File  smhp_game_50.s  1138
  6962 0220B 1F70108         D1=(5)  (=MCLIPH)
  6963 02212 14D             DAT1=C  B
- 6964               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1139
+ 6964               * File  smhp_game_50.s  1139
  6965 02215 AE0             A=0     B
- 6966               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1140
- 6967               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1141
+ 6966               * File  smhp_game_50.s  1140
+ 6967               * File  smhp_game_50.s  1141
  6968                       }
  6969 02218 148             DAT0=A  B
- 6970               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1142
+ 6970               * File  smhp_game_50.s  1142
  6971 0221B 01              RTN
- 6972               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1143
+ 6972               * File  smhp_game_50.s  1143
  6973
- 6974               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1144
+ 6974               * File  smhp_game_50.s  1144
  6975 0221D         =FIXCIEL
- 6976               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1145
+ 6976               * File  smhp_game_50.s  1145
  6977 0221D 1B01108         D0=(5)  (=MY)
  6978 02224 14A             A=DAT0  B
- 6979               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1146
+ 6979               * File  smhp_game_50.s  1146
  6980 02227 818607          A=A+    8       B
- 6981               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1147
+ 6981               * File  smhp_game_50.s  1147
  6982 0222D 81960           ASRB.f  B
  6983 02232 81960           ASRB.f  B
  6984 02237 81960           ASRB.f  B
- 6985               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1148
+ 6985               * File  smhp_game_50.s  1148
  6986 0223C F0              ASL     A
  6987 0223E 819F0           ASRB.f  A
- 6988               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1149
+ 6988               * File  smhp_game_50.s  1149
  6989 02243 818681          A=A-    2       B
- 6990               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1150
+ 6990               * File  smhp_game_50.s  1150
  6991 02249 148             DAT0=A  B
- 6992               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1151
+ 6992               * File  smhp_game_50.s  1151
  6993 0224C 01              RTN
- 6994               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1152
+ 6994               * File  smhp_game_50.s  1152
  6995
- 6996               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1153
+ 6996               * File  smhp_game_50.s  1153
  6997 0224E         =MURD
- 6998               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1154
+ 6998               * File  smhp_game_50.s  1154
  6999 0224E 85C             ST=1    12
- 7000               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1155
+ 7000               * File  smhp_game_50.s  1155
  7001 02251 84B             ST=0    11
- 7002               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1156
+ 7002               * File  smhp_game_50.s  1156
  7003
- 7004               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1157
+ 7004               * File  smhp_game_50.s  1157
  7005 02254 D0              A=0     A
  7006 02256 1B81108         D0=(5)  (=SCROL.COUNTER)
- 7007               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1158
+ 7007               * File  smhp_game_50.s  1158
  7008 0225D 1520            A=DAT0  P
  7009 02261 818F07          A=A+    8       A
- 7010               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1159
+ 7010               * File  smhp_game_50.s  1159
  7011
- 7012               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1160
+ 7012               * File  smhp_game_50.s  1160
  7013 02267 3430000         LC(5)   03
- 7014               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1161
+ 7014               * File  smhp_game_50.s  1161
  7015
- 7016               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1162
+ 7016               * File  smhp_game_50.s  1162
  7017 0226E D8              B=A     A
  7018 02270 D7              D=C     A
- 7019               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1163
+ 7019               * File  smhp_game_50.s  1163
  7020
- 7021               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1164
- 7022               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1165
+ 7021               * File  smhp_game_50.s  1164
+ 7022               * File  smhp_game_50.s  1165
  7023 02272 D2              C=0     A
- 7024               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1166
+ 7024               * File  smhp_game_50.s  1166
  7025 02274 1B01108         D0=(5)  (=MY)
  7026 0227B 14E             C=DAT0  B
- 7027               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1167
+ 7027               * File  smhp_game_50.s  1167
  7028 0227E CB              C=C+D   A
- 7029               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1168
+ 7029               * File  smhp_game_50.s  1168
  7030 02280 819F2           CSRB.f  A
  7031 02285 819F2           CSRB.f  A
  7032 0228A 819F2           CSRB.f  A
- 7033               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1169
+ 7033               * File  smhp_game_50.s  1169
  7034 0228F F2              CSL     A
  7035 02291 DA              A=C     A
  7036 02293 F2              CSL     A
- 7037               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1170
+ 7037               * File  smhp_game_50.s  1170
  7038 02295 C4              A=A+A   A
  7039 02297 C4              A=A+A   A
  7040 02299 C2              C=C+A   A
- 7041               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1171
+ 7041               * File  smhp_game_50.s  1171
  7042
- 7043               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1172
+ 7043               * File  smhp_game_50.s  1172
  7044 0229B D0              A=0     A
- 7045               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1173
+ 7045               * File  smhp_game_50.s  1173
  7046 0229D 1BB0108         D0=(5)  (=MX)
  7047 022A4 14A             A=DAT0  B
- 7048               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1174
+ 7048               * File  smhp_game_50.s  1174
  7049 022A7 C0              A=A+B   A
- 7050               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1175
+ 7050               * File  smhp_game_50.s  1175
  7051 022A9 819F0           ASRB.f  A
  7052 022AE 819F0           ASRB.f  A
  7053 022B3 819F0           ASRB.f  A
- 7054               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1176
+ 7054               * File  smhp_game_50.s  1176
  7055 022B8 C4              A=A+A   A
  7056 022BA C2              C=C+A   A
- 7057               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1177
+ 7057               * File  smhp_game_50.s  1177
  7058
- 7059               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1178
- 7060               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1179
+ 7059               * File  smhp_game_50.s  1178
+ 7060               * File  smhp_game_50.s  1179
  7061 022BC 1BE1108         D0=(5)  (=LEVEL.DATA)
  7062 022C3 142             A=DAT0  A
- 7063               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1180
+ 7063               * File  smhp_game_50.s  1180
  7064 022C6 CA              A=A+C   A
  7065 022C8 130             D0=A
- 7066               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1181
+ 7066               * File  smhp_game_50.s  1181
  7067 022CB D0              A=0     A
  7068 022CD 14A             A=DAT0  B
- 7069               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1182
+ 7069               * File  smhp_game_50.s  1182
  7070
- 7071               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1183
+ 7071               * File  smhp_game_50.s  1183
  7072 022D0 3170            LC(2)   07
  7073 022D4 966             ?A#C    B
  7074 022D7 80              SKIPYES{
  7075 022D9 8C9B40          GOLONG  =COINUP
- 7076               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1184
+ 7076               * File  smhp_game_50.s  1184
  7077
- 7078               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1185
+ 7078               * File  smhp_game_50.s  1185
  7079                       }
  7080 022DF 1FB3108         D1=(5)  (=CUBES)
  7081 022E6 147             C=DAT1  A
- 7082               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1186
+ 7082               * File  smhp_game_50.s  1186
  7083 022E9 F0              ASL     A
  7084 022EB C4              A=A+A   A
- 7085               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1187
+ 7085               * File  smhp_game_50.s  1187
  7086 022ED C2              C=C+A   A
  7087 022EF 135             D1=C
- 7088               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1188
+ 7088               * File  smhp_game_50.s  1188
  7089 022F2 171             D1+     2
  7090 022F5 14B             A=DAT1  B
- 7091               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1189
+ 7091               * File  smhp_game_50.s  1189
  7092
- 7093               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1190
+ 7093               * File  smhp_game_50.s  1190
  7094 022F8 80863           ?ABIT#1 3
  7095 022FD 40              SKIPYES{
  7096 022FF 02              RTNSC
- 7097               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1191
+ 7097               * File  smhp_game_50.s  1191
  7098                       }
  7099 02301 03              RTNCC
- 7100               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1192
- 7101               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1193
+ 7100               * File  smhp_game_50.s  1192
+ 7101               * File  smhp_game_50.s  1193
  7102
- 7103               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1194
+ 7103               * File  smhp_game_50.s  1194
  7104 02303         =MURG
- 7105               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1195
+ 7105               * File  smhp_game_50.s  1195
  7106 02303 85C             ST=1    12
- 7107               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1196
+ 7107               * File  smhp_game_50.s  1196
  7108 02306 85B             ST=1    11
- 7109               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1197
+ 7109               * File  smhp_game_50.s  1197
  7110
- 7111               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1198
+ 7111               * File  smhp_game_50.s  1198
  7112 02309 1BB0108         D0=(5)  (=MX)
  7113 02310 14A             A=DAT0  B
- 7114               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1199
+ 7114               * File  smhp_game_50.s  1199
  7115 02313 3110            LCHEX   01
  7116 02317 9EE             ?A>=C   B
  7117 0231A 40              SKIPYES{
  7118 0231C 03              RTNCC
- 7119               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1200
+ 7119               * File  smhp_game_50.s  1200
  7120
- 7121               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1201
+ 7121               * File  smhp_game_50.s  1201
  7122                       }
  7123 0231E D0              A=0     A
  7124 02320 1B81108         D0=(5)  (=SCROL.COUNTER)
- 7125               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1202
+ 7125               * File  smhp_game_50.s  1202
  7126 02327 1520            A=DAT0  P
- 7127               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1203
+ 7127               * File  smhp_game_50.s  1203
  7128
- 7129               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1204
+ 7129               * File  smhp_game_50.s  1204
  7130 0232B 3430000         LC(5)   03
- 7131               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1205
+ 7131               * File  smhp_game_50.s  1205
  7132
- 7133               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1206
+ 7133               * File  smhp_game_50.s  1206
  7134 02332 D8              B=A     A
  7135 02334 D7              D=C     A
- 7136               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1207
+ 7136               * File  smhp_game_50.s  1207
  7137
- 7138               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1208
- 7139               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1209
+ 7138               * File  smhp_game_50.s  1208
+ 7139               * File  smhp_game_50.s  1209
  7140 02336 D2              C=0     A
- 7141               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1210
+ 7141               * File  smhp_game_50.s  1210
  7142 02338 1B01108         D0=(5)  (=MY)
  7143 0233F 14E             C=DAT0  B
- 7144               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1211
+ 7144               * File  smhp_game_50.s  1211
  7145 02342 CB              C=C+D   A
- 7146               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1212
+ 7146               * File  smhp_game_50.s  1212
  7147 02344 819F2           CSRB.f  A
  7148 02349 819F2           CSRB.f  A
  7149 0234E 819F2           CSRB.f  A
- 7150               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1213
+ 7150               * File  smhp_game_50.s  1213
  7151 02353 F2              CSL     A
  7152 02355 DA              A=C     A
  7153 02357 F2              CSL     A
- 7154               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1214
+ 7154               * File  smhp_game_50.s  1214
  7155 02359 C4              A=A+A   A
  7156 0235B C4              A=A+A   A
  7157 0235D C2              C=C+A   A
- 7158               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1215
+ 7158               * File  smhp_game_50.s  1215
  7159
- 7160               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1216
+ 7160               * File  smhp_game_50.s  1216
  7161 0235F D0              A=0     A
- 7162               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1217
+ 7162               * File  smhp_game_50.s  1217
  7163 02361 1BB0108         D0=(5)  (=MX)
  7164 02368 14A             A=DAT0  B
- 7165               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1218
+ 7165               * File  smhp_game_50.s  1218
  7166 0236B C0              A=A+B   A
  7167 0236D CC              A=A-    1       A
- 7168               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1219
+ 7168               * File  smhp_game_50.s  1219
  7169 0236F 819F0           ASRB.f  A
  7170 02374 819F0           ASRB.f  A
  7171 02379 819F0           ASRB.f  A
- 7172               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1220
+ 7172               * File  smhp_game_50.s  1220
  7173 0237E C4              A=A+A   A
  7174 02380 C2              C=C+A   A
- 7175               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1221
+ 7175               * File  smhp_game_50.s  1221
  7176
- 7177               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1222
- 7178               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1223
+ 7177               * File  smhp_game_50.s  1222
+ 7178               * File  smhp_game_50.s  1223
  7179 02382 1BE1108         D0=(5)  (=LEVEL.DATA)
  7180 02389 142             A=DAT0  A
- 7181               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1224
+ 7181               * File  smhp_game_50.s  1224
  7182 0238C CA              A=A+C   A
  7183 0238E 130             D0=A
- 7184               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1225
+ 7184               * File  smhp_game_50.s  1225
  7185 02391 D0              A=0     A
  7186 02393 14A             A=DAT0  B
- 7187               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1226
+ 7187               * File  smhp_game_50.s  1226
  7188
- 7189               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1227
+ 7189               * File  smhp_game_50.s  1227
  7190 02396 3170            LC(2)   07
  7191 0239A 966             ?A#C    B
  7192 0239D 80              SKIPYES{
  7193 0239F 8C3F30          GOLONG  =COINUP
- 7194               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1228
+ 7194               * File  smhp_game_50.s  1228
  7195
- 7196               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1229
+ 7196               * File  smhp_game_50.s  1229
  7197                       }
  7198 023A5 1FB3108         D1=(5)  (=CUBES)
  7199 023AC 147             C=DAT1  A
- 7200               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1230
+ 7200               * File  smhp_game_50.s  1230
  7201 023AF F0              ASL     A
  7202 023B1 C4              A=A+A   A
- 7203               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1231
+ 7203               * File  smhp_game_50.s  1231
  7204 023B3 C2              C=C+A   A
  7205 023B5 135             D1=C
- 7206               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1232
+ 7206               * File  smhp_game_50.s  1232
  7207 023B8 171             D1+     2
  7208 023BB 14B             A=DAT1  B
- 7209               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1233
+ 7209               * File  smhp_game_50.s  1233
  7210
- 7211               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1234
+ 7211               * File  smhp_game_50.s  1234
  7212 023BE 3170            LC(2)   07
  7213 023C2 966             ?A#C    B
  7214 023C5 80              SKIPYES{
  7215 023C7 8CBC30          GOLONG  =COINUP
- 7216               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1235
+ 7216               * File  smhp_game_50.s  1235
  7217
- 7218               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1236
+ 7218               * File  smhp_game_50.s  1236
  7219                       }
  7220 023CD 80862           ?ABIT#1 2
  7221 023D2 40              SKIPYES{
  7222 023D4 02              RTNSC
- 7223               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1237
+ 7223               * File  smhp_game_50.s  1237
  7224                       }
  7225 023D6 03              RTNCC
- 7226               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1238
- 7227               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1239
+ 7226               * File  smhp_game_50.s  1238
+ 7227               * File  smhp_game_50.s  1239
  7228
- 7229               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1240
+ 7229               * File  smhp_game_50.s  1240
  7230 023D8         =SOL_T
- 7231               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1241
+ 7231               * File  smhp_game_50.s  1241
  7232 023D8 84C             ST=0    12
- 7233               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1242
+ 7233               * File  smhp_game_50.s  1242
  7234 023DB 84B             ST=0    11
- 7235               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1243
+ 7235               * File  smhp_game_50.s  1243
  7236
- 7237               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1244
+ 7237               * File  smhp_game_50.s  1244
  7238 023DE 3480000         LC(5)   08
- 7239               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1245
+ 7239               * File  smhp_game_50.s  1245
  7240
- 7241               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1246
+ 7241               * File  smhp_game_50.s  1246
  7242 023E5 D0              A=0     A
  7243 023E7 1B81108         D0=(5)  (=SCROL.COUNTER)
- 7244               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1247
+ 7244               * File  smhp_game_50.s  1247
  7245 023EE 1520            A=DAT0  P
  7246 023F2 818F03          A=A+    4       A
- 7247               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1248
+ 7247               * File  smhp_game_50.s  1248
  7248
- 7249               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1249
+ 7249               * File  smhp_game_50.s  1249
  7250 023F8 D8              B=A     A
  7251 023FA D7              D=C     A
- 7252               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1250
+ 7252               * File  smhp_game_50.s  1250
  7253
- 7254               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1251
- 7255               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1252
+ 7254               * File  smhp_game_50.s  1251
+ 7255               * File  smhp_game_50.s  1252
  7256 023FC D2              C=0     A
- 7257               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1253
+ 7257               * File  smhp_game_50.s  1253
  7258 023FE 1BB5108         D0=(5)  (=SY)
  7259 02405 14E             C=DAT0  B
- 7260               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1254
+ 7260               * File  smhp_game_50.s  1254
  7261 02408 CB              C=C+D   A
- 7262               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1255
+ 7262               * File  smhp_game_50.s  1255
  7263
- 7264               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1256
+ 7264               * File  smhp_game_50.s  1256
  7265 0240A 819F2           CSRB.f  A
  7266 0240F 819F2           CSRB.f  A
  7267 02414 819F2           CSRB.f  A
- 7268               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1257
+ 7268               * File  smhp_game_50.s  1257
  7269 02419 F2              CSL     A
  7270 0241B DA              A=C     A
  7271 0241D F2              CSL     A
- 7272               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1258
+ 7272               * File  smhp_game_50.s  1258
  7273 0241F C4              A=A+A   A
  7274 02421 C4              A=A+A   A
  7275 02423 C2              C=C+A   A
- 7276               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1259
+ 7276               * File  smhp_game_50.s  1259
  7277
- 7278               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1260
+ 7278               * File  smhp_game_50.s  1260
  7279 02425 D0              A=0     A
- 7280               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1261
+ 7280               * File  smhp_game_50.s  1261
  7281 02427 1B65108         D0=(5)  (=SX)
  7282 0242E 14A             A=DAT0  B
- 7283               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1262
+ 7283               * File  smhp_game_50.s  1262
  7284 02431 C0              A=A+B   A
- 7285               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1263
+ 7285               * File  smhp_game_50.s  1263
  7286 02433 819F0           ASRB.f  A
  7287 02438 819F0           ASRB.f  A
  7288 0243D 819F0           ASRB.f  A
- 7289               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1264
+ 7289               * File  smhp_game_50.s  1264
  7290 02442 C4              A=A+A   A
  7291 02444 C2              C=C+A   A
- 7292               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1265
+ 7292               * File  smhp_game_50.s  1265
  7293
- 7294               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1266
- 7295               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1267
+ 7294               * File  smhp_game_50.s  1266
+ 7295               * File  smhp_game_50.s  1267
  7296 02446 1BE1108         D0=(5)  (=LEVEL.DATA)
  7297 0244D 142             A=DAT0  A
- 7298               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1268
+ 7298               * File  smhp_game_50.s  1268
  7299 02450 CA              A=A+C   A
  7300 02452 130             D0=A
- 7301               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1269
+ 7301               * File  smhp_game_50.s  1269
  7302 02455 D0              A=0     A
  7303 02457 14A             A=DAT0  B
- 7304               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1270
+ 7304               * File  smhp_game_50.s  1270
  7305
- 7306               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1271
+ 7306               * File  smhp_game_50.s  1271
  7307 0245A 1FB3108         D1=(5)  (=CUBES)
  7308 02461 147             C=DAT1  A
- 7309               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1272
+ 7309               * File  smhp_game_50.s  1272
  7310 02464 F0              ASL     A
  7311 02466 C4              A=A+A   A
- 7312               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1273
+ 7312               * File  smhp_game_50.s  1273
  7313 02468 C2              C=C+A   A
  7314 0246A 135             D1=C
- 7315               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1274
+ 7315               * File  smhp_game_50.s  1274
  7316 0246D 171             D1+     2
  7317 02470 14B             A=DAT1  B
- 7318               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1275
+ 7318               * File  smhp_game_50.s  1275
  7319
- 7320               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1276
+ 7320               * File  smhp_game_50.s  1276
  7321 02473 80861           ?ABIT#1 1
  7322 02478 40              SKIPYES{
  7323 0247A 02              RTNSC
- 7324               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1277
+ 7324               * File  smhp_game_50.s  1277
  7325                       }
  7326 0247C 03              RTNCC
- 7327               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1278
- 7328               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1279
+ 7327               * File  smhp_game_50.s  1278
+ 7328               * File  smhp_game_50.s  1279
  7329
- 7330               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1280
+ 7330               * File  smhp_game_50.s  1280
  7331 0247E         =MURD_T
- 7332               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1281
+ 7332               * File  smhp_game_50.s  1281
  7333 0247E 84C             ST=0    12
- 7334               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1282
+ 7334               * File  smhp_game_50.s  1282
  7335 02481 84B             ST=0    11
- 7336               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1283
+ 7336               * File  smhp_game_50.s  1283
  7337
- 7338               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1284
+ 7338               * File  smhp_game_50.s  1284
  7339 02484 D0              A=0     A
  7340 02486 1B81108         D0=(5)  (=SCROL.COUNTER)
- 7341               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1285
+ 7341               * File  smhp_game_50.s  1285
  7342 0248D 1520            A=DAT0  P
  7343 02491 818F07          A=A+    8       A
- 7344               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1286
+ 7344               * File  smhp_game_50.s  1286
  7345
- 7346               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1287
+ 7346               * File  smhp_game_50.s  1287
  7347 02497 3400000         LC(5)   00
- 7348               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1288
+ 7348               * File  smhp_game_50.s  1288
  7349
- 7350               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1289
+ 7350               * File  smhp_game_50.s  1289
  7351 0249E D8              B=A     A
  7352 024A0 D7              D=C     A
- 7353               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1290
+ 7353               * File  smhp_game_50.s  1290
  7354
- 7355               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1291
- 7356               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1292
+ 7355               * File  smhp_game_50.s  1291
+ 7356               * File  smhp_game_50.s  1292
  7357 024A2 D2              C=0     A
- 7358               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1293
+ 7358               * File  smhp_game_50.s  1293
  7359 024A4 1BB5108         D0=(5)  (=SY)
  7360 024AB 14E             C=DAT0  B
- 7361               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1294
+ 7361               * File  smhp_game_50.s  1294
  7362 024AE CB              C=C+D   A
- 7363               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1295
+ 7363               * File  smhp_game_50.s  1295
  7364 024B0 819F2           CSRB.f  A
  7365 024B5 819F2           CSRB.f  A
  7366 024BA 819F2           CSRB.f  A
- 7367               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1296
+ 7367               * File  smhp_game_50.s  1296
  7368 024BF F2              CSL     A
  7369 024C1 DA              A=C     A
  7370 024C3 F2              CSL     A
- 7371               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1297
+ 7371               * File  smhp_game_50.s  1297
  7372 024C5 C4              A=A+A   A
  7373 024C7 C4              A=A+A   A
  7374 024C9 C2              C=C+A   A
- 7375               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1298
+ 7375               * File  smhp_game_50.s  1298
  7376
- 7377               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1299
+ 7377               * File  smhp_game_50.s  1299
  7378 024CB D0              A=0     A
- 7379               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1300
+ 7379               * File  smhp_game_50.s  1300
  7380 024CD 1B65108         D0=(5)  (=SX)
  7381 024D4 14A             A=DAT0  B
- 7382               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1301
+ 7382               * File  smhp_game_50.s  1301
  7383 024D7 C0              A=A+B   A
- 7384               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1302
+ 7384               * File  smhp_game_50.s  1302
  7385 024D9 819F0           ASRB.f  A
  7386 024DE 819F0           ASRB.f  A
  7387 024E3 819F0           ASRB.f  A
- 7388               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1303
+ 7388               * File  smhp_game_50.s  1303
  7389 024E8 C4              A=A+A   A
  7390 024EA C2              C=C+A   A
- 7391               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1304
+ 7391               * File  smhp_game_50.s  1304
  7392
- 7393               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1305
- 7394               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1306
+ 7393               * File  smhp_game_50.s  1305
+ 7394               * File  smhp_game_50.s  1306
  7395 024EC 1BE1108         D0=(5)  (=LEVEL.DATA)
  7396 024F3 142             A=DAT0  A
- 7397               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1307
+ 7397               * File  smhp_game_50.s  1307
  7398 024F6 CA              A=A+C   A
  7399 024F8 130             D0=A
- 7400               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1308
+ 7400               * File  smhp_game_50.s  1308
  7401 024FB D0              A=0     A
  7402 024FD 14A             A=DAT0  B
- 7403               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1309
+ 7403               * File  smhp_game_50.s  1309
  7404
- 7405               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1310
+ 7405               * File  smhp_game_50.s  1310
  7406 02500 1FB3108         D1=(5)  (=CUBES)
  7407 02507 147             C=DAT1  A
- 7408               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1311
+ 7408               * File  smhp_game_50.s  1311
  7409 0250A F0              ASL     A
  7410 0250C C4              A=A+A   A
- 7411               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1312
+ 7411               * File  smhp_game_50.s  1312
  7412 0250E C2              C=C+A   A
  7413 02510 135             D1=C
- 7414               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1313
+ 7414               * File  smhp_game_50.s  1313
  7415 02513 171             D1+     2
  7416 02516 14B             A=DAT1  B
- 7417               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1314
+ 7417               * File  smhp_game_50.s  1314
  7418
- 7419               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1315
+ 7419               * File  smhp_game_50.s  1315
  7420 02519 80863           ?ABIT#1 3
  7421 0251E 40              SKIPYES{
  7422 02520 02              RTNSC
- 7423               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1316
+ 7423               * File  smhp_game_50.s  1316
  7424                       }
  7425 02522 03              RTNCC
- 7426               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1317
- 7427               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1318
+ 7426               * File  smhp_game_50.s  1317
+ 7427               * File  smhp_game_50.s  1318
  7428
- 7429               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1319
+ 7429               * File  smhp_game_50.s  1319
  7430 02524         =MURG_T
- 7431               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1320
+ 7431               * File  smhp_game_50.s  1320
  7432 02524 84C             ST=0    12
- 7433               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1321
+ 7433               * File  smhp_game_50.s  1321
  7434 02527 84B             ST=0    11
- 7435               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1322
+ 7435               * File  smhp_game_50.s  1322
  7436
- 7437               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1323
+ 7437               * File  smhp_game_50.s  1323
  7438 0252A 1B65108         D0=(5)  (=SX)
  7439 02531 14A             A=DAT0  B
- 7440               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1324
+ 7440               * File  smhp_game_50.s  1324
  7441 02534 3110            LCHEX   01
  7442 02538 9EE             ?A>=C   B
  7443 0253B 40              SKIPYES{
  7444 0253D 03              RTNCC
- 7445               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1325
+ 7445               * File  smhp_game_50.s  1325
  7446
- 7447               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1326
+ 7447               * File  smhp_game_50.s  1326
  7448                       }
  7449 0253F D0              A=0     A
  7450 02541 1B81108         D0=(5)  (=SCROL.COUNTER)
- 7451               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1327
+ 7451               * File  smhp_game_50.s  1327
  7452 02548 1520            A=DAT0  P
- 7453               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1328
+ 7453               * File  smhp_game_50.s  1328
  7454
- 7455               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1329
+ 7455               * File  smhp_game_50.s  1329
  7456 0254C 3400000         LC(5)   00
- 7457               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1330
+ 7457               * File  smhp_game_50.s  1330
  7458
- 7459               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1331
+ 7459               * File  smhp_game_50.s  1331
  7460 02553 D8              B=A     A
  7461 02555 D7              D=C     A
- 7462               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1332
+ 7462               * File  smhp_game_50.s  1332
  7463
- 7464               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1333
- 7465               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1334
+ 7464               * File  smhp_game_50.s  1333
+ 7465               * File  smhp_game_50.s  1334
  7466 02557 D2              C=0     A
- 7467               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1335
+ 7467               * File  smhp_game_50.s  1335
  7468 02559 1BB5108         D0=(5)  (=SY)
  7469 02560 14E             C=DAT0  B
- 7470               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1336
+ 7470               * File  smhp_game_50.s  1336
  7471 02563 CB              C=C+D   A
- 7472               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1337
+ 7472               * File  smhp_game_50.s  1337
  7473 02565 819F2           CSRB.f  A
  7474 0256A 819F2           CSRB.f  A
  7475 0256F 819F2           CSRB.f  A
- 7476               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1338
+ 7476               * File  smhp_game_50.s  1338
  7477 02574 F2              CSL     A
  7478 02576 DA              A=C     A
  7479 02578 F2              CSL     A
- 7480               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1339
+ 7480               * File  smhp_game_50.s  1339
  7481 0257A C4              A=A+A   A
  7482 0257C C4              A=A+A   A
  7483 0257E C2              C=C+A   A
- 7484               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1340
+ 7484               * File  smhp_game_50.s  1340
  7485
- 7486               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1341
+ 7486               * File  smhp_game_50.s  1341
  7487 02580 D0              A=0     A
- 7488               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1342
+ 7488               * File  smhp_game_50.s  1342
  7489 02582 1B65108         D0=(5)  (=SX)
  7490 02589 14A             A=DAT0  B
- 7491               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1343
+ 7491               * File  smhp_game_50.s  1343
  7492 0258C C0              A=A+B   A
  7493 0258E CC              A=A-    1       A
- 7494               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1344
+ 7494               * File  smhp_game_50.s  1344
  7495 02590 819F0           ASRB.f  A
  7496 02595 819F0           ASRB.f  A
  7497 0259A 819F0           ASRB.f  A
- 7498               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1345
+ 7498               * File  smhp_game_50.s  1345
  7499 0259F C4              A=A+A   A
  7500 025A1 C2              C=C+A   A
- 7501               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1346
+ 7501               * File  smhp_game_50.s  1346
  7502
- 7503               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1347
- 7504               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1348
+ 7503               * File  smhp_game_50.s  1347
+ 7504               * File  smhp_game_50.s  1348
  7505 025A3 1BE1108         D0=(5)  (=LEVEL.DATA)
  7506 025AA 142             A=DAT0  A
- 7507               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1349
+ 7507               * File  smhp_game_50.s  1349
  7508 025AD CA              A=A+C   A
  7509 025AF 130             D0=A
- 7510               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1350
+ 7510               * File  smhp_game_50.s  1350
  7511 025B2 D0              A=0     A
  7512 025B4 14A             A=DAT0  B
- 7513               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1351
+ 7513               * File  smhp_game_50.s  1351
  7514
- 7515               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1352
+ 7515               * File  smhp_game_50.s  1352
  7516 025B7 1FB3108         D1=(5)  (=CUBES)
  7517 025BE 147             C=DAT1  A
- 7518               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1353
+ 7518               * File  smhp_game_50.s  1353
  7519 025C1 F0              ASL     A
  7520 025C3 C4              A=A+A   A
- 7521               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1354
+ 7521               * File  smhp_game_50.s  1354
  7522 025C5 C2              C=C+A   A
  7523 025C7 135             D1=C
- 7524               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1355
+ 7524               * File  smhp_game_50.s  1355
  7525 025CA 171             D1+     2
  7526 025CD 14B             A=DAT1  B
- 7527               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1356
+ 7527               * File  smhp_game_50.s  1356
  7528
- 7529               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1357
+ 7529               * File  smhp_game_50.s  1357
  7530 025D0 80862           ?ABIT#1 2
  7531 025D5 40              SKIPYES{
  7532 025D7 02              RTNSC
- 7533               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1358
+ 7533               * File  smhp_game_50.s  1358
  7534                       }
  7535 025D9 03              RTNCC
- 7536               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1359
- 7537               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1360
+ 7536               * File  smhp_game_50.s  1359
+ 7537               * File  smhp_game_50.s  1360
  7538
- 7539               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1361
+ 7539               * File  smhp_game_50.s  1361
  7540 025DB         =CIEL
- 7541               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1362
+ 7541               * File  smhp_game_50.s  1362
  7542 025DB 85C             ST=1    12
- 7543               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1363
+ 7543               * File  smhp_game_50.s  1363
  7544 025DE 84B             ST=0    11
- 7545               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1364
+ 7545               * File  smhp_game_50.s  1364
  7546
- 7547               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1365
+ 7547               * File  smhp_game_50.s  1365
  7548 025E1 1B70108         D0=(5)  (=MCLIPH)
  7549 025E8 14A             A=DAT0  B
- 7550               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1366
+ 7550               * File  smhp_game_50.s  1366
  7551 025EB 968             ?A=0    B
  7552 025EE 40              SKIPYES{
  7553 025F0 03              RTNCC
- 7554               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1367
+ 7554               * File  smhp_game_50.s  1367
  7555
- 7556               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1368
+ 7556               * File  smhp_game_50.s  1368
  7557                       }
  7558 025F2 D0              A=0     A
  7559 025F4 1B81108         D0=(5)  (=SCROL.COUNTER)
- 7560               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1369
+ 7560               * File  smhp_game_50.s  1369
  7561 025FB 1520            A=DAT0  P
  7562 025FF 818F03          A=A+    4       A
- 7563               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1370
+ 7563               * File  smhp_game_50.s  1370
  7564 02605 D2              C=0     A
- 7565               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1371
+ 7565               * File  smhp_game_50.s  1371
  7566 02607 D8              B=A     A
  7567 02609 D7              D=C     A
- 7568               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1372
+ 7568               * File  smhp_game_50.s  1372
  7569
- 7570               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1373
- 7571               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1374
+ 7570               * File  smhp_game_50.s  1373
+ 7571               * File  smhp_game_50.s  1374
  7572 0260B D2              C=0     A
- 7573               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1375
+ 7573               * File  smhp_game_50.s  1375
  7574 0260D 1B01108         D0=(5)  (=MY)
  7575 02614 14E             C=DAT0  B
- 7576               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1376
+ 7576               * File  smhp_game_50.s  1376
  7577 02617 CB              C=C+D   A
- 7578               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1377
+ 7578               * File  smhp_game_50.s  1377
  7579
- 7580               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1378
+ 7580               * File  smhp_game_50.s  1378
  7581 02619 819F2           CSRB.f  A
  7582 0261E 819F2           CSRB.f  A
  7583 02623 819F2           CSRB.f  A
- 7584               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1379
+ 7584               * File  smhp_game_50.s  1379
  7585 02628 F2              CSL     A
  7586 0262A DA              A=C     A
  7587 0262C F2              CSL     A
- 7588               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1380
+ 7588               * File  smhp_game_50.s  1380
  7589 0262E C4              A=A+A   A
  7590 02630 C4              A=A+A   A
  7591 02632 C2              C=C+A   A
- 7592               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1381
+ 7592               * File  smhp_game_50.s  1381
  7593
- 7594               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1382
+ 7594               * File  smhp_game_50.s  1382
  7595 02634 D0              A=0     A
- 7596               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1383
+ 7596               * File  smhp_game_50.s  1383
  7597 02636 1BB0108         D0=(5)  (=MX)
  7598 0263D 14A             A=DAT0  B
- 7599               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1384
+ 7599               * File  smhp_game_50.s  1384
  7600 02640 C0              A=A+B   A
- 7601               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1385
+ 7601               * File  smhp_game_50.s  1385
  7602 02642 819F0           ASRB.f  A
  7603 02647 819F0           ASRB.f  A
  7604 0264C 819F0           ASRB.f  A
- 7605               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1386
+ 7605               * File  smhp_game_50.s  1386
  7606 02651 C4              A=A+A   A
  7607 02653 C2              C=C+A   A
- 7608               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1387
+ 7608               * File  smhp_game_50.s  1387
  7609
- 7610               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1388
- 7611               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1389
+ 7610               * File  smhp_game_50.s  1388
+ 7611               * File  smhp_game_50.s  1389
  7612 02655 1BE1108         D0=(5)  (=LEVEL.DATA)
  7613 0265C 142             A=DAT0  A
- 7614               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1390
+ 7614               * File  smhp_game_50.s  1390
  7615 0265F CA              A=A+C   A
  7616 02661 130             D0=A
- 7617               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1391
+ 7617               * File  smhp_game_50.s  1391
  7618 02664 D0              A=0     A
  7619 02666 14A             A=DAT0  B
- 7620               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1392
+ 7620               * File  smhp_game_50.s  1392
  7621
- 7622               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1393
+ 7622               * File  smhp_game_50.s  1393
  7623 02669 3120            LC(2)   02
- 7624               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1394
+ 7624               * File  smhp_game_50.s  1394
  7625 0266D 966             ?A#C    B
  7626 02670 F0              SKIPYES{
- 7627               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1395
- 7628               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1396
+ 7627               * File  smhp_game_50.s  1395
+ 7628               * File  smhp_game_50.s  1396
  7629 02672 3150            LC(2)   5
  7630 02676 14C             DAT0=C  B
- 7631               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1397
+ 7631               * File  smhp_game_50.s  1397
  7632 02679 8C5E61          GOLONG  =ADD.CHAMP
- 7633               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1398
- 7634               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1399
+ 7633               * File  smhp_game_50.s  1398
+ 7634               * File  smhp_game_50.s  1399
  7635                       }
  7636 0267F 3170            LC(2)   07
  7637 02683 966             ?A#C    B
  7638 02686 80              SKIPYES{
  7639 02688 8CA010          GOLONG  =COINUP
- 7640               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1400
+ 7640               * File  smhp_game_50.s  1400
  7641
- 7642               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1401
+ 7642               * File  smhp_game_50.s  1401
  7643                       }
  7644 0268E 1FB3108         D1=(5)  (=CUBES)
  7645 02695 147             C=DAT1  A
- 7646               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1402
+ 7646               * File  smhp_game_50.s  1402
  7647 02698 F0              ASL     A
  7648 0269A C4              A=A+A   A
- 7649               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1403
+ 7649               * File  smhp_game_50.s  1403
  7650 0269C C2              C=C+A   A
  7651 0269E 135             D1=C
- 7652               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1404
+ 7652               * File  smhp_game_50.s  1404
  7653 026A1 171             D1+     2
  7654 026A4 14B             A=DAT1  B
- 7655               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1405
+ 7655               * File  smhp_game_50.s  1405
  7656
- 7657               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1406
+ 7657               * File  smhp_game_50.s  1406
  7658 026A7 80860           ?ABIT#1 0
  7659 026AC 40              SKIPYES{
  7660 026AE 02              RTNSC
- 7661               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1407
+ 7661               * File  smhp_game_50.s  1407
  7662                       }
  7663 026B0 03              RTNCC
- 7664               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1408
- 7665               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1409
+ 7664               * File  smhp_game_50.s  1408
+ 7665               * File  smhp_game_50.s  1409
  7666
- 7667               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1410
+ 7667               * File  smhp_game_50.s  1410
  7668 026B2         =VIES
- 7669               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1411
+ 7669               * File  smhp_game_50.s  1411
  7670 026B2 81AF10          A=R0.f  A
- 7671               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1412
+ 7671               * File  smhp_game_50.s  1412
  7672 026B8 3439100         LCHEX   00193
  7673 026BF CA              A=A+C   A
- 7674               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1413
+ 7674               * File  smhp_game_50.s  1413
  7675 026C1 104             R4=A
- 7676               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1414
+ 7676               * File  smhp_game_50.s  1414
  7677 026C4 1B40108         D0=(5)  (=VIE)
  7678 026CB 14A             A=DAT0  B
- 7679               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1415
+ 7679               * File  smhp_game_50.s  1415
  7680 026CE 302             LCHEX   2
- 7681               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1416
+ 7681               * File  smhp_game_50.s  1416
  7682 026D1 8E624F          GOSUBL  =NUMBER.AC
- 7683               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1417
+ 7683               * File  smhp_game_50.s  1417
  7684
- 7685               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1418
+ 7685               * File  smhp_game_50.s  1418
  7686 026D7 81AF11          A=R1.f  A
- 7687               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1419
+ 7687               * File  smhp_game_50.s  1419
  7688 026DD 3439100         LCHEX   00193
  7689 026E4 CA              A=A+C   A
- 7690               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1420
+ 7690               * File  smhp_game_50.s  1420
  7691 026E6 104             R4=A
- 7692               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1421
+ 7692               * File  smhp_game_50.s  1421
  7693 026E9 1B40108         D0=(5)  (=VIE)
  7694 026F0 14A             A=DAT0  B
- 7695               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1422
+ 7695               * File  smhp_game_50.s  1422
  7696 026F3 302             LCHEX   2
- 7697               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1423
+ 7697               * File  smhp_game_50.s  1423
  7698 026F6 8C504F          GOLONG  =NUMBER.AC
- 7699               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1424
+ 7699               * File  smhp_game_50.s  1424
  7700
- 7701               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1425
+ 7701               * File  smhp_game_50.s  1425
  7702 026FC         =COINS
- 7703               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1426
+ 7703               * File  smhp_game_50.s  1426
  7704 026FC 81AF10          A=R0.f  A
- 7705               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1427
+ 7705               * File  smhp_game_50.s  1427
  7706 02702 34C5400         LCHEX   0045C
  7707 02709 CA              A=A+C   A
- 7708               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1428
+ 7708               * File  smhp_game_50.s  1428
  7709 0270B 104             R4=A
- 7710               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1429
+ 7710               * File  smhp_game_50.s  1429
  7711 0270E 1B51108         D0=(5)  (=COIN)
  7712 02715 1523            A=DAT0  X
- 7713               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1430
+ 7713               * File  smhp_game_50.s  1430
  7714 02719 303             LCHEX   3
- 7715               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1431
+ 7715               * File  smhp_game_50.s  1431
  7716 0271C 8EBD3F          GOSUBL  =NUMBER.AC
- 7717               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1432
+ 7717               * File  smhp_game_50.s  1432
  7718
- 7719               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1433
+ 7719               * File  smhp_game_50.s  1433
  7720 02722 81AF11          A=R1.f  A
- 7721               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1434
+ 7721               * File  smhp_game_50.s  1434
  7722 02728 34C5400         LCHEX   0045C
  7723 0272F CA              A=A+C   A
- 7724               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1435
+ 7724               * File  smhp_game_50.s  1435
  7725 02731 104             R4=A
- 7726               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1436
+ 7726               * File  smhp_game_50.s  1436
  7727 02734 1B51108         D0=(5)  (=COIN)
  7728 0273B 1523            A=DAT0  X
- 7729               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1437
+ 7729               * File  smhp_game_50.s  1437
  7730 0273F 303             LCHEX   3
- 7731               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1438
+ 7731               * File  smhp_game_50.s  1438
  7732 02742 8C9B3F          GOLONG  =NUMBER.AC
- 7733               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1439
+ 7733               * File  smhp_game_50.s  1439
  7734
- 7735               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1440
+ 7735               * File  smhp_game_50.s  1440
  7736 02748         =STAGES
- 7737               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1441
+ 7737               * File  smhp_game_50.s  1441
  7738 02748 81AF10          A=R0.f  A
- 7739               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1442
+ 7739               * File  smhp_game_50.s  1442
  7740 0274E 3462700         LCHEX   00726
  7741 02755 CA              A=A+C   A
- 7742               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1443
+ 7742               * File  smhp_game_50.s  1443
  7743 02757 104             R4=A
- 7744               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1444
+ 7744               * File  smhp_game_50.s  1444
  7745 0275A 1B33108         D0=(5)  (=STAGE)
  7746 02761 1523            A=DAT0  X
- 7747               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1445
+ 7747               * File  smhp_game_50.s  1445
  7748 02765 303             LCHEX   3
- 7749               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1446
+ 7749               * File  smhp_game_50.s  1446
  7750 02768 8EF83F          GOSUBL  =NUMBER.AC
- 7751               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1447
+ 7751               * File  smhp_game_50.s  1447
  7752
- 7753               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1448
+ 7753               * File  smhp_game_50.s  1448
  7754 0276E 81AF11          A=R1.f  A
- 7755               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1449
+ 7755               * File  smhp_game_50.s  1449
  7756 02774 3462700         LCHEX   00726
  7757 0277B CA              A=A+C   A
- 7758               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1450
+ 7758               * File  smhp_game_50.s  1450
  7759 0277D 104             R4=A
- 7760               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1451
+ 7760               * File  smhp_game_50.s  1451
  7761 02780 1B33108         D0=(5)  (=STAGE)
  7762 02787 1523            A=DAT0  X
- 7763               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1452
+ 7763               * File  smhp_game_50.s  1452
  7764 0278B 303             LCHEX   3
- 7765               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1453
+ 7765               * File  smhp_game_50.s  1453
  7766 0278E 8CD63F          GOLONG  =NUMBER.AC
- 7767               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1454
+ 7767               * File  smhp_game_50.s  1454
  7768
- 7769               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1455
+ 7769               * File  smhp_game_50.s  1455
  7770 02794         =COINUP
- 7771               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1456
- 7772               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1457
+ 7771               * File  smhp_game_50.s  1456
+ 7772               * File  smhp_game_50.s  1457
  7773 02794 87C             ?ST=1   12
  7774 02797 40              SKIPYES{
  7775 02799 03              RTNCC
- 7776               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1458
+ 7776               * File  smhp_game_50.s  1458
  7777
- 7778               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1459
- 7779               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1460
+ 7778               * File  smhp_game_50.s  1459
+ 7779               * File  smhp_game_50.s  1460
  7780                       }
  7781 0279B AE0             A=0     B
  7782 0279E 148             DAT0=A  B
- 7783               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1461
- 7784               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1462
+ 7783               * File  smhp_game_50.s  1461
+ 7784               * File  smhp_game_50.s  1462
  7785 027A1 D2              C=0     A
- 7786               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1463
+ 7786               * File  smhp_game_50.s  1463
  7787 027A3 1B01108         D0=(5)  (=MY)
  7788 027AA 14E             C=DAT0  B
- 7789               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1464
+ 7789               * File  smhp_game_50.s  1464
  7790 027AD CB              C=C+D   A
- 7791               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1465
+ 7791               * File  smhp_game_50.s  1465
  7792
- 7793               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1466
+ 7793               * File  smhp_game_50.s  1466
  7794 027AF 819F2           CSRB.f  A
  7795 027B4 819F2           CSRB.f  A
  7796 027B9 819F2           CSRB.f  A
- 7797               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1467
+ 7797               * File  smhp_game_50.s  1467
  7798 027BE F2              CSL     A
  7799 027C0 819F2           CSRB.f  A
- 7800               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1468
+ 7800               * File  smhp_game_50.s  1468
  7801
- 7802               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1469
+ 7802               * File  smhp_game_50.s  1469
  7803 027C5 DA              A=C     A
  7804 027C7 F2              CSL     A
  7805 027C9 C2              C=C+A   A
- 7806               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1470
+ 7806               * File  smhp_game_50.s  1470
  7807 027CB C6              C=C+C   A
- 7808               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1471
+ 7808               * File  smhp_game_50.s  1471
  7809 027CD 1B91108         D0=(5)  (=LEVEL.SURFACE)
  7810 027D4 142             A=DAT0  A
- 7811               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1472
+ 7811               * File  smhp_game_50.s  1472
  7812 027D7 CA              A=A+C   A
  7813 027D9 D2              C=0     A
- 7814               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1473
+ 7814               * File  smhp_game_50.s  1473
  7815 027DB 1BB0108         D0=(5)  (=MX)
  7816 027E2 14E             C=DAT0  B
- 7817               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1474
+ 7817               * File  smhp_game_50.s  1474
  7818 027E5 C9              C=C+B   A
- 7819               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1475
+ 7819               * File  smhp_game_50.s  1475
  7820
- 7821               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1476
- 7822               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1477
+ 7821               * File  smhp_game_50.s  1476
+ 7822               * File  smhp_game_50.s  1477
  7823 027E7 86B             ?ST=0   11
  7824 027EA 70              SKIPYES{
- 7825               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1478
+ 7825               * File  smhp_game_50.s  1478
  7826 027EC CE              C=C-    1       A
  7827 027EE 84B             ST=0    11
- 7828               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1479
- 7829               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1480
+ 7828               * File  smhp_game_50.s  1479
+ 7829               * File  smhp_game_50.s  1480
  7830
- 7831               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1481
+ 7831               * File  smhp_game_50.s  1481
  7832                       }
  7833 027F1 819F2           CSRB.f  A
  7834 027F6 819F2           CSRB.f  A
  7835 027FB 819F2           CSRB.f  A
- 7836               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1482
+ 7836               * File  smhp_game_50.s  1482
  7837 02800 F2              CSL     A
  7838 02802 819F2           CSRB.f  A
- 7839               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1483
+ 7839               * File  smhp_game_50.s  1483
  7840
- 7841               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1484
+ 7841               * File  smhp_game_50.s  1484
  7842 02807 D8              B=A     A
- 7843               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1485
+ 7843               * File  smhp_game_50.s  1485
  7844 02809 1B81108         D0=(5)  (=SCROL.COUNTER)
- 7845               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1486
+ 7845               * File  smhp_game_50.s  1486
  7846 02810 D0              A=0     A
  7847 02812 1520            A=DAT0  P
- 7848               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1487
+ 7848               * File  smhp_game_50.s  1487
  7849 02816 E2              C=C-A   A
  7850 02818 A87             D=C     P
- 7851               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1488
+ 7851               * File  smhp_game_50.s  1488
  7852 0281B D4              A=B     A
- 7853               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1489
+ 7853               * File  smhp_game_50.s  1489
  7854
- 7855               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1490
+ 7855               * File  smhp_game_50.s  1490
  7856 0281D 819F2           CSRB.f  A
  7857 02822 819F2           CSRB.f  A
  7858 02827 CA              A=A+C   A
- 7859               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1491
+ 7859               * File  smhp_game_50.s  1491
  7860 02829 130             D0=A
- 7861               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1492
+ 7861               * File  smhp_game_50.s  1492
  7862
- 7863               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1493
+ 7863               * File  smhp_game_50.s  1493
  7864 0282C 7400            SKUB{
- 7865               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1494
+ 7865               * File  smhp_game_50.s  1494
  7866 02830 F               NIBHEX  F
  7867 02831 F               NIBHEX  F
  7868 02832 0               NIBHEX  0
  7869 02833 0               NIBHEX  0
- 7870               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1495
+ 7870               * File  smhp_game_50.s  1495
  7871                       }
  7872 02834 07              C=RSTK
  7873 02836 135             D1=C
- 7874               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1496
+ 7874               * File  smhp_game_50.s  1496
  7875
- 7876               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1497
+ 7876               * File  smhp_game_50.s  1497
  7877 02839 307             LCHEX   7
  7878 0283C A85             B=C     P
- 7879               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1498
+ 7879               * File  smhp_game_50.s  1498
  7880                       {
- 7881               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1499
+ 7881               * File  smhp_game_50.s  1499
  7882 0283F 1533            A=DAT1  X
- 7883               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1500
+ 7883               * File  smhp_game_50.s  1500
  7884 02843 A8B             C=D     P
- 7885               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1501
+ 7885               * File  smhp_game_50.s  1501
  7886 02846 808A0           ?CBIT=0 0
  7887 0284B 50              SKIPYES{
  7888 0284D A34             A=A+A   X
- 7889               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1502
+ 7889               * File  smhp_game_50.s  1502
  7890                       }
  7891 02850 808A1           ?CBIT=0 1
  7892 02855 80              SKIPYES{
  7893 02857 A34             A=A+A   X
  7894 0285A A34             A=A+A   X
- 7895               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1503
+ 7895               * File  smhp_game_50.s  1503
  7896                       }
  7897 0285D BBC             A=-A-1  X
- 7898               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1504
+ 7898               * File  smhp_game_50.s  1504
  7899 02860 1563            C=DAT0  X
- 7900               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1505
+ 7900               * File  smhp_game_50.s  1505
  7901 02864 0E36            A=A&C   X
- 7902               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1506
+ 7902               * File  smhp_game_50.s  1506
  7903 02868 1503            DAT0=A  X
- 7904               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1507
+ 7904               * File  smhp_game_50.s  1507
  7905 0286C 16F16F1         D0+     34
             61
- 7906               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1508
+ 7906               * File  smhp_game_50.s  1508
  7907 02875 A0D             B=B-    1       P
  7908 02878 56C             UPNC
- 7909               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1509
- 7910               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1510
+ 7909               * File  smhp_game_50.s  1509
+ 7910               * File  smhp_game_50.s  1510
  7911
- 7912               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1511
+ 7912               * File  smhp_game_50.s  1511
  7913                       }
  7914 0287B 1B51108         D0=(5)  (=COIN)
  7915 02882 1523            A=DAT0  X
- 7916               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1512
+ 7916               * File  smhp_game_50.s  1512
  7917 02886 3199            LCHEX   99
- 7918               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1513
- 7919               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1514
+ 7918               * File  smhp_game_50.s  1513
+ 7919               * File  smhp_game_50.s  1514
  7920 0288A 9E2             ?A<C    B
  7921 0288D B2              SKIPYES{
- 7922               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1515
+ 7922               * File  smhp_game_50.s  1515
  7923 0288F AB0             A=0     X
  7924 02892 1503            DAT0=A  X
- 7925               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1516
+ 7925               * File  smhp_game_50.s  1516
  7926 02896 1B40108         D0=(5)  (=VIE)
  7927 0289D 14A             A=DAT0  B
- 7928               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1517
+ 7928               * File  smhp_game_50.s  1517
  7929 028A0 05              SETDEC
  7930 028A2 B64             A=A+    1       B
  7931 028A5 04              SETHEX
- 7932               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1518
+ 7932               * File  smhp_game_50.s  1518
  7933 028A7 148             DAT0=A  B
- 7934               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1519
+ 7934               * File  smhp_game_50.s  1519
  7935 028AA 8EC4EF          GOSUBL  =COINS
- 7936               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1520
+ 7936               * File  smhp_game_50.s  1520
  7937 028B0 8ECFDF          GOSUBL  =VIES
- 7938               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1521
+ 7938               * File  smhp_game_50.s  1521
  7939 028B6 03              RTNCC
- 7940               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1522
- 7941               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1523
+ 7940               * File  smhp_game_50.s  1522
+ 7941               * File  smhp_game_50.s  1523
  7942                       }
  7943 028B8 05              SETDEC
  7944 028BA B34             A=A+    1       X
  7945 028BD 04              SETHEX
- 7946               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1524
+ 7946               * File  smhp_game_50.s  1524
  7947
- 7948               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1525
+ 7948               * File  smhp_game_50.s  1525
  7949 028BF 1503            DAT0=A  X
- 7950               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1526
+ 7950               * File  smhp_game_50.s  1526
  7951 028C3 8E33EF          GOSUBL  =COINS
- 7952               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1527
+ 7952               * File  smhp_game_50.s  1527
  7953 028C9 03              RTNCC
- 7954               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1528
+ 7954               * File  smhp_game_50.s  1528
  7955
- 7956               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1529
+ 7956               * File  smhp_game_50.s  1529
  7957 028CB         =RESET.CONTER
- 7958               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1530
- 7959               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1531
+ 7958               * File  smhp_game_50.s  1530
+ 7959               * File  smhp_game_50.s  1531
  7960 028CB 8082140         LAHEX   04
- 7961               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1532
+ 7961               * File  smhp_game_50.s  1532
  7962 028D2 1B40108         D0=(5)  (=VIE)
  7963 028D9 148             DAT0=A  B
- 7964               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1533
- 7965               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1534
+ 7964               * File  smhp_game_50.s  1533
+ 7965               * File  smhp_game_50.s  1534
  7966 028DC AB0             A=0     X
- 7967               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1535
+ 7967               * File  smhp_game_50.s  1535
  7968 028DF 1B51108         D0=(5)  (=COIN)
  7969 028E6 1503            DAT0=A  X
- 7970               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1536
+ 7970               * File  smhp_game_50.s  1536
  7971 028EA         =RESET.1
- 7972               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1537
- 7973               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1538
+ 7972               * File  smhp_game_50.s  1537
+ 7973               * File  smhp_game_50.s  1538
  7974 028EA AB0             A=0     X
- 7975               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1539
+ 7975               * File  smhp_game_50.s  1539
  7976 028ED 1B03108         D0=(5)  (=POSX)
  7977 028F4 1503            DAT0=A  X
- 7978               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1540
+ 7978               * File  smhp_game_50.s  1540
  7979 028F8 01              RTN
- 7980               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1541
+ 7980               * File  smhp_game_50.s  1541
  7981
- 7982               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1542
+ 7982               * File  smhp_game_50.s  1542
  7983 028FA         =PRESENTATION
- 7984               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1543
+ 7984               * File  smhp_game_50.s  1543
  7985 028FA D0              A=0     A
- 7986               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1544
+ 7986               * File  smhp_game_50.s  1544
  7987 028FC 1B74108         D0=(5)  (=START)
  7988 02903 140             DAT0=A  A
- 7989               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1545
+ 7989               * File  smhp_game_50.s  1545
  7990
- 7991               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1546
+ 7991               * File  smhp_game_50.s  1546
  7992 02906 8E0EE0          SKUBL{
- 7993               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1547
+ 7993               * File  smhp_game_50.s  1547
  7994 0290C 3               NIBHEX  3
  7995 0290D D               NIBHEX  D
  7996 0290E F               NIBHEX  F
@@ -11820,2459 +11820,2459 @@ V3.0.9 (04/15/2007)                                      smhp_game_50.a Page    
 11799 037E9 2               NIBHEX  2
 11800 037EA 2               NIBHEX  2
 11801 037EB 0               NIBHEX  0
-11802               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1548
-11803               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1549
+11802               * File  smhp_game_50.s  1548
+11803               * File  smhp_game_50.s  1549
 11804                       }
 11805 037EC 07              C=RSTK
-11806               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1550
-11807               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1551
+11806               * File  smhp_game_50.s  1550
+11807               * File  smhp_game_50.s  1551
 11808 037EE 10C             R4=C
-11809               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1552
+11809               * File  smhp_game_50.s  1552
 11810
-11811               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1553
+11811               * File  smhp_game_50.s  1553
 11812 037F1         =PRES
-11813               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1554
+11813               * File  smhp_game_50.s  1554
 11814 037F1 AF0             A=0     W
-11815               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1555
+11815               * File  smhp_game_50.s  1555
 11816 037F4 1B82100         D0=(5)  #00128
-11817               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1556
+11817               * File  smhp_game_50.s  1556
 11818                       {
-11819               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1557
+11819               * File  smhp_game_50.s  1557
 11820 037FB 15A5            A=DAT0  6
-11821               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1558
+11821               * File  smhp_game_50.s  1558
 11822 037FF 97C             ?A#0    W
 11823 03802 9F              UP
-11824               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1559
-11825               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1560
+11824               * File  smhp_game_50.s  1559
+11825               * File  smhp_game_50.s  1560
 11826                       }
 11827 03804 81AF14          A=R4.f  A
 11828 0380A 131             D1=A
-11829               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1561
+11829               * File  smhp_game_50.s  1561
 11830 0380D 8E6D00          GOSUBL  =AF
-11831               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1562
+11831               * File  smhp_game_50.s  1562
 11832 03813 AF0             A=0     W
-11833               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1563
+11833               * File  smhp_game_50.s  1563
 11834 03816 1B82100         D0=(5)  #00128
-11835               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1564
+11835               * File  smhp_game_50.s  1564
 11836                       {
-11837               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1565
+11837               * File  smhp_game_50.s  1565
 11838 0381D 15A5            A=DAT0  6
-11839               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1566
+11839               * File  smhp_game_50.s  1566
 11840 03821 97C             ?A#0    W
 11841 03824 9F              UP
-11842               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1567
-11843               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1568
+11842               * File  smhp_game_50.s  1567
+11843               * File  smhp_game_50.s  1568
 11844                       }
 11845 03826 81AF14          A=R4.f  A
-11846               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1569
+11846               * File  smhp_game_50.s  1569
 11847 0382C 3408800         LCHEX   00880
 11848 03833 CA              A=A+C   A
 11849 03835 131             D1=A
-11850               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1570
+11850               * File  smhp_game_50.s  1570
 11851 03838 8EBA00          GOSUBL  =AF
-11852               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1571
+11852               * File  smhp_game_50.s  1571
 11853 0383E AF0             A=0     W
-11854               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1572
+11854               * File  smhp_game_50.s  1572
 11855 03841 1B82100         D0=(5)  #00128
-11856               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1573
+11856               * File  smhp_game_50.s  1573
 11857                       {
-11858               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1574
+11858               * File  smhp_game_50.s  1574
 11859 03848 15A5            A=DAT0  6
-11860               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1575
+11860               * File  smhp_game_50.s  1575
 11861 0384C 97C             ?A#0    W
 11862 0384F 9F              UP
-11863               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1576
-11864               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1577
+11863               * File  smhp_game_50.s  1576
+11864               * File  smhp_game_50.s  1577
 11865                       }
 11866 03851 81AF14          A=R4.f  A
-11867               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1578
+11867               * File  smhp_game_50.s  1578
 11868 03857 3408800         LCHEX   00880
 11869 0385E CA              A=A+C   A
 11870 03860 131             D1=A
-11871               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1579
+11871               * File  smhp_game_50.s  1579
 11872 03863 8E0800          GOSUBL  =AF
-11873               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1580
+11873               * File  smhp_game_50.s  1580
 11874
-11875               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1581
+11875               * File  smhp_game_50.s  1581
 11876 03869 1B74108         D0=(5)  (=START)
 11877 03870 142             A=DAT0  A
-11878               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1582
+11878               * File  smhp_game_50.s  1582
 11879 03873 E4              A=A+    1       A
 11880 03875 140             DAT0=A  A
-11881               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1583
+11881               * File  smhp_game_50.s  1583
 11882 03878 3404F10         LC(5)   8000
-11883               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1584
-11884               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1585
+11883               * File  smhp_game_50.s  1584
+11884               * File  smhp_game_50.s  1585
 11885 0387F 8A6             ?A#C    A
 11886 03882 13              SKIPYES{
-11887               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1586
+11887               * File  smhp_game_50.s  1586
 11888 03884 81AF10          A=R0.f  A
 11889 0388A 34C2700         LC(5)   #72C
-11890               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1587
+11890               * File  smhp_game_50.s  1587
 11891 03891 CA              A=A+C   A
 11892 03893 130             D0=A
-11893               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1588
+11893               * File  smhp_game_50.s  1588
 11894 03896 308             LCHEX   8
 11895 03899 AF0             A=0     W
-11896               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1589
+11896               * File  smhp_game_50.s  1589
 11897                       {
-11898               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1590
+11898               * File  smhp_game_50.s  1590
 11899 0389C 1507            DAT0=A  W
 11900 038A0 16F             D0+     16
-11901               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1591
+11901               * File  smhp_game_50.s  1591
 11902 038A3 1507            DAT0=A  W
 11903 038A7 16F             D0+     16
-11904               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1592
+11904               * File  smhp_game_50.s  1592
 11905 038AA 148             DAT0=A  B
-11906               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1593
+11906               * File  smhp_game_50.s  1593
 11907 038AD A0E             C=C-    1       P
 11908 038B0 5BE             UPNC
-11909               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1594
-11910               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1595
+11909               * File  smhp_game_50.s  1594
+11910               * File  smhp_game_50.s  1595
 11911                       }
-11912               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1596
-11913               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1597
+11912               * File  smhp_game_50.s  1596
+11913               * File  smhp_game_50.s  1597
 11914                       }
 11915 038B3 32010           LCHEX   010
 11916 038B8 8FF0200         GOSBVL  =KEY
-11917               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1598
-11918               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1599
+11917               * File  smhp_game_50.s  1598
+11918               * File  smhp_game_50.s  1599
 11919 038BF 808A4           ?CBIT=0 4
 11920 038C4 80              SKIPYES{
-11921               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1600
+11921               * File  smhp_game_50.s  1600
 11922 038C6 8CD79D          GOLONG  =REPLAY
-11923               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1601
-11924               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1602
+11923               * File  smhp_game_50.s  1601
+11924               * File  smhp_game_50.s  1602
 11925
-11926               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1603
-11927               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1604
+11926               * File  smhp_game_50.s  1603
+11927               * File  smhp_game_50.s  1604
 11928                       }
 11929 038CC 32010           LCHEX   010
 11930 038D1 8FF0200         GOSBVL  =KEY
-11931               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1605
+11931               * File  smhp_game_50.s  1605
 11932 038D8 808A0           ?CBIT=0 0
 11933 038DD 80              SKIPYES{
-11934               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1606
+11934               * File  smhp_game_50.s  1606
 11935 038DF 8CD8AD          GOLONG  =QUIT
-11936               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1607
-11937               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1608
+11936               * File  smhp_game_50.s  1607
+11937               * File  smhp_game_50.s  1608
 11938                       }
 11939 038E5 6B0F            GOTO    =PRES
-11940               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1609
+11940               * File  smhp_game_50.s  1609
 11941
-11942               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1610
+11942               * File  smhp_game_50.s  1610
 11943 038E9         =AF
-11944               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1611
+11944               * File  smhp_game_50.s  1611
 11945 038E9 81AF10          A=R0.f  A
 11946 038EF 130             D0=A
 11947 038F2 3178            LCHEX   87
-11948               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1612
+11948               * File  smhp_game_50.s  1612
 11949                       {
-11950               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1613
+11950               * File  smhp_game_50.s  1613
 11951 038F6 1537            A=DAT1  W
 11952 038FA 1507            DAT0=A  W
-11953               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1614
+11953               * File  smhp_game_50.s  1614
 11954 038FE 16F             D0+     16
 11955 03901 17F             D1+     16
-11956               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1615
+11956               * File  smhp_game_50.s  1615
 11957 03904 A6E             C=C-    1       B
 11958 03907 5EE             UPNC
-11959               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1616
-11960               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1617
+11959               * File  smhp_game_50.s  1616
+11960               * File  smhp_game_50.s  1617
 11961                       }
 11962 0390A 01              RTN
-11963               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1618
+11963               * File  smhp_game_50.s  1618
 11964
-11965               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1619
+11965               * File  smhp_game_50.s  1619
 11966 0390C         =LOAD_L
-11967               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1620
+11967               * File  smhp_game_50.s  1620
 11968 0390C 1BB2108         D0=(5)  (=@LIFT)
-11969               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1621
+11969               * File  smhp_game_50.s  1621
 11970 03913 142             A=DAT0  A
 11971 03916 CA              A=A+C   A
 11972 03918 130             D0=A
-11973               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1622
+11973               * File  smhp_game_50.s  1622
 11974 0391B 1520            A=DAT0  P
-11975               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1623
+11975               * File  smhp_game_50.s  1623
 11976 0391F 90C             ?A#0    P
 11977 03922 70              SKIPYES{
-11978               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1624
+11978               * File  smhp_game_50.s  1624
 11979 03924 845             ST=0    5
 11980 03927 02              RTNSC
-11981               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1625
-11982               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1626
+11981               * File  smhp_game_50.s  1625
+11982               * File  smhp_game_50.s  1626
 11983                       }
 11984 03929 855             ST=1    5
-11985               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1627
+11985               * File  smhp_game_50.s  1627
 11986
-11987               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1628
+11987               * File  smhp_game_50.s  1628
 11988 0392C 301             LCHEX   1
 11989 0392F 906             ?A#C    P
 11990 03932 50              SKIPYES{
 11991 03934 846             ST=0    6
-11992               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1629
+11992               * File  smhp_game_50.s  1629
 11993                       }
 11994 03937 302             LCHEX   2
 11995 0393A 906             ?A#C    P
 11996 0393D 50              SKIPYES{
 11997 0393F 856             ST=1    6
-11998               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1630
+11998               * File  smhp_game_50.s  1630
 11999
-12000               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1631
+12000               * File  smhp_game_50.s  1631
 12001                       }
 12002 03942 160             D0+     1
 12003 03945 1F65108         D1=(5)  (=SX)
-12004               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1632
+12004               * File  smhp_game_50.s  1632
 12005 0394C 14A             A=DAT0  B
 12006 0394F 149             DAT1=A  B
-12007               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1633
+12007               * File  smhp_game_50.s  1633
 12008 03952 161             D0+     2
 12009 03955 1FB5108         D1=(5)  (=SY)
-12010               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1634
+12010               * File  smhp_game_50.s  1634
 12011 0395C 14A             A=DAT0  B
 12012 0395F 149             DAT1=A  B
-12013               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1635
+12013               * File  smhp_game_50.s  1635
 12014 03962 161             D0+     2
 12015 03965 1520            A=DAT0  P
-12016               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1636
+12016               * File  smhp_game_50.s  1636
 12017
-12018               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1637
+12018               * File  smhp_game_50.s  1637
 12019 03969 908             ?A=0    P
 12020 0396C 90              SKIPYES{
 12021 0396E 848             ST=0    8
-12022               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1638
+12022               * File  smhp_game_50.s  1638
 12023 03971 6600            }SKELSE{
 12024 03975 858             ST=1    8
-12025               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1639
+12025               * File  smhp_game_50.s  1639
 12026                       }
 12027 03978 03              RTNCC
-12028               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1640
+12028               * File  smhp_game_50.s  1640
 12029
-12030               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1641
+12030               * File  smhp_game_50.s  1641
 12031 0397A         =SAVE_L
-12032               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1642
+12032               * File  smhp_game_50.s  1642
 12033 0397A 1BB2108         D0=(5)  (=@LIFT)
-12034               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1643
+12034               * File  smhp_game_50.s  1643
 12035 03981 142             A=DAT0  A
 12036 03984 CA              A=A+C   A
 12037 03986 130             D0=A
-12038               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1644
-12039               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1645
+12038               * File  smhp_game_50.s  1644
+12039               * File  smhp_game_50.s  1645
 12040 03989 875             ?ST=1   5
 12041 0398C 90              SKIPYES{
-12042               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1646
+12042               * File  smhp_game_50.s  1646
 12043 0398E A82             C=0     P
-12044               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1647
-12045               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1648
-12046               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1649
+12044               * File  smhp_game_50.s  1647
+12045               * File  smhp_game_50.s  1648
+12046               * File  smhp_game_50.s  1649
 12047 03991 6210            }SKELSE{
-12048               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1650
-12049               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1651
+12048               * File  smhp_game_50.s  1650
+12049               * File  smhp_game_50.s  1651
 12050 03995 876             ?ST=1   6
 12051 03998 90              SKIPYES{
-12052               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1652
+12052               * File  smhp_game_50.s  1652
 12053 0399A 301             LCHEX   1
-12054               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1653
-12055               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1654
-12056               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1655
+12054               * File  smhp_game_50.s  1653
+12055               * File  smhp_game_50.s  1654
+12056               * File  smhp_game_50.s  1655
 12057 0399D 6600            }SKELSE{
-12058               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1656
+12058               * File  smhp_game_50.s  1656
 12059 039A1 302             LCHEX   2
-12060               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1657
-12061               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1658
+12060               * File  smhp_game_50.s  1657
+12061               * File  smhp_game_50.s  1658
 12062                       }
-12063               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1659
+12063               * File  smhp_game_50.s  1659
 12064                       }
 12065 039A4 1540            DAT0=C  P
-12066               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1660
+12066               * File  smhp_game_50.s  1660
 12067 039A8 160             D0+     1
 12068 039AB 1F65108         D1=(5)  (=SX)
-12069               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1661
+12069               * File  smhp_game_50.s  1661
 12070 039B2 14B             A=DAT1  B
 12071 039B5 148             DAT0=A  B
-12072               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1662
+12072               * File  smhp_game_50.s  1662
 12073 039B8 161             D0+     2
 12074 039BB 1FB5108         D1=(5)  (=SY)
-12075               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1663
+12075               * File  smhp_game_50.s  1663
 12076 039C2 14B             A=DAT1  B
 12077 039C5 148             DAT0=A  B
-12078               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1664
+12078               * File  smhp_game_50.s  1664
 12079 039C8 161             D0+     2
-12080               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1665
+12080               * File  smhp_game_50.s  1665
 12081 039CB 878             ?ST#0   8
 12082 039CE 90              SKIPYES{
 12083 039D0 A80             A=0     P
 12084 039D3 6900            }SKELSE{
 12085 039D7 808201          LAHEX   1
-12086               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1666
+12086               * File  smhp_game_50.s  1666
 12087                       }
 12088 039DD 1500            DAT0=A  P
-12089               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1667
+12089               * File  smhp_game_50.s  1667
 12090 039E1 01              RTN
-12091               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1668
+12091               * File  smhp_game_50.s  1668
 12092
-12093               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1669
+12093               * File  smhp_game_50.s  1669
 12094 039E3         =LIFT
-12095               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1670
+12095               * File  smhp_game_50.s  1670
 12096 039E3 867             ?ST#1   7
 12097 039E6 E1              SKIPYES{
-12098               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1671
-12099               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1672
+12098               * File  smhp_game_50.s  1671
+12099               * File  smhp_game_50.s  1672
 12100 039E8 1B65108         D0=(5)  (=SX)
 12101 039EF 14A             A=DAT0  B
-12102               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1673
-12103               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1674
+12102               * File  smhp_game_50.s  1673
+12103               * File  smhp_game_50.s  1674
 12104 039F2 96C             ?A#0    B
 12105 039F5 90              SKIPYES{
-12106               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1675
+12106               * File  smhp_game_50.s  1675
 12107 039F7 845             ST=0    5
-12108               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1676
-12109               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1677
-12110               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1678
+12108               * File  smhp_game_50.s  1676
+12109               * File  smhp_game_50.s  1677
+12110               * File  smhp_game_50.s  1678
 12111 039FA 6900            }SKELSE{
-12112               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1679
+12112               * File  smhp_game_50.s  1679
 12113 039FE A6C             A=A-    1       B
 12114 03A01 148             DAT0=A  B
-12115               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1680
-12116               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1681
+12115               * File  smhp_game_50.s  1680
+12116               * File  smhp_game_50.s  1681
 12117                       }
-12118               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1682
+12118               * File  smhp_game_50.s  1682
 12119
-12120               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1683
-12121               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1684
+12120               * File  smhp_game_50.s  1683
+12121               * File  smhp_game_50.s  1684
 12122                       }
 12123 03A04 81AF12          A=R2.f  A
 12124 03A0A 3447300         LC(5)   #00374
-12125               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1685
+12125               * File  smhp_game_50.s  1685
 12126 03A11 CA              A=A+C   A
 12127 03A13 104             R4=A
-12128               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1686
+12128               * File  smhp_game_50.s  1686
 12129
-12130               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1687
+12130               * File  smhp_game_50.s  1687
 12131 03A16 3130            LCHEX   03
 12132 03A1A AE5             B=C     B
-12133               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1688
+12133               * File  smhp_game_50.s  1688
 12134
-12135               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1689
+12135               * File  smhp_game_50.s  1689
 12136 03A1D D0              A=0     A
 12137 03A1F D2              C=0     A
-12138               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1690
+12138               * File  smhp_game_50.s  1690
 12139 03A21 1B65108         D0=(5)  (=SX)
 12140 03A28 14A             A=DAT0  B
-12141               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1691
+12141               * File  smhp_game_50.s  1691
 12142 03A2B 3106            LCHEX   60
-12143               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1692
+12143               * File  smhp_game_50.s  1692
 12144 03A2F 9E6             ?A>C    B
 12145 03A32 21              SKIPYES{
-12146               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1693
+12146               * File  smhp_game_50.s  1693
 12147 03A34 1BB5108         D0=(5)  (=SY)
 12148 03A3B 14E             C=DAT0  B
-12149               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1694
+12149               * File  smhp_game_50.s  1694
 12150 03A3E 8E4D1E          GOSUBL  =DISP.A.C.R4.B
-12151               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1695
-12152               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1696
+12151               * File  smhp_game_50.s  1695
+12152               * File  smhp_game_50.s  1696
 12153
-12154               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1697
-12155               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1698
+12154               * File  smhp_game_50.s  1697
+12155               * File  smhp_game_50.s  1698
 12156                       }
 12157 03A44 84D             ST=0    13
-12158               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1699
+12158               * File  smhp_game_50.s  1699
 12159 03A47 1B65108         D0=(5)  (=SX)
 12160 03A4E 14A             A=DAT0  B
-12161               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1700
+12161               * File  smhp_game_50.s  1700
 12162 03A51 1BB0108         D0=(5)  (=MX)
 12163 03A58 14E             C=DAT0  B
-12164               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1701
+12164               * File  smhp_game_50.s  1701
 12165                       {
-12166               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1702
+12166               * File  smhp_game_50.s  1702
 12167 03A5B 818625          C=C+    6       B
 12168 03A61 9E6             ?C<A    B
 12169 03A64 25              EXIT
-12170               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1703
+12170               * File  smhp_game_50.s  1703
 12171 03A66 81860A          A=A+    11      B
 12172 03A6C 9E2             ?C>A    B
 12173 03A6F 74              EXIT
-12174               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1704
+12174               * File  smhp_game_50.s  1704
 12175 03A71 1BB5108         D0=(5)  (=SY)
 12176 03A78 14A             A=DAT0  B
-12177               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1705
+12177               * File  smhp_game_50.s  1705
 12178 03A7B 1B01108         D0=(5)  (=MY)
 12179 03A82 14E             C=DAT0  B
-12180               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1706
+12180               * File  smhp_game_50.s  1706
 12181 03A85 818629          C=C+    10      B
 12182 03A8B 9E6             ?C<A    B
 12183 03A8E 82              EXIT
-12184               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1707
+12184               * File  smhp_game_50.s  1707
 12185 03A90 8186A3          C=C-    4       B
 12186 03A96 9E2             ?C>A    B
 12187 03A99 D1              EXIT
-12188               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1708
+12188               * File  smhp_game_50.s  1708
 12189                       {
-12190               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1709
+12190               * File  smhp_game_50.s  1709
 12191 03A9B 871             ?ST=1   1
 12192 03A9E 51              EXIT
-12193               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1710
+12193               * File  smhp_game_50.s  1710
 12194 03AA0 860             ?ST=0   0
 12195 03AA3 01              EXIT
-12196               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1711
+12196               * File  smhp_game_50.s  1711
 12197 03AA5 873             ?ST=1   3
 12198 03AA8 B0              EXIT
-12199               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1712
+12199               * File  smhp_game_50.s  1712
 12200 03AAA 840             ST=0    0
-12201               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1713
+12201               * File  smhp_game_50.s  1713
 12202 03AAD 8EF17E          GOSUBL  =FIXSOL
-12203               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1714
-12204               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1715
+12203               * File  smhp_game_50.s  1714
+12204               * File  smhp_game_50.s  1715
 12205                       }
 12206 03AB3 85D             ST=1    13
-12207               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1716
-12208               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1717
+12207               * File  smhp_game_50.s  1716
+12208               * File  smhp_game_50.s  1717
 12209
-12210               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1718
-12211               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1719
+12210               * File  smhp_game_50.s  1718
+12211               * File  smhp_game_50.s  1719
 12212
-12213               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1720
+12213               * File  smhp_game_50.s  1720
 12214                       }
 12215 03AB6 868             ?ST=0   8
 12216 03AB9 00              RTNYES
-12217               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1721
+12217               * File  smhp_game_50.s  1721
 12218
-12219               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1722
-12220               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1723
+12219               * File  smhp_game_50.s  1722
+12220               * File  smhp_game_50.s  1723
 12221 03ABB 866             ?ST=0   6
 12222 03ABE 57              SKIPYES{
-12223               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1724
-12224               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1725
+12223               * File  smhp_game_50.s  1724
+12224               * File  smhp_game_50.s  1725
 12225 03AC0 8E8B9E          GOSUBL  =MURD_T
-12226               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1726
-12227               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1727
+12226               * File  smhp_game_50.s  1726
+12227               * File  smhp_game_50.s  1727
 12228 03AC6 590             SKIPNC{
-12229               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1728
+12229               * File  smhp_game_50.s  1728
 12230 03AC9 846             ST=0    6
 12231 03ACC 6D90            EXIT2
-12232               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1729
-12233               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1730
+12232               * File  smhp_game_50.s  1729
+12233               * File  smhp_game_50.s  1730
 12234                       }
 12235 03AD0 1B65108         D0=(5)  (=SX)
 12236 03AD7 14A             A=DAT0  B
-12237               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1731
+12237               * File  smhp_game_50.s  1731
 12238 03ADA 31FF            LC(2)   #FF
-12239               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1732
-12240               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1733
+12239               * File  smhp_game_50.s  1732
+12240               * File  smhp_game_50.s  1733
 12241 03ADE 966             ?A#C    B
 12242 03AE1 90              SKIPYES{
-12243               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1734
+12243               * File  smhp_game_50.s  1734
 12244 03AE3 846             ST=0    6
 12245 03AE6 6380            EXIT2
-12246               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1735
-12247               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1736
+12246               * File  smhp_game_50.s  1735
+12247               * File  smhp_game_50.s  1736
 12248                       }
 12249 03AEA B64             A=A+    1       B
 12250 03AED 148             DAT0=A  B
-12251               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1737
+12251               * File  smhp_game_50.s  1737
 12252
-12253               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1738
+12253               * File  smhp_game_50.s  1738
 12254 03AF0 87D             ?ST#0   13
 12255 03AF3 60              SKIPYES{
 12256 03AF5 6470            EXIT2
-12257               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1739
+12257               * File  smhp_game_50.s  1739
 12258
-12259               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1740
+12259               * File  smhp_game_50.s  1740
 12260                       }
 12261 03AF9 09              C=ST
 12262 03AFB 06              RSTK=C
-12263               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1741
+12263               * File  smhp_game_50.s  1741
 12264 03AFD 847             ST=0    7
-12265               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1742
+12265               * File  smhp_game_50.s  1742
 12266 03B00 8E2800          GOSUBL  =YD
-12267               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1743
-12268               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1744
+12267               * File  smhp_game_50.s  1743
+12268               * File  smhp_game_50.s  1744
 12269 03B06 867             ?ST=0   7
 12270 03B09 81              SKIPYES{
-12271               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1745
+12271               * File  smhp_game_50.s  1745
 12272 03B0B 8EA910          GOSUBL  =LIFT.LEFT
-12273               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1746
+12273               * File  smhp_game_50.s  1746
 12274 03B11 1B65108         D0=(5)  (=SX)
 12275 03B18 14A             A=DAT0  B
-12276               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1747
+12276               * File  smhp_game_50.s  1747
 12277 03B1B A6C             A=A-    1       B
 12278 03B1E 148             DAT0=A  B
-12279               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1748
-12280               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1749
+12279               * File  smhp_game_50.s  1748
+12280               * File  smhp_game_50.s  1749
 12281                       }
 12282 03B21 07              C=RSTK
-12283               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1750
+12283               * File  smhp_game_50.s  1750
 12284 03B23 864             ?ST#1   4
 12285 03B26 70              SKIPYES{
 12286 03B28 80894           CBIT=1  4
-12287               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1751
+12287               * File  smhp_game_50.s  1751
 12288                       }
 12289 03B2D 0A              ST=C
-12290               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1752
-12291               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1753
-12292               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1754
+12290               * File  smhp_game_50.s  1752
+12291               * File  smhp_game_50.s  1753
+12292               * File  smhp_game_50.s  1754
 12293 03B2F 6A30            }SKELSE{
-12294               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1755
-12295               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1756
+12294               * File  smhp_game_50.s  1755
+12295               * File  smhp_game_50.s  1756
 12296 03B33 8EBE9E          GOSUBL  =MURG_T
-12297               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1757
-12298               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1758
+12297               * File  smhp_game_50.s  1757
+12298               * File  smhp_game_50.s  1758
 12299 03B39 590             SKIPNC{
-12300               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1759
+12300               * File  smhp_game_50.s  1759
 12301 03B3C 856             ST=1    6
 12302 03B3F 6A20            EXIT2
-12303               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1760
-12304               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1761
+12303               * File  smhp_game_50.s  1760
+12304               * File  smhp_game_50.s  1761
 12305                       }
 12306 03B43 1B65108         D0=(5)  (=SX)
 12307 03B4A 14A             A=DAT0  B
-12308               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1762
-12309               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1763
+12308               * File  smhp_game_50.s  1762
+12309               * File  smhp_game_50.s  1763
 12310 03B4D 96C             ?A#0    B
 12311 03B50 90              SKIPYES{
-12312               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1764
+12312               * File  smhp_game_50.s  1764
 12313 03B52 856             ST=1    6
 12314 03B55 6410            EXIT2
-12315               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1765
-12316               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1766
+12315               * File  smhp_game_50.s  1765
+12316               * File  smhp_game_50.s  1766
 12317                       }
 12318 03B59 A6C             A=A-    1       B
-12319               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1767
+12319               * File  smhp_game_50.s  1767
 12320 03B5C 148             DAT0=A  B
-12321               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1768
+12321               * File  smhp_game_50.s  1768
 12322
-12323               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1769
+12323               * File  smhp_game_50.s  1769
 12324 03B5F 86D             ?ST=0   13
 12325 03B62 80              EXIT
-12326               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1770
+12326               * File  smhp_game_50.s  1770
 12327 03B64 8EAC00          GOSUBL  =YG
-12328               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1771
-12329               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1772
+12328               * File  smhp_game_50.s  1771
+12329               * File  smhp_game_50.s  1772
 12330                       }
 12331 03B6A 01              RTN
-12332               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1773
+12332               * File  smhp_game_50.s  1773
 12333
-12334               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1774
+12334               * File  smhp_game_50.s  1774
 12335 03B6C         =TESTD
-12336               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1775
-12337               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1776
+12336               * File  smhp_game_50.s  1775
+12337               * File  smhp_game_50.s  1776
 12338 03B6C 873             ?ST=1   3
 12339 03B6F 91              GOYES   =YD
-12340               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1777
+12340               * File  smhp_game_50.s  1777
 12341
-12342               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1778
+12342               * File  smhp_game_50.s  1778
 12343 03B71 32040           LCHEX   040
 12344 03B76 8FF0200         GOSBVL  =KEY
-12345               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1779
+12345               * File  smhp_game_50.s  1779
 12346 03B7D 808B0           ?CBIT=1 0
 12347 03B82 60              SKIPYES{
 12348 03B84 6690            GOTO    =ND
-12349               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1780
+12349               * File  smhp_game_50.s  1780
 12350                       }
 12351 03B88         =YD
-12352               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1781
+12352               * File  smhp_game_50.s  1781
 12353 03B88 873             ?ST=1   3
 12354 03B8B F0              GOYES   =AH
-12355               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1782
+12355               * File  smhp_game_50.s  1782
 12356 03B8D 8EBB6E          GOSUBL  =MURD
-12357               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1783
+12357               * File  smhp_game_50.s  1783
 12358 03B93 560             SKIPNC{
 12359 03B96 6480            GOTO    =ND
-12360               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1784
+12360               * File  smhp_game_50.s  1784
 12361                       }
 12362 03B9A         =AH
-12363               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1785
+12363               * File  smhp_game_50.s  1785
 12364 03B9A 1BB0108         D0=(5)  (=MX)
 12365 03BA1 14A             A=DAT0  B
-12366               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1786
+12366               * File  smhp_game_50.s  1786
 12367 03BA4 3104            LCHEX   40
-12368               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1787
+12368               * File  smhp_game_50.s  1787
 12369 03BA8 9E2             ?A<C    B
 12370 03BAB 11              SKIPYES{
-12371               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1788
-12372               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1789
+12371               * File  smhp_game_50.s  1788
+12372               * File  smhp_game_50.s  1789
 12373 03BAD 874             ?ST=1   4
 12374 03BB0 C0              GOYES   =E
-12375               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1790
+12375               * File  smhp_game_50.s  1790
 12376 03BB2 8EB0ED          GOSUBL  =SCROLG
-12377               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1791
-12378               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1792
-12379               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1793
+12377               * File  smhp_game_50.s  1791
+12378               * File  smhp_game_50.s  1792
+12379               * File  smhp_game_50.s  1793
 12380 03BB8 6810            }SKELSE{
-12381               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1794
+12381               * File  smhp_game_50.s  1794
 12382 03BBC         =E
-12383               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1795
+12383               * File  smhp_game_50.s  1795
 12384 03BBC 31F5            LCHEX   5F
-12385               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1796
+12385               * File  smhp_game_50.s  1796
 12386 03BC0 9E2             ?A<C    B
 12387 03BC3 80              SKIPYES{
-12388               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1797
+12388               * File  smhp_game_50.s  1797
 12389 03BC5 8C401E          GOLONG  =CLEARED
-12390               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1798
-12391               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1799
+12390               * File  smhp_game_50.s  1798
+12391               * File  smhp_game_50.s  1799
 12392                       }
 12393 03BCB B64             A=A+    1       B
 12394 03BCE 148             DAT0=A  B
-12395               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1800
-12396               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1801
-12397               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1802
+12395               * File  smhp_game_50.s  1800
+12396               * File  smhp_game_50.s  1801
+12397               * File  smhp_game_50.s  1802
 12398                       }
 12399 03BD1 1B52108         D0=(5)  (=TICK.COUNTER)
 12400 03BD8 14A             A=DAT0  B
-12401               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1803
-12402               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1804
+12401               * File  smhp_game_50.s  1803
+12402               * File  smhp_game_50.s  1804
 12403 03BDB 968             ?A=0    B
 12404 03BDE C0              SKIPYES{
-12405               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1805
+12405               * File  smhp_game_50.s  1805
 12406 03BE0 A6C             A=A-    1       B
 12407 03BE3 148             DAT0=A  B
-12408               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1806
-12409               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1807
-12410               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1808
+12408               * File  smhp_game_50.s  1806
+12409               * File  smhp_game_50.s  1807
+12410               * File  smhp_game_50.s  1808
 12411 03BE6 6430            }SKELSE{
-12412               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1809
+12412               * File  smhp_game_50.s  1809
 12413 03BEA 1F32108         D1=(5)  (=TICK)
 12414 03BF1 14B             A=DAT1  B
-12415               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1810
+12415               * File  smhp_game_50.s  1810
 12416 03BF4 148             DAT0=A  B
-12417               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1811
-12418               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1812
+12417               * File  smhp_game_50.s  1811
+12418               * File  smhp_game_50.s  1812
 12419 03BF7 1B72108         D0=(5)  (=M.ANIM)
 12420 03BFE 14A             A=DAT0  B
-12421               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1813
+12421               * File  smhp_game_50.s  1813
 12422 03C01 3140            LCHEX   04
-12423               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1814
+12423               * File  smhp_game_50.s  1814
 12424 03C05 9EE             ?A>=C   B
 12425 03C08 90              SKIPYES{
 12426 03C0A B64             A=A+    1       B
-12427               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1815
-12428               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1816
+12427               * File  smhp_game_50.s  1815
+12428               * File  smhp_game_50.s  1816
 12429 03C0D 6A00            }SKELSE{
 12430 03C11 8082110         LAHEX   01
-12431               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1817
+12431               * File  smhp_game_50.s  1817
 12432                       }
 12433 03C18 148             DAT0=A  B
-12434               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1818
-12435               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1819
+12434               * File  smhp_game_50.s  1818
+12435               * File  smhp_game_50.s  1819
 12436                       }
 12437 03C1B         =ND
-12438               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1820
+12438               * File  smhp_game_50.s  1820
 12439 03C1B 01              RTN
-12440               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1821
+12440               * File  smhp_game_50.s  1821
 12441
-12442               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1822
+12442               * File  smhp_game_50.s  1822
 12443 03C1D         =TESTG
-12444               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1823
+12444               * File  smhp_game_50.s  1823
 12445 03C1D 32040           LCHEX   040
 12446 03C22 8FF0200         GOSBVL  =KEY
-12447               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1824
+12447               * File  smhp_game_50.s  1824
 12448 03C29 808B2           ?CBIT=1 2
 12449 03C2E 60              SKIPYES{
 12450 03C30 6870            GOTO    =NG
-12451               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1825
+12451               * File  smhp_game_50.s  1825
 12452                       }
 12453 03C34         =YG
-12454               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1826
+12454               * File  smhp_game_50.s  1826
 12455 03C34 873             ?ST=1   3
 12456 03C37 F0              GOYES   =AI
-12457               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1827
+12457               * File  smhp_game_50.s  1827
 12458 03C39 8E4C6E          GOSUBL  =MURG
-12459               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1828
+12459               * File  smhp_game_50.s  1828
 12460 03C3F 560             SKIPNC{
 12461 03C42 6660            GOTO    =NG
-12462               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1829
+12462               * File  smhp_game_50.s  1829
 12463                       }
 12464 03C46         =AI
-12465               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1830
+12465               * File  smhp_game_50.s  1830
 12466 03C46 1BB0108         D0=(5)  (=MX)
 12467 03C4D 14A             A=DAT0  B
-12468               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1831
+12468               * File  smhp_game_50.s  1831
 12469 03C50 96C             ?A#0    B
 12470 03C53 60              SKIPYES{
 12471 03C55 6350            GOTO    =NG
-12472               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1832
+12472               * File  smhp_game_50.s  1832
 12473                       }
 12474 03C59 A6C             A=A-    1       B
 12475 03C5C 148             DAT0=A  B
-12476               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1833
-12477               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1834
+12476               * File  smhp_game_50.s  1833
+12477               * File  smhp_game_50.s  1834
 12478 03C5F 1B52108         D0=(5)  (=TICK.COUNTER)
 12479 03C66 14A             A=DAT0  B
-12480               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1835
-12481               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1836
+12480               * File  smhp_game_50.s  1835
+12481               * File  smhp_game_50.s  1836
 12482 03C69 968             ?A=0    B
 12483 03C6C C0              SKIPYES{
-12484               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1837
+12484               * File  smhp_game_50.s  1837
 12485 03C6E A6C             A=A-    1       B
 12486 03C71 148             DAT0=A  B
-12487               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1838
-12488               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1839
-12489               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1840
+12487               * File  smhp_game_50.s  1838
+12488               * File  smhp_game_50.s  1839
+12489               * File  smhp_game_50.s  1840
 12490 03C74 6430            }SKELSE{
-12491               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1841
+12491               * File  smhp_game_50.s  1841
 12492 03C78 1F32108         D1=(5)  (=TICK)
 12493 03C7F 14B             A=DAT1  B
-12494               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1842
+12494               * File  smhp_game_50.s  1842
 12495 03C82 148             DAT0=A  B
-12496               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1843
-12497               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1844
+12496               * File  smhp_game_50.s  1843
+12497               * File  smhp_game_50.s  1844
 12498 03C85 1B72108         D0=(5)  (=M.ANIM)
 12499 03C8C 14A             A=DAT0  B
-12500               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1845
+12500               * File  smhp_game_50.s  1845
 12501 03C8F 3110            LCHEX   01
-12502               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1846
+12502               * File  smhp_game_50.s  1846
 12503 03C93 9EA             ?A<=C   B
 12504 03C96 90              SKIPYES{
 12505 03C98 A6C             A=A-    1       B
-12506               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1847
-12507               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1848
+12506               * File  smhp_game_50.s  1847
+12507               * File  smhp_game_50.s  1848
 12508 03C9B 6A00            }SKELSE{
 12509 03C9F 8082140         LAHEX   04
-12510               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1849
+12510               * File  smhp_game_50.s  1849
 12511                       }
 12512 03CA6 148             DAT0=A  B
-12513               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1850
-12514               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1851
+12513               * File  smhp_game_50.s  1850
+12514               * File  smhp_game_50.s  1851
 12515                       }
 12516 03CA9         =NG
-12517               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1852
+12517               * File  smhp_game_50.s  1852
 12518 03CA9 01              RTN
-12519               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1853
+12519               * File  smhp_game_50.s  1853
 12520
-12521               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1854
+12521               * File  smhp_game_50.s  1854
 12522 03CAB         =LIFT.LEFT
-12523               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1855
+12523               * File  smhp_game_50.s  1855
 12524
-12525               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1856
+12525               * File  smhp_game_50.s  1856
 12526 03CAB 1BB2108         D0=(5)  (=@LIFT)
-12527               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1857
+12527               * File  smhp_game_50.s  1857
 12528 03CB2 142             A=DAT0  A
 12529 03CB5 130             D0=A
-12530               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1858
+12530               * File  smhp_game_50.s  1858
 12531
-12532               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1859
+12532               * File  smhp_game_50.s  1859
 12533 03CB8 A82             C=0     P
-12534               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1860
+12534               * File  smhp_game_50.s  1860
 12535                       {
-12536               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1861
+12536               * File  smhp_game_50.s  1861
 12537 03CBB 808204          LA(1)   (=LMAX)
-12538               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1862
+12538               * File  smhp_game_50.s  1862
 12539 03CC1 902             ?C=A    P
 12540 03CC4 73              EXIT
-12541               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1863
+12541               * File  smhp_game_50.s  1863
 12542 03CC6 1520            A=DAT0  P
-12543               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1864
+12543               * File  smhp_game_50.s  1864
 12544 03CCA 908             ?A=0    P
 12545 03CCD 42              SKIPYES{
-12546               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1865
+12546               * File  smhp_game_50.s  1865
 12547 03CCF 160             D0+     1
 12548 03CD2 14A             A=DAT0  B
-12549               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1866
-12550               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1867
+12549               * File  smhp_game_50.s  1866
+12550               * File  smhp_game_50.s  1867
 12551 03CD5 96C             ?A#0    B
 12552 03CD8 01              SKIPYES{
-12553               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1868
+12553               * File  smhp_game_50.s  1868
 12554 03CDA A80             A=0     P
 12555 03CDD 180             D0-     1
 12556 03CE0 1500            DAT0=A  P
-12557               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1869
+12557               * File  smhp_game_50.s  1869
 12558 03CE4 6C00            EXIT2
-12559               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1870
-12560               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1871
+12559               * File  smhp_game_50.s  1870
+12560               * File  smhp_game_50.s  1871
 12561                       }
 12562 03CE8 A6C             A=A-    1       B
 12563 03CEB 148             DAT0=A  B
-12564               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1872
+12564               * File  smhp_game_50.s  1872
 12565 03CEE 180             D0-     1
-12566               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1873
-12567               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1874
+12566               * File  smhp_game_50.s  1873
+12567               * File  smhp_game_50.s  1874
 12568                       }
 12569 03CF1 165             D0+     6
 12570 03CF4 B06             C=C+    1       P
 12571 03CF7 63CF            UP
-12572               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1875
-12573               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1876
+12572               * File  smhp_game_50.s  1875
+12573               * File  smhp_game_50.s  1876
 12574
-12575               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1877
+12575               * File  smhp_game_50.s  1877
 12576                       }
 12577 03CFB 1BC4108         D0=(5)  (=STABLE)
-12578               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1878
+12578               * File  smhp_game_50.s  1878
 12579 03D02 142             A=DAT0  A
 12580 03D05 130             D0=A
-12581               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1879
+12581               * File  smhp_game_50.s  1879
 12582
-12583               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1880
+12583               * File  smhp_game_50.s  1880
 12584 03D08 AE2             C=0     B
-12585               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1881
+12585               * File  smhp_game_50.s  1881
 12586                       {
-12587               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1882
+12587               * File  smhp_game_50.s  1882
 12588 03D0B 80821F0         LA(2)   (=SMAX)
-12589               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1883
+12589               * File  smhp_game_50.s  1883
 12590 03D12 962             ?C=A    B
 12591 03D15 94              EXIT
-12592               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1884
+12592               * File  smhp_game_50.s  1884
 12593 03D17 1520            A=DAT0  P
-12594               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1885
+12594               * File  smhp_game_50.s  1885
 12595 03D1B 908             ?A=0    P
 12596 03D1E 63              SKIPYES{
-12597               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1886
+12597               * File  smhp_game_50.s  1886
 12598 03D20 160             D0+     1
-12599               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1887
+12599               * File  smhp_game_50.s  1887
 12600 03D23 161             D0+     2
 12601 03D26 162             D0+     3
-12602               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1888
+12602               * File  smhp_game_50.s  1888
 12603 03D29 14A             A=DAT0  B
-12604               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1889
-12605               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1890
+12604               * File  smhp_game_50.s  1889
+12605               * File  smhp_game_50.s  1890
 12606 03D2C 96C             ?A#0    B
 12607 03D2F 61              SKIPYES{
-12608               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1891
+12608               * File  smhp_game_50.s  1891
 12609 03D31 A80             A=0     P
 12610 03D34 180             D0-     1
-12611               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1892
+12611               * File  smhp_game_50.s  1892
 12612 03D37 181             D0-     2
 12613 03D3A 182             D0-     3
-12614               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1893
+12614               * File  smhp_game_50.s  1893
 12615 03D3D 1500            DAT0=A  P
-12616               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1894
+12616               * File  smhp_game_50.s  1894
 12617 03D41 6210            EXIT2
-12618               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1895
-12619               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1896
+12618               * File  smhp_game_50.s  1895
+12619               * File  smhp_game_50.s  1896
 12620                       }
 12621 03D45 A6C             A=A-    1       B
 12622 03D48 148             DAT0=A  B
-12623               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1897
+12623               * File  smhp_game_50.s  1897
 12624 03D4B 180             D0-     1
-12625               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1898
+12625               * File  smhp_game_50.s  1898
 12626 03D4E 181             D0-     2
 12627 03D51 182             D0-     3
-12628               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1899
-12629               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1900
+12628               * File  smhp_game_50.s  1899
+12629               * File  smhp_game_50.s  1900
 12630                       }
 12631 03D54 16A             D0+     11
 12632 03D57 B66             C=C+    1       B
 12633 03D5A 60BF            UP
-12634               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1901
-12635               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1902
+12634               * File  smhp_game_50.s  1901
+12635               * File  smhp_game_50.s  1902
 12636                       }
 12637 03D5E 01              RTN
-12638               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1903
+12638               * File  smhp_game_50.s  1903
 12639
-12640               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1904
+12640               * File  smhp_game_50.s  1904
 12641 03D60         =ADD.CHAMP
-12642               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1905
-12643               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1906
+12642               * File  smhp_game_50.s  1905
+12643               * File  smhp_game_50.s  1906
 12644
-12645               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1907
+12645               * File  smhp_game_50.s  1907
 12646 03D60 81AF19          C=R1.f  A
 12647 03D66 06              RSTK=C
-12648               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1908
+12648               * File  smhp_game_50.s  1908
 12649 03D68 1B91108         D0=(5)  (=LEVEL.SURFACE)
 12650 03D6F 142             A=DAT0  A
 12651 03D72 101             R1=A
-12652               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1909
+12652               * File  smhp_game_50.s  1909
 12653
-12654               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1910
+12654               * File  smhp_game_50.s  1910
 12655 03D75 81AF12          A=R2.f  A
-12656               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1911
+12656               * File  smhp_game_50.s  1911
 12657 03D7B 34A8100         LC(5)   #18A
 12658 03D82 CA              A=A+C   A
 12659 03D84 104             R4=A
-12660               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1912
+12660               * File  smhp_game_50.s  1912
 12661
-12662               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1913
+12662               * File  smhp_game_50.s  1913
 12663 03D87 D0              A=0     A
 12664 03D89 D2              C=0     A
-12665               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1914
+12665               * File  smhp_game_50.s  1914
 12666 03D8B 1BB0108         D0=(5)  (=MX)
 12667 03D92 14A             A=DAT0  B
-12668               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1915
+12668               * File  smhp_game_50.s  1915
 12669
-12670               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1916
+12670               * File  smhp_game_50.s  1916
 12671 03D95 819F0           ASRB.f  A
 12672 03D9A 819F0           ASRB.f  A
 12673 03D9F 819F0           ASRB.f  A
-12674               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1917
+12674               * File  smhp_game_50.s  1917
 12675 03DA4 F0              ASL     A
 12676 03DA6 819F0           ASRB.f  A
 12677 03DAB D8              B=A     A
-12678               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1918
+12678               * File  smhp_game_50.s  1918
 12679
-12680               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1919
+12680               * File  smhp_game_50.s  1919
 12681 03DAD D0              A=0     A
 12682 03DAF D2              C=0     A
-12683               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1920
+12683               * File  smhp_game_50.s  1920
 12684 03DB1 1B81108         D0=(5)  (=SCROL.COUNTER)
 12685 03DB8 1560            C=DAT0  P
-12686               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1921
+12686               * File  smhp_game_50.s  1921
 12687 03DBC 1BB0108         D0=(5)  (=MX)
 12688 03DC3 14A             A=DAT0  B
-12689               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1922
+12689               * File  smhp_game_50.s  1922
 12690 03DC6 C2              C=C+A   A
-12691               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1923
+12691               * File  smhp_game_50.s  1923
 12692
-12693               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1924
+12693               * File  smhp_game_50.s  1924
 12694 03DC8 8082480         LA(5)   8
             000
 12695 03DD2 818F23          C=C+    4       A
-12696               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1925
-12697               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1926
+12696               * File  smhp_game_50.s  1925
+12697               * File  smhp_game_50.s  1926
 12698                       {
 12699 03DD8 8B6             ?C<A    A
 12700 03DDB 80              EXIT
 12701 03DDD E2              C=C-A   A
 12702 03DDF 68FF            UP
-12703               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1927
+12703               * File  smhp_game_50.s  1927
 12704
-12705               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1928
+12705               * File  smhp_game_50.s  1928
 12706                       }
 12707 03DE3 D0              A=0     A
-12708               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1929
+12708               * File  smhp_game_50.s  1929
 12709 03DE5 1BB0108         D0=(5)  (=MX)
 12710 03DEC 14A             A=DAT0  B
-12711               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1930
+12711               * File  smhp_game_50.s  1930
 12712 03DEF 818FA3          C=C-    4       A
 12713 03DF5 EA              A=A-C   A
 12714 03DF7 103             R3=A
-12715               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1931
+12715               * File  smhp_game_50.s  1931
 12716
-12717               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1932
+12717               * File  smhp_game_50.s  1932
 12718 03DFA 3170            LC(2)   7
 12719 03DFE AE5             B=C     B
-12720               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1933
+12720               * File  smhp_game_50.s  1933
 12721
-12722               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1934
+12722               * File  smhp_game_50.s  1934
 12723 03E01 D2              C=0     A
-12724               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1935
+12724               * File  smhp_game_50.s  1935
 12725 03E03 1B01108         D0=(5)  (=MY)
 12726 03E0A 14E             C=DAT0  B
-12727               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1936
+12727               * File  smhp_game_50.s  1936
 12728 03E0D 819F2           CSRB.f  A
 12729 03E12 819F2           CSRB.f  A
 12730 03E17 819F2           CSRB.f  A
-12731               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1937
+12731               * File  smhp_game_50.s  1937
 12732 03E1C F2              CSL     A
 12733 03E1E 819F2           CSRB.f  A
-12734               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1938
+12734               * File  smhp_game_50.s  1938
 12735 03E23 8EFEDD          GOSUBL  =DISP.A.C.R4.B
-12736               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1939
+12736               * File  smhp_game_50.s  1939
 12737 03E29 07              C=RSTK
 12738 03E2B 109             R1=C
-12739               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1940
+12739               * File  smhp_game_50.s  1940
 12740
-12741               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1941
+12741               * File  smhp_game_50.s  1941
 12742 03E2E 34E1400         LC(5)   #41E
 12743 03E35 10C             R4=C
-12744               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1942
+12744               * File  smhp_game_50.s  1942
 12745
-12746               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1943
+12746               * File  smhp_game_50.s  1943
 12747 03E38 1B40100         D0=(5)  (=CRC)
 12748 03E3F 142             A=DAT0  A
-12749               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1944
+12749               * File  smhp_game_50.s  1944
 12750 03E42 130             D0=A
 12751 03E45 AE0             A=0     B
-12752               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1945
+12752               * File  smhp_game_50.s  1945
 12753 03E48 1520            A=DAT0  P
 12754 03E4C 81900           ASRB.f  P
 12755 03E51 81900           ASRB.f  P
-12756               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1946
+12756               * File  smhp_game_50.s  1946
 12757 03E56 908             ?A=0    P
 12758 03E59 00              RTNYES
-12759               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1947
+12759               * File  smhp_game_50.s  1947
 12760 03E5B 818001          A=A+    2       P
 12761 03E61 AE8             B=A     B
-12762               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1948
-12763               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1949
+12762               * File  smhp_game_50.s  1948
+12763               * File  smhp_game_50.s  1949
 12764
-12765               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1950
+12765               * File  smhp_game_50.s  1950
 12766 03E64 81AF13          A=R3.f  A
-12767               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1951
+12767               * File  smhp_game_50.s  1951
 12768
-12769               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1952
+12769               * File  smhp_game_50.s  1952
 12770 03E6A D2              C=0     A
-12771               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1953
+12771               * File  smhp_game_50.s  1953
 12772 03E6C 1B01108         D0=(5)  (=MY)
 12773 03E73 14E             C=DAT0  B
-12774               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1954
+12774               * File  smhp_game_50.s  1954
 12775 03E76 818FA7          C=C-    8       A
 12776 03E7C 400             RTNC
-12777               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1955
+12777               * File  smhp_game_50.s  1955
 12778 03E7F 819F2           CSRB.f  A
 12779 03E84 819F2           CSRB.f  A
 12780 03E89 819F2           CSRB.f  A
-12781               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1956
+12781               * File  smhp_game_50.s  1956
 12782 03E8E F2              CSL     A
 12783 03E90 819F2           CSRB.f  A
-12784               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1957
+12784               * File  smhp_game_50.s  1957
 12785 03E95 8C5230          GOLONG  =ADDOBJ.A.C.B.R4
-12786               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1958
+12786               * File  smhp_game_50.s  1958
 12787 03E9B 01              RTN
-12788               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1959
+12788               * File  smhp_game_50.s  1959
 12789
-12790               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1960
+12790               * File  smhp_game_50.s  1960
 12791 03E9D         =CLEAR.STABLE
-12792               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1961
+12792               * File  smhp_game_50.s  1961
 12793 03E9D 1BC4108         D0=(5)  (=STABLE)
 12794 03EA4 142             A=DAT0  A
 12795 03EA7 130             D0=A
-12796               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1962
+12796               * File  smhp_game_50.s  1962
 12797 03EAA 31F0            LC(2)   15
 12798 03EAE AF0             A=0     W
-12799               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1963
+12799               * File  smhp_game_50.s  1963
 12800                       {
-12801               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1964
+12801               * File  smhp_game_50.s  1964
 12802 03EB1 158A            DAT0=A  11
 12803 03EB5 16A             D0+     11
-12804               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1965
+12804               * File  smhp_game_50.s  1965
 12805 03EB8 A6E             C=C-    1       B
 12806 03EBB 55F             UPNC
-12807               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1966
-12808               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1967
+12807               * File  smhp_game_50.s  1966
+12808               * File  smhp_game_50.s  1967
 12809                       }
 12810 03EBE 01              RTN
-12811               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1968
+12811               * File  smhp_game_50.s  1968
 12812
-12813               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1969
+12813               * File  smhp_game_50.s  1969
 12814 03EC0         =OBJ.TORTLE
-12815               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1970
-12816               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1971
+12815               * File  smhp_game_50.s  1970
+12816               * File  smhp_game_50.s  1971
 12817 03EC0 81AF12          A=R2.f  A
 12818 03EC6 81AF1C          C=R4.f  A
 12819 03ECC CA              A=A+C   A
-12820               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1972
+12820               * File  smhp_game_50.s  1972
 12821
-12822               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1973
-12823               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1974
+12822               * File  smhp_game_50.s  1973
+12823               * File  smhp_game_50.s  1974
 12824 03ECE 869             ?ST#1   9
 12825 03ED1 C0              SKIPYES{
 12826 03ED3 818F07          A=A+    8       A
-12827               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1975
-12828               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1976
+12827               * File  smhp_game_50.s  1975
+12828               * File  smhp_game_50.s  1976
 12829 03ED9 6E00            }SKELSE{
-12830               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1977
-12831               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1978
+12830               * File  smhp_game_50.s  1977
+12831               * File  smhp_game_50.s  1978
 12832 03EDD 866             ?ST=0   6
 12833 03EE0 80              SKIPYES{
 12834 03EE2 818F03          A=A+    4       A
-12835               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1979
+12835               * File  smhp_game_50.s  1979
 12836                       }
-12837               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1980
-12838               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1981
-12839               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1982
-12840               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1983
+12837               * File  smhp_game_50.s  1980
+12838               * File  smhp_game_50.s  1981
+12839               * File  smhp_game_50.s  1982
+12840               * File  smhp_game_50.s  1983
 12841                       }
 12842 03EE8 104             R4=A
-12843               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1984
+12843               * File  smhp_game_50.s  1984
 12844
-12845               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1985
+12845               * File  smhp_game_50.s  1985
 12846 03EEB 3170            LCHEX   07
 12847 03EEF AE5             B=C     B
-12848               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1986
+12848               * File  smhp_game_50.s  1986
 12849
-12850               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1987
+12850               * File  smhp_game_50.s  1987
 12851 03EF2 D0              A=0     A
 12852 03EF4 D2              C=0     A
-12853               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1988
+12853               * File  smhp_game_50.s  1988
 12854 03EF6 1B65108         D0=(5)  (=SX)
 12855 03EFD 14A             A=DAT0  B
-12856               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1989
+12856               * File  smhp_game_50.s  1989
 12857 03F00 3106            LCHEX   60
-12858               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1990
+12858               * File  smhp_game_50.s  1990
 12859 03F04 9E6             ?A>C    B
 12860 03F07 21              SKIPYES{
-12861               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1991
+12861               * File  smhp_game_50.s  1991
 12862 03F09 1BB5108         D0=(5)  (=SY)
 12863 03F10 14E             C=DAT0  B
-12864               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1992
+12864               * File  smhp_game_50.s  1992
 12865 03F13 8EFFCD          GOSUBL  =DISP.A.C.R4.B
-12866               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1993
-12867               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1994
+12866               * File  smhp_game_50.s  1993
+12867               * File  smhp_game_50.s  1994
 12868
-12869               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1995
-12870               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1996
+12869               * File  smhp_game_50.s  1995
+12870               * File  smhp_game_50.s  1996
 12871                       }
 12872 03F19 1B65108         D0=(5)  (=SX)
 12873 03F20 14A             A=DAT0  B
-12874               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1997
+12874               * File  smhp_game_50.s  1997
 12875 03F23 1BB0108         D0=(5)  (=MX)
 12876 03F2A 14E             C=DAT0  B
-12877               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1998
+12877               * File  smhp_game_50.s  1998
 12878                       {
-12879               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     1999
+12879               * File  smhp_game_50.s  1999
 12880 03F2D 818623          C=C+    4       B
 12881 03F33 9E6             ?C<A    B
 12882 03F36 27              EXIT
-12883               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2000
+12883               * File  smhp_game_50.s  2000
 12884 03F38 818607          A=A+    8       B
 12885 03F3E 9E2             ?C>A    B
 12886 03F41 76              EXIT
-12887               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2001
+12887               * File  smhp_game_50.s  2001
 12888
-12889               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2002
+12889               * File  smhp_game_50.s  2002
 12890 03F43 1BB5108         D0=(5)  (=SY)
 12891 03F4A 14A             A=DAT0  B
-12892               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2003
+12892               * File  smhp_game_50.s  2003
 12893 03F4D 1B70108         D0=(5)  (=MCLIPH)
 12894 03F54 14E             C=DAT0  B
-12895               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2004
+12895               * File  smhp_game_50.s  2004
 12896 03F57 A6A             A=A+C   B
-12897               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2005
+12897               * File  smhp_game_50.s  2005
 12898 03F5A 1B01108         D0=(5)  (=MY)
 12899 03F61 14E             C=DAT0  B
-12900               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2006
+12900               * File  smhp_game_50.s  2006
 12901
-12902               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2007
+12902               * File  smhp_game_50.s  2007
 12903 03F64 818627          C=C+    8       B
 12904 03F6A 9E6             ?C<A    B
 12905 03F6D B3              EXIT
-12906               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2008
+12906               * File  smhp_game_50.s  2008
 12907 03F6F 8186A7          C=C-    8       B
 12908 03F75 9E2             ?C>A    B
 12909 03F78 03              EXIT
-12910               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2009
+12910               * File  smhp_game_50.s  2009
 12911
-12912               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2010
+12912               * File  smhp_game_50.s  2010
 12913 03F7A 818625          C=C+    6       B
-12914               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2011
-12915               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2012
+12914               * File  smhp_game_50.s  2011
+12915               * File  smhp_game_50.s  2012
 12916 03F80 9E6             ?C<A    B
 12917 03F83 F1              SKIPYES{
-12918               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2013
+12918               * File  smhp_game_50.s  2013
 12919 03F85 870             ?ST=1   0
 12920 03F88 A1              GOYES   =AA2
-12921               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2014
+12921               * File  smhp_game_50.s  2014
 12922 03F8A 869             ?ST#1   9
 12923 03F8D 70              SKIPYES{
 12924 03F8F 86A             ?ST=0   10
 12925 03F92 01              GOYES   =AA2
-12926               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2015
-12927               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2016
+12926               * File  smhp_game_50.s  2015
+12927               * File  smhp_game_50.s  2016
 12928                       }
 12929 03F94 8EB60E          GOSUBL  =LOST_LIFE
-12930               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2017
+12930               * File  smhp_game_50.s  2017
 12931 03F9A 6D00            EXIT2
-12932               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2018
-12933               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2019
-12934               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2020
+12932               * File  smhp_game_50.s  2018
+12933               * File  smhp_game_50.s  2019
+12934               * File  smhp_game_50.s  2020
 12935 03F9E 6900            }SKELSE{
-12936               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2021
-12937               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2022
+12936               * File  smhp_game_50.s  2021
+12937               * File  smhp_game_50.s  2022
 12938 03FA2         =AA2
-12939               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2023
+12939               * File  smhp_game_50.s  2023
 12940 03FA2 8ED00E          GOSUBL  =TORTLE_HIT
-12941               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2024
-12942               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2025
+12941               * File  smhp_game_50.s  2024
+12942               * File  smhp_game_50.s  2025
 12943                       }
-12944               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2026
+12944               * File  smhp_game_50.s  2026
 12945
-12946               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2027
+12946               * File  smhp_game_50.s  2027
 12947                       }
 12948                       {
-12949               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2028
+12949               * File  smhp_game_50.s  2028
 12950 03FA8 869             ?ST=0   9
 12951 03FAB 90              EXIT
-12952               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2029
+12952               * File  smhp_game_50.s  2029
 12953 03FAD 87A             ?ST=1   10
 12954 03FB0 40              EXIT
-12955               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2030
+12955               * File  smhp_game_50.s  2030
 12956 03FB2 01              RTN
-12957               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2031
-12958               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2032
+12957               * File  smhp_game_50.s  2031
+12958               * File  smhp_game_50.s  2032
 12959
-12960               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2033
+12960               * File  smhp_game_50.s  2033
 12961                       }
-12962               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2034
+12962               * File  smhp_game_50.s  2034
 12963 03FB4 87A             ?ST=1   10
 12964 03FB7 70              SKIPYES{
-12965               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2035
+12965               * File  smhp_game_50.s  2035
 12966 03FB9 868             ?ST=0   8
 12967 03FBC 00              RTNYES
-12968               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2036
-12969               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2037
+12968               * File  smhp_game_50.s  2036
+12969               * File  smhp_game_50.s  2037
 12970
-12971               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2038
+12971               * File  smhp_game_50.s  2038
 12972                       }
-12973               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2039
+12973               * File  smhp_game_50.s  2039
 12974 03FBE 866             ?ST=0   6
 12975 03FC1 62              SKIPYES{
-12976               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2040
-12977               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2041
+12976               * File  smhp_game_50.s  2040
+12977               * File  smhp_game_50.s  2041
 12978 03FC3 8E5B4E          GOSUBL  =MURD_T
-12979               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2042
-12980               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2043
+12979               * File  smhp_game_50.s  2042
+12980               * File  smhp_game_50.s  2043
 12981 03FC9 590             SKIPNC{
-12982               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2044
+12982               * File  smhp_game_50.s  2044
 12983 03FCC 846             ST=0    6
 12984 03FCF 6340            EXIT2
-12985               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2045
-12986               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2046
+12985               * File  smhp_game_50.s  2045
+12986               * File  smhp_game_50.s  2046
 12987                       }
 12988 03FD3 1B65108         D0=(5)  (=SX)
 12989 03FDA 14A             A=DAT0  B
-12990               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2047
-12991               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2048
-12992               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2049
-12993               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2050
-12994               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2051
+12990               * File  smhp_game_50.s  2047
+12991               * File  smhp_game_50.s  2048
+12992               * File  smhp_game_50.s  2049
+12993               * File  smhp_game_50.s  2050
+12994               * File  smhp_game_50.s  2051
 12995 03FDD B64             A=A+    1       B
-12996               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2052
+12996               * File  smhp_game_50.s  2052
 12997 03FE0 148             DAT0=A  B
-12998               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2053
-12999               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2054
-13000               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2055
+12998               * File  smhp_game_50.s  2053
+12999               * File  smhp_game_50.s  2054
+13000               * File  smhp_game_50.s  2055
 13001 03FE3 6F20            }SKELSE{
-13002               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2056
-13003               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2057
+13002               * File  smhp_game_50.s  2056
+13003               * File  smhp_game_50.s  2057
 13004 03FE7 8E735E          GOSUBL  =MURG_T
-13005               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2058
-13006               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2059
+13005               * File  smhp_game_50.s  2058
+13006               * File  smhp_game_50.s  2059
 13007 03FED 590             SKIPNC{
-13008               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2060
+13008               * File  smhp_game_50.s  2060
 13009 03FF0 856             ST=1    6
 13010 03FF3 6F10            EXIT2
-13011               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2061
-13012               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2062
+13011               * File  smhp_game_50.s  2061
+13012               * File  smhp_game_50.s  2062
 13013                       }
 13014 03FF7 1B65108         D0=(5)  (=SX)
 13015 03FFE 14A             A=DAT0  B
-13016               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2063
-13017               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2064
+13016               * File  smhp_game_50.s  2063
+13017               * File  smhp_game_50.s  2064
 13018 04001 96C             ?A#0    B
 13019 04004 90              SKIPYES{
-13020               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2065
+13020               * File  smhp_game_50.s  2065
 13021 04006 856             ST=1    6
 13022 04009 6900            EXIT2
-13023               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2066
-13024               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2067
+13023               * File  smhp_game_50.s  2066
+13024               * File  smhp_game_50.s  2067
 13025                       }
 13026 0400D A6C             A=A-    1       B
-13027               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2068
+13027               * File  smhp_game_50.s  2068
 13028 04010 148             DAT0=A  B
-13029               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2069
-13030               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2070
+13029               * File  smhp_game_50.s  2069
+13030               * File  smhp_game_50.s  2070
 13031
-13032               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2071
+13032               * File  smhp_game_50.s  2071
 13033                       }
-13034               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2072
+13034               * File  smhp_game_50.s  2072
 13035 04013 86A             ?ST=0   10
 13036 04016 F2              SKIPYES{
-13037               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2073
+13037               * File  smhp_game_50.s  2073
 13038 04018 8EAB3E          GOSUBL  =SOL_T
-13039               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2074
-13040               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2075
+13039               * File  smhp_game_50.s  2074
+13040               * File  smhp_game_50.s  2075
 13041 0401E 422             SKIPC{
-13042               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2076
+13042               * File  smhp_game_50.s  2076
 13043 04021 1BB5108         D0=(5)  (=SY)
 13044 04028 14A             A=DAT0  B
-13045               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2077
+13045               * File  smhp_game_50.s  2077
 13046 0402B 3173            LCHEX   37
 13047 0402F 9E2             ?A<C    B
 13048 04032 90              SKIPYES{
-13049               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2078
+13049               * File  smhp_game_50.s  2078
 13050 04034 845             ST=0    5
-13051               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2079
-13052               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2080
-13053               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2081
+13051               * File  smhp_game_50.s  2079
+13052               * File  smhp_game_50.s  2080
+13053               * File  smhp_game_50.s  2081
 13054 04037 6900            }SKELSE{
-13055               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2082
+13055               * File  smhp_game_50.s  2082
 13056 0403B B64             A=A+    1       B
 13057 0403E 148             DAT0=A  B
-13058               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2083
-13059               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2084
+13058               * File  smhp_game_50.s  2083
+13059               * File  smhp_game_50.s  2084
 13060                       }
-13061               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2085
+13061               * File  smhp_game_50.s  2085
 13062                       }
 13063 04041 6420            GOTO    =CHUTE2
-13064               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2086
-13065               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2087
-13066               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2088
+13064               * File  smhp_game_50.s  2086
+13065               * File  smhp_game_50.s  2087
+13066               * File  smhp_game_50.s  2088
 13067                       }
-13068               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2089
+13068               * File  smhp_game_50.s  2089
 13069 04045 866             ?ST=0   6
 13070 04048 21              SKIPYES{
-13071               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2090
+13071               * File  smhp_game_50.s  2090
 13072 0404A 8E883E          GOSUBL  =SOL_T
-13073               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2091
-13074               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2092
+13073               * File  smhp_game_50.s  2091
+13074               * File  smhp_game_50.s  2092
 13075 04050 450             SKIPC{
-13076               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2093
+13076               * File  smhp_game_50.s  2093
 13077 04053 846             ST=0    6
-13078               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2094
-13079               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2095
+13078               * File  smhp_game_50.s  2094
+13079               * File  smhp_game_50.s  2095
 13080                       }
-13081               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2096
-13082               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2097
+13081               * File  smhp_game_50.s  2096
+13082               * File  smhp_game_50.s  2097
 13083 04056 6F00            }SKELSE{
-13084               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2098
+13084               * File  smhp_game_50.s  2098
 13085 0405A 8E873E          GOSUBL  =SOL_T
-13086               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2099
-13087               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2100
+13086               * File  smhp_game_50.s  2099
+13087               * File  smhp_game_50.s  2100
 13088 04060 450             SKIPC{
-13089               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2101
+13089               * File  smhp_game_50.s  2101
 13090 04063 856             ST=1    6
-13091               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2102
-13092               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2103
+13091               * File  smhp_game_50.s  2102
+13092               * File  smhp_game_50.s  2103
 13093                       }
-13094               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2104
+13094               * File  smhp_game_50.s  2104
 13095                       }
 13096 04066         =CHUTE2
-13097               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2105
+13097               * File  smhp_game_50.s  2105
 13098
-13099               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2106
+13099               * File  smhp_game_50.s  2106
 13100 04066 8C8DDD          GOLONG  =FIN
-13101               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2107
+13101               * File  smhp_game_50.s  2107
 13102
-13103               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2108
+13103               * File  smhp_game_50.s  2108
 13104 0406C         =OBJ.KOOPA
-13105               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2109
-13106               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2110
+13105               * File  smhp_game_50.s  2109
+13106               * File  smhp_game_50.s  2110
 13107 0406C 81AF12          A=R2.f  A
 13108 04072 81AF1C          C=R4.f  A
-13109               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2111
+13109               * File  smhp_game_50.s  2111
 13110 04078 CA              A=A+C   A
 13111 0407A 104             R4=A
-13112               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2112
+13112               * File  smhp_game_50.s  2112
 13113
-13114               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2113
+13114               * File  smhp_game_50.s  2113
 13115 0407D 3170            LCHEX   07
 13116 04081 AE5             B=C     B
-13117               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2114
+13117               * File  smhp_game_50.s  2114
 13118
-13119               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2115
+13119               * File  smhp_game_50.s  2115
 13120 04084 D0              A=0     A
 13121 04086 D2              C=0     A
-13122               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2116
+13122               * File  smhp_game_50.s  2116
 13123 04088 1B65108         D0=(5)  (=SX)
 13124 0408F 14A             A=DAT0  B
-13125               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2117
+13125               * File  smhp_game_50.s  2117
 13126 04092 3106            LCHEX   60
-13127               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2118
+13127               * File  smhp_game_50.s  2118
 13128 04096 9E6             ?A>C    B
 13129 04099 21              SKIPYES{
-13130               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2119
+13130               * File  smhp_game_50.s  2119
 13131 0409B 1BB5108         D0=(5)  (=SY)
 13132 040A2 14E             C=DAT0  B
-13133               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2120
+13133               * File  smhp_game_50.s  2120
 13134 040A5 8ED6BD          GOSUBL  =DISP.A.C.R4.B
-13135               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2121
-13136               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2122
+13135               * File  smhp_game_50.s  2121
+13136               * File  smhp_game_50.s  2122
 13137
-13138               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2123
+13138               * File  smhp_game_50.s  2123
 13139                       }
 13140 040AB 868             ?ST=0   8
 13141 040AE 00              RTNYES
-13142               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2124
+13142               * File  smhp_game_50.s  2124
 13143
-13144               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2125
-13145               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2126
+13144               * File  smhp_game_50.s  2125
+13145               * File  smhp_game_50.s  2126
 13146 040B0 866             ?ST=0   6
 13147 040B3 62              SKIPYES{
-13148               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2127
-13149               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2128
+13148               * File  smhp_game_50.s  2127
+13149               * File  smhp_game_50.s  2128
 13150 040B5 8E3C3E          GOSUBL  =MURD_T
-13151               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2129
-13152               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2130
+13151               * File  smhp_game_50.s  2129
+13152               * File  smhp_game_50.s  2130
 13153 040BB 590             SKIPNC{
-13154               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2131
+13154               * File  smhp_game_50.s  2131
 13155 040BE 846             ST=0    6
 13156 040C1 6340            EXIT2
-13157               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2132
-13158               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2133
+13157               * File  smhp_game_50.s  2132
+13158               * File  smhp_game_50.s  2133
 13159                       }
 13160 040C5 1B65108         D0=(5)  (=SX)
 13161 040CC 14A             A=DAT0  B
-13162               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2134
+13162               * File  smhp_game_50.s  2134
 13163 040CF B64             A=A+    1       B
 13164 040D2 148             DAT0=A  B
-13165               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2135
-13166               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2136
-13167               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2137
+13165               * File  smhp_game_50.s  2135
+13166               * File  smhp_game_50.s  2136
+13167               * File  smhp_game_50.s  2137
 13168 040D5 6F20            }SKELSE{
-13169               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2138
-13170               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2139
+13169               * File  smhp_game_50.s  2138
+13170               * File  smhp_game_50.s  2139
 13171 040D9 8E544E          GOSUBL  =MURG_T
-13172               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2140
-13173               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2141
+13172               * File  smhp_game_50.s  2140
+13173               * File  smhp_game_50.s  2141
 13174 040DF 590             SKIPNC{
-13175               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2142
+13175               * File  smhp_game_50.s  2142
 13176 040E2 856             ST=1    6
 13177 040E5 6F10            EXIT2
-13178               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2143
-13179               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2144
+13178               * File  smhp_game_50.s  2143
+13179               * File  smhp_game_50.s  2144
 13180                       }
 13181 040E9 1B65108         D0=(5)  (=SX)
 13182 040F0 14A             A=DAT0  B
-13183               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2145
-13184               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2146
+13183               * File  smhp_game_50.s  2145
+13184               * File  smhp_game_50.s  2146
 13185 040F3 96C             ?A#0    B
 13186 040F6 90              SKIPYES{
-13187               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2147
+13187               * File  smhp_game_50.s  2147
 13188 040F8 856             ST=1    6
 13189 040FB 6900            EXIT2
-13190               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2148
-13191               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2149
+13190               * File  smhp_game_50.s  2148
+13191               * File  smhp_game_50.s  2149
 13192                       }
 13193 040FF A6C             A=A-    1       B
-13194               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2150
+13194               * File  smhp_game_50.s  2150
 13195 04102 148             DAT0=A  B
-13196               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2151
-13197               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2152
+13196               * File  smhp_game_50.s  2151
+13197               * File  smhp_game_50.s  2152
 13198
-13199               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2153
-13200               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2154
+13199               * File  smhp_game_50.s  2153
+13200               * File  smhp_game_50.s  2154
 13201                       }
 13202 04105 1B65108         D0=(5)  (=SX)
 13203 0410C 14A             A=DAT0  B
-13204               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2155
+13204               * File  smhp_game_50.s  2155
 13205 0410F 1BB0108         D0=(5)  (=MX)
 13206 04116 14E             C=DAT0  B
-13207               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2156
+13207               * File  smhp_game_50.s  2156
 13208                       {
-13209               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2157
+13209               * File  smhp_game_50.s  2157
 13210 04119 818623          C=C+    4       B
 13211 0411F 9E6             ?C<A    B
 13212 04122 56              EXIT
-13213               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2158
+13213               * File  smhp_game_50.s  2158
 13214 04124 818607          A=A+    8       B
 13215 0412A 9E2             ?C>A    B
 13216 0412D A5              EXIT
-13217               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2159
+13217               * File  smhp_game_50.s  2159
 13218
-13219               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2160
+13219               * File  smhp_game_50.s  2160
 13220 0412F 1BB5108         D0=(5)  (=SY)
 13221 04136 14A             A=DAT0  B
-13222               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2161
+13222               * File  smhp_game_50.s  2161
 13223 04139 1B70108         D0=(5)  (=MCLIPH)
 13224 04140 14E             C=DAT0  B
-13225               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2162
+13225               * File  smhp_game_50.s  2162
 13226 04143 A6A             A=A+C   B
-13227               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2163
+13227               * File  smhp_game_50.s  2163
 13228 04146 1B01108         D0=(5)  (=MY)
 13229 0414D 14E             C=DAT0  B
-13230               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2164
+13230               * File  smhp_game_50.s  2164
 13231
-13232               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2165
+13232               * File  smhp_game_50.s  2165
 13233 04150 818627          C=C+    8       B
 13234 04156 9E6             ?C<A    B
 13235 04159 E2              EXIT
-13236               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2166
+13236               * File  smhp_game_50.s  2166
 13237 0415B 8186A7          C=C-    8       B
 13238 04161 9E2             ?C>A    B
 13239 04164 32              EXIT
-13240               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2167
+13240               * File  smhp_game_50.s  2167
 13241
-13242               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2168
+13242               * File  smhp_game_50.s  2168
 13243 04166 818622          C=C+    3       B
-13244               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2169
-13245               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2170
+13244               * File  smhp_game_50.s  2169
+13245               * File  smhp_game_50.s  2170
 13246 0416C 9E6             ?C<A    B
 13247 0416F 51              SKIPYES{
-13248               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2171
+13248               * File  smhp_game_50.s  2171
 13249 04171 870             ?ST=1   0
 13250 04174 01              GOYES   =AA3
-13251               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2172
-13252               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2173
+13251               * File  smhp_game_50.s  2172
+13252               * File  smhp_game_50.s  2173
 13253 04176 8E98ED          GOSUBL  =LOST_LIFE
-13254               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2174
+13254               * File  smhp_game_50.s  2174
 13255 0417C 6A00            EXIT2
-13256               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2175
-13257               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2176
-13258               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2177
+13256               * File  smhp_game_50.s  2175
+13257               * File  smhp_game_50.s  2176
+13258               * File  smhp_game_50.s  2177
 13259 04180 6600            }SKELSE{
-13260               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2178
-13261               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2179
+13260               * File  smhp_game_50.s  2178
+13261               * File  smhp_game_50.s  2179
 13262 04184         =AA3
-13263               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2180
-13264               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2181
+13263               * File  smhp_game_50.s  2180
+13264               * File  smhp_game_50.s  2181
 13265 04184 845             ST=0    5
-13266               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2182
-13267               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2183
+13266               * File  smhp_game_50.s  2182
+13267               * File  smhp_game_50.s  2183
 13268                       }
-13269               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2184
+13269               * File  smhp_game_50.s  2184
 13270
-13271               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2185
+13271               * File  smhp_game_50.s  2185
 13272                       }
 13273 04187 8EB42E          GOSUBL  =SOL_T
-13274               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2186
-13275               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2187
+13274               * File  smhp_game_50.s  2186
+13275               * File  smhp_game_50.s  2187
 13276 0418D 422             SKIPC{
-13277               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2188
+13277               * File  smhp_game_50.s  2188
 13278 04190 1BB5108         D0=(5)  (=SY)
 13279 04197 14A             A=DAT0  B
-13280               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2189
+13280               * File  smhp_game_50.s  2189
 13281 0419A 3173            LCHEX   37
 13282 0419E 9E2             ?A<C    B
 13283 041A1 90              SKIPYES{
-13284               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2190
+13284               * File  smhp_game_50.s  2190
 13285 041A3 845             ST=0    5
-13286               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2191
-13287               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2192
-13288               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2193
+13286               * File  smhp_game_50.s  2191
+13287               * File  smhp_game_50.s  2192
+13288               * File  smhp_game_50.s  2193
 13289 041A6 6900            }SKELSE{
-13290               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2194
+13290               * File  smhp_game_50.s  2194
 13291 041AA B64             A=A+    1       B
 13292 041AD 148             DAT0=A  B
-13293               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2195
-13294               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2196
+13293               * File  smhp_game_50.s  2195
+13294               * File  smhp_game_50.s  2196
 13295                       }
-13296               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2197
+13296               * File  smhp_game_50.s  2197
 13297
-13298               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2198
+13298               * File  smhp_game_50.s  2198
 13299                       }
 13300 041B0 8CE8CD          GOLONG  =FIN
-13301               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2199
+13301               * File  smhp_game_50.s  2199
 13302
-13303               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2200
+13303               * File  smhp_game_50.s  2200
 13304 041B6 8C88CD          GOLONG  =FIN
-13305               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2201
+13305               * File  smhp_game_50.s  2201
 13306
-13307               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2202
+13307               * File  smhp_game_50.s  2202
 13308
-13309               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2203
+13309               * File  smhp_game_50.s  2203
 13310 041BC         =ADDOBJ.A.C.B.R4
-13311               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2204
+13311               * File  smhp_game_50.s  2204
 13312 041BC D7              D=C     A
-13313               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2205
+13313               * File  smhp_game_50.s  2205
 13314 041BE AE9             C=B     B
 13315 041C1 06              RSTK=C
-13316               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2206
+13316               * File  smhp_game_50.s  2206
 13317 041C3 D8              B=A     A
-13318               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2207
+13318               * File  smhp_game_50.s  2207
 13319 041C5 DB              C=D     A
-13320               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2208
+13320               * File  smhp_game_50.s  2208
 13321
-13322               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2209
-13323               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2210
+13322               * File  smhp_game_50.s  2209
+13323               * File  smhp_game_50.s  2210
 13324 041C7 1BC4108         D0=(5)  (=STABLE)
 13325 041CE 142             A=DAT0  A
 13326 041D1 130             D0=A
-13327               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2211
+13327               * File  smhp_game_50.s  2211
 13328
-13329               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2212
+13329               * File  smhp_game_50.s  2212
 13330 041D4 AE2             C=0     B
-13331               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2213
+13331               * File  smhp_game_50.s  2213
 13332                       {
-13333               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2214
+13333               * File  smhp_game_50.s  2214
 13334 041D7 80821F0         LA(2)   (=SMAX)
-13335               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2215
+13335               * File  smhp_game_50.s  2215
 13336 041DE 966             ?C#A    B
 13337 041E1 60              SKIPYES{
 13338 041E3 07              C=RSTK
 13339 041E5 01              RTN
-13340               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2216
+13340               * File  smhp_game_50.s  2216
 13341                       }
 13342 041E7 1520            A=DAT0  P
 13343 041EB 908             ?A=0    P
 13344 041EE C0              EXIT
-13345               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2217
+13345               * File  smhp_game_50.s  2217
 13346 041F0 16A             D0+     11
 13347 041F3 B06             C=C+    1       P
 13348 041F6 60EF            UP
-13349               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2218
-13350               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2219
-13351               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2220
+13349               * File  smhp_game_50.s  2218
+13350               * File  smhp_game_50.s  2219
+13351               * File  smhp_game_50.s  2220
 13352                       }
 13353 041FA 301             LCHEX   1
 13354 041FD 1540            DAT0=C  P
 13355 04201 160             D0+     1
-13356               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2221
+13356               * File  smhp_game_50.s  2221
 13357
-13358               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2222
-13359               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2223
+13358               * File  smhp_game_50.s  2222
+13359               * File  smhp_game_50.s  2223
 13360 04204 07              C=RSTK
 13361 04206 14C             DAT0=C  B
 13362 04209 161             D0+     2
-13363               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2224
+13363               * File  smhp_game_50.s  2224
 13364
-13365               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2225
-13366               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2226
+13365               * File  smhp_game_50.s  2225
+13366               * File  smhp_game_50.s  2226
 13367 0420C 81AF1C          C=R4.f  A
 13368 04212 1543            DAT0=C  X
 13369 04216 162             D0+     3
-13370               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2227
+13370               * File  smhp_game_50.s  2227
 13371
-13372               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2228
-13373               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2229
+13372               * File  smhp_game_50.s  2228
+13373               * File  smhp_game_50.s  2229
 13374 04219 AE4             A=B     B
 13375 0421C 148             DAT0=A  B
 13376 0421F 161             D0+     2
-13377               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2230
+13377               * File  smhp_game_50.s  2230
 13378
-13379               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2231
-13380               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2232
+13379               * File  smhp_game_50.s  2231
+13380               * File  smhp_game_50.s  2232
 13381 04222 AEB             C=D     B
 13382 04225 14C             DAT0=C  B
 13383 04228 161             D0+     2
-13384               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2233
+13384               * File  smhp_game_50.s  2233
 13385
-13386               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2234
-13387               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2235
+13386               * File  smhp_game_50.s  2234
+13387               * File  smhp_game_50.s  2235
 13388 0422B 20              P=      0
 13389 0422D A82             C=0     P
 13390 04230 1540            DAT0=C  P
-13391               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2236
+13391               * File  smhp_game_50.s  2236
 13392 04234 01              RTN
-13393               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2237
+13393               * File  smhp_game_50.s  2237
 13394
-13395               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2238
+13395               * File  smhp_game_50.s  2238
 13396 04236         =ADDOBJET2
-13397               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2239
+13397               * File  smhp_game_50.s  2239
 13398
-13399               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2240
+13399               * File  smhp_game_50.s  2240
 13400 04236 1B15108         D0=(5)  (=STYPE)
 13401 0423D 148             DAT0=A  B
-13402               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2241
+13402               * File  smhp_game_50.s  2241
 13403 04240 1B35108         D0=(5)  (=SDATA)
 13404 04247 1543            DAT0=C  X
-13405               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2242
+13405               * File  smhp_game_50.s  2242
 13406
-13407               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2243
-13408               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2244
+13407               * File  smhp_game_50.s  2243
+13408               * File  smhp_game_50.s  2244
 13409 0424B 80821D0         LA(2)   13
-13410               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2245
+13410               * File  smhp_game_50.s  2245
 13411 04252 F0              ASL     A
 13412 04254 819F0           ASRB.f  A
-13413               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2246
+13413               * File  smhp_game_50.s  2246
 13414 04259 1B06108         D0=(5)  (=AX)
 13415 04260 148             DAT0=A  B
-13416               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2247
+13416               * File  smhp_game_50.s  2247
 13417
-13418               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2248
+13418               * File  smhp_game_50.s  2248
 13419 04263 6630            GOTO    =NEXT.ADDOBJET
-13420               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2249
+13420               * File  smhp_game_50.s  2249
 13421
-13422               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2250
+13422               * File  smhp_game_50.s  2250
 13423 04267         =ADDOBJET
-13424               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2251
+13424               * File  smhp_game_50.s  2251
 13425
-13426               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2252
+13426               * File  smhp_game_50.s  2252
 13427 04267 1B15108         D0=(5)  (=STYPE)
 13428 0426E 148             DAT0=A  B
-13429               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2253
+13429               * File  smhp_game_50.s  2253
 13430 04271 1B35108         D0=(5)  (=SDATA)
 13431 04278 1543            DAT0=C  X
-13432               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2254
+13432               * File  smhp_game_50.s  2254
 13433
-13434               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2255
-13435               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2256
+13434               * File  smhp_game_50.s  2255
+13435               * File  smhp_game_50.s  2256
 13436 0427C 80821D0         LA(2)   13
 13437 04283 AEB             C=D     B
 13438 04286 B6A             A=A-C   B
-13439               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2257
+13439               * File  smhp_game_50.s  2257
 13440 04289 F0              ASL     A
 13441 0428B 819F0           ASRB.f  A
-13442               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2258
+13442               * File  smhp_game_50.s  2258
 13443 04290 1B06108         D0=(5)  (=AX)
 13444 04297 148             DAT0=A  B
-13445               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2259
+13445               * File  smhp_game_50.s  2259
 13446
-13447               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2260
+13447               * File  smhp_game_50.s  2260
 13448 0429A         =NEXT.ADDOBJET
-13449               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2261
-13450               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2262
+13449               * File  smhp_game_50.s  2261
+13450               * File  smhp_game_50.s  2262
 13451 0429A 8082180         LA(2)   08
 13452 042A1 AE9             C=B     B
 13453 042A4 B6A             A=A-C   B
-13454               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2263
+13454               * File  smhp_game_50.s  2263
 13455 042A7 F0              ASL     A
 13456 042A9 819F0           ASRB.f  A
-13457               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2264
+13457               * File  smhp_game_50.s  2264
 13458 042AE 1B56108         D0=(5)  (=AY)
 13459 042B5 148             DAT0=A  B
-13460               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2265
+13460               * File  smhp_game_50.s  2265
 13461
-13462               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2266
-13463               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2267
+13462               * File  smhp_game_50.s  2266
+13463               * File  smhp_game_50.s  2267
 13464 042B8 1BC4108         D0=(5)  (=STABLE)
 13465 042BF 142             A=DAT0  A
-13466               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2268
+13466               * File  smhp_game_50.s  2268
 13467 042C2 130             D0=A
 13468 042C5 AE2             C=0     B
-13469               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2269
+13469               * File  smhp_game_50.s  2269
 13470                       {
-13471               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2270
+13471               * File  smhp_game_50.s  2270
 13472 042C8 80821F0         LA(2)   (=SMAX)
-13473               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2271
+13473               * File  smhp_game_50.s  2271
 13474 042CF 962             ?C=A    B
 13475 042D2 00              RTNYES
-13476               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2272
+13476               * File  smhp_game_50.s  2272
 13477 042D4 1520            A=DAT0  P
 13478 042D8 908             ?A=0    P
 13479 042DB C0              EXIT
-13480               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2273
+13480               * File  smhp_game_50.s  2273
 13481 042DD 16A             D0+     11
 13482 042E0 B66             C=C+    1       B
 13483 042E3 64EF            UP
-13484               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2274
-13485               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2275
-13486               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2276
+13484               * File  smhp_game_50.s  2274
+13485               * File  smhp_game_50.s  2275
+13486               * File  smhp_game_50.s  2276
 13487                       }
 13488 042E7 301             LCHEX   1
 13489 042EA 1540            DAT0=C  P
 13490 042EE 160             D0+     1
-13491               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2277
+13491               * File  smhp_game_50.s  2277
 13492
-13493               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2278
-13494               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2279
+13493               * File  smhp_game_50.s  2278
+13494               * File  smhp_game_50.s  2279
 13495 042F1 1F15108         D1=(5)  (=STYPE)
 13496 042F8 14F             C=DAT1  B
-13497               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2280
+13497               * File  smhp_game_50.s  2280
 13498 042FB 14C             DAT0=C  B
 13499 042FE 161             D0+     2
-13500               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2281
+13500               * File  smhp_game_50.s  2281
 13501
-13502               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2282
-13503               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2283
+13502               * File  smhp_game_50.s  2282
+13503               * File  smhp_game_50.s  2283
 13504 04301 1F35108         D1=(5)  (=SDATA)
 13505 04308 1573            C=DAT1  X
-13506               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2284
+13506               * File  smhp_game_50.s  2284
 13507 0430C 1543            DAT0=C  X
 13508 04310 162             D0+     3
-13509               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2285
+13509               * File  smhp_game_50.s  2285
 13510
-13511               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2286
-13512               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2287
+13511               * File  smhp_game_50.s  2286
+13512               * File  smhp_game_50.s  2287
 13513 04313 1F06108         D1=(5)  (=AX)
 13514 0431A 14F             C=DAT1  B
-13515               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2288
+13515               * File  smhp_game_50.s  2288
 13516 0431D 14C             DAT0=C  B
 13517 04320 161             D0+     2
-13518               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2289
+13518               * File  smhp_game_50.s  2289
 13519
-13520               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2290
-13521               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2291
+13520               * File  smhp_game_50.s  2290
+13521               * File  smhp_game_50.s  2291
 13522 04323 1F56108         D1=(5)  (=AY)
 13523 0432A 14F             C=DAT1  B
-13524               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2292
+13524               * File  smhp_game_50.s  2292
 13525 0432D 14C             DAT0=C  B
 13526 04330 161             D0+     2
-13527               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2293
+13527               * File  smhp_game_50.s  2293
 13528
-13529               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2294
-13530               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2295
+13529               * File  smhp_game_50.s  2294
+13530               * File  smhp_game_50.s  2295
 13531 04333 20              P=      0
 13532 04335 A82             C=0     P
 13533 04338 1540            DAT0=C  P
-13534               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2296
+13534               * File  smhp_game_50.s  2296
 13535 0433C 01              RTN
-13536               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2297
+13536               * File  smhp_game_50.s  2297
 13537
-13538               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2298
+13538               * File  smhp_game_50.s  2298
 13539 0433E         =OBJ.HEART.UP
-13540               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2299
-13541               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2300
+13540               * File  smhp_game_50.s  2299
+13541               * File  smhp_game_50.s  2300
 13542 0433E 81AF12          A=R2.f  A
 13543 04344 81AF1C          C=R4.f  A
-13544               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2301
+13544               * File  smhp_game_50.s  2301
 13545 0434A CA              A=A+C   A
 13546 0434C 104             R4=A
-13547               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2302
+13547               * File  smhp_game_50.s  2302
 13548
-13549               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2303
+13549               * File  smhp_game_50.s  2303
 13550 0434F 3170            LCHEX   07
 13551 04353 AE5             B=C     B
-13552               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2304
+13552               * File  smhp_game_50.s  2304
 13553
-13554               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2305
+13554               * File  smhp_game_50.s  2305
 13555 04356 D0              A=0     A
 13556 04358 D2              C=0     A
-13557               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2306
+13557               * File  smhp_game_50.s  2306
 13558 0435A 1B65108         D0=(5)  (=SX)
 13559 04361 14A             A=DAT0  B
-13560               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2307
+13560               * File  smhp_game_50.s  2307
 13561 04364 3106            LCHEX   60
-13562               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2308
+13562               * File  smhp_game_50.s  2308
 13563 04368 9E6             ?A>C    B
 13564 0436B 21              SKIPYES{
-13565               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2309
+13565               * File  smhp_game_50.s  2309
 13566 0436D 1BB5108         D0=(5)  (=SY)
 13567 04374 14E             C=DAT0  B
-13568               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2310
+13568               * File  smhp_game_50.s  2310
 13569 04377 8EB98D          GOSUBL  =DISP.A.C.R4.B
-13570               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2311
-13571               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2312
+13570               * File  smhp_game_50.s  2311
+13571               * File  smhp_game_50.s  2312
 13572
-13573               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2313
+13573               * File  smhp_game_50.s  2313
 13574                       }
 13575 0437D 868             ?ST=0   8
 13576 04380 00              RTNYES
-13577               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2314
+13577               * File  smhp_game_50.s  2314
 13578
-13579               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2315
-13580               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2316
+13579               * File  smhp_game_50.s  2315
+13580               * File  smhp_game_50.s  2316
 13581 04382 866             ?ST=0   6
 13582 04385 62              SKIPYES{
-13583               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2317
-13584               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2318
+13583               * File  smhp_game_50.s  2317
+13584               * File  smhp_game_50.s  2318
 13585 04387 8E1F0E          GOSUBL  =MURD_T
-13586               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2319
-13587               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2320
+13586               * File  smhp_game_50.s  2319
+13587               * File  smhp_game_50.s  2320
 13588 0438D 590             SKIPNC{
-13589               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2321
+13589               * File  smhp_game_50.s  2321
 13590 04390 846             ST=0    6
 13591 04393 6340            EXIT2
-13592               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2322
-13593               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2323
+13592               * File  smhp_game_50.s  2322
+13593               * File  smhp_game_50.s  2323
 13594                       }
 13595 04397 1B65108         D0=(5)  (=SX)
 13596 0439E 14A             A=DAT0  B
-13597               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2324
-13598               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2325
-13599               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2326
-13600               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2327
-13601               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2328
+13597               * File  smhp_game_50.s  2324
+13598               * File  smhp_game_50.s  2325
+13599               * File  smhp_game_50.s  2326
+13600               * File  smhp_game_50.s  2327
+13601               * File  smhp_game_50.s  2328
 13602 043A1 B64             A=A+    1       B
-13603               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2329
+13603               * File  smhp_game_50.s  2329
 13604 043A4 148             DAT0=A  B
-13605               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2330
-13606               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2331
-13607               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2332
+13605               * File  smhp_game_50.s  2330
+13606               * File  smhp_game_50.s  2331
+13607               * File  smhp_game_50.s  2332
 13608 043A7 6F20            }SKELSE{
-13609               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2333
-13610               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2334
+13609               * File  smhp_game_50.s  2333
+13610               * File  smhp_game_50.s  2334
 13611 043AB 8E371E          GOSUBL  =MURG_T
-13612               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2335
-13613               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2336
+13612               * File  smhp_game_50.s  2335
+13613               * File  smhp_game_50.s  2336
 13614 043B1 590             SKIPNC{
-13615               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2337
+13615               * File  smhp_game_50.s  2337
 13616 043B4 856             ST=1    6
 13617 043B7 6F10            EXIT2
-13618               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2338
-13619               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2339
+13618               * File  smhp_game_50.s  2338
+13619               * File  smhp_game_50.s  2339
 13620                       }
 13621 043BB 1B65108         D0=(5)  (=SX)
 13622 043C2 14A             A=DAT0  B
-13623               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2340
-13624               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2341
+13623               * File  smhp_game_50.s  2340
+13624               * File  smhp_game_50.s  2341
 13625 043C5 96C             ?A#0    B
 13626 043C8 90              SKIPYES{
-13627               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2342
+13627               * File  smhp_game_50.s  2342
 13628 043CA 856             ST=1    6
 13629 043CD 6900            EXIT2
-13630               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2343
-13631               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2344
+13630               * File  smhp_game_50.s  2343
+13631               * File  smhp_game_50.s  2344
 13632                       }
 13633 043D1 A6C             A=A-    1       B
-13634               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2345
+13634               * File  smhp_game_50.s  2345
 13635 043D4 148             DAT0=A  B
-13636               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2346
-13637               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2347
+13636               * File  smhp_game_50.s  2346
+13637               * File  smhp_game_50.s  2347
 13638
-13639               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2348
-13640               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2349
+13639               * File  smhp_game_50.s  2348
+13640               * File  smhp_game_50.s  2349
 13641                       }
 13642 043D7 1B65108         D0=(5)  (=SX)
 13643 043DE 14A             A=DAT0  B
-13644               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2350
+13644               * File  smhp_game_50.s  2350
 13645 043E1 1BB0108         D0=(5)  (=MX)
 13646 043E8 14E             C=DAT0  B
-13647               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2351
+13647               * File  smhp_game_50.s  2351
 13648                       {
-13649               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2352
+13649               * File  smhp_game_50.s  2352
 13650 043EB 818623          C=C+    4       B
 13651 043F1 9E6             ?C<A    B
 13652 043F4 F6              EXIT
-13653               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2353
+13653               * File  smhp_game_50.s  2353
 13654 043F6 818607          A=A+    8       B
 13655 043FC 9E2             ?C>A    B
 13656 043FF 46              EXIT
-13657               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2354
+13657               * File  smhp_game_50.s  2354
 13658
-13659               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2355
+13659               * File  smhp_game_50.s  2355
 13660 04401 1BB5108         D0=(5)  (=SY)
 13661 04408 14A             A=DAT0  B
-13662               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2356
+13662               * File  smhp_game_50.s  2356
 13663 0440B 1B70108         D0=(5)  (=MCLIPH)
 13664 04412 14E             C=DAT0  B
-13665               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2357
+13665               * File  smhp_game_50.s  2357
 13666 04415 A6A             A=A+C   B
-13667               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2358
+13667               * File  smhp_game_50.s  2358
 13668 04418 1B01108         D0=(5)  (=MY)
 13669 0441F 14E             C=DAT0  B
-13670               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2359
+13670               * File  smhp_game_50.s  2359
 13671
-13672               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2360
+13672               * File  smhp_game_50.s  2360
 13673 04422 818623          C=C+    4       B
 13674 04428 9E6             ?C<A    B
 13675 0442B 83              EXIT
-13676               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2361
+13676               * File  smhp_game_50.s  2361
 13677 0442D 818607          A=A+    8       B
 13678 04433 9E2             ?C>A    B
 13679 04436 D2              EXIT
-13680               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2362
+13680               * File  smhp_game_50.s  2362
 13681
-13682               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2363
-13683               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2364
+13682               * File  smhp_game_50.s  2363
+13683               * File  smhp_game_50.s  2364
 13684 04438 1B40108         D0=(5)  (=VIE)
 13685 0443F 14A             A=DAT0  B
-13686               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2365
+13686               * File  smhp_game_50.s  2365
 13687 04442 05              SETDEC
 13688 04444 B64             A=A+    1       B
 13689 04447 04              SETHEX
-13690               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2366
+13690               * File  smhp_game_50.s  2366
 13691 04449 148             DAT0=A  B
-13692               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2367
-13693               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2368
+13692               * File  smhp_game_50.s  2367
+13693               * File  smhp_game_50.s  2368
 13694 0444C 845             ST=0    5
-13695               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2369
-13696               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2370
+13695               * File  smhp_game_50.s  2369
+13696               * File  smhp_game_50.s  2370
 13697 0444F 1B00108         D0=(5)  (=FLAG01)
-13698               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2371
+13698               * File  smhp_game_50.s  2371
 13699 04456 15A3            A=DAT0  4
-13700               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2372
+13700               * File  smhp_game_50.s  2372
 13701 0445A 80850           ABIT=1  0
-13702               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2373
+13702               * File  smhp_game_50.s  2373
 13703 0445F 1583            DAT0=A  4
-13704               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2374
-13705               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2375
+13704               * File  smhp_game_50.s  2374
+13705               * File  smhp_game_50.s  2375
 13706
-13707               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2376
+13707               * File  smhp_game_50.s  2376
 13708                       }
 13709 04463 8EF6FD          GOSUBL  =SOL_T
-13710               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2377
-13711               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2378
+13710               * File  smhp_game_50.s  2377
+13711               * File  smhp_game_50.s  2378
 13712 04469 422             SKIPC{
-13713               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2379
+13713               * File  smhp_game_50.s  2379
 13714 0446C 1BB5108         D0=(5)  (=SY)
 13715 04473 14A             A=DAT0  B
-13716               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2380
+13716               * File  smhp_game_50.s  2380
 13717 04476 3173            LCHEX   37
 13718 0447A 9E2             ?A<C    B
 13719 0447D 90              SKIPYES{
-13720               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2381
+13720               * File  smhp_game_50.s  2381
 13721 0447F 845             ST=0    5
-13722               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2382
-13723               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2383
-13724               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2384
+13722               * File  smhp_game_50.s  2382
+13723               * File  smhp_game_50.s  2383
+13724               * File  smhp_game_50.s  2384
 13725 04482 6900            }SKELSE{
-13726               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2385
+13726               * File  smhp_game_50.s  2385
 13727 04486 B64             A=A+    1       B
 13728 04489 148             DAT0=A  B
-13729               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2386
-13730               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2387
+13729               * File  smhp_game_50.s  2386
+13730               * File  smhp_game_50.s  2387
 13731                       }
-13732               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2388
+13732               * File  smhp_game_50.s  2388
 13733
-13734               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2389
+13734               * File  smhp_game_50.s  2389
 13735                       }
 13736 0448C 8C2B9D          GOLONG  =FIN
-13737               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2390
+13737               * File  smhp_game_50.s  2390
 13738
-13739               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2391
+13739               * File  smhp_game_50.s  2391
 13740 04492         =OBJ.CHAMP.UP
-13741               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2392
-13742               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2393
+13741               * File  smhp_game_50.s  2392
+13742               * File  smhp_game_50.s  2393
 13743 04492 81AF12          A=R2.f  A
 13744 04498 81AF1C          C=R4.f  A
-13745               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2394
+13745               * File  smhp_game_50.s  2394
 13746 0449E 818F03          A=A+    4       A
-13747               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2395
+13747               * File  smhp_game_50.s  2395
 13748 044A4 CA              A=A+C   A
 13749 044A6 104             R4=A
-13750               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2396
+13750               * File  smhp_game_50.s  2396
 13751
-13752               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2397
+13752               * File  smhp_game_50.s  2397
 13753 044A9 3170            LCHEX   07
 13754 044AD AE5             B=C     B
-13755               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2398
+13755               * File  smhp_game_50.s  2398
 13756
-13757               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2399
+13757               * File  smhp_game_50.s  2399
 13758 044B0 D0              A=0     A
 13759 044B2 D2              C=0     A
-13760               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2400
+13760               * File  smhp_game_50.s  2400
 13761 044B4 1B65108         D0=(5)  (=SX)
 13762 044BB 14A             A=DAT0  B
-13763               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2401
+13763               * File  smhp_game_50.s  2401
 13764 044BE 3106            LCHEX   60
-13765               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2402
+13765               * File  smhp_game_50.s  2402
 13766 044C2 9E6             ?A>C    B
 13767 044C5 21              SKIPYES{
-13768               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2403
+13768               * File  smhp_game_50.s  2403
 13769 044C7 1BB5108         D0=(5)  (=SY)
 13770 044CE 14E             C=DAT0  B
-13771               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2404
+13771               * File  smhp_game_50.s  2404
 13772 044D1 8E147D          GOSUBL  =DISP.A.C.R4.B
-13773               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2405
-13774               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2406
+13773               * File  smhp_game_50.s  2405
+13774               * File  smhp_game_50.s  2406
 13775
-13776               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2407
+13776               * File  smhp_game_50.s  2407
 13777                       }
 13778 044D7 868             ?ST=0   8
 13779 044DA 00              RTNYES
-13780               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2408
+13780               * File  smhp_game_50.s  2408
 13781
-13782               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2409
-13783               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2410
+13782               * File  smhp_game_50.s  2409
+13783               * File  smhp_game_50.s  2410
 13784 044DC 866             ?ST=0   6
 13785 044DF 62              SKIPYES{
-13786               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2411
-13787               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2412
+13786               * File  smhp_game_50.s  2411
+13787               * File  smhp_game_50.s  2412
 13788 044E1 8E79FD          GOSUBL  =MURD_T
-13789               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2413
-13790               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2414
+13789               * File  smhp_game_50.s  2413
+13790               * File  smhp_game_50.s  2414
 13791 044E7 590             SKIPNC{
-13792               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2415
+13792               * File  smhp_game_50.s  2415
 13793 044EA 846             ST=0    6
 13794 044ED 6340            EXIT2
-13795               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2416
-13796               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2417
+13795               * File  smhp_game_50.s  2416
+13796               * File  smhp_game_50.s  2417
 13797                       }
 13798 044F1 1B65108         D0=(5)  (=SX)
 13799 044F8 14A             A=DAT0  B
-13800               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2418
-13801               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2419
-13802               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2420
-13803               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2421
-13804               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2422
+13800               * File  smhp_game_50.s  2418
+13801               * File  smhp_game_50.s  2419
+13802               * File  smhp_game_50.s  2420
+13803               * File  smhp_game_50.s  2421
+13804               * File  smhp_game_50.s  2422
 13805 044FB B64             A=A+    1       B
-13806               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2423
+13806               * File  smhp_game_50.s  2423
 13807 044FE 148             DAT0=A  B
-13808               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2424
-13809               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2425
-13810               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2426
+13808               * File  smhp_game_50.s  2424
+13809               * File  smhp_game_50.s  2425
+13810               * File  smhp_game_50.s  2426
 13811 04501 6F20            }SKELSE{
-13812               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2427
-13813               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2428
+13812               * File  smhp_game_50.s  2427
+13813               * File  smhp_game_50.s  2428
 13814 04505 8E910E          GOSUBL  =MURG_T
-13815               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2429
-13816               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2430
+13815               * File  smhp_game_50.s  2429
+13816               * File  smhp_game_50.s  2430
 13817 0450B 590             SKIPNC{
-13818               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2431
+13818               * File  smhp_game_50.s  2431
 13819 0450E 856             ST=1    6
 13820 04511 6F10            EXIT2
-13821               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2432
-13822               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2433
+13821               * File  smhp_game_50.s  2432
+13822               * File  smhp_game_50.s  2433
 13823                       }
 13824 04515 1B65108         D0=(5)  (=SX)
 13825 0451C 14A             A=DAT0  B
-13826               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2434
-13827               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2435
+13826               * File  smhp_game_50.s  2434
+13827               * File  smhp_game_50.s  2435
 13828 0451F 96C             ?A#0    B
 13829 04522 90              SKIPYES{
-13830               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2436
+13830               * File  smhp_game_50.s  2436
 13831 04524 856             ST=1    6
 13832 04527 6900            EXIT2
-13833               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2437
-13834               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2438
+13833               * File  smhp_game_50.s  2437
+13834               * File  smhp_game_50.s  2438
 13835                       }
 13836 0452B A6C             A=A-    1       B
-13837               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2439
+13837               * File  smhp_game_50.s  2439
 13838 0452E 148             DAT0=A  B
-13839               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2440
-13840               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2441
+13839               * File  smhp_game_50.s  2440
+13840               * File  smhp_game_50.s  2441
 13841
-13842               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2442
-13843               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2443
+13842               * File  smhp_game_50.s  2442
+13843               * File  smhp_game_50.s  2443
 13844                       }
 13845 04531 1B65108         D0=(5)  (=SX)
 13846 04538 14A             A=DAT0  B
-13847               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2444
+13847               * File  smhp_game_50.s  2444
 13848 0453B 1BB0108         D0=(5)  (=MX)
 13849 04542 14E             C=DAT0  B
-13850               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2445
+13850               * File  smhp_game_50.s  2445
 13851                       {
-13852               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2446
+13852               * File  smhp_game_50.s  2446
 13853 04545 818623          C=C+    4       B
 13854 0454B 9E6             ?C<A    B
 13855 0454E 84              EXIT
-13856               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2447
+13856               * File  smhp_game_50.s  2447
 13857 04550 818607          A=A+    8       B
 13858 04556 9E2             ?C>A    B
 13859 04559 D3              EXIT
-13860               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2448
+13860               * File  smhp_game_50.s  2448
 13861
-13862               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2449
+13862               * File  smhp_game_50.s  2449
 13863 0455B 1BB5108         D0=(5)  (=SY)
 13864 04562 14A             A=DAT0  B
-13865               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2450
+13865               * File  smhp_game_50.s  2450
 13866 04565 1B70108         D0=(5)  (=MCLIPH)
 13867 0456C 14E             C=DAT0  B
-13868               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2451
+13868               * File  smhp_game_50.s  2451
 13869 0456F A6A             A=A+C   B
-13870               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2452
+13870               * File  smhp_game_50.s  2452
 13871 04572 1B01108         D0=(5)  (=MY)
 13872 04579 14E             C=DAT0  B
-13873               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2453
+13873               * File  smhp_game_50.s  2453
 13874
-13875               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2454
+13875               * File  smhp_game_50.s  2454
 13876 0457C 818623          C=C+    4       B
 13877 04582 9E6             ?C<A    B
 13878 04585 11              EXIT
-13879               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2455
+13879               * File  smhp_game_50.s  2455
 13880 04587 818607          A=A+    8       B
 13881 0458D 9E2             ?C>A    B
 13882 04590 60              EXIT
-13883               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2456
+13883               * File  smhp_game_50.s  2456
 13884 04592 6700            GOTO    =CCC
-13885               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2457
-13886               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2458
+13885               * File  smhp_game_50.s  2457
+13886               * File  smhp_game_50.s  2458
 13887                       }
 13888 04596 6470            SKIP{
-13889               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2459
+13889               * File  smhp_game_50.s  2459
 13890 0459A         =CCC
-13891               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2460
-13892               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2461
+13891               * File  smhp_game_50.s  2460
+13892               * File  smhp_game_50.s  2461
 13893 0459A 1B51108         D0=(5)  (=COIN)
 13894 045A1 1523            A=DAT0  X
-13895               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2462
+13895               * File  smhp_game_50.s  2462
 13896 045A5 3109            LCHEX   90
-13897               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2463
-13898               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2464
+13897               * File  smhp_game_50.s  2463
+13898               * File  smhp_game_50.s  2464
 13899 045A9 9E2             ?A<C    B
 13900 045AC A3              SKIPYES{
-13901               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2465
+13901               * File  smhp_game_50.s  2465
 13902 045AE AB0             A=0     X
 13903 045B1 1503            DAT0=A  X
-13904               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2466
+13904               * File  smhp_game_50.s  2466
 13905 045B5 1B40108         D0=(5)  (=VIE)
 13906 045BC 14A             A=DAT0  B
-13907               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2467
+13907               * File  smhp_game_50.s  2467
 13908 045BF 05              SETDEC
 13909 045C1 B64             A=A+    1       B
 13910 045C4 04              SETHEX
-13911               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2468
+13911               * File  smhp_game_50.s  2468
 13912 045C6 148             DAT0=A  B
-13913               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2469
-13914               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2470
+13913               * File  smhp_game_50.s  2469
+13914               * File  smhp_game_50.s  2470
 13915 045C9 1B00108         D0=(5)  (=FLAG01)
-13916               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2471
+13916               * File  smhp_game_50.s  2471
 13917 045D0 15A3            A=DAT0  4
-13918               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2472
+13918               * File  smhp_game_50.s  2472
 13919 045D4 80850           ABIT=1  0
-13920               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2473
+13920               * File  smhp_game_50.s  2473
 13921 045D9 80851           ABIT=1  1
-13922               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2474
+13922               * File  smhp_game_50.s  2474
 13923 045DE 1583            DAT0=A  4
-13924               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2475
-13925               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2476
-13926               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2477
+13924               * File  smhp_game_50.s  2475
+13925               * File  smhp_game_50.s  2476
+13926               * File  smhp_game_50.s  2477
 13927 045E2 6520            }SKELSE{
-13928               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2478
+13928               * File  smhp_game_50.s  2478
 13929 045E6 05              SETDEC
 13930 045E8 81830F          A=A+    16      X
 13931 045EE 04              SETHEX
-13932               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2479
+13932               * File  smhp_game_50.s  2479
 13933 045F0 1503            DAT0=A  X
-13934               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2480
-13935               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2481
+13934               * File  smhp_game_50.s  2480
+13935               * File  smhp_game_50.s  2481
 13936 045F4 1B00108         D0=(5)  (=FLAG01)
-13937               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2482
+13937               * File  smhp_game_50.s  2482
 13938 045FB 15A3            A=DAT0  4
-13939               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2483
+13939               * File  smhp_game_50.s  2483
 13940 045FF 80851           ABIT=1  1
-13941               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2484
+13941               * File  smhp_game_50.s  2484
 13942 04604 1583            DAT0=A  4
-13943               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2485
-13944               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2486
-13945               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2487
+13943               * File  smhp_game_50.s  2485
+13944               * File  smhp_game_50.s  2486
+13945               * File  smhp_game_50.s  2487
 13946                       }
 13947 04608 845             ST=0    5
-13948               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2488
-13949               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2489
+13948               * File  smhp_game_50.s  2488
+13949               * File  smhp_game_50.s  2489
 13950
-13951               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2490
+13951               * File  smhp_game_50.s  2490
 13952                       }
 13953 0460B 8E7CDD          GOSUBL  =SOL_T
-13954               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2491
-13955               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2492
+13954               * File  smhp_game_50.s  2491
+13955               * File  smhp_game_50.s  2492
 13956 04611 422             SKIPC{
-13957               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2493
+13957               * File  smhp_game_50.s  2493
 13958 04614 1BB5108         D0=(5)  (=SY)
 13959 0461B 14A             A=DAT0  B
-13960               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2494
+13960               * File  smhp_game_50.s  2494
 13961 0461E 3173            LCHEX   37
 13962 04622 9E2             ?A<C    B
 13963 04625 90              SKIPYES{
-13964               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2495
+13964               * File  smhp_game_50.s  2495
 13965 04627 845             ST=0    5
-13966               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2496
-13967               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2497
-13968               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2498
+13966               * File  smhp_game_50.s  2496
+13967               * File  smhp_game_50.s  2497
+13968               * File  smhp_game_50.s  2498
 13969 0462A 6900            }SKELSE{
-13970               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2499
+13970               * File  smhp_game_50.s  2499
 13971 0462E B64             A=A+    1       B
 13972 04631 148             DAT0=A  B
-13973               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2500
-13974               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2501
+13973               * File  smhp_game_50.s  2500
+13974               * File  smhp_game_50.s  2501
 13975                       }
-13976               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2502
+13976               * File  smhp_game_50.s  2502
 13977
-13978               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2503
+13978               * File  smhp_game_50.s  2503
 13979                       }
 13980 04634 8CA08D          GOLONG  =FIN
-13981               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2504
+13981               * File  smhp_game_50.s  2504
 13982
-13983               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2505
+13983               * File  smhp_game_50.s  2505
 13984 0463A         =OBJ.STAR.UP
-13985               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2506
-13986               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2507
+13985               * File  smhp_game_50.s  2506
+13986               * File  smhp_game_50.s  2507
 13987 0463A 81AF12          A=R2.f  A
 13988 04640 81AF1C          C=R4.f  A
-13989               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2508
+13989               * File  smhp_game_50.s  2508
 13990 04646 818F07          A=A+    8       A
-13991               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2509
+13991               * File  smhp_game_50.s  2509
 13992 0464C CA              A=A+C   A
 13993 0464E 104             R4=A
-13994               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2510
+13994               * File  smhp_game_50.s  2510
 13995
-13996               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2511
+13996               * File  smhp_game_50.s  2511
 13997 04651 3170            LCHEX   07
 13998 04655 AE5             B=C     B
-13999               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2512
+13999               * File  smhp_game_50.s  2512
 14000
-14001               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2513
+14001               * File  smhp_game_50.s  2513
 14002 04658 D0              A=0     A
 14003 0465A D2              C=0     A
-14004               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2514
+14004               * File  smhp_game_50.s  2514
 14005 0465C 1B65108         D0=(5)  (=SX)
 14006 04663 14A             A=DAT0  B
-14007               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2515
+14007               * File  smhp_game_50.s  2515
 14008 04666 3106            LCHEX   60
-14009               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2516
+14009               * File  smhp_game_50.s  2516
 14010 0466A 9E6             ?A>C    B
 14011 0466D 21              SKIPYES{
-14012               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2517
+14012               * File  smhp_game_50.s  2517
 14013 0466F 1BB5108         D0=(5)  (=SY)
 14014 04676 14E             C=DAT0  B
-14015               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2518
+14015               * File  smhp_game_50.s  2518
 14016 04679 8E995D          GOSUBL  =DISP.A.C.R4.B
-14017               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2519
-14018               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2520
+14017               * File  smhp_game_50.s  2519
+14018               * File  smhp_game_50.s  2520
 14019
-14020               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2521
+14020               * File  smhp_game_50.s  2521
 14021                       }
 14022 0467F 868             ?ST=0   8
 14023 04682 00              RTNYES
-14024               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2522
+14024               * File  smhp_game_50.s  2522
 14025
-14026               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2523
-14027               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2524
+14026               * File  smhp_game_50.s  2523
+14027               * File  smhp_game_50.s  2524
 14028 04684 866             ?ST=0   6
 14029 04687 62              SKIPYES{
-14030               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2525
-14031               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2526
+14030               * File  smhp_game_50.s  2525
+14031               * File  smhp_game_50.s  2526
 14032 04689 8EFEDD          GOSUBL  =MURD_T
-14033               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2527
-14034               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2528
+14033               * File  smhp_game_50.s  2527
+14034               * File  smhp_game_50.s  2528
 14035 0468F 590             SKIPNC{
-14036               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2529
+14036               * File  smhp_game_50.s  2529
 14037 04692 846             ST=0    6
 14038 04695 6340            EXIT2
-14039               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2530
-14040               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2531
+14039               * File  smhp_game_50.s  2530
+14040               * File  smhp_game_50.s  2531
 14041                       }
 14042 04699 1B65108         D0=(5)  (=SX)
 14043 046A0 14A             A=DAT0  B
-14044               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2532
-14045               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2533
-14046               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2534
-14047               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2535
-14048               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2536
+14044               * File  smhp_game_50.s  2532
+14045               * File  smhp_game_50.s  2533
+14046               * File  smhp_game_50.s  2534
+14047               * File  smhp_game_50.s  2535
+14048               * File  smhp_game_50.s  2536
 14049 046A3 B64             A=A+    1       B
-14050               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2537
+14050               * File  smhp_game_50.s  2537
 14051 046A6 148             DAT0=A  B
-14052               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2538
-14053               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2539
-14054               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2540
+14052               * File  smhp_game_50.s  2538
+14053               * File  smhp_game_50.s  2539
+14054               * File  smhp_game_50.s  2540
 14055 046A9 6F20            }SKELSE{
-14056               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2541
-14057               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2542
+14056               * File  smhp_game_50.s  2541
+14057               * File  smhp_game_50.s  2542
 14058 046AD 8E17ED          GOSUBL  =MURG_T
-14059               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2543
-14060               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2544
+14059               * File  smhp_game_50.s  2543
+14060               * File  smhp_game_50.s  2544
 14061 046B3 590             SKIPNC{
-14062               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2545
+14062               * File  smhp_game_50.s  2545
 14063 046B6 856             ST=1    6
 14064 046B9 6F10            EXIT2
-14065               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2546
-14066               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2547
+14065               * File  smhp_game_50.s  2546
+14066               * File  smhp_game_50.s  2547
 14067                       }
 14068 046BD 1B65108         D0=(5)  (=SX)
 14069 046C4 14A             A=DAT0  B
-14070               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2548
-14071               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2549
+14070               * File  smhp_game_50.s  2548
+14071               * File  smhp_game_50.s  2549
 14072 046C7 96C             ?A#0    B
 14073 046CA 90              SKIPYES{
-14074               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2550
+14074               * File  smhp_game_50.s  2550
 14075 046CC 856             ST=1    6
 14076 046CF 6900            EXIT2
-14077               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2551
-14078               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2552
+14077               * File  smhp_game_50.s  2551
+14078               * File  smhp_game_50.s  2552
 14079                       }
 14080 046D3 A6C             A=A-    1       B
-14081               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2553
+14081               * File  smhp_game_50.s  2553
 14082 046D6 148             DAT0=A  B
-14083               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2554
-14084               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2555
+14083               * File  smhp_game_50.s  2554
+14084               * File  smhp_game_50.s  2555
 14085
-14086               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2556
-14087               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2557
+14086               * File  smhp_game_50.s  2556
+14087               * File  smhp_game_50.s  2557
 14088                       }
 14089 046D9 1B65108         D0=(5)  (=SX)
 14090 046E0 14A             A=DAT0  B
-14091               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2558
+14091               * File  smhp_game_50.s  2558
 14092 046E3 1BB0108         D0=(5)  (=MX)
 14093 046EA 14E             C=DAT0  B
-14094               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2559
+14094               * File  smhp_game_50.s  2559
 14095                       {
-14096               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2560
+14096               * File  smhp_game_50.s  2560
 14097 046ED 818623          C=C+    4       B
 14098 046F3 9E6             ?C<A    B
 14099 046F6 37              EXIT
-14100               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2561
+14100               * File  smhp_game_50.s  2561
 14101 046F8 818607          A=A+    8       B
 14102 046FE 9E2             ?C>A    B
 14103 04701 86              EXIT
-14104               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2562
+14104               * File  smhp_game_50.s  2562
 14105
-14106               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2563
+14106               * File  smhp_game_50.s  2563
 14107 04703 1BB5108         D0=(5)  (=SY)
 14108 0470A 14A             A=DAT0  B
-14109               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2564
+14109               * File  smhp_game_50.s  2564
 14110 0470D 1B70108         D0=(5)  (=MCLIPH)
 14111 04714 14E             C=DAT0  B
-14112               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2565
+14112               * File  smhp_game_50.s  2565
 14113 04717 A6A             A=A+C   B
-14114               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2566
+14114               * File  smhp_game_50.s  2566
 14115 0471A 1B01108         D0=(5)  (=MY)
 14116 04721 14E             C=DAT0  B
-14117               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2567
+14117               * File  smhp_game_50.s  2567
 14118
-14119               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2568
+14119               * File  smhp_game_50.s  2568
 14120 04724 818623          C=C+    4       B
 14121 0472A 9E6             ?C<A    B
 14122 0472D C3              EXIT
-14123               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2569
+14123               * File  smhp_game_50.s  2569
 14124 0472F 818607          A=A+    8       B
 14125 04735 9E2             ?C>A    B
 14126 04738 13              EXIT
-14127               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2570
-14128               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2571
+14127               * File  smhp_game_50.s  2570
+14128               * File  smhp_game_50.s  2571
 14129 0473A 6710            SKIP{
-14130               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2572
-14131               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2573
+14130               * File  smhp_game_50.s  2572
+14131               * File  smhp_game_50.s  2573
 14132 0473E 1B40108         D0=(5)  (=VIE)
 14133 04745 14A             A=DAT0  B
-14134               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2574
+14134               * File  smhp_game_50.s  2574
 14135 04748 05              SETDEC
 14136 0474A B64             A=A+    1       B
 14137 0474D 04              SETHEX
-14138               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2575
+14138               * File  smhp_game_50.s  2575
 14139 0474F 148             DAT0=A  B
-14140               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2576
-14141               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2577
-14142               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2578
+14140               * File  smhp_game_50.s  2576
+14141               * File  smhp_game_50.s  2577
+14142               * File  smhp_game_50.s  2578
 14143                       }
 14144 04752 845             ST=0    5
-14145               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2579
-14146               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2580
+14145               * File  smhp_game_50.s  2579
+14146               * File  smhp_game_50.s  2580
 14147 04755 1B00108         D0=(5)  (=FLAG01)
-14148               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2581
+14148               * File  smhp_game_50.s  2581
 14149 0475C 15A3            A=DAT0  4
-14150               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2582
+14150               * File  smhp_game_50.s  2582
 14151 04760 80850           ABIT=1  0
-14152               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2583
+14152               * File  smhp_game_50.s  2583
 14153 04765 1583            DAT0=A  4
-14154               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2584
-14155               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2585
+14154               * File  smhp_game_50.s  2584
+14155               * File  smhp_game_50.s  2585
 14156
-14157               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2586
+14157               * File  smhp_game_50.s  2586
 14158                       }
 14159 04769 8E96CD          GOSUBL  =SOL_T
-14160               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2587
-14161               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2588
+14160               * File  smhp_game_50.s  2587
+14161               * File  smhp_game_50.s  2588
 14162 0476F 422             SKIPC{
-14163               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2589
+14163               * File  smhp_game_50.s  2589
 14164 04772 1BB5108         D0=(5)  (=SY)
 14165 04779 14A             A=DAT0  B
-14166               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2590
+14166               * File  smhp_game_50.s  2590
 14167 0477C 3173            LCHEX   37
 14168 04780 9E2             ?A<C    B
 14169 04783 90              SKIPYES{
-14170               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2591
+14170               * File  smhp_game_50.s  2591
 14171 04785 845             ST=0    5
-14172               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2592
-14173               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2593
-14174               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2594
+14172               * File  smhp_game_50.s  2592
+14173               * File  smhp_game_50.s  2593
+14174               * File  smhp_game_50.s  2594
 14175 04788 6900            }SKELSE{
-14176               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2595
+14176               * File  smhp_game_50.s  2595
 14177 0478C B64             A=A+    1       B
 14178 0478F 148             DAT0=A  B
-14179               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2596
-14180               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2597
+14179               * File  smhp_game_50.s  2596
+14180               * File  smhp_game_50.s  2597
 14181                       }
-14182               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2598
+14182               * File  smhp_game_50.s  2598
 14183                       }
 14184 04792 8CCA6D          GOLONG  =FIN
-14185               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2599
+14185               * File  smhp_game_50.s  2599
 14186
-14187               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2600
+14187               * File  smhp_game_50.s  2600
 14188 04798         =DIVISION
-14189               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2601
-14190               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2602
+14189               * File  smhp_game_50.s  2601
+14190               * File  smhp_game_50.s  2602
 14191 04798 D3              D=0     A
-14192               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2603
+14192               * File  smhp_game_50.s  2603
 14193                       {
-14194               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2604
+14194               * File  smhp_game_50.s  2604
 14195 0479A 8B2             ?A<C    A
 14196 0479D E0              SKIPYES{
 14197 0479F EA              A=A-C   A
 14198 047A1 E7              D=D+    1       A
 14199 047A3 66FF            UP2
-14200               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2605
-14201               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2606
+14200               * File  smhp_game_50.s  2605
+14201               * File  smhp_game_50.s  2606
 14202 047A7 6500            }SKELSE{
 14203 047AB D8              B=A     A
-14204               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2607
+14204               * File  smhp_game_50.s  2607
 14205                       }
-14206               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2608
+14206               * File  smhp_game_50.s  2608
 14207                       }
 14208 047AD 01              RTN
-14209               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2609
+14209               * File  smhp_game_50.s  2609
 14210
-14211               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2610
+14211               * File  smhp_game_50.s  2610
 14212 047AF         =FLAGS
-14213               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2611
+14213               * File  smhp_game_50.s  2611
 14214 047AF 1B00108         D0=(5)  (=FLAG01)
 14215 047B6 15A3            A=DAT0  4
-14216               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2612
-14217               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2613
+14216               * File  smhp_game_50.s  2612
+14217               * File  smhp_game_50.s  2613
 14218 047BA 80860           ?ABIT=0 0
 14219 047BF 11              SKIPYES{
-14220               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2614
+14220               * File  smhp_game_50.s  2614
 14221 047C1 80840           ABIT=0  0
 14222 047C6 1583            DAT0=A  4
-14223               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2615
+14223               * File  smhp_game_50.s  2615
 14224 047CA 8E2EED          GOSUBL  =VIES
-14225               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2616
-14226               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2617
+14225               * File  smhp_game_50.s  2616
+14226               * File  smhp_game_50.s  2617
 14227                       }
 14228 047D0 1B00108         D0=(5)  (=FLAG01)
 14229 047D7 15A3            A=DAT0  4
-14230               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2618
-14231               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2619
+14230               * File  smhp_game_50.s  2618
+14231               * File  smhp_game_50.s  2619
 14232 047DB 80861           ?ABIT=0 1
 14233 047E0 11              SKIPYES{
-14234               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2620
+14234               * File  smhp_game_50.s  2620
 14235 047E2 80841           ABIT=0  1
 14236 047E7 1583            DAT0=A  4
-14237               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2621
+14237               * File  smhp_game_50.s  2621
 14238 047EB 8EB0FD          GOSUBL  =COINS
-14239               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2622
-14240               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2623
+14239               * File  smhp_game_50.s  2622
+14240               * File  smhp_game_50.s  2623
 14241                       }
 14242 047F1 01              RTN
-14243               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2624
+14243               * File  smhp_game_50.s  2624
 14244
-14245               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2625
+14245               * File  smhp_game_50.s  2625
 14246
-14247               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2626
+14247               * File  smhp_game_50.s  2626
 14248 047F3         LBL000
-14249               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2627
+14249               * File  smhp_game_50.s  2627
 14250 047F3 00000           CON(5)  =SEMI
-14251               * File  C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s     2628
+14251               * File  smhp_game_50.s  2628
 14252 047F8 00000           CON(5)  =@
-Saturn Assembler                                       Thu Mar 23 15:15:07 2017
+Saturn Assembler                                       Thu Mar 23 15:17:47 2017
 V3.0.9 (04/15/2007)   Symbol Table                       smhp_game_50.a Page    2
 
  @                                 Ext                   - 14252
@@ -14323,7 +14323,6 @@ V3.0.9 (04/15/2007)   Symbol Table                       smhp_game_50.a Page    
  DOCODE                            Ext                   -     6
  DOCOL                             Ext                   -     4
 =E                                 Rel   15292 #00003BBC - 12382 12374
-=ECRAN                             Abs  525965 #0008068D -    34  4770
 =FIN                               Rel    7744 #00001E40 -  6369 13100 13300
                                        13304 13736 13980 14184
 =FIXCIEL                           Rel    8733 #0000221D -  6975  5078
@@ -14401,6 +14400,7 @@ V3.0.9 (04/15/2007)   Symbol Table                       smhp_game_50.a Page    
 =OBJ.KOOPA                         Rel   16492 #0000406C - 13104  6354
 =OBJ.STAR.UP                       Rel   17978 #0000463A - 13984  6358
 =OBJ.TORTLE                        Rel   16064 #00003EC0 - 12814  6352
+=ORIGSCREEN                        Abs  525965 #0008068D -    34  4770
 =POSX                              Abs  524592 #00080130 -    76  5304  5315
                                         5333  5786  7976
 =PRES                              Rel   14321 #000037F1 - 11812 11939
@@ -15249,16 +15249,16 @@ V3.0.9 (04/15/2007)   Symbol Table                       smhp_game_50.a Page    
  lBloB1FF                          Rel   17959 #00004627 - 13963
  lBloB1FFs                         Rel   17966 #0000462E - 13969 13963
  lBloB1Fs                          Rel    5301 #000014B5 -  4956  4930
-Saturn Assembler                                       Thu Mar 23 15:15:07 2017
+Saturn Assembler                                       Thu Mar 23 15:17:47 2017
 V3.0.9 (04/15/2007)   Statistics                         smhp_game_50.a Page    3
 
 Input Parameters
 
-  Source file name is C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.a
+  Source file name is smhp_game_50.a
 
-  Listing file name is C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.l
+  Listing file name is smhp_game_50.l
 
-  Object file name is C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.o
+  Object file name is smhp_game_50.o
 
   Flags set on command line
     None
