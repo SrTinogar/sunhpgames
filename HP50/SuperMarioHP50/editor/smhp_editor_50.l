@@ -1,4 +1,4 @@
-Saturn Assembler                                       Thu Mar 23 03:04:15 2017
+Saturn Assembler                                       Thu Mar 23 03:34:39 2017
 V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    1
 
     1               * File  smhp_editor_50.s        1
@@ -7,7 +7,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
     4 00000 00000           CON(5)  =DOCOL
     5               * File  smhp_editor_50.s        3
     6 00005 00000           CON(5)  =DOCODE
-    7 0000A 68C10           REL(5)  LBL000
+    7 0000A C9F00           REL(5)  LBL000
     8               * File  smhp_editor_50.s        4
     9
    10               * File  smhp_editor_50.s        5
@@ -129,7 +129,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
   126                       }
   127 000D3 8EAE50          GOSUBL  =INI.STACK
   128               * File  smhp_editor_50.s        55
-  129 000D9 8EE791          GOSUBL  =DISP.LEVEL
+  129 000D9 8E49C0          GOSUBL  =DISP.LEVEL
   130               * File  smhp_editor_50.s        56
   131
   132               * File  smhp_editor_50.s        57
@@ -145,6036 +145,2751 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
   142               * File  smhp_editor_50.s        62
   143 000E5 8ECA20          GOSUBL  =TAB
   144               * File  smhp_editor_50.s        63
-  145 000EB 8ECFA1          GOSUBL  =TNEXT
+  145 000EB 8E21E0          GOSUBL  =TNEXT
   146               * File  smhp_editor_50.s        64
-  147 000F1 8EE4B1          GOSUBL  =TPREV
+  147 000F1 8E46E0          GOSUBL  =TPREV
   148               * File  smhp_editor_50.s        65
-  149 000F7 8EDB81          GOSUBL  =TDRAW
+  149 000F7 8E3DB0          GOSUBL  =TDRAW
   150               * File  smhp_editor_50.s        66
   151 000FD 8EB350          GOSUBL  =CUBE.P
   152               * File  smhp_editor_50.s        67
   153 00103 8E5750          GOSUBL  =CUBE.M
   154               * File  smhp_editor_50.s        68
-  155 00109 3400040         LCHEX   04000
-  156                       {
-  157 00110 CE              C=C-    1       A
-  158 00112 5DF             UPNC
-  159               * File  smhp_editor_50.s        69
-  160
+  155
+  156               * File  smhp_editor_50.s        69
+  157 00109 3400040         LCHEX   04000
+  158                       {
+  159 00110 CE              C=C-    1       A
+  160 00112 5DF             UPNC
   161               * File  smhp_editor_50.s        70
-  162                       }
-  163 00115 8EB900          GOSUBL  =JUCURSOR
-  164               * File  smhp_editor_50.s        71
-  165 0011B 8EFC00          GOSUBL  =TD
-  166 00121 8EA210          GOSUBL  =TG
-  167               * File  smhp_editor_50.s        72
-  168 00127 8EFD10          GOSUBL  =TH
-  169 0012D 8E8710          GOSUBL  =TB
-  170               * File  smhp_editor_50.s        73
-  171 00133 8E6000          GOSUBL  =TQ
-  172               * File  smhp_editor_50.s        74
-  173 00139 8CAAFF          GOLONG  =LCD
-  174               * File  smhp_editor_50.s        75
-  175
-  176               * File  smhp_editor_50.s        76
-  177 0013F         =TQ
-  178               * File  smhp_editor_50.s        77
-  179 0013F 32100           LCHEX   001
-  180 00144 8FF0200         GOSBVL  =KEY
-  181               * File  smhp_editor_50.s        78
-  182 0014B 808A0           ?CBIT=0 0
-  183 00150 00              RTNYES
-  184               * File  smhp_editor_50.s        79
-  185 00152         =QUIT
-  186               * File  smhp_editor_50.s        80
-  187 00152 32FF1           LC(3)   #1FF
-  188               * File  smhp_editor_50.s        81
-  189 00157 8FF0200         GOSBVL  =KEY
-  190               * File  smhp_editor_50.s        82
-  191 0015E 96E             ?C#0    B
-  192 00161 1F              GOYES   =QUIT
-  193               * File  smhp_editor_50.s        83
-  194
-  195               * File  smhp_editor_50.s        84
-  196               * File  smhp_editor_50.s        85
-  197 00163 8082173         LAHEX   37
-  198 0016A 1B82100         D0=(5)  (=HEADERADD)
-  199 00171 148             DAT0=A  B
-  200               * File  smhp_editor_50.s        86
-  201 00174 1BD8608         D0=(5)  #8068D
-  202 0017B 142             A=DAT0  A
-  203               * File  smhp_editor_50.s        87
-  204 0017E 1B02100         D0=(5)  (=SCREENADD)
-  205 00185 140             DAT0=A  A
-  206               * File  smhp_editor_50.s        88
-  207 00188 8F00000         GOSBVL  =GETPTRLOOP
-  208               * File  smhp_editor_50.s        89
-  209
-  210               * File  smhp_editor_50.s        90
-  211 0018F         =CL.MEM
-  212               * File  smhp_editor_50.s        91
-  213 0018F 1B00108         D0=(5)  (=EC1)
-  214 00196 142             A=DAT0  A
-  215 00199 130             D0=A
-  216               * File  smhp_editor_50.s        92
-  217 0019C 32780           LC(3)   #87
-  218               * File  smhp_editor_50.s        93
-  219 001A1 A36             C=C+C   X
-  220 001A4 AF0             A=0     W
-  221               * File  smhp_editor_50.s        94
-  222                       {
-  223 001A7 1507            DAT0=A  W
-  224 001AB 16F             D0+     16
-  225               * File  smhp_editor_50.s        95
-  226 001AE A3E             C=C-    1       X
-  227 001B1 55F             UPNC
-  228               * File  smhp_editor_50.s        96
-  229                       }
-  230 001B4 01              RTN
-  231               * File  smhp_editor_50.s        97
-  232
-  233               * File  smhp_editor_50.s        98
-  234 001B6         =JUCURSOR
-  235               * File  smhp_editor_50.s        99
-  236 001B6 870             ?ST#0   0
-  237 001B9 90              SKIPYES{
-  238 001BB 850             ST=1    0
-  239 001BE 6500            }SKELSE{
-  240 001C2 01              RTN
-  241               * File  smhp_editor_50.s        100
-  242                       }
-  243 001C4         =NCURSER
-  244               * File  smhp_editor_50.s        101
-  245 001C4 81AF10          A=R0.f  A
-  246               * File  smhp_editor_50.s        102
-  247 001CA 8E9910          GOSUBL  =XY
-  248               * File  smhp_editor_50.s        103
-  249 001D0 130             D0=A
-  250               * File  smhp_editor_50.s        104
-  251 001D3 307             LCHEX   7
-  252                       {
-  253               * File  smhp_editor_50.s        105
-  254 001D6 14A             A=DAT0  B
-  255 001D9 BEC             A=-A-1  B
-  256               * File  smhp_editor_50.s        106
-  257 001DC 148             DAT0=A  B
-  258 001DF 16F16F1         D0+     34
+  162
+  163               * File  smhp_editor_50.s        71
+  164                       }
+  165 00115 8EB900          GOSUBL  =JUCURSOR
+  166               * File  smhp_editor_50.s        72
+  167 0011B 8EFC00          GOSUBL  =TD
+  168               * File  smhp_editor_50.s        73
+  169 00121 8EA210          GOSUBL  =TG
+  170               * File  smhp_editor_50.s        74
+  171 00127 8EFD10          GOSUBL  =TH
+  172               * File  smhp_editor_50.s        75
+  173 0012D 8E8710          GOSUBL  =TB
+  174               * File  smhp_editor_50.s        76
+  175 00133 8E6000          GOSUBL  =TQ
+  176               * File  smhp_editor_50.s        77
+  177 00139 8CAAFF          GOLONG  =LCD
+  178               * File  smhp_editor_50.s        78
+  179
+  180               * File  smhp_editor_50.s        79
+  181 0013F         =TQ
+  182               * File  smhp_editor_50.s        80
+  183 0013F 32100           LCHEX   001
+  184 00144 8FF0200         GOSBVL  =KEY
+  185               * File  smhp_editor_50.s        81
+  186 0014B 808A0           ?CBIT=0 0
+  187 00150 00              RTNYES
+  188               * File  smhp_editor_50.s        82
+  189 00152         =QUIT
+  190               * File  smhp_editor_50.s        83
+  191 00152 32FF1           LC(3)   #1FF
+  192               * File  smhp_editor_50.s        84
+  193 00157 8FF0200         GOSBVL  =KEY
+  194               * File  smhp_editor_50.s        85
+  195 0015E 96E             ?C#0    B
+  196 00161 1F              GOYES   =QUIT
+  197               * File  smhp_editor_50.s        86
+  198
+  199               * File  smhp_editor_50.s        87
+  200               * File  smhp_editor_50.s        88
+  201 00163 8082173         LAHEX   37
+  202 0016A 1B82100         D0=(5)  (=HEADERADD)
+  203 00171 148             DAT0=A  B
+  204               * File  smhp_editor_50.s        89
+  205 00174 1BD8608         D0=(5)  #8068D
+  206 0017B 142             A=DAT0  A
+  207               * File  smhp_editor_50.s        90
+  208 0017E 1B02100         D0=(5)  (=SCREENADD)
+  209 00185 140             DAT0=A  A
+  210               * File  smhp_editor_50.s        91
+  211 00188 8F00000         GOSBVL  =GETPTRLOOP
+  212               * File  smhp_editor_50.s        92
+  213
+  214               * File  smhp_editor_50.s        93
+  215 0018F         =CL.MEM
+  216               * File  smhp_editor_50.s        94
+  217 0018F 1B00108         D0=(5)  (=EC1)
+  218 00196 142             A=DAT0  A
+  219 00199 130             D0=A
+  220               * File  smhp_editor_50.s        95
+  221 0019C 32780           LC(3)   #87
+  222               * File  smhp_editor_50.s        96
+  223 001A1 A36             C=C+C   X
+  224 001A4 AF0             A=0     W
+  225               * File  smhp_editor_50.s        97
+  226                       {
+  227 001A7 1507            DAT0=A  W
+  228 001AB 16F             D0+     16
+  229               * File  smhp_editor_50.s        98
+  230 001AE A3E             C=C-    1       X
+  231 001B1 55F             UPNC
+  232               * File  smhp_editor_50.s        99
+  233                       }
+  234 001B4 01              RTN
+  235               * File  smhp_editor_50.s        100
+  236
+  237               * File  smhp_editor_50.s        101
+  238 001B6         =JUCURSOR
+  239               * File  smhp_editor_50.s        102
+  240 001B6 870             ?ST#0   0
+  241 001B9 90              SKIPYES{
+  242 001BB 850             ST=1    0
+  243 001BE 6500            }SKELSE{
+  244 001C2 01              RTN
+  245               * File  smhp_editor_50.s        103
+  246                       }
+  247 001C4         =NCURSER
+  248               * File  smhp_editor_50.s        104
+  249 001C4 81AF10          A=R0.f  A
+  250               * File  smhp_editor_50.s        105
+  251 001CA 8E9910          GOSUBL  =XY
+  252               * File  smhp_editor_50.s        106
+  253 001D0 130             D0=A
+  254               * File  smhp_editor_50.s        107
+  255 001D3 307             LCHEX   7
+  256                       {
+  257               * File  smhp_editor_50.s        108
+  258 001D6 14A             A=DAT0  B
+  259 001D9 BEC             A=-A-1  B
+  260               * File  smhp_editor_50.s        109
+  261 001DC 148             DAT0=A  B
+  262 001DF 16F16F1         D0+     34
             61
-  259               * File  smhp_editor_50.s        107
-  260 001E8 A0E             C=C-    1       P
-  261 001EB 5AE             UPNC
-  262               * File  smhp_editor_50.s        108
-  263                       }
-  264 001EE 01              RTN
-  265               * File  smhp_editor_50.s        109
-  266
-  267               * File  smhp_editor_50.s        110
-  268 001F0         =TD
-  269               * File  smhp_editor_50.s        111
-  270 001F0 32040           LCHEX   040
-  271 001F5 8FF0200         GOSBVL  =KEY
-  272               * File  smhp_editor_50.s        112
-  273 001FC 808A0           ?CBIT=0 0
-  274 00201 00              RTNYES
-  275               * File  smhp_editor_50.s        113
-  276 00203 1B50108         D0=(5)  (=X)
-  277 0020A 142             A=DAT0  A
-  278               * File  smhp_editor_50.s        114
-  279 0020D 34C0000         LC(5)   12
-  280               * File  smhp_editor_50.s        115
-  281 00214 962             ?A=C    B
-  282 00217 00              RTNYES
-  283               * File  smhp_editor_50.s        116
-  284
-  285               * File  smhp_editor_50.s        117
-  286 00219 860             ?ST#1   0
-  287 0021C B0              SKIPYES{
-  288 0021E 840             ST=0    0
-  289               * File  smhp_editor_50.s        118
-  290 00221 8ED9FF          GOSUBL  =NCURSER
-  291               * File  smhp_editor_50.s        119
-  292
-  293               * File  smhp_editor_50.s        120
-  294                       }
-  295 00227 1B50108         D0=(5)  (=X)
-  296 0022E 14A             A=DAT0  B
-  297               * File  smhp_editor_50.s        121
-  298 00231 B64             A=A+    1       B
-  299               * File  smhp_editor_50.s        122
-  300 00234 148             DAT0=A  B
-  301               * File  smhp_editor_50.s        123
-  302 00237 81AF12          A=R2.f  A
-  303 0023D 818F01          A=A+    2       A
-  304 00243 81AF02          R2=A.f  A
-  305               * File  smhp_editor_50.s        124
-  306 00249 8E76FF          GOSUBL  =JUCURSOR
-  307               * File  smhp_editor_50.s        125
-  308 0024F 01              RTN
-  309               * File  smhp_editor_50.s        126
-  310
-  311               * File  smhp_editor_50.s        127
-  312 00251         =TG
-  313               * File  smhp_editor_50.s        128
-  314 00251 32040           LCHEX   040
-  315 00256 8FF0200         GOSBVL  =KEY
-  316               * File  smhp_editor_50.s        129
-  317 0025D 808A2           ?CBIT=0 2
-  318 00262 00              RTNYES
-  319               * File  smhp_editor_50.s        130
-  320 00264 1B50108         D0=(5)  (=X)
-  321 0026B 14A             A=DAT0  B
-  322               * File  smhp_editor_50.s        131
-  323 0026E 968             ?A=0    B
-  324 00271 00              RTNYES
-  325               * File  smhp_editor_50.s        132
-  326 00273 860             ?ST#1   0
-  327 00276 B0              SKIPYES{
-  328 00278 840             ST=0    0
-  329 0027B 8E34FF          GOSUBL  =NCURSER
-  330               * File  smhp_editor_50.s        133
-  331                       }
-  332 00281 1B50108         D0=(5)  (=X)
-  333 00288 14A             A=DAT0  B
-  334               * File  smhp_editor_50.s        134
-  335 0028B A6C             A=A-    1       B
-  336               * File  smhp_editor_50.s        135
-  337 0028E 148             DAT0=A  B
-  338               * File  smhp_editor_50.s        136
-  339 00291 81AF12          A=R2.f  A
-  340 00297 818F81          A=A-    2       A
-  341 0029D 81AF02          R2=A.f  A
-  342               * File  smhp_editor_50.s        137
-  343 002A3 8ED0FF          GOSUBL  =JUCURSOR
-  344               * File  smhp_editor_50.s        138
-  345 002A9 01              RTN
-  346               * File  smhp_editor_50.s        139
-  347
-  348               * File  smhp_editor_50.s        140
-  349 002AB         =TB
-  350               * File  smhp_editor_50.s        141
-  351 002AB 32040           LCHEX   040
-  352 002B0 8FF0200         GOSBVL  =KEY
-  353               * File  smhp_editor_50.s        142
-  354 002B7 808A1           ?CBIT=0 1
-  355 002BC 00              RTNYES
-  356               * File  smhp_editor_50.s        143
-  357 002BE 1BA0108         D0=(5)  (=Y)
-  358 002C5 14A             A=DAT0  B
-  359               * File  smhp_editor_50.s        144
-  360 002C8 3170            LCHEX   07
-  361 002CC 962             ?A=C    B
-  362 002CF 00              RTNYES
-  363               * File  smhp_editor_50.s        145
-  364 002D1 860             ?ST#1   0
-  365 002D4 B0              SKIPYES{
-  366 002D6 840             ST=0    0
-  367               * File  smhp_editor_50.s        146
-  368 002D9 8E5EEF          GOSUBL  =NCURSER
-  369               * File  smhp_editor_50.s        147
-  370
-  371               * File  smhp_editor_50.s        148
-  372                       }
-  373 002DF 1BA0108         D0=(5)  (=Y)
-  374 002E6 14A             A=DAT0  B
-  375               * File  smhp_editor_50.s        149
-  376 002E9 B64             A=A+    1       B
-  377 002EC 148             DAT0=A  B
-  378               * File  smhp_editor_50.s        150
-  379 002EF 81AF12          A=R2.f  A
-  380               * File  smhp_editor_50.s        151
-  381 002F5 3404100         LCHEX   00140
-  382 002FC CA              A=A+C   A
-  383               * File  smhp_editor_50.s        152
-  384 002FE 81AF02          R2=A.f  A
-  385               * File  smhp_editor_50.s        153
-  386 00304 8ECAEF          GOSUBL  =JUCURSOR
-  387               * File  smhp_editor_50.s        154
-  388 0030A 01              RTN
-  389               * File  smhp_editor_50.s        155
-  390
-  391               * File  smhp_editor_50.s        156
-  392 0030C         =TH
-  393               * File  smhp_editor_50.s        157
-  394 0030C 32040           LCHEX   040
-  395 00311 8FF0200         GOSBVL  =KEY
-  396               * File  smhp_editor_50.s        158
-  397 00318 808A3           ?CBIT=0 3
-  398 0031D 00              RTNYES
-  399               * File  smhp_editor_50.s        159
-  400 0031F 1BA0108         D0=(5)  (=Y)
-  401 00326 14A             A=DAT0  B
-  402               * File  smhp_editor_50.s        160
-  403 00329 968             ?A=0    B
-  404 0032C 00              RTNYES
-  405               * File  smhp_editor_50.s        161
-  406 0032E 860             ?ST#1   0
-  407 00331 B0              SKIPYES{
-  408 00333 840             ST=0    0
-  409               * File  smhp_editor_50.s        162
-  410 00336 8E88EF          GOSUBL  =NCURSER
-  411               * File  smhp_editor_50.s        163
-  412                       }
-  413 0033C 1BA0108         D0=(5)  (=Y)
-  414 00343 14A             A=DAT0  B
-  415               * File  smhp_editor_50.s        164
-  416 00346 A6C             A=A-    1       B
-  417 00349 148             DAT0=A  B
-  418               * File  smhp_editor_50.s        165
-  419 0034C 81AF12          A=R2.f  A
-  420               * File  smhp_editor_50.s        166
-  421 00352 3404100         LCHEX   00140
-  422 00359 EA              A=A-C   A
-  423               * File  smhp_editor_50.s        167
-  424 0035B 81AF02          R2=A.f  A
-  425               * File  smhp_editor_50.s        168
-  426 00361 8EF4EF          GOSUBL  =JUCURSOR
-  427               * File  smhp_editor_50.s        169
-  428 00367 01              RTN
-  429               * File  smhp_editor_50.s        170
-  430
-  431               * File  smhp_editor_50.s        171
-  432 00369         =XY
-  433               * File  smhp_editor_50.s        172
-  434 00369 D2              C=0     A
-  435               * File  smhp_editor_50.s        173
-  436 0036B 1B50108         D0=(5)  (=X)
-  437 00372 14E             C=DAT0  B
-  438 00375 C6              C=C+C   A
-  439               * File  smhp_editor_50.s        174
-  440 00377 CA              A=A+C   A
-  441 00379 D2              C=0     A
-  442               * File  smhp_editor_50.s        175
-  443 0037B 1BA0108         D0=(5)  (=Y)
-  444 00382 14E             C=DAT0  B
-  445 00385 D7              D=C     A
-  446               * File  smhp_editor_50.s        176
-  447 00387 F2              CSL     A
-  448 00389 CB              C=C+D   A
-  449 0038B C6              C=C+C   A
-  450               * File  smhp_editor_50.s        177
-  451 0038D C6              C=C+C   A
-  452 0038F C6              C=C+C   A
-  453 00391 C6              C=C+C   A
-  454               * File  smhp_editor_50.s        178
-  455 00393 CA              A=A+C   A
-  456               * File  smhp_editor_50.s        179
-  457 00395 01              RTN
-  458               * File  smhp_editor_50.s        180
-  459
-  460               * File  smhp_editor_50.s        181
-  461 00397         =TAB
-  462               * File  smhp_editor_50.s        182
+  263               * File  smhp_editor_50.s        110
+  264 001E8 A0E             C=C-    1       P
+  265 001EB 5AE             UPNC
+  266               * File  smhp_editor_50.s        111
+  267                       }
+  268 001EE 01              RTN
+  269               * File  smhp_editor_50.s        112
+  270
+  271               * File  smhp_editor_50.s        113
+  272 001F0         =TD
+  273               * File  smhp_editor_50.s        114
+  274 001F0 32040           LCHEX   040
+  275 001F5 8FF0200         GOSBVL  =KEY
+  276               * File  smhp_editor_50.s        115
+  277 001FC 808A0           ?CBIT=0 0
+  278 00201 00              RTNYES
+  279               * File  smhp_editor_50.s        116
+  280 00203 1B50108         D0=(5)  (=X)
+  281 0020A 142             A=DAT0  A
+  282               * File  smhp_editor_50.s        117
+  283 0020D 34C0000         LC(5)   12
+  284               * File  smhp_editor_50.s        118
+  285 00214 962             ?A=C    B
+  286 00217 00              RTNYES
+  287               * File  smhp_editor_50.s        119
+  288
+  289               * File  smhp_editor_50.s        120
+  290 00219 860             ?ST#1   0
+  291 0021C B0              SKIPYES{
+  292 0021E 840             ST=0    0
+  293               * File  smhp_editor_50.s        121
+  294 00221 8ED9FF          GOSUBL  =NCURSER
+  295               * File  smhp_editor_50.s        122
+  296
+  297               * File  smhp_editor_50.s        123
+  298                       }
+  299 00227 1B50108         D0=(5)  (=X)
+  300 0022E 14A             A=DAT0  B
+  301               * File  smhp_editor_50.s        124
+  302 00231 B64             A=A+    1       B
+  303               * File  smhp_editor_50.s        125
+  304 00234 148             DAT0=A  B
+  305               * File  smhp_editor_50.s        126
+  306 00237 81AF12          A=R2.f  A
+  307 0023D 818F01          A=A+    2       A
+  308 00243 81AF02          R2=A.f  A
+  309               * File  smhp_editor_50.s        127
+  310 00249 8E76FF          GOSUBL  =JUCURSOR
+  311               * File  smhp_editor_50.s        128
+  312 0024F 01              RTN
+  313               * File  smhp_editor_50.s        129
+  314
+  315               * File  smhp_editor_50.s        130
+  316 00251         =TG
+  317               * File  smhp_editor_50.s        131
+  318 00251 32040           LCHEX   040
+  319 00256 8FF0200         GOSBVL  =KEY
+  320               * File  smhp_editor_50.s        132
+  321 0025D 808A2           ?CBIT=0 2
+  322 00262 00              RTNYES
+  323               * File  smhp_editor_50.s        133
+  324 00264 1B50108         D0=(5)  (=X)
+  325 0026B 14A             A=DAT0  B
+  326               * File  smhp_editor_50.s        134
+  327 0026E 968             ?A=0    B
+  328 00271 00              RTNYES
+  329               * File  smhp_editor_50.s        135
+  330 00273 860             ?ST#1   0
+  331 00276 B0              SKIPYES{
+  332 00278 840             ST=0    0
+  333 0027B 8E34FF          GOSUBL  =NCURSER
+  334               * File  smhp_editor_50.s        136
+  335                       }
+  336 00281 1B50108         D0=(5)  (=X)
+  337 00288 14A             A=DAT0  B
+  338               * File  smhp_editor_50.s        137
+  339 0028B A6C             A=A-    1       B
+  340               * File  smhp_editor_50.s        138
+  341 0028E 148             DAT0=A  B
+  342               * File  smhp_editor_50.s        139
+  343 00291 81AF12          A=R2.f  A
+  344 00297 818F81          A=A-    2       A
+  345 0029D 81AF02          R2=A.f  A
+  346               * File  smhp_editor_50.s        140
+  347 002A3 8ED0FF          GOSUBL  =JUCURSOR
+  348               * File  smhp_editor_50.s        141
+  349 002A9 01              RTN
+  350               * File  smhp_editor_50.s        142
+  351
+  352               * File  smhp_editor_50.s        143
+  353 002AB         =TB
+  354               * File  smhp_editor_50.s        144
+  355 002AB 32040           LCHEX   040
+  356 002B0 8FF0200         GOSBVL  =KEY
+  357               * File  smhp_editor_50.s        145
+  358 002B7 808A1           ?CBIT=0 1
+  359 002BC 00              RTNYES
+  360               * File  smhp_editor_50.s        146
+  361 002BE 1BA0108         D0=(5)  (=Y)
+  362 002C5 14A             A=DAT0  B
+  363               * File  smhp_editor_50.s        147
+  364 002C8 3170            LCHEX   07
+  365 002CC 962             ?A=C    B
+  366 002CF 00              RTNYES
+  367               * File  smhp_editor_50.s        148
+  368 002D1 860             ?ST#1   0
+  369 002D4 B0              SKIPYES{
+  370 002D6 840             ST=0    0
+  371               * File  smhp_editor_50.s        149
+  372 002D9 8E5EEF          GOSUBL  =NCURSER
+  373               * File  smhp_editor_50.s        150
+  374
+  375               * File  smhp_editor_50.s        151
+  376                       }
+  377 002DF 1BA0108         D0=(5)  (=Y)
+  378 002E6 14A             A=DAT0  B
+  379               * File  smhp_editor_50.s        152
+  380 002E9 B64             A=A+    1       B
+  381 002EC 148             DAT0=A  B
+  382               * File  smhp_editor_50.s        153
+  383 002EF 81AF12          A=R2.f  A
+  384               * File  smhp_editor_50.s        154
+  385 002F5 3404100         LCHEX   00140
+  386 002FC CA              A=A+C   A
+  387               * File  smhp_editor_50.s        155
+  388 002FE 81AF02          R2=A.f  A
+  389               * File  smhp_editor_50.s        156
+  390 00304 8ECAEF          GOSUBL  =JUCURSOR
+  391               * File  smhp_editor_50.s        157
+  392 0030A 01              RTN
+  393               * File  smhp_editor_50.s        158
+  394
+  395               * File  smhp_editor_50.s        159
+  396 0030C         =TH
+  397               * File  smhp_editor_50.s        160
+  398 0030C 32040           LCHEX   040
+  399 00311 8FF0200         GOSBVL  =KEY
+  400               * File  smhp_editor_50.s        161
+  401 00318 808A3           ?CBIT=0 3
+  402 0031D 00              RTNYES
+  403               * File  smhp_editor_50.s        162
+  404 0031F 1BA0108         D0=(5)  (=Y)
+  405 00326 14A             A=DAT0  B
+  406               * File  smhp_editor_50.s        163
+  407 00329 968             ?A=0    B
+  408 0032C 00              RTNYES
+  409               * File  smhp_editor_50.s        164
+  410 0032E 860             ?ST#1   0
+  411 00331 B0              SKIPYES{
+  412 00333 840             ST=0    0
+  413               * File  smhp_editor_50.s        165
+  414 00336 8E88EF          GOSUBL  =NCURSER
+  415               * File  smhp_editor_50.s        166
+  416                       }
+  417 0033C 1BA0108         D0=(5)  (=Y)
+  418 00343 14A             A=DAT0  B
+  419               * File  smhp_editor_50.s        167
+  420 00346 A6C             A=A-    1       B
+  421 00349 148             DAT0=A  B
+  422               * File  smhp_editor_50.s        168
+  423 0034C 81AF12          A=R2.f  A
+  424               * File  smhp_editor_50.s        169
+  425 00352 3404100         LCHEX   00140
+  426 00359 EA              A=A-C   A
+  427               * File  smhp_editor_50.s        170
+  428 0035B 81AF02          R2=A.f  A
+  429               * File  smhp_editor_50.s        171
+  430 00361 8EF4EF          GOSUBL  =JUCURSOR
+  431               * File  smhp_editor_50.s        172
+  432 00367 01              RTN
+  433               * File  smhp_editor_50.s        173
+  434
+  435               * File  smhp_editor_50.s        174
+  436 00369         =XY
+  437               * File  smhp_editor_50.s        175
+  438 00369 D2              C=0     A
+  439               * File  smhp_editor_50.s        176
+  440 0036B 1B50108         D0=(5)  (=X)
+  441 00372 14E             C=DAT0  B
+  442 00375 C6              C=C+C   A
+  443               * File  smhp_editor_50.s        177
+  444 00377 CA              A=A+C   A
+  445 00379 D2              C=0     A
+  446               * File  smhp_editor_50.s        178
+  447 0037B 1BA0108         D0=(5)  (=Y)
+  448 00382 14E             C=DAT0  B
+  449 00385 D7              D=C     A
+  450               * File  smhp_editor_50.s        179
+  451 00387 F2              CSL     A
+  452 00389 CB              C=C+D   A
+  453 0038B C6              C=C+C   A
+  454               * File  smhp_editor_50.s        180
+  455 0038D C6              C=C+C   A
+  456 0038F C6              C=C+C   A
+  457 00391 C6              C=C+C   A
+  458               * File  smhp_editor_50.s        181
+  459 00393 CA              A=A+C   A
+  460               * File  smhp_editor_50.s        182
+  461 00395 01              RTN
+  462               * File  smhp_editor_50.s        183
   463
-  464               * File  smhp_editor_50.s        183
-  465 00397 8E0020          SKUBL{
-  466               * File  smhp_editor_50.s        184
-  467 0039D 0               NIBHEX  0
-  468 0039E F               NIBHEX  F
-  469 0039F F               NIBHEX  F
-  470 003A0 F               NIBHEX  F
-  471 003A1 F               NIBHEX  F
-  472 003A2 F               NIBHEX  F
-  473 003A3 F               NIBHEX  F
-  474 003A4 7               NIBHEX  7
-  475 003A5 0               NIBHEX  0
-  476 003A6 1               NIBHEX  1
-  477 003A7 0               NIBHEX  0
-  478 003A8 0               NIBHEX  0
-  479 003A9 0               NIBHEX  0
-  480 003AA 0               NIBHEX  0
-  481 003AB 0               NIBHEX  0
-  482 003AC 4               NIBHEX  4
-  483 003AD 0               NIBHEX  0
-  484 003AE 1               NIBHEX  1
-  485 003AF 0               NIBHEX  0
-  486 003B0 0               NIBHEX  0
-  487 003B1 0               NIBHEX  0
-  488 003B2 0               NIBHEX  0
-  489 003B3 8               NIBHEX  8
-  490 003B4 4               NIBHEX  4
-  491 003B5 0               NIBHEX  0
-  492 003B6 1               NIBHEX  1
-  493 003B7 5               NIBHEX  5
-  494 003B8 4               NIBHEX  4
-  495 003B9 6               NIBHEX  6
-  496 003BA 2               NIBHEX  2
-  497 003BB B               NIBHEX  B
-  498 003BC 4               NIBHEX  4
-  499 003BD 0               NIBHEX  0
-  500 003BE 9               NIBHEX  9
-  501 003BF A               NIBHEX  A
-  502 003C0 A               NIBHEX  A
-  503 003C1 A               NIBHEX  A
-  504 003C2 8               NIBHEX  8
-  505 003C3 2               NIBHEX  2
-  506 003C4 4               NIBHEX  4
-  507 003C5 0               NIBHEX  0
-  508 003C6 9               NIBHEX  9
-  509 003C7 8               NIBHEX  8
-  510 003C8 E               NIBHEX  E
-  511 003C9 6               NIBHEX  6
-  512 003CA A               NIBHEX  A
-  513 003CB 2               NIBHEX  2
-  514 003CC 4               NIBHEX  4
-  515 003CD 0               NIBHEX  0
-  516 003CE 9               NIBHEX  9
-  517 003CF 8               NIBHEX  8
-  518 003D0 A               NIBHEX  A
-  519 003D1 A               NIBHEX  A
-  520 003D2 A               NIBHEX  A
-  521 003D3 1               NIBHEX  1
-  522 003D4 4               NIBHEX  4
-  523 003D5 0               NIBHEX  0
-  524 003D6 1               NIBHEX  1
-  525 003D7 0               NIBHEX  0
-  526 003D8 0               NIBHEX  0
-  527 003D9 0               NIBHEX  0
-  528 003DA 0               NIBHEX  0
-  529 003DB 0               NIBHEX  0
-  530 003DC 4               NIBHEX  4
-  531 003DD 0               NIBHEX  0
-  532 003DE 1               NIBHEX  1
-  533 003DF B               NIBHEX  B
-  534 003E0 9               NIBHEX  9
-  535 003E1 2               NIBHEX  2
-  536 003E2 6               NIBHEX  6
-  537 003E3 3               NIBHEX  3
-  538 003E4 4               NIBHEX  4
-  539 003E5 0               NIBHEX  0
-  540 003E6 9               NIBHEX  9
-  541 003E7 B               NIBHEX  B
-  542 003E8 2               NIBHEX  2
-  543 003E9 6               NIBHEX  6
-  544 003EA 5               NIBHEX  5
-  545 003EB 5               NIBHEX  5
-  546 003EC 4               NIBHEX  4
-  547 003ED 0               NIBHEX  0
-  548 003EE 9               NIBHEX  9
-  549 003EF 8               NIBHEX  8
-  550 003F0 A               NIBHEX  A
-  551 003F1 2               NIBHEX  2
-  552 003F2 5               NIBHEX  5
-  553 003F3 3               NIBHEX  3
-  554 003F4 4               NIBHEX  4
-  555 003F5 0               NIBHEX  0
-  556 003F6 1               NIBHEX  1
-  557 003F7 B               NIBHEX  B
-  558 003F8 9               NIBHEX  9
-  559 003F9 4               NIBHEX  4
-  560 003FA 3               NIBHEX  3
-  561 003FB 5               NIBHEX  5
-  562 003FC 4               NIBHEX  4
-  563 003FD 0               NIBHEX  0
-  564 003FE 1               NIBHEX  1
-  565 003FF 0               NIBHEX  0
-  566 00400 0               NIBHEX  0
-  567 00401 0               NIBHEX  0
-  568 00402 0               NIBHEX  0
-  569 00403 0               NIBHEX  0
-  570 00404 4               NIBHEX  4
-  571 00405 0               NIBHEX  0
-  572 00406 1               NIBHEX  1
-  573 00407 0               NIBHEX  0
-  574 00408 0               NIBHEX  0
-  575 00409 0               NIBHEX  0
-  576 0040A 0               NIBHEX  0
-  577 0040B 0               NIBHEX  0
-  578 0040C 4               NIBHEX  4
-  579 0040D 0               NIBHEX  0
-  580 0040E 9               NIBHEX  9
-  581 0040F F               NIBHEX  F
-  582 00410 F               NIBHEX  F
-  583 00411 F               NIBHEX  F
-  584 00412 F               NIBHEX  F
-  585 00413 F               NIBHEX  F
-  586 00414 4               NIBHEX  4
-  587 00415 0               NIBHEX  0
-  588 00416 1               NIBHEX  1
-  589 00417 0               NIBHEX  0
-  590 00418 0               NIBHEX  0
-  591 00419 0               NIBHEX  0
-  592 0041A 0               NIBHEX  0
-  593 0041B 0               NIBHEX  0
-  594 0041C 4               NIBHEX  4
-  595 0041D 0               NIBHEX  0
-  596 0041E 5               NIBHEX  5
-  597 0041F 1               NIBHEX  1
-  598 00420 0               NIBHEX  0
-  599 00421 0               NIBHEX  0
-  600 00422 0               NIBHEX  0
-  601 00423 0               NIBHEX  0
-  602 00424 4               NIBHEX  4
-  603 00425 0               NIBHEX  0
-  604 00426 5               NIBHEX  5
-  605 00427 5               NIBHEX  5
-  606 00428 0               NIBHEX  0
-  607 00429 0               NIBHEX  0
-  608 0042A 0               NIBHEX  0
-  609 0042B 0               NIBHEX  0
-  610 0042C 4               NIBHEX  4
-  611 0042D 0               NIBHEX  0
-  612 0042E 9               NIBHEX  9
-  613 0042F 0               NIBHEX  0
-  614 00430 0               NIBHEX  0
-  615 00431 0               NIBHEX  0
-  616 00432 0               NIBHEX  0
-  617 00433 0               NIBHEX  0
-  618 00434 4               NIBHEX  4
-  619 00435 0               NIBHEX  0
-  620 00436 5               NIBHEX  5
-  621 00437 5               NIBHEX  5
-  622 00438 0               NIBHEX  0
-  623 00439 0               NIBHEX  0
-  624 0043A 0               NIBHEX  0
-  625 0043B 0               NIBHEX  0
-  626 0043C 4               NIBHEX  4
-  627 0043D 0               NIBHEX  0
-  628 0043E 5               NIBHEX  5
-  629 0043F 1               NIBHEX  1
-  630 00440 0               NIBHEX  0
-  631 00441 0               NIBHEX  0
-  632 00442 0               NIBHEX  0
-  633 00443 0               NIBHEX  0
-  634 00444 4               NIBHEX  4
-  635 00445 0               NIBHEX  0
-  636 00446 1               NIBHEX  1
-  637 00447 0               NIBHEX  0
-  638 00448 0               NIBHEX  0
-  639 00449 0               NIBHEX  0
-  640 0044A 0               NIBHEX  0
-  641 0044B 0               NIBHEX  0
-  642 0044C 4               NIBHEX  4
-  643 0044D 0               NIBHEX  0
-  644 0044E 9               NIBHEX  9
-  645 0044F F               NIBHEX  F
-  646 00450 F               NIBHEX  F
-  647 00451 F               NIBHEX  F
-  648 00452 F               NIBHEX  F
-  649 00453 F               NIBHEX  F
-  650 00454 4               NIBHEX  4
-  651 00455 0               NIBHEX  0
-  652 00456 1               NIBHEX  1
-  653 00457 0               NIBHEX  0
-  654 00458 0               NIBHEX  0
-  655 00459 0               NIBHEX  0
-  656 0045A 0               NIBHEX  0
-  657 0045B 0               NIBHEX  0
-  658 0045C 4               NIBHEX  4
-  659 0045D 0               NIBHEX  0
-  660 0045E 5               NIBHEX  5
-  661 0045F 1               NIBHEX  1
-  662 00460 0               NIBHEX  0
-  663 00461 0               NIBHEX  0
-  664 00462 0               NIBHEX  0
-  665 00463 0               NIBHEX  0
-  666 00464 4               NIBHEX  4
-  667 00465 0               NIBHEX  0
-  668 00466 5               NIBHEX  5
-  669 00467 5               NIBHEX  5
-  670 00468 0               NIBHEX  0
-  671 00469 0               NIBHEX  0
-  672 0046A 0               NIBHEX  0
-  673 0046B 0               NIBHEX  0
-  674 0046C 4               NIBHEX  4
-  675 0046D 0               NIBHEX  0
-  676 0046E 9               NIBHEX  9
-  677 0046F 0               NIBHEX  0
-  678 00470 0               NIBHEX  0
-  679 00471 0               NIBHEX  0
-  680 00472 0               NIBHEX  0
-  681 00473 0               NIBHEX  0
-  682 00474 4               NIBHEX  4
-  683 00475 0               NIBHEX  0
-  684 00476 9               NIBHEX  9
-  685 00477 4               NIBHEX  4
-  686 00478 0               NIBHEX  0
-  687 00479 0               NIBHEX  0
-  688 0047A 0               NIBHEX  0
-  689 0047B 0               NIBHEX  0
-  690 0047C 4               NIBHEX  4
-  691 0047D 0               NIBHEX  0
-  692 0047E 9               NIBHEX  9
-  693 0047F 0               NIBHEX  0
-  694 00480 0               NIBHEX  0
-  695 00481 0               NIBHEX  0
-  696 00482 0               NIBHEX  0
-  697 00483 0               NIBHEX  0
-  698 00484 4               NIBHEX  4
-  699 00485 0               NIBHEX  0
-  700 00486 1               NIBHEX  1
-  701 00487 0               NIBHEX  0
-  702 00488 0               NIBHEX  0
-  703 00489 0               NIBHEX  0
-  704 0048A 0               NIBHEX  0
-  705 0048B 0               NIBHEX  0
-  706 0048C 4               NIBHEX  4
-  707 0048D 0               NIBHEX  0
-  708 0048E 9               NIBHEX  9
-  709 0048F F               NIBHEX  F
-  710 00490 F               NIBHEX  F
-  711 00491 F               NIBHEX  F
-  712 00492 F               NIBHEX  F
-  713 00493 F               NIBHEX  F
-  714 00494 4               NIBHEX  4
-  715 00495 0               NIBHEX  0
-  716 00496 1               NIBHEX  1
-  717 00497 0               NIBHEX  0
-  718 00498 0               NIBHEX  0
-  719 00499 0               NIBHEX  0
-  720 0049A 0               NIBHEX  0
-  721 0049B 0               NIBHEX  0
-  722 0049C 4               NIBHEX  4
-  723 0049D 0               NIBHEX  0
-  724 0049E 9               NIBHEX  9
-  725 0049F 5               NIBHEX  5
-  726 004A0 7               NIBHEX  7
-  727 004A1 0               NIBHEX  0
-  728 004A2 0               NIBHEX  0
-  729 004A3 0               NIBHEX  0
-  730 004A4 4               NIBHEX  4
-  731 004A5 0               NIBHEX  0
-  732 004A6 5               NIBHEX  5
-  733 004A7 0               NIBHEX  0
-  734 004A8 4               NIBHEX  4
-  735 004A9 1               NIBHEX  1
-  736 004AA 0               NIBHEX  0
-  737 004AB 0               NIBHEX  0
-  738 004AC 4               NIBHEX  4
-  739 004AD 0               NIBHEX  0
-  740 004AE D               NIBHEX  D
-  741 004AF 5               NIBHEX  5
-  742 004B0 2               NIBHEX  2
-  743 004B1 0               NIBHEX  0
-  744 004B2 0               NIBHEX  0
-  745 004B3 0               NIBHEX  0
-  746 004B4 4               NIBHEX  4
-  747 004B5 0               NIBHEX  0
-  748 004B6 1               NIBHEX  1
-  749 004B7 5               NIBHEX  5
-  750 004B8 1               NIBHEX  1
-  751 004B9 1               NIBHEX  1
-  752 004BA 0               NIBHEX  0
-  753 004BB 0               NIBHEX  0
-  754 004BC 4               NIBHEX  4
-  755 004BD 0               NIBHEX  0
-  756 004BE D               NIBHEX  D
-  757 004BF 4               NIBHEX  4
-  758 004C0 7               NIBHEX  7
-  759 004C1 0               NIBHEX  0
-  760 004C2 0               NIBHEX  0
-  761 004C3 0               NIBHEX  0
-  762 004C4 4               NIBHEX  4
-  763 004C5 0               NIBHEX  0
-  764 004C6 1               NIBHEX  1
-  765 004C7 0               NIBHEX  0
-  766 004C8 0               NIBHEX  0
-  767 004C9 0               NIBHEX  0
-  768 004CA 0               NIBHEX  0
-  769 004CB 0               NIBHEX  0
-  770 004CC 4               NIBHEX  4
-  771 004CD 0               NIBHEX  0
-  772 004CE 9               NIBHEX  9
-  773 004CF F               NIBHEX  F
-  774 004D0 F               NIBHEX  F
-  775 004D1 F               NIBHEX  F
-  776 004D2 F               NIBHEX  F
-  777 004D3 F               NIBHEX  F
-  778 004D4 4               NIBHEX  4
-  779 004D5 0               NIBHEX  0
-  780 004D6 1               NIBHEX  1
-  781 004D7 0               NIBHEX  0
-  782 004D8 0               NIBHEX  0
-  783 004D9 0               NIBHEX  0
-  784 004DA 0               NIBHEX  0
-  785 004DB 0               NIBHEX  0
-  786 004DC 4               NIBHEX  4
-  787 004DD 0               NIBHEX  0
-  788 004DE D               NIBHEX  D
-  789 004DF 4               NIBHEX  4
-  790 004E0 7               NIBHEX  7
-  791 004E1 0               NIBHEX  0
-  792 004E2 0               NIBHEX  0
-  793 004E3 0               NIBHEX  0
-  794 004E4 4               NIBHEX  4
-  795 004E5 0               NIBHEX  0
-  796 004E6 5               NIBHEX  5
-  797 004E7 1               NIBHEX  1
-  798 004E8 2               NIBHEX  2
-  799 004E9 1               NIBHEX  1
-  800 004EA 0               NIBHEX  0
-  801 004EB 0               NIBHEX  0
-  802 004EC 4               NIBHEX  4
-  803 004ED 0               NIBHEX  0
-  804 004EE D               NIBHEX  D
-  805 004EF 5               NIBHEX  5
-  806 004F0 2               NIBHEX  2
-  807 004F1 0               NIBHEX  0
-  808 004F2 0               NIBHEX  0
-  809 004F3 0               NIBHEX  0
-  810 004F4 4               NIBHEX  4
-  811 004F5 0               NIBHEX  0
-  812 004F6 5               NIBHEX  5
-  813 004F7 4               NIBHEX  4
-  814 004F8 2               NIBHEX  2
-  815 004F9 1               NIBHEX  1
-  816 004FA 0               NIBHEX  0
-  817 004FB 0               NIBHEX  0
-  818 004FC 4               NIBHEX  4
-  819 004FD 0               NIBHEX  0
-  820 004FE 5               NIBHEX  5
-  821 004FF 4               NIBHEX  4
-  822 00500 2               NIBHEX  2
-  823 00501 0               NIBHEX  0
-  824 00502 0               NIBHEX  0
-  825 00503 0               NIBHEX  0
-  826 00504 4               NIBHEX  4
-  827 00505 0               NIBHEX  0
-  828 00506 1               NIBHEX  1
-  829 00507 0               NIBHEX  0
-  830 00508 0               NIBHEX  0
-  831 00509 0               NIBHEX  0
-  832 0050A 0               NIBHEX  0
-  833 0050B 0               NIBHEX  0
-  834 0050C 4               NIBHEX  4
-  835 0050D 0               NIBHEX  0
-  836 0050E 9               NIBHEX  9
-  837 0050F F               NIBHEX  F
-  838 00510 F               NIBHEX  F
-  839 00511 F               NIBHEX  F
-  840 00512 F               NIBHEX  F
-  841 00513 F               NIBHEX  F
-  842 00514 4               NIBHEX  4
-  843 00515 0               NIBHEX  0
-  844 00516 1               NIBHEX  1
-  845 00517 0               NIBHEX  0
-  846 00518 0               NIBHEX  0
-  847 00519 0               NIBHEX  0
-  848 0051A 0               NIBHEX  0
-  849 0051B 0               NIBHEX  0
-  850 0051C 4               NIBHEX  4
-  851 0051D 0               NIBHEX  0
-  852 0051E D               NIBHEX  D
-  853 0051F 4               NIBHEX  4
-  854 00520 8               NIBHEX  8
-  855 00521 1               NIBHEX  1
-  856 00522 0               NIBHEX  0
-  857 00523 0               NIBHEX  0
-  858 00524 4               NIBHEX  4
-  859 00525 0               NIBHEX  0
-  860 00526 5               NIBHEX  5
-  861 00527 5               NIBHEX  5
-  862 00528 4               NIBHEX  4
-  863 00529 4               NIBHEX  4
-  864 0052A 0               NIBHEX  0
-  865 0052B 0               NIBHEX  0
-  866 0052C 4               NIBHEX  4
-  867 0052D 0               NIBHEX  0
-  868 0052E D               NIBHEX  D
-  869 0052F 4               NIBHEX  4
-  870 00530 4               NIBHEX  4
-  871 00531 0               NIBHEX  0
-  872 00532 0               NIBHEX  0
-  873 00533 0               NIBHEX  0
-  874 00534 4               NIBHEX  4
-  875 00535 0               NIBHEX  0
-  876 00536 5               NIBHEX  5
-  877 00537 5               NIBHEX  5
-  878 00538 4               NIBHEX  4
-  879 00539 4               NIBHEX  4
-  880 0053A 0               NIBHEX  0
-  881 0053B 0               NIBHEX  0
-  882 0053C 4               NIBHEX  4
-  883 0053D 0               NIBHEX  0
-  884 0053E D               NIBHEX  D
-  885 0053F D               NIBHEX  D
-  886 00540 9               NIBHEX  9
-  887 00541 1               NIBHEX  1
-  888 00542 0               NIBHEX  0
-  889 00543 0               NIBHEX  0
-  890 00544 4               NIBHEX  4
-  891 00545 0               NIBHEX  0
-  892 00546 1               NIBHEX  1
-  893 00547 0               NIBHEX  0
-  894 00548 0               NIBHEX  0
-  895 00549 0               NIBHEX  0
-  896 0054A 0               NIBHEX  0
-  897 0054B 0               NIBHEX  0
-  898 0054C 4               NIBHEX  4
-  899 0054D 0               NIBHEX  0
-  900 0054E 1               NIBHEX  1
-  901 0054F 0               NIBHEX  0
-  902 00550 0               NIBHEX  0
-  903 00551 0               NIBHEX  0
-  904 00552 0               NIBHEX  0
-  905 00553 0               NIBHEX  0
-  906 00554 4               NIBHEX  4
-  907 00555 0               NIBHEX  0
-  908 00556 1               NIBHEX  1
-  909 00557 0               NIBHEX  0
-  910 00558 0               NIBHEX  0
-  911 00559 0               NIBHEX  0
-  912 0055A 0               NIBHEX  0
-  913 0055B 0               NIBHEX  0
-  914 0055C 4               NIBHEX  4
-  915 0055D 0               NIBHEX  0
-  916 0055E 1               NIBHEX  1
-  917 0055F 0               NIBHEX  0
-  918 00560 0               NIBHEX  0
-  919 00561 0               NIBHEX  0
-  920 00562 0               NIBHEX  0
-  921 00563 0               NIBHEX  0
-  922 00564 4               NIBHEX  4
-  923 00565 0               NIBHEX  0
-  924 00566 1               NIBHEX  1
-  925 00567 0               NIBHEX  0
-  926 00568 0               NIBHEX  0
-  927 00569 0               NIBHEX  0
-  928 0056A 0               NIBHEX  0
-  929 0056B 0               NIBHEX  0
-  930 0056C 4               NIBHEX  4
-  931 0056D 0               NIBHEX  0
-  932 0056E 1               NIBHEX  1
-  933 0056F 0               NIBHEX  0
-  934 00570 0               NIBHEX  0
-  935 00571 0               NIBHEX  0
-  936 00572 0               NIBHEX  0
-  937 00573 0               NIBHEX  0
-  938 00574 4               NIBHEX  4
-  939 00575 0               NIBHEX  0
-  940 00576 1               NIBHEX  1
-  941 00577 0               NIBHEX  0
-  942 00578 0               NIBHEX  0
-  943 00579 0               NIBHEX  0
-  944 0057A 0               NIBHEX  0
-  945 0057B 0               NIBHEX  0
-  946 0057C 4               NIBHEX  4
-  947 0057D 0               NIBHEX  0
-  948 0057E 1               NIBHEX  1
-  949 0057F 0               NIBHEX  0
-  950 00580 0               NIBHEX  0
-  951 00581 0               NIBHEX  0
-  952 00582 0               NIBHEX  0
-  953 00583 0               NIBHEX  0
-  954 00584 4               NIBHEX  4
-  955 00585 0               NIBHEX  0
-  956 00586 1               NIBHEX  1
-  957 00587 0               NIBHEX  0
-  958 00588 0               NIBHEX  0
-  959 00589 0               NIBHEX  0
-  960 0058A 0               NIBHEX  0
-  961 0058B 0               NIBHEX  0
-  962 0058C 4               NIBHEX  4
-  963 0058D 0               NIBHEX  0
-  964 0058E 1               NIBHEX  1
-  965 0058F 0               NIBHEX  0
-  966 00590 0               NIBHEX  0
-  967 00591 0               NIBHEX  0
-  968 00592 0               NIBHEX  0
-  969 00593 0               NIBHEX  0
-  970 00594 4               NIBHEX  4
-  971 00595 0               NIBHEX  0
-  972 00596 F               NIBHEX  F
-  973 00597 F               NIBHEX  F
-  974 00598 F               NIBHEX  F
-  975 00599 F               NIBHEX  F
-  976 0059A F               NIBHEX  F
-  977 0059B F               NIBHEX  F
-  978 0059C 7               NIBHEX  7
-  979               * File  smhp_editor_50.s        185
-  980                       }
-  981 0059D 07              C=RSTK
-  982 0059F 135             D1=C
-  983               * File  smhp_editor_50.s        186
-  984
-  985               * File  smhp_editor_50.s        187
-  986 005A2 1B00108         D0=(5)  (=EC1)
-  987               * File  smhp_editor_50.s        188
-  988 005A9 142             A=DAT0  A
-  989 005AC 818F0F          A=A+    16      A
-  990               * File  smhp_editor_50.s        189
-  991 005B2 818F09          A=A+    10      A
-  992 005B8 130             D0=A
-  993 005BB 170             D1+     1
-  994               * File  smhp_editor_50.s        190
-  995 005BE 31F3            LCHEX   3F
-  996               * File  smhp_editor_50.s        191
-  997                       {
-  998               * File  smhp_editor_50.s        192
-  999 005C2 15B7            A=DAT1  8
- 1000               * File  smhp_editor_50.s        193
- 1001 005C6 1587            DAT0=A  8
- 1002 005CA 16F16F1         D0+     34
+  464               * File  smhp_editor_50.s        184
+  465 00397         =TAB
+  466               * File  smhp_editor_50.s        185
+  467
+  468               * File  smhp_editor_50.s        186
+  469               * File  smhp_editor_50.s        187
+  470 00397 8E0020          SKUBL{
+  471               * File  smhp_editor_50.s        188
+  472 0039D 0               NIBHEX  0
+  473 0039E F               NIBHEX  F
+  474 0039F F               NIBHEX  F
+  475 003A0 F               NIBHEX  F
+  476 003A1 F               NIBHEX  F
+  477 003A2 F               NIBHEX  F
+  478 003A3 F               NIBHEX  F
+  479 003A4 7               NIBHEX  7
+  480 003A5 0               NIBHEX  0
+  481 003A6 1               NIBHEX  1
+  482 003A7 0               NIBHEX  0
+  483 003A8 0               NIBHEX  0
+  484 003A9 0               NIBHEX  0
+  485 003AA 0               NIBHEX  0
+  486 003AB 0               NIBHEX  0
+  487 003AC 4               NIBHEX  4
+  488 003AD 0               NIBHEX  0
+  489 003AE 1               NIBHEX  1
+  490 003AF 0               NIBHEX  0
+  491 003B0 0               NIBHEX  0
+  492 003B1 0               NIBHEX  0
+  493 003B2 0               NIBHEX  0
+  494 003B3 8               NIBHEX  8
+  495 003B4 4               NIBHEX  4
+  496 003B5 0               NIBHEX  0
+  497 003B6 1               NIBHEX  1
+  498 003B7 5               NIBHEX  5
+  499 003B8 4               NIBHEX  4
+  500 003B9 6               NIBHEX  6
+  501 003BA 2               NIBHEX  2
+  502 003BB B               NIBHEX  B
+  503 003BC 4               NIBHEX  4
+  504 003BD 0               NIBHEX  0
+  505 003BE 9               NIBHEX  9
+  506 003BF A               NIBHEX  A
+  507 003C0 A               NIBHEX  A
+  508 003C1 A               NIBHEX  A
+  509 003C2 8               NIBHEX  8
+  510 003C3 2               NIBHEX  2
+  511 003C4 4               NIBHEX  4
+  512 003C5 0               NIBHEX  0
+  513 003C6 9               NIBHEX  9
+  514 003C7 8               NIBHEX  8
+  515 003C8 E               NIBHEX  E
+  516 003C9 6               NIBHEX  6
+  517 003CA A               NIBHEX  A
+  518 003CB 2               NIBHEX  2
+  519 003CC 4               NIBHEX  4
+  520 003CD 0               NIBHEX  0
+  521 003CE 9               NIBHEX  9
+  522 003CF 8               NIBHEX  8
+  523 003D0 A               NIBHEX  A
+  524 003D1 A               NIBHEX  A
+  525 003D2 A               NIBHEX  A
+  526 003D3 1               NIBHEX  1
+  527 003D4 4               NIBHEX  4
+  528 003D5 0               NIBHEX  0
+  529 003D6 1               NIBHEX  1
+  530 003D7 0               NIBHEX  0
+  531 003D8 0               NIBHEX  0
+  532 003D9 0               NIBHEX  0
+  533 003DA 0               NIBHEX  0
+  534 003DB 0               NIBHEX  0
+  535 003DC 4               NIBHEX  4
+  536 003DD 0               NIBHEX  0
+  537 003DE 1               NIBHEX  1
+  538 003DF B               NIBHEX  B
+  539 003E0 9               NIBHEX  9
+  540 003E1 2               NIBHEX  2
+  541 003E2 6               NIBHEX  6
+  542 003E3 3               NIBHEX  3
+  543 003E4 4               NIBHEX  4
+  544 003E5 0               NIBHEX  0
+  545 003E6 9               NIBHEX  9
+  546 003E7 B               NIBHEX  B
+  547 003E8 2               NIBHEX  2
+  548 003E9 6               NIBHEX  6
+  549 003EA 5               NIBHEX  5
+  550 003EB 5               NIBHEX  5
+  551 003EC 4               NIBHEX  4
+  552 003ED 0               NIBHEX  0
+  553 003EE 9               NIBHEX  9
+  554 003EF 8               NIBHEX  8
+  555 003F0 A               NIBHEX  A
+  556 003F1 2               NIBHEX  2
+  557 003F2 5               NIBHEX  5
+  558 003F3 3               NIBHEX  3
+  559 003F4 4               NIBHEX  4
+  560 003F5 0               NIBHEX  0
+  561 003F6 1               NIBHEX  1
+  562 003F7 B               NIBHEX  B
+  563 003F8 9               NIBHEX  9
+  564 003F9 4               NIBHEX  4
+  565 003FA 3               NIBHEX  3
+  566 003FB 5               NIBHEX  5
+  567 003FC 4               NIBHEX  4
+  568 003FD 0               NIBHEX  0
+  569 003FE 1               NIBHEX  1
+  570 003FF 0               NIBHEX  0
+  571 00400 0               NIBHEX  0
+  572 00401 0               NIBHEX  0
+  573 00402 0               NIBHEX  0
+  574 00403 0               NIBHEX  0
+  575 00404 4               NIBHEX  4
+  576 00405 0               NIBHEX  0
+  577 00406 1               NIBHEX  1
+  578 00407 0               NIBHEX  0
+  579 00408 0               NIBHEX  0
+  580 00409 0               NIBHEX  0
+  581 0040A 0               NIBHEX  0
+  582 0040B 0               NIBHEX  0
+  583 0040C 4               NIBHEX  4
+  584 0040D 0               NIBHEX  0
+  585 0040E 9               NIBHEX  9
+  586 0040F F               NIBHEX  F
+  587 00410 F               NIBHEX  F
+  588 00411 F               NIBHEX  F
+  589 00412 F               NIBHEX  F
+  590 00413 F               NIBHEX  F
+  591 00414 4               NIBHEX  4
+  592 00415 0               NIBHEX  0
+  593 00416 1               NIBHEX  1
+  594 00417 0               NIBHEX  0
+  595 00418 0               NIBHEX  0
+  596 00419 0               NIBHEX  0
+  597 0041A 0               NIBHEX  0
+  598 0041B 0               NIBHEX  0
+  599 0041C 4               NIBHEX  4
+  600 0041D 0               NIBHEX  0
+  601 0041E 5               NIBHEX  5
+  602 0041F 1               NIBHEX  1
+  603 00420 0               NIBHEX  0
+  604 00421 0               NIBHEX  0
+  605 00422 0               NIBHEX  0
+  606 00423 0               NIBHEX  0
+  607 00424 4               NIBHEX  4
+  608 00425 0               NIBHEX  0
+  609 00426 5               NIBHEX  5
+  610 00427 5               NIBHEX  5
+  611 00428 0               NIBHEX  0
+  612 00429 0               NIBHEX  0
+  613 0042A 0               NIBHEX  0
+  614 0042B 0               NIBHEX  0
+  615 0042C 4               NIBHEX  4
+  616 0042D 0               NIBHEX  0
+  617 0042E 9               NIBHEX  9
+  618 0042F 0               NIBHEX  0
+  619 00430 0               NIBHEX  0
+  620 00431 0               NIBHEX  0
+  621 00432 0               NIBHEX  0
+  622 00433 0               NIBHEX  0
+  623 00434 4               NIBHEX  4
+  624 00435 0               NIBHEX  0
+  625 00436 5               NIBHEX  5
+  626 00437 5               NIBHEX  5
+  627 00438 0               NIBHEX  0
+  628 00439 0               NIBHEX  0
+  629 0043A 0               NIBHEX  0
+  630 0043B 0               NIBHEX  0
+  631 0043C 4               NIBHEX  4
+  632 0043D 0               NIBHEX  0
+  633 0043E 5               NIBHEX  5
+  634 0043F 1               NIBHEX  1
+  635 00440 0               NIBHEX  0
+  636 00441 0               NIBHEX  0
+  637 00442 0               NIBHEX  0
+  638 00443 0               NIBHEX  0
+  639 00444 4               NIBHEX  4
+  640 00445 0               NIBHEX  0
+  641 00446 1               NIBHEX  1
+  642 00447 0               NIBHEX  0
+  643 00448 0               NIBHEX  0
+  644 00449 0               NIBHEX  0
+  645 0044A 0               NIBHEX  0
+  646 0044B 0               NIBHEX  0
+  647 0044C 4               NIBHEX  4
+  648 0044D 0               NIBHEX  0
+  649 0044E 9               NIBHEX  9
+  650 0044F F               NIBHEX  F
+  651 00450 F               NIBHEX  F
+  652 00451 F               NIBHEX  F
+  653 00452 F               NIBHEX  F
+  654 00453 F               NIBHEX  F
+  655 00454 4               NIBHEX  4
+  656 00455 0               NIBHEX  0
+  657 00456 1               NIBHEX  1
+  658 00457 0               NIBHEX  0
+  659 00458 0               NIBHEX  0
+  660 00459 0               NIBHEX  0
+  661 0045A 0               NIBHEX  0
+  662 0045B 0               NIBHEX  0
+  663 0045C 4               NIBHEX  4
+  664 0045D 0               NIBHEX  0
+  665 0045E 5               NIBHEX  5
+  666 0045F 1               NIBHEX  1
+  667 00460 0               NIBHEX  0
+  668 00461 0               NIBHEX  0
+  669 00462 0               NIBHEX  0
+  670 00463 0               NIBHEX  0
+  671 00464 4               NIBHEX  4
+  672 00465 0               NIBHEX  0
+  673 00466 5               NIBHEX  5
+  674 00467 5               NIBHEX  5
+  675 00468 0               NIBHEX  0
+  676 00469 0               NIBHEX  0
+  677 0046A 0               NIBHEX  0
+  678 0046B 0               NIBHEX  0
+  679 0046C 4               NIBHEX  4
+  680 0046D 0               NIBHEX  0
+  681 0046E 9               NIBHEX  9
+  682 0046F 0               NIBHEX  0
+  683 00470 0               NIBHEX  0
+  684 00471 0               NIBHEX  0
+  685 00472 0               NIBHEX  0
+  686 00473 0               NIBHEX  0
+  687 00474 4               NIBHEX  4
+  688 00475 0               NIBHEX  0
+  689 00476 9               NIBHEX  9
+  690 00477 4               NIBHEX  4
+  691 00478 0               NIBHEX  0
+  692 00479 0               NIBHEX  0
+  693 0047A 0               NIBHEX  0
+  694 0047B 0               NIBHEX  0
+  695 0047C 4               NIBHEX  4
+  696 0047D 0               NIBHEX  0
+  697 0047E 9               NIBHEX  9
+  698 0047F 0               NIBHEX  0
+  699 00480 0               NIBHEX  0
+  700 00481 0               NIBHEX  0
+  701 00482 0               NIBHEX  0
+  702 00483 0               NIBHEX  0
+  703 00484 4               NIBHEX  4
+  704 00485 0               NIBHEX  0
+  705 00486 1               NIBHEX  1
+  706 00487 0               NIBHEX  0
+  707 00488 0               NIBHEX  0
+  708 00489 0               NIBHEX  0
+  709 0048A 0               NIBHEX  0
+  710 0048B 0               NIBHEX  0
+  711 0048C 4               NIBHEX  4
+  712 0048D 0               NIBHEX  0
+  713 0048E 9               NIBHEX  9
+  714 0048F F               NIBHEX  F
+  715 00490 F               NIBHEX  F
+  716 00491 F               NIBHEX  F
+  717 00492 F               NIBHEX  F
+  718 00493 F               NIBHEX  F
+  719 00494 4               NIBHEX  4
+  720 00495 0               NIBHEX  0
+  721 00496 1               NIBHEX  1
+  722 00497 0               NIBHEX  0
+  723 00498 0               NIBHEX  0
+  724 00499 0               NIBHEX  0
+  725 0049A 0               NIBHEX  0
+  726 0049B 0               NIBHEX  0
+  727 0049C 4               NIBHEX  4
+  728 0049D 0               NIBHEX  0
+  729 0049E 9               NIBHEX  9
+  730 0049F 5               NIBHEX  5
+  731 004A0 7               NIBHEX  7
+  732 004A1 0               NIBHEX  0
+  733 004A2 0               NIBHEX  0
+  734 004A3 0               NIBHEX  0
+  735 004A4 4               NIBHEX  4
+  736 004A5 0               NIBHEX  0
+  737 004A6 5               NIBHEX  5
+  738 004A7 0               NIBHEX  0
+  739 004A8 4               NIBHEX  4
+  740 004A9 1               NIBHEX  1
+  741 004AA 0               NIBHEX  0
+  742 004AB 0               NIBHEX  0
+  743 004AC 4               NIBHEX  4
+  744 004AD 0               NIBHEX  0
+  745 004AE D               NIBHEX  D
+  746 004AF 5               NIBHEX  5
+  747 004B0 2               NIBHEX  2
+  748 004B1 0               NIBHEX  0
+  749 004B2 0               NIBHEX  0
+  750 004B3 0               NIBHEX  0
+  751 004B4 4               NIBHEX  4
+  752 004B5 0               NIBHEX  0
+  753 004B6 1               NIBHEX  1
+  754 004B7 5               NIBHEX  5
+  755 004B8 1               NIBHEX  1
+  756 004B9 1               NIBHEX  1
+  757 004BA 0               NIBHEX  0
+  758 004BB 0               NIBHEX  0
+  759 004BC 4               NIBHEX  4
+  760 004BD 0               NIBHEX  0
+  761 004BE D               NIBHEX  D
+  762 004BF 4               NIBHEX  4
+  763 004C0 7               NIBHEX  7
+  764 004C1 0               NIBHEX  0
+  765 004C2 0               NIBHEX  0
+  766 004C3 0               NIBHEX  0
+  767 004C4 4               NIBHEX  4
+  768 004C5 0               NIBHEX  0
+  769 004C6 1               NIBHEX  1
+  770 004C7 0               NIBHEX  0
+  771 004C8 0               NIBHEX  0
+  772 004C9 0               NIBHEX  0
+  773 004CA 0               NIBHEX  0
+  774 004CB 0               NIBHEX  0
+  775 004CC 4               NIBHEX  4
+  776 004CD 0               NIBHEX  0
+  777 004CE 9               NIBHEX  9
+  778 004CF F               NIBHEX  F
+  779 004D0 F               NIBHEX  F
+  780 004D1 F               NIBHEX  F
+  781 004D2 F               NIBHEX  F
+  782 004D3 F               NIBHEX  F
+  783 004D4 4               NIBHEX  4
+  784 004D5 0               NIBHEX  0
+  785 004D6 1               NIBHEX  1
+  786 004D7 0               NIBHEX  0
+  787 004D8 0               NIBHEX  0
+  788 004D9 0               NIBHEX  0
+  789 004DA 0               NIBHEX  0
+  790 004DB 0               NIBHEX  0
+  791 004DC 4               NIBHEX  4
+  792 004DD 0               NIBHEX  0
+  793 004DE D               NIBHEX  D
+  794 004DF 4               NIBHEX  4
+  795 004E0 7               NIBHEX  7
+  796 004E1 0               NIBHEX  0
+  797 004E2 0               NIBHEX  0
+  798 004E3 0               NIBHEX  0
+  799 004E4 4               NIBHEX  4
+  800 004E5 0               NIBHEX  0
+  801 004E6 5               NIBHEX  5
+  802 004E7 1               NIBHEX  1
+  803 004E8 2               NIBHEX  2
+  804 004E9 1               NIBHEX  1
+  805 004EA 0               NIBHEX  0
+  806 004EB 0               NIBHEX  0
+  807 004EC 4               NIBHEX  4
+  808 004ED 0               NIBHEX  0
+  809 004EE D               NIBHEX  D
+  810 004EF 5               NIBHEX  5
+  811 004F0 2               NIBHEX  2
+  812 004F1 0               NIBHEX  0
+  813 004F2 0               NIBHEX  0
+  814 004F3 0               NIBHEX  0
+  815 004F4 4               NIBHEX  4
+  816 004F5 0               NIBHEX  0
+  817 004F6 5               NIBHEX  5
+  818 004F7 4               NIBHEX  4
+  819 004F8 2               NIBHEX  2
+  820 004F9 1               NIBHEX  1
+  821 004FA 0               NIBHEX  0
+  822 004FB 0               NIBHEX  0
+  823 004FC 4               NIBHEX  4
+  824 004FD 0               NIBHEX  0
+  825 004FE 5               NIBHEX  5
+  826 004FF 4               NIBHEX  4
+  827 00500 2               NIBHEX  2
+  828 00501 0               NIBHEX  0
+  829 00502 0               NIBHEX  0
+  830 00503 0               NIBHEX  0
+  831 00504 4               NIBHEX  4
+  832 00505 0               NIBHEX  0
+  833 00506 1               NIBHEX  1
+  834 00507 0               NIBHEX  0
+  835 00508 0               NIBHEX  0
+  836 00509 0               NIBHEX  0
+  837 0050A 0               NIBHEX  0
+  838 0050B 0               NIBHEX  0
+  839 0050C 4               NIBHEX  4
+  840 0050D 0               NIBHEX  0
+  841 0050E 9               NIBHEX  9
+  842 0050F F               NIBHEX  F
+  843 00510 F               NIBHEX  F
+  844 00511 F               NIBHEX  F
+  845 00512 F               NIBHEX  F
+  846 00513 F               NIBHEX  F
+  847 00514 4               NIBHEX  4
+  848 00515 0               NIBHEX  0
+  849 00516 1               NIBHEX  1
+  850 00517 0               NIBHEX  0
+  851 00518 0               NIBHEX  0
+  852 00519 0               NIBHEX  0
+  853 0051A 0               NIBHEX  0
+  854 0051B 0               NIBHEX  0
+  855 0051C 4               NIBHEX  4
+  856 0051D 0               NIBHEX  0
+  857 0051E D               NIBHEX  D
+  858 0051F 4               NIBHEX  4
+  859 00520 8               NIBHEX  8
+  860 00521 1               NIBHEX  1
+  861 00522 0               NIBHEX  0
+  862 00523 0               NIBHEX  0
+  863 00524 4               NIBHEX  4
+  864 00525 0               NIBHEX  0
+  865 00526 5               NIBHEX  5
+  866 00527 5               NIBHEX  5
+  867 00528 4               NIBHEX  4
+  868 00529 4               NIBHEX  4
+  869 0052A 0               NIBHEX  0
+  870 0052B 0               NIBHEX  0
+  871 0052C 4               NIBHEX  4
+  872 0052D 0               NIBHEX  0
+  873 0052E D               NIBHEX  D
+  874 0052F 4               NIBHEX  4
+  875 00530 4               NIBHEX  4
+  876 00531 0               NIBHEX  0
+  877 00532 0               NIBHEX  0
+  878 00533 0               NIBHEX  0
+  879 00534 4               NIBHEX  4
+  880 00535 0               NIBHEX  0
+  881 00536 5               NIBHEX  5
+  882 00537 5               NIBHEX  5
+  883 00538 4               NIBHEX  4
+  884 00539 4               NIBHEX  4
+  885 0053A 0               NIBHEX  0
+  886 0053B 0               NIBHEX  0
+  887 0053C 4               NIBHEX  4
+  888 0053D 0               NIBHEX  0
+  889 0053E D               NIBHEX  D
+  890 0053F D               NIBHEX  D
+  891 00540 9               NIBHEX  9
+  892 00541 1               NIBHEX  1
+  893 00542 0               NIBHEX  0
+  894 00543 0               NIBHEX  0
+  895 00544 4               NIBHEX  4
+  896 00545 0               NIBHEX  0
+  897 00546 1               NIBHEX  1
+  898 00547 0               NIBHEX  0
+  899 00548 0               NIBHEX  0
+  900 00549 0               NIBHEX  0
+  901 0054A 0               NIBHEX  0
+  902 0054B 0               NIBHEX  0
+  903 0054C 4               NIBHEX  4
+  904 0054D 0               NIBHEX  0
+  905 0054E 1               NIBHEX  1
+  906 0054F 0               NIBHEX  0
+  907 00550 0               NIBHEX  0
+  908 00551 0               NIBHEX  0
+  909 00552 0               NIBHEX  0
+  910 00553 0               NIBHEX  0
+  911 00554 4               NIBHEX  4
+  912 00555 0               NIBHEX  0
+  913 00556 1               NIBHEX  1
+  914 00557 0               NIBHEX  0
+  915 00558 0               NIBHEX  0
+  916 00559 0               NIBHEX  0
+  917 0055A 0               NIBHEX  0
+  918 0055B 0               NIBHEX  0
+  919 0055C 4               NIBHEX  4
+  920 0055D 0               NIBHEX  0
+  921 0055E 1               NIBHEX  1
+  922 0055F 0               NIBHEX  0
+  923 00560 0               NIBHEX  0
+  924 00561 0               NIBHEX  0
+  925 00562 0               NIBHEX  0
+  926 00563 0               NIBHEX  0
+  927 00564 4               NIBHEX  4
+  928 00565 0               NIBHEX  0
+  929 00566 1               NIBHEX  1
+  930 00567 0               NIBHEX  0
+  931 00568 0               NIBHEX  0
+  932 00569 0               NIBHEX  0
+  933 0056A 0               NIBHEX  0
+  934 0056B 0               NIBHEX  0
+  935 0056C 4               NIBHEX  4
+  936 0056D 0               NIBHEX  0
+  937 0056E 1               NIBHEX  1
+  938 0056F 0               NIBHEX  0
+  939 00570 0               NIBHEX  0
+  940 00571 0               NIBHEX  0
+  941 00572 0               NIBHEX  0
+  942 00573 0               NIBHEX  0
+  943 00574 4               NIBHEX  4
+  944 00575 0               NIBHEX  0
+  945 00576 1               NIBHEX  1
+  946 00577 0               NIBHEX  0
+  947 00578 0               NIBHEX  0
+  948 00579 0               NIBHEX  0
+  949 0057A 0               NIBHEX  0
+  950 0057B 0               NIBHEX  0
+  951 0057C 4               NIBHEX  4
+  952 0057D 0               NIBHEX  0
+  953 0057E 1               NIBHEX  1
+  954 0057F 0               NIBHEX  0
+  955 00580 0               NIBHEX  0
+  956 00581 0               NIBHEX  0
+  957 00582 0               NIBHEX  0
+  958 00583 0               NIBHEX  0
+  959 00584 4               NIBHEX  4
+  960 00585 0               NIBHEX  0
+  961 00586 1               NIBHEX  1
+  962 00587 0               NIBHEX  0
+  963 00588 0               NIBHEX  0
+  964 00589 0               NIBHEX  0
+  965 0058A 0               NIBHEX  0
+  966 0058B 0               NIBHEX  0
+  967 0058C 4               NIBHEX  4
+  968 0058D 0               NIBHEX  0
+  969 0058E 1               NIBHEX  1
+  970 0058F 0               NIBHEX  0
+  971 00590 0               NIBHEX  0
+  972 00591 0               NIBHEX  0
+  973 00592 0               NIBHEX  0
+  974 00593 0               NIBHEX  0
+  975 00594 4               NIBHEX  4
+  976 00595 0               NIBHEX  0
+  977 00596 F               NIBHEX  F
+  978 00597 F               NIBHEX  F
+  979 00598 F               NIBHEX  F
+  980 00599 F               NIBHEX  F
+  981 0059A F               NIBHEX  F
+  982 0059B F               NIBHEX  F
+  983 0059C 7               NIBHEX  7
+  984               * File  smhp_editor_50.s        189
+  985                       }
+  986 0059D 07              C=RSTK
+  987 0059F 135             D1=C
+  988               * File  smhp_editor_50.s        190
+  989
+  990               * File  smhp_editor_50.s        191
+  991 005A2 1B00108         D0=(5)  (=EC1)
+  992               * File  smhp_editor_50.s        192
+  993 005A9 142             A=DAT0  A
+  994 005AC 818F0F          A=A+    16      A
+  995               * File  smhp_editor_50.s        193
+  996 005B2 818F09          A=A+    10      A
+  997 005B8 130             D0=A
+  998 005BB 170             D1+     1
+  999               * File  smhp_editor_50.s        194
+ 1000 005BE 31F3            LCHEX   3F
+ 1001               * File  smhp_editor_50.s        195
+ 1002                       {
+ 1003               * File  smhp_editor_50.s        196
+ 1004 005C2 15B7            A=DAT1  8
+ 1005               * File  smhp_editor_50.s        197
+ 1006 005C6 1587            DAT0=A  8
+ 1007 005CA 16F16F1         D0+     34
             61
- 1003               * File  smhp_editor_50.s        194
- 1004 005D3 177             D1+     8
- 1005 005D6 A6E             C=C-    1       B
- 1006 005D9 58E             UPNC
- 1007               * File  smhp_editor_50.s        195
- 1008               * File  smhp_editor_50.s        196
- 1009
- 1010               * File  smhp_editor_50.s        197
- 1011                       }
- 1012 005DC 8E0200          GOSUBL  =CUBE
- 1013               * File  smhp_editor_50.s        198
- 1014 005E2 8E4C11          GOSUBL  =D.BLOC
- 1015               * File  smhp_editor_50.s        199
- 1016 005E8 8EA821          GOSUBL  =D.SIZE
- 1017               * File  smhp_editor_50.s        200
- 1018 005EE 8EFB21          GOSUBL  =D.PIT
- 1019               * File  smhp_editor_50.s        201
- 1020 005F4 8EDE11          GOSUBL  =D.X
- 1021               * File  smhp_editor_50.s        202
- 1022 005FA 8ED321          GOSUBL  =D.Y
- 1023               * File  smhp_editor_50.s        203
- 1024
- 1025               * File  smhp_editor_50.s        204
- 1026 00600 01              RTN
- 1027               * File  smhp_editor_50.s        205
- 1028
- 1029               * File  smhp_editor_50.s        206
- 1030 00602         =CUBE
- 1031               * File  smhp_editor_50.s        207
- 1032 00602 81AF13          A=R3.f  A
- 1033 00608 131             D1=A
- 1034               * File  smhp_editor_50.s        208
- 1035 0060B 1B00108         D0=(5)  (=EC1)
- 1036 00612 142             A=DAT0  A
- 1037               * File  smhp_editor_50.s        209
- 1038 00615 3494700         LCHEX   00749
- 1039 0061C CA              A=A+C   A
- 1040 0061E 130             D0=A
- 1041               * File  smhp_editor_50.s        210
- 1042 00621 307             LCHEX   7
- 1043               * File  smhp_editor_50.s        211
- 1044                       {
- 1045               * File  smhp_editor_50.s        212
- 1046 00624 14B             A=DAT1  B
- 1047               * File  smhp_editor_50.s        213
- 1048 00627 148             DAT0=A  B
- 1049 0062A 16F16F1         D0+     34
+ 1008               * File  smhp_editor_50.s        198
+ 1009 005D3 177             D1+     8
+ 1010 005D6 A6E             C=C-    1       B
+ 1011 005D9 58E             UPNC
+ 1012               * File  smhp_editor_50.s        199
+ 1013               * File  smhp_editor_50.s        200
+ 1014
+ 1015               * File  smhp_editor_50.s        201
+ 1016                       }
+ 1017 005DC 8E0200          GOSUBL  =CUBE
+ 1018               * File  smhp_editor_50.s        202
+ 1019 005E2 8EAD40          GOSUBL  =D.BLOC
+ 1020               * File  smhp_editor_50.s        203
+ 1021 005E8 8E0A50          GOSUBL  =D.SIZE
+ 1022               * File  smhp_editor_50.s        204
+ 1023 005EE 8E5D50          GOSUBL  =D.PIT
+ 1024               * File  smhp_editor_50.s        205
+ 1025 005F4 8E3050          GOSUBL  =D.X
+ 1026               * File  smhp_editor_50.s        206
+ 1027 005FA 8E3550          GOSUBL  =D.Y
+ 1028               * File  smhp_editor_50.s        207
+ 1029
+ 1030               * File  smhp_editor_50.s        208
+ 1031 00600 01              RTN
+ 1032               * File  smhp_editor_50.s        209
+ 1033
+ 1034               * File  smhp_editor_50.s        210
+ 1035 00602         =CUBE
+ 1036               * File  smhp_editor_50.s        211
+ 1037               * File  smhp_editor_50.s        212
+ 1038 00602 81AF13          A=R3.f  A
+ 1039 00608 131             D1=A
+ 1040               * File  smhp_editor_50.s        213
+ 1041 0060B 1B00108         D0=(5)  (=EC1)
+ 1042 00612 142             A=DAT0  A
+ 1043               * File  smhp_editor_50.s        214
+ 1044 00615 3494700         LCHEX   00749
+ 1045 0061C CA              A=A+C   A
+ 1046 0061E 130             D0=A
+ 1047               * File  smhp_editor_50.s        215
+ 1048 00621 307             LCHEX   7
+ 1049               * File  smhp_editor_50.s        216
+ 1050                       {
+ 1051               * File  smhp_editor_50.s        217
+ 1052 00624 14B             A=DAT1  B
+ 1053               * File  smhp_editor_50.s        218
+ 1054 00627 148             DAT0=A  B
+ 1055 0062A 16F16F1         D0+     34
             61
- 1050               * File  smhp_editor_50.s        214
- 1051 00633 173             D1+     4
- 1052 00636 A0E             C=C-    1       P
- 1053 00639 5AE             UPNC
- 1054               * File  smhp_editor_50.s        215
- 1055               * File  smhp_editor_50.s        216
- 1056                       }
- 1057 0063C 01              RTN
- 1058               * File  smhp_editor_50.s        217
- 1059
- 1060               * File  smhp_editor_50.s        218
- 1061 0063E         =CUBE.P
- 1062               * File  smhp_editor_50.s        219
- 1063 0063E 32100           LCHEX   001
- 1064 00643 8FF0200         GOSBVL  =KEY
- 1065               * File  smhp_editor_50.s        220
- 1066 0064A 808A1           ?CBIT=0 1
- 1067 0064F 00              RTNYES
- 1068               * File  smhp_editor_50.s        221
- 1069 00651 3402000         LCHEX   00020
- 1070               * File  smhp_editor_50.s        222
- 1071 00658 81AF13          A=R3.f  A
- 1072 0065E CA              A=A+C   A
- 1073 00660 81AF03          R3=A.f  A
- 1074               * File  smhp_editor_50.s        223
- 1075 00666 1BF0108         D0=(5)  (=B)
- 1076 0066D 14A             A=DAT0  B
- 1077               * File  smhp_editor_50.s        224
- 1078 00670 B64             A=A+    1       B
- 1079 00673 148             DAT0=A  B
- 1080               * File  smhp_editor_50.s        225
- 1081 00676 8E68FF          GOSUBL  =CUBE
- 1082               * File  smhp_editor_50.s        226
- 1083 0067C 01              RTN
- 1084               * File  smhp_editor_50.s        227
- 1085
- 1086               * File  smhp_editor_50.s        228
- 1087 0067E         =CUBE.M
- 1088               * File  smhp_editor_50.s        229
- 1089 0067E 32100           LCHEX   001
- 1090 00683 8FF0200         GOSBVL  =KEY
- 1091               * File  smhp_editor_50.s        230
- 1092 0068A 808A2           ?CBIT=0 2
- 1093 0068F 00              RTNYES
- 1094               * File  smhp_editor_50.s        231
- 1095 00691 1BF0108         D0=(5)  (=B)
- 1096 00698 14A             A=DAT0  B
- 1097               * File  smhp_editor_50.s        232
- 1098 0069B 968             ?A=0    B
- 1099 0069E 00              RTNYES
- 1100               * File  smhp_editor_50.s        233
- 1101 006A0 A6C             A=A-    1       B
- 1102 006A3 148             DAT0=A  B
- 1103               * File  smhp_editor_50.s        234
- 1104
- 1105               * File  smhp_editor_50.s        235
- 1106 006A6 3402000         LCHEX   00020
- 1107               * File  smhp_editor_50.s        236
- 1108 006AD 81AF13          A=R3.f  A
- 1109 006B3 EA              A=A-C   A
- 1110 006B5 81AF03          R3=A.f  A
- 1111               * File  smhp_editor_50.s        237
- 1112 006BB 8E14FF          GOSUBL  =CUBE
- 1113               * File  smhp_editor_50.s        238
- 1114 006C1 01              RTN
- 1115               * File  smhp_editor_50.s        239
- 1116
- 1117               * File  smhp_editor_50.s        240
- 1118 006C3         =INI.STACK
- 1119               * File  smhp_editor_50.s        241
- 1120 006C3 8F00000         GOSBVL  =GETPTR
- 1121               * File  smhp_editor_50.s        242
- 1122 006CA 8F00000         GOSBVL  =SAVPTR
- 1123               * File  smhp_editor_50.s        243
- 1124               * File  smhp_editor_50.s        244
- 1125               * File  smhp_editor_50.s        245
- 1126               * File  smhp_editor_50.s        246
- 1127
- 1128               * File  smhp_editor_50.s        247
- 1129 006D1 3460A00         LC(5)   (1283)*2
- 1130 006D8 D5              B=C     A
- 1131               * File  smhp_editor_50.s        248
- 1132
- 1133               * File  smhp_editor_50.s        249
- 1134 006DA 143             A=DAT1  A
- 1135               * File  smhp_editor_50.s        250
- 1136 006DD 8A8             ?A=0    A
- 1137 006E0 92              GOYES   =MKS
- 1138               * File  smhp_editor_50.s        251
- 1139 006E2 130             D0=A
- 1140 006E5 142             A=DAT0  A
- 1141               * File  smhp_editor_50.s        252
- 1142 006E8 34C2A20         LC(5)   #02A2C
- 1143               * File  smhp_editor_50.s        253
- 1144 006EF 8A6             ?A#C    A
- 1145 006F2 71              GOYES   =MKS
- 1146               * File  smhp_editor_50.s        254
- 1147 006F4 164             D0+     5
- 1148 006F7 142             A=DAT0  A
- 1149               * File  smhp_editor_50.s        255
- 1150 006FA 818F84          A=A-    5       A
- 1151               * File  smhp_editor_50.s        256
- 1152 00700 8A4             ?A#B    A
- 1153 00703 60              GOYES   =MKS
- 1154               * File  smhp_editor_50.s        257
- 1155
- 1156               * File  smhp_editor_50.s        258
- 1157 00705 6F60            SKIP{
- 1158               * File  smhp_editor_50.s        259
- 1159 00709         =MKS
- 1160               * File  smhp_editor_50.s        260
- 1161               * File  smhp_editor_50.s        261
- 1162 00709 D9              C=B     A
- 1163 0070B 8F00000         GOSBVL  =MAKE$N
- 1164               * File  smhp_editor_50.s        262
- 1165 00712 3535D4C         LC(6)   #4C4D53
+ 1056               * File  smhp_editor_50.s        219
+ 1057 00633 171             D1+     2
+ 1058               * File  smhp_editor_50.s        220
+ 1059 00636 A0E             C=C-    1       P
+ 1060 00639 5AE             UPNC
+ 1061               * File  smhp_editor_50.s        221
+ 1062               * File  smhp_editor_50.s        222
+ 1063                       }
+ 1064 0063C 01              RTN
+ 1065               * File  smhp_editor_50.s        223
+ 1066
+ 1067               * File  smhp_editor_50.s        224
+ 1068 0063E         =CUBE.P
+ 1069               * File  smhp_editor_50.s        225
+ 1070 0063E 32100           LCHEX   001
+ 1071 00643 8FF0200         GOSBVL  =KEY
+ 1072               * File  smhp_editor_50.s        226
+ 1073 0064A 808A1           ?CBIT=0 1
+ 1074 0064F 00              RTNYES
+ 1075               * File  smhp_editor_50.s        227
+ 1076               * File  smhp_editor_50.s        228
+ 1077 00651 3401000         LCHEX   00010
+ 1078               * File  smhp_editor_50.s        229
+ 1079 00658 81AF13          A=R3.f  A
+ 1080 0065E CA              A=A+C   A
+ 1081 00660 81AF03          R3=A.f  A
+ 1082               * File  smhp_editor_50.s        230
+ 1083 00666 1BF0108         D0=(5)  (=B)
+ 1084 0066D 14A             A=DAT0  B
+ 1085               * File  smhp_editor_50.s        231
+ 1086 00670 B64             A=A+    1       B
+ 1087 00673 148             DAT0=A  B
+ 1088               * File  smhp_editor_50.s        232
+ 1089 00676 8E68FF          GOSUBL  =CUBE
+ 1090               * File  smhp_editor_50.s        233
+ 1091 0067C 01              RTN
+ 1092               * File  smhp_editor_50.s        234
+ 1093
+ 1094               * File  smhp_editor_50.s        235
+ 1095 0067E         =CUBE.M
+ 1096               * File  smhp_editor_50.s        236
+ 1097 0067E 32100           LCHEX   001
+ 1098 00683 8FF0200         GOSBVL  =KEY
+ 1099               * File  smhp_editor_50.s        237
+ 1100 0068A 808A2           ?CBIT=0 2
+ 1101 0068F 00              RTNYES
+ 1102               * File  smhp_editor_50.s        238
+ 1103 00691 1BF0108         D0=(5)  (=B)
+ 1104 00698 14A             A=DAT0  B
+ 1105               * File  smhp_editor_50.s        239
+ 1106 0069B 968             ?A=0    B
+ 1107 0069E 00              RTNYES
+ 1108               * File  smhp_editor_50.s        240
+ 1109 006A0 A6C             A=A-    1       B
+ 1110 006A3 148             DAT0=A  B
+ 1111               * File  smhp_editor_50.s        241
+ 1112               * File  smhp_editor_50.s        242
+ 1113 006A6 3401000         LCHEX   00010
+ 1114               * File  smhp_editor_50.s        243
+ 1115 006AD 81AF13          A=R3.f  A
+ 1116 006B3 EA              A=A-C   A
+ 1117 006B5 81AF03          R3=A.f  A
+ 1118               * File  smhp_editor_50.s        244
+ 1119 006BB 8E14FF          GOSUBL  =CUBE
+ 1120               * File  smhp_editor_50.s        245
+ 1121 006C1 01              RTN
+ 1122               * File  smhp_editor_50.s        246
+ 1123
+ 1124               * File  smhp_editor_50.s        247
+ 1125 006C3         =INI.STACK
+ 1126               * File  smhp_editor_50.s        248
+ 1127 006C3 8F00000         GOSBVL  =GETPTR
+ 1128               * File  smhp_editor_50.s        249
+ 1129 006CA 8F00000         GOSBVL  =SAVPTR
+ 1130               * File  smhp_editor_50.s        250
+ 1131               * File  smhp_editor_50.s        251
+ 1132               * File  smhp_editor_50.s        252
+ 1133               * File  smhp_editor_50.s        253
+ 1134
+ 1135               * File  smhp_editor_50.s        254
+ 1136 006D1 3460A00         LC(5)   (1283)*2
+ 1137 006D8 D5              B=C     A
+ 1138               * File  smhp_editor_50.s        255
+ 1139
+ 1140               * File  smhp_editor_50.s        256
+ 1141 006DA 143             A=DAT1  A
+ 1142               * File  smhp_editor_50.s        257
+ 1143 006DD 8A8             ?A=0    A
+ 1144 006E0 92              GOYES   =MKS
+ 1145               * File  smhp_editor_50.s        258
+ 1146 006E2 130             D0=A
+ 1147 006E5 142             A=DAT0  A
+ 1148               * File  smhp_editor_50.s        259
+ 1149 006E8 34C2A20         LC(5)   #02A2C
+ 1150               * File  smhp_editor_50.s        260
+ 1151 006EF 8A6             ?A#C    A
+ 1152 006F2 71              GOYES   =MKS
+ 1153               * File  smhp_editor_50.s        261
+ 1154 006F4 164             D0+     5
+ 1155 006F7 142             A=DAT0  A
+ 1156               * File  smhp_editor_50.s        262
+ 1157 006FA 818F84          A=A-    5       A
+ 1158               * File  smhp_editor_50.s        263
+ 1159 00700 8A4             ?A#B    A
+ 1160 00703 60              GOYES   =MKS
+ 1161               * File  smhp_editor_50.s        264
+ 1162
+ 1163               * File  smhp_editor_50.s        265
+ 1164 00705 6F60            SKIP{
+ 1165               * File  smhp_editor_50.s        266
+ 1166 00709         =MKS
+ 1167               * File  smhp_editor_50.s        267
+ 1168               * File  smhp_editor_50.s        268
+ 1169 00709 D9              C=B     A
+ 1170 0070B 8F00000         GOSBVL  =MAKE$N
+ 1171               * File  smhp_editor_50.s        269
+ 1172 00712 3535D4C         LC(6)   #4C4D53
             4
- 1166 0071A 15C5            DAT0=C  6
- 1167               * File  smhp_editor_50.s        263
- 1168 0071E 132             AD0EX
- 1169 00721 818F89          A=A-    10      A
- 1170 00727 81AF00          R0=A.f  A
- 1171               * File  smhp_editor_50.s        264
- 1172 0072D 818F0F          A=A+    16      A
- 1173 00733 130             D0=A
- 1174               * File  smhp_editor_50.s        265
- 1175 00736 32F90           LC(3)   159
- 1176 0073B AF0             A=0     W
- 1177               * File  smhp_editor_50.s        266
- 1178                       {
- 1179 0073E 1507            DAT0=A  W
- 1180 00742 16F             D0+     16
- 1181               * File  smhp_editor_50.s        267
- 1182 00745 A3E             C=C-    1       X
- 1183 00748 55F             UPNC
- 1184               * File  smhp_editor_50.s        268
- 1185                       }
- 1186 0074B 8F00000         GOSBVL  =GETPTR
- 1187               * File  smhp_editor_50.s        269
- 1188 00752 81AF10          A=R0.f  A
- 1189               * File  smhp_editor_50.s        270
- 1190 00758 CF              D=D-    1       A
- 1191               * File  smhp_editor_50.s        271
- 1192 0075A 5D0             SKIPNC{
- 1193 0075D 8F00000         GOSBVL  =SAVPTR
- 1194 00764 6DE9            GOTO    =QUIT
- 1195               * File  smhp_editor_50.s        272
- 1196                       }
- 1197 00768 1C4             D1-     5
- 1198 0076B 141             DAT1=A  A
- 1199               * File  smhp_editor_50.s        273
- 1200 0076E 8F00000         GOSBVL  =SAVPTR
- 1201               * File  smhp_editor_50.s        274
- 1202               * File  smhp_editor_50.s        275
- 1203
- 1204               * File  smhp_editor_50.s        276
- 1205                       }
- 1206 00775 143             A=DAT1  A
- 1207               * File  smhp_editor_50.s        277
- 1208 00778 818F0F          A=A+    16      A
- 1209 0077E 81AF02          R2=A.f  A
- 1210               * File  smhp_editor_50.s        278
- 1211
- 1212               * File  smhp_editor_50.s        279
- 1213 00784 31D0            LC(2)   13
- 1214               * File  smhp_editor_50.s        280
- 1215 00788 1B91108         D0=(5)  (=X2)
- 1216 0078F 14C             DAT0=C  B
- 1217               * File  smhp_editor_50.s        281
+ 1173 0071A 15C5            DAT0=C  6
+ 1174               * File  smhp_editor_50.s        270
+ 1175 0071E 132             AD0EX
+ 1176 00721 818F89          A=A-    10      A
+ 1177 00727 81AF00          R0=A.f  A
+ 1178               * File  smhp_editor_50.s        271
+ 1179 0072D 818F0F          A=A+    16      A
+ 1180 00733 130             D0=A
+ 1181               * File  smhp_editor_50.s        272
+ 1182 00736 32F90           LC(3)   159
+ 1183 0073B AF0             A=0     W
+ 1184               * File  smhp_editor_50.s        273
+ 1185                       {
+ 1186 0073E 1507            DAT0=A  W
+ 1187 00742 16F             D0+     16
+ 1188               * File  smhp_editor_50.s        274
+ 1189 00745 A3E             C=C-    1       X
+ 1190 00748 55F             UPNC
+ 1191               * File  smhp_editor_50.s        275
+ 1192                       }
+ 1193 0074B 8F00000         GOSBVL  =GETPTR
+ 1194               * File  smhp_editor_50.s        276
+ 1195 00752 81AF10          A=R0.f  A
+ 1196               * File  smhp_editor_50.s        277
+ 1197 00758 CF              D=D-    1       A
+ 1198               * File  smhp_editor_50.s        278
+ 1199 0075A 5D0             SKIPNC{
+ 1200 0075D 8F00000         GOSBVL  =SAVPTR
+ 1201 00764 6DE9            GOTO    =QUIT
+ 1202               * File  smhp_editor_50.s        279
+ 1203                       }
+ 1204 00768 1C4             D1-     5
+ 1205 0076B 141             DAT1=A  A
+ 1206               * File  smhp_editor_50.s        280
+ 1207 0076E 8F00000         GOSBVL  =SAVPTR
+ 1208               * File  smhp_editor_50.s        281
+ 1209               * File  smhp_editor_50.s        282
+ 1210
+ 1211               * File  smhp_editor_50.s        283
+ 1212                       }
+ 1213 00775 143             A=DAT1  A
+ 1214               * File  smhp_editor_50.s        284
+ 1215 00778 818F0F          A=A+    16      A
+ 1216 0077E 81AF02          R2=A.f  A
+ 1217               * File  smhp_editor_50.s        285
  1218
- 1219               * File  smhp_editor_50.s        282
- 1220               * File  smhp_editor_50.s        283
- 1221               * File  smhp_editor_50.s        284
- 1222               * File  smhp_editor_50.s        285
- 1223
- 1224               * File  smhp_editor_50.s        286
- 1225               * File  smhp_editor_50.s        287
- 1226 00792 8EEFF0          SKUBL{
- 1227               * File  smhp_editor_50.s        288
- 1228               * File  smhp_editor_50.s        289
- 1229 00798 0               NIBHEX  0
- 1230 00799 0               NIBHEX  0
- 1231 0079A 0               NIBHEX  0
- 1232 0079B 0               NIBHEX  0
- 1233 0079C 0               NIBHEX  0
- 1234 0079D 0               NIBHEX  0
- 1235 0079E 0               NIBHEX  0
- 1236 0079F 0               NIBHEX  0
- 1237 007A0 0               NIBHEX  0
- 1238 007A1 0               NIBHEX  0
- 1239 007A2 0               NIBHEX  0
- 1240 007A3 0               NIBHEX  0
- 1241 007A4 0               NIBHEX  0
- 1242 007A5 0               NIBHEX  0
- 1243 007A6 0               NIBHEX  0
- 1244 007A7 0               NIBHEX  0
- 1245 007A8 0               NIBHEX  0
- 1246 007A9 0               NIBHEX  0
- 1247 007AA 0               NIBHEX  0
- 1248 007AB 0               NIBHEX  0
- 1249 007AC 0               NIBHEX  0
- 1250 007AD 0               NIBHEX  0
- 1251 007AE 0               NIBHEX  0
- 1252 007AF 0               NIBHEX  0
- 1253 007B0 0               NIBHEX  0
- 1254 007B1 0               NIBHEX  0
- 1255 007B2 0               NIBHEX  0
- 1256 007B3 0               NIBHEX  0
- 1257 007B4 0               NIBHEX  0
- 1258 007B5 0               NIBHEX  0
- 1259 007B6 0               NIBHEX  0
- 1260 007B7 0               NIBHEX  0
- 1261 007B8 0               NIBHEX  0
- 1262 007B9 0               NIBHEX  0
- 1263 007BA 0               NIBHEX  0
- 1264 007BB 0               NIBHEX  0
- 1265 007BC 0               NIBHEX  0
- 1266 007BD 0               NIBHEX  0
- 1267 007BE 0               NIBHEX  0
- 1268 007BF 0               NIBHEX  0
- 1269 007C0 0               NIBHEX  0
- 1270 007C1 0               NIBHEX  0
- 1271 007C2 0               NIBHEX  0
- 1272 007C3 0               NIBHEX  0
- 1273 007C4 0               NIBHEX  0
- 1274 007C5 0               NIBHEX  0
- 1275 007C6 0               NIBHEX  0
- 1276 007C7 0               NIBHEX  0
- 1277 007C8 0               NIBHEX  0
- 1278 007C9 0               NIBHEX  0
- 1279 007CA 0               NIBHEX  0
- 1280 007CB 0               NIBHEX  0
- 1281 007CC 0               NIBHEX  0
- 1282 007CD 0               NIBHEX  0
- 1283 007CE 0               NIBHEX  0
- 1284 007CF 0               NIBHEX  0
- 1285 007D0 0               NIBHEX  0
- 1286 007D1 0               NIBHEX  0
- 1287 007D2 0               NIBHEX  0
- 1288 007D3 0               NIBHEX  0
- 1289 007D4 0               NIBHEX  0
- 1290 007D5 0               NIBHEX  0
- 1291 007D6 0               NIBHEX  0
- 1292 007D7 0               NIBHEX  0
- 1293 007D8 0               NIBHEX  0
- 1294 007D9 0               NIBHEX  0
- 1295 007DA 0               NIBHEX  0
- 1296 007DB 0               NIBHEX  0
- 1297 007DC 0               NIBHEX  0
- 1298 007DD 0               NIBHEX  0
- 1299 007DE 0               NIBHEX  0
- 1300 007DF 0               NIBHEX  0
- 1301 007E0 0               NIBHEX  0
- 1302 007E1 0               NIBHEX  0
- 1303 007E2 0               NIBHEX  0
- 1304 007E3 0               NIBHEX  0
- 1305 007E4 0               NIBHEX  0
- 1306 007E5 0               NIBHEX  0
- 1307 007E6 0               NIBHEX  0
- 1308 007E7 0               NIBHEX  0
- 1309 007E8 0               NIBHEX  0
- 1310 007E9 0               NIBHEX  0
- 1311 007EA 0               NIBHEX  0
- 1312 007EB 0               NIBHEX  0
- 1313 007EC 0               NIBHEX  0
- 1314 007ED 0               NIBHEX  0
- 1315 007EE 0               NIBHEX  0
- 1316 007EF 0               NIBHEX  0
- 1317 007F0 0               NIBHEX  0
- 1318 007F1 0               NIBHEX  0
- 1319 007F2 0               NIBHEX  0
- 1320 007F3 0               NIBHEX  0
- 1321 007F4 0               NIBHEX  0
- 1322 007F5 0               NIBHEX  0
- 1323 007F6 0               NIBHEX  0
- 1324 007F7 0               NIBHEX  0
- 1325 007F8 0               NIBHEX  0
- 1326 007F9 0               NIBHEX  0
- 1327 007FA 0               NIBHEX  0
- 1328 007FB 0               NIBHEX  0
- 1329 007FC 0               NIBHEX  0
- 1330 007FD 0               NIBHEX  0
- 1331 007FE 0               NIBHEX  0
- 1332 007FF 0               NIBHEX  0
- 1333 00800 0               NIBHEX  0
- 1334 00801 0               NIBHEX  0
- 1335 00802 0               NIBHEX  0
- 1336 00803 0               NIBHEX  0
- 1337 00804 0               NIBHEX  0
- 1338 00805 0               NIBHEX  0
- 1339 00806 0               NIBHEX  0
- 1340 00807 0               NIBHEX  0
- 1341 00808 0               NIBHEX  0
- 1342 00809 0               NIBHEX  0
- 1343 0080A 0               NIBHEX  0
- 1344 0080B 0               NIBHEX  0
- 1345 0080C 0               NIBHEX  0
- 1346 0080D 0               NIBHEX  0
- 1347 0080E 0               NIBHEX  0
- 1348 0080F 0               NIBHEX  0
- 1349 00810 0               NIBHEX  0
- 1350 00811 0               NIBHEX  0
- 1351 00812 0               NIBHEX  0
- 1352 00813 0               NIBHEX  0
- 1353 00814 0               NIBHEX  0
- 1354 00815 0               NIBHEX  0
- 1355 00816 0               NIBHEX  0
- 1356 00817 0               NIBHEX  0
- 1357 00818 0               NIBHEX  0
- 1358 00819 0               NIBHEX  0
- 1359 0081A 0               NIBHEX  0
- 1360 0081B 0               NIBHEX  0
- 1361 0081C 0               NIBHEX  0
- 1362 0081D 0               NIBHEX  0
- 1363 0081E 0               NIBHEX  0
- 1364 0081F 0               NIBHEX  0
- 1365 00820 0               NIBHEX  0
- 1366 00821 0               NIBHEX  0
- 1367 00822 0               NIBHEX  0
- 1368 00823 0               NIBHEX  0
- 1369 00824 0               NIBHEX  0
- 1370 00825 0               NIBHEX  0
- 1371 00826 0               NIBHEX  0
- 1372 00827 0               NIBHEX  0
- 1373 00828 0               NIBHEX  0
- 1374 00829 0               NIBHEX  0
- 1375 0082A 0               NIBHEX  0
- 1376 0082B 0               NIBHEX  0
- 1377 0082C 0               NIBHEX  0
- 1378 0082D 0               NIBHEX  0
- 1379 0082E 0               NIBHEX  0
- 1380 0082F 0               NIBHEX  0
- 1381 00830 0               NIBHEX  0
- 1382 00831 0               NIBHEX  0
- 1383 00832 0               NIBHEX  0
- 1384 00833 0               NIBHEX  0
- 1385 00834 0               NIBHEX  0
- 1386 00835 0               NIBHEX  0
- 1387 00836 0               NIBHEX  0
- 1388 00837 0               NIBHEX  0
- 1389 00838 0               NIBHEX  0
- 1390 00839 0               NIBHEX  0
- 1391 0083A 0               NIBHEX  0
- 1392 0083B 0               NIBHEX  0
- 1393 0083C 0               NIBHEX  0
- 1394 0083D 0               NIBHEX  0
- 1395 0083E 0               NIBHEX  0
- 1396 0083F 0               NIBHEX  0
- 1397 00840 0               NIBHEX  0
- 1398 00841 0               NIBHEX  0
- 1399 00842 0               NIBHEX  0
- 1400 00843 0               NIBHEX  0
- 1401 00844 0               NIBHEX  0
- 1402 00845 0               NIBHEX  0
- 1403 00846 0               NIBHEX  0
- 1404 00847 0               NIBHEX  0
- 1405 00848 0               NIBHEX  0
- 1406 00849 0               NIBHEX  0
- 1407 0084A 0               NIBHEX  0
- 1408 0084B 0               NIBHEX  0
- 1409 0084C 0               NIBHEX  0
- 1410 0084D 0               NIBHEX  0
- 1411 0084E 0               NIBHEX  0
- 1412 0084F 0               NIBHEX  0
- 1413 00850 0               NIBHEX  0
- 1414 00851 0               NIBHEX  0
- 1415 00852 0               NIBHEX  0
- 1416 00853 0               NIBHEX  0
- 1417 00854 0               NIBHEX  0
- 1418 00855 0               NIBHEX  0
- 1419 00856 0               NIBHEX  0
- 1420 00857 0               NIBHEX  0
- 1421 00858 0               NIBHEX  0
- 1422 00859 0               NIBHEX  0
- 1423 0085A 0               NIBHEX  0
- 1424 0085B 0               NIBHEX  0
- 1425 0085C 0               NIBHEX  0
- 1426 0085D 0               NIBHEX  0
- 1427 0085E 0               NIBHEX  0
- 1428 0085F 0               NIBHEX  0
- 1429 00860 0               NIBHEX  0
- 1430 00861 0               NIBHEX  0
- 1431 00862 0               NIBHEX  0
- 1432 00863 0               NIBHEX  0
- 1433 00864 0               NIBHEX  0
- 1434 00865 0               NIBHEX  0
- 1435 00866 0               NIBHEX  0
- 1436 00867 0               NIBHEX  0
- 1437 00868 0               NIBHEX  0
- 1438 00869 0               NIBHEX  0
- 1439 0086A 0               NIBHEX  0
- 1440 0086B 0               NIBHEX  0
- 1441 0086C 0               NIBHEX  0
- 1442 0086D 0               NIBHEX  0
- 1443 0086E 0               NIBHEX  0
- 1444 0086F 0               NIBHEX  0
- 1445 00870 0               NIBHEX  0
- 1446 00871 0               NIBHEX  0
- 1447 00872 0               NIBHEX  0
- 1448 00873 0               NIBHEX  0
- 1449 00874 0               NIBHEX  0
- 1450 00875 0               NIBHEX  0
- 1451 00876 0               NIBHEX  0
- 1452 00877 0               NIBHEX  0
- 1453 00878 0               NIBHEX  0
- 1454 00879 0               NIBHEX  0
- 1455 0087A 0               NIBHEX  0
- 1456 0087B 0               NIBHEX  0
- 1457 0087C 0               NIBHEX  0
- 1458 0087D 0               NIBHEX  0
- 1459 0087E 0               NIBHEX  0
- 1460 0087F 0               NIBHEX  0
- 1461 00880 0               NIBHEX  0
- 1462 00881 0               NIBHEX  0
- 1463 00882 0               NIBHEX  0
- 1464 00883 0               NIBHEX  0
- 1465 00884 0               NIBHEX  0
- 1466 00885 0               NIBHEX  0
- 1467 00886 0               NIBHEX  0
- 1468 00887 0               NIBHEX  0
- 1469 00888 0               NIBHEX  0
- 1470 00889 0               NIBHEX  0
- 1471 0088A 0               NIBHEX  0
- 1472 0088B 0               NIBHEX  0
- 1473 0088C 0               NIBHEX  0
- 1474 0088D 0               NIBHEX  0
- 1475 0088E 0               NIBHEX  0
- 1476 0088F 0               NIBHEX  0
- 1477 00890 0               NIBHEX  0
- 1478 00891 0               NIBHEX  0
- 1479 00892 0               NIBHEX  0
- 1480 00893 0               NIBHEX  0
- 1481 00894 0               NIBHEX  0
- 1482 00895 0               NIBHEX  0
- 1483 00896 0               NIBHEX  0
- 1484 00897 0               NIBHEX  0
- 1485 00898 0               NIBHEX  0
- 1486 00899 0               NIBHEX  0
- 1487 0089A 0               NIBHEX  0
- 1488 0089B 0               NIBHEX  0
- 1489 0089C 0               NIBHEX  0
- 1490 0089D 0               NIBHEX  0
- 1491 0089E 0               NIBHEX  0
- 1492 0089F 0               NIBHEX  0
- 1493 008A0 0               NIBHEX  0
- 1494 008A1 0               NIBHEX  0
- 1495 008A2 0               NIBHEX  0
- 1496 008A3 0               NIBHEX  0
- 1497 008A4 0               NIBHEX  0
- 1498 008A5 0               NIBHEX  0
- 1499 008A6 0               NIBHEX  0
- 1500 008A7 0               NIBHEX  0
- 1501 008A8 E               NIBHEX  E
- 1502 008A9 7               NIBHEX  7
- 1503 008AA 0               NIBHEX  0
- 1504 008AB 0               NIBHEX  0
- 1505 008AC 0               NIBHEX  0
- 1506 008AD 0               NIBHEX  0
- 1507 008AE 0               NIBHEX  0
- 1508 008AF 0               NIBHEX  0
- 1509 008B0 0               NIBHEX  0
- 1510 008B1 0               NIBHEX  0
- 1511 008B2 0               NIBHEX  0
- 1512 008B3 0               NIBHEX  0
- 1513 008B4 0               NIBHEX  0
- 1514 008B5 0               NIBHEX  0
- 1515 008B6 0               NIBHEX  0
- 1516 008B7 0               NIBHEX  0
- 1517 008B8 0               NIBHEX  0
- 1518 008B9 0               NIBHEX  0
- 1519 008BA 0               NIBHEX  0
- 1520 008BB 0               NIBHEX  0
- 1521 008BC 0               NIBHEX  0
- 1522 008BD 0               NIBHEX  0
- 1523 008BE 0               NIBHEX  0
- 1524 008BF 0               NIBHEX  0
- 1525 008C0 0               NIBHEX  0
- 1526 008C1 0               NIBHEX  0
- 1527 008C2 0               NIBHEX  0
- 1528 008C3 0               NIBHEX  0
- 1529 008C4 0               NIBHEX  0
- 1530 008C5 0               NIBHEX  0
- 1531 008C6 0               NIBHEX  0
- 1532 008C7 0               NIBHEX  0
- 1533 008C8 0               NIBHEX  0
- 1534 008C9 0               NIBHEX  0
- 1535 008CA B               NIBHEX  B
- 1536 008CB A               NIBHEX  A
- 1537 008CC 0               NIBHEX  0
- 1538 008CD 0               NIBHEX  0
- 1539 008CE 0               NIBHEX  0
- 1540 008CF 0               NIBHEX  0
- 1541 008D0 0               NIBHEX  0
- 1542 008D1 0               NIBHEX  0
- 1543 008D2 0               NIBHEX  0
- 1544 008D3 0               NIBHEX  0
- 1545 008D4 0               NIBHEX  0
- 1546 008D5 0               NIBHEX  0
- 1547 008D6 0               NIBHEX  0
- 1548 008D7 0               NIBHEX  0
- 1549 008D8 0               NIBHEX  0
- 1550 008D9 0               NIBHEX  0
- 1551 008DA 0               NIBHEX  0
- 1552 008DB 0               NIBHEX  0
- 1553 008DC 0               NIBHEX  0
- 1554 008DD 0               NIBHEX  0
- 1555 008DE 0               NIBHEX  0
- 1556 008DF 0               NIBHEX  0
- 1557 008E0 0               NIBHEX  0
- 1558 008E1 0               NIBHEX  0
- 1559 008E2 0               NIBHEX  0
- 1560 008E3 0               NIBHEX  0
- 1561 008E4 0               NIBHEX  0
- 1562 008E5 0               NIBHEX  0
- 1563 008E6 0               NIBHEX  0
- 1564 008E7 0               NIBHEX  0
- 1565 008E8 0               NIBHEX  0
- 1566 008E9 0               NIBHEX  0
- 1567 008EA 0               NIBHEX  0
- 1568 008EB 0               NIBHEX  0
- 1569 008EC 5               NIBHEX  5
- 1570 008ED D               NIBHEX  D
- 1571 008EE 0               NIBHEX  0
- 1572 008EF 0               NIBHEX  0
- 1573 008F0 0               NIBHEX  0
- 1574 008F1 0               NIBHEX  0
- 1575 008F2 0               NIBHEX  0
- 1576 008F3 0               NIBHEX  0
- 1577 008F4 0               NIBHEX  0
- 1578 008F5 0               NIBHEX  0
- 1579 008F6 0               NIBHEX  0
- 1580 008F7 0               NIBHEX  0
- 1581 008F8 0               NIBHEX  0
- 1582 008F9 0               NIBHEX  0
- 1583 008FA 0               NIBHEX  0
- 1584 008FB 0               NIBHEX  0
- 1585 008FC 0               NIBHEX  0
- 1586 008FD 0               NIBHEX  0
- 1587 008FE 0               NIBHEX  0
- 1588 008FF 0               NIBHEX  0
- 1589 00900 0               NIBHEX  0
- 1590 00901 0               NIBHEX  0
- 1591 00902 0               NIBHEX  0
- 1592 00903 0               NIBHEX  0
- 1593 00904 0               NIBHEX  0
- 1594 00905 0               NIBHEX  0
- 1595 00906 0               NIBHEX  0
- 1596 00907 0               NIBHEX  0
- 1597 00908 0               NIBHEX  0
- 1598 00909 0               NIBHEX  0
- 1599 0090A 0               NIBHEX  0
- 1600 0090B 0               NIBHEX  0
- 1601 0090C 0               NIBHEX  0
- 1602 0090D 0               NIBHEX  0
- 1603 0090E B               NIBHEX  B
- 1604 0090F A               NIBHEX  A
- 1605 00910 0               NIBHEX  0
- 1606 00911 0               NIBHEX  0
- 1607 00912 0               NIBHEX  0
- 1608 00913 0               NIBHEX  0
- 1609 00914 0               NIBHEX  0
- 1610 00915 0               NIBHEX  0
- 1611 00916 0               NIBHEX  0
- 1612 00917 0               NIBHEX  0
- 1613 00918 0               NIBHEX  0
- 1614 00919 0               NIBHEX  0
- 1615 0091A 0               NIBHEX  0
- 1616 0091B 0               NIBHEX  0
- 1617 0091C 0               NIBHEX  0
- 1618 0091D 0               NIBHEX  0
- 1619 0091E 0               NIBHEX  0
- 1620 0091F 0               NIBHEX  0
- 1621 00920 0               NIBHEX  0
- 1622 00921 0               NIBHEX  0
- 1623 00922 0               NIBHEX  0
- 1624 00923 0               NIBHEX  0
- 1625 00924 0               NIBHEX  0
- 1626 00925 0               NIBHEX  0
- 1627 00926 0               NIBHEX  0
- 1628 00927 0               NIBHEX  0
- 1629 00928 0               NIBHEX  0
- 1630 00929 0               NIBHEX  0
- 1631 0092A 0               NIBHEX  0
- 1632 0092B 0               NIBHEX  0
- 1633 0092C 0               NIBHEX  0
- 1634 0092D 0               NIBHEX  0
- 1635 0092E 0               NIBHEX  0
- 1636 0092F 0               NIBHEX  0
- 1637 00930 5               NIBHEX  5
- 1638 00931 D               NIBHEX  D
- 1639 00932 0               NIBHEX  0
- 1640 00933 0               NIBHEX  0
- 1641 00934 0               NIBHEX  0
- 1642 00935 0               NIBHEX  0
- 1643 00936 0               NIBHEX  0
- 1644 00937 0               NIBHEX  0
- 1645 00938 0               NIBHEX  0
- 1646 00939 0               NIBHEX  0
- 1647 0093A 0               NIBHEX  0
- 1648 0093B 0               NIBHEX  0
- 1649 0093C 0               NIBHEX  0
- 1650 0093D 0               NIBHEX  0
- 1651 0093E 0               NIBHEX  0
- 1652 0093F 0               NIBHEX  0
- 1653 00940 0               NIBHEX  0
- 1654 00941 0               NIBHEX  0
- 1655 00942 0               NIBHEX  0
- 1656 00943 0               NIBHEX  0
- 1657 00944 0               NIBHEX  0
- 1658 00945 0               NIBHEX  0
- 1659 00946 0               NIBHEX  0
- 1660 00947 0               NIBHEX  0
- 1661 00948 0               NIBHEX  0
- 1662 00949 0               NIBHEX  0
- 1663 0094A 0               NIBHEX  0
- 1664 0094B 0               NIBHEX  0
- 1665 0094C 0               NIBHEX  0
- 1666 0094D 0               NIBHEX  0
- 1667 0094E 0               NIBHEX  0
- 1668 0094F 0               NIBHEX  0
- 1669 00950 0               NIBHEX  0
- 1670 00951 0               NIBHEX  0
- 1671 00952 B               NIBHEX  B
- 1672 00953 A               NIBHEX  A
- 1673 00954 0               NIBHEX  0
- 1674 00955 0               NIBHEX  0
- 1675 00956 0               NIBHEX  0
- 1676 00957 0               NIBHEX  0
- 1677 00958 0               NIBHEX  0
- 1678 00959 0               NIBHEX  0
- 1679 0095A 0               NIBHEX  0
- 1680 0095B 0               NIBHEX  0
- 1681 0095C 0               NIBHEX  0
- 1682 0095D 0               NIBHEX  0
- 1683 0095E 0               NIBHEX  0
- 1684 0095F 0               NIBHEX  0
- 1685 00960 0               NIBHEX  0
- 1686 00961 0               NIBHEX  0
- 1687 00962 0               NIBHEX  0
- 1688 00963 0               NIBHEX  0
- 1689 00964 0               NIBHEX  0
- 1690 00965 0               NIBHEX  0
- 1691 00966 0               NIBHEX  0
- 1692 00967 0               NIBHEX  0
- 1693 00968 0               NIBHEX  0
- 1694 00969 0               NIBHEX  0
- 1695 0096A 0               NIBHEX  0
- 1696 0096B 0               NIBHEX  0
- 1697 0096C 0               NIBHEX  0
- 1698 0096D 0               NIBHEX  0
- 1699 0096E 0               NIBHEX  0
- 1700 0096F 0               NIBHEX  0
- 1701 00970 0               NIBHEX  0
- 1702 00971 0               NIBHEX  0
- 1703 00972 0               NIBHEX  0
- 1704 00973 0               NIBHEX  0
- 1705 00974 5               NIBHEX  5
- 1706 00975 D               NIBHEX  D
- 1707 00976 0               NIBHEX  0
- 1708 00977 0               NIBHEX  0
- 1709 00978 0               NIBHEX  0
- 1710 00979 0               NIBHEX  0
- 1711 0097A 0               NIBHEX  0
- 1712 0097B 0               NIBHEX  0
- 1713 0097C 0               NIBHEX  0
- 1714 0097D 0               NIBHEX  0
- 1715 0097E 0               NIBHEX  0
- 1716 0097F 0               NIBHEX  0
- 1717 00980 0               NIBHEX  0
- 1718 00981 0               NIBHEX  0
- 1719 00982 0               NIBHEX  0
- 1720 00983 0               NIBHEX  0
- 1721 00984 0               NIBHEX  0
- 1722 00985 0               NIBHEX  0
- 1723 00986 0               NIBHEX  0
- 1724 00987 0               NIBHEX  0
- 1725 00988 0               NIBHEX  0
- 1726 00989 0               NIBHEX  0
- 1727 0098A 0               NIBHEX  0
- 1728 0098B 0               NIBHEX  0
- 1729 0098C 0               NIBHEX  0
- 1730 0098D 0               NIBHEX  0
- 1731 0098E 0               NIBHEX  0
- 1732 0098F 0               NIBHEX  0
- 1733 00990 0               NIBHEX  0
- 1734 00991 0               NIBHEX  0
- 1735 00992 0               NIBHEX  0
- 1736 00993 0               NIBHEX  0
- 1737 00994 0               NIBHEX  0
- 1738 00995 0               NIBHEX  0
- 1739 00996 E               NIBHEX  E
- 1740 00997 7               NIBHEX  7
- 1741 00998 0               NIBHEX  0
- 1742 00999 0               NIBHEX  0
- 1743 0099A 0               NIBHEX  0
- 1744 0099B 0               NIBHEX  0
- 1745 0099C 0               NIBHEX  0
- 1746 0099D 0               NIBHEX  0
- 1747 0099E 0               NIBHEX  0
- 1748 0099F 0               NIBHEX  0
- 1749 009A0 0               NIBHEX  0
- 1750 009A1 0               NIBHEX  0
- 1751 009A2 0               NIBHEX  0
- 1752 009A3 0               NIBHEX  0
- 1753 009A4 0               NIBHEX  0
- 1754 009A5 0               NIBHEX  0
- 1755 009A6 0               NIBHEX  0
- 1756 009A7 0               NIBHEX  0
- 1757 009A8 0               NIBHEX  0
- 1758 009A9 0               NIBHEX  0
- 1759 009AA 0               NIBHEX  0
- 1760 009AB 0               NIBHEX  0
- 1761 009AC 0               NIBHEX  0
- 1762 009AD 0               NIBHEX  0
- 1763 009AE 0               NIBHEX  0
- 1764 009AF 0               NIBHEX  0
- 1765 009B0 0               NIBHEX  0
- 1766 009B1 0               NIBHEX  0
- 1767 009B2 0               NIBHEX  0
- 1768 009B3 0               NIBHEX  0
- 1769 009B4 0               NIBHEX  0
- 1770 009B5 0               NIBHEX  0
- 1771 009B6 0               NIBHEX  0
- 1772 009B7 0               NIBHEX  0
- 1773 009B8 E               NIBHEX  E
- 1774 009B9 7               NIBHEX  7
- 1775 009BA 0               NIBHEX  0
- 1776 009BB 0               NIBHEX  0
- 1777 009BC 0               NIBHEX  0
- 1778 009BD 0               NIBHEX  0
- 1779 009BE 0               NIBHEX  0
- 1780 009BF 0               NIBHEX  0
- 1781 009C0 0               NIBHEX  0
- 1782 009C1 0               NIBHEX  0
- 1783 009C2 0               NIBHEX  0
- 1784 009C3 0               NIBHEX  0
- 1785 009C4 0               NIBHEX  0
- 1786 009C5 0               NIBHEX  0
- 1787 009C6 0               NIBHEX  0
- 1788 009C7 0               NIBHEX  0
- 1789 009C8 0               NIBHEX  0
- 1790 009C9 0               NIBHEX  0
- 1791 009CA 0               NIBHEX  0
- 1792 009CB 0               NIBHEX  0
- 1793 009CC 0               NIBHEX  0
- 1794 009CD 0               NIBHEX  0
- 1795 009CE 0               NIBHEX  0
- 1796 009CF 0               NIBHEX  0
- 1797 009D0 0               NIBHEX  0
- 1798 009D1 0               NIBHEX  0
- 1799 009D2 0               NIBHEX  0
- 1800 009D3 0               NIBHEX  0
- 1801 009D4 0               NIBHEX  0
- 1802 009D5 0               NIBHEX  0
- 1803 009D6 0               NIBHEX  0
- 1804 009D7 0               NIBHEX  0
- 1805 009D8 0               NIBHEX  0
- 1806 009D9 0               NIBHEX  0
- 1807 009DA 7               NIBHEX  7
- 1808 009DB E               NIBHEX  E
- 1809 009DC 0               NIBHEX  0
- 1810 009DD 0               NIBHEX  0
- 1811 009DE 0               NIBHEX  0
- 1812 009DF 0               NIBHEX  0
- 1813 009E0 0               NIBHEX  0
- 1814 009E1 0               NIBHEX  0
- 1815 009E2 0               NIBHEX  0
- 1816 009E3 0               NIBHEX  0
- 1817 009E4 0               NIBHEX  0
- 1818 009E5 0               NIBHEX  0
- 1819 009E6 0               NIBHEX  0
- 1820 009E7 0               NIBHEX  0
- 1821 009E8 0               NIBHEX  0
- 1822 009E9 0               NIBHEX  0
- 1823 009EA 0               NIBHEX  0
- 1824 009EB 0               NIBHEX  0
- 1825 009EC 0               NIBHEX  0
- 1826 009ED 0               NIBHEX  0
- 1827 009EE 0               NIBHEX  0
- 1828 009EF 0               NIBHEX  0
- 1829 009F0 0               NIBHEX  0
- 1830 009F1 0               NIBHEX  0
- 1831 009F2 0               NIBHEX  0
- 1832 009F3 0               NIBHEX  0
- 1833 009F4 0               NIBHEX  0
- 1834 009F5 0               NIBHEX  0
- 1835 009F6 0               NIBHEX  0
- 1836 009F7 0               NIBHEX  0
- 1837 009F8 0               NIBHEX  0
- 1838 009F9 0               NIBHEX  0
- 1839 009FA 0               NIBHEX  0
- 1840 009FB 0               NIBHEX  0
- 1841 009FC B               NIBHEX  B
- 1842 009FD D               NIBHEX  D
- 1843 009FE 0               NIBHEX  0
- 1844 009FF 0               NIBHEX  0
- 1845 00A00 0               NIBHEX  0
- 1846 00A01 0               NIBHEX  0
- 1847 00A02 0               NIBHEX  0
- 1848 00A03 0               NIBHEX  0
- 1849 00A04 0               NIBHEX  0
- 1850 00A05 0               NIBHEX  0
- 1851 00A06 0               NIBHEX  0
- 1852 00A07 0               NIBHEX  0
- 1853 00A08 0               NIBHEX  0
- 1854 00A09 0               NIBHEX  0
- 1855 00A0A 0               NIBHEX  0
- 1856 00A0B 0               NIBHEX  0
- 1857 00A0C 0               NIBHEX  0
- 1858 00A0D 0               NIBHEX  0
- 1859 00A0E 0               NIBHEX  0
- 1860 00A0F 0               NIBHEX  0
- 1861 00A10 0               NIBHEX  0
- 1862 00A11 0               NIBHEX  0
- 1863 00A12 0               NIBHEX  0
- 1864 00A13 0               NIBHEX  0
- 1865 00A14 0               NIBHEX  0
- 1866 00A15 0               NIBHEX  0
- 1867 00A16 0               NIBHEX  0
- 1868 00A17 0               NIBHEX  0
- 1869 00A18 0               NIBHEX  0
- 1870 00A19 0               NIBHEX  0
- 1871 00A1A 0               NIBHEX  0
- 1872 00A1B 0               NIBHEX  0
- 1873 00A1C 0               NIBHEX  0
- 1874 00A1D 0               NIBHEX  0
- 1875 00A1E F               NIBHEX  F
- 1876 00A1F D               NIBHEX  D
- 1877 00A20 0               NIBHEX  0
- 1878 00A21 0               NIBHEX  0
- 1879 00A22 0               NIBHEX  0
- 1880 00A23 0               NIBHEX  0
- 1881 00A24 0               NIBHEX  0
- 1882 00A25 0               NIBHEX  0
- 1883 00A26 0               NIBHEX  0
- 1884 00A27 0               NIBHEX  0
- 1885 00A28 0               NIBHEX  0
- 1886 00A29 0               NIBHEX  0
- 1887 00A2A 0               NIBHEX  0
- 1888 00A2B 0               NIBHEX  0
- 1889 00A2C 0               NIBHEX  0
- 1890 00A2D 0               NIBHEX  0
- 1891 00A2E 0               NIBHEX  0
- 1892 00A2F 0               NIBHEX  0
- 1893 00A30 0               NIBHEX  0
- 1894 00A31 0               NIBHEX  0
- 1895 00A32 0               NIBHEX  0
- 1896 00A33 0               NIBHEX  0
- 1897 00A34 0               NIBHEX  0
- 1898 00A35 0               NIBHEX  0
- 1899 00A36 0               NIBHEX  0
- 1900 00A37 0               NIBHEX  0
- 1901 00A38 0               NIBHEX  0
- 1902 00A39 0               NIBHEX  0
- 1903 00A3A 0               NIBHEX  0
- 1904 00A3B 0               NIBHEX  0
- 1905 00A3C 0               NIBHEX  0
- 1906 00A3D 0               NIBHEX  0
- 1907 00A3E 0               NIBHEX  0
- 1908 00A3F 0               NIBHEX  0
- 1909 00A40 F               NIBHEX  F
- 1910 00A41 E               NIBHEX  E
- 1911 00A42 0               NIBHEX  0
- 1912 00A43 0               NIBHEX  0
- 1913 00A44 0               NIBHEX  0
- 1914 00A45 0               NIBHEX  0
- 1915 00A46 0               NIBHEX  0
- 1916 00A47 0               NIBHEX  0
- 1917 00A48 0               NIBHEX  0
- 1918 00A49 0               NIBHEX  0
- 1919 00A4A 0               NIBHEX  0
- 1920 00A4B 0               NIBHEX  0
- 1921 00A4C 0               NIBHEX  0
- 1922 00A4D 0               NIBHEX  0
- 1923 00A4E 0               NIBHEX  0
- 1924 00A4F 0               NIBHEX  0
- 1925 00A50 0               NIBHEX  0
- 1926 00A51 0               NIBHEX  0
- 1927 00A52 0               NIBHEX  0
- 1928 00A53 0               NIBHEX  0
- 1929 00A54 0               NIBHEX  0
- 1930 00A55 0               NIBHEX  0
- 1931 00A56 0               NIBHEX  0
- 1932 00A57 0               NIBHEX  0
- 1933 00A58 0               NIBHEX  0
- 1934 00A59 0               NIBHEX  0
- 1935 00A5A 0               NIBHEX  0
- 1936 00A5B 0               NIBHEX  0
- 1937 00A5C 0               NIBHEX  0
- 1938 00A5D 0               NIBHEX  0
- 1939 00A5E 0               NIBHEX  0
- 1940 00A5F 0               NIBHEX  0
- 1941 00A60 0               NIBHEX  0
- 1942 00A61 0               NIBHEX  0
- 1943 00A62 F               NIBHEX  F
- 1944 00A63 F               NIBHEX  F
- 1945 00A64 0               NIBHEX  0
- 1946 00A65 0               NIBHEX  0
- 1947 00A66 0               NIBHEX  0
- 1948 00A67 0               NIBHEX  0
- 1949 00A68 0               NIBHEX  0
- 1950 00A69 0               NIBHEX  0
- 1951 00A6A 0               NIBHEX  0
- 1952 00A6B 0               NIBHEX  0
- 1953 00A6C 0               NIBHEX  0
- 1954 00A6D 0               NIBHEX  0
- 1955 00A6E 0               NIBHEX  0
- 1956 00A6F 0               NIBHEX  0
- 1957 00A70 0               NIBHEX  0
- 1958 00A71 0               NIBHEX  0
- 1959 00A72 0               NIBHEX  0
- 1960 00A73 0               NIBHEX  0
- 1961 00A74 0               NIBHEX  0
- 1962 00A75 0               NIBHEX  0
- 1963 00A76 0               NIBHEX  0
- 1964 00A77 0               NIBHEX  0
- 1965 00A78 0               NIBHEX  0
- 1966 00A79 0               NIBHEX  0
- 1967 00A7A 0               NIBHEX  0
- 1968 00A7B 0               NIBHEX  0
- 1969 00A7C 0               NIBHEX  0
- 1970 00A7D 0               NIBHEX  0
- 1971 00A7E 0               NIBHEX  0
- 1972 00A7F 0               NIBHEX  0
- 1973 00A80 0               NIBHEX  0
- 1974 00A81 0               NIBHEX  0
- 1975 00A82 0               NIBHEX  0
- 1976 00A83 0               NIBHEX  0
- 1977 00A84 F               NIBHEX  F
- 1978 00A85 E               NIBHEX  E
- 1979 00A86 0               NIBHEX  0
- 1980 00A87 0               NIBHEX  0
- 1981 00A88 0               NIBHEX  0
- 1982 00A89 0               NIBHEX  0
- 1983 00A8A 0               NIBHEX  0
- 1984 00A8B 0               NIBHEX  0
- 1985 00A8C 0               NIBHEX  0
- 1986 00A8D 0               NIBHEX  0
- 1987 00A8E 0               NIBHEX  0
- 1988 00A8F 0               NIBHEX  0
- 1989 00A90 0               NIBHEX  0
- 1990 00A91 0               NIBHEX  0
- 1991 00A92 0               NIBHEX  0
- 1992 00A93 0               NIBHEX  0
- 1993 00A94 0               NIBHEX  0
- 1994 00A95 0               NIBHEX  0
- 1995 00A96 0               NIBHEX  0
- 1996 00A97 0               NIBHEX  0
- 1997 00A98 0               NIBHEX  0
- 1998 00A99 0               NIBHEX  0
- 1999 00A9A 0               NIBHEX  0
- 2000 00A9B 0               NIBHEX  0
- 2001 00A9C 0               NIBHEX  0
- 2002 00A9D 0               NIBHEX  0
- 2003 00A9E 0               NIBHEX  0
- 2004 00A9F 0               NIBHEX  0
- 2005 00AA0 0               NIBHEX  0
- 2006 00AA1 0               NIBHEX  0
- 2007 00AA2 0               NIBHEX  0
- 2008 00AA3 0               NIBHEX  0
- 2009 00AA4 0               NIBHEX  0
- 2010 00AA5 0               NIBHEX  0
- 2011 00AA6 E               NIBHEX  E
- 2012 00AA7 7               NIBHEX  7
- 2013 00AA8 0               NIBHEX  0
- 2014 00AA9 0               NIBHEX  0
- 2015 00AAA 0               NIBHEX  0
- 2016 00AAB 0               NIBHEX  0
- 2017 00AAC 0               NIBHEX  0
- 2018 00AAD 0               NIBHEX  0
- 2019 00AAE 0               NIBHEX  0
- 2020 00AAF 0               NIBHEX  0
- 2021 00AB0 0               NIBHEX  0
- 2022 00AB1 0               NIBHEX  0
- 2023 00AB2 0               NIBHEX  0
- 2024 00AB3 0               NIBHEX  0
- 2025 00AB4 0               NIBHEX  0
- 2026 00AB5 0               NIBHEX  0
- 2027 00AB6 0               NIBHEX  0
- 2028 00AB7 0               NIBHEX  0
- 2029 00AB8 0               NIBHEX  0
- 2030 00AB9 0               NIBHEX  0
- 2031 00ABA 0               NIBHEX  0
- 2032 00ABB 0               NIBHEX  0
- 2033 00ABC 0               NIBHEX  0
- 2034 00ABD 0               NIBHEX  0
- 2035 00ABE 0               NIBHEX  0
- 2036 00ABF 0               NIBHEX  0
- 2037 00AC0 0               NIBHEX  0
- 2038 00AC1 0               NIBHEX  0
- 2039 00AC2 0               NIBHEX  0
- 2040 00AC3 0               NIBHEX  0
- 2041 00AC4 0               NIBHEX  0
- 2042 00AC5 0               NIBHEX  0
- 2043 00AC6 0               NIBHEX  0
- 2044 00AC7 0               NIBHEX  0
- 2045 00AC8 E               NIBHEX  E
- 2046 00AC9 7               NIBHEX  7
- 2047 00ACA 0               NIBHEX  0
- 2048 00ACB 0               NIBHEX  0
- 2049 00ACC 0               NIBHEX  0
- 2050 00ACD 0               NIBHEX  0
- 2051 00ACE 0               NIBHEX  0
- 2052 00ACF 0               NIBHEX  0
- 2053 00AD0 0               NIBHEX  0
- 2054 00AD1 0               NIBHEX  0
- 2055 00AD2 0               NIBHEX  0
- 2056 00AD3 0               NIBHEX  0
- 2057 00AD4 0               NIBHEX  0
- 2058 00AD5 0               NIBHEX  0
- 2059 00AD6 0               NIBHEX  0
- 2060 00AD7 0               NIBHEX  0
- 2061 00AD8 0               NIBHEX  0
- 2062 00AD9 0               NIBHEX  0
- 2063 00ADA 0               NIBHEX  0
- 2064 00ADB 0               NIBHEX  0
- 2065 00ADC 0               NIBHEX  0
- 2066 00ADD 0               NIBHEX  0
- 2067 00ADE 0               NIBHEX  0
- 2068 00ADF 0               NIBHEX  0
- 2069 00AE0 0               NIBHEX  0
- 2070 00AE1 0               NIBHEX  0
- 2071 00AE2 0               NIBHEX  0
- 2072 00AE3 0               NIBHEX  0
- 2073 00AE4 0               NIBHEX  0
- 2074 00AE5 0               NIBHEX  0
- 2075 00AE6 0               NIBHEX  0
- 2076 00AE7 0               NIBHEX  0
- 2077 00AE8 0               NIBHEX  0
- 2078 00AE9 0               NIBHEX  0
- 2079 00AEA 1               NIBHEX  1
- 2080 00AEB 8               NIBHEX  8
- 2081 00AEC 0               NIBHEX  0
- 2082 00AED 0               NIBHEX  0
- 2083 00AEE 0               NIBHEX  0
- 2084 00AEF 0               NIBHEX  0
- 2085 00AF0 0               NIBHEX  0
- 2086 00AF1 0               NIBHEX  0
- 2087 00AF2 0               NIBHEX  0
- 2088 00AF3 0               NIBHEX  0
- 2089 00AF4 0               NIBHEX  0
- 2090 00AF5 0               NIBHEX  0
- 2091 00AF6 0               NIBHEX  0
- 2092 00AF7 0               NIBHEX  0
- 2093 00AF8 0               NIBHEX  0
- 2094 00AF9 0               NIBHEX  0
- 2095 00AFA 0               NIBHEX  0
- 2096 00AFB 0               NIBHEX  0
- 2097 00AFC 0               NIBHEX  0
- 2098 00AFD 0               NIBHEX  0
- 2099 00AFE 0               NIBHEX  0
- 2100 00AFF 0               NIBHEX  0
- 2101 00B00 0               NIBHEX  0
- 2102 00B01 0               NIBHEX  0
- 2103 00B02 0               NIBHEX  0
- 2104 00B03 0               NIBHEX  0
- 2105 00B04 0               NIBHEX  0
- 2106 00B05 0               NIBHEX  0
- 2107 00B06 0               NIBHEX  0
- 2108 00B07 0               NIBHEX  0
- 2109 00B08 0               NIBHEX  0
- 2110 00B09 0               NIBHEX  0
- 2111 00B0A 0               NIBHEX  0
- 2112 00B0B 0               NIBHEX  0
- 2113 00B0C 1               NIBHEX  1
- 2114 00B0D B               NIBHEX  B
- 2115 00B0E 0               NIBHEX  0
- 2116 00B0F 0               NIBHEX  0
- 2117 00B10 0               NIBHEX  0
- 2118 00B11 0               NIBHEX  0
- 2119 00B12 0               NIBHEX  0
- 2120 00B13 0               NIBHEX  0
- 2121 00B14 0               NIBHEX  0
- 2122 00B15 0               NIBHEX  0
- 2123 00B16 0               NIBHEX  0
- 2124 00B17 0               NIBHEX  0
- 2125 00B18 0               NIBHEX  0
- 2126 00B19 0               NIBHEX  0
- 2127 00B1A 0               NIBHEX  0
- 2128 00B1B 0               NIBHEX  0
- 2129 00B1C 0               NIBHEX  0
- 2130 00B1D 0               NIBHEX  0
- 2131 00B1E 0               NIBHEX  0
- 2132 00B1F 0               NIBHEX  0
- 2133 00B20 0               NIBHEX  0
- 2134 00B21 0               NIBHEX  0
- 2135 00B22 0               NIBHEX  0
- 2136 00B23 0               NIBHEX  0
- 2137 00B24 0               NIBHEX  0
- 2138 00B25 0               NIBHEX  0
- 2139 00B26 0               NIBHEX  0
- 2140 00B27 0               NIBHEX  0
- 2141 00B28 0               NIBHEX  0
- 2142 00B29 0               NIBHEX  0
- 2143 00B2A 0               NIBHEX  0
- 2144 00B2B 0               NIBHEX  0
- 2145 00B2C 0               NIBHEX  0
- 2146 00B2D 0               NIBHEX  0
- 2147 00B2E 1               NIBHEX  1
- 2148 00B2F 9               NIBHEX  9
- 2149 00B30 0               NIBHEX  0
- 2150 00B31 0               NIBHEX  0
- 2151 00B32 0               NIBHEX  0
- 2152 00B33 0               NIBHEX  0
- 2153 00B34 0               NIBHEX  0
- 2154 00B35 0               NIBHEX  0
- 2155 00B36 0               NIBHEX  0
- 2156 00B37 0               NIBHEX  0
- 2157 00B38 0               NIBHEX  0
- 2158 00B39 0               NIBHEX  0
- 2159 00B3A 0               NIBHEX  0
- 2160 00B3B 0               NIBHEX  0
- 2161 00B3C 0               NIBHEX  0
- 2162 00B3D 0               NIBHEX  0
- 2163 00B3E 0               NIBHEX  0
- 2164 00B3F 0               NIBHEX  0
- 2165 00B40 0               NIBHEX  0
- 2166 00B41 0               NIBHEX  0
- 2167 00B42 0               NIBHEX  0
- 2168 00B43 0               NIBHEX  0
- 2169 00B44 0               NIBHEX  0
- 2170 00B45 0               NIBHEX  0
- 2171 00B46 0               NIBHEX  0
- 2172 00B47 0               NIBHEX  0
- 2173 00B48 0               NIBHEX  0
- 2174 00B49 0               NIBHEX  0
- 2175 00B4A 0               NIBHEX  0
- 2176 00B4B 0               NIBHEX  0
- 2177 00B4C 0               NIBHEX  0
- 2178 00B4D 0               NIBHEX  0
- 2179 00B4E 0               NIBHEX  0
- 2180 00B4F 0               NIBHEX  0
- 2181 00B50 1               NIBHEX  1
- 2182 00B51 9               NIBHEX  9
- 2183 00B52 0               NIBHEX  0
- 2184 00B53 0               NIBHEX  0
- 2185 00B54 0               NIBHEX  0
- 2186 00B55 0               NIBHEX  0
- 2187 00B56 0               NIBHEX  0
- 2188 00B57 0               NIBHEX  0
- 2189 00B58 0               NIBHEX  0
- 2190 00B59 0               NIBHEX  0
- 2191 00B5A 0               NIBHEX  0
- 2192 00B5B 0               NIBHEX  0
- 2193 00B5C 0               NIBHEX  0
- 2194 00B5D 0               NIBHEX  0
- 2195 00B5E 0               NIBHEX  0
- 2196 00B5F 0               NIBHEX  0
- 2197 00B60 0               NIBHEX  0
- 2198 00B61 0               NIBHEX  0
- 2199 00B62 0               NIBHEX  0
- 2200 00B63 0               NIBHEX  0
- 2201 00B64 0               NIBHEX  0
- 2202 00B65 0               NIBHEX  0
- 2203 00B66 0               NIBHEX  0
- 2204 00B67 0               NIBHEX  0
- 2205 00B68 0               NIBHEX  0
- 2206 00B69 0               NIBHEX  0
- 2207 00B6A 0               NIBHEX  0
- 2208 00B6B 0               NIBHEX  0
- 2209 00B6C 0               NIBHEX  0
- 2210 00B6D 0               NIBHEX  0
- 2211 00B6E 0               NIBHEX  0
- 2212 00B6F 0               NIBHEX  0
- 2213 00B70 0               NIBHEX  0
- 2214 00B71 0               NIBHEX  0
- 2215 00B72 D               NIBHEX  D
- 2216 00B73 9               NIBHEX  9
- 2217 00B74 0               NIBHEX  0
- 2218 00B75 0               NIBHEX  0
- 2219 00B76 0               NIBHEX  0
- 2220 00B77 0               NIBHEX  0
- 2221 00B78 0               NIBHEX  0
- 2222 00B79 0               NIBHEX  0
- 2223 00B7A 0               NIBHEX  0
- 2224 00B7B 0               NIBHEX  0
- 2225 00B7C 0               NIBHEX  0
- 2226 00B7D 0               NIBHEX  0
- 2227 00B7E 0               NIBHEX  0
- 2228 00B7F 0               NIBHEX  0
- 2229 00B80 0               NIBHEX  0
- 2230 00B81 0               NIBHEX  0
- 2231 00B82 0               NIBHEX  0
- 2232 00B83 0               NIBHEX  0
- 2233 00B84 0               NIBHEX  0
- 2234 00B85 0               NIBHEX  0
- 2235 00B86 0               NIBHEX  0
- 2236 00B87 0               NIBHEX  0
- 2237 00B88 0               NIBHEX  0
- 2238 00B89 0               NIBHEX  0
- 2239 00B8A 0               NIBHEX  0
- 2240 00B8B 0               NIBHEX  0
- 2241 00B8C 0               NIBHEX  0
- 2242 00B8D 0               NIBHEX  0
- 2243 00B8E 0               NIBHEX  0
- 2244 00B8F 0               NIBHEX  0
- 2245 00B90 0               NIBHEX  0
- 2246 00B91 0               NIBHEX  0
- 2247 00B92 0               NIBHEX  0
- 2248 00B93 0               NIBHEX  0
- 2249 00B94 D               NIBHEX  D
- 2250 00B95 9               NIBHEX  9
- 2251 00B96 0               NIBHEX  0
- 2252 00B97 0               NIBHEX  0
- 2253 00B98 0               NIBHEX  0
- 2254 00B99 0               NIBHEX  0
- 2255 00B9A 0               NIBHEX  0
- 2256 00B9B 0               NIBHEX  0
- 2257 00B9C 0               NIBHEX  0
- 2258 00B9D 0               NIBHEX  0
- 2259 00B9E 0               NIBHEX  0
- 2260 00B9F 0               NIBHEX  0
- 2261 00BA0 0               NIBHEX  0
- 2262 00BA1 0               NIBHEX  0
- 2263 00BA2 0               NIBHEX  0
- 2264 00BA3 0               NIBHEX  0
- 2265 00BA4 0               NIBHEX  0
- 2266 00BA5 0               NIBHEX  0
- 2267 00BA6 0               NIBHEX  0
- 2268 00BA7 0               NIBHEX  0
- 2269 00BA8 0               NIBHEX  0
- 2270 00BA9 0               NIBHEX  0
- 2271 00BAA 0               NIBHEX  0
- 2272 00BAB 0               NIBHEX  0
- 2273 00BAC 0               NIBHEX  0
- 2274 00BAD 0               NIBHEX  0
- 2275 00BAE 0               NIBHEX  0
- 2276 00BAF 0               NIBHEX  0
- 2277 00BB0 0               NIBHEX  0
- 2278 00BB1 0               NIBHEX  0
- 2279 00BB2 0               NIBHEX  0
- 2280 00BB3 0               NIBHEX  0
- 2281 00BB4 0               NIBHEX  0
- 2282 00BB5 0               NIBHEX  0
- 2283 00BB6 E               NIBHEX  E
- 2284 00BB7 7               NIBHEX  7
- 2285 00BB8 0               NIBHEX  0
- 2286 00BB9 0               NIBHEX  0
- 2287 00BBA 0               NIBHEX  0
- 2288 00BBB 0               NIBHEX  0
- 2289 00BBC 0               NIBHEX  0
- 2290 00BBD 0               NIBHEX  0
- 2291 00BBE 0               NIBHEX  0
- 2292 00BBF 0               NIBHEX  0
- 2293 00BC0 0               NIBHEX  0
- 2294 00BC1 0               NIBHEX  0
- 2295 00BC2 0               NIBHEX  0
- 2296 00BC3 0               NIBHEX  0
- 2297 00BC4 0               NIBHEX  0
- 2298 00BC5 0               NIBHEX  0
- 2299 00BC6 0               NIBHEX  0
- 2300 00BC7 0               NIBHEX  0
- 2301 00BC8 0               NIBHEX  0
- 2302 00BC9 0               NIBHEX  0
- 2303 00BCA 0               NIBHEX  0
- 2304 00BCB 0               NIBHEX  0
- 2305 00BCC 0               NIBHEX  0
- 2306 00BCD 0               NIBHEX  0
- 2307 00BCE 0               NIBHEX  0
- 2308 00BCF 0               NIBHEX  0
- 2309 00BD0 0               NIBHEX  0
- 2310 00BD1 0               NIBHEX  0
- 2311 00BD2 0               NIBHEX  0
- 2312 00BD3 0               NIBHEX  0
- 2313 00BD4 0               NIBHEX  0
- 2314 00BD5 0               NIBHEX  0
- 2315 00BD6 0               NIBHEX  0
- 2316 00BD7 0               NIBHEX  0
- 2317 00BD8 0               NIBHEX  0
- 2318 00BD9 0               NIBHEX  0
- 2319 00BDA 0               NIBHEX  0
- 2320 00BDB 0               NIBHEX  0
- 2321 00BDC 0               NIBHEX  0
- 2322 00BDD 0               NIBHEX  0
- 2323 00BDE 0               NIBHEX  0
- 2324 00BDF 0               NIBHEX  0
- 2325 00BE0 0               NIBHEX  0
- 2326 00BE1 0               NIBHEX  0
- 2327 00BE2 0               NIBHEX  0
- 2328 00BE3 0               NIBHEX  0
- 2329 00BE4 0               NIBHEX  0
- 2330 00BE5 0               NIBHEX  0
- 2331 00BE6 0               NIBHEX  0
- 2332 00BE7 0               NIBHEX  0
- 2333 00BE8 0               NIBHEX  0
- 2334 00BE9 0               NIBHEX  0
- 2335 00BEA 0               NIBHEX  0
- 2336 00BEB 0               NIBHEX  0
- 2337 00BEC 0               NIBHEX  0
- 2338 00BED 0               NIBHEX  0
- 2339 00BEE 0               NIBHEX  0
- 2340 00BEF 0               NIBHEX  0
- 2341 00BF0 0               NIBHEX  0
- 2342 00BF1 0               NIBHEX  0
- 2343 00BF2 0               NIBHEX  0
- 2344 00BF3 0               NIBHEX  0
- 2345 00BF4 0               NIBHEX  0
- 2346 00BF5 0               NIBHEX  0
- 2347 00BF6 0               NIBHEX  0
- 2348 00BF7 0               NIBHEX  0
- 2349 00BF8 0               NIBHEX  0
- 2350 00BF9 0               NIBHEX  0
- 2351 00BFA 0               NIBHEX  0
- 2352 00BFB 0               NIBHEX  0
- 2353 00BFC 0               NIBHEX  0
- 2354 00BFD 0               NIBHEX  0
- 2355 00BFE 0               NIBHEX  0
- 2356 00BFF 0               NIBHEX  0
- 2357 00C00 0               NIBHEX  0
- 2358 00C01 0               NIBHEX  0
- 2359 00C02 0               NIBHEX  0
- 2360 00C03 0               NIBHEX  0
- 2361 00C04 0               NIBHEX  0
- 2362 00C05 0               NIBHEX  0
- 2363 00C06 0               NIBHEX  0
- 2364 00C07 0               NIBHEX  0
- 2365 00C08 0               NIBHEX  0
- 2366 00C09 0               NIBHEX  0
- 2367 00C0A 0               NIBHEX  0
- 2368 00C0B 0               NIBHEX  0
- 2369 00C0C 0               NIBHEX  0
- 2370 00C0D 0               NIBHEX  0
- 2371 00C0E 0               NIBHEX  0
- 2372 00C0F 0               NIBHEX  0
- 2373 00C10 0               NIBHEX  0
- 2374 00C11 0               NIBHEX  0
- 2375 00C12 0               NIBHEX  0
- 2376 00C13 0               NIBHEX  0
- 2377 00C14 0               NIBHEX  0
- 2378 00C15 0               NIBHEX  0
- 2379 00C16 0               NIBHEX  0
- 2380 00C17 0               NIBHEX  0
- 2381 00C18 0               NIBHEX  0
- 2382 00C19 0               NIBHEX  0
- 2383 00C1A 0               NIBHEX  0
- 2384 00C1B 0               NIBHEX  0
- 2385 00C1C 0               NIBHEX  0
- 2386 00C1D 0               NIBHEX  0
- 2387 00C1E 0               NIBHEX  0
- 2388 00C1F 0               NIBHEX  0
- 2389 00C20 0               NIBHEX  0
- 2390 00C21 0               NIBHEX  0
- 2391 00C22 0               NIBHEX  0
- 2392 00C23 0               NIBHEX  0
- 2393 00C24 0               NIBHEX  0
- 2394 00C25 0               NIBHEX  0
- 2395 00C26 0               NIBHEX  0
- 2396 00C27 0               NIBHEX  0
- 2397 00C28 0               NIBHEX  0
- 2398 00C29 0               NIBHEX  0
- 2399 00C2A 0               NIBHEX  0
- 2400 00C2B 0               NIBHEX  0
- 2401 00C2C 0               NIBHEX  0
- 2402 00C2D 0               NIBHEX  0
- 2403 00C2E 0               NIBHEX  0
- 2404 00C2F 0               NIBHEX  0
- 2405 00C30 0               NIBHEX  0
- 2406 00C31 0               NIBHEX  0
- 2407 00C32 0               NIBHEX  0
- 2408 00C33 0               NIBHEX  0
- 2409 00C34 0               NIBHEX  0
- 2410 00C35 0               NIBHEX  0
- 2411 00C36 0               NIBHEX  0
- 2412 00C37 0               NIBHEX  0
- 2413 00C38 0               NIBHEX  0
- 2414 00C39 0               NIBHEX  0
- 2415 00C3A 0               NIBHEX  0
- 2416 00C3B 0               NIBHEX  0
- 2417 00C3C 0               NIBHEX  0
- 2418 00C3D 0               NIBHEX  0
- 2419 00C3E 2               NIBHEX  2
- 2420 00C3F 2               NIBHEX  2
- 2421 00C40 0               NIBHEX  0
- 2422 00C41 0               NIBHEX  0
- 2423 00C42 0               NIBHEX  0
- 2424 00C43 0               NIBHEX  0
- 2425 00C44 0               NIBHEX  0
- 2426 00C45 0               NIBHEX  0
- 2427 00C46 0               NIBHEX  0
- 2428 00C47 0               NIBHEX  0
- 2429 00C48 0               NIBHEX  0
- 2430 00C49 0               NIBHEX  0
- 2431 00C4A 0               NIBHEX  0
- 2432 00C4B 0               NIBHEX  0
- 2433 00C4C 0               NIBHEX  0
- 2434 00C4D 0               NIBHEX  0
- 2435 00C4E 0               NIBHEX  0
- 2436 00C4F 0               NIBHEX  0
- 2437 00C50 0               NIBHEX  0
- 2438 00C51 0               NIBHEX  0
- 2439 00C52 0               NIBHEX  0
- 2440 00C53 0               NIBHEX  0
- 2441 00C54 0               NIBHEX  0
- 2442 00C55 0               NIBHEX  0
- 2443 00C56 0               NIBHEX  0
- 2444 00C57 0               NIBHEX  0
- 2445 00C58 0               NIBHEX  0
- 2446 00C59 0               NIBHEX  0
- 2447 00C5A 0               NIBHEX  0
- 2448 00C5B 0               NIBHEX  0
- 2449 00C5C 0               NIBHEX  0
- 2450 00C5D 0               NIBHEX  0
- 2451 00C5E 0               NIBHEX  0
- 2452 00C5F 0               NIBHEX  0
- 2453 00C60 2               NIBHEX  2
- 2454 00C61 2               NIBHEX  2
- 2455 00C62 0               NIBHEX  0
- 2456 00C63 0               NIBHEX  0
- 2457 00C64 0               NIBHEX  0
- 2458 00C65 0               NIBHEX  0
- 2459 00C66 0               NIBHEX  0
- 2460 00C67 0               NIBHEX  0
- 2461 00C68 0               NIBHEX  0
- 2462 00C69 0               NIBHEX  0
- 2463 00C6A 0               NIBHEX  0
- 2464 00C6B 0               NIBHEX  0
- 2465 00C6C 0               NIBHEX  0
- 2466 00C6D 0               NIBHEX  0
- 2467 00C6E 0               NIBHEX  0
- 2468 00C6F 0               NIBHEX  0
- 2469 00C70 0               NIBHEX  0
- 2470 00C71 0               NIBHEX  0
- 2471 00C72 0               NIBHEX  0
- 2472 00C73 0               NIBHEX  0
- 2473 00C74 0               NIBHEX  0
- 2474 00C75 0               NIBHEX  0
- 2475 00C76 0               NIBHEX  0
- 2476 00C77 0               NIBHEX  0
- 2477 00C78 0               NIBHEX  0
- 2478 00C79 0               NIBHEX  0
- 2479 00C7A 0               NIBHEX  0
- 2480 00C7B 0               NIBHEX  0
- 2481 00C7C 0               NIBHEX  0
- 2482 00C7D 0               NIBHEX  0
- 2483 00C7E 0               NIBHEX  0
- 2484 00C7F 0               NIBHEX  0
- 2485 00C80 0               NIBHEX  0
- 2486 00C81 0               NIBHEX  0
- 2487 00C82 2               NIBHEX  2
- 2488 00C83 2               NIBHEX  2
- 2489 00C84 0               NIBHEX  0
- 2490 00C85 0               NIBHEX  0
- 2491 00C86 0               NIBHEX  0
- 2492 00C87 0               NIBHEX  0
- 2493 00C88 0               NIBHEX  0
- 2494 00C89 0               NIBHEX  0
- 2495 00C8A 0               NIBHEX  0
- 2496 00C8B 0               NIBHEX  0
- 2497 00C8C 0               NIBHEX  0
- 2498 00C8D 0               NIBHEX  0
- 2499 00C8E 0               NIBHEX  0
- 2500 00C8F 0               NIBHEX  0
- 2501 00C90 0               NIBHEX  0
- 2502 00C91 0               NIBHEX  0
- 2503 00C92 0               NIBHEX  0
- 2504 00C93 0               NIBHEX  0
- 2505 00C94 0               NIBHEX  0
- 2506 00C95 0               NIBHEX  0
- 2507 00C96 0               NIBHEX  0
- 2508 00C97 0               NIBHEX  0
- 2509 00C98 0               NIBHEX  0
- 2510 00C99 0               NIBHEX  0
- 2511 00C9A 0               NIBHEX  0
- 2512 00C9B 0               NIBHEX  0
- 2513 00C9C 0               NIBHEX  0
- 2514 00C9D 0               NIBHEX  0
- 2515 00C9E 0               NIBHEX  0
- 2516 00C9F 0               NIBHEX  0
- 2517 00CA0 0               NIBHEX  0
- 2518 00CA1 0               NIBHEX  0
- 2519 00CA2 0               NIBHEX  0
- 2520 00CA3 0               NIBHEX  0
- 2521 00CA4 7               NIBHEX  7
- 2522 00CA5 7               NIBHEX  7
- 2523 00CA6 0               NIBHEX  0
- 2524 00CA7 0               NIBHEX  0
- 2525 00CA8 0               NIBHEX  0
- 2526 00CA9 0               NIBHEX  0
- 2527 00CAA 0               NIBHEX  0
- 2528 00CAB 0               NIBHEX  0
- 2529 00CAC 0               NIBHEX  0
- 2530 00CAD 0               NIBHEX  0
- 2531 00CAE 0               NIBHEX  0
- 2532 00CAF 0               NIBHEX  0
- 2533 00CB0 0               NIBHEX  0
- 2534 00CB1 0               NIBHEX  0
- 2535 00CB2 0               NIBHEX  0
- 2536 00CB3 0               NIBHEX  0
- 2537 00CB4 0               NIBHEX  0
- 2538 00CB5 0               NIBHEX  0
- 2539 00CB6 0               NIBHEX  0
- 2540 00CB7 0               NIBHEX  0
- 2541 00CB8 0               NIBHEX  0
- 2542 00CB9 0               NIBHEX  0
- 2543 00CBA 0               NIBHEX  0
- 2544 00CBB 0               NIBHEX  0
- 2545 00CBC 0               NIBHEX  0
- 2546 00CBD 0               NIBHEX  0
- 2547 00CBE 0               NIBHEX  0
- 2548 00CBF 0               NIBHEX  0
- 2549 00CC0 0               NIBHEX  0
- 2550 00CC1 0               NIBHEX  0
- 2551 00CC2 0               NIBHEX  0
- 2552 00CC3 0               NIBHEX  0
- 2553 00CC4 0               NIBHEX  0
- 2554 00CC5 0               NIBHEX  0
- 2555 00CC6 F               NIBHEX  F
- 2556 00CC7 F               NIBHEX  F
- 2557 00CC8 0               NIBHEX  0
- 2558 00CC9 0               NIBHEX  0
- 2559 00CCA 0               NIBHEX  0
- 2560 00CCB 0               NIBHEX  0
- 2561 00CCC 0               NIBHEX  0
- 2562 00CCD 0               NIBHEX  0
- 2563 00CCE 0               NIBHEX  0
- 2564 00CCF 0               NIBHEX  0
- 2565 00CD0 0               NIBHEX  0
- 2566 00CD1 0               NIBHEX  0
- 2567 00CD2 0               NIBHEX  0
- 2568 00CD3 0               NIBHEX  0
- 2569 00CD4 0               NIBHEX  0
- 2570 00CD5 0               NIBHEX  0
- 2571 00CD6 0               NIBHEX  0
- 2572 00CD7 0               NIBHEX  0
- 2573 00CD8 0               NIBHEX  0
- 2574 00CD9 0               NIBHEX  0
- 2575 00CDA 0               NIBHEX  0
- 2576 00CDB 0               NIBHEX  0
- 2577 00CDC 0               NIBHEX  0
- 2578 00CDD 0               NIBHEX  0
- 2579 00CDE 0               NIBHEX  0
- 2580 00CDF 0               NIBHEX  0
- 2581 00CE0 0               NIBHEX  0
- 2582 00CE1 0               NIBHEX  0
- 2583 00CE2 0               NIBHEX  0
- 2584 00CE3 0               NIBHEX  0
- 2585 00CE4 0               NIBHEX  0
- 2586 00CE5 0               NIBHEX  0
- 2587 00CE6 0               NIBHEX  0
- 2588 00CE7 0               NIBHEX  0
- 2589 00CE8 F               NIBHEX  F
- 2590 00CE9 F               NIBHEX  F
- 2591 00CEA 0               NIBHEX  0
- 2592 00CEB 0               NIBHEX  0
- 2593 00CEC 0               NIBHEX  0
- 2594 00CED 0               NIBHEX  0
- 2595 00CEE 0               NIBHEX  0
- 2596 00CEF 0               NIBHEX  0
- 2597 00CF0 0               NIBHEX  0
- 2598 00CF1 0               NIBHEX  0
- 2599 00CF2 0               NIBHEX  0
- 2600 00CF3 0               NIBHEX  0
- 2601 00CF4 0               NIBHEX  0
- 2602 00CF5 0               NIBHEX  0
- 2603 00CF6 0               NIBHEX  0
- 2604 00CF7 0               NIBHEX  0
- 2605 00CF8 0               NIBHEX  0
- 2606 00CF9 0               NIBHEX  0
- 2607 00CFA 0               NIBHEX  0
- 2608 00CFB 0               NIBHEX  0
- 2609 00CFC 0               NIBHEX  0
- 2610 00CFD 0               NIBHEX  0
- 2611 00CFE 0               NIBHEX  0
- 2612 00CFF 0               NIBHEX  0
- 2613 00D00 0               NIBHEX  0
- 2614 00D01 0               NIBHEX  0
- 2615 00D02 0               NIBHEX  0
- 2616 00D03 0               NIBHEX  0
- 2617 00D04 0               NIBHEX  0
- 2618 00D05 0               NIBHEX  0
- 2619 00D06 0               NIBHEX  0
- 2620 00D07 0               NIBHEX  0
- 2621 00D08 0               NIBHEX  0
- 2622 00D09 0               NIBHEX  0
- 2623 00D0A D               NIBHEX  D
- 2624 00D0B B               NIBHEX  B
- 2625 00D0C 0               NIBHEX  0
- 2626 00D0D 0               NIBHEX  0
- 2627 00D0E 0               NIBHEX  0
- 2628 00D0F 0               NIBHEX  0
- 2629 00D10 0               NIBHEX  0
- 2630 00D11 0               NIBHEX  0
- 2631 00D12 0               NIBHEX  0
- 2632 00D13 0               NIBHEX  0
- 2633 00D14 0               NIBHEX  0
- 2634 00D15 0               NIBHEX  0
- 2635 00D16 0               NIBHEX  0
- 2636 00D17 0               NIBHEX  0
- 2637 00D18 0               NIBHEX  0
- 2638 00D19 0               NIBHEX  0
- 2639 00D1A 0               NIBHEX  0
- 2640 00D1B 0               NIBHEX  0
- 2641 00D1C 0               NIBHEX  0
- 2642 00D1D 0               NIBHEX  0
- 2643 00D1E 0               NIBHEX  0
- 2644 00D1F 0               NIBHEX  0
- 2645 00D20 0               NIBHEX  0
- 2646 00D21 0               NIBHEX  0
- 2647 00D22 0               NIBHEX  0
- 2648 00D23 0               NIBHEX  0
- 2649 00D24 0               NIBHEX  0
- 2650 00D25 0               NIBHEX  0
- 2651 00D26 0               NIBHEX  0
- 2652 00D27 0               NIBHEX  0
- 2653 00D28 0               NIBHEX  0
- 2654 00D29 0               NIBHEX  0
- 2655 00D2A 0               NIBHEX  0
- 2656 00D2B 0               NIBHEX  0
- 2657 00D2C F               NIBHEX  F
- 2658 00D2D F               NIBHEX  F
- 2659 00D2E 0               NIBHEX  0
- 2660 00D2F 0               NIBHEX  0
- 2661 00D30 0               NIBHEX  0
- 2662 00D31 0               NIBHEX  0
- 2663 00D32 0               NIBHEX  0
- 2664 00D33 0               NIBHEX  0
- 2665 00D34 0               NIBHEX  0
- 2666 00D35 0               NIBHEX  0
- 2667 00D36 0               NIBHEX  0
- 2668 00D37 0               NIBHEX  0
- 2669 00D38 0               NIBHEX  0
- 2670 00D39 0               NIBHEX  0
- 2671 00D3A 0               NIBHEX  0
- 2672 00D3B 0               NIBHEX  0
- 2673 00D3C 0               NIBHEX  0
- 2674 00D3D 0               NIBHEX  0
- 2675 00D3E 0               NIBHEX  0
- 2676 00D3F 0               NIBHEX  0
- 2677 00D40 0               NIBHEX  0
- 2678 00D41 0               NIBHEX  0
- 2679 00D42 0               NIBHEX  0
- 2680 00D43 0               NIBHEX  0
- 2681 00D44 0               NIBHEX  0
- 2682 00D45 0               NIBHEX  0
- 2683 00D46 0               NIBHEX  0
- 2684 00D47 0               NIBHEX  0
- 2685 00D48 0               NIBHEX  0
- 2686 00D49 0               NIBHEX  0
- 2687 00D4A 0               NIBHEX  0
- 2688 00D4B 0               NIBHEX  0
- 2689 00D4C 0               NIBHEX  0
- 2690 00D4D 0               NIBHEX  0
- 2691 00D4E F               NIBHEX  F
- 2692 00D4F F               NIBHEX  F
- 2693 00D50 0               NIBHEX  0
- 2694 00D51 0               NIBHEX  0
- 2695 00D52 0               NIBHEX  0
- 2696 00D53 0               NIBHEX  0
- 2697 00D54 0               NIBHEX  0
- 2698 00D55 0               NIBHEX  0
- 2699 00D56 0               NIBHEX  0
- 2700 00D57 0               NIBHEX  0
- 2701 00D58 0               NIBHEX  0
- 2702 00D59 0               NIBHEX  0
- 2703 00D5A 0               NIBHEX  0
- 2704 00D5B 0               NIBHEX  0
- 2705 00D5C 0               NIBHEX  0
- 2706 00D5D 0               NIBHEX  0
- 2707 00D5E 0               NIBHEX  0
- 2708 00D5F 0               NIBHEX  0
- 2709 00D60 0               NIBHEX  0
- 2710 00D61 0               NIBHEX  0
- 2711 00D62 0               NIBHEX  0
- 2712 00D63 0               NIBHEX  0
- 2713 00D64 0               NIBHEX  0
- 2714 00D65 0               NIBHEX  0
- 2715 00D66 0               NIBHEX  0
- 2716 00D67 0               NIBHEX  0
- 2717 00D68 0               NIBHEX  0
- 2718 00D69 0               NIBHEX  0
- 2719 00D6A 0               NIBHEX  0
- 2720 00D6B 0               NIBHEX  0
- 2721 00D6C 0               NIBHEX  0
- 2722 00D6D 0               NIBHEX  0
- 2723 00D6E 0               NIBHEX  0
- 2724 00D6F 0               NIBHEX  0
- 2725 00D70 F               NIBHEX  F
- 2726 00D71 F               NIBHEX  F
- 2727 00D72 0               NIBHEX  0
- 2728 00D73 0               NIBHEX  0
- 2729 00D74 0               NIBHEX  0
- 2730 00D75 0               NIBHEX  0
- 2731 00D76 0               NIBHEX  0
- 2732 00D77 0               NIBHEX  0
- 2733 00D78 0               NIBHEX  0
- 2734 00D79 0               NIBHEX  0
- 2735 00D7A 0               NIBHEX  0
- 2736 00D7B 0               NIBHEX  0
- 2737 00D7C 0               NIBHEX  0
- 2738 00D7D 0               NIBHEX  0
- 2739 00D7E 0               NIBHEX  0
- 2740 00D7F 0               NIBHEX  0
- 2741 00D80 0               NIBHEX  0
- 2742 00D81 0               NIBHEX  0
- 2743 00D82 0               NIBHEX  0
- 2744 00D83 0               NIBHEX  0
- 2745 00D84 0               NIBHEX  0
- 2746 00D85 0               NIBHEX  0
- 2747 00D86 0               NIBHEX  0
- 2748 00D87 0               NIBHEX  0
- 2749 00D88 0               NIBHEX  0
- 2750 00D89 0               NIBHEX  0
- 2751 00D8A 0               NIBHEX  0
- 2752 00D8B 0               NIBHEX  0
- 2753 00D8C 0               NIBHEX  0
- 2754 00D8D 0               NIBHEX  0
- 2755 00D8E 0               NIBHEX  0
- 2756 00D8F 0               NIBHEX  0
- 2757 00D90 0               NIBHEX  0
- 2758 00D91 0               NIBHEX  0
- 2759 00D92 F               NIBHEX  F
- 2760 00D93 F               NIBHEX  F
- 2761 00D94 0               NIBHEX  0
- 2762 00D95 0               NIBHEX  0
- 2763 00D96 0               NIBHEX  0
- 2764 00D97 0               NIBHEX  0
- 2765 00D98 0               NIBHEX  0
- 2766 00D99 0               NIBHEX  0
- 2767 00D9A 0               NIBHEX  0
- 2768 00D9B 0               NIBHEX  0
- 2769 00D9C 0               NIBHEX  0
- 2770 00D9D 0               NIBHEX  0
- 2771 00D9E 0               NIBHEX  0
- 2772 00D9F 0               NIBHEX  0
- 2773 00DA0 0               NIBHEX  0
- 2774 00DA1 0               NIBHEX  0
- 2775 00DA2 0               NIBHEX  0
- 2776 00DA3 0               NIBHEX  0
- 2777 00DA4 0               NIBHEX  0
- 2778 00DA5 0               NIBHEX  0
- 2779 00DA6 0               NIBHEX  0
- 2780 00DA7 0               NIBHEX  0
- 2781 00DA8 0               NIBHEX  0
- 2782 00DA9 0               NIBHEX  0
- 2783 00DAA 0               NIBHEX  0
- 2784 00DAB 0               NIBHEX  0
- 2785 00DAC 0               NIBHEX  0
- 2786 00DAD 0               NIBHEX  0
- 2787 00DAE 0               NIBHEX  0
- 2788 00DAF 0               NIBHEX  0
- 2789 00DB0 0               NIBHEX  0
- 2790 00DB1 0               NIBHEX  0
- 2791 00DB2 0               NIBHEX  0
- 2792 00DB3 0               NIBHEX  0
- 2793 00DB4 D               NIBHEX  D
- 2794 00DB5 B               NIBHEX  B
- 2795 00DB6 0               NIBHEX  0
- 2796 00DB7 0               NIBHEX  0
- 2797 00DB8 0               NIBHEX  0
- 2798 00DB9 0               NIBHEX  0
- 2799 00DBA 0               NIBHEX  0
- 2800 00DBB 0               NIBHEX  0
- 2801 00DBC 0               NIBHEX  0
- 2802 00DBD 0               NIBHEX  0
- 2803 00DBE 0               NIBHEX  0
- 2804 00DBF 0               NIBHEX  0
- 2805 00DC0 0               NIBHEX  0
- 2806 00DC1 0               NIBHEX  0
- 2807 00DC2 0               NIBHEX  0
- 2808 00DC3 0               NIBHEX  0
- 2809 00DC4 0               NIBHEX  0
- 2810 00DC5 0               NIBHEX  0
- 2811 00DC6 0               NIBHEX  0
- 2812 00DC7 0               NIBHEX  0
- 2813 00DC8 0               NIBHEX  0
- 2814 00DC9 0               NIBHEX  0
- 2815 00DCA 0               NIBHEX  0
- 2816 00DCB 0               NIBHEX  0
- 2817 00DCC 0               NIBHEX  0
- 2818 00DCD 0               NIBHEX  0
- 2819 00DCE 0               NIBHEX  0
- 2820 00DCF 0               NIBHEX  0
- 2821 00DD0 0               NIBHEX  0
- 2822 00DD1 0               NIBHEX  0
- 2823 00DD2 0               NIBHEX  0
- 2824 00DD3 0               NIBHEX  0
- 2825 00DD4 0               NIBHEX  0
- 2826 00DD5 0               NIBHEX  0
- 2827 00DD6 F               NIBHEX  F
- 2828 00DD7 F               NIBHEX  F
- 2829 00DD8 0               NIBHEX  0
- 2830 00DD9 0               NIBHEX  0
- 2831 00DDA 0               NIBHEX  0
- 2832 00DDB 0               NIBHEX  0
- 2833 00DDC 0               NIBHEX  0
- 2834 00DDD 0               NIBHEX  0
- 2835 00DDE 0               NIBHEX  0
- 2836 00DDF 0               NIBHEX  0
- 2837 00DE0 0               NIBHEX  0
- 2838 00DE1 0               NIBHEX  0
- 2839 00DE2 0               NIBHEX  0
- 2840 00DE3 0               NIBHEX  0
- 2841 00DE4 0               NIBHEX  0
- 2842 00DE5 0               NIBHEX  0
- 2843 00DE6 0               NIBHEX  0
- 2844 00DE7 0               NIBHEX  0
- 2845 00DE8 0               NIBHEX  0
- 2846 00DE9 0               NIBHEX  0
- 2847 00DEA 0               NIBHEX  0
- 2848 00DEB 0               NIBHEX  0
- 2849 00DEC 0               NIBHEX  0
- 2850 00DED 0               NIBHEX  0
- 2851 00DEE 0               NIBHEX  0
- 2852 00DEF 0               NIBHEX  0
- 2853 00DF0 0               NIBHEX  0
- 2854 00DF1 0               NIBHEX  0
- 2855 00DF2 0               NIBHEX  0
- 2856 00DF3 0               NIBHEX  0
- 2857 00DF4 0               NIBHEX  0
- 2858 00DF5 0               NIBHEX  0
- 2859 00DF6 0               NIBHEX  0
- 2860 00DF7 0               NIBHEX  0
- 2861 00DF8 F               NIBHEX  F
- 2862 00DF9 F               NIBHEX  F
- 2863 00DFA 0               NIBHEX  0
- 2864 00DFB 0               NIBHEX  0
- 2865 00DFC 0               NIBHEX  0
- 2866 00DFD 0               NIBHEX  0
- 2867 00DFE 0               NIBHEX  0
- 2868 00DFF 0               NIBHEX  0
- 2869 00E00 0               NIBHEX  0
- 2870 00E01 0               NIBHEX  0
- 2871 00E02 0               NIBHEX  0
- 2872 00E03 0               NIBHEX  0
- 2873 00E04 0               NIBHEX  0
- 2874 00E05 0               NIBHEX  0
- 2875 00E06 0               NIBHEX  0
- 2876 00E07 0               NIBHEX  0
- 2877 00E08 0               NIBHEX  0
- 2878 00E09 0               NIBHEX  0
- 2879 00E0A 0               NIBHEX  0
- 2880 00E0B 0               NIBHEX  0
- 2881 00E0C 0               NIBHEX  0
- 2882 00E0D 0               NIBHEX  0
- 2883 00E0E 0               NIBHEX  0
- 2884 00E0F 0               NIBHEX  0
- 2885 00E10 0               NIBHEX  0
- 2886 00E11 0               NIBHEX  0
- 2887 00E12 0               NIBHEX  0
- 2888 00E13 0               NIBHEX  0
- 2889 00E14 0               NIBHEX  0
- 2890 00E15 0               NIBHEX  0
- 2891 00E16 0               NIBHEX  0
- 2892 00E17 0               NIBHEX  0
- 2893 00E18 0               NIBHEX  0
- 2894 00E19 0               NIBHEX  0
- 2895 00E1A F               NIBHEX  F
- 2896 00E1B B               NIBHEX  B
- 2897 00E1C 0               NIBHEX  0
- 2898 00E1D 0               NIBHEX  0
- 2899 00E1E 0               NIBHEX  0
- 2900 00E1F 0               NIBHEX  0
- 2901 00E20 0               NIBHEX  0
- 2902 00E21 0               NIBHEX  0
- 2903 00E22 0               NIBHEX  0
- 2904 00E23 0               NIBHEX  0
- 2905 00E24 0               NIBHEX  0
- 2906 00E25 0               NIBHEX  0
- 2907 00E26 0               NIBHEX  0
- 2908 00E27 0               NIBHEX  0
- 2909 00E28 0               NIBHEX  0
- 2910 00E29 0               NIBHEX  0
- 2911 00E2A 0               NIBHEX  0
- 2912 00E2B 0               NIBHEX  0
- 2913 00E2C 0               NIBHEX  0
- 2914 00E2D 0               NIBHEX  0
- 2915 00E2E 0               NIBHEX  0
- 2916 00E2F 0               NIBHEX  0
- 2917 00E30 0               NIBHEX  0
- 2918 00E31 0               NIBHEX  0
- 2919 00E32 0               NIBHEX  0
- 2920 00E33 0               NIBHEX  0
- 2921 00E34 0               NIBHEX  0
- 2922 00E35 0               NIBHEX  0
- 2923 00E36 0               NIBHEX  0
- 2924 00E37 0               NIBHEX  0
- 2925 00E38 0               NIBHEX  0
- 2926 00E39 0               NIBHEX  0
- 2927 00E3A 0               NIBHEX  0
- 2928 00E3B 0               NIBHEX  0
- 2929 00E3C F               NIBHEX  F
- 2930 00E3D F               NIBHEX  F
- 2931 00E3E 0               NIBHEX  0
- 2932 00E3F 0               NIBHEX  0
- 2933 00E40 0               NIBHEX  0
- 2934 00E41 0               NIBHEX  0
- 2935 00E42 0               NIBHEX  0
- 2936 00E43 0               NIBHEX  0
- 2937 00E44 0               NIBHEX  0
- 2938 00E45 0               NIBHEX  0
- 2939 00E46 0               NIBHEX  0
- 2940 00E47 0               NIBHEX  0
- 2941 00E48 0               NIBHEX  0
- 2942 00E49 0               NIBHEX  0
- 2943 00E4A 0               NIBHEX  0
- 2944 00E4B 0               NIBHEX  0
- 2945 00E4C 0               NIBHEX  0
- 2946 00E4D 0               NIBHEX  0
- 2947 00E4E 0               NIBHEX  0
- 2948 00E4F 0               NIBHEX  0
- 2949 00E50 0               NIBHEX  0
- 2950 00E51 0               NIBHEX  0
- 2951 00E52 0               NIBHEX  0
- 2952 00E53 0               NIBHEX  0
- 2953 00E54 0               NIBHEX  0
- 2954 00E55 0               NIBHEX  0
- 2955 00E56 0               NIBHEX  0
- 2956 00E57 0               NIBHEX  0
- 2957 00E58 0               NIBHEX  0
- 2958 00E59 0               NIBHEX  0
- 2959 00E5A 0               NIBHEX  0
- 2960 00E5B 0               NIBHEX  0
- 2961 00E5C 0               NIBHEX  0
- 2962 00E5D 0               NIBHEX  0
- 2963 00E5E E               NIBHEX  E
- 2964 00E5F 5               NIBHEX  5
- 2965 00E60 0               NIBHEX  0
- 2966 00E61 0               NIBHEX  0
- 2967 00E62 0               NIBHEX  0
- 2968 00E63 0               NIBHEX  0
- 2969 00E64 0               NIBHEX  0
- 2970 00E65 0               NIBHEX  0
- 2971 00E66 0               NIBHEX  0
- 2972 00E67 0               NIBHEX  0
- 2973 00E68 0               NIBHEX  0
- 2974 00E69 0               NIBHEX  0
- 2975 00E6A 0               NIBHEX  0
- 2976 00E6B 0               NIBHEX  0
- 2977 00E6C 0               NIBHEX  0
- 2978 00E6D 0               NIBHEX  0
- 2979 00E6E 0               NIBHEX  0
- 2980 00E6F 0               NIBHEX  0
- 2981 00E70 0               NIBHEX  0
- 2982 00E71 0               NIBHEX  0
- 2983 00E72 0               NIBHEX  0
- 2984 00E73 0               NIBHEX  0
- 2985 00E74 0               NIBHEX  0
- 2986 00E75 0               NIBHEX  0
- 2987 00E76 0               NIBHEX  0
- 2988 00E77 0               NIBHEX  0
- 2989 00E78 0               NIBHEX  0
- 2990 00E79 0               NIBHEX  0
- 2991 00E7A 0               NIBHEX  0
- 2992 00E7B 0               NIBHEX  0
- 2993 00E7C 0               NIBHEX  0
- 2994 00E7D 0               NIBHEX  0
- 2995 00E7E 0               NIBHEX  0
- 2996 00E7F 0               NIBHEX  0
- 2997 00E80 E               NIBHEX  E
- 2998 00E81 5               NIBHEX  5
- 2999 00E82 0               NIBHEX  0
- 3000 00E83 0               NIBHEX  0
- 3001 00E84 0               NIBHEX  0
- 3002 00E85 0               NIBHEX  0
- 3003 00E86 0               NIBHEX  0
- 3004 00E87 0               NIBHEX  0
- 3005 00E88 0               NIBHEX  0
- 3006 00E89 0               NIBHEX  0
- 3007 00E8A 0               NIBHEX  0
- 3008 00E8B 0               NIBHEX  0
- 3009 00E8C 0               NIBHEX  0
- 3010 00E8D 0               NIBHEX  0
- 3011 00E8E 0               NIBHEX  0
- 3012 00E8F 0               NIBHEX  0
- 3013 00E90 0               NIBHEX  0
- 3014 00E91 0               NIBHEX  0
- 3015 00E92 0               NIBHEX  0
- 3016 00E93 0               NIBHEX  0
- 3017 00E94 0               NIBHEX  0
- 3018 00E95 0               NIBHEX  0
- 3019 00E96 0               NIBHEX  0
- 3020 00E97 0               NIBHEX  0
- 3021 00E98 0               NIBHEX  0
- 3022 00E99 0               NIBHEX  0
- 3023 00E9A 0               NIBHEX  0
- 3024 00E9B 0               NIBHEX  0
- 3025 00E9C 0               NIBHEX  0
- 3026 00E9D 0               NIBHEX  0
- 3027 00E9E 0               NIBHEX  0
- 3028 00E9F 0               NIBHEX  0
- 3029 00EA0 0               NIBHEX  0
- 3030 00EA1 0               NIBHEX  0
- 3031 00EA2 E               NIBHEX  E
- 3032 00EA3 5               NIBHEX  5
- 3033 00EA4 0               NIBHEX  0
- 3034 00EA5 0               NIBHEX  0
- 3035 00EA6 0               NIBHEX  0
- 3036 00EA7 0               NIBHEX  0
- 3037 00EA8 0               NIBHEX  0
- 3038 00EA9 0               NIBHEX  0
- 3039 00EAA 0               NIBHEX  0
- 3040 00EAB 0               NIBHEX  0
- 3041 00EAC 0               NIBHEX  0
- 3042 00EAD 0               NIBHEX  0
- 3043 00EAE 0               NIBHEX  0
- 3044 00EAF 0               NIBHEX  0
- 3045 00EB0 0               NIBHEX  0
- 3046 00EB1 0               NIBHEX  0
- 3047 00EB2 0               NIBHEX  0
- 3048 00EB3 0               NIBHEX  0
- 3049 00EB4 0               NIBHEX  0
- 3050 00EB5 0               NIBHEX  0
- 3051 00EB6 0               NIBHEX  0
- 3052 00EB7 0               NIBHEX  0
- 3053 00EB8 0               NIBHEX  0
- 3054 00EB9 0               NIBHEX  0
- 3055 00EBA 0               NIBHEX  0
- 3056 00EBB 0               NIBHEX  0
- 3057 00EBC 0               NIBHEX  0
- 3058 00EBD 0               NIBHEX  0
- 3059 00EBE 0               NIBHEX  0
- 3060 00EBF 0               NIBHEX  0
- 3061 00EC0 0               NIBHEX  0
- 3062 00EC1 0               NIBHEX  0
- 3063 00EC2 0               NIBHEX  0
- 3064 00EC3 0               NIBHEX  0
- 3065 00EC4 E               NIBHEX  E
- 3066 00EC5 5               NIBHEX  5
- 3067 00EC6 0               NIBHEX  0
- 3068 00EC7 0               NIBHEX  0
- 3069 00EC8 0               NIBHEX  0
- 3070 00EC9 0               NIBHEX  0
- 3071 00ECA 0               NIBHEX  0
- 3072 00ECB 0               NIBHEX  0
- 3073 00ECC 0               NIBHEX  0
- 3074 00ECD 0               NIBHEX  0
- 3075 00ECE 0               NIBHEX  0
- 3076 00ECF 0               NIBHEX  0
- 3077 00ED0 0               NIBHEX  0
- 3078 00ED1 0               NIBHEX  0
- 3079 00ED2 0               NIBHEX  0
- 3080 00ED3 0               NIBHEX  0
- 3081 00ED4 0               NIBHEX  0
- 3082 00ED5 0               NIBHEX  0
- 3083 00ED6 0               NIBHEX  0
- 3084 00ED7 0               NIBHEX  0
- 3085 00ED8 0               NIBHEX  0
- 3086 00ED9 0               NIBHEX  0
- 3087 00EDA 0               NIBHEX  0
- 3088 00EDB 0               NIBHEX  0
- 3089 00EDC 0               NIBHEX  0
- 3090 00EDD 0               NIBHEX  0
- 3091 00EDE 0               NIBHEX  0
- 3092 00EDF 0               NIBHEX  0
- 3093 00EE0 0               NIBHEX  0
- 3094 00EE1 0               NIBHEX  0
- 3095 00EE2 0               NIBHEX  0
- 3096 00EE3 0               NIBHEX  0
- 3097 00EE4 0               NIBHEX  0
- 3098 00EE5 0               NIBHEX  0
- 3099 00EE6 E               NIBHEX  E
- 3100 00EE7 5               NIBHEX  5
- 3101 00EE8 0               NIBHEX  0
- 3102 00EE9 0               NIBHEX  0
- 3103 00EEA 0               NIBHEX  0
- 3104 00EEB 0               NIBHEX  0
- 3105 00EEC 0               NIBHEX  0
- 3106 00EED 0               NIBHEX  0
- 3107 00EEE 0               NIBHEX  0
- 3108 00EEF 0               NIBHEX  0
- 3109 00EF0 0               NIBHEX  0
- 3110 00EF1 0               NIBHEX  0
- 3111 00EF2 0               NIBHEX  0
- 3112 00EF3 0               NIBHEX  0
- 3113 00EF4 0               NIBHEX  0
- 3114 00EF5 0               NIBHEX  0
- 3115 00EF6 0               NIBHEX  0
- 3116 00EF7 0               NIBHEX  0
- 3117 00EF8 0               NIBHEX  0
- 3118 00EF9 0               NIBHEX  0
- 3119 00EFA 0               NIBHEX  0
- 3120 00EFB 0               NIBHEX  0
- 3121 00EFC 0               NIBHEX  0
- 3122 00EFD 0               NIBHEX  0
- 3123 00EFE 0               NIBHEX  0
- 3124 00EFF 0               NIBHEX  0
- 3125 00F00 0               NIBHEX  0
- 3126 00F01 0               NIBHEX  0
- 3127 00F02 0               NIBHEX  0
- 3128 00F03 0               NIBHEX  0
- 3129 00F04 0               NIBHEX  0
- 3130 00F05 0               NIBHEX  0
- 3131 00F06 0               NIBHEX  0
- 3132 00F07 0               NIBHEX  0
- 3133 00F08 0               NIBHEX  0
- 3134 00F09 0               NIBHEX  0
- 3135 00F0A 0               NIBHEX  0
- 3136 00F0B 0               NIBHEX  0
- 3137 00F0C 0               NIBHEX  0
- 3138 00F0D 0               NIBHEX  0
- 3139 00F0E 0               NIBHEX  0
- 3140 00F0F 0               NIBHEX  0
- 3141 00F10 0               NIBHEX  0
- 3142 00F11 0               NIBHEX  0
- 3143 00F12 0               NIBHEX  0
- 3144 00F13 0               NIBHEX  0
- 3145 00F14 0               NIBHEX  0
- 3146 00F15 0               NIBHEX  0
- 3147 00F16 0               NIBHEX  0
- 3148 00F17 0               NIBHEX  0
- 3149 00F18 0               NIBHEX  0
- 3150 00F19 0               NIBHEX  0
- 3151 00F1A 0               NIBHEX  0
- 3152 00F1B 0               NIBHEX  0
- 3153 00F1C 0               NIBHEX  0
- 3154 00F1D 0               NIBHEX  0
- 3155 00F1E 0               NIBHEX  0
- 3156 00F1F 0               NIBHEX  0
- 3157 00F20 0               NIBHEX  0
- 3158 00F21 0               NIBHEX  0
- 3159 00F22 0               NIBHEX  0
- 3160 00F23 0               NIBHEX  0
- 3161 00F24 0               NIBHEX  0
- 3162 00F25 0               NIBHEX  0
- 3163 00F26 0               NIBHEX  0
- 3164 00F27 0               NIBHEX  0
- 3165 00F28 0               NIBHEX  0
- 3166 00F29 0               NIBHEX  0
- 3167 00F2A C               NIBHEX  C
- 3168 00F2B 1               NIBHEX  1
- 3169 00F2C 0               NIBHEX  0
- 3170 00F2D 0               NIBHEX  0
- 3171 00F2E 0               NIBHEX  0
- 3172 00F2F 0               NIBHEX  0
- 3173 00F30 0               NIBHEX  0
- 3174 00F31 0               NIBHEX  0
- 3175 00F32 0               NIBHEX  0
- 3176 00F33 0               NIBHEX  0
- 3177 00F34 0               NIBHEX  0
- 3178 00F35 0               NIBHEX  0
- 3179 00F36 0               NIBHEX  0
- 3180 00F37 0               NIBHEX  0
- 3181 00F38 0               NIBHEX  0
- 3182 00F39 0               NIBHEX  0
- 3183 00F3A 0               NIBHEX  0
- 3184 00F3B 0               NIBHEX  0
- 3185 00F3C 0               NIBHEX  0
- 3186 00F3D 0               NIBHEX  0
- 3187 00F3E 0               NIBHEX  0
- 3188 00F3F 0               NIBHEX  0
- 3189 00F40 0               NIBHEX  0
- 3190 00F41 0               NIBHEX  0
- 3191 00F42 0               NIBHEX  0
- 3192 00F43 0               NIBHEX  0
- 3193 00F44 0               NIBHEX  0
- 3194 00F45 0               NIBHEX  0
- 3195 00F46 0               NIBHEX  0
- 3196 00F47 0               NIBHEX  0
- 3197 00F48 0               NIBHEX  0
- 3198 00F49 0               NIBHEX  0
- 3199 00F4A 0               NIBHEX  0
- 3200 00F4B 0               NIBHEX  0
- 3201 00F4C 2               NIBHEX  2
- 3202 00F4D 2               NIBHEX  2
- 3203 00F4E 0               NIBHEX  0
- 3204 00F4F 0               NIBHEX  0
- 3205 00F50 0               NIBHEX  0
- 3206 00F51 0               NIBHEX  0
- 3207 00F52 0               NIBHEX  0
- 3208 00F53 0               NIBHEX  0
- 3209 00F54 0               NIBHEX  0
- 3210 00F55 0               NIBHEX  0
- 3211 00F56 0               NIBHEX  0
- 3212 00F57 0               NIBHEX  0
- 3213 00F58 0               NIBHEX  0
- 3214 00F59 0               NIBHEX  0
- 3215 00F5A 0               NIBHEX  0
- 3216 00F5B 0               NIBHEX  0
- 3217 00F5C 0               NIBHEX  0
- 3218 00F5D 0               NIBHEX  0
- 3219 00F5E 0               NIBHEX  0
- 3220 00F5F 0               NIBHEX  0
- 3221 00F60 0               NIBHEX  0
- 3222 00F61 0               NIBHEX  0
- 3223 00F62 0               NIBHEX  0
- 3224 00F63 0               NIBHEX  0
- 3225 00F64 0               NIBHEX  0
- 3226 00F65 0               NIBHEX  0
- 3227 00F66 0               NIBHEX  0
- 3228 00F67 0               NIBHEX  0
- 3229 00F68 0               NIBHEX  0
- 3230 00F69 0               NIBHEX  0
- 3231 00F6A 0               NIBHEX  0
- 3232 00F6B 0               NIBHEX  0
- 3233 00F6C 0               NIBHEX  0
- 3234 00F6D 0               NIBHEX  0
- 3235 00F6E 1               NIBHEX  1
- 3236 00F6F 4               NIBHEX  4
- 3237 00F70 0               NIBHEX  0
- 3238 00F71 0               NIBHEX  0
- 3239 00F72 0               NIBHEX  0
- 3240 00F73 0               NIBHEX  0
- 3241 00F74 0               NIBHEX  0
- 3242 00F75 0               NIBHEX  0
- 3243 00F76 0               NIBHEX  0
- 3244 00F77 0               NIBHEX  0
- 3245 00F78 0               NIBHEX  0
- 3246 00F79 0               NIBHEX  0
- 3247 00F7A 0               NIBHEX  0
- 3248 00F7B 0               NIBHEX  0
- 3249 00F7C 0               NIBHEX  0
- 3250 00F7D 0               NIBHEX  0
- 3251 00F7E 0               NIBHEX  0
- 3252 00F7F 0               NIBHEX  0
- 3253 00F80 0               NIBHEX  0
- 3254 00F81 0               NIBHEX  0
- 3255 00F82 0               NIBHEX  0
- 3256 00F83 0               NIBHEX  0
- 3257 00F84 0               NIBHEX  0
- 3258 00F85 0               NIBHEX  0
- 3259 00F86 0               NIBHEX  0
- 3260 00F87 0               NIBHEX  0
- 3261 00F88 0               NIBHEX  0
- 3262 00F89 0               NIBHEX  0
- 3263 00F8A 0               NIBHEX  0
- 3264 00F8B 0               NIBHEX  0
- 3265 00F8C 0               NIBHEX  0
- 3266 00F8D 0               NIBHEX  0
- 3267 00F8E 0               NIBHEX  0
- 3268 00F8F 0               NIBHEX  0
- 3269 00F90 1               NIBHEX  1
- 3270 00F91 4               NIBHEX  4
- 3271 00F92 0               NIBHEX  0
- 3272 00F93 0               NIBHEX  0
- 3273 00F94 0               NIBHEX  0
- 3274 00F95 0               NIBHEX  0
- 3275 00F96 0               NIBHEX  0
- 3276 00F97 0               NIBHEX  0
- 3277 00F98 0               NIBHEX  0
- 3278 00F99 0               NIBHEX  0
- 3279 00F9A 0               NIBHEX  0
- 3280 00F9B 0               NIBHEX  0
- 3281 00F9C 0               NIBHEX  0
- 3282 00F9D 0               NIBHEX  0
- 3283 00F9E 0               NIBHEX  0
- 3284 00F9F 0               NIBHEX  0
- 3285 00FA0 0               NIBHEX  0
- 3286 00FA1 0               NIBHEX  0
- 3287 00FA2 0               NIBHEX  0
- 3288 00FA3 0               NIBHEX  0
- 3289 00FA4 0               NIBHEX  0
- 3290 00FA5 0               NIBHEX  0
- 3291 00FA6 0               NIBHEX  0
- 3292 00FA7 0               NIBHEX  0
- 3293 00FA8 0               NIBHEX  0
- 3294 00FA9 0               NIBHEX  0
- 3295 00FAA 0               NIBHEX  0
- 3296 00FAB 0               NIBHEX  0
- 3297 00FAC 0               NIBHEX  0
- 3298 00FAD 0               NIBHEX  0
- 3299 00FAE 0               NIBHEX  0
- 3300 00FAF 0               NIBHEX  0
- 3301 00FB0 0               NIBHEX  0
- 3302 00FB1 0               NIBHEX  0
- 3303 00FB2 1               NIBHEX  1
- 3304 00FB3 4               NIBHEX  4
- 3305 00FB4 0               NIBHEX  0
- 3306 00FB5 0               NIBHEX  0
- 3307 00FB6 0               NIBHEX  0
- 3308 00FB7 0               NIBHEX  0
- 3309 00FB8 0               NIBHEX  0
- 3310 00FB9 0               NIBHEX  0
- 3311 00FBA 0               NIBHEX  0
- 3312 00FBB 0               NIBHEX  0
- 3313 00FBC 0               NIBHEX  0
- 3314 00FBD 0               NIBHEX  0
- 3315 00FBE 0               NIBHEX  0
- 3316 00FBF 0               NIBHEX  0
- 3317 00FC0 0               NIBHEX  0
- 3318 00FC1 0               NIBHEX  0
- 3319 00FC2 0               NIBHEX  0
- 3320 00FC3 0               NIBHEX  0
- 3321 00FC4 0               NIBHEX  0
- 3322 00FC5 0               NIBHEX  0
- 3323 00FC6 0               NIBHEX  0
- 3324 00FC7 0               NIBHEX  0
- 3325 00FC8 0               NIBHEX  0
- 3326 00FC9 0               NIBHEX  0
- 3327 00FCA 0               NIBHEX  0
- 3328 00FCB 0               NIBHEX  0
- 3329 00FCC 0               NIBHEX  0
- 3330 00FCD 0               NIBHEX  0
- 3331 00FCE 0               NIBHEX  0
- 3332 00FCF 0               NIBHEX  0
- 3333 00FD0 0               NIBHEX  0
- 3334 00FD1 0               NIBHEX  0
- 3335 00FD2 0               NIBHEX  0
- 3336 00FD3 0               NIBHEX  0
- 3337 00FD4 2               NIBHEX  2
- 3338 00FD5 2               NIBHEX  2
- 3339 00FD6 0               NIBHEX  0
- 3340 00FD7 0               NIBHEX  0
- 3341 00FD8 0               NIBHEX  0
- 3342 00FD9 0               NIBHEX  0
- 3343 00FDA 0               NIBHEX  0
- 3344 00FDB 0               NIBHEX  0
- 3345 00FDC 0               NIBHEX  0
- 3346 00FDD 0               NIBHEX  0
- 3347 00FDE 0               NIBHEX  0
- 3348 00FDF 0               NIBHEX  0
- 3349 00FE0 0               NIBHEX  0
- 3350 00FE1 0               NIBHEX  0
- 3351 00FE2 0               NIBHEX  0
- 3352 00FE3 0               NIBHEX  0
- 3353 00FE4 0               NIBHEX  0
- 3354 00FE5 0               NIBHEX  0
- 3355 00FE6 0               NIBHEX  0
- 3356 00FE7 0               NIBHEX  0
- 3357 00FE8 0               NIBHEX  0
- 3358 00FE9 0               NIBHEX  0
- 3359 00FEA 0               NIBHEX  0
- 3360 00FEB 0               NIBHEX  0
- 3361 00FEC 0               NIBHEX  0
- 3362 00FED 0               NIBHEX  0
- 3363 00FEE 0               NIBHEX  0
- 3364 00FEF 0               NIBHEX  0
- 3365 00FF0 0               NIBHEX  0
- 3366 00FF1 0               NIBHEX  0
- 3367 00FF2 0               NIBHEX  0
- 3368 00FF3 0               NIBHEX  0
- 3369 00FF4 0               NIBHEX  0
- 3370 00FF5 0               NIBHEX  0
- 3371 00FF6 C               NIBHEX  C
- 3372 00FF7 1               NIBHEX  1
- 3373 00FF8 0               NIBHEX  0
- 3374 00FF9 0               NIBHEX  0
- 3375 00FFA 0               NIBHEX  0
- 3376 00FFB 0               NIBHEX  0
- 3377 00FFC 0               NIBHEX  0
- 3378 00FFD 0               NIBHEX  0
- 3379 00FFE 0               NIBHEX  0
- 3380 00FFF 0               NIBHEX  0
- 3381 01000 0               NIBHEX  0
- 3382 01001 0               NIBHEX  0
- 3383 01002 0               NIBHEX  0
- 3384 01003 0               NIBHEX  0
- 3385 01004 0               NIBHEX  0
- 3386 01005 0               NIBHEX  0
- 3387 01006 0               NIBHEX  0
- 3388 01007 0               NIBHEX  0
- 3389 01008 0               NIBHEX  0
- 3390 01009 0               NIBHEX  0
- 3391 0100A 0               NIBHEX  0
- 3392 0100B 0               NIBHEX  0
- 3393 0100C 0               NIBHEX  0
- 3394 0100D 0               NIBHEX  0
- 3395 0100E 0               NIBHEX  0
- 3396 0100F 0               NIBHEX  0
- 3397 01010 0               NIBHEX  0
- 3398 01011 0               NIBHEX  0
- 3399 01012 0               NIBHEX  0
- 3400 01013 0               NIBHEX  0
- 3401 01014 0               NIBHEX  0
- 3402 01015 0               NIBHEX  0
- 3403 01016 0               NIBHEX  0
- 3404 01017 0               NIBHEX  0
- 3405 01018 0               NIBHEX  0
- 3406 01019 0               NIBHEX  0
- 3407 0101A 0               NIBHEX  0
- 3408 0101B 0               NIBHEX  0
- 3409 0101C 0               NIBHEX  0
- 3410 0101D 0               NIBHEX  0
- 3411 0101E 0               NIBHEX  0
- 3412 0101F 0               NIBHEX  0
- 3413 01020 0               NIBHEX  0
- 3414 01021 0               NIBHEX  0
- 3415 01022 0               NIBHEX  0
- 3416 01023 0               NIBHEX  0
- 3417 01024 0               NIBHEX  0
- 3418 01025 0               NIBHEX  0
- 3419 01026 0               NIBHEX  0
- 3420 01027 0               NIBHEX  0
- 3421 01028 0               NIBHEX  0
- 3422 01029 0               NIBHEX  0
- 3423 0102A 0               NIBHEX  0
- 3424 0102B 0               NIBHEX  0
- 3425 0102C 0               NIBHEX  0
- 3426 0102D 0               NIBHEX  0
- 3427 0102E 0               NIBHEX  0
- 3428 0102F 0               NIBHEX  0
- 3429 01030 0               NIBHEX  0
- 3430 01031 0               NIBHEX  0
- 3431 01032 0               NIBHEX  0
- 3432 01033 0               NIBHEX  0
- 3433 01034 0               NIBHEX  0
- 3434 01035 0               NIBHEX  0
- 3435 01036 0               NIBHEX  0
- 3436 01037 0               NIBHEX  0
- 3437 01038 0               NIBHEX  0
- 3438 01039 0               NIBHEX  0
- 3439 0103A 0               NIBHEX  0
- 3440 0103B 0               NIBHEX  0
- 3441 0103C 0               NIBHEX  0
- 3442 0103D 0               NIBHEX  0
- 3443 0103E 0               NIBHEX  0
- 3444 0103F 0               NIBHEX  0
- 3445 01040 0               NIBHEX  0
- 3446 01041 0               NIBHEX  0
- 3447 01042 0               NIBHEX  0
- 3448 01043 0               NIBHEX  0
- 3449 01044 0               NIBHEX  0
- 3450 01045 0               NIBHEX  0
- 3451 01046 0               NIBHEX  0
- 3452 01047 0               NIBHEX  0
- 3453 01048 0               NIBHEX  0
- 3454 01049 0               NIBHEX  0
- 3455 0104A 0               NIBHEX  0
- 3456 0104B 0               NIBHEX  0
- 3457 0104C 0               NIBHEX  0
- 3458 0104D 0               NIBHEX  0
- 3459 0104E 0               NIBHEX  0
- 3460 0104F 0               NIBHEX  0
- 3461 01050 0               NIBHEX  0
- 3462 01051 0               NIBHEX  0
- 3463 01052 0               NIBHEX  0
- 3464 01053 0               NIBHEX  0
- 3465 01054 0               NIBHEX  0
- 3466 01055 0               NIBHEX  0
- 3467 01056 0               NIBHEX  0
- 3468 01057 0               NIBHEX  0
- 3469 01058 0               NIBHEX  0
- 3470 01059 0               NIBHEX  0
- 3471 0105A 0               NIBHEX  0
- 3472 0105B 0               NIBHEX  0
- 3473 0105C 8               NIBHEX  8
- 3474 0105D 1               NIBHEX  1
- 3475 0105E 0               NIBHEX  0
- 3476 0105F 0               NIBHEX  0
- 3477 01060 0               NIBHEX  0
- 3478 01061 0               NIBHEX  0
- 3479 01062 0               NIBHEX  0
- 3480 01063 0               NIBHEX  0
- 3481 01064 0               NIBHEX  0
- 3482 01065 0               NIBHEX  0
- 3483 01066 0               NIBHEX  0
- 3484 01067 0               NIBHEX  0
- 3485 01068 0               NIBHEX  0
- 3486 01069 0               NIBHEX  0
- 3487 0106A 0               NIBHEX  0
- 3488 0106B 0               NIBHEX  0
- 3489 0106C 0               NIBHEX  0
- 3490 0106D 0               NIBHEX  0
- 3491 0106E 0               NIBHEX  0
- 3492 0106F 0               NIBHEX  0
- 3493 01070 0               NIBHEX  0
- 3494 01071 0               NIBHEX  0
- 3495 01072 0               NIBHEX  0
- 3496 01073 0               NIBHEX  0
- 3497 01074 0               NIBHEX  0
- 3498 01075 0               NIBHEX  0
- 3499 01076 0               NIBHEX  0
- 3500 01077 0               NIBHEX  0
- 3501 01078 0               NIBHEX  0
- 3502 01079 0               NIBHEX  0
- 3503 0107A 0               NIBHEX  0
- 3504 0107B 0               NIBHEX  0
- 3505 0107C 0               NIBHEX  0
- 3506 0107D 0               NIBHEX  0
- 3507 0107E C               NIBHEX  C
- 3508 0107F 3               NIBHEX  3
- 3509 01080 0               NIBHEX  0
- 3510 01081 0               NIBHEX  0
- 3511 01082 0               NIBHEX  0
- 3512 01083 0               NIBHEX  0
- 3513 01084 0               NIBHEX  0
- 3514 01085 0               NIBHEX  0
- 3515 01086 0               NIBHEX  0
- 3516 01087 0               NIBHEX  0
- 3517 01088 0               NIBHEX  0
- 3518 01089 0               NIBHEX  0
- 3519 0108A 0               NIBHEX  0
- 3520 0108B 0               NIBHEX  0
- 3521 0108C 0               NIBHEX  0
- 3522 0108D 0               NIBHEX  0
- 3523 0108E 0               NIBHEX  0
- 3524 0108F 0               NIBHEX  0
- 3525 01090 0               NIBHEX  0
- 3526 01091 0               NIBHEX  0
- 3527 01092 0               NIBHEX  0
- 3528 01093 0               NIBHEX  0
- 3529 01094 0               NIBHEX  0
- 3530 01095 0               NIBHEX  0
- 3531 01096 0               NIBHEX  0
- 3532 01097 0               NIBHEX  0
- 3533 01098 0               NIBHEX  0
- 3534 01099 0               NIBHEX  0
- 3535 0109A 0               NIBHEX  0
- 3536 0109B 0               NIBHEX  0
- 3537 0109C 0               NIBHEX  0
- 3538 0109D 0               NIBHEX  0
- 3539 0109E 0               NIBHEX  0
- 3540 0109F 0               NIBHEX  0
- 3541 010A0 C               NIBHEX  C
- 3542 010A1 3               NIBHEX  3
- 3543 010A2 0               NIBHEX  0
- 3544 010A3 0               NIBHEX  0
- 3545 010A4 0               NIBHEX  0
- 3546 010A5 0               NIBHEX  0
- 3547 010A6 0               NIBHEX  0
- 3548 010A7 0               NIBHEX  0
- 3549 010A8 0               NIBHEX  0
- 3550 010A9 0               NIBHEX  0
- 3551 010AA 0               NIBHEX  0
- 3552 010AB 0               NIBHEX  0
- 3553 010AC 0               NIBHEX  0
- 3554 010AD 0               NIBHEX  0
- 3555 010AE 0               NIBHEX  0
- 3556 010AF 0               NIBHEX  0
- 3557 010B0 0               NIBHEX  0
- 3558 010B1 0               NIBHEX  0
- 3559 010B2 0               NIBHEX  0
- 3560 010B3 0               NIBHEX  0
- 3561 010B4 0               NIBHEX  0
- 3562 010B5 0               NIBHEX  0
- 3563 010B6 0               NIBHEX  0
- 3564 010B7 0               NIBHEX  0
- 3565 010B8 0               NIBHEX  0
- 3566 010B9 0               NIBHEX  0
- 3567 010BA 0               NIBHEX  0
- 3568 010BB 0               NIBHEX  0
- 3569 010BC 0               NIBHEX  0
- 3570 010BD 0               NIBHEX  0
- 3571 010BE 0               NIBHEX  0
- 3572 010BF 0               NIBHEX  0
- 3573 010C0 0               NIBHEX  0
- 3574 010C1 0               NIBHEX  0
- 3575 010C2 8               NIBHEX  8
- 3576 010C3 1               NIBHEX  1
- 3577 010C4 0               NIBHEX  0
- 3578 010C5 0               NIBHEX  0
- 3579 010C6 0               NIBHEX  0
- 3580 010C7 0               NIBHEX  0
- 3581 010C8 0               NIBHEX  0
- 3582 010C9 0               NIBHEX  0
- 3583 010CA 0               NIBHEX  0
- 3584 010CB 0               NIBHEX  0
- 3585 010CC 0               NIBHEX  0
- 3586 010CD 0               NIBHEX  0
- 3587 010CE 0               NIBHEX  0
- 3588 010CF 0               NIBHEX  0
- 3589 010D0 0               NIBHEX  0
- 3590 010D1 0               NIBHEX  0
- 3591 010D2 0               NIBHEX  0
- 3592 010D3 0               NIBHEX  0
- 3593 010D4 0               NIBHEX  0
- 3594 010D5 0               NIBHEX  0
- 3595 010D6 0               NIBHEX  0
- 3596 010D7 0               NIBHEX  0
- 3597 010D8 0               NIBHEX  0
- 3598 010D9 0               NIBHEX  0
- 3599 010DA 0               NIBHEX  0
- 3600 010DB 0               NIBHEX  0
- 3601 010DC 0               NIBHEX  0
- 3602 010DD 0               NIBHEX  0
- 3603 010DE 0               NIBHEX  0
- 3604 010DF 0               NIBHEX  0
- 3605 010E0 0               NIBHEX  0
- 3606 010E1 0               NIBHEX  0
- 3607 010E2 0               NIBHEX  0
- 3608 010E3 0               NIBHEX  0
- 3609 010E4 0               NIBHEX  0
- 3610 010E5 0               NIBHEX  0
- 3611 010E6 0               NIBHEX  0
- 3612 010E7 0               NIBHEX  0
- 3613 010E8 0               NIBHEX  0
- 3614 010E9 0               NIBHEX  0
- 3615 010EA 0               NIBHEX  0
- 3616 010EB 0               NIBHEX  0
- 3617 010EC 0               NIBHEX  0
- 3618 010ED 0               NIBHEX  0
- 3619 010EE 0               NIBHEX  0
- 3620 010EF 0               NIBHEX  0
- 3621 010F0 0               NIBHEX  0
- 3622 010F1 0               NIBHEX  0
- 3623 010F2 0               NIBHEX  0
- 3624 010F3 0               NIBHEX  0
- 3625 010F4 0               NIBHEX  0
- 3626 010F5 0               NIBHEX  0
- 3627 010F6 0               NIBHEX  0
- 3628 010F7 0               NIBHEX  0
- 3629 010F8 0               NIBHEX  0
- 3630 010F9 0               NIBHEX  0
- 3631 010FA 0               NIBHEX  0
- 3632 010FB 0               NIBHEX  0
- 3633 010FC 0               NIBHEX  0
- 3634 010FD 0               NIBHEX  0
- 3635 010FE 0               NIBHEX  0
- 3636 010FF 0               NIBHEX  0
- 3637 01100 0               NIBHEX  0
- 3638 01101 0               NIBHEX  0
- 3639 01102 0               NIBHEX  0
- 3640 01103 0               NIBHEX  0
- 3641 01104 0               NIBHEX  0
- 3642 01105 0               NIBHEX  0
- 3643 01106 0               NIBHEX  0
- 3644 01107 0               NIBHEX  0
- 3645 01108 0               NIBHEX  0
- 3646 01109 0               NIBHEX  0
- 3647 0110A 0               NIBHEX  0
- 3648 0110B 0               NIBHEX  0
- 3649 0110C 0               NIBHEX  0
- 3650 0110D 0               NIBHEX  0
- 3651 0110E 0               NIBHEX  0
- 3652 0110F 0               NIBHEX  0
- 3653 01110 0               NIBHEX  0
- 3654 01111 0               NIBHEX  0
- 3655 01112 0               NIBHEX  0
- 3656 01113 0               NIBHEX  0
- 3657 01114 0               NIBHEX  0
- 3658 01115 0               NIBHEX  0
- 3659 01116 0               NIBHEX  0
- 3660 01117 0               NIBHEX  0
- 3661 01118 0               NIBHEX  0
- 3662 01119 0               NIBHEX  0
- 3663 0111A 0               NIBHEX  0
- 3664 0111B 0               NIBHEX  0
- 3665 0111C 0               NIBHEX  0
- 3666 0111D 0               NIBHEX  0
- 3667 0111E 0               NIBHEX  0
- 3668 0111F 0               NIBHEX  0
- 3669 01120 0               NIBHEX  0
- 3670 01121 0               NIBHEX  0
- 3671 01122 0               NIBHEX  0
- 3672 01123 0               NIBHEX  0
- 3673 01124 0               NIBHEX  0
- 3674 01125 0               NIBHEX  0
- 3675 01126 0               NIBHEX  0
- 3676 01127 0               NIBHEX  0
- 3677 01128 E               NIBHEX  E
- 3678 01129 F               NIBHEX  F
- 3679 0112A 0               NIBHEX  0
- 3680 0112B 0               NIBHEX  0
- 3681 0112C 0               NIBHEX  0
- 3682 0112D 0               NIBHEX  0
- 3683 0112E 0               NIBHEX  0
- 3684 0112F 0               NIBHEX  0
- 3685 01130 0               NIBHEX  0
- 3686 01131 0               NIBHEX  0
- 3687 01132 0               NIBHEX  0
- 3688 01133 0               NIBHEX  0
- 3689 01134 0               NIBHEX  0
- 3690 01135 0               NIBHEX  0
- 3691 01136 0               NIBHEX  0
- 3692 01137 0               NIBHEX  0
- 3693 01138 0               NIBHEX  0
- 3694 01139 0               NIBHEX  0
- 3695 0113A 0               NIBHEX  0
- 3696 0113B 0               NIBHEX  0
- 3697 0113C 0               NIBHEX  0
- 3698 0113D 0               NIBHEX  0
- 3699 0113E 0               NIBHEX  0
- 3700 0113F 0               NIBHEX  0
- 3701 01140 0               NIBHEX  0
- 3702 01141 0               NIBHEX  0
- 3703 01142 0               NIBHEX  0
- 3704 01143 0               NIBHEX  0
- 3705 01144 0               NIBHEX  0
- 3706 01145 0               NIBHEX  0
- 3707 01146 0               NIBHEX  0
- 3708 01147 0               NIBHEX  0
- 3709 01148 0               NIBHEX  0
- 3710 01149 0               NIBHEX  0
- 3711 0114A F               NIBHEX  F
- 3712 0114B F               NIBHEX  F
- 3713 0114C 0               NIBHEX  0
- 3714 0114D 0               NIBHEX  0
- 3715 0114E 0               NIBHEX  0
- 3716 0114F 0               NIBHEX  0
- 3717 01150 0               NIBHEX  0
- 3718 01151 0               NIBHEX  0
- 3719 01152 0               NIBHEX  0
- 3720 01153 0               NIBHEX  0
- 3721 01154 0               NIBHEX  0
- 3722 01155 0               NIBHEX  0
- 3723 01156 0               NIBHEX  0
- 3724 01157 0               NIBHEX  0
- 3725 01158 0               NIBHEX  0
- 3726 01159 0               NIBHEX  0
- 3727 0115A 0               NIBHEX  0
- 3728 0115B 0               NIBHEX  0
- 3729 0115C 0               NIBHEX  0
- 3730 0115D 0               NIBHEX  0
- 3731 0115E 0               NIBHEX  0
- 3732 0115F 0               NIBHEX  0
- 3733 01160 0               NIBHEX  0
- 3734 01161 0               NIBHEX  0
- 3735 01162 0               NIBHEX  0
- 3736 01163 0               NIBHEX  0
- 3737 01164 0               NIBHEX  0
- 3738 01165 0               NIBHEX  0
- 3739 01166 0               NIBHEX  0
- 3740 01167 0               NIBHEX  0
- 3741 01168 0               NIBHEX  0
- 3742 01169 0               NIBHEX  0
- 3743 0116A 0               NIBHEX  0
- 3744 0116B 0               NIBHEX  0
- 3745 0116C F               NIBHEX  F
- 3746 0116D F               NIBHEX  F
- 3747 0116E 0               NIBHEX  0
- 3748 0116F 0               NIBHEX  0
- 3749 01170 0               NIBHEX  0
- 3750 01171 0               NIBHEX  0
- 3751 01172 0               NIBHEX  0
- 3752 01173 0               NIBHEX  0
- 3753 01174 0               NIBHEX  0
- 3754 01175 0               NIBHEX  0
- 3755 01176 0               NIBHEX  0
- 3756 01177 0               NIBHEX  0
- 3757 01178 0               NIBHEX  0
- 3758 01179 0               NIBHEX  0
- 3759 0117A 0               NIBHEX  0
- 3760 0117B 0               NIBHEX  0
- 3761 0117C 0               NIBHEX  0
- 3762 0117D 0               NIBHEX  0
- 3763 0117E 0               NIBHEX  0
- 3764 0117F 0               NIBHEX  0
- 3765 01180 0               NIBHEX  0
- 3766 01181 0               NIBHEX  0
- 3767 01182 0               NIBHEX  0
- 3768 01183 0               NIBHEX  0
- 3769 01184 0               NIBHEX  0
- 3770 01185 0               NIBHEX  0
- 3771 01186 0               NIBHEX  0
- 3772 01187 0               NIBHEX  0
- 3773 01188 0               NIBHEX  0
- 3774 01189 0               NIBHEX  0
- 3775 0118A 0               NIBHEX  0
- 3776 0118B 0               NIBHEX  0
- 3777 0118C 0               NIBHEX  0
- 3778 0118D 0               NIBHEX  0
- 3779 0118E 5               NIBHEX  5
- 3780 0118F 9               NIBHEX  9
- 3781 01190 0               NIBHEX  0
- 3782 01191 0               NIBHEX  0
- 3783 01192 0               NIBHEX  0
- 3784 01193 0               NIBHEX  0
- 3785 01194 0               NIBHEX  0
- 3786 01195 0               NIBHEX  0
- 3787 01196 0               NIBHEX  0
- 3788 01197 0               NIBHEX  0
- 3789 01198 0               NIBHEX  0
- 3790 01199 0               NIBHEX  0
- 3791 0119A 0               NIBHEX  0
- 3792 0119B 0               NIBHEX  0
- 3793 0119C 0               NIBHEX  0
- 3794 0119D 0               NIBHEX  0
- 3795 0119E 0               NIBHEX  0
- 3796 0119F 0               NIBHEX  0
- 3797 011A0 0               NIBHEX  0
- 3798 011A1 0               NIBHEX  0
- 3799 011A2 0               NIBHEX  0
- 3800 011A3 0               NIBHEX  0
- 3801 011A4 0               NIBHEX  0
- 3802 011A5 0               NIBHEX  0
- 3803 011A6 0               NIBHEX  0
- 3804 011A7 0               NIBHEX  0
- 3805 011A8 0               NIBHEX  0
- 3806 011A9 0               NIBHEX  0
- 3807 011AA 0               NIBHEX  0
- 3808 011AB 0               NIBHEX  0
- 3809 011AC 0               NIBHEX  0
- 3810 011AD 0               NIBHEX  0
- 3811 011AE 0               NIBHEX  0
- 3812 011AF 0               NIBHEX  0
- 3813 011B0 4               NIBHEX  4
- 3814 011B1 0               NIBHEX  0
- 3815 011B2 0               NIBHEX  0
- 3816 011B3 0               NIBHEX  0
- 3817 011B4 0               NIBHEX  0
- 3818 011B5 0               NIBHEX  0
- 3819 011B6 0               NIBHEX  0
- 3820 011B7 0               NIBHEX  0
- 3821 011B8 0               NIBHEX  0
- 3822 011B9 0               NIBHEX  0
- 3823 011BA 0               NIBHEX  0
- 3824 011BB 0               NIBHEX  0
- 3825 011BC 0               NIBHEX  0
- 3826 011BD 0               NIBHEX  0
- 3827 011BE 0               NIBHEX  0
- 3828 011BF 0               NIBHEX  0
- 3829 011C0 0               NIBHEX  0
- 3830 011C1 0               NIBHEX  0
- 3831 011C2 0               NIBHEX  0
- 3832 011C3 0               NIBHEX  0
- 3833 011C4 0               NIBHEX  0
- 3834 011C5 0               NIBHEX  0
- 3835 011C6 0               NIBHEX  0
- 3836 011C7 0               NIBHEX  0
- 3837 011C8 0               NIBHEX  0
- 3838 011C9 0               NIBHEX  0
- 3839 011CA 0               NIBHEX  0
- 3840 011CB 0               NIBHEX  0
- 3841 011CC 0               NIBHEX  0
- 3842 011CD 0               NIBHEX  0
- 3843 011CE 0               NIBHEX  0
- 3844 011CF 0               NIBHEX  0
- 3845 011D0 0               NIBHEX  0
- 3846 011D1 0               NIBHEX  0
- 3847 011D2 4               NIBHEX  4
- 3848 011D3 0               NIBHEX  0
- 3849 011D4 0               NIBHEX  0
- 3850 011D5 0               NIBHEX  0
- 3851 011D6 0               NIBHEX  0
- 3852 011D7 0               NIBHEX  0
- 3853 011D8 0               NIBHEX  0
- 3854 011D9 0               NIBHEX  0
- 3855 011DA 0               NIBHEX  0
- 3856 011DB 0               NIBHEX  0
- 3857 011DC 0               NIBHEX  0
- 3858 011DD 0               NIBHEX  0
- 3859 011DE 0               NIBHEX  0
- 3860 011DF 0               NIBHEX  0
- 3861 011E0 0               NIBHEX  0
- 3862 011E1 0               NIBHEX  0
- 3863 011E2 0               NIBHEX  0
- 3864 011E3 0               NIBHEX  0
- 3865 011E4 0               NIBHEX  0
- 3866 011E5 0               NIBHEX  0
- 3867 011E6 0               NIBHEX  0
- 3868 011E7 0               NIBHEX  0
- 3869 011E8 0               NIBHEX  0
- 3870 011E9 0               NIBHEX  0
- 3871 011EA 0               NIBHEX  0
- 3872 011EB 0               NIBHEX  0
- 3873 011EC 0               NIBHEX  0
- 3874 011ED 0               NIBHEX  0
- 3875 011EE 0               NIBHEX  0
- 3876 011EF 0               NIBHEX  0
- 3877 011F0 0               NIBHEX  0
- 3878 011F1 0               NIBHEX  0
- 3879 011F2 0               NIBHEX  0
- 3880 011F3 0               NIBHEX  0
- 3881 011F4 4               NIBHEX  4
- 3882 011F5 0               NIBHEX  0
- 3883 011F6 0               NIBHEX  0
- 3884 011F7 0               NIBHEX  0
- 3885 011F8 0               NIBHEX  0
- 3886 011F9 0               NIBHEX  0
- 3887 011FA 0               NIBHEX  0
- 3888 011FB 0               NIBHEX  0
- 3889 011FC 0               NIBHEX  0
- 3890 011FD 0               NIBHEX  0
- 3891 011FE 0               NIBHEX  0
- 3892 011FF 0               NIBHEX  0
- 3893 01200 0               NIBHEX  0
- 3894 01201 0               NIBHEX  0
- 3895 01202 0               NIBHEX  0
- 3896 01203 0               NIBHEX  0
- 3897 01204 0               NIBHEX  0
- 3898 01205 0               NIBHEX  0
- 3899 01206 0               NIBHEX  0
- 3900 01207 0               NIBHEX  0
- 3901 01208 0               NIBHEX  0
- 3902 01209 0               NIBHEX  0
- 3903 0120A 0               NIBHEX  0
- 3904 0120B 0               NIBHEX  0
- 3905 0120C 0               NIBHEX  0
- 3906 0120D 0               NIBHEX  0
- 3907 0120E 0               NIBHEX  0
- 3908 0120F 0               NIBHEX  0
- 3909 01210 0               NIBHEX  0
- 3910 01211 0               NIBHEX  0
- 3911 01212 0               NIBHEX  0
- 3912 01213 0               NIBHEX  0
- 3913 01214 0               NIBHEX  0
- 3914 01215 0               NIBHEX  0
- 3915 01216 4               NIBHEX  4
- 3916 01217 0               NIBHEX  0
- 3917 01218 0               NIBHEX  0
- 3918 01219 0               NIBHEX  0
- 3919 0121A 0               NIBHEX  0
- 3920 0121B 0               NIBHEX  0
- 3921 0121C 0               NIBHEX  0
- 3922 0121D 0               NIBHEX  0
- 3923 0121E 0               NIBHEX  0
- 3924 0121F 0               NIBHEX  0
- 3925 01220 0               NIBHEX  0
- 3926 01221 0               NIBHEX  0
- 3927 01222 0               NIBHEX  0
- 3928 01223 0               NIBHEX  0
- 3929 01224 0               NIBHEX  0
- 3930 01225 0               NIBHEX  0
- 3931 01226 0               NIBHEX  0
- 3932 01227 0               NIBHEX  0
- 3933 01228 0               NIBHEX  0
- 3934 01229 0               NIBHEX  0
- 3935 0122A 0               NIBHEX  0
- 3936 0122B 0               NIBHEX  0
- 3937 0122C 0               NIBHEX  0
- 3938 0122D 0               NIBHEX  0
- 3939 0122E 0               NIBHEX  0
- 3940 0122F 0               NIBHEX  0
- 3941 01230 0               NIBHEX  0
- 3942 01231 0               NIBHEX  0
- 3943 01232 0               NIBHEX  0
- 3944 01233 0               NIBHEX  0
- 3945 01234 0               NIBHEX  0
- 3946 01235 0               NIBHEX  0
- 3947 01236 0               NIBHEX  0
- 3948 01237 0               NIBHEX  0
- 3949 01238 F               NIBHEX  F
- 3950 01239 F               NIBHEX  F
- 3951 0123A 0               NIBHEX  0
- 3952 0123B 0               NIBHEX  0
- 3953 0123C 0               NIBHEX  0
- 3954 0123D 0               NIBHEX  0
- 3955 0123E 0               NIBHEX  0
- 3956 0123F 0               NIBHEX  0
- 3957 01240 0               NIBHEX  0
- 3958 01241 0               NIBHEX  0
- 3959 01242 0               NIBHEX  0
- 3960 01243 0               NIBHEX  0
- 3961 01244 0               NIBHEX  0
- 3962 01245 0               NIBHEX  0
- 3963 01246 0               NIBHEX  0
- 3964 01247 0               NIBHEX  0
- 3965 01248 0               NIBHEX  0
- 3966 01249 0               NIBHEX  0
- 3967 0124A 0               NIBHEX  0
- 3968 0124B 0               NIBHEX  0
- 3969 0124C 0               NIBHEX  0
- 3970 0124D 0               NIBHEX  0
- 3971 0124E 0               NIBHEX  0
- 3972 0124F 0               NIBHEX  0
- 3973 01250 0               NIBHEX  0
- 3974 01251 0               NIBHEX  0
- 3975 01252 0               NIBHEX  0
- 3976 01253 0               NIBHEX  0
- 3977 01254 0               NIBHEX  0
- 3978 01255 0               NIBHEX  0
- 3979 01256 0               NIBHEX  0
- 3980 01257 0               NIBHEX  0
- 3981 01258 0               NIBHEX  0
- 3982 01259 0               NIBHEX  0
- 3983 0125A F               NIBHEX  F
- 3984 0125B F               NIBHEX  F
- 3985 0125C 0               NIBHEX  0
- 3986 0125D 0               NIBHEX  0
- 3987 0125E 0               NIBHEX  0
- 3988 0125F 0               NIBHEX  0
- 3989 01260 0               NIBHEX  0
- 3990 01261 0               NIBHEX  0
- 3991 01262 0               NIBHEX  0
- 3992 01263 0               NIBHEX  0
- 3993 01264 0               NIBHEX  0
- 3994 01265 0               NIBHEX  0
- 3995 01266 0               NIBHEX  0
- 3996 01267 0               NIBHEX  0
- 3997 01268 0               NIBHEX  0
- 3998 01269 0               NIBHEX  0
- 3999 0126A 0               NIBHEX  0
- 4000 0126B 0               NIBHEX  0
- 4001 0126C 0               NIBHEX  0
- 4002 0126D 0               NIBHEX  0
- 4003 0126E 0               NIBHEX  0
- 4004 0126F 0               NIBHEX  0
- 4005 01270 0               NIBHEX  0
- 4006 01271 0               NIBHEX  0
- 4007 01272 0               NIBHEX  0
- 4008 01273 0               NIBHEX  0
- 4009 01274 0               NIBHEX  0
- 4010 01275 0               NIBHEX  0
- 4011 01276 0               NIBHEX  0
- 4012 01277 0               NIBHEX  0
- 4013 01278 0               NIBHEX  0
- 4014 01279 0               NIBHEX  0
- 4015 0127A 0               NIBHEX  0
- 4016 0127B 0               NIBHEX  0
- 4017 0127C F               NIBHEX  F
- 4018 0127D F               NIBHEX  F
- 4019 0127E 0               NIBHEX  0
- 4020 0127F 0               NIBHEX  0
- 4021 01280 0               NIBHEX  0
- 4022 01281 0               NIBHEX  0
- 4023 01282 0               NIBHEX  0
- 4024 01283 0               NIBHEX  0
- 4025 01284 0               NIBHEX  0
- 4026 01285 0               NIBHEX  0
- 4027 01286 0               NIBHEX  0
- 4028 01287 0               NIBHEX  0
- 4029 01288 0               NIBHEX  0
- 4030 01289 0               NIBHEX  0
- 4031 0128A 0               NIBHEX  0
- 4032 0128B 0               NIBHEX  0
- 4033 0128C 0               NIBHEX  0
- 4034 0128D 0               NIBHEX  0
- 4035 0128E 0               NIBHEX  0
- 4036 0128F 0               NIBHEX  0
- 4037 01290 0               NIBHEX  0
- 4038 01291 0               NIBHEX  0
- 4039 01292 0               NIBHEX  0
- 4040 01293 0               NIBHEX  0
- 4041 01294 0               NIBHEX  0
- 4042 01295 0               NIBHEX  0
- 4043 01296 0               NIBHEX  0
- 4044 01297 0               NIBHEX  0
- 4045 01298 0               NIBHEX  0
- 4046 01299 0               NIBHEX  0
- 4047 0129A 0               NIBHEX  0
- 4048 0129B 0               NIBHEX  0
- 4049 0129C 0               NIBHEX  0
- 4050 0129D 0               NIBHEX  0
- 4051 0129E C               NIBHEX  C
- 4052 0129F 2               NIBHEX  2
- 4053 012A0 0               NIBHEX  0
- 4054 012A1 0               NIBHEX  0
- 4055 012A2 0               NIBHEX  0
- 4056 012A3 0               NIBHEX  0
- 4057 012A4 0               NIBHEX  0
- 4058 012A5 0               NIBHEX  0
- 4059 012A6 0               NIBHEX  0
- 4060 012A7 0               NIBHEX  0
- 4061 012A8 0               NIBHEX  0
- 4062 012A9 0               NIBHEX  0
- 4063 012AA 0               NIBHEX  0
- 4064 012AB 0               NIBHEX  0
- 4065 012AC 0               NIBHEX  0
- 4066 012AD 0               NIBHEX  0
- 4067 012AE 0               NIBHEX  0
- 4068 012AF 0               NIBHEX  0
- 4069 012B0 0               NIBHEX  0
- 4070 012B1 0               NIBHEX  0
- 4071 012B2 0               NIBHEX  0
- 4072 012B3 0               NIBHEX  0
- 4073 012B4 0               NIBHEX  0
- 4074 012B5 0               NIBHEX  0
- 4075 012B6 0               NIBHEX  0
- 4076 012B7 0               NIBHEX  0
- 4077 012B8 0               NIBHEX  0
- 4078 012B9 0               NIBHEX  0
- 4079 012BA 0               NIBHEX  0
- 4080 012BB 0               NIBHEX  0
- 4081 012BC 0               NIBHEX  0
- 4082 012BD 0               NIBHEX  0
- 4083 012BE 0               NIBHEX  0
- 4084 012BF 0               NIBHEX  0
- 4085 012C0 0               NIBHEX  0
- 4086 012C1 0               NIBHEX  0
- 4087 012C2 0               NIBHEX  0
- 4088 012C3 0               NIBHEX  0
- 4089 012C4 0               NIBHEX  0
- 4090 012C5 0               NIBHEX  0
- 4091 012C6 0               NIBHEX  0
- 4092 012C7 0               NIBHEX  0
- 4093 012C8 0               NIBHEX  0
- 4094 012C9 0               NIBHEX  0
- 4095 012CA 0               NIBHEX  0
- 4096 012CB 0               NIBHEX  0
- 4097 012CC 0               NIBHEX  0
- 4098 012CD 0               NIBHEX  0
- 4099 012CE 0               NIBHEX  0
- 4100 012CF 0               NIBHEX  0
- 4101 012D0 0               NIBHEX  0
- 4102 012D1 0               NIBHEX  0
- 4103 012D2 0               NIBHEX  0
- 4104 012D3 0               NIBHEX  0
- 4105 012D4 0               NIBHEX  0
- 4106 012D5 0               NIBHEX  0
- 4107 012D6 0               NIBHEX  0
- 4108 012D7 0               NIBHEX  0
- 4109 012D8 0               NIBHEX  0
- 4110 012D9 0               NIBHEX  0
- 4111 012DA 0               NIBHEX  0
- 4112 012DB 0               NIBHEX  0
- 4113 012DC 0               NIBHEX  0
- 4114 012DD 0               NIBHEX  0
- 4115 012DE 0               NIBHEX  0
- 4116 012DF 0               NIBHEX  0
- 4117 012E0 0               NIBHEX  0
- 4118 012E1 0               NIBHEX  0
- 4119 012E2 0               NIBHEX  0
- 4120 012E3 0               NIBHEX  0
- 4121 012E4 0               NIBHEX  0
- 4122 012E5 0               NIBHEX  0
- 4123 012E6 0               NIBHEX  0
- 4124 012E7 0               NIBHEX  0
- 4125 012E8 0               NIBHEX  0
- 4126 012E9 0               NIBHEX  0
- 4127 012EA 0               NIBHEX  0
- 4128 012EB 0               NIBHEX  0
- 4129 012EC 0               NIBHEX  0
- 4130 012ED 0               NIBHEX  0
- 4131 012EE 0               NIBHEX  0
- 4132 012EF 0               NIBHEX  0
- 4133 012F0 0               NIBHEX  0
- 4134 012F1 0               NIBHEX  0
- 4135 012F2 0               NIBHEX  0
- 4136 012F3 0               NIBHEX  0
- 4137 012F4 0               NIBHEX  0
- 4138 012F5 0               NIBHEX  0
- 4139 012F6 0               NIBHEX  0
- 4140 012F7 0               NIBHEX  0
- 4141 012F8 0               NIBHEX  0
- 4142 012F9 0               NIBHEX  0
- 4143 012FA 0               NIBHEX  0
- 4144 012FB 0               NIBHEX  0
- 4145 012FC 0               NIBHEX  0
- 4146 012FD 0               NIBHEX  0
- 4147 012FE 0               NIBHEX  0
- 4148 012FF 0               NIBHEX  0
- 4149 01300 0               NIBHEX  0
- 4150 01301 0               NIBHEX  0
- 4151 01302 0               NIBHEX  0
- 4152 01303 0               NIBHEX  0
- 4153 01304 0               NIBHEX  0
- 4154 01305 0               NIBHEX  0
- 4155 01306 0               NIBHEX  0
- 4156 01307 0               NIBHEX  0
- 4157 01308 0               NIBHEX  0
- 4158 01309 0               NIBHEX  0
- 4159 0130A 0               NIBHEX  0
- 4160 0130B 0               NIBHEX  0
- 4161 0130C 0               NIBHEX  0
- 4162 0130D 0               NIBHEX  0
- 4163 0130E 0               NIBHEX  0
- 4164 0130F 0               NIBHEX  0
- 4165 01310 0               NIBHEX  0
- 4166 01311 0               NIBHEX  0
- 4167 01312 0               NIBHEX  0
- 4168 01313 0               NIBHEX  0
- 4169 01314 0               NIBHEX  0
- 4170 01315 0               NIBHEX  0
- 4171 01316 0               NIBHEX  0
- 4172 01317 0               NIBHEX  0
- 4173 01318 0               NIBHEX  0
- 4174 01319 0               NIBHEX  0
- 4175 0131A 0               NIBHEX  0
- 4176 0131B 0               NIBHEX  0
- 4177 0131C 0               NIBHEX  0
- 4178 0131D 0               NIBHEX  0
- 4179 0131E 0               NIBHEX  0
- 4180 0131F 0               NIBHEX  0
- 4181 01320 0               NIBHEX  0
- 4182 01321 0               NIBHEX  0
- 4183 01322 0               NIBHEX  0
- 4184 01323 0               NIBHEX  0
- 4185 01324 0               NIBHEX  0
- 4186 01325 0               NIBHEX  0
- 4187 01326 0               NIBHEX  0
- 4188 01327 0               NIBHEX  0
- 4189 01328 0               NIBHEX  0
- 4190 01329 0               NIBHEX  0
- 4191 0132A 0               NIBHEX  0
- 4192 0132B 0               NIBHEX  0
- 4193 0132C 0               NIBHEX  0
- 4194 0132D 0               NIBHEX  0
- 4195 0132E 0               NIBHEX  0
- 4196 0132F 0               NIBHEX  0
- 4197 01330 0               NIBHEX  0
- 4198 01331 0               NIBHEX  0
- 4199 01332 0               NIBHEX  0
- 4200 01333 0               NIBHEX  0
- 4201 01334 0               NIBHEX  0
- 4202 01335 0               NIBHEX  0
- 4203 01336 0               NIBHEX  0
- 4204 01337 0               NIBHEX  0
- 4205 01338 0               NIBHEX  0
- 4206 01339 0               NIBHEX  0
- 4207 0133A 0               NIBHEX  0
- 4208 0133B 0               NIBHEX  0
- 4209 0133C 0               NIBHEX  0
- 4210 0133D 0               NIBHEX  0
- 4211 0133E 0               NIBHEX  0
- 4212 0133F 0               NIBHEX  0
- 4213 01340 0               NIBHEX  0
- 4214 01341 0               NIBHEX  0
- 4215 01342 0               NIBHEX  0
- 4216 01343 0               NIBHEX  0
- 4217 01344 0               NIBHEX  0
- 4218 01345 0               NIBHEX  0
- 4219 01346 0               NIBHEX  0
- 4220 01347 0               NIBHEX  0
- 4221 01348 F               NIBHEX  F
- 4222 01349 7               NIBHEX  7
- 4223 0134A 0               NIBHEX  0
- 4224 0134B 0               NIBHEX  0
- 4225 0134C 0               NIBHEX  0
- 4226 0134D 0               NIBHEX  0
- 4227 0134E 0               NIBHEX  0
- 4228 0134F 0               NIBHEX  0
- 4229 01350 0               NIBHEX  0
- 4230 01351 0               NIBHEX  0
- 4231 01352 0               NIBHEX  0
- 4232 01353 0               NIBHEX  0
- 4233 01354 0               NIBHEX  0
- 4234 01355 0               NIBHEX  0
- 4235 01356 0               NIBHEX  0
- 4236 01357 0               NIBHEX  0
- 4237 01358 0               NIBHEX  0
- 4238 01359 0               NIBHEX  0
- 4239 0135A 0               NIBHEX  0
- 4240 0135B 0               NIBHEX  0
- 4241 0135C 0               NIBHEX  0
- 4242 0135D 0               NIBHEX  0
- 4243 0135E 0               NIBHEX  0
- 4244 0135F 0               NIBHEX  0
- 4245 01360 0               NIBHEX  0
- 4246 01361 0               NIBHEX  0
- 4247 01362 0               NIBHEX  0
- 4248 01363 0               NIBHEX  0
- 4249 01364 0               NIBHEX  0
- 4250 01365 0               NIBHEX  0
- 4251 01366 0               NIBHEX  0
- 4252 01367 0               NIBHEX  0
- 4253 01368 0               NIBHEX  0
- 4254 01369 0               NIBHEX  0
- 4255 0136A F               NIBHEX  F
- 4256 0136B F               NIBHEX  F
- 4257 0136C 0               NIBHEX  0
- 4258 0136D 0               NIBHEX  0
- 4259 0136E 0               NIBHEX  0
- 4260 0136F 0               NIBHEX  0
- 4261 01370 0               NIBHEX  0
- 4262 01371 0               NIBHEX  0
- 4263 01372 0               NIBHEX  0
- 4264 01373 0               NIBHEX  0
- 4265 01374 0               NIBHEX  0
- 4266 01375 0               NIBHEX  0
- 4267 01376 0               NIBHEX  0
- 4268 01377 0               NIBHEX  0
- 4269 01378 0               NIBHEX  0
- 4270 01379 0               NIBHEX  0
- 4271 0137A 0               NIBHEX  0
- 4272 0137B 0               NIBHEX  0
- 4273 0137C 0               NIBHEX  0
- 4274 0137D 0               NIBHEX  0
- 4275 0137E 0               NIBHEX  0
- 4276 0137F 0               NIBHEX  0
- 4277 01380 0               NIBHEX  0
- 4278 01381 0               NIBHEX  0
- 4279 01382 0               NIBHEX  0
- 4280 01383 0               NIBHEX  0
- 4281 01384 0               NIBHEX  0
- 4282 01385 0               NIBHEX  0
- 4283 01386 0               NIBHEX  0
- 4284 01387 0               NIBHEX  0
- 4285 01388 0               NIBHEX  0
- 4286 01389 0               NIBHEX  0
- 4287 0138A 0               NIBHEX  0
- 4288 0138B 0               NIBHEX  0
- 4289 0138C F               NIBHEX  F
- 4290 0138D F               NIBHEX  F
- 4291 0138E 0               NIBHEX  0
- 4292 0138F 0               NIBHEX  0
- 4293 01390 0               NIBHEX  0
- 4294 01391 0               NIBHEX  0
- 4295 01392 0               NIBHEX  0
- 4296 01393 0               NIBHEX  0
- 4297 01394 0               NIBHEX  0
- 4298 01395 0               NIBHEX  0
- 4299 01396 0               NIBHEX  0
- 4300 01397 0               NIBHEX  0
- 4301 01398 0               NIBHEX  0
- 4302 01399 0               NIBHEX  0
- 4303 0139A 0               NIBHEX  0
- 4304 0139B 0               NIBHEX  0
- 4305 0139C 0               NIBHEX  0
- 4306 0139D 0               NIBHEX  0
- 4307 0139E 0               NIBHEX  0
- 4308 0139F 0               NIBHEX  0
- 4309 013A0 0               NIBHEX  0
- 4310 013A1 0               NIBHEX  0
- 4311 013A2 0               NIBHEX  0
- 4312 013A3 0               NIBHEX  0
- 4313 013A4 0               NIBHEX  0
- 4314 013A5 0               NIBHEX  0
- 4315 013A6 0               NIBHEX  0
- 4316 013A7 0               NIBHEX  0
- 4317 013A8 0               NIBHEX  0
- 4318 013A9 0               NIBHEX  0
- 4319 013AA 0               NIBHEX  0
- 4320 013AB 0               NIBHEX  0
- 4321 013AC 0               NIBHEX  0
- 4322 013AD 0               NIBHEX  0
- 4323 013AE 6               NIBHEX  6
- 4324 013AF B               NIBHEX  B
- 4325 013B0 0               NIBHEX  0
- 4326 013B1 0               NIBHEX  0
- 4327 013B2 0               NIBHEX  0
- 4328 013B3 0               NIBHEX  0
- 4329 013B4 0               NIBHEX  0
- 4330 013B5 0               NIBHEX  0
- 4331 013B6 0               NIBHEX  0
- 4332 013B7 0               NIBHEX  0
- 4333 013B8 0               NIBHEX  0
- 4334 013B9 0               NIBHEX  0
- 4335 013BA 0               NIBHEX  0
- 4336 013BB 0               NIBHEX  0
- 4337 013BC 0               NIBHEX  0
- 4338 013BD 0               NIBHEX  0
- 4339 013BE 0               NIBHEX  0
- 4340 013BF 0               NIBHEX  0
- 4341 013C0 0               NIBHEX  0
- 4342 013C1 0               NIBHEX  0
- 4343 013C2 0               NIBHEX  0
- 4344 013C3 0               NIBHEX  0
- 4345 013C4 0               NIBHEX  0
- 4346 013C5 0               NIBHEX  0
- 4347 013C6 0               NIBHEX  0
- 4348 013C7 0               NIBHEX  0
- 4349 013C8 0               NIBHEX  0
- 4350 013C9 0               NIBHEX  0
- 4351 013CA 0               NIBHEX  0
- 4352 013CB 0               NIBHEX  0
- 4353 013CC 0               NIBHEX  0
- 4354 013CD 0               NIBHEX  0
- 4355 013CE 0               NIBHEX  0
- 4356 013CF 0               NIBHEX  0
- 4357 013D0 0               NIBHEX  0
- 4358 013D1 2               NIBHEX  2
- 4359 013D2 0               NIBHEX  0
- 4360 013D3 0               NIBHEX  0
- 4361 013D4 0               NIBHEX  0
- 4362 013D5 0               NIBHEX  0
- 4363 013D6 0               NIBHEX  0
- 4364 013D7 0               NIBHEX  0
- 4365 013D8 0               NIBHEX  0
- 4366 013D9 0               NIBHEX  0
- 4367 013DA 0               NIBHEX  0
- 4368 013DB 0               NIBHEX  0
- 4369 013DC 0               NIBHEX  0
- 4370 013DD 0               NIBHEX  0
- 4371 013DE 0               NIBHEX  0
- 4372 013DF 0               NIBHEX  0
- 4373 013E0 0               NIBHEX  0
- 4374 013E1 0               NIBHEX  0
- 4375 013E2 0               NIBHEX  0
- 4376 013E3 0               NIBHEX  0
- 4377 013E4 0               NIBHEX  0
- 4378 013E5 0               NIBHEX  0
- 4379 013E6 0               NIBHEX  0
- 4380 013E7 0               NIBHEX  0
- 4381 013E8 0               NIBHEX  0
- 4382 013E9 0               NIBHEX  0
- 4383 013EA 0               NIBHEX  0
- 4384 013EB 0               NIBHEX  0
- 4385 013EC 0               NIBHEX  0
- 4386 013ED 0               NIBHEX  0
- 4387 013EE 0               NIBHEX  0
- 4388 013EF 0               NIBHEX  0
- 4389 013F0 0               NIBHEX  0
- 4390 013F1 0               NIBHEX  0
- 4391 013F2 0               NIBHEX  0
- 4392 013F3 2               NIBHEX  2
- 4393 013F4 0               NIBHEX  0
- 4394 013F5 0               NIBHEX  0
- 4395 013F6 0               NIBHEX  0
- 4396 013F7 0               NIBHEX  0
- 4397 013F8 0               NIBHEX  0
- 4398 013F9 0               NIBHEX  0
- 4399 013FA 0               NIBHEX  0
- 4400 013FB 0               NIBHEX  0
- 4401 013FC 0               NIBHEX  0
- 4402 013FD 0               NIBHEX  0
- 4403 013FE 0               NIBHEX  0
- 4404 013FF 0               NIBHEX  0
- 4405 01400 0               NIBHEX  0
- 4406 01401 0               NIBHEX  0
- 4407 01402 0               NIBHEX  0
- 4408 01403 0               NIBHEX  0
- 4409 01404 0               NIBHEX  0
- 4410 01405 0               NIBHEX  0
- 4411 01406 0               NIBHEX  0
- 4412 01407 0               NIBHEX  0
- 4413 01408 0               NIBHEX  0
- 4414 01409 0               NIBHEX  0
- 4415 0140A 0               NIBHEX  0
- 4416 0140B 0               NIBHEX  0
- 4417 0140C 0               NIBHEX  0
- 4418 0140D 0               NIBHEX  0
- 4419 0140E 0               NIBHEX  0
- 4420 0140F 0               NIBHEX  0
- 4421 01410 0               NIBHEX  0
- 4422 01411 0               NIBHEX  0
- 4423 01412 0               NIBHEX  0
- 4424 01413 0               NIBHEX  0
- 4425 01414 0               NIBHEX  0
- 4426 01415 2               NIBHEX  2
- 4427 01416 0               NIBHEX  0
- 4428 01417 0               NIBHEX  0
- 4429 01418 0               NIBHEX  0
- 4430 01419 0               NIBHEX  0
- 4431 0141A 0               NIBHEX  0
- 4432 0141B 0               NIBHEX  0
- 4433 0141C 0               NIBHEX  0
- 4434 0141D 0               NIBHEX  0
- 4435 0141E 0               NIBHEX  0
- 4436 0141F 0               NIBHEX  0
- 4437 01420 0               NIBHEX  0
- 4438 01421 0               NIBHEX  0
- 4439 01422 0               NIBHEX  0
- 4440 01423 0               NIBHEX  0
- 4441 01424 0               NIBHEX  0
- 4442 01425 0               NIBHEX  0
- 4443 01426 0               NIBHEX  0
- 4444 01427 0               NIBHEX  0
- 4445 01428 0               NIBHEX  0
- 4446 01429 0               NIBHEX  0
- 4447 0142A 0               NIBHEX  0
- 4448 0142B 0               NIBHEX  0
- 4449 0142C 0               NIBHEX  0
- 4450 0142D 0               NIBHEX  0
- 4451 0142E 0               NIBHEX  0
- 4452 0142F 0               NIBHEX  0
- 4453 01430 0               NIBHEX  0
- 4454 01431 0               NIBHEX  0
- 4455 01432 0               NIBHEX  0
- 4456 01433 0               NIBHEX  0
- 4457 01434 0               NIBHEX  0
- 4458 01435 0               NIBHEX  0
- 4459 01436 0               NIBHEX  0
- 4460 01437 2               NIBHEX  2
- 4461 01438 0               NIBHEX  0
- 4462 01439 0               NIBHEX  0
- 4463 0143A 0               NIBHEX  0
- 4464 0143B 0               NIBHEX  0
- 4465 0143C 0               NIBHEX  0
- 4466 0143D 0               NIBHEX  0
- 4467 0143E 0               NIBHEX  0
- 4468 0143F 0               NIBHEX  0
- 4469 01440 0               NIBHEX  0
- 4470 01441 0               NIBHEX  0
- 4471 01442 0               NIBHEX  0
- 4472 01443 0               NIBHEX  0
- 4473 01444 0               NIBHEX  0
- 4474 01445 0               NIBHEX  0
- 4475 01446 0               NIBHEX  0
- 4476 01447 0               NIBHEX  0
- 4477 01448 0               NIBHEX  0
- 4478 01449 0               NIBHEX  0
- 4479 0144A 0               NIBHEX  0
- 4480 0144B 0               NIBHEX  0
- 4481 0144C 0               NIBHEX  0
- 4482 0144D 0               NIBHEX  0
- 4483 0144E 0               NIBHEX  0
- 4484 0144F 0               NIBHEX  0
- 4485 01450 0               NIBHEX  0
- 4486 01451 0               NIBHEX  0
- 4487 01452 0               NIBHEX  0
- 4488 01453 0               NIBHEX  0
- 4489 01454 0               NIBHEX  0
- 4490 01455 0               NIBHEX  0
- 4491 01456 0               NIBHEX  0
- 4492 01457 0               NIBHEX  0
- 4493 01458 4               NIBHEX  4
- 4494 01459 0               NIBHEX  0
- 4495 0145A 0               NIBHEX  0
- 4496 0145B 0               NIBHEX  0
- 4497 0145C 0               NIBHEX  0
- 4498 0145D 0               NIBHEX  0
- 4499 0145E 0               NIBHEX  0
- 4500 0145F 0               NIBHEX  0
- 4501 01460 0               NIBHEX  0
- 4502 01461 0               NIBHEX  0
- 4503 01462 0               NIBHEX  0
- 4504 01463 0               NIBHEX  0
- 4505 01464 0               NIBHEX  0
- 4506 01465 0               NIBHEX  0
- 4507 01466 0               NIBHEX  0
- 4508 01467 0               NIBHEX  0
- 4509 01468 0               NIBHEX  0
- 4510 01469 0               NIBHEX  0
- 4511 0146A 0               NIBHEX  0
- 4512 0146B 0               NIBHEX  0
- 4513 0146C 0               NIBHEX  0
- 4514 0146D 0               NIBHEX  0
- 4515 0146E 0               NIBHEX  0
- 4516 0146F 0               NIBHEX  0
- 4517 01470 0               NIBHEX  0
- 4518 01471 0               NIBHEX  0
- 4519 01472 0               NIBHEX  0
- 4520 01473 0               NIBHEX  0
- 4521 01474 0               NIBHEX  0
- 4522 01475 0               NIBHEX  0
- 4523 01476 0               NIBHEX  0
- 4524 01477 0               NIBHEX  0
- 4525 01478 0               NIBHEX  0
- 4526 01479 0               NIBHEX  0
- 4527 0147A 4               NIBHEX  4
- 4528 0147B 0               NIBHEX  0
- 4529 0147C 0               NIBHEX  0
- 4530 0147D 0               NIBHEX  0
- 4531 0147E 0               NIBHEX  0
- 4532 0147F 0               NIBHEX  0
- 4533 01480 0               NIBHEX  0
- 4534 01481 0               NIBHEX  0
- 4535 01482 0               NIBHEX  0
- 4536 01483 0               NIBHEX  0
- 4537 01484 0               NIBHEX  0
- 4538 01485 0               NIBHEX  0
- 4539 01486 0               NIBHEX  0
- 4540 01487 0               NIBHEX  0
- 4541 01488 0               NIBHEX  0
- 4542 01489 0               NIBHEX  0
- 4543 0148A 0               NIBHEX  0
- 4544 0148B 0               NIBHEX  0
- 4545 0148C 0               NIBHEX  0
- 4546 0148D 0               NIBHEX  0
- 4547 0148E 0               NIBHEX  0
- 4548 0148F 0               NIBHEX  0
- 4549 01490 0               NIBHEX  0
- 4550 01491 0               NIBHEX  0
- 4551 01492 0               NIBHEX  0
- 4552 01493 0               NIBHEX  0
- 4553 01494 0               NIBHEX  0
- 4554 01495 0               NIBHEX  0
- 4555 01496 0               NIBHEX  0
- 4556 01497 0               NIBHEX  0
- 4557 01498 0               NIBHEX  0
- 4558 01499 0               NIBHEX  0
- 4559 0149A 0               NIBHEX  0
- 4560 0149B 0               NIBHEX  0
- 4561 0149C 4               NIBHEX  4
- 4562 0149D 0               NIBHEX  0
- 4563 0149E 0               NIBHEX  0
- 4564 0149F 0               NIBHEX  0
- 4565 014A0 0               NIBHEX  0
- 4566 014A1 0               NIBHEX  0
- 4567 014A2 0               NIBHEX  0
- 4568 014A3 0               NIBHEX  0
- 4569 014A4 0               NIBHEX  0
- 4570 014A5 0               NIBHEX  0
- 4571 014A6 0               NIBHEX  0
- 4572 014A7 0               NIBHEX  0
- 4573 014A8 0               NIBHEX  0
- 4574 014A9 0               NIBHEX  0
- 4575 014AA 0               NIBHEX  0
- 4576 014AB 0               NIBHEX  0
- 4577 014AC 0               NIBHEX  0
- 4578 014AD 0               NIBHEX  0
- 4579 014AE 0               NIBHEX  0
- 4580 014AF 0               NIBHEX  0
- 4581 014B0 0               NIBHEX  0
- 4582 014B1 0               NIBHEX  0
- 4583 014B2 0               NIBHEX  0
- 4584 014B3 0               NIBHEX  0
- 4585 014B4 0               NIBHEX  0
- 4586 014B5 0               NIBHEX  0
- 4587 014B6 0               NIBHEX  0
- 4588 014B7 0               NIBHEX  0
- 4589 014B8 0               NIBHEX  0
- 4590 014B9 0               NIBHEX  0
- 4591 014BA 0               NIBHEX  0
- 4592 014BB 0               NIBHEX  0
- 4593 014BC 0               NIBHEX  0
- 4594 014BD 0               NIBHEX  0
- 4595 014BE 4               NIBHEX  4
- 4596 014BF 0               NIBHEX  0
- 4597 014C0 0               NIBHEX  0
- 4598 014C1 0               NIBHEX  0
- 4599 014C2 0               NIBHEX  0
- 4600 014C3 0               NIBHEX  0
- 4601 014C4 0               NIBHEX  0
- 4602 014C5 0               NIBHEX  0
- 4603 014C6 0               NIBHEX  0
- 4604 014C7 0               NIBHEX  0
- 4605 014C8 0               NIBHEX  0
- 4606 014C9 0               NIBHEX  0
- 4607 014CA 0               NIBHEX  0
- 4608 014CB 0               NIBHEX  0
- 4609 014CC 0               NIBHEX  0
- 4610 014CD 0               NIBHEX  0
- 4611 014CE 0               NIBHEX  0
- 4612 014CF 0               NIBHEX  0
- 4613 014D0 0               NIBHEX  0
- 4614 014D1 0               NIBHEX  0
- 4615 014D2 0               NIBHEX  0
- 4616 014D3 0               NIBHEX  0
- 4617 014D4 0               NIBHEX  0
- 4618 014D5 0               NIBHEX  0
- 4619 014D6 0               NIBHEX  0
- 4620 014D7 0               NIBHEX  0
- 4621 014D8 0               NIBHEX  0
- 4622 014D9 0               NIBHEX  0
- 4623 014DA 0               NIBHEX  0
- 4624 014DB 0               NIBHEX  0
- 4625 014DC 0               NIBHEX  0
- 4626 014DD 0               NIBHEX  0
- 4627 014DE 0               NIBHEX  0
- 4628 014DF 0               NIBHEX  0
- 4629 014E0 4               NIBHEX  4
- 4630 014E1 0               NIBHEX  0
- 4631 014E2 0               NIBHEX  0
- 4632 014E3 0               NIBHEX  0
- 4633 014E4 0               NIBHEX  0
- 4634 014E5 0               NIBHEX  0
- 4635 014E6 0               NIBHEX  0
- 4636 014E7 0               NIBHEX  0
- 4637 014E8 0               NIBHEX  0
- 4638 014E9 0               NIBHEX  0
- 4639 014EA 0               NIBHEX  0
- 4640 014EB 0               NIBHEX  0
- 4641 014EC 0               NIBHEX  0
- 4642 014ED 0               NIBHEX  0
- 4643 014EE 0               NIBHEX  0
- 4644 014EF 0               NIBHEX  0
- 4645 014F0 0               NIBHEX  0
- 4646 014F1 0               NIBHEX  0
- 4647 014F2 0               NIBHEX  0
- 4648 014F3 0               NIBHEX  0
- 4649 014F4 0               NIBHEX  0
- 4650 014F5 0               NIBHEX  0
- 4651 014F6 0               NIBHEX  0
- 4652 014F7 0               NIBHEX  0
- 4653 014F8 0               NIBHEX  0
- 4654 014F9 0               NIBHEX  0
- 4655 014FA 0               NIBHEX  0
- 4656 014FB 0               NIBHEX  0
- 4657 014FC 0               NIBHEX  0
- 4658 014FD 0               NIBHEX  0
- 4659 014FE 0               NIBHEX  0
- 4660 014FF 0               NIBHEX  0
- 4661 01500 0               NIBHEX  0
- 4662 01501 0               NIBHEX  0
- 4663 01502 4               NIBHEX  4
- 4664 01503 0               NIBHEX  0
- 4665 01504 0               NIBHEX  0
- 4666 01505 0               NIBHEX  0
- 4667 01506 0               NIBHEX  0
- 4668 01507 0               NIBHEX  0
- 4669 01508 0               NIBHEX  0
- 4670 01509 0               NIBHEX  0
- 4671 0150A 0               NIBHEX  0
- 4672 0150B 0               NIBHEX  0
- 4673 0150C 0               NIBHEX  0
- 4674 0150D 0               NIBHEX  0
- 4675 0150E 0               NIBHEX  0
- 4676 0150F 0               NIBHEX  0
- 4677 01510 0               NIBHEX  0
- 4678 01511 0               NIBHEX  0
- 4679 01512 0               NIBHEX  0
- 4680 01513 0               NIBHEX  0
- 4681 01514 0               NIBHEX  0
- 4682 01515 0               NIBHEX  0
- 4683 01516 0               NIBHEX  0
- 4684 01517 0               NIBHEX  0
- 4685 01518 0               NIBHEX  0
- 4686 01519 0               NIBHEX  0
- 4687 0151A 0               NIBHEX  0
- 4688 0151B 0               NIBHEX  0
- 4689 0151C 0               NIBHEX  0
- 4690 0151D 0               NIBHEX  0
- 4691 0151E 0               NIBHEX  0
- 4692 0151F 0               NIBHEX  0
- 4693 01520 0               NIBHEX  0
- 4694 01521 0               NIBHEX  0
- 4695 01522 0               NIBHEX  0
- 4696 01523 0               NIBHEX  0
- 4697 01524 4               NIBHEX  4
- 4698 01525 0               NIBHEX  0
- 4699 01526 0               NIBHEX  0
- 4700 01527 0               NIBHEX  0
- 4701 01528 0               NIBHEX  0
- 4702 01529 0               NIBHEX  0
- 4703 0152A 0               NIBHEX  0
- 4704 0152B 0               NIBHEX  0
- 4705 0152C 0               NIBHEX  0
- 4706 0152D 0               NIBHEX  0
- 4707 0152E 0               NIBHEX  0
- 4708 0152F 0               NIBHEX  0
- 4709 01530 0               NIBHEX  0
- 4710 01531 0               NIBHEX  0
- 4711 01532 0               NIBHEX  0
- 4712 01533 0               NIBHEX  0
- 4713 01534 0               NIBHEX  0
- 4714 01535 0               NIBHEX  0
- 4715 01536 0               NIBHEX  0
- 4716 01537 0               NIBHEX  0
- 4717 01538 0               NIBHEX  0
- 4718 01539 0               NIBHEX  0
- 4719 0153A 0               NIBHEX  0
- 4720 0153B 0               NIBHEX  0
- 4721 0153C 0               NIBHEX  0
- 4722 0153D 0               NIBHEX  0
- 4723 0153E 0               NIBHEX  0
- 4724 0153F 0               NIBHEX  0
- 4725 01540 0               NIBHEX  0
- 4726 01541 0               NIBHEX  0
- 4727 01542 0               NIBHEX  0
- 4728 01543 0               NIBHEX  0
- 4729 01544 0               NIBHEX  0
- 4730 01545 0               NIBHEX  0
- 4731 01546 4               NIBHEX  4
- 4732 01547 0               NIBHEX  0
- 4733 01548 0               NIBHEX  0
- 4734 01549 0               NIBHEX  0
- 4735 0154A 0               NIBHEX  0
- 4736 0154B 0               NIBHEX  0
- 4737 0154C 0               NIBHEX  0
- 4738 0154D 0               NIBHEX  0
- 4739 0154E 0               NIBHEX  0
- 4740 0154F 0               NIBHEX  0
- 4741 01550 0               NIBHEX  0
- 4742 01551 0               NIBHEX  0
- 4743 01552 0               NIBHEX  0
- 4744 01553 0               NIBHEX  0
- 4745 01554 0               NIBHEX  0
- 4746 01555 0               NIBHEX  0
- 4747 01556 0               NIBHEX  0
- 4748 01557 0               NIBHEX  0
- 4749 01558 0               NIBHEX  0
- 4750 01559 0               NIBHEX  0
- 4751 0155A 0               NIBHEX  0
- 4752 0155B 0               NIBHEX  0
- 4753 0155C 0               NIBHEX  0
- 4754 0155D 0               NIBHEX  0
- 4755 0155E 0               NIBHEX  0
- 4756 0155F 0               NIBHEX  0
- 4757 01560 0               NIBHEX  0
- 4758 01561 0               NIBHEX  0
- 4759 01562 0               NIBHEX  0
- 4760 01563 0               NIBHEX  0
- 4761 01564 0               NIBHEX  0
- 4762 01565 0               NIBHEX  0
- 4763 01566 0               NIBHEX  0
- 4764 01567 0               NIBHEX  0
- 4765 01568 0               NIBHEX  0
- 4766 01569 2               NIBHEX  2
- 4767 0156A 0               NIBHEX  0
- 4768 0156B 0               NIBHEX  0
- 4769 0156C 0               NIBHEX  0
- 4770 0156D 0               NIBHEX  0
- 4771 0156E 0               NIBHEX  0
- 4772 0156F 0               NIBHEX  0
- 4773 01570 0               NIBHEX  0
- 4774 01571 0               NIBHEX  0
- 4775 01572 0               NIBHEX  0
- 4776 01573 0               NIBHEX  0
- 4777 01574 0               NIBHEX  0
- 4778 01575 0               NIBHEX  0
- 4779 01576 0               NIBHEX  0
- 4780 01577 0               NIBHEX  0
- 4781 01578 0               NIBHEX  0
- 4782 01579 0               NIBHEX  0
- 4783 0157A 0               NIBHEX  0
- 4784 0157B 0               NIBHEX  0
- 4785 0157C 0               NIBHEX  0
- 4786 0157D 0               NIBHEX  0
- 4787 0157E 0               NIBHEX  0
- 4788 0157F 0               NIBHEX  0
- 4789 01580 0               NIBHEX  0
- 4790 01581 0               NIBHEX  0
- 4791 01582 0               NIBHEX  0
- 4792 01583 0               NIBHEX  0
- 4793 01584 0               NIBHEX  0
- 4794 01585 0               NIBHEX  0
- 4795 01586 0               NIBHEX  0
- 4796 01587 0               NIBHEX  0
- 4797 01588 0               NIBHEX  0
- 4798 01589 0               NIBHEX  0
- 4799 0158A 0               NIBHEX  0
- 4800 0158B 2               NIBHEX  2
- 4801 0158C 0               NIBHEX  0
- 4802 0158D 0               NIBHEX  0
- 4803 0158E 0               NIBHEX  0
- 4804 0158F 0               NIBHEX  0
- 4805 01590 0               NIBHEX  0
- 4806 01591 0               NIBHEX  0
- 4807 01592 0               NIBHEX  0
- 4808 01593 0               NIBHEX  0
- 4809 01594 0               NIBHEX  0
- 4810 01595 0               NIBHEX  0
- 4811 01596 0               NIBHEX  0
- 4812 01597 0               NIBHEX  0
- 4813 01598 0               NIBHEX  0
- 4814 01599 0               NIBHEX  0
- 4815 0159A 0               NIBHEX  0
- 4816 0159B 0               NIBHEX  0
- 4817 0159C 0               NIBHEX  0
- 4818 0159D 0               NIBHEX  0
- 4819 0159E 0               NIBHEX  0
- 4820 0159F 0               NIBHEX  0
- 4821 015A0 0               NIBHEX  0
- 4822 015A1 0               NIBHEX  0
- 4823 015A2 0               NIBHEX  0
- 4824 015A3 0               NIBHEX  0
- 4825 015A4 0               NIBHEX  0
- 4826 015A5 0               NIBHEX  0
- 4827 015A6 0               NIBHEX  0
- 4828 015A7 0               NIBHEX  0
- 4829 015A8 0               NIBHEX  0
- 4830 015A9 0               NIBHEX  0
- 4831 015AA 0               NIBHEX  0
- 4832 015AB 0               NIBHEX  0
- 4833 015AC 0               NIBHEX  0
- 4834 015AD 2               NIBHEX  2
- 4835 015AE 0               NIBHEX  0
- 4836 015AF 0               NIBHEX  0
- 4837 015B0 0               NIBHEX  0
- 4838 015B1 0               NIBHEX  0
- 4839 015B2 0               NIBHEX  0
- 4840 015B3 0               NIBHEX  0
- 4841 015B4 0               NIBHEX  0
- 4842 015B5 0               NIBHEX  0
- 4843 015B6 0               NIBHEX  0
- 4844 015B7 0               NIBHEX  0
- 4845 015B8 0               NIBHEX  0
- 4846 015B9 0               NIBHEX  0
- 4847 015BA 0               NIBHEX  0
- 4848 015BB 0               NIBHEX  0
- 4849 015BC 0               NIBHEX  0
- 4850 015BD 0               NIBHEX  0
- 4851 015BE 0               NIBHEX  0
- 4852 015BF 0               NIBHEX  0
- 4853 015C0 0               NIBHEX  0
- 4854 015C1 0               NIBHEX  0
- 4855 015C2 0               NIBHEX  0
- 4856 015C3 0               NIBHEX  0
- 4857 015C4 0               NIBHEX  0
- 4858 015C5 0               NIBHEX  0
- 4859 015C6 0               NIBHEX  0
- 4860 015C7 0               NIBHEX  0
- 4861 015C8 0               NIBHEX  0
- 4862 015C9 0               NIBHEX  0
- 4863 015CA 0               NIBHEX  0
- 4864 015CB 0               NIBHEX  0
- 4865 015CC 0               NIBHEX  0
- 4866 015CD 0               NIBHEX  0
- 4867 015CE 0               NIBHEX  0
- 4868 015CF 2               NIBHEX  2
- 4869 015D0 0               NIBHEX  0
- 4870 015D1 0               NIBHEX  0
- 4871 015D2 0               NIBHEX  0
- 4872 015D3 0               NIBHEX  0
- 4873 015D4 0               NIBHEX  0
- 4874 015D5 0               NIBHEX  0
- 4875 015D6 0               NIBHEX  0
- 4876 015D7 0               NIBHEX  0
- 4877 015D8 0               NIBHEX  0
- 4878 015D9 0               NIBHEX  0
- 4879 015DA 0               NIBHEX  0
- 4880 015DB 0               NIBHEX  0
- 4881 015DC 0               NIBHEX  0
- 4882 015DD 0               NIBHEX  0
- 4883 015DE 0               NIBHEX  0
- 4884 015DF 0               NIBHEX  0
- 4885 015E0 0               NIBHEX  0
- 4886 015E1 0               NIBHEX  0
- 4887 015E2 0               NIBHEX  0
- 4888 015E3 0               NIBHEX  0
- 4889 015E4 0               NIBHEX  0
- 4890 015E5 0               NIBHEX  0
- 4891 015E6 0               NIBHEX  0
- 4892 015E7 0               NIBHEX  0
- 4893 015E8 0               NIBHEX  0
- 4894 015E9 0               NIBHEX  0
- 4895 015EA 0               NIBHEX  0
- 4896 015EB 0               NIBHEX  0
- 4897 015EC 0               NIBHEX  0
- 4898 015ED 0               NIBHEX  0
- 4899 015EE 0               NIBHEX  0
- 4900 015EF 0               NIBHEX  0
- 4901 015F0 0               NIBHEX  0
- 4902 015F1 2               NIBHEX  2
- 4903 015F2 0               NIBHEX  0
- 4904 015F3 0               NIBHEX  0
- 4905 015F4 0               NIBHEX  0
- 4906 015F5 0               NIBHEX  0
- 4907 015F6 0               NIBHEX  0
- 4908 015F7 0               NIBHEX  0
- 4909 015F8 0               NIBHEX  0
- 4910 015F9 0               NIBHEX  0
- 4911 015FA 0               NIBHEX  0
- 4912 015FB 0               NIBHEX  0
- 4913 015FC 0               NIBHEX  0
- 4914 015FD 0               NIBHEX  0
- 4915 015FE 0               NIBHEX  0
- 4916 015FF 0               NIBHEX  0
- 4917 01600 0               NIBHEX  0
- 4918 01601 0               NIBHEX  0
- 4919 01602 0               NIBHEX  0
- 4920 01603 0               NIBHEX  0
- 4921 01604 0               NIBHEX  0
- 4922 01605 0               NIBHEX  0
- 4923 01606 0               NIBHEX  0
- 4924 01607 0               NIBHEX  0
- 4925 01608 0               NIBHEX  0
- 4926 01609 0               NIBHEX  0
- 4927 0160A 0               NIBHEX  0
- 4928 0160B 0               NIBHEX  0
- 4929 0160C 0               NIBHEX  0
- 4930 0160D 0               NIBHEX  0
- 4931 0160E 0               NIBHEX  0
- 4932 0160F 0               NIBHEX  0
- 4933 01610 0               NIBHEX  0
- 4934 01611 0               NIBHEX  0
- 4935 01612 0               NIBHEX  0
- 4936 01613 2               NIBHEX  2
- 4937 01614 0               NIBHEX  0
- 4938 01615 0               NIBHEX  0
- 4939 01616 0               NIBHEX  0
- 4940 01617 0               NIBHEX  0
- 4941 01618 0               NIBHEX  0
- 4942 01619 0               NIBHEX  0
- 4943 0161A 0               NIBHEX  0
- 4944 0161B 0               NIBHEX  0
- 4945 0161C 0               NIBHEX  0
- 4946 0161D 0               NIBHEX  0
- 4947 0161E 0               NIBHEX  0
- 4948 0161F 0               NIBHEX  0
- 4949 01620 0               NIBHEX  0
- 4950 01621 0               NIBHEX  0
- 4951 01622 0               NIBHEX  0
- 4952 01623 0               NIBHEX  0
- 4953 01624 0               NIBHEX  0
- 4954 01625 0               NIBHEX  0
- 4955 01626 0               NIBHEX  0
- 4956 01627 0               NIBHEX  0
- 4957 01628 0               NIBHEX  0
- 4958 01629 0               NIBHEX  0
- 4959 0162A 0               NIBHEX  0
- 4960 0162B 0               NIBHEX  0
- 4961 0162C 0               NIBHEX  0
- 4962 0162D 0               NIBHEX  0
- 4963 0162E 0               NIBHEX  0
- 4964 0162F 0               NIBHEX  0
- 4965 01630 0               NIBHEX  0
- 4966 01631 0               NIBHEX  0
- 4967 01632 0               NIBHEX  0
- 4968 01633 0               NIBHEX  0
- 4969 01634 0               NIBHEX  0
- 4970 01635 2               NIBHEX  2
- 4971 01636 0               NIBHEX  0
- 4972 01637 0               NIBHEX  0
- 4973 01638 0               NIBHEX  0
- 4974 01639 0               NIBHEX  0
- 4975 0163A 0               NIBHEX  0
- 4976 0163B 0               NIBHEX  0
- 4977 0163C 0               NIBHEX  0
- 4978 0163D 0               NIBHEX  0
- 4979 0163E 0               NIBHEX  0
- 4980 0163F 0               NIBHEX  0
- 4981 01640 0               NIBHEX  0
- 4982 01641 0               NIBHEX  0
- 4983 01642 0               NIBHEX  0
- 4984 01643 0               NIBHEX  0
- 4985 01644 0               NIBHEX  0
- 4986 01645 0               NIBHEX  0
- 4987 01646 0               NIBHEX  0
- 4988 01647 0               NIBHEX  0
- 4989 01648 0               NIBHEX  0
- 4990 01649 0               NIBHEX  0
- 4991 0164A 0               NIBHEX  0
- 4992 0164B 0               NIBHEX  0
- 4993 0164C 0               NIBHEX  0
- 4994 0164D 0               NIBHEX  0
- 4995 0164E 0               NIBHEX  0
- 4996 0164F 0               NIBHEX  0
- 4997 01650 0               NIBHEX  0
- 4998 01651 0               NIBHEX  0
- 4999 01652 0               NIBHEX  0
- 5000 01653 0               NIBHEX  0
- 5001 01654 0               NIBHEX  0
- 5002 01655 0               NIBHEX  0
- 5003 01656 0               NIBHEX  0
- 5004 01657 2               NIBHEX  2
- 5005 01658 0               NIBHEX  0
- 5006 01659 0               NIBHEX  0
- 5007 0165A 0               NIBHEX  0
- 5008 0165B 0               NIBHEX  0
- 5009 0165C 0               NIBHEX  0
- 5010 0165D 0               NIBHEX  0
- 5011 0165E 0               NIBHEX  0
- 5012 0165F 0               NIBHEX  0
- 5013 01660 0               NIBHEX  0
- 5014 01661 0               NIBHEX  0
- 5015 01662 0               NIBHEX  0
- 5016 01663 0               NIBHEX  0
- 5017 01664 0               NIBHEX  0
- 5018 01665 0               NIBHEX  0
- 5019 01666 0               NIBHEX  0
- 5020 01667 0               NIBHEX  0
- 5021 01668 0               NIBHEX  0
- 5022 01669 0               NIBHEX  0
- 5023 0166A 0               NIBHEX  0
- 5024 0166B 0               NIBHEX  0
- 5025 0166C 0               NIBHEX  0
- 5026 0166D 0               NIBHEX  0
- 5027 0166E 0               NIBHEX  0
- 5028 0166F 0               NIBHEX  0
- 5029 01670 0               NIBHEX  0
- 5030 01671 0               NIBHEX  0
- 5031 01672 0               NIBHEX  0
- 5032 01673 0               NIBHEX  0
- 5033 01674 0               NIBHEX  0
- 5034 01675 0               NIBHEX  0
- 5035 01676 0               NIBHEX  0
- 5036 01677 0               NIBHEX  0
- 5037 01678 8               NIBHEX  8
- 5038 01679 1               NIBHEX  1
- 5039 0167A 0               NIBHEX  0
- 5040 0167B 0               NIBHEX  0
- 5041 0167C 0               NIBHEX  0
- 5042 0167D 0               NIBHEX  0
- 5043 0167E 0               NIBHEX  0
- 5044 0167F 0               NIBHEX  0
- 5045 01680 0               NIBHEX  0
- 5046 01681 0               NIBHEX  0
- 5047 01682 0               NIBHEX  0
- 5048 01683 0               NIBHEX  0
- 5049 01684 0               NIBHEX  0
- 5050 01685 0               NIBHEX  0
- 5051 01686 0               NIBHEX  0
- 5052 01687 0               NIBHEX  0
- 5053 01688 0               NIBHEX  0
- 5054 01689 0               NIBHEX  0
- 5055 0168A 0               NIBHEX  0
- 5056 0168B 0               NIBHEX  0
- 5057 0168C 0               NIBHEX  0
- 5058 0168D 0               NIBHEX  0
- 5059 0168E 0               NIBHEX  0
- 5060 0168F 0               NIBHEX  0
- 5061 01690 0               NIBHEX  0
- 5062 01691 0               NIBHEX  0
- 5063 01692 0               NIBHEX  0
- 5064 01693 0               NIBHEX  0
- 5065 01694 0               NIBHEX  0
- 5066 01695 0               NIBHEX  0
- 5067 01696 0               NIBHEX  0
- 5068 01697 0               NIBHEX  0
- 5069 01698 0               NIBHEX  0
- 5070 01699 0               NIBHEX  0
- 5071 0169A C               NIBHEX  C
- 5072 0169B 2               NIBHEX  2
- 5073 0169C 0               NIBHEX  0
- 5074 0169D 0               NIBHEX  0
- 5075 0169E 0               NIBHEX  0
- 5076 0169F 0               NIBHEX  0
- 5077 016A0 0               NIBHEX  0
- 5078 016A1 0               NIBHEX  0
- 5079 016A2 0               NIBHEX  0
- 5080 016A3 0               NIBHEX  0
- 5081 016A4 0               NIBHEX  0
- 5082 016A5 0               NIBHEX  0
- 5083 016A6 0               NIBHEX  0
- 5084 016A7 0               NIBHEX  0
- 5085 016A8 0               NIBHEX  0
- 5086 016A9 0               NIBHEX  0
- 5087 016AA 0               NIBHEX  0
- 5088 016AB 0               NIBHEX  0
- 5089 016AC 0               NIBHEX  0
- 5090 016AD 0               NIBHEX  0
- 5091 016AE 0               NIBHEX  0
- 5092 016AF 0               NIBHEX  0
- 5093 016B0 0               NIBHEX  0
- 5094 016B1 0               NIBHEX  0
- 5095 016B2 0               NIBHEX  0
- 5096 016B3 0               NIBHEX  0
- 5097 016B4 0               NIBHEX  0
- 5098 016B5 0               NIBHEX  0
- 5099 016B6 0               NIBHEX  0
- 5100 016B7 0               NIBHEX  0
- 5101 016B8 0               NIBHEX  0
- 5102 016B9 0               NIBHEX  0
- 5103 016BA 0               NIBHEX  0
- 5104 016BB 0               NIBHEX  0
- 5105 016BC C               NIBHEX  C
- 5106 016BD 2               NIBHEX  2
- 5107 016BE 0               NIBHEX  0
- 5108 016BF 0               NIBHEX  0
- 5109 016C0 0               NIBHEX  0
- 5110 016C1 0               NIBHEX  0
- 5111 016C2 0               NIBHEX  0
- 5112 016C3 0               NIBHEX  0
- 5113 016C4 0               NIBHEX  0
- 5114 016C5 0               NIBHEX  0
- 5115 016C6 0               NIBHEX  0
- 5116 016C7 0               NIBHEX  0
- 5117 016C8 0               NIBHEX  0
- 5118 016C9 0               NIBHEX  0
- 5119 016CA 0               NIBHEX  0
- 5120 016CB 0               NIBHEX  0
- 5121 016CC 0               NIBHEX  0
- 5122 016CD 0               NIBHEX  0
- 5123 016CE 0               NIBHEX  0
- 5124 016CF 0               NIBHEX  0
- 5125 016D0 0               NIBHEX  0
- 5126 016D1 0               NIBHEX  0
- 5127 016D2 0               NIBHEX  0
- 5128 016D3 0               NIBHEX  0
- 5129 016D4 0               NIBHEX  0
- 5130 016D5 0               NIBHEX  0
- 5131 016D6 0               NIBHEX  0
- 5132 016D7 0               NIBHEX  0
- 5133 016D8 0               NIBHEX  0
- 5134 016D9 0               NIBHEX  0
- 5135 016DA 0               NIBHEX  0
- 5136 016DB 0               NIBHEX  0
- 5137 016DC 0               NIBHEX  0
- 5138 016DD 0               NIBHEX  0
- 5139 016DE C               NIBHEX  C
- 5140 016DF 1               NIBHEX  1
- 5141 016E0 0               NIBHEX  0
- 5142 016E1 0               NIBHEX  0
- 5143 016E2 0               NIBHEX  0
- 5144 016E3 0               NIBHEX  0
- 5145 016E4 0               NIBHEX  0
- 5146 016E5 0               NIBHEX  0
- 5147 016E6 0               NIBHEX  0
- 5148 016E7 0               NIBHEX  0
- 5149 016E8 0               NIBHEX  0
- 5150 016E9 0               NIBHEX  0
- 5151 016EA 0               NIBHEX  0
- 5152 016EB 0               NIBHEX  0
- 5153 016EC 0               NIBHEX  0
- 5154 016ED 0               NIBHEX  0
- 5155 016EE 0               NIBHEX  0
- 5156 016EF 0               NIBHEX  0
- 5157 016F0 0               NIBHEX  0
- 5158 016F1 0               NIBHEX  0
- 5159 016F2 0               NIBHEX  0
- 5160 016F3 0               NIBHEX  0
- 5161 016F4 0               NIBHEX  0
- 5162 016F5 0               NIBHEX  0
- 5163 016F6 0               NIBHEX  0
- 5164 016F7 0               NIBHEX  0
- 5165 016F8 0               NIBHEX  0
- 5166 016F9 0               NIBHEX  0
- 5167 016FA 0               NIBHEX  0
- 5168 016FB 0               NIBHEX  0
- 5169 016FC 0               NIBHEX  0
- 5170 016FD 0               NIBHEX  0
- 5171 016FE 0               NIBHEX  0
- 5172 016FF 0               NIBHEX  0
- 5173 01700 8               NIBHEX  8
- 5174 01701 1               NIBHEX  1
- 5175 01702 0               NIBHEX  0
- 5176 01703 0               NIBHEX  0
- 5177 01704 0               NIBHEX  0
- 5178 01705 0               NIBHEX  0
- 5179 01706 0               NIBHEX  0
- 5180 01707 0               NIBHEX  0
- 5181 01708 0               NIBHEX  0
- 5182 01709 0               NIBHEX  0
- 5183 0170A 0               NIBHEX  0
- 5184 0170B 0               NIBHEX  0
- 5185 0170C 0               NIBHEX  0
- 5186 0170D 0               NIBHEX  0
- 5187 0170E 0               NIBHEX  0
- 5188 0170F 0               NIBHEX  0
- 5189 01710 0               NIBHEX  0
- 5190 01711 0               NIBHEX  0
- 5191 01712 0               NIBHEX  0
- 5192 01713 0               NIBHEX  0
- 5193 01714 0               NIBHEX  0
- 5194 01715 0               NIBHEX  0
- 5195 01716 0               NIBHEX  0
- 5196 01717 0               NIBHEX  0
- 5197 01718 0               NIBHEX  0
- 5198 01719 0               NIBHEX  0
- 5199 0171A 0               NIBHEX  0
- 5200 0171B 0               NIBHEX  0
- 5201 0171C 0               NIBHEX  0
- 5202 0171D 0               NIBHEX  0
- 5203 0171E 0               NIBHEX  0
- 5204 0171F 0               NIBHEX  0
- 5205 01720 0               NIBHEX  0
- 5206 01721 0               NIBHEX  0
- 5207 01722 C               NIBHEX  C
- 5208 01723 2               NIBHEX  2
- 5209 01724 0               NIBHEX  0
- 5210 01725 0               NIBHEX  0
- 5211 01726 0               NIBHEX  0
- 5212 01727 0               NIBHEX  0
- 5213 01728 0               NIBHEX  0
- 5214 01729 0               NIBHEX  0
- 5215 0172A 0               NIBHEX  0
- 5216 0172B 0               NIBHEX  0
- 5217 0172C 0               NIBHEX  0
- 5218 0172D 0               NIBHEX  0
- 5219 0172E 0               NIBHEX  0
- 5220 0172F 0               NIBHEX  0
- 5221 01730 0               NIBHEX  0
- 5222 01731 0               NIBHEX  0
- 5223 01732 0               NIBHEX  0
- 5224 01733 0               NIBHEX  0
- 5225 01734 0               NIBHEX  0
- 5226 01735 0               NIBHEX  0
- 5227 01736 0               NIBHEX  0
- 5228 01737 0               NIBHEX  0
- 5229 01738 0               NIBHEX  0
- 5230 01739 0               NIBHEX  0
- 5231 0173A 0               NIBHEX  0
- 5232 0173B 0               NIBHEX  0
- 5233 0173C 0               NIBHEX  0
- 5234 0173D 0               NIBHEX  0
- 5235 0173E 0               NIBHEX  0
- 5236 0173F 0               NIBHEX  0
- 5237 01740 0               NIBHEX  0
- 5238 01741 0               NIBHEX  0
- 5239 01742 0               NIBHEX  0
- 5240 01743 0               NIBHEX  0
- 5241 01744 C               NIBHEX  C
- 5242 01745 2               NIBHEX  2
- 5243 01746 0               NIBHEX  0
- 5244 01747 0               NIBHEX  0
- 5245 01748 0               NIBHEX  0
- 5246 01749 0               NIBHEX  0
- 5247 0174A 0               NIBHEX  0
- 5248 0174B 0               NIBHEX  0
- 5249 0174C 0               NIBHEX  0
- 5250 0174D 0               NIBHEX  0
- 5251 0174E 0               NIBHEX  0
- 5252 0174F 0               NIBHEX  0
- 5253 01750 0               NIBHEX  0
- 5254 01751 0               NIBHEX  0
- 5255 01752 0               NIBHEX  0
- 5256 01753 0               NIBHEX  0
- 5257 01754 0               NIBHEX  0
- 5258 01755 0               NIBHEX  0
- 5259 01756 0               NIBHEX  0
- 5260 01757 0               NIBHEX  0
- 5261 01758 0               NIBHEX  0
- 5262 01759 0               NIBHEX  0
- 5263 0175A 0               NIBHEX  0
- 5264 0175B 0               NIBHEX  0
- 5265 0175C 0               NIBHEX  0
- 5266 0175D 0               NIBHEX  0
- 5267 0175E 0               NIBHEX  0
- 5268 0175F 0               NIBHEX  0
- 5269 01760 0               NIBHEX  0
- 5270 01761 0               NIBHEX  0
- 5271 01762 0               NIBHEX  0
- 5272 01763 0               NIBHEX  0
- 5273 01764 0               NIBHEX  0
- 5274 01765 0               NIBHEX  0
- 5275 01766 C               NIBHEX  C
- 5276 01767 1               NIBHEX  1
- 5277 01768 0               NIBHEX  0
- 5278 01769 0               NIBHEX  0
- 5279 0176A 0               NIBHEX  0
- 5280 0176B 0               NIBHEX  0
- 5281 0176C 0               NIBHEX  0
- 5282 0176D 0               NIBHEX  0
- 5283 0176E 0               NIBHEX  0
- 5284 0176F 0               NIBHEX  0
- 5285 01770 0               NIBHEX  0
- 5286 01771 0               NIBHEX  0
- 5287 01772 0               NIBHEX  0
- 5288 01773 0               NIBHEX  0
- 5289 01774 0               NIBHEX  0
- 5290 01775 0               NIBHEX  0
- 5291 01776 0               NIBHEX  0
- 5292 01777 0               NIBHEX  0
- 5293 01778 0               NIBHEX  0
- 5294 01779 0               NIBHEX  0
- 5295 0177A 0               NIBHEX  0
- 5296 0177B 0               NIBHEX  0
- 5297 0177C 0               NIBHEX  0
- 5298 0177D 0               NIBHEX  0
- 5299 0177E 0               NIBHEX  0
- 5300 0177F 0               NIBHEX  0
- 5301 01780 0               NIBHEX  0
- 5302 01781 0               NIBHEX  0
- 5303 01782 0               NIBHEX  0
- 5304 01783 0               NIBHEX  0
- 5305 01784 0               NIBHEX  0
- 5306 01785 0               NIBHEX  0
- 5307 01786 0               NIBHEX  0
- 5308 01787 0               NIBHEX  0
- 5309 01788 0               NIBHEX  0
- 5310 01789 8               NIBHEX  8
- 5311 0178A 0               NIBHEX  0
- 5312 0178B 0               NIBHEX  0
- 5313 0178C 0               NIBHEX  0
- 5314 0178D 0               NIBHEX  0
- 5315 0178E 0               NIBHEX  0
- 5316 0178F 0               NIBHEX  0
- 5317 01790 0               NIBHEX  0
- 5318 01791 0               NIBHEX  0
- 5319 01792 0               NIBHEX  0
- 5320 01793 0               NIBHEX  0
- 5321 01794 0               NIBHEX  0
- 5322 01795 0               NIBHEX  0
- 5323               * File  smhp_editor_50.s        290
- 5324                       }
- 5325 01796 07              C=RSTK
- 5326 01798 818F2F8         C=C+    20      A
-            18F23
- 5327 017A4 81AF0B          R3=C.f  A
- 5328               * File  smhp_editor_50.s        291
- 5329 017AA 01              RTN
- 5330               * File  smhp_editor_50.s        292
- 5331
- 5332               * File  smhp_editor_50.s        293
- 5333 017AC         =D.BLOC
- 5334               * File  smhp_editor_50.s        294
- 5335 017AC 1B00108         D0=(5)  (=EC1)
- 5336 017B3 142             A=DAT0  A
- 5337               * File  smhp_editor_50.s        295
- 5338 017B6 34F7600         LCHEX   0067F
- 5339 017BD CA              A=A+C   A
- 5340               * File  smhp_editor_50.s        296
- 5341 017BF 81AF04          R4=A.f  A
- 5342 017C5 AF0             A=0     W
- 5343               * File  smhp_editor_50.s        297
- 5344 017C8 1BF0108         D0=(5)  (=B)
- 5345 017CF 14A             A=DAT0  B
- 5346               * File  smhp_editor_50.s        298
- 5347 017D2 8FAAED2         GOSBVL  =HEXDCW
- 5348 017D9 04              SETHEX
- 5349               * File  smhp_editor_50.s        299
- 5350 017DB 302             LCHEX   2
- 5351 017DE A87             D=C     P
- 5352               * File  smhp_editor_50.s        300
- 5353 017E1 8CE010          GOLONG  =DISP_N
- 5354               * File  smhp_editor_50.s        301
- 5355
- 5356               * File  smhp_editor_50.s        302
- 5357 017E7         =D.X
- 5358               * File  smhp_editor_50.s        303
- 5359 017E7 1B00108         D0=(5)  (=EC1)
- 5360 017EE 142             A=DAT0  A
- 5361               * File  smhp_editor_50.s        304
- 5362 017F1 34F3200         LCHEX   0023F
- 5363 017F8 CA              A=A+C   A
- 5364               * File  smhp_editor_50.s        305
- 5365 017FA 81AF04          R4=A.f  A
- 5366 01800 AF0             A=0     W
- 5367               * File  smhp_editor_50.s        306
- 5368 01803 1B50108         D0=(5)  (=X)
- 5369 0180A 142             A=DAT0  A
- 5370               * File  smhp_editor_50.s        307
- 5371 0180D 1B41108         D0=(5)  (=S)
- 5372 01814 146             C=DAT0  A
- 5373               * File  smhp_editor_50.s        308
- 5374 01817         =INC
- 5375 01817 8AA             ?C=0    A
- 5376 0181A E0              SKIPYES{
- 5377 0181C CE              C=C-    1       A
- 5378               * File  smhp_editor_50.s        309
- 5379 0181E 818F0C          A=A+    13      A
- 5380 01824 62FF            GOTO    =INC
- 5381               * File  smhp_editor_50.s        310
- 5382                       }
- 5383 01828 8FAAED2         GOSBVL  =HEXDCW
- 5384 0182F 04              SETHEX
- 5385               * File  smhp_editor_50.s        311
- 5386 01831 304             LCHEX   4
- 5387 01834 A87             D=C     P
- 5388               * File  smhp_editor_50.s        312
- 5389 01837 8C8B00          GOLONG  =DISP_N
- 5390               * File  smhp_editor_50.s        313
- 5391
- 5392               * File  smhp_editor_50.s        314
- 5393 0183D         =D.Y
- 5394               * File  smhp_editor_50.s        315
- 5395 0183D 1B00108         D0=(5)  (=EC1)
- 5396 01844 142             A=DAT0  A
- 5397               * File  smhp_editor_50.s        316
- 5398 01847 34F4300         LCHEX   0034F
- 5399 0184E CA              A=A+C   A
- 5400               * File  smhp_editor_50.s        317
- 5401 01850 81AF04          R4=A.f  A
- 5402 01856 AF0             A=0     W
- 5403               * File  smhp_editor_50.s        318
- 5404 01859 1BA0108         D0=(5)  (=Y)
- 5405 01860 14A             A=DAT0  B
- 5406               * File  smhp_editor_50.s        319
- 5407 01863 8FAAED2         GOSBVL  =HEXDCW
- 5408 0186A 04              SETHEX
- 5409               * File  smhp_editor_50.s        320
- 5410 0186C 304             LCHEX   4
- 5411 0186F A87             D=C     P
- 5412               * File  smhp_editor_50.s        321
- 5413 01872 8CD700          GOLONG  =DISP_N
- 5414               * File  smhp_editor_50.s        322
- 5415
- 5416               * File  smhp_editor_50.s        323
- 5417 01878         =D.SIZE
- 5418               * File  smhp_editor_50.s        324
- 5419 01878 1B00108         D0=(5)  (=EC1)
- 5420 0187F 142             A=DAT0  A
- 5421               * File  smhp_editor_50.s        325
- 5422 01882 34F5400         LCHEX   0045F
- 5423 01889 CA              A=A+C   A
- 5424               * File  smhp_editor_50.s        326
- 5425 0188B 81AF04          R4=A.f  A
- 5426 01891 AF0             A=0     W
- 5427               * File  smhp_editor_50.s        327
- 5428 01894 1B91108         D0=(5)  (=X2)
- 5429 0189B 14A             A=DAT0  B
- 5430               * File  smhp_editor_50.s        328
- 5431 0189E 8FAAED2         GOSBVL  =HEXDCW
- 5432 018A5 04              SETHEX
- 5433               * File  smhp_editor_50.s        329
- 5434 018A7 302             LCHEX   2
- 5435 018AA A87             D=C     P
- 5436               * File  smhp_editor_50.s        330
- 5437 018AD 8C2400          GOLONG  =DISP_N
- 5438               * File  smhp_editor_50.s        331
- 5439
- 5440               * File  smhp_editor_50.s        332
- 5441 018B3         =D.PIT
- 5442               * File  smhp_editor_50.s        333
- 5443 018B3 1B00108         D0=(5)  (=EC1)
- 5444 018BA 142             A=DAT0  A
- 5445               * File  smhp_editor_50.s        334
- 5446 018BD 34F6500         LCHEX   0056F
- 5447 018C4 CA              A=A+C   A
- 5448               * File  smhp_editor_50.s        335
- 5449 018C6 81AF04          R4=A.f  A
- 5450 018CC AF0             A=0     W
- 5451               * File  smhp_editor_50.s        336
- 5452 018CF 1B41108         D0=(5)  (=S)
- 5453 018D6 14A             A=DAT0  B
- 5454 018D9 B64             A=A+    1       B
- 5455               * File  smhp_editor_50.s        337
- 5456 018DC 8FAAED2         GOSBVL  =HEXDCW
- 5457 018E3 04              SETHEX
- 5458               * File  smhp_editor_50.s        338
- 5459 018E5 302             LCHEX   2
- 5460 018E8 A87             D=C     P
- 5461               * File  smhp_editor_50.s        339
- 5462 018EB 8C4000          GOLONG  =DISP_N
- 5463               * File  smhp_editor_50.s        340
- 5464
- 5465               * File  smhp_editor_50.s        341
- 5466 018F1         =DISP_N
- 5467               * File  smhp_editor_50.s        342
- 5468 018F1 8E6500          GOSUBL  =GET_DAT
- 5469               * File  smhp_editor_50.s        343
- 5470 018F7 A82             C=0     P
- 5471               * File  smhp_editor_50.s        344
- 5472
- 5473               * File  smhp_editor_50.s        345
- 5474                       {
- 5475               * File  smhp_editor_50.s        346
- 5476 018FA 901             ?B=C    P
- 5477 018FD C0              EXIT
- 5478               * File  smhp_editor_50.s        347
- 5479 018FF 170             D1+     1
- 5480 01902 B06             C=C+    1       P
- 5481 01905 64FF            UP
- 5482               * File  smhp_editor_50.s        348
- 5483               * File  smhp_editor_50.s        349
- 5484
- 5485               * File  smhp_editor_50.s        350
- 5486                       }
- 5487 01909         =DSP
- 5488               * File  smhp_editor_50.s        351
- 5489 01909 81AF14          A=R4.f  A
- 5490 0190F 130             D0=A
- 5491               * File  smhp_editor_50.s        352
- 5492 01912 304             LCHEX   4
- 5493                       {
- 5494 01915 1530            A=DAT1  P
- 5495               * File  smhp_editor_50.s        353
- 5496 01919 1500            DAT0=A  P
- 5497 0191D 16F16F1         D0+     34
+ 1219               * File  smhp_editor_50.s        286
+ 1220 00784 31D0            LC(2)   13
+ 1221               * File  smhp_editor_50.s        287
+ 1222 00788 1B91108         D0=(5)  (=X2)
+ 1223 0078F 14C             DAT0=C  B
+ 1224               * File  smhp_editor_50.s        288
+ 1225
+ 1226               * File  smhp_editor_50.s        289
+ 1227               * File  smhp_editor_50.s        290
+ 1228               * File  smhp_editor_50.s        291
+ 1229               * File  smhp_editor_50.s        292
+ 1230
+ 1231               * File  smhp_editor_50.s        293
+ 1232               * File  smhp_editor_50.s        294
+ 1233 00792 8E0230          SKUBL{
+ 1234               * File  smhp_editor_50.s        295
+ 1235               * File  smhp_editor_50.s        296
+ 1236 00798 0               NIBHEX  0
+ 1237 00799 0               NIBHEX  0
+ 1238 0079A 0               NIBHEX  0
+ 1239 0079B 0               NIBHEX  0
+ 1240 0079C 0               NIBHEX  0
+ 1241 0079D 0               NIBHEX  0
+ 1242 0079E 0               NIBHEX  0
+ 1243 0079F 0               NIBHEX  0
+ 1244 007A0 0               NIBHEX  0
+ 1245 007A1 0               NIBHEX  0
+ 1246 007A2 0               NIBHEX  0
+ 1247 007A3 0               NIBHEX  0
+ 1248 007A4 0               NIBHEX  0
+ 1249 007A5 0               NIBHEX  0
+ 1250 007A6 0               NIBHEX  0
+ 1251 007A7 0               NIBHEX  0
+ 1252 007A8 E               NIBHEX  E
+ 1253 007A9 7               NIBHEX  7
+ 1254 007AA B               NIBHEX  B
+ 1255 007AB A               NIBHEX  A
+ 1256 007AC 5               NIBHEX  5
+ 1257 007AD D               NIBHEX  D
+ 1258 007AE B               NIBHEX  B
+ 1259 007AF A               NIBHEX  A
+ 1260 007B0 5               NIBHEX  5
+ 1261 007B1 D               NIBHEX  D
+ 1262 007B2 B               NIBHEX  B
+ 1263 007B3 A               NIBHEX  A
+ 1264 007B4 5               NIBHEX  5
+ 1265 007B5 D               NIBHEX  D
+ 1266 007B6 E               NIBHEX  E
+ 1267 007B7 7               NIBHEX  7
+ 1268 007B8 E               NIBHEX  E
+ 1269 007B9 7               NIBHEX  7
+ 1270 007BA 7               NIBHEX  7
+ 1271 007BB E               NIBHEX  E
+ 1272 007BC B               NIBHEX  B
+ 1273 007BD D               NIBHEX  D
+ 1274 007BE F               NIBHEX  F
+ 1275 007BF D               NIBHEX  D
+ 1276 007C0 F               NIBHEX  F
+ 1277 007C1 E               NIBHEX  E
+ 1278 007C2 F               NIBHEX  F
+ 1279 007C3 F               NIBHEX  F
+ 1280 007C4 F               NIBHEX  F
+ 1281 007C5 E               NIBHEX  E
+ 1282 007C6 E               NIBHEX  E
+ 1283 007C7 7               NIBHEX  7
+ 1284 007C8 E               NIBHEX  E
+ 1285 007C9 7               NIBHEX  7
+ 1286 007CA 1               NIBHEX  1
+ 1287 007CB 8               NIBHEX  8
+ 1288 007CC 1               NIBHEX  1
+ 1289 007CD B               NIBHEX  B
+ 1290 007CE 1               NIBHEX  1
+ 1291 007CF 9               NIBHEX  9
+ 1292 007D0 1               NIBHEX  1
+ 1293 007D1 9               NIBHEX  9
+ 1294 007D2 D               NIBHEX  D
+ 1295 007D3 9               NIBHEX  9
+ 1296 007D4 D               NIBHEX  D
+ 1297 007D5 9               NIBHEX  9
+ 1298 007D6 E               NIBHEX  E
+ 1299 007D7 7               NIBHEX  7
+ 1300 007D8 0               NIBHEX  0
+ 1301 007D9 0               NIBHEX  0
+ 1302 007DA 0               NIBHEX  0
+ 1303 007DB 0               NIBHEX  0
+ 1304 007DC 0               NIBHEX  0
+ 1305 007DD 0               NIBHEX  0
+ 1306 007DE 2               NIBHEX  2
+ 1307 007DF 2               NIBHEX  2
+ 1308 007E0 2               NIBHEX  2
+ 1309 007E1 2               NIBHEX  2
+ 1310 007E2 2               NIBHEX  2
+ 1311 007E3 2               NIBHEX  2
+ 1312 007E4 7               NIBHEX  7
+ 1313 007E5 7               NIBHEX  7
+ 1314 007E6 F               NIBHEX  F
+ 1315 007E7 F               NIBHEX  F
+ 1316 007E8 F               NIBHEX  F
+ 1317 007E9 F               NIBHEX  F
+ 1318 007EA D               NIBHEX  D
+ 1319 007EB B               NIBHEX  B
+ 1320 007EC F               NIBHEX  F
+ 1321 007ED F               NIBHEX  F
+ 1322 007EE F               NIBHEX  F
+ 1323 007EF F               NIBHEX  F
+ 1324 007F0 F               NIBHEX  F
+ 1325 007F1 F               NIBHEX  F
+ 1326 007F2 F               NIBHEX  F
+ 1327 007F3 F               NIBHEX  F
+ 1328 007F4 D               NIBHEX  D
+ 1329 007F5 B               NIBHEX  B
+ 1330 007F6 F               NIBHEX  F
+ 1331 007F7 F               NIBHEX  F
+ 1332 007F8 F               NIBHEX  F
+ 1333 007F9 F               NIBHEX  F
+ 1334 007FA F               NIBHEX  F
+ 1335 007FB B               NIBHEX  B
+ 1336 007FC F               NIBHEX  F
+ 1337 007FD F               NIBHEX  F
+ 1338 007FE E               NIBHEX  E
+ 1339 007FF 5               NIBHEX  5
+ 1340 00800 E               NIBHEX  E
+ 1341 00801 5               NIBHEX  5
+ 1342 00802 E               NIBHEX  E
+ 1343 00803 5               NIBHEX  5
+ 1344 00804 E               NIBHEX  E
+ 1345 00805 5               NIBHEX  5
+ 1346 00806 E               NIBHEX  E
+ 1347 00807 5               NIBHEX  5
+ 1348 00808 0               NIBHEX  0
+ 1349 00809 0               NIBHEX  0
+ 1350 0080A C               NIBHEX  C
+ 1351 0080B 1               NIBHEX  1
+ 1352 0080C 2               NIBHEX  2
+ 1353 0080D 2               NIBHEX  2
+ 1354 0080E 1               NIBHEX  1
+ 1355 0080F 4               NIBHEX  4
+ 1356 00810 1               NIBHEX  1
+ 1357 00811 4               NIBHEX  4
+ 1358 00812 1               NIBHEX  1
+ 1359 00813 4               NIBHEX  4
+ 1360 00814 2               NIBHEX  2
+ 1361 00815 2               NIBHEX  2
+ 1362 00816 C               NIBHEX  C
+ 1363 00817 1               NIBHEX  1
+ 1364 00818 0               NIBHEX  0
+ 1365 00819 0               NIBHEX  0
+ 1366 0081A 0               NIBHEX  0
+ 1367 0081B 0               NIBHEX  0
+ 1368 0081C 8               NIBHEX  8
+ 1369 0081D 1               NIBHEX  1
+ 1370 0081E C               NIBHEX  C
+ 1371 0081F 3               NIBHEX  3
+ 1372 00820 C               NIBHEX  C
+ 1373 00821 3               NIBHEX  3
+ 1374 00822 8               NIBHEX  8
+ 1375 00823 1               NIBHEX  1
+ 1376 00824 0               NIBHEX  0
+ 1377 00825 0               NIBHEX  0
+ 1378 00826 0               NIBHEX  0
+ 1379 00827 0               NIBHEX  0
+ 1380 00828 E               NIBHEX  E
+ 1381 00829 F               NIBHEX  F
+ 1382 0082A F               NIBHEX  F
+ 1383 0082B F               NIBHEX  F
+ 1384 0082C F               NIBHEX  F
+ 1385 0082D F               NIBHEX  F
+ 1386 0082E 5               NIBHEX  5
+ 1387 0082F 9               NIBHEX  9
+ 1388 00830 4               NIBHEX  4
+ 1389 00831 0               NIBHEX  0
+ 1390 00832 4               NIBHEX  4
+ 1391 00833 0               NIBHEX  0
+ 1392 00834 4               NIBHEX  4
+ 1393 00835 0               NIBHEX  0
+ 1394 00836 4               NIBHEX  4
+ 1395 00837 0               NIBHEX  0
+ 1396 00838 F               NIBHEX  F
+ 1397 00839 F               NIBHEX  F
+ 1398 0083A F               NIBHEX  F
+ 1399 0083B F               NIBHEX  F
+ 1400 0083C F               NIBHEX  F
+ 1401 0083D F               NIBHEX  F
+ 1402 0083E C               NIBHEX  C
+ 1403 0083F 2               NIBHEX  2
+ 1404 00840 0               NIBHEX  0
+ 1405 00841 0               NIBHEX  0
+ 1406 00842 0               NIBHEX  0
+ 1407 00843 0               NIBHEX  0
+ 1408 00844 0               NIBHEX  0
+ 1409 00845 0               NIBHEX  0
+ 1410 00846 0               NIBHEX  0
+ 1411 00847 0               NIBHEX  0
+ 1412 00848 F               NIBHEX  F
+ 1413 00849 7               NIBHEX  7
+ 1414 0084A F               NIBHEX  F
+ 1415 0084B F               NIBHEX  F
+ 1416 0084C F               NIBHEX  F
+ 1417 0084D F               NIBHEX  F
+ 1418 0084E 6               NIBHEX  6
+ 1419 0084F B               NIBHEX  B
+ 1420 00850 0               NIBHEX  0
+ 1421 00851 2               NIBHEX  2
+ 1422 00852 0               NIBHEX  0
+ 1423 00853 2               NIBHEX  2
+ 1424 00854 0               NIBHEX  0
+ 1425 00855 2               NIBHEX  2
+ 1426 00856 0               NIBHEX  0
+ 1427 00857 2               NIBHEX  2
+ 1428 00858 4               NIBHEX  4
+ 1429 00859 0               NIBHEX  0
+ 1430 0085A 4               NIBHEX  4
+ 1431 0085B 0               NIBHEX  0
+ 1432 0085C 4               NIBHEX  4
+ 1433 0085D 0               NIBHEX  0
+ 1434 0085E 4               NIBHEX  4
+ 1435 0085F 0               NIBHEX  0
+ 1436 00860 4               NIBHEX  4
+ 1437 00861 0               NIBHEX  0
+ 1438 00862 4               NIBHEX  4
+ 1439 00863 0               NIBHEX  0
+ 1440 00864 4               NIBHEX  4
+ 1441 00865 0               NIBHEX  0
+ 1442 00866 4               NIBHEX  4
+ 1443 00867 0               NIBHEX  0
+ 1444 00868 0               NIBHEX  0
+ 1445 00869 2               NIBHEX  2
+ 1446 0086A 0               NIBHEX  0
+ 1447 0086B 2               NIBHEX  2
+ 1448 0086C 0               NIBHEX  0
+ 1449 0086D 2               NIBHEX  2
+ 1450 0086E 0               NIBHEX  0
+ 1451 0086F 2               NIBHEX  2
+ 1452 00870 0               NIBHEX  0
+ 1453 00871 2               NIBHEX  2
+ 1454 00872 0               NIBHEX  0
+ 1455 00873 2               NIBHEX  2
+ 1456 00874 0               NIBHEX  0
+ 1457 00875 2               NIBHEX  2
+ 1458 00876 0               NIBHEX  0
+ 1459 00877 2               NIBHEX  2
+ 1460 00878 8               NIBHEX  8
+ 1461 00879 1               NIBHEX  1
+ 1462 0087A C               NIBHEX  C
+ 1463 0087B 2               NIBHEX  2
+ 1464 0087C C               NIBHEX  C
+ 1465 0087D 2               NIBHEX  2
+ 1466 0087E C               NIBHEX  C
+ 1467 0087F 1               NIBHEX  1
+ 1468 00880 8               NIBHEX  8
+ 1469 00881 1               NIBHEX  1
+ 1470 00882 C               NIBHEX  C
+ 1471 00883 2               NIBHEX  2
+ 1472 00884 C               NIBHEX  C
+ 1473 00885 2               NIBHEX  2
+ 1474 00886 C               NIBHEX  C
+ 1475 00887 1               NIBHEX  1
+ 1476 00888 0               NIBHEX  0
+ 1477 00889 8               NIBHEX  8
+ 1478 0088A 0               NIBHEX  0
+ 1479 0088B 4               NIBHEX  4
+ 1480 0088C 0               NIBHEX  0
+ 1481 0088D 2               NIBHEX  2
+ 1482 0088E 0               NIBHEX  0
+ 1483 0088F 1               NIBHEX  1
+ 1484 00890 8               NIBHEX  8
+ 1485 00891 0               NIBHEX  0
+ 1486 00892 4               NIBHEX  4
+ 1487 00893 0               NIBHEX  0
+ 1488 00894 2               NIBHEX  2
+ 1489 00895 0               NIBHEX  0
+ 1490 00896 1               NIBHEX  1
+ 1491 00897 0               NIBHEX  0
+ 1492 00898 1               NIBHEX  1
+ 1493 00899 0               NIBHEX  0
+ 1494 0089A 2               NIBHEX  2
+ 1495 0089B 0               NIBHEX  0
+ 1496 0089C 4               NIBHEX  4
+ 1497 0089D 0               NIBHEX  0
+ 1498 0089E 8               NIBHEX  8
+ 1499 0089F 0               NIBHEX  0
+ 1500 008A0 0               NIBHEX  0
+ 1501 008A1 1               NIBHEX  1
+ 1502 008A2 0               NIBHEX  0
+ 1503 008A3 2               NIBHEX  2
+ 1504 008A4 0               NIBHEX  0
+ 1505 008A5 4               NIBHEX  4
+ 1506 008A6 0               NIBHEX  0
+ 1507 008A7 8               NIBHEX  8
+ 1508 008A8 0               NIBHEX  0
+ 1509 008A9 0               NIBHEX  0
+ 1510 008AA 0               NIBHEX  0
+ 1511 008AB 0               NIBHEX  0
+ 1512 008AC 0               NIBHEX  0
+ 1513 008AD 0               NIBHEX  0
+ 1514 008AE 0               NIBHEX  0
+ 1515 008AF 0               NIBHEX  0
+ 1516 008B0 8               NIBHEX  8
+ 1517 008B1 1               NIBHEX  1
+ 1518 008B2 4               NIBHEX  4
+ 1519 008B3 2               NIBHEX  2
+ 1520 008B4 2               NIBHEX  2
+ 1521 008B5 4               NIBHEX  4
+ 1522 008B6 1               NIBHEX  1
+ 1523 008B7 8               NIBHEX  8
+ 1524 008B8 E               NIBHEX  E
+ 1525 008B9 F               NIBHEX  F
+ 1526 008BA F               NIBHEX  F
+ 1527 008BB F               NIBHEX  F
+ 1528 008BC F               NIBHEX  F
+ 1529 008BD F               NIBHEX  F
+ 1530 008BE 5               NIBHEX  5
+ 1531 008BF 9               NIBHEX  9
+ 1532 008C0 0               NIBHEX  0
+ 1533 008C1 0               NIBHEX  0
+ 1534 008C2 0               NIBHEX  0
+ 1535 008C3 0               NIBHEX  0
+ 1536 008C4 0               NIBHEX  0
+ 1537 008C5 0               NIBHEX  0
+ 1538 008C6 0               NIBHEX  0
+ 1539 008C7 0               NIBHEX  0
+ 1540 008C8 F               NIBHEX  F
+ 1541 008C9 F               NIBHEX  F
+ 1542 008CA F               NIBHEX  F
+ 1543 008CB F               NIBHEX  F
+ 1544 008CC F               NIBHEX  F
+ 1545 008CD F               NIBHEX  F
+ 1546 008CE C               NIBHEX  C
+ 1547 008CF A               NIBHEX  A
+ 1548 008D0 8               NIBHEX  8
+ 1549 008D1 1               NIBHEX  1
+ 1550 008D2 C               NIBHEX  C
+ 1551 008D3 2               NIBHEX  2
+ 1552 008D4 C               NIBHEX  C
+ 1553 008D5 2               NIBHEX  2
+ 1554 008D6 C               NIBHEX  C
+ 1555 008D7 1               NIBHEX  1
+ 1556 008D8 F               NIBHEX  F
+ 1557 008D9 7               NIBHEX  7
+ 1558 008DA F               NIBHEX  F
+ 1559 008DB F               NIBHEX  F
+ 1560 008DC F               NIBHEX  F
+ 1561 008DD F               NIBHEX  F
+ 1562 008DE 6               NIBHEX  6
+ 1563 008DF B               NIBHEX  B
+ 1564 008E0 0               NIBHEX  0
+ 1565 008E1 0               NIBHEX  0
+ 1566 008E2 0               NIBHEX  0
+ 1567 008E3 0               NIBHEX  0
+ 1568 008E4 0               NIBHEX  0
+ 1569 008E5 0               NIBHEX  0
+ 1570 008E6 0               NIBHEX  0
+ 1571 008E7 0               NIBHEX  0
+ 1572 008E8 F               NIBHEX  F
+ 1573 008E9 F               NIBHEX  F
+ 1574 008EA F               NIBHEX  F
+ 1575 008EB F               NIBHEX  F
+ 1576 008EC F               NIBHEX  F
+ 1577 008ED F               NIBHEX  F
+ 1578 008EE C               NIBHEX  C
+ 1579 008EF 2               NIBHEX  2
+ 1580 008F0 0               NIBHEX  0
+ 1581 008F1 0               NIBHEX  0
+ 1582 008F2 0               NIBHEX  0
+ 1583 008F3 0               NIBHEX  0
+ 1584 008F4 0               NIBHEX  0
+ 1585 008F5 0               NIBHEX  0
+ 1586 008F6 0               NIBHEX  0
+ 1587 008F7 0               NIBHEX  0
+ 1588 008F8 E               NIBHEX  E
+ 1589 008F9 7               NIBHEX  7
+ 1590 008FA 1               NIBHEX  1
+ 1591 008FB 8               NIBHEX  8
+ 1592 008FC D               NIBHEX  D
+ 1593 008FD B               NIBHEX  B
+ 1594 008FE D               NIBHEX  D
+ 1595 008FF B               NIBHEX  B
+ 1596 00900 D               NIBHEX  D
+ 1597 00901 B               NIBHEX  B
+ 1598 00902 D               NIBHEX  D
+ 1599 00903 B               NIBHEX  B
+ 1600 00904 D               NIBHEX  D
+ 1601 00905 B               NIBHEX  B
+ 1602 00906 D               NIBHEX  D
+ 1603 00907 B               NIBHEX  B
+ 1604 00908 E               NIBHEX  E
+ 1605 00909 7               NIBHEX  7
+ 1606 0090A 1               NIBHEX  1
+ 1607 0090B 8               NIBHEX  8
+ 1608 0090C F               NIBHEX  F
+ 1609 0090D B               NIBHEX  B
+ 1610 0090E F               NIBHEX  F
+ 1611 0090F F               NIBHEX  F
+ 1612 00910 0               NIBHEX  0
+ 1613 00911 0               NIBHEX  0
+ 1614 00912 0               NIBHEX  0
+ 1615 00913 0               NIBHEX  0
+ 1616 00914 0               NIBHEX  0
+ 1617 00915 0               NIBHEX  0
+ 1618 00916 0               NIBHEX  0
+ 1619 00917 0               NIBHEX  0
+ 1620 00918 E               NIBHEX  E
+ 1621 00919 7               NIBHEX  7
+ 1622 0091A 1               NIBHEX  1
+ 1623 0091B 8               NIBHEX  8
+ 1624 0091C F               NIBHEX  F
+ 1625 0091D B               NIBHEX  B
+ 1626 0091E F               NIBHEX  F
+ 1627 0091F B               NIBHEX  B
+ 1628 00920 F               NIBHEX  F
+ 1629 00921 B               NIBHEX  B
+ 1630 00922 F               NIBHEX  F
+ 1631 00923 B               NIBHEX  B
+ 1632 00924 F               NIBHEX  F
+ 1633 00925 B               NIBHEX  B
+ 1634 00926 F               NIBHEX  F
+ 1635 00927 F               NIBHEX  F
+ 1636 00928 C               NIBHEX  C
+ 1637 00929 1               NIBHEX  1
+ 1638 0092A C               NIBHEX  C
+ 1639 0092B 1               NIBHEX  1
+ 1640 0092C 8               NIBHEX  8
+ 1641 0092D 0               NIBHEX  0
+ 1642 0092E E               NIBHEX  E
+ 1643 0092F 3               NIBHEX  3
+ 1644 00930 D               NIBHEX  D
+ 1645 00931 5               NIBHEX  5
+ 1646 00932 C               NIBHEX  C
+ 1647 00933 1               NIBHEX  1
+ 1648 00934 4               NIBHEX  4
+ 1649 00935 1               NIBHEX  1
+ 1650 00936 6               NIBHEX  6
+ 1651 00937 3               NIBHEX  3
+ 1652 00938 0               NIBHEX  0
+ 1653 00939 0               NIBHEX  0
+ 1654 0093A 0               NIBHEX  0
+ 1655 0093B 0               NIBHEX  0
+ 1656 0093C C               NIBHEX  C
+ 1657 0093D 3               NIBHEX  3
+ 1658 0093E A               NIBHEX  A
+ 1659 0093F 5               NIBHEX  5
+ 1660 00940 F               NIBHEX  F
+ 1661 00941 F               NIBHEX  F
+ 1662 00942 7               NIBHEX  7
+ 1663 00943 E               NIBHEX  E
+ 1664 00944 E               NIBHEX  E
+ 1665 00945 7               NIBHEX  7
+ 1666 00946 3               NIBHEX  3
+ 1667 00947 C               NIBHEX  C
+ 1668 00948 E               NIBHEX  E
+ 1669 00949 F               NIBHEX  F
+ 1670 0094A 1               NIBHEX  1
+ 1671 0094B 0               NIBHEX  0
+ 1672 0094C 9               NIBHEX  9
+ 1673 0094D 3               NIBHEX  3
+ 1674 0094E 5               NIBHEX  5
+ 1675 0094F 6               NIBHEX  6
+ 1676 00950 5               NIBHEX  5
+ 1677 00951 5               NIBHEX  5
+ 1678 00952 D               NIBHEX  D
+ 1679 00953 4               NIBHEX  4
+ 1680 00954 9               NIBHEX  9
+ 1681 00955 3               NIBHEX  3
+ 1682 00956 1               NIBHEX  1
+ 1683 00957 0               NIBHEX  0
+ 1684 00958 F               NIBHEX  F
+ 1685 00959 F               NIBHEX  F
+ 1686 0095A 0               NIBHEX  0
+ 1687 0095B 0               NIBHEX  0
+ 1688 0095C 0               NIBHEX  0
+ 1689 0095D 0               NIBHEX  0
+ 1690 0095E 0               NIBHEX  0
+ 1691 0095F 0               NIBHEX  0
+ 1692 00960 0               NIBHEX  0
+ 1693 00961 0               NIBHEX  0
+ 1694 00962 0               NIBHEX  0
+ 1695 00963 0               NIBHEX  0
+ 1696 00964 0               NIBHEX  0
+ 1697 00965 0               NIBHEX  0
+ 1698 00966 0               NIBHEX  0
+ 1699 00967 0               NIBHEX  0
+ 1700 00968 F               NIBHEX  F
+ 1701 00969 7               NIBHEX  7
+ 1702 0096A 0               NIBHEX  0
+ 1703 0096B 8               NIBHEX  8
+ 1704 0096C C               NIBHEX  C
+ 1705 0096D 9               NIBHEX  9
+ 1706 0096E 6               NIBHEX  6
+ 1707 0096F A               NIBHEX  A
+ 1708 00970 A               NIBHEX  A
+ 1709 00971 A               NIBHEX  A
+ 1710 00972 2               NIBHEX  2
+ 1711 00973 B               NIBHEX  B
+ 1712 00974 C               NIBHEX  C
+ 1713 00975 9               NIBHEX  9
+ 1714 00976 0               NIBHEX  0
+ 1715 00977 8               NIBHEX  8
+ 1716 00978 1               NIBHEX  1
+ 1717 00979 0               NIBHEX  0
+ 1718 0097A 1               NIBHEX  1
+ 1719 0097B 0               NIBHEX  0
+ 1720 0097C 1               NIBHEX  1
+ 1721 0097D 0               NIBHEX  0
+ 1722 0097E 1               NIBHEX  1
+ 1723 0097F 0               NIBHEX  0
+ 1724 00980 1               NIBHEX  1
+ 1725 00981 0               NIBHEX  0
+ 1726 00982 1               NIBHEX  1
+ 1727 00983 0               NIBHEX  0
+ 1728 00984 1               NIBHEX  1
+ 1729 00985 0               NIBHEX  0
+ 1730 00986 1               NIBHEX  1
+ 1731 00987 0               NIBHEX  0
+ 1732 00988 0               NIBHEX  0
+ 1733 00989 8               NIBHEX  8
+ 1734 0098A 0               NIBHEX  0
+ 1735 0098B 8               NIBHEX  8
+ 1736 0098C 0               NIBHEX  0
+ 1737 0098D 8               NIBHEX  8
+ 1738 0098E 0               NIBHEX  0
+ 1739 0098F 8               NIBHEX  8
+ 1740 00990 0               NIBHEX  0
+ 1741 00991 8               NIBHEX  8
+ 1742 00992 0               NIBHEX  0
+ 1743 00993 8               NIBHEX  8
+ 1744 00994 0               NIBHEX  0
+ 1745 00995 8               NIBHEX  8
+ 1746 00996 0               NIBHEX  0
+ 1747 00997 8               NIBHEX  8
+ 1748 00998 1               NIBHEX  1
+ 1749 00999 0               NIBHEX  0
+ 1750 0099A 9               NIBHEX  9
+ 1751 0099B 3               NIBHEX  3
+ 1752 0099C D               NIBHEX  D
+ 1753 0099D 4               NIBHEX  4
+ 1754 0099E 5               NIBHEX  5
+ 1755 0099F 5               NIBHEX  5
+ 1756 009A0 5               NIBHEX  5
+ 1757 009A1 6               NIBHEX  6
+ 1758 009A2 9               NIBHEX  9
+ 1759 009A3 3               NIBHEX  3
+ 1760 009A4 1               NIBHEX  1
+ 1761 009A5 0               NIBHEX  0
+ 1762 009A6 E               NIBHEX  E
+ 1763 009A7 F               NIBHEX  F
+ 1764 009A8 0               NIBHEX  0
+ 1765 009A9 8               NIBHEX  8
+ 1766 009AA C               NIBHEX  C
+ 1767 009AB 9               NIBHEX  9
+ 1768 009AC 2               NIBHEX  2
+ 1769 009AD B               NIBHEX  B
+ 1770 009AE A               NIBHEX  A
+ 1771 009AF A               NIBHEX  A
+ 1772 009B0 6               NIBHEX  6
+ 1773 009B1 A               NIBHEX  A
+ 1774 009B2 C               NIBHEX  C
+ 1775 009B3 9               NIBHEX  9
+ 1776 009B4 0               NIBHEX  0
+ 1777 009B5 8               NIBHEX  8
+ 1778 009B6 F               NIBHEX  F
+ 1779 009B7 7               NIBHEX  7
+ 1780 009B8 0               NIBHEX  0
+ 1781 009B9 0               NIBHEX  0
+ 1782 009BA 0               NIBHEX  0
+ 1783 009BB 0               NIBHEX  0
+ 1784 009BC 0               NIBHEX  0
+ 1785 009BD 0               NIBHEX  0
+ 1786 009BE 0               NIBHEX  0
+ 1787 009BF 0               NIBHEX  0
+ 1788 009C0 0               NIBHEX  0
+ 1789 009C1 0               NIBHEX  0
+ 1790 009C2 0               NIBHEX  0
+ 1791 009C3 0               NIBHEX  0
+ 1792 009C4 0               NIBHEX  0
+ 1793 009C5 0               NIBHEX  0
+ 1794 009C6 F               NIBHEX  F
+ 1795 009C7 F               NIBHEX  F
+ 1796 009C8 E               NIBHEX  E
+ 1797 009C9 7               NIBHEX  7
+ 1798 009CA 3               NIBHEX  3
+ 1799 009CB 8               NIBHEX  8
+ 1800 009CC F               NIBHEX  F
+ 1801 009CD B               NIBHEX  B
+ 1802 009CE E               NIBHEX  E
+ 1803 009CF 7               NIBHEX  7
+ 1804 009D0 8               NIBHEX  8
+ 1805 009D1 0               NIBHEX  0
+ 1806 009D2 C               NIBHEX  C
+ 1807 009D3 0               NIBHEX  0
+ 1808 009D4 8               NIBHEX  8
+ 1809 009D5 0               NIBHEX  0
+ 1810 009D6 C               NIBHEX  C
+ 1811 009D7 1               NIBHEX  1
+ 1812 009D8 E               NIBHEX  E
+ 1813 009D9 7               NIBHEX  7
+ 1814 009DA 3               NIBHEX  3
+ 1815 009DB 8               NIBHEX  8
+ 1816 009DC F               NIBHEX  F
+ 1817 009DD B               NIBHEX  B
+ 1818 009DE E               NIBHEX  E
+ 1819 009DF 7               NIBHEX  7
+ 1820 009E0 8               NIBHEX  8
+ 1821 009E1 1               NIBHEX  1
+ 1822 009E2 4               NIBHEX  4
+ 1823 009E3 2               NIBHEX  2
+ 1824 009E4 0               NIBHEX  0
+ 1825 009E5 1               NIBHEX  1
+ 1826 009E6 C               NIBHEX  C
+ 1827 009E7 3               NIBHEX  3
+ 1828 009E8 F               NIBHEX  F
+ 1829 009E9 F               NIBHEX  F
+ 1830 009EA 1               NIBHEX  1
+ 1831 009EB 4               NIBHEX  4
+ 1832 009EC 1               NIBHEX  1
+ 1833 009ED 8               NIBHEX  8
+ 1834 009EE 1               NIBHEX  1
+ 1835 009EF 4               NIBHEX  4
+ 1836 009F0 1               NIBHEX  1
+ 1837 009F1 8               NIBHEX  8
+ 1838 009F2 F               NIBHEX  F
+ 1839 009F3 F               NIBHEX  F
+ 1840 009F4 2               NIBHEX  2
+ 1841 009F5 0               NIBHEX  0
+ 1842 009F6 2               NIBHEX  2
+ 1843 009F7 8               NIBHEX  8
+ 1844 009F8 F               NIBHEX  F
+ 1845 009F9 F               NIBHEX  F
+ 1846 009FA D               NIBHEX  D
+ 1847 009FB F               NIBHEX  F
+ 1848 009FC A               NIBHEX  A
+ 1849 009FD F               NIBHEX  F
+ 1850 009FE D               NIBHEX  D
+ 1851 009FF F               NIBHEX  F
+ 1852 00A00 A               NIBHEX  A
+ 1853 00A01 F               NIBHEX  F
+ 1854 00A02 F               NIBHEX  F
+ 1855 00A03 F               NIBHEX  F
+ 1856 00A04 D               NIBHEX  D
+ 1857 00A05 7               NIBHEX  7
+ 1858 00A06 A               NIBHEX  A
+ 1859 00A07 7               NIBHEX  7
+ 1860 00A08 2               NIBHEX  2
+ 1861 00A09 0               NIBHEX  0
+ 1862 00A0A 2               NIBHEX  2
+ 1863 00A0B 8               NIBHEX  8
+ 1864 00A0C 2               NIBHEX  2
+ 1865 00A0D 0               NIBHEX  0
+ 1866 00A0E 2               NIBHEX  2
+ 1867 00A0F 8               NIBHEX  8
+ 1868 00A10 C               NIBHEX  C
+ 1869 00A11 F               NIBHEX  F
+ 1870 00A12 2               NIBHEX  2
+ 1871 00A13 0               NIBHEX  0
+ 1872 00A14 2               NIBHEX  2
+ 1873 00A15 8               NIBHEX  8
+ 1874 00A16 2               NIBHEX  2
+ 1875 00A17 0               NIBHEX  0
+ 1876 00A18 D               NIBHEX  D
+ 1877 00A19 7               NIBHEX  7
+ 1878 00A1A A               NIBHEX  A
+ 1879 00A1B 7               NIBHEX  7
+ 1880 00A1C D               NIBHEX  D
+ 1881 00A1D 7               NIBHEX  7
+ 1882 00A1E A               NIBHEX  A
+ 1883 00A1F 7               NIBHEX  7
+ 1884 00A20 F               NIBHEX  F
+ 1885 00A21 3               NIBHEX  3
+ 1886 00A22 D               NIBHEX  D
+ 1887 00A23 7               NIBHEX  7
+ 1888 00A24 A               NIBHEX  A
+ 1889 00A25 7               NIBHEX  7
+ 1890 00A26 D               NIBHEX  D
+ 1891 00A27 7               NIBHEX  7
+ 1892 00A28 C               NIBHEX  C
+ 1893 00A29 6               NIBHEX  6
+ 1894 00A2A 2               NIBHEX  2
+ 1895 00A2B 9               NIBHEX  9
+ 1896 00A2C 1               NIBHEX  1
+ 1897 00A2D 0               NIBHEX  0
+ 1898 00A2E 5               NIBHEX  5
+ 1899 00A2F 0               NIBHEX  0
+ 1900 00A30 2               NIBHEX  2
+ 1901 00A31 0               NIBHEX  0
+ 1902 00A32 1               NIBHEX  1
+ 1903 00A33 4               NIBHEX  4
+ 1904 00A34 9               NIBHEX  9
+ 1905 00A35 8               NIBHEX  8
+ 1906 00A36 6               NIBHEX  6
+ 1907 00A37 7               NIBHEX  7
+ 1908 00A38 7               NIBHEX  7
+ 1909 00A39 7               NIBHEX  7
+ 1910 00A3A 8               NIBHEX  8
+ 1911 00A3B 8               NIBHEX  8
+ 1912 00A3C 1               NIBHEX  1
+ 1913 00A3D 8               NIBHEX  8
+ 1914 00A3E 0               NIBHEX  0
+ 1915 00A3F 6               NIBHEX  6
+ 1916 00A40 0               NIBHEX  0
+ 1917 00A41 8               NIBHEX  8
+ 1918 00A42 4               NIBHEX  4
+ 1919 00A43 8               NIBHEX  8
+ 1920 00A44 8               NIBHEX  8
+ 1921 00A45 4               NIBHEX  4
+ 1922 00A46 7               NIBHEX  7
+ 1923 00A47 3               NIBHEX  3
+ 1924 00A48 F               NIBHEX  F
+ 1925 00A49 F               NIBHEX  F
+ 1926 00A4A 6               NIBHEX  6
+ 1927 00A4B F               NIBHEX  F
+ 1928 00A4C A               NIBHEX  A
+ 1929 00A4D 6               NIBHEX  6
+ 1930 00A4E D               NIBHEX  D
+ 1931 00A4F A               NIBHEX  A
+ 1932 00A50 F               NIBHEX  F
+ 1933 00A51 D               NIBHEX  D
+ 1934 00A52 F               NIBHEX  F
+ 1935 00A53 F               NIBHEX  F
+ 1936 00A54 F               NIBHEX  F
+ 1937 00A55 F               NIBHEX  F
+ 1938 00A56 F               NIBHEX  F
+ 1939 00A57 F               NIBHEX  F
+ 1940 00A58 0               NIBHEX  0
+ 1941 00A59 0               NIBHEX  0
+ 1942 00A5A 0               NIBHEX  0
+ 1943 00A5B 0               NIBHEX  0
+ 1944 00A5C 0               NIBHEX  0
+ 1945 00A5D 0               NIBHEX  0
+ 1946 00A5E 0               NIBHEX  0
+ 1947 00A5F 0               NIBHEX  0
+ 1948 00A60 0               NIBHEX  0
+ 1949 00A61 0               NIBHEX  0
+ 1950 00A62 0               NIBHEX  0
+ 1951 00A63 0               NIBHEX  0
+ 1952 00A64 0               NIBHEX  0
+ 1953 00A65 0               NIBHEX  0
+ 1954 00A66 0               NIBHEX  0
+ 1955 00A67 0               NIBHEX  0
+ 1956 00A68 0               NIBHEX  0
+ 1957 00A69 0               NIBHEX  0
+ 1958 00A6A 0               NIBHEX  0
+ 1959 00A6B 0               NIBHEX  0
+ 1960 00A6C 0               NIBHEX  0
+ 1961 00A6D 0               NIBHEX  0
+ 1962 00A6E 0               NIBHEX  0
+ 1963 00A6F 0               NIBHEX  0
+ 1964 00A70 0               NIBHEX  0
+ 1965 00A71 0               NIBHEX  0
+ 1966 00A72 0               NIBHEX  0
+ 1967 00A73 0               NIBHEX  0
+ 1968 00A74 0               NIBHEX  0
+ 1969 00A75 0               NIBHEX  0
+ 1970 00A76 0               NIBHEX  0
+ 1971 00A77 0               NIBHEX  0
+ 1972 00A78 0               NIBHEX  0
+ 1973 00A79 0               NIBHEX  0
+ 1974 00A7A 0               NIBHEX  0
+ 1975 00A7B 0               NIBHEX  0
+ 1976 00A7C 0               NIBHEX  0
+ 1977 00A7D 0               NIBHEX  0
+ 1978 00A7E 0               NIBHEX  0
+ 1979 00A7F 0               NIBHEX  0
+ 1980 00A80 0               NIBHEX  0
+ 1981 00A81 0               NIBHEX  0
+ 1982 00A82 0               NIBHEX  0
+ 1983 00A83 0               NIBHEX  0
+ 1984 00A84 0               NIBHEX  0
+ 1985 00A85 0               NIBHEX  0
+ 1986 00A86 0               NIBHEX  0
+ 1987 00A87 0               NIBHEX  0
+ 1988 00A88 0               NIBHEX  0
+ 1989 00A89 0               NIBHEX  0
+ 1990 00A8A 0               NIBHEX  0
+ 1991 00A8B 0               NIBHEX  0
+ 1992 00A8C 0               NIBHEX  0
+ 1993 00A8D 0               NIBHEX  0
+ 1994 00A8E 0               NIBHEX  0
+ 1995 00A8F 0               NIBHEX  0
+ 1996 00A90 0               NIBHEX  0
+ 1997 00A91 0               NIBHEX  0
+ 1998 00A92 0               NIBHEX  0
+ 1999 00A93 0               NIBHEX  0
+ 2000 00A94 0               NIBHEX  0
+ 2001 00A95 0               NIBHEX  0
+ 2002 00A96 0               NIBHEX  0
+ 2003 00A97 0               NIBHEX  0
+ 2004 00A98 0               NIBHEX  0
+ 2005 00A99 0               NIBHEX  0
+ 2006 00A9A 0               NIBHEX  0
+ 2007 00A9B 0               NIBHEX  0
+ 2008 00A9C 0               NIBHEX  0
+ 2009 00A9D 0               NIBHEX  0
+ 2010 00A9E 0               NIBHEX  0
+ 2011 00A9F 0               NIBHEX  0
+ 2012 00AA0 0               NIBHEX  0
+ 2013 00AA1 0               NIBHEX  0
+ 2014 00AA2 0               NIBHEX  0
+ 2015 00AA3 0               NIBHEX  0
+ 2016 00AA4 0               NIBHEX  0
+ 2017 00AA5 0               NIBHEX  0
+ 2018 00AA6 0               NIBHEX  0
+ 2019 00AA7 0               NIBHEX  0
+ 2020 00AA8 0               NIBHEX  0
+ 2021 00AA9 0               NIBHEX  0
+ 2022 00AAA 0               NIBHEX  0
+ 2023 00AAB 0               NIBHEX  0
+ 2024 00AAC 0               NIBHEX  0
+ 2025 00AAD 0               NIBHEX  0
+ 2026 00AAE 0               NIBHEX  0
+ 2027 00AAF 0               NIBHEX  0
+ 2028 00AB0 0               NIBHEX  0
+ 2029 00AB1 0               NIBHEX  0
+ 2030 00AB2 0               NIBHEX  0
+ 2031 00AB3 0               NIBHEX  0
+ 2032 00AB4 0               NIBHEX  0
+ 2033 00AB5 0               NIBHEX  0
+ 2034 00AB6 0               NIBHEX  0
+ 2035 00AB7 0               NIBHEX  0
+ 2036               * File  smhp_editor_50.s        297
+ 2037                       }
+ 2038 00AB8 07              C=RSTK
+ 2039               * File  smhp_editor_50.s        298
+ 2040               * File  smhp_editor_50.s        299
+ 2041 00ABA 81AF0B          R3=C.f  A
+ 2042               * File  smhp_editor_50.s        300
+ 2043 00AC0 01              RTN
+ 2044               * File  smhp_editor_50.s        301
+ 2045
+ 2046               * File  smhp_editor_50.s        302
+ 2047 00AC2         =D.BLOC
+ 2048               * File  smhp_editor_50.s        303
+ 2049 00AC2 1B00108         D0=(5)  (=EC1)
+ 2050 00AC9 142             A=DAT0  A
+ 2051               * File  smhp_editor_50.s        304
+ 2052 00ACC 34F7600         LCHEX   0067F
+ 2053 00AD3 CA              A=A+C   A
+ 2054               * File  smhp_editor_50.s        305
+ 2055 00AD5 81AF04          R4=A.f  A
+ 2056 00ADB AF0             A=0     W
+ 2057               * File  smhp_editor_50.s        306
+ 2058 00ADE 1BF0108         D0=(5)  (=B)
+ 2059 00AE5 14A             A=DAT0  B
+ 2060               * File  smhp_editor_50.s        307
+ 2061 00AE8 8FAAED2         GOSBVL  =HEXDCW
+ 2062 00AEF 04              SETHEX
+ 2063               * File  smhp_editor_50.s        308
+ 2064 00AF1 302             LCHEX   2
+ 2065 00AF4 A87             D=C     P
+ 2066               * File  smhp_editor_50.s        309
+ 2067 00AF7 8CE010          GOLONG  =DISP_N
+ 2068               * File  smhp_editor_50.s        310
+ 2069
+ 2070               * File  smhp_editor_50.s        311
+ 2071 00AFD         =D.X
+ 2072               * File  smhp_editor_50.s        312
+ 2073 00AFD 1B00108         D0=(5)  (=EC1)
+ 2074 00B04 142             A=DAT0  A
+ 2075               * File  smhp_editor_50.s        313
+ 2076 00B07 34F3200         LCHEX   0023F
+ 2077 00B0E CA              A=A+C   A
+ 2078               * File  smhp_editor_50.s        314
+ 2079 00B10 81AF04          R4=A.f  A
+ 2080 00B16 AF0             A=0     W
+ 2081               * File  smhp_editor_50.s        315
+ 2082 00B19 1B50108         D0=(5)  (=X)
+ 2083 00B20 142             A=DAT0  A
+ 2084               * File  smhp_editor_50.s        316
+ 2085 00B23 1B41108         D0=(5)  (=S)
+ 2086 00B2A 146             C=DAT0  A
+ 2087               * File  smhp_editor_50.s        317
+ 2088 00B2D         =INC
+ 2089 00B2D 8AA             ?C=0    A
+ 2090 00B30 E0              SKIPYES{
+ 2091 00B32 CE              C=C-    1       A
+ 2092               * File  smhp_editor_50.s        318
+ 2093 00B34 818F0C          A=A+    13      A
+ 2094 00B3A 62FF            GOTO    =INC
+ 2095               * File  smhp_editor_50.s        319
+ 2096                       }
+ 2097 00B3E 8FAAED2         GOSBVL  =HEXDCW
+ 2098 00B45 04              SETHEX
+ 2099               * File  smhp_editor_50.s        320
+ 2100 00B47 304             LCHEX   4
+ 2101 00B4A A87             D=C     P
+ 2102               * File  smhp_editor_50.s        321
+ 2103 00B4D 8C8B00          GOLONG  =DISP_N
+ 2104               * File  smhp_editor_50.s        322
+ 2105
+ 2106               * File  smhp_editor_50.s        323
+ 2107 00B53         =D.Y
+ 2108               * File  smhp_editor_50.s        324
+ 2109 00B53 1B00108         D0=(5)  (=EC1)
+ 2110 00B5A 142             A=DAT0  A
+ 2111               * File  smhp_editor_50.s        325
+ 2112 00B5D 34F4300         LCHEX   0034F
+ 2113 00B64 CA              A=A+C   A
+ 2114               * File  smhp_editor_50.s        326
+ 2115 00B66 81AF04          R4=A.f  A
+ 2116 00B6C AF0             A=0     W
+ 2117               * File  smhp_editor_50.s        327
+ 2118 00B6F 1BA0108         D0=(5)  (=Y)
+ 2119 00B76 14A             A=DAT0  B
+ 2120               * File  smhp_editor_50.s        328
+ 2121 00B79 8FAAED2         GOSBVL  =HEXDCW
+ 2122 00B80 04              SETHEX
+ 2123               * File  smhp_editor_50.s        329
+ 2124 00B82 304             LCHEX   4
+ 2125 00B85 A87             D=C     P
+ 2126               * File  smhp_editor_50.s        330
+ 2127 00B88 8CD700          GOLONG  =DISP_N
+ 2128               * File  smhp_editor_50.s        331
+ 2129
+ 2130               * File  smhp_editor_50.s        332
+ 2131 00B8E         =D.SIZE
+ 2132               * File  smhp_editor_50.s        333
+ 2133 00B8E 1B00108         D0=(5)  (=EC1)
+ 2134 00B95 142             A=DAT0  A
+ 2135               * File  smhp_editor_50.s        334
+ 2136 00B98 34F5400         LCHEX   0045F
+ 2137 00B9F CA              A=A+C   A
+ 2138               * File  smhp_editor_50.s        335
+ 2139 00BA1 81AF04          R4=A.f  A
+ 2140 00BA7 AF0             A=0     W
+ 2141               * File  smhp_editor_50.s        336
+ 2142 00BAA 1B91108         D0=(5)  (=X2)
+ 2143 00BB1 14A             A=DAT0  B
+ 2144               * File  smhp_editor_50.s        337
+ 2145 00BB4 8FAAED2         GOSBVL  =HEXDCW
+ 2146 00BBB 04              SETHEX
+ 2147               * File  smhp_editor_50.s        338
+ 2148 00BBD 302             LCHEX   2
+ 2149 00BC0 A87             D=C     P
+ 2150               * File  smhp_editor_50.s        339
+ 2151 00BC3 8C2400          GOLONG  =DISP_N
+ 2152               * File  smhp_editor_50.s        340
+ 2153
+ 2154               * File  smhp_editor_50.s        341
+ 2155 00BC9         =D.PIT
+ 2156               * File  smhp_editor_50.s        342
+ 2157 00BC9 1B00108         D0=(5)  (=EC1)
+ 2158 00BD0 142             A=DAT0  A
+ 2159               * File  smhp_editor_50.s        343
+ 2160 00BD3 34F6500         LCHEX   0056F
+ 2161 00BDA CA              A=A+C   A
+ 2162               * File  smhp_editor_50.s        344
+ 2163 00BDC 81AF04          R4=A.f  A
+ 2164 00BE2 AF0             A=0     W
+ 2165               * File  smhp_editor_50.s        345
+ 2166 00BE5 1B41108         D0=(5)  (=S)
+ 2167 00BEC 14A             A=DAT0  B
+ 2168 00BEF B64             A=A+    1       B
+ 2169               * File  smhp_editor_50.s        346
+ 2170 00BF2 8FAAED2         GOSBVL  =HEXDCW
+ 2171 00BF9 04              SETHEX
+ 2172               * File  smhp_editor_50.s        347
+ 2173 00BFB 302             LCHEX   2
+ 2174 00BFE A87             D=C     P
+ 2175               * File  smhp_editor_50.s        348
+ 2176 00C01 8C4000          GOLONG  =DISP_N
+ 2177               * File  smhp_editor_50.s        349
+ 2178
+ 2179               * File  smhp_editor_50.s        350
+ 2180 00C07         =DISP_N
+ 2181               * File  smhp_editor_50.s        351
+ 2182 00C07 8E6500          GOSUBL  =GET_DAT
+ 2183               * File  smhp_editor_50.s        352
+ 2184 00C0D A82             C=0     P
+ 2185               * File  smhp_editor_50.s        353
+ 2186
+ 2187               * File  smhp_editor_50.s        354
+ 2188                       {
+ 2189               * File  smhp_editor_50.s        355
+ 2190 00C10 901             ?B=C    P
+ 2191 00C13 C0              EXIT
+ 2192               * File  smhp_editor_50.s        356
+ 2193 00C15 170             D1+     1
+ 2194 00C18 B06             C=C+    1       P
+ 2195 00C1B 64FF            UP
+ 2196               * File  smhp_editor_50.s        357
+ 2197               * File  smhp_editor_50.s        358
+ 2198
+ 2199               * File  smhp_editor_50.s        359
+ 2200                       }
+ 2201 00C1F         =DSP
+ 2202               * File  smhp_editor_50.s        360
+ 2203 00C1F 81AF14          A=R4.f  A
+ 2204 00C25 130             D0=A
+ 2205               * File  smhp_editor_50.s        361
+ 2206 00C28 304             LCHEX   4
+ 2207                       {
+ 2208 00C2B 1530            A=DAT1  P
+ 2209               * File  smhp_editor_50.s        362
+ 2210 00C2F 1500            DAT0=A  P
+ 2211 00C33 16F16F1         D0+     34
             61
- 5498               * File  smhp_editor_50.s        354
- 5499 01926 17F             D1+     16
- 5500 01929 A0E             C=C-    1       P
- 5501 0192C 58E             UPNC
- 5502               * File  smhp_editor_50.s        355
- 5503                       }
- 5504 0192F F5              BSR     A
- 5505 01931 81AF14          A=R4.f  A
- 5506 01937 CC              A=A-    1       A
- 5507 01939 81AF04          R4=A.f  A
- 5508               * File  smhp_editor_50.s        356
- 5509 0193F A0F             D=D-    1       P
- 5510 01942 90B             ?D=0    P
- 5511 01945 60              SKIPYES{
- 5512 01947 69AF            GOTO    =DISP_N
- 5513               * File  smhp_editor_50.s        357
- 5514                       }
- 5515 0194B 01              RTN
- 5516               * File  smhp_editor_50.s        358
- 5517
- 5518               * File  smhp_editor_50.s        359
- 5519 0194D         =GET_DAT
- 5520               * File  smhp_editor_50.s        360
- 5521 0194D 8E0600          GOSUBL  =DAT
- 5522               * File  smhp_editor_50.s        361
- 5523 01953 2               NIBHEX  2
- 5524 01954 3               NIBHEX  3
- 5525 01955 7               NIBHEX  7
- 5526 01956 7               NIBHEX  7
- 5527 01957 5               NIBHEX  5
- 5528 01958 7               NIBHEX  7
- 5529 01959 6               NIBHEX  6
- 5530 0195A 7               NIBHEX  7
- 5531 0195B 7               NIBHEX  7
- 5532 0195C 7               NIBHEX  7
- 5533 0195D 2               NIBHEX  2
- 5534 0195E 3               NIBHEX  3
- 5535 0195F 6               NIBHEX  6
- 5536 01960 3               NIBHEX  3
- 5537 01961 7               NIBHEX  7
- 5538 01962 7               NIBHEX  7
- 5539 01963 5               NIBHEX  5
- 5540 01964 2               NIBHEX  2
- 5541 01965 4               NIBHEX  4
- 5542 01966 4               NIBHEX  4
- 5543 01967 5               NIBHEX  5
- 5544 01968 1               NIBHEX  1
- 5545 01969 1               NIBHEX  1
- 5546 0196A 4               NIBHEX  4
- 5547 0196B 5               NIBHEX  5
- 5548 0196C 5               NIBHEX  5
- 5549 0196D 5               NIBHEX  5
- 5550 0196E 5               NIBHEX  5
- 5551 0196F 1               NIBHEX  1
- 5552 01970 5               NIBHEX  5
- 5553 01971 1               NIBHEX  1
- 5554 01972 1               NIBHEX  1
- 5555 01973 5               NIBHEX  5
- 5556 01974 2               NIBHEX  2
- 5557 01975 7               NIBHEX  7
- 5558 01976 7               NIBHEX  7
- 5559 01977 7               NIBHEX  7
- 5560 01978 7               NIBHEX  7
- 5561 01979 7               NIBHEX  7
- 5562 0197A 2               NIBHEX  2
- 5563 0197B 7               NIBHEX  7
- 5564 0197C 7               NIBHEX  7
- 5565 0197D 7               NIBHEX  7
- 5566 0197E 3               NIBHEX  3
- 5567 0197F 1               NIBHEX  1
- 5568 01980 5               NIBHEX  5
- 5569 01981 7               NIBHEX  7
- 5570 01982 7               NIBHEX  7
- 5571 01983 5               NIBHEX  5
- 5572 01984 2               NIBHEX  2
- 5573 01985 1               NIBHEX  1
- 5574 01986 4               NIBHEX  4
- 5575 01987 4               NIBHEX  4
- 5576 01988 4               NIBHEX  4
- 5577 01989 5               NIBHEX  5
- 5578 0198A 1               NIBHEX  1
- 5579 0198B 5               NIBHEX  5
- 5580 0198C 4               NIBHEX  4
- 5581 0198D 5               NIBHEX  5
- 5582 0198E 5               NIBHEX  5
- 5583 0198F 1               NIBHEX  1
- 5584 01990 5               NIBHEX  5
- 5585 01991 1               NIBHEX  1
- 5586 01992 1               NIBHEX  1
- 5587 01993 2               NIBHEX  2
- 5588 01994 7               NIBHEX  7
- 5589 01995 7               NIBHEX  7
- 5590 01996 7               NIBHEX  7
- 5591 01997 4               NIBHEX  4
- 5592 01998 7               NIBHEX  7
- 5593 01999 7               NIBHEX  7
- 5594 0199A 1               NIBHEX  1
- 5595 0199B 7               NIBHEX  7
- 5596 0199C 7               NIBHEX  7
- 5597 0199D 5               NIBHEX  5
- 5598 0199E 3               NIBHEX  3
- 5599 0199F 6               NIBHEX  6
- 5600 019A0 3               NIBHEX  3
- 5601 019A1 7               NIBHEX  7
- 5602 019A2 1               NIBHEX  1
- 5603 019A3 0               NIBHEX  0
- 5604 019A4 0               NIBHEX  0
- 5605 019A5 0               NIBHEX  0
- 5606 019A6 0               NIBHEX  0
- 5607 019A7 0               NIBHEX  0
- 5608 019A8 0               NIBHEX  0
- 5609 019A9 0               NIBHEX  0
- 5610 019AA 0               NIBHEX  0
- 5611 019AB 0               NIBHEX  0
- 5612 019AC 0               NIBHEX  0
- 5613 019AD 0               NIBHEX  0
- 5614 019AE 0               NIBHEX  0
- 5615 019AF 0               NIBHEX  0
- 5616 019B0 0               NIBHEX  0
- 5617 019B1 0               NIBHEX  0
- 5618 019B2 0               NIBHEX  0
- 5619               * File  smhp_editor_50.s        362
- 5620 019B3         =DAT
- 5621               * File  smhp_editor_50.s        363
- 5622 019B3 07              C=RSTK
- 5623 019B5 135             D1=C
- 5624               * File  smhp_editor_50.s        364
- 5625 019B8 01              RTN
- 5626               * File  smhp_editor_50.s        365
- 5627
- 5628               * File  smhp_editor_50.s        366
- 5629 019BA         =TDRAW
- 5630               * File  smhp_editor_50.s        367
- 5631 019BA 32800           LCHEX   008
- 5632 019BF 8FF0200         GOSBVL  =KEY
- 5633               * File  smhp_editor_50.s        368
- 5634 019C6 808A4           ?CBIT=0 4
- 5635 019CB 00              RTNYES
- 5636               * File  smhp_editor_50.s        369
- 5637
- 5638               * File  smhp_editor_50.s        370
- 5639 019CD 1B50108         D0=(5)  (=X)
- 5640 019D4 142             A=DAT0  A
- 5641               * File  smhp_editor_50.s        371
- 5642 019D7 1B41108         D0=(5)  (=S)
- 5643 019DE 146             C=DAT0  A
- 5644               * File  smhp_editor_50.s        372
- 5645                       {
- 5646               * File  smhp_editor_50.s        373
- 5647               * File  smhp_editor_50.s        374
- 5648 019E1 8AA             ?C=0    A
- 5649 019E4 E0              SKIPYES{
- 5650               * File  smhp_editor_50.s        375
- 5651 019E6 CE              C=C-    1       A
- 5652               * File  smhp_editor_50.s        376
- 5653 019E8 818F0C          A=A+    13      A
- 5654               * File  smhp_editor_50.s        377
- 5655 019EE 62FF            UP2
- 5656               * File  smhp_editor_50.s        378
- 5657               * File  smhp_editor_50.s        379
- 5658                       }
- 5659               * File  smhp_editor_50.s        380
- 5660                       }
- 5661 019F2 340A000         LC(5)   160
- 5662               * File  smhp_editor_50.s        381
- 5663 019F9 8BE             ?A>=C   A
- 5664 019FC 00              RTNYES
- 5665               * File  smhp_editor_50.s        382
- 5666
- 5667               * File  smhp_editor_50.s        383
- 5668 019FE 860             ?ST#1   0
- 5669 01A01 B0              SKIPYES{
- 5670 01A03 840             ST=0    0
- 5671               * File  smhp_editor_50.s        384
- 5672 01A06 8E8B7E          GOSUBL  =NCURSER
- 5673               * File  smhp_editor_50.s        385
- 5674                       }
- 5675 01A0C 81AF13          A=R3.f  A
- 5676 01A12 131             D1=A
- 5677               * File  smhp_editor_50.s        386
- 5678 01A15 81AF10          A=R0.f  A
- 5679 01A1B 8E849E          GOSUBL  =XY
- 5680 01A21 130             D0=A
- 5681               * File  smhp_editor_50.s        387
- 5682 01A24 307             LCHEX   7
- 5683               * File  smhp_editor_50.s        388
- 5684                       {
- 5685 01A27 14B             A=DAT1  B
- 5686 01A2A 148             DAT0=A  B
- 5687               * File  smhp_editor_50.s        389
- 5688 01A2D 16F16F1         D0+     34
+ 2212               * File  smhp_editor_50.s        363
+ 2213 00C3C 17F             D1+     16
+ 2214 00C3F A0E             C=C-    1       P
+ 2215 00C42 58E             UPNC
+ 2216               * File  smhp_editor_50.s        364
+ 2217                       }
+ 2218 00C45 F5              BSR     A
+ 2219 00C47 81AF14          A=R4.f  A
+ 2220 00C4D CC              A=A-    1       A
+ 2221 00C4F 81AF04          R4=A.f  A
+ 2222               * File  smhp_editor_50.s        365
+ 2223 00C55 A0F             D=D-    1       P
+ 2224 00C58 90B             ?D=0    P
+ 2225 00C5B 60              SKIPYES{
+ 2226 00C5D 69AF            GOTO    =DISP_N
+ 2227               * File  smhp_editor_50.s        366
+ 2228                       }
+ 2229 00C61 01              RTN
+ 2230               * File  smhp_editor_50.s        367
+ 2231
+ 2232               * File  smhp_editor_50.s        368
+ 2233 00C63         =GET_DAT
+ 2234               * File  smhp_editor_50.s        369
+ 2235 00C63 8E0600          GOSUBL  =DAT
+ 2236               * File  smhp_editor_50.s        370
+ 2237 00C69 2               NIBHEX  2
+ 2238 00C6A 3               NIBHEX  3
+ 2239 00C6B 7               NIBHEX  7
+ 2240 00C6C 7               NIBHEX  7
+ 2241 00C6D 5               NIBHEX  5
+ 2242 00C6E 7               NIBHEX  7
+ 2243 00C6F 6               NIBHEX  6
+ 2244 00C70 7               NIBHEX  7
+ 2245 00C71 7               NIBHEX  7
+ 2246 00C72 7               NIBHEX  7
+ 2247 00C73 2               NIBHEX  2
+ 2248 00C74 3               NIBHEX  3
+ 2249 00C75 6               NIBHEX  6
+ 2250 00C76 3               NIBHEX  3
+ 2251 00C77 7               NIBHEX  7
+ 2252 00C78 7               NIBHEX  7
+ 2253 00C79 5               NIBHEX  5
+ 2254 00C7A 2               NIBHEX  2
+ 2255 00C7B 4               NIBHEX  4
+ 2256 00C7C 4               NIBHEX  4
+ 2257 00C7D 5               NIBHEX  5
+ 2258 00C7E 1               NIBHEX  1
+ 2259 00C7F 1               NIBHEX  1
+ 2260 00C80 4               NIBHEX  4
+ 2261 00C81 5               NIBHEX  5
+ 2262 00C82 5               NIBHEX  5
+ 2263 00C83 5               NIBHEX  5
+ 2264 00C84 5               NIBHEX  5
+ 2265 00C85 1               NIBHEX  1
+ 2266 00C86 5               NIBHEX  5
+ 2267 00C87 1               NIBHEX  1
+ 2268 00C88 1               NIBHEX  1
+ 2269 00C89 5               NIBHEX  5
+ 2270 00C8A 2               NIBHEX  2
+ 2271 00C8B 7               NIBHEX  7
+ 2272 00C8C 7               NIBHEX  7
+ 2273 00C8D 7               NIBHEX  7
+ 2274 00C8E 7               NIBHEX  7
+ 2275 00C8F 7               NIBHEX  7
+ 2276 00C90 2               NIBHEX  2
+ 2277 00C91 7               NIBHEX  7
+ 2278 00C92 7               NIBHEX  7
+ 2279 00C93 7               NIBHEX  7
+ 2280 00C94 3               NIBHEX  3
+ 2281 00C95 1               NIBHEX  1
+ 2282 00C96 5               NIBHEX  5
+ 2283 00C97 7               NIBHEX  7
+ 2284 00C98 7               NIBHEX  7
+ 2285 00C99 5               NIBHEX  5
+ 2286 00C9A 2               NIBHEX  2
+ 2287 00C9B 1               NIBHEX  1
+ 2288 00C9C 4               NIBHEX  4
+ 2289 00C9D 4               NIBHEX  4
+ 2290 00C9E 4               NIBHEX  4
+ 2291 00C9F 5               NIBHEX  5
+ 2292 00CA0 1               NIBHEX  1
+ 2293 00CA1 5               NIBHEX  5
+ 2294 00CA2 4               NIBHEX  4
+ 2295 00CA3 5               NIBHEX  5
+ 2296 00CA4 5               NIBHEX  5
+ 2297 00CA5 1               NIBHEX  1
+ 2298 00CA6 5               NIBHEX  5
+ 2299 00CA7 1               NIBHEX  1
+ 2300 00CA8 1               NIBHEX  1
+ 2301 00CA9 2               NIBHEX  2
+ 2302 00CAA 7               NIBHEX  7
+ 2303 00CAB 7               NIBHEX  7
+ 2304 00CAC 7               NIBHEX  7
+ 2305 00CAD 4               NIBHEX  4
+ 2306 00CAE 7               NIBHEX  7
+ 2307 00CAF 7               NIBHEX  7
+ 2308 00CB0 1               NIBHEX  1
+ 2309 00CB1 7               NIBHEX  7
+ 2310 00CB2 7               NIBHEX  7
+ 2311 00CB3 5               NIBHEX  5
+ 2312 00CB4 3               NIBHEX  3
+ 2313 00CB5 6               NIBHEX  6
+ 2314 00CB6 3               NIBHEX  3
+ 2315 00CB7 7               NIBHEX  7
+ 2316 00CB8 1               NIBHEX  1
+ 2317 00CB9 0               NIBHEX  0
+ 2318 00CBA 0               NIBHEX  0
+ 2319 00CBB 0               NIBHEX  0
+ 2320 00CBC 0               NIBHEX  0
+ 2321 00CBD 0               NIBHEX  0
+ 2322 00CBE 0               NIBHEX  0
+ 2323 00CBF 0               NIBHEX  0
+ 2324 00CC0 0               NIBHEX  0
+ 2325 00CC1 0               NIBHEX  0
+ 2326 00CC2 0               NIBHEX  0
+ 2327 00CC3 0               NIBHEX  0
+ 2328 00CC4 0               NIBHEX  0
+ 2329 00CC5 0               NIBHEX  0
+ 2330 00CC6 0               NIBHEX  0
+ 2331 00CC7 0               NIBHEX  0
+ 2332 00CC8 0               NIBHEX  0
+ 2333               * File  smhp_editor_50.s        371
+ 2334 00CC9         =DAT
+ 2335               * File  smhp_editor_50.s        372
+ 2336 00CC9 07              C=RSTK
+ 2337 00CCB 135             D1=C
+ 2338               * File  smhp_editor_50.s        373
+ 2339 00CCE 01              RTN
+ 2340               * File  smhp_editor_50.s        374
+ 2341
+ 2342               * File  smhp_editor_50.s        375
+ 2343 00CD0         =TDRAW
+ 2344               * File  smhp_editor_50.s        376
+ 2345 00CD0 32800           LCHEX   008
+ 2346 00CD5 8FF0200         GOSBVL  =KEY
+ 2347               * File  smhp_editor_50.s        377
+ 2348 00CDC 808A4           ?CBIT=0 4
+ 2349 00CE1 00              RTNYES
+ 2350               * File  smhp_editor_50.s        378
+ 2351
+ 2352               * File  smhp_editor_50.s        379
+ 2353 00CE3 1B50108         D0=(5)  (=X)
+ 2354 00CEA 142             A=DAT0  A
+ 2355               * File  smhp_editor_50.s        380
+ 2356 00CED 1B41108         D0=(5)  (=S)
+ 2357 00CF4 146             C=DAT0  A
+ 2358               * File  smhp_editor_50.s        381
+ 2359                       {
+ 2360               * File  smhp_editor_50.s        382
+ 2361               * File  smhp_editor_50.s        383
+ 2362 00CF7 8AA             ?C=0    A
+ 2363 00CFA E0              SKIPYES{
+ 2364               * File  smhp_editor_50.s        384
+ 2365 00CFC CE              C=C-    1       A
+ 2366               * File  smhp_editor_50.s        385
+ 2367 00CFE 818F0C          A=A+    13      A
+ 2368               * File  smhp_editor_50.s        386
+ 2369 00D04 62FF            UP2
+ 2370               * File  smhp_editor_50.s        387
+ 2371               * File  smhp_editor_50.s        388
+ 2372                       }
+ 2373               * File  smhp_editor_50.s        389
+ 2374                       }
+ 2375 00D08 340A000         LC(5)   160
+ 2376               * File  smhp_editor_50.s        390
+ 2377 00D0F 8BE             ?A>=C   A
+ 2378 00D12 00              RTNYES
+ 2379               * File  smhp_editor_50.s        391
+ 2380
+ 2381               * File  smhp_editor_50.s        392
+ 2382 00D14 860             ?ST#1   0
+ 2383 00D17 B0              SKIPYES{
+ 2384 00D19 840             ST=0    0
+ 2385               * File  smhp_editor_50.s        393
+ 2386 00D1C 8E2A4F          GOSUBL  =NCURSER
+ 2387               * File  smhp_editor_50.s        394
+ 2388                       }
+ 2389 00D22 81AF13          A=R3.f  A
+ 2390 00D28 131             D1=A
+ 2391               * File  smhp_editor_50.s        395
+ 2392 00D2B 81AF10          A=R0.f  A
+ 2393 00D31 8E236F          GOSUBL  =XY
+ 2394 00D37 130             D0=A
+ 2395               * File  smhp_editor_50.s        396
+ 2396 00D3A 307             LCHEX   7
+ 2397               * File  smhp_editor_50.s        397
+ 2398                       {
+ 2399 00D3D 14B             A=DAT1  B
+ 2400 00D40 148             DAT0=A  B
+ 2401               * File  smhp_editor_50.s        398
+ 2402 00D43 16F16F1         D0+     34
             61
- 5689 01A36 173             D1+     4
- 5690               * File  smhp_editor_50.s        390
- 5691 01A39 A0E             C=C-    1       P
- 5692 01A3C 5AE             UPNC
- 5693               * File  smhp_editor_50.s        391
- 5694                       }
- 5695 01A3F 81AF12          A=R2.f  A
- 5696 01A45 130             D0=A
- 5697 01A48 1FF0108         D1=(5)  (=B)
- 5698               * File  smhp_editor_50.s        392
- 5699 01A4F 14B             A=DAT1  B
- 5700 01A52 148             DAT0=A  B
- 5701               * File  smhp_editor_50.s        393
- 5702 01A55 8EB57E          GOSUBL  =JUCURSOR
- 5703               * File  smhp_editor_50.s        394
- 5704 01A5B 01              RTN
- 5705               * File  smhp_editor_50.s        395
- 5706
- 5707               * File  smhp_editor_50.s        396
- 5708 01A5D         =DISP.LEVEL
- 5709               * File  smhp_editor_50.s        397
- 5710 01A5D 1B00108         D0=(5)  (=EC1)
- 5711 01A64 142             A=DAT0  A
- 5712               * File  smhp_editor_50.s        398
- 5713 01A67 81AF04          R4=A.f  A
- 5714               * File  smhp_editor_50.s        399
- 5715
- 5716               * File  smhp_editor_50.s        400
- 5717 01A6D 31D0            LC(2)   13
- 5718 01A71 AE7             D=C     B
- 5719               * File  smhp_editor_50.s        401
- 5720 01A74 3180            LC(2)   08
- 5721 01A78 AE5             B=C     B
- 5722               * File  smhp_editor_50.s        402
- 5723
- 5724               * File  smhp_editor_50.s        403
- 5725 01A7B 81AF12          A=R2.f  A
- 5726               * File  smhp_editor_50.s        404
- 5727 01A81 1B50108         D0=(5)  (=X)
- 5728 01A88 14E             C=DAT0  B
- 5729               * File  smhp_editor_50.s        405
- 5730                       {
- 5731               * File  smhp_editor_50.s        406
- 5732 01A8B 96A             ?C=0    B
- 5733 01A8E F0              EXIT
- 5734               * File  smhp_editor_50.s        407
- 5735 01A90 A6E             C=C-    1       B
- 5736 01A93 818F81          A=A-    2       A
- 5737 01A99 61FF            UP
- 5738               * File  smhp_editor_50.s        408
- 5739               * File  smhp_editor_50.s        409
- 5740                       }
- 5741 01A9D 1BA0108         D0=(5)  (=Y)
- 5742 01AA4 14E             C=DAT0  B
- 5743               * File  smhp_editor_50.s        410
- 5744 01AA7 06              RSTK=C
- 5745               * File  smhp_editor_50.s        411
- 5746                       {
- 5747               * File  smhp_editor_50.s        412
- 5748 01AA9 07              C=RSTK
- 5749               * File  smhp_editor_50.s        413
- 5750 01AAB 96A             ?C=0    B
- 5751 01AAE 41              EXIT
- 5752               * File  smhp_editor_50.s        414
- 5753 01AB0 A6E             C=C-    1       B
- 5754 01AB3 06              RSTK=C
- 5755               * File  smhp_editor_50.s        415
- 5756 01AB5 3404100         LCHEX   00140
- 5757 01ABC EA              A=A-C   A
- 5758 01ABE 6AEF            UP
- 5759               * File  smhp_editor_50.s        416
- 5760               * File  smhp_editor_50.s        417
- 5761
- 5762               * File  smhp_editor_50.s        418
- 5763                       }
- 5764 01AC2 130             D0=A
- 5765 01AC5 136             CD0EX
- 5766 01AC8 06              RSTK=C
- 5767 01ACA 134             D0=C
- 5768               * File  smhp_editor_50.s        419
- 5769
- 5770               * File  smhp_editor_50.s        420
- 5771 01ACD         =BCL
- 5772               * File  smhp_editor_50.s        421
- 5773 01ACD 1FF0108         D1=(5)  (=B)
- 5774 01AD4 14F             C=DAT1  B
- 5775               * File  smhp_editor_50.s        422
- 5776 01AD7 81AF13          A=R3.f  A
- 5777               * File  smhp_editor_50.s        423
- 5778                       {
- 5779               * File  smhp_editor_50.s        424
- 5780 01ADD 96A             ?C=0    B
- 5781 01AE0 51              EXIT
- 5782               * File  smhp_editor_50.s        425
- 5783 01AE2 818F8F8         A=A-    32      A
+ 2403 00D4C 171             D1+     2
+ 2404               * File  smhp_editor_50.s        399
+ 2405 00D4F A0E             C=C-    1       P
+ 2406 00D52 5AE             UPNC
+ 2407               * File  smhp_editor_50.s        400
+ 2408                       }
+ 2409 00D55 81AF12          A=R2.f  A
+ 2410 00D5B 130             D0=A
+ 2411 00D5E 1FF0108         D1=(5)  (=B)
+ 2412               * File  smhp_editor_50.s        401
+ 2413 00D65 14B             A=DAT1  B
+ 2414 00D68 148             DAT0=A  B
+ 2415               * File  smhp_editor_50.s        402
+ 2416 00D6B 8E544F          GOSUBL  =JUCURSOR
+ 2417               * File  smhp_editor_50.s        403
+ 2418 00D71 01              RTN
+ 2419               * File  smhp_editor_50.s        404
+ 2420
+ 2421               * File  smhp_editor_50.s        405
+ 2422 00D73         =DISP.LEVEL
+ 2423               * File  smhp_editor_50.s        406
+ 2424 00D73 1B00108         D0=(5)  (=EC1)
+ 2425 00D7A 142             A=DAT0  A
+ 2426               * File  smhp_editor_50.s        407
+ 2427 00D7D 81AF04          R4=A.f  A
+ 2428               * File  smhp_editor_50.s        408
+ 2429
+ 2430               * File  smhp_editor_50.s        409
+ 2431 00D83 31D0            LC(2)   13
+ 2432 00D87 AE7             D=C     B
+ 2433               * File  smhp_editor_50.s        410
+ 2434 00D8A 3180            LC(2)   08
+ 2435 00D8E AE5             B=C     B
+ 2436               * File  smhp_editor_50.s        411
+ 2437
+ 2438               * File  smhp_editor_50.s        412
+ 2439 00D91 81AF12          A=R2.f  A
+ 2440               * File  smhp_editor_50.s        413
+ 2441 00D97 1B50108         D0=(5)  (=X)
+ 2442 00D9E 14E             C=DAT0  B
+ 2443               * File  smhp_editor_50.s        414
+ 2444                       {
+ 2445               * File  smhp_editor_50.s        415
+ 2446 00DA1 96A             ?C=0    B
+ 2447 00DA4 F0              EXIT
+ 2448               * File  smhp_editor_50.s        416
+ 2449 00DA6 A6E             C=C-    1       B
+ 2450 00DA9 818F81          A=A-    2       A
+ 2451 00DAF 61FF            UP
+ 2452               * File  smhp_editor_50.s        417
+ 2453               * File  smhp_editor_50.s        418
+ 2454                       }
+ 2455 00DB3 1BA0108         D0=(5)  (=Y)
+ 2456 00DBA 14E             C=DAT0  B
+ 2457               * File  smhp_editor_50.s        419
+ 2458 00DBD 06              RSTK=C
+ 2459               * File  smhp_editor_50.s        420
+ 2460                       {
+ 2461               * File  smhp_editor_50.s        421
+ 2462 00DBF 07              C=RSTK
+ 2463               * File  smhp_editor_50.s        422
+ 2464 00DC1 96A             ?C=0    B
+ 2465 00DC4 41              EXIT
+ 2466               * File  smhp_editor_50.s        423
+ 2467 00DC6 A6E             C=C-    1       B
+ 2468 00DC9 06              RSTK=C
+ 2469               * File  smhp_editor_50.s        424
+ 2470 00DCB 3404100         LCHEX   00140
+ 2471 00DD2 EA              A=A-C   A
+ 2472 00DD4 6AEF            UP
+ 2473               * File  smhp_editor_50.s        425
+ 2474               * File  smhp_editor_50.s        426
+ 2475
+ 2476               * File  smhp_editor_50.s        427
+ 2477                       }
+ 2478 00DD8 130             D0=A
+ 2479 00DDB 136             CD0EX
+ 2480 00DDE 06              RSTK=C
+ 2481 00DE0 134             D0=C
+ 2482               * File  smhp_editor_50.s        428
+ 2483
+ 2484               * File  smhp_editor_50.s        429
+ 2485 00DE3         =BCL
+ 2486               * File  smhp_editor_50.s        430
+ 2487 00DE3 1FF0108         D1=(5)  (=B)
+ 2488 00DEA 14F             C=DAT1  B
+ 2489               * File  smhp_editor_50.s        431
+ 2490 00DED 81AF13          A=R3.f  A
+ 2491               * File  smhp_editor_50.s        432
+ 2492                       {
+ 2493               * File  smhp_editor_50.s        433
+ 2494 00DF3 96A             ?C=0    B
+ 2495 00DF6 51              EXIT
+ 2496               * File  smhp_editor_50.s        434
+ 2497 00DF8 818F8F8         A=A-    32      A
             18F8F
- 5784               * File  smhp_editor_50.s        426
- 5785 01AEE A6E             C=C-    1       B
- 5786 01AF1 6BEF            UP
- 5787               * File  smhp_editor_50.s        427
- 5788               * File  smhp_editor_50.s        428
- 5789                       }
- 5790 01AF5 131             D1=A
- 5791 01AF8 AE2             C=0     B
- 5792               * File  smhp_editor_50.s        429
- 5793
- 5794               * File  smhp_editor_50.s        430
- 5795                       {
- 5796               * File  smhp_editor_50.s        431
- 5797 01AFB 14A             A=DAT0  B
- 5798 01AFE 962             ?A=C    B
- 5799 01B01 F0              EXIT
- 5800               * File  smhp_editor_50.s        432
- 5801 01B03 B66             C=C+    1       B
- 5802 01B06 17F17F          D1+     32
- 5803 01B0C 6EEF            UP
- 5804               * File  smhp_editor_50.s        433
- 5805               * File  smhp_editor_50.s        434
- 5806
- 5807               * File  smhp_editor_50.s        435
- 5808                       }
- 5809 01B10 81AF14          A=R4.f  A
- 5810 01B16 130             D0=A
- 5811               * File  smhp_editor_50.s        436
- 5812 01B19 307             LCHEX   7
- 5813               * File  smhp_editor_50.s        437
- 5814                       {
- 5815               * File  smhp_editor_50.s        438
- 5816 01B1C 14B             A=DAT1  B
- 5817 01B1F 148             DAT0=A  B
- 5818               * File  smhp_editor_50.s        439
- 5819 01B22 16F16F1         D0+     34
+ 2498               * File  smhp_editor_50.s        435
+ 2499 00E04 A6E             C=C-    1       B
+ 2500 00E07 6BEF            UP
+ 2501               * File  smhp_editor_50.s        436
+ 2502               * File  smhp_editor_50.s        437
+ 2503                       }
+ 2504 00E0B 131             D1=A
+ 2505 00E0E AE2             C=0     B
+ 2506               * File  smhp_editor_50.s        438
+ 2507
+ 2508               * File  smhp_editor_50.s        439
+ 2509                       {
+ 2510               * File  smhp_editor_50.s        440
+ 2511 00E11 14A             A=DAT0  B
+ 2512 00E14 962             ?A=C    B
+ 2513 00E17 F0              EXIT
+ 2514               * File  smhp_editor_50.s        441
+ 2515 00E19 B66             C=C+    1       B
+ 2516 00E1C 17F17F          D1+     32
+ 2517 00E22 6EEF            UP
+ 2518               * File  smhp_editor_50.s        442
+ 2519               * File  smhp_editor_50.s        443
+ 2520
+ 2521               * File  smhp_editor_50.s        444
+ 2522                       }
+ 2523 00E26 81AF14          A=R4.f  A
+ 2524 00E2C 130             D0=A
+ 2525               * File  smhp_editor_50.s        445
+ 2526 00E2F 307             LCHEX   7
+ 2527               * File  smhp_editor_50.s        446
+ 2528                       {
+ 2529               * File  smhp_editor_50.s        447
+ 2530 00E32 14B             A=DAT1  B
+ 2531 00E35 148             DAT0=A  B
+ 2532               * File  smhp_editor_50.s        448
+ 2533 00E38 16F16F1         D0+     34
             61
- 5820 01B2B 173             D1+     4
- 5821 01B2E A0E             C=C-    1       P
- 5822               * File  smhp_editor_50.s        440
- 5823 01B31 5AE             UPNC
- 5824               * File  smhp_editor_50.s        441
- 5825               * File  smhp_editor_50.s        442
- 5826
- 5827               * File  smhp_editor_50.s        443
- 5828                       }
- 5829 01B34 81AF14          A=R4.f  A
- 5830 01B3A 818F01          A=A+    2       A
- 5831 01B40 81AF04          R4=A.f  A
- 5832               * File  smhp_editor_50.s        444
- 5833 01B46 07              C=RSTK
- 5834 01B48 818F21          C=C+    2       A
- 5835 01B4E 06              RSTK=C
- 5836               * File  smhp_editor_50.s        445
- 5837 01B50 134             D0=C
- 5838               * File  smhp_editor_50.s        446
- 5839
- 5840               * File  smhp_editor_50.s        447
- 5841 01B53 A6F             D=D-    1       B
- 5842               * File  smhp_editor_50.s        448
- 5843 01B56 96B             ?D=0    B
- 5844 01B59 60              SKIPYES{
- 5845 01B5B 617F            GOTO    =BCL
- 5846               * File  smhp_editor_50.s        449
- 5847
- 5848               * File  smhp_editor_50.s        450
- 5849                       }
- 5850 01B5F 31D0            LC(2)   13
- 5851 01B63 AE7             D=C     B
- 5852               * File  smhp_editor_50.s        451
- 5853
- 5854               * File  smhp_editor_50.s        452
- 5855 01B66 07              C=RSTK
- 5856               * File  smhp_editor_50.s        453
- 5857 01B68 8082462         LA(5)   #126
+ 2534               * File  smhp_editor_50.s        449
+ 2535 00E41 171             D1+     2
+ 2536               * File  smhp_editor_50.s        450
+ 2537 00E44 A0E             C=C-    1       P
+ 2538               * File  smhp_editor_50.s        451
+ 2539 00E47 5AE             UPNC
+ 2540               * File  smhp_editor_50.s        452
+ 2541               * File  smhp_editor_50.s        453
+ 2542
+ 2543               * File  smhp_editor_50.s        454
+ 2544                       }
+ 2545 00E4A 81AF14          A=R4.f  A
+ 2546 00E50 818F01          A=A+    2       A
+ 2547 00E56 81AF04          R4=A.f  A
+ 2548               * File  smhp_editor_50.s        455
+ 2549 00E5C 07              C=RSTK
+ 2550 00E5E 818F21          C=C+    2       A
+ 2551 00E64 06              RSTK=C
+ 2552               * File  smhp_editor_50.s        456
+ 2553 00E66 134             D0=C
+ 2554               * File  smhp_editor_50.s        457
+ 2555
+ 2556               * File  smhp_editor_50.s        458
+ 2557 00E69 A6F             D=D-    1       B
+ 2558               * File  smhp_editor_50.s        459
+ 2559 00E6C 96B             ?D=0    B
+ 2560 00E6F 60              SKIPYES{
+ 2561 00E71 617F            GOTO    =BCL
+ 2562               * File  smhp_editor_50.s        460
+ 2563
+ 2564               * File  smhp_editor_50.s        461
+ 2565                       }
+ 2566 00E75 31D0            LC(2)   13
+ 2567 00E79 AE7             D=C     B
+ 2568               * File  smhp_editor_50.s        462
+ 2569
+ 2570               * File  smhp_editor_50.s        463
+ 2571 00E7C 07              C=RSTK
+ 2572               * File  smhp_editor_50.s        464
+ 2573 00E7E 8082462         LA(5)   #126
             100
- 5858 01B72 C2              C=C+A   A
- 5859               * File  smhp_editor_50.s        454
- 5860 01B74 06              RSTK=C
- 5861 01B76 134             D0=C
- 5862               * File  smhp_editor_50.s        455
- 5863
- 5864               * File  smhp_editor_50.s        456
- 5865 01B79 81AF14          A=R4.f  A
- 5866 01B7F 818F8F8         A=A-    26      A
+ 2574 00E88 C2              C=C+A   A
+ 2575               * File  smhp_editor_50.s        465
+ 2576 00E8A 06              RSTK=C
+ 2577 00E8C 134             D0=C
+ 2578               * File  smhp_editor_50.s        466
+ 2579
+ 2580               * File  smhp_editor_50.s        467
+ 2581 00E8F 81AF14          A=R4.f  A
+ 2582 00E95 818F8F8         A=A-    26      A
             18F89
- 5867               * File  smhp_editor_50.s        457
- 5868 01B8B 3401100         LCHEX   00110
- 5869 01B92 CA              A=A+C   A
- 5870 01B94 81AF04          R4=A.f  A
- 5871               * File  smhp_editor_50.s        458
- 5872
- 5873               * File  smhp_editor_50.s        459
- 5874 01B9A A6D             B=B-    1       B
- 5875 01B9D 969             ?B=0    B
- 5876 01BA0 60              SKIPYES{
- 5877 01BA2 6A2F            GOTO    =BCL
- 5878               * File  smhp_editor_50.s        460
- 5879                       }
- 5880 01BA6 07              C=RSTK
- 5881               * File  smhp_editor_50.s        461
- 5882 01BA8 1B41108         D0=(5)  (=S)
- 5883 01BAF 14A             A=DAT0  B
- 5884               * File  smhp_editor_50.s        462
- 5885 01BB2 31C0            LC(2)   12
- 5886               * File  smhp_editor_50.s        463
- 5887 01BB6 9E2             ?A<C    B
- 5888 01BB9 00              RTNYES
- 5889               * File  smhp_editor_50.s        464
- 5890
- 5891               * File  smhp_editor_50.s        465
- 5892 01BBB 1B00108         D0=(5)  (=EC1)
- 5893               * File  smhp_editor_50.s        466
- 5894 01BC2 142             A=DAT0  A
- 5895 01BC5 818F07          A=A+    8       A
- 5896 01BCB 130             D0=A
- 5897               * File  smhp_editor_50.s        467
- 5898 01BCE AF0             A=0     W
- 5899 01BD1 31F3            LCHEX   3F
- 5900               * File  smhp_editor_50.s        468
- 5901                       {
- 5902               * File  smhp_editor_50.s        469
- 5903 01BD5 1507            DAT0=A  W
- 5904 01BD9 16F             D0+     16
- 5905               * File  smhp_editor_50.s        470
- 5906 01BDC 148             DAT0=A  B
- 5907 01BDF 16F161          D0+     18
- 5908               * File  smhp_editor_50.s        471
- 5909 01BE5 A6E             C=C-    1       B
- 5910 01BE8 5CE             UPNC
- 5911               * File  smhp_editor_50.s        472
- 5912               * File  smhp_editor_50.s        473
- 5913                       }
- 5914 01BEB 01              RTN
- 5915               * File  smhp_editor_50.s        474
- 5916
- 5917               * File  smhp_editor_50.s        475
- 5918 01BED         =TNEXT
- 5919               * File  smhp_editor_50.s        476
- 5920 01BED 32800           LCHEX   008
- 5921 01BF2 8FF0200         GOSBVL  =KEY
- 5922               * File  smhp_editor_50.s        477
- 5923 01BF9 808A7           ?CBIT=0 7
- 5924 01BFE 00              RTNYES
- 5925               * File  smhp_editor_50.s        478
- 5926 01C00 1B41108         D0=(5)  (=S)
- 5927 01C07 14A             A=DAT0  B
- 5928               * File  smhp_editor_50.s        479
- 5929 01C0A 1F91108         D1=(5)  (=X2)
- 5930 01C11 14F             C=DAT1  B
- 5931 01C14 A6E             C=C-    1       B
- 5932               * File  smhp_editor_50.s        480
- 5933 01C17 9EE             ?A>=C   B
- 5934 01C1A 00              RTNYES
- 5935               * File  smhp_editor_50.s        481
- 5936 01C1C B64             A=A+    1       B
- 5937 01C1F 148             DAT0=A  B
- 5938               * File  smhp_editor_50.s        482
- 5939
- 5940               * File  smhp_editor_50.s        483
- 5941 01C22 81AF12          A=R2.f  A
- 5942 01C28 818F0F8         A=A+    26      A
+ 2583               * File  smhp_editor_50.s        468
+ 2584 00EA1 3401100         LCHEX   00110
+ 2585 00EA8 CA              A=A+C   A
+ 2586 00EAA 81AF04          R4=A.f  A
+ 2587               * File  smhp_editor_50.s        469
+ 2588
+ 2589               * File  smhp_editor_50.s        470
+ 2590 00EB0 A6D             B=B-    1       B
+ 2591 00EB3 969             ?B=0    B
+ 2592 00EB6 60              SKIPYES{
+ 2593 00EB8 6A2F            GOTO    =BCL
+ 2594               * File  smhp_editor_50.s        471
+ 2595                       }
+ 2596 00EBC 07              C=RSTK
+ 2597               * File  smhp_editor_50.s        472
+ 2598 00EBE 1B41108         D0=(5)  (=S)
+ 2599 00EC5 14A             A=DAT0  B
+ 2600               * File  smhp_editor_50.s        473
+ 2601 00EC8 31C0            LC(2)   12
+ 2602               * File  smhp_editor_50.s        474
+ 2603 00ECC 9E2             ?A<C    B
+ 2604 00ECF 00              RTNYES
+ 2605               * File  smhp_editor_50.s        475
+ 2606
+ 2607               * File  smhp_editor_50.s        476
+ 2608 00ED1 1B00108         D0=(5)  (=EC1)
+ 2609               * File  smhp_editor_50.s        477
+ 2610 00ED8 142             A=DAT0  A
+ 2611 00EDB 818F07          A=A+    8       A
+ 2612 00EE1 130             D0=A
+ 2613               * File  smhp_editor_50.s        478
+ 2614 00EE4 AF0             A=0     W
+ 2615 00EE7 31F3            LCHEX   3F
+ 2616               * File  smhp_editor_50.s        479
+ 2617                       {
+ 2618               * File  smhp_editor_50.s        480
+ 2619 00EEB 1507            DAT0=A  W
+ 2620 00EEF 16F             D0+     16
+ 2621               * File  smhp_editor_50.s        481
+ 2622 00EF2 148             DAT0=A  B
+ 2623 00EF5 16F161          D0+     18
+ 2624               * File  smhp_editor_50.s        482
+ 2625 00EFB A6E             C=C-    1       B
+ 2626 00EFE 5CE             UPNC
+ 2627               * File  smhp_editor_50.s        483
+ 2628               * File  smhp_editor_50.s        484
+ 2629                       }
+ 2630 00F01 01              RTN
+ 2631               * File  smhp_editor_50.s        485
+ 2632
+ 2633               * File  smhp_editor_50.s        486
+ 2634 00F03         =TNEXT
+ 2635               * File  smhp_editor_50.s        487
+ 2636 00F03 32800           LCHEX   008
+ 2637 00F08 8FF0200         GOSBVL  =KEY
+ 2638               * File  smhp_editor_50.s        488
+ 2639 00F0F 808A7           ?CBIT=0 7
+ 2640 00F14 00              RTNYES
+ 2641               * File  smhp_editor_50.s        489
+ 2642 00F16 1B41108         D0=(5)  (=S)
+ 2643 00F1D 14A             A=DAT0  B
+ 2644               * File  smhp_editor_50.s        490
+ 2645 00F20 1F91108         D1=(5)  (=X2)
+ 2646 00F27 14F             C=DAT1  B
+ 2647 00F2A A6E             C=C-    1       B
+ 2648               * File  smhp_editor_50.s        491
+ 2649 00F2D 9EE             ?A>=C   B
+ 2650 00F30 00              RTNYES
+ 2651               * File  smhp_editor_50.s        492
+ 2652 00F32 B64             A=A+    1       B
+ 2653 00F35 148             DAT0=A  B
+ 2654               * File  smhp_editor_50.s        493
+ 2655
+ 2656               * File  smhp_editor_50.s        494
+ 2657 00F38 81AF12          A=R2.f  A
+ 2658 00F3E 818F0F8         A=A+    26      A
             18F09
- 5943 01C34 81AF02          R2=A.f  A
- 5944               * File  smhp_editor_50.s        484
- 5945 01C3A 8ED1EF          GOSUBL  =DISP.LEVEL
- 5946               * File  smhp_editor_50.s        485
- 5947 01C40 840             ST=0    0
- 5948               * File  smhp_editor_50.s        486
- 5949 01C43 01              RTN
- 5950               * File  smhp_editor_50.s        487
- 5951
- 5952               * File  smhp_editor_50.s        488
- 5953 01C45         =TPREV
- 5954               * File  smhp_editor_50.s        489
- 5955 01C45 32020           LCHEX   020
- 5956 01C4A 8FF0200         GOSBVL  =KEY
- 5957               * File  smhp_editor_50.s        490
- 5958 01C51 808A7           ?CBIT=0 7
- 5959 01C56 00              RTNYES
- 5960               * File  smhp_editor_50.s        491
- 5961 01C58 1B41108         D0=(5)  (=S)
- 5962 01C5F 14A             A=DAT0  B
- 5963               * File  smhp_editor_50.s        492
- 5964 01C62 968             ?A=0    B
- 5965 01C65 00              RTNYES
- 5966               * File  smhp_editor_50.s        493
- 5967 01C67 A6C             A=A-    1       B
- 5968 01C6A 148             DAT0=A  B
- 5969               * File  smhp_editor_50.s        494
- 5970
- 5971               * File  smhp_editor_50.s        495
- 5972 01C6D 81AF12          A=R2.f  A
- 5973 01C73 818F8F8         A=A-    26      A
+ 2659 00F4A 81AF02          R2=A.f  A
+ 2660               * File  smhp_editor_50.s        495
+ 2661 00F50 8ED1EF          GOSUBL  =DISP.LEVEL
+ 2662               * File  smhp_editor_50.s        496
+ 2663 00F56 840             ST=0    0
+ 2664               * File  smhp_editor_50.s        497
+ 2665 00F59 01              RTN
+ 2666               * File  smhp_editor_50.s        498
+ 2667
+ 2668               * File  smhp_editor_50.s        499
+ 2669 00F5B         =TPREV
+ 2670               * File  smhp_editor_50.s        500
+ 2671 00F5B 32020           LCHEX   020
+ 2672 00F60 8FF0200         GOSBVL  =KEY
+ 2673               * File  smhp_editor_50.s        501
+ 2674 00F67 808A7           ?CBIT=0 7
+ 2675 00F6C 00              RTNYES
+ 2676               * File  smhp_editor_50.s        502
+ 2677 00F6E 1B41108         D0=(5)  (=S)
+ 2678 00F75 14A             A=DAT0  B
+ 2679               * File  smhp_editor_50.s        503
+ 2680 00F78 968             ?A=0    B
+ 2681 00F7B 00              RTNYES
+ 2682               * File  smhp_editor_50.s        504
+ 2683 00F7D A6C             A=A-    1       B
+ 2684 00F80 148             DAT0=A  B
+ 2685               * File  smhp_editor_50.s        505
+ 2686
+ 2687               * File  smhp_editor_50.s        506
+ 2688 00F83 81AF12          A=R2.f  A
+ 2689 00F89 818F8F8         A=A-    26      A
             18F89
- 5974 01C7F 81AF02          R2=A.f  A
- 5975               * File  smhp_editor_50.s        496
- 5976 01C85 8E2DDF          GOSUBL  =DISP.LEVEL
- 5977               * File  smhp_editor_50.s        497
- 5978 01C8B 840             ST=0    0
- 5979               * File  smhp_editor_50.s        498
- 5980 01C8E 01              RTN
- 5981               * File  smhp_editor_50.s        499
- 5982
- 5983               * File  smhp_editor_50.s        500
- 5984 01C90         LBL000
- 5985               * File  smhp_editor_50.s        501
- 5986 01C90 00000           CON(5)  =SEMI
- 5987               * File  smhp_editor_50.s        502
- 5988 01C95 00000           CON(5)  =@
-Saturn Assembler                                       Thu Mar 23 03:04:15 2017
+ 2690 00F95 81AF02          R2=A.f  A
+ 2691               * File  smhp_editor_50.s        507
+ 2692 00F9B 8E2DDF          GOSUBL  =DISP.LEVEL
+ 2693               * File  smhp_editor_50.s        508
+ 2694 00FA1 840             ST=0    0
+ 2695               * File  smhp_editor_50.s        509
+ 2696 00FA4 01              RTN
+ 2697               * File  smhp_editor_50.s        510
+ 2698
+ 2699               * File  smhp_editor_50.s        511
+ 2700 00FA6         LBL000
+ 2701               * File  smhp_editor_50.s        512
+ 2702 00FA6 00000           CON(5)  =SEMI
+ 2703               * File  smhp_editor_50.s        513
+ 2704 00FAB 00000           CON(5)  =@
+Saturn Assembler                                       Thu Mar 23 03:34:39 2017
 V3.0.9 (04/15/2007)   Symbol Table                       smhp_editor_50 Page    2
 
- @                                 Ext                   -  5988
-=B                                 Abs  524559 #0008010F -    37    57  1075
-                                        1095  5344  5697  5773
-=BCL                               Rel    6861 #00001ACD -  5771  5845  5877
-=CL.MEM                            Rel     399 #0000018F -   211
-=CUBE                              Rel    1538 #00000602 -  1030   137  1012
-                                        1081  1112
-=CUBE.M                            Rel    1662 #0000067E -  1087   153
-=CUBE.P                            Rel    1598 #0000063E -  1061   151
-=D.BLOC                            Rel    6060 #000017AC -  5333  1014
-=D.PIT                             Rel    6323 #000018B3 -  5441  1018
-=D.SIZE                            Rel    6264 #00001878 -  5417  1016
-=D.X                               Rel    6119 #000017E7 -  5357  1020
-=D.Y                               Rel    6205 #0000183D -  5393  1022
-=DAT                               Rel    6579 #000019B3 -  5620  5521
-=DISP.LEVEL                        Rel    6749 #00001A5D -  5708   129  5945
-                                        5976
-=DISP_N                            Rel    6385 #000018F1 -  5466  5353  5389
-                                        5413  5437  5462  5512
+ @                                 Ext                   -  2704
+=B                                 Abs  524559 #0008010F -    37    57  1083
+                                        1103  2058  2411  2487
+=BCL                               Rel    3555 #00000DE3 -  2485  2561  2593
+=CL.MEM                            Rel     399 #0000018F -   215
+=CUBE                              Rel    1538 #00000602 -  1035   137  1017
+                                        1089  1119
+=CUBE.M                            Rel    1662 #0000067E -  1095   153
+=CUBE.P                            Rel    1598 #0000063E -  1068   151
+=D.BLOC                            Rel    2754 #00000AC2 -  2047  1019
+=D.PIT                             Rel    3017 #00000BC9 -  2155  1023
+=D.SIZE                            Rel    2958 #00000B8E -  2131  1021
+=D.X                               Rel    2813 #00000AFD -  2071  1025
+=D.Y                               Rel    2899 #00000B53 -  2107  1027
+=DAT                               Rel    3273 #00000CC9 -  2334  2235
+=DISP.LEVEL                        Rel    3443 #00000D73 -  2422   129  2661
+                                        2692
+=DISP_N                            Rel    3079 #00000C07 -  2180  2067  2103
+                                        2127  2151  2176  2226
  DOCODE                            Ext                   -     6
  DOCOL                             Ext                   -     4
-=DSP                               Rel    6409 #00001909 -  5487
+=DSP                               Rel    3103 #00000C1F -  2201
 =EC1                               Abs  524544 #00080100 -    31    48    86
-                                          92   103   213   986  1035  5335  5359
-                                        5395  5419  5443  5710  5892
- GETPTR                            Ext                   -  1120  1186
- GETPTRLOOP                        Ext                   -   207
-=GET_DAT                           Rel    6477 #0000194D -  5519  5468
-=HEADERADD                         Abs     296 #00000128 -    19    69   198
-=HEXDCW                            Abs  188074 #0002DEAA -    23  5347  5383
-                                        5407  5431  5456
-=INC                               Rel    6167 #00001817 -  5374  5380
-=INI.STACK                         Rel    1731 #000006C3 -  1118   127
-=JUCURSOR                          Rel     438 #000001B6 -   234   163   306
-                                         343   386   426  5702
-=KEY                               Abs     527 #0000020F -    25   180   189
-                                         271   315   352   395  1064  1090  5632
-                                        5921  5956
- LBL000                            Rel    7312 #00001C90 -  5984     7
-=LCD                               Rel     229 #000000E5 -   141   173
- MAKE$N                            Ext                   -    76  1163
-=MKS                               Rel    1801 #00000709 -  1159  1137  1145
-                                        1153
-=NCURSER                           Rel     452 #000001C4 -   243   290   329
-                                         368   410  5672
-=QUIT                              Rel     338 #00000152 -   185   192  1194
-=S                                 Abs  524564 #00080114 -    39    60  5371
-                                        5452  5642  5882  5926  5961
- SAVPTR                            Ext                   -    11  1122  1193
-                                        1200
-=SCREENADD                         Abs     288 #00000120 -    21    95   204
- SEMI                              Ext                   -  5986
-=TAB                               Rel     919 #00000397 -   461   143
-=TB                                Rel     683 #000002AB -   349   169
-=TD                                Rel     496 #000001F0 -   268   165
-=TDRAW                             Rel    6586 #000019BA -  5629   149
-=TG                                Rel     593 #00000251 -   312   166
-=TH                                Rel     780 #0000030C -   392   168
-=TNEXT                             Rel    7149 #00001BED -  5918   145
-=TPREV                             Rel    7237 #00001C45 -  5953   147
-=TQ                                Rel     319 #0000013F -   177   171
-=X                                 Abs  524549 #00080105 -    33    51   276
-                                         295   320   332   436  5368  5639  5727
-=X2                                Abs  524569 #00080119 -    41    63  1215
-                                        5428  5929
-=XY                                Rel     873 #00000369 -   432   247  5679
-=Y                                 Abs  524554 #0008010A -    35    54   357
-                                         373   400   413   443  5404  5741
+                                          92   103   217   991  1041  2049  2073
+                                        2109  2133  2157  2424  2608
+ GETPTR                            Ext                   -  1127  1193
+ GETPTRLOOP                        Ext                   -   211
+=GET_DAT                           Rel    3171 #00000C63 -  2233  2182
+=HEADERADD                         Abs     296 #00000128 -    19    69   202
+=HEXDCW                            Abs  188074 #0002DEAA -    23  2061  2097
+                                        2121  2145  2170
+=INC                               Rel    2861 #00000B2D -  2088  2094
+=INI.STACK                         Rel    1731 #000006C3 -  1125   127
+=JUCURSOR                          Rel     438 #000001B6 -   238   165   310
+                                         347   390   430  2416
+=KEY                               Abs     527 #0000020F -    25   184   193
+                                         275   319   356   399  1071  1098  2346
+                                        2637  2672
+ LBL000                            Rel    4006 #00000FA6 -  2700     7
+=LCD                               Rel     229 #000000E5 -   141   177
+ MAKE$N                            Ext                   -    76  1170
+=MKS                               Rel    1801 #00000709 -  1166  1144  1152
+                                        1160
+=NCURSER                           Rel     452 #000001C4 -   247   294   333
+                                         372   414  2386
+=QUIT                              Rel     338 #00000152 -   189   196  1201
+=S                                 Abs  524564 #00080114 -    39    60  2085
+                                        2166  2356  2598  2642  2677
+ SAVPTR                            Ext                   -    11  1129  1200
+                                        1207
+=SCREENADD                         Abs     288 #00000120 -    21    95   208
+ SEMI                              Ext                   -  2702
+=TAB                               Rel     919 #00000397 -   465   143
+=TB                                Rel     683 #000002AB -   353   173
+=TD                                Rel     496 #000001F0 -   272   167
+=TDRAW                             Rel    3280 #00000CD0 -  2343   149
+=TG                                Rel     593 #00000251 -   316   169
+=TH                                Rel     780 #0000030C -   396   171
+=TNEXT                             Rel    3843 #00000F03 -  2634   145
+=TPREV                             Rel    3931 #00000F5B -  2669   147
+=TQ                                Rel     319 #0000013F -   181   175
+=X                                 Abs  524549 #00080105 -    33    51   280
+                                         299   324   336   440  2082  2353  2441
+=X2                                Abs  524569 #00080119 -    41    63  1222
+                                        2142  2645
+=XY                                Rel     873 #00000369 -   436   251  2393
+=Y                                 Abs  524554 #0008010A -    35    54   361
+                                         377   404   417   447  2118  2455
  lBlcB20                           Rel     138 #0000008A -    85
  lBlcB21                           Rel     211 #000000D3 -   126
- lBlcB210                          Rel    6038 #00001796 -  5324
- lBlcB211                          Rel    6184 #00001828 -  5382
- lBlcB212                          Rel    6409 #00001909 -  5486  5477
- lBlcB213                          Rel    6447 #0000192F -  5503
- lBlcB214                          Rel    6475 #0000194B -  5514
- lBlcB215                          Rel    6642 #000019F2 -  5660
- lBlcB216                          Rel    6642 #000019F2 -  5658
- lBlcB217                          Rel    6668 #00001A0C -  5674
- lBlcB218                          Rel    6719 #00001A3F -  5694
- lBlcB219                          Rel    6813 #00001A9D -  5740  5733
- lBlcB21A                          Rel    6850 #00001AC2 -  5763  5751
- lBlcB21B                          Rel    6901 #00001AF5 -  5789  5781
- lBlcB21C                          Rel    6928 #00001B10 -  5808  5799
- lBlcB21D                          Rel    6964 #00001B34 -  5828
- lBlcB21E                          Rel    7007 #00001B5F -  5849
- lBlcB21F                          Rel    7078 #00001BA6 -  5879
- lBlcB22                           Rel     277 #00000115 -   162
- lBlcB220                          Rel    7147 #00001BEB -  5913
- lBlcB23                           Rel     436 #000001B4 -   229
- lBlcB24                           Rel     452 #000001C4 -   242
- lBlcB25                           Rel     494 #000001EE -   263
- lBlcB26                           Rel     551 #00000227 -   294
- lBlcB27                           Rel     641 #00000281 -   331
- lBlcB28                           Rel     735 #000002DF -   372
- lBlcB29                           Rel     828 #0000033C -   412
- lBlcB2A                           Rel    1437 #0000059D -   980
- lBlcB2B                           Rel    1500 #000005DC -  1011
- lBlcB2C                           Rel    1596 #0000063C -  1056
- lBlcB2D                           Rel    1909 #00000775 -  1205
- lBlcB2E                           Rel    1867 #0000074B -  1185
- lBlcB2F                           Rel    1896 #00000768 -  1196
+ lBlcB210                          Rel    2744 #00000AB8 -  2037
+ lBlcB211                          Rel    2878 #00000B3E -  2096
+ lBlcB212                          Rel    3103 #00000C1F -  2200  2191
+ lBlcB213                          Rel    3141 #00000C45 -  2217
+ lBlcB214                          Rel    3169 #00000C61 -  2228
+ lBlcB215                          Rel    3336 #00000D08 -  2374
+ lBlcB216                          Rel    3336 #00000D08 -  2372
+ lBlcB217                          Rel    3362 #00000D22 -  2388
+ lBlcB218                          Rel    3413 #00000D55 -  2408
+ lBlcB219                          Rel    3507 #00000DB3 -  2454  2447
+ lBlcB21A                          Rel    3544 #00000DD8 -  2477  2465
+ lBlcB21B                          Rel    3595 #00000E0B -  2503  2495
+ lBlcB21C                          Rel    3622 #00000E26 -  2522  2513
+ lBlcB21D                          Rel    3658 #00000E4A -  2544
+ lBlcB21E                          Rel    3701 #00000E75 -  2565
+ lBlcB21F                          Rel    3772 #00000EBC -  2595
+ lBlcB22                           Rel     277 #00000115 -   164
+ lBlcB220                          Rel    3841 #00000F01 -  2629
+ lBlcB23                           Rel     436 #000001B4 -   233
+ lBlcB24                           Rel     452 #000001C4 -   246
+ lBlcB25                           Rel     494 #000001EE -   267
+ lBlcB26                           Rel     551 #00000227 -   298
+ lBlcB27                           Rel     641 #00000281 -   335
+ lBlcB28                           Rel     735 #000002DF -   376
+ lBlcB29                           Rel     828 #0000033C -   416
+ lBlcB2A                           Rel    1437 #0000059D -   985
+ lBlcB2B                           Rel    1500 #000005DC -  1016
+ lBlcB2C                           Rel    1596 #0000063C -  1063
+ lBlcB2D                           Rel    1909 #00000775 -  1212
+ lBlcB2E                           Rel    1867 #0000074B -  1192
+ lBlcB2F                           Rel    1896 #00000768 -  1203
  lBloB10                           Rel     131 #00000083 -    81
  lBloB10s                          Rel     138 #0000008A -    85    85    81
  lBloB11                           Rel     198 #000000C6 -   113   117
- lBloB110                          Rel    1885 #0000075D -  1192
- lBloB110s                         Rel    1896 #00000768 -  1196  1196  1192
- lBloB111                          Rel    1944 #00000798 -  1226
- lBloB111s                         Rel    6038 #00001796 -  5324  5324  1226
- lBloB112                          Rel    6172 #0000181C -  5376
- lBloB112s                         Rel    6184 #00001828 -  5382  5382  5376
- lBloB113                          Rel    6394 #000018FA -  5474  5481
- lBloB113s                         Rel    6409 #00001909 -  5486  5486
- lBloB114                          Rel    6421 #00001915 -  5493  5501
- lBloB114s                         Rel    6447 #0000192F -  5503  5503
- lBloB115                          Rel    6471 #00001947 -  5511
- lBloB115s                         Rel    6475 #0000194B -  5514  5514  5511
- lBloB116                          Rel    6625 #000019E1 -  5645  5655
- lBloB116s                         Rel    6642 #000019F2 -  5660  5660
- lBloB117                          Rel    6630 #000019E6 -  5649
- lBloB117s                         Rel    6642 #000019F2 -  5658  5658  5649
- lBloB118                          Rel    6659 #00001A03 -  5669
- lBloB118s                         Rel    6668 #00001A0C -  5674  5674  5669
- lBloB119                          Rel    6695 #00001A27 -  5684  5692
- lBloB119s                         Rel    6719 #00001A3F -  5694  5694
- lBloB11A                          Rel    6795 #00001A8B -  5730  5737
- lBloB11As                         Rel    6813 #00001A9D -  5740  5740
- lBloB11B                          Rel    6825 #00001AA9 -  5746  5758
- lBloB11Bs                         Rel    6850 #00001AC2 -  5763  5763
- lBloB11C                          Rel    6877 #00001ADD -  5778  5786
- lBloB11Cs                         Rel    6901 #00001AF5 -  5789  5789
- lBloB11D                          Rel    6907 #00001AFB -  5795  5803
- lBloB11Ds                         Rel    6928 #00001B10 -  5808  5808
- lBloB11E                          Rel    6940 #00001B1C -  5814  5823
- lBloB11Es                         Rel    6964 #00001B34 -  5828  5828
- lBloB11F                          Rel    7003 #00001B5B -  5844
- lBloB11Fs                         Rel    7007 #00001B5F -  5849  5849  5844
+ lBloB110                          Rel    1885 #0000075D -  1199
+ lBloB110s                         Rel    1896 #00000768 -  1203  1203  1199
+ lBloB111                          Rel    1944 #00000798 -  1233
+ lBloB111s                         Rel    2744 #00000AB8 -  2037  2037  1233
+ lBloB112                          Rel    2866 #00000B32 -  2090
+ lBloB112s                         Rel    2878 #00000B3E -  2096  2096  2090
+ lBloB113                          Rel    3088 #00000C10 -  2188  2195
+ lBloB113s                         Rel    3103 #00000C1F -  2200  2200
+ lBloB114                          Rel    3115 #00000C2B -  2207  2215
+ lBloB114s                         Rel    3141 #00000C45 -  2217  2217
+ lBloB115                          Rel    3165 #00000C5D -  2225
+ lBloB115s                         Rel    3169 #00000C61 -  2228  2228  2225
+ lBloB116                          Rel    3319 #00000CF7 -  2359  2369
+ lBloB116s                         Rel    3336 #00000D08 -  2374  2374
+ lBloB117                          Rel    3324 #00000CFC -  2363
+ lBloB117s                         Rel    3336 #00000D08 -  2372  2372  2363
+ lBloB118                          Rel    3353 #00000D19 -  2383
+ lBloB118s                         Rel    3362 #00000D22 -  2388  2388  2383
+ lBloB119                          Rel    3389 #00000D3D -  2398  2406
+ lBloB119s                         Rel    3413 #00000D55 -  2408  2408
+ lBloB11A                          Rel    3489 #00000DA1 -  2444  2451
+ lBloB11As                         Rel    3507 #00000DB3 -  2454  2454
+ lBloB11B                          Rel    3519 #00000DBF -  2460  2472
+ lBloB11Bs                         Rel    3544 #00000DD8 -  2477  2477
+ lBloB11C                          Rel    3571 #00000DF3 -  2492  2500
+ lBloB11Cs                         Rel    3595 #00000E0B -  2503  2503
+ lBloB11D                          Rel    3601 #00000E11 -  2509  2517
+ lBloB11Ds                         Rel    3622 #00000E26 -  2522  2522
+ lBloB11E                          Rel    3634 #00000E32 -  2528  2539
+ lBloB11Es                         Rel    3658 #00000E4A -  2544  2544
+ lBloB11F                          Rel    3697 #00000E71 -  2560
+ lBloB11Fs                         Rel    3701 #00000E75 -  2565  2565  2560
  lBloB11s                          Rel     211 #000000D3 -   126   126
- lBloB12                           Rel     272 #00000110 -   156   158
- lBloB120                          Rel    7074 #00001BA2 -  5876
- lBloB120s                         Rel    7078 #00001BA6 -  5879  5879  5876
- lBloB121                          Rel    7125 #00001BD5 -  5901  5910
- lBloB121s                         Rel    7147 #00001BEB -  5913  5913
- lBloB12s                          Rel     277 #00000115 -   162   162
- lBloB13                           Rel     423 #000001A7 -   222   227
- lBloB13s                          Rel     436 #000001B4 -   229   229
- lBloB14                           Rel     443 #000001BB -   237
- lBloB14s                          Rel     450 #000001C2 -   239   237
- lBloB15                           Rel     450 #000001C2 -   239
- lBloB15s                          Rel     452 #000001C4 -   242   242   239
- lBloB16                           Rel     470 #000001D6 -   252   261
- lBloB16s                          Rel     494 #000001EE -   263   263
- lBloB17                           Rel     542 #0000021E -   287
- lBloB17s                          Rel     551 #00000227 -   294   294   287
- lBloB18                           Rel     632 #00000278 -   327
- lBloB18s                          Rel     641 #00000281 -   331   331   327
- lBloB19                           Rel     726 #000002D6 -   365
- lBloB19s                          Rel     735 #000002DF -   372   372   365
- lBloB1A                           Rel     819 #00000333 -   407
- lBloB1As                          Rel     828 #0000033C -   412   412   407
- lBloB1B                           Rel     925 #0000039D -   465
- lBloB1Bs                          Rel    1437 #0000059D -   980   980   465
- lBloB1C                           Rel    1474 #000005C2 -   997  1006
- lBloB1Cs                          Rel    1500 #000005DC -  1011  1011
- lBloB1D                           Rel    1572 #00000624 -  1044  1053
- lBloB1Ds                          Rel    1596 #0000063C -  1056  1056
- lBloB1E                           Rel    1801 #00000709 -  1157
- lBloB1Es                          Rel    1909 #00000775 -  1205  1205  1157
- lBloB1F                           Rel    1854 #0000073E -  1178  1183
- lBloB1Fs                          Rel    1867 #0000074B -  1185  1185
-Saturn Assembler                                       Thu Mar 23 03:04:15 2017
+ lBloB12                           Rel     272 #00000110 -   158   160
+ lBloB120                          Rel    3768 #00000EB8 -  2592
+ lBloB120s                         Rel    3772 #00000EBC -  2595  2595  2592
+ lBloB121                          Rel    3819 #00000EEB -  2617  2626
+ lBloB121s                         Rel    3841 #00000F01 -  2629  2629
+ lBloB12s                          Rel     277 #00000115 -   164   164
+ lBloB13                           Rel     423 #000001A7 -   226   231
+ lBloB13s                          Rel     436 #000001B4 -   233   233
+ lBloB14                           Rel     443 #000001BB -   241
+ lBloB14s                          Rel     450 #000001C2 -   243   241
+ lBloB15                           Rel     450 #000001C2 -   243
+ lBloB15s                          Rel     452 #000001C4 -   246   246   243
+ lBloB16                           Rel     470 #000001D6 -   256   265
+ lBloB16s                          Rel     494 #000001EE -   267   267
+ lBloB17                           Rel     542 #0000021E -   291
+ lBloB17s                          Rel     551 #00000227 -   298   298   291
+ lBloB18                           Rel     632 #00000278 -   331
+ lBloB18s                          Rel     641 #00000281 -   335   335   331
+ lBloB19                           Rel     726 #000002D6 -   369
+ lBloB19s                          Rel     735 #000002DF -   376   376   369
+ lBloB1A                           Rel     819 #00000333 -   411
+ lBloB1As                          Rel     828 #0000033C -   416   416   411
+ lBloB1B                           Rel     925 #0000039D -   470
+ lBloB1Bs                          Rel    1437 #0000059D -   985   985   470
+ lBloB1C                           Rel    1474 #000005C2 -  1002  1011
+ lBloB1Cs                          Rel    1500 #000005DC -  1016  1016
+ lBloB1D                           Rel    1572 #00000624 -  1050  1060
+ lBloB1Ds                          Rel    1596 #0000063C -  1063  1063
+ lBloB1E                           Rel    1801 #00000709 -  1164
+ lBloB1Es                          Rel    1909 #00000775 -  1212  1212  1164
+ lBloB1F                           Rel    1854 #0000073E -  1185  1190
+ lBloB1Fs                          Rel    1867 #0000074B -  1192  1192
+Saturn Assembler                                       Thu Mar 23 03:34:39 2017
 V3.0.9 (04/15/2007)   Statistics                         smhp_editor_50 Page    3
 
 Input Parameters
