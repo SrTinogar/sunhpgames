@@ -1,0 +1,5589 @@
+                      +------------------------+
+                      |  The HP48G and HP49G   |
+                      | Supported Entry Points |
+                      |    Cross Reference     |
+                      +------------------------+
+                             by Joe Horn
+
+                      Revised 24 September 1999
+                      for Vger ROM version 1.12
+
+                 +----------------------------------+
+                 | SORTED IN HP49 HEX ADDRESS ORDER |
+                 +----------------------------------+
+
+Note: 6-digit entries are either ROMPTRs or FLASHPTRs.
+When using LIBEVAL, remember to swap the first three digits
+with the last 3 digits; e.g. for 012345, use #345012 LIBEVAL.
+The FLASHEVAL values work as-is.
+6-digit entries in the HP48 column are for the 48G/GX only.
+
+ROMPTR names are preceded by ~ (e.g. ~FOO)
+FLASHPTR names are preceded by ^ (e.g. ^FOO)
+User RPL commands are preceded by x (e.g. xFOO).
+Thus, ^xFOO would be a FLASHPTR User RPL command.
+Omit these leading characters when searching alphabetically;
+all of the above examples are alphabetized as "FOO".
+
+Keep in mind that command names were limited to 12 characters in HP48
+System RPL and Assembly Language, but HP49 names can be longer, so be
+sure to truncate names to 12 characters when searching for a 48 name.
+For example, the following two objects are really the same:
+HP48: ~grobAlertIc
+HP49: ~grobAlertIcon
+
+Note: FLASHPTR's 102007 through 11C007 appear in this table, but are
+valid only in ROM versions 1.11 and higher.
+They generate the "Undefined FPTR Name" error (ERRN: #11h) if used in
+ROM versions 1.10 or below.
+
+Although this is advertised as a list of "supported" entry points,
+there are many entries that are supported in the 49 that were never
+supported in the 48 *but* remained at the same ROM address in all
+versions of the 48 (A through R).  These entries can be used with
+confidence in the 48 and 49, and are marked "U.B.S." (Unsupported
+But Stable in the 48; supported in the 49).
+
+"ML" in the comment area means that it's a Machine Language entry
+point, not the address of an RPL object.  Do not use SYSEVAL on them!
+
+ HP48G  HP49G   ENTRY POINT NAME
+ -----  -----   ----------------
+ 00001  00001   sTRUNC                   ** 48/49 **
+ 00002  00002   sFLUSH                   ** 48/49 **
+ 00002  00002   sNEGATE                  ** 48/49 **
+ 00003  00003   DZP                      ** 48/49 **
+ -----      4   AccessGetID
+ 00004  00004   sBPOFF                   ** 48/49 **
+ 00008  00008   sBEG                     ** 48/49 **
+ 0000A  0000A   portnotaverr             ** 48/49 **
+ 0000F  0000F   sALLOWINTR               ** 48/49 **
+ 001FF  000FF   allkeys
+ 00104  00104   CRC                      ** 48/49 **
+ 0010B  0010B   ANNCTRL                  ** 48/49 **
+ 00110  00110   IOC                      ** 48/49 **
+ 00111  00111   RCS                      ** 48/49 **
+ 00112  00112   TCS                      ** 48/49 **
+ 00113  00113   CRER                     ** 48/49 **
+ 00114  00114   RBR                      ** 48/49 **
+ 00116  00116   TBR                      ** 48/49 **
+ 0011A  0011A   IRC                      ** 48/49 **
+ 0011F  0011F   IRAM@                    ** 48/49 **
+ 0012E  0012E   TIMERCTRL.1              ** 48/49 **
+ 0012F  0012F   TIMERCTRL.2              ** 48/49 **
+ 00137  00137   TIMER1                   ** 48/49 **
+ 00138  00138   TIMER2                   ** 48/49 **
+ 00202  00202   argtypeerr               ** 48/49 **
+ 00203  00203   argvalerr                ** 48/49 **
+ 0115A  0020A   AINRTN
+ -----  0020F   OUTCINRTN
+ 01160  00212   CINRTN
+ 00301  00301   posunferr                ** 48/49 **
+ 00302  00302   negunferr                ** 48/49 **
+ 00303  00303   ofloerr                  ** 48/49 **
+ 00305  00305   infreserr                ** 48/49 **
+ 00A03  00A03   intrptderr               ** 48/49 **
+ 00D48  00A0E   addrKEYSTATE
+ 00B02  00B02   constuniterr             ** 48/49 **
+ 00C02  00C02   timeouterr               ** 48/49 **
+ 00C06  00C06   xferfailerr              ** 48/49 **
+ 00C0D  00C0D   kermsendmsg              ** 48/49 **
+ 00C0E  00C0E   kermrecvmsg              ** 48/49 **
+ 00C10  00C10   kermpktmsg               ** 48/49 **
+ 00C13  00C13   prtparerr                ** 48/49 **
+ 00C14  00C14   lowbaterr                ** 48/49 **
+ -----  01118   LowBat?
+ 0188D  01661   addrORghost
+ -----  02614   DOINT
+ -----  0263A   DOLNGREAL
+ -----  02660   DOLNGCMP
+ -----  02686   DOMATRIX
+ -----  026AC   DOFLASHP
+ -----  026D5   DOAPLET
+ -----  026FE   DOMINIFONT
+ 028FC  028FC   PRLG                     ** 48/49 **
+ 02911  02911   DOBINT                   ** 48/49 **
+ 02933  02933   DOREAL                   ** 48/49 **
+ 02955  02955   DOEREL                   ** 48/49 **
+ 02977  02977   DOCMP                    ** 48/49 **
+ 0299D  0299D   DOECMP                   ** 48/49 **
+ 029BF  029BF   DOCHAR                   ** 48/49 **
+ 029E8  029E8   DOARRY                   ** 48/49 **
+ 02A0A  02A0A   DOLNKARRY                ** 48/49 **
+ 02A2C  02A2C   DOCSTR                   ** 48/49 **
+ 02A4E  02A4E   DOHSTR                   ** 48/49 **
+ 02A4E  02A4E   DOHXS                    ** 48/49 **
+ 02A74  02A74   DOLIST                   ** 48/49 **
+ 02A96  02A96   DORRP                    ** 48/49 **
+ 02AB8  02AB8   DOSYMB                   ** 48/49 **
+ 02ADA  02ADA   DOEXT                    ** 48/49 **
+ 02AFC  02AFC   DOTAG                    ** 48/49 **
+ 02B1E  02B1E   DOGROB                   ** 48/49 **
+ 02B40  02B40   DOLIB                    ** 48/49 **
+ 02B62  02B62   DOBAK                    ** 48/49 **
+ 02B88  02B88   DOEXT0                   ** 48/49 **
+ 02BAA  02BAA   DOACPTR                  ** 48/49 **
+ 02BAA  02BAA   DOEXT1                   ** 48/49 **
+ 02BCC  02BCC   DOEXT2                   ** 48/49 **
+ 02BEE  02BEE   DOEXT3                   ** 48/49 **
+ 02C10  02C10   DOEXT4                   ** 48/49 **
+ 02D9D  02D9D   DOCOL                    ** 48/49 **
+ 02DCC  02DCC   DOCODE                   ** 48/49 **
+ 02E48  02E48   DOIDNT                   ** 48/49 **
+ 02E6D  02E6D   DOLAM                    ** 48/49 **
+ 02E92  02E92   DOROMP                   ** 48/49 **
+ 03019  03019   SKIPOB                   ** 48/49 **
+ 0312B  0312B   SEMI                     ** 48/49 **
+ 0314C  0314C   DEPTH                    ** 48/49 **
+ 03188  03188   DUP                      ** 48/49 **
+ 031AC  031AC   2DUP                     ** 48/49 **
+ 031D9  031D9   NDUP                     ** 48/49 **
+ 03223  03223   SWAP                     ** 48/49 **
+ 03244  03244   DROP                     ** 48/49 **
+ 03249  03249   DropLoop                 ** 48/49 **
+ 03258  03258   2DROP                    ** 48/49 **
+ 0326E  0326E   NDROP                    ** 48/49 **
+ 03295  03295   ROT                      ** 48/49 **
+ 032C2  032C2   OVER                     ** 48/49 **
+ 032E2  032E2   PICK                     ** 48/49 **
+ 03325  03325   ROLL                     ** 48/49 **
+ 0339E  0339E   UNROLL                   ** 48/49 **
+ 0357C  0357C   PUSH#ALOOP               ** 48/49 **
+ 0357F  0357F   PUSH#LOOP                ** 48/49 **
+ 0366F  0366F   GPOverWrR0Lp             ** 48/49 **
+ 03672  03672   GPOverWrALp              ** 48/49 **
+ 036F7  036F7   Push#TLoop               ** 48/49 **
+ 0371D  0371D   GETATELN                 ** 48/49 **
+ 03991  03991   MUL#                     ** 48/49 **
+ 039BE  039BE   GETTEMP                  ** 48/49 **
+ 039EF  039EF   ECUSER                   ** 48/49 **
+ 03A81  03A81   TRUE                     ** 48/49 **
+ 03A86  03A86   PUSHA                    ** 48/49 **
+ 03AC0  03AC0   FALSE                    ** 48/49 **
+ 03ADA  03ADA   XOR                      ** 48/49 **
+ 03AF2  03AF2   NOT                      ** 48/49 **
+ 03B2E  03B2E   EQ                       ** 48/49 **
+ 03B46  03B46   AND                      ** 48/49 **
+ 03B75  03B75   OR                       ** 48/49 **
+ 03B97  03B97   EQUAL                    ** 48/49 **
+ 03C64  03C64   TYPE                     ** 48/49 **
+ 03CA6  03CA6   #0=                      ** 48/49 **
+ 03CC7  03CC7   #0<>                     ** 48/49 **
+ 03CE4  03CE4   #<                       ** 48/49 **
+ 03D19  03D19   #=                       ** 48/49 **
+ 03D4E  03D4E   #<>                      ** 48/49 **
+ 03D83  03D83   #>                       ** 48/49 **
+ 03DBC  03DBC   #+                       ** 48/49 **
+ 03DC7  03DC7   #PUSHA-                  ** 48/49 **
+ 03DE0  03DE0   #-                       ** 48/49 **
+ 03DEF  03DEF   #1+                      ** 48/49 **
+ 03E0E  03E0E   #1-                      ** 48/49 **
+ 03E2D  03E2D   #2+                      ** 48/49 **
+ 03E4E  03E4E   #2-                      ** 48/49 **
+ 03E6F  03E6F   #2*                      ** 48/49 **
+ 03E8E  03E8E   #2/                      ** 48/49 **
+ 03EB1  03EB1   #AND                     ** 48/49 **
+ 03EC2  03EC2   #*                       ** 48/49 **
+ 03EF7  03EF7   #/                       ** 48/49 **
+ 03F14  03F14   Push2#Loop               ** 48/49 **
+ 03F24  03F24   IntDiv                   ** 48/49 **
+ 03F5D  03F5D   POP2#                    ** 48/49 **
+ 03F8B  03F8B   TYPEREAL                 ** 48/49 **
+ 03FA9  03FA9   TYPEIDNT                 ** 48/49 **
+ 041A7  041A7   TurnOff                  ** 48/49 **
+ 041ED  041ED   DEEPSLEEP                ** 48/49 **
+ 0426A  0426A   ShowInvRomp              ** 48/49 **
+ 04292  04292   DeepSleep                ** 48/49 **
+ 04708  04708   CHECKKEY                 ** 48/49 **
+ 04714  04714   GETTOUCH                 ** 48/49 **
+ 047C7  047C7   REPKEY?                  ** 48/49 **
+ 047CF  047CF   adrDISABLE_K             ** 48/49 **
+ 047DD  047DD   adrKEYBUFFER             ** 48/49 **
+ 04840  04840   POPKEY                   ** 48/49 **
+ 04929  04929   liteslp                  ** 48/49 **
+ 04999  04999   KeyInBuff?               ** 48/49 **
+ 04A0B  04A0B   GETPROC                  ** 48/49 **
+ 04A41  04A41   GETDF                    ** 48/49 **
+ 04CE6  04CE6   ERROR@                   ** 48/49 **
+ 04D0E  04D0E   ERRORSTO                 ** 48/49 **
+ 04D33  04D33   ERRORCLR                 ** 48/49 **
+ 04D3E  04D3E   DROPNULL$                ** 48/49 **
+ 04D64  04D64   GETTHEMESG               ** 48/49 **
+ 04D87  04D87   JstGETTHEMSG             ** 48/49 **
+ 04E07  04E07   GETEXITMSG               ** 48/49 **
+ 04E37  04E37   EXITMSGSTO               ** 48/49 **
+ 04E5E  04E5E   ERRSET                   ** 48/49 **
+ 04E66  04E66   addrTEMPENV              ** 48/49 **
+ 04EA4  04EA4   ABORT                    ** 48/49 **
+ 04EB8  04EB8   ERRTRAP                  ** 48/49 **
+ 04ED1  04ED1   ERRJMP                   ** 48/49 **
+ 04FB6  04FB6   SETMEMERR                ** 48/49 **
+ 04FBB  04FBB   DOMEMERR                 ** 48/49 **
+ 04FF2  04FF2   SETPORTNOTAV             ** 48/49 **
+ 05016  05016   SETROMPERR               ** 48/49 **
+ 05023  05023   Errjmp                   ** 48/49 **
+ 05040  05040   ATTNFLG@                 ** 48/49 **
+ 05068  05068   ATTNFLGCLR               ** 48/49 **
+ 05089  05089   CARCOMP                  ** 48/49 **
+ 050ED  050ED   CAR$                     ** 48/49 **
+ 05143  05143   GETPTRLOOP               ** 48/49 **
+ 2D564  05149   Loop
+ 05153  05153   CDRCOMP                  ** 48/49 **
+ 0516C  0516C   CDR$                     ** 48/49 **
+ 0518A  0518A   &HXS                     ** 48/49 **
+ 05193  05193   &$                       ** 48/49 **
+ 0521F  0521F   &COMP                    ** 48/49 **
+ 0525B  0525B   >H$                      ** 48/49 **
+ 052C6  052C6   >HCOMP                   ** 48/49 **
+ 052EE  052EE   >T$                      ** 48/49 **
+ 052FA  052FA   >TCOMP                   ** 48/49 **
+ 05445  05445   ::N                      ** 48/49 **
+ 05459  05459   {}N                      ** 48/49 **
+ 0546D  0546D   SYMBN                    ** 48/49 **
+ 05481  05481   EXTN                     ** 48/49 **
+ 054AF  054AF   INNERCOMP                ** 48/49 **
+ 0554C  0554C   DOGARBAGE                ** 48/49 **
+ 0556F  0556F   NULL$?                   ** 48/49 **
+ 055B7  055B7   NULLCOMP?                ** 48/49 **
+ 055D5  055D5   NULLHXS                  ** 48/49 **
+ 055DF  055DF   NULL$                    ** 48/49 **
+ 055E9  055E9   NULL{}                   ** 48/49 **
+ 055FD  055FD   NULL::                   ** 48/49 **
+ 05616  05616   LENHXS                   ** 48/49 **
+ 05622  05622   OVERLEN$                 ** 48/49 **
+ 05636  05636   LEN$                     ** 48/49 **
+ 0567B  0567B   LENCOMP                  ** 48/49 **
+ 056B6  056B6   NTHELCOMP                ** 48/49 **
+ 05733  05733   SUB$                     ** 48/49 **
+ 05815  05815   SUBHXS                   ** 48/49 **
+ 05821  05821   SUBCOMP                  ** 48/49 **
+ 05902  05902   OSIZE                    ** 48/49 **
+ 05944  05944   OCRC                     ** 48/49 **
+ 0596D  0596D   PUSHhxsLoop              ** 48/49 **
+ 0597E  0597E   DoCRCc                   ** 48/49 **
+ 05981  05981   DoCRC                    ** 48/49 **
+ 059CC  059CC   #>HXS                    ** 48/49 **
+ 05A03  05A03   HXS>#                    ** 48/49 **
+ 05A51  05A51   CHR>#                    ** 48/49 **
+ 05A75  05A75   #>CHR                    ** 48/49 **
+ 05AB3  05AB3   CHANGETYPE               ** 48/49 **
+ 05B15  05B15   $>ID                     ** 48/49 **
+ 05B79  05B79   MAKE$                    ** 48/49 **
+ 05B7D  05B7D   MAKE$N                   ** 48/49 **
+ 05BE9  05BE9   ID>$                     ** 48/49 **
+ 05C27  05C27   %>C%                     ** 48/49 **
+ 05D2C  05D2C   C%>%                     ** 48/49 **
+ 05DBC  05DBC   C%%>%%                   ** 48/49 **
+ 05E81  05E81   >TAG                     ** 48/49 **
+ 05F2E  05F2E   ID>TAG                   ** 48/49 **
+ 05F42  05F42   GARBAGE                  ** 48/49 **
+ 05F61  05F61   MEM                      ** 48/49 **
+ 0613E  0613E   GARBAGECOL               ** 48/49 **
+ 06529  06529   PUSH2#                   ** 48/49 **
+ 06537  06537   PUSH#                    ** 48/49 **
+ 065AA  065AA   GPMEMERR                 ** 48/49 **
+ 06641  06641   POP#                     ** 48/49 **
+ 06657  06657   TOTEMPOB                 ** 48/49 **
+ 066B9  066B9   MOVEUP                   ** 48/49 **
+ 0670C  0670C   MOVEDOWN                 ** 48/49 **
+ 0675C  0675C   WIPEOUT                  ** 48/49 **
+ 0679B  0679B   SAVPTR                   ** 48/49 **
+ 067D2  067D2   GETPTR                   ** 48/49 **
+ 06806  06806   ROOM                     ** 48/49 **
+ 06992  06992   MOVERSD                  ** 48/49 **
+ 069C5  069C5   MOVEDSU                  ** 48/49 **
+ 069F7  069F7   ADJMEM                   ** 48/49 **
+ 06A1D  06A1D   MOVEDSD                  ** 48/49 **
+ 06A53  06A53   MOVERSU                  ** 48/49 **
+ 06A8E  06A8E   DIV5                     ** 48/49 **
+ 06AD8  06AD8   CREATETEMP               ** 48/49 **
+ 06B4E  06B4E   INTEMNOTREF?             ** 48/49 **  ob --> ob T/F
+ 06E8E  06E8E   NOP                      ** 48/49 **
+ 06E97  06E97   '                        ** 48/49 **
+ 06EEB  06EEB   'R                       ** 48/49 **
+ 06F66  06F66   'REVAL                   ** 48/49 **
+ 06F8E  06F8E   EVAL                     ** 48/49 **
+ 06F9F  06F9F   >R                       ** 48/49 **
+ 06FB7  06FB7   RDROP                    ** 48/49 **
+ 06FD1  06FD1   COLA                     ** 48/49 **
+ 07012  07012   R@                       ** 48/49 **
+ 0701F  0701F   R>                       ** 48/49 **
+ 070C3  070C3   RPITE                    ** 48/49 **
+ 070FD  070FD   RPIT                     ** 48/49 **
+ 0712A  0712A   ?SKIP                    ** 48/49 **
+ 0712A  0712A   NOT_IT                   ** 48/49 **
+ 0714D  0714D   SKIP                     ** 48/49 **
+ 0716B  0716B   IDUP                     ** 48/49 **
+ 071A2  071A2   BEGIN                    ** 48/49 **
+ 071AB  071AB   AGAIN                    ** 48/49 **
+ 071C8  071C8   UNTIL                    ** 48/49 **
+ 071E5  071E5   REPEAT                   ** 48/49 **
+ 071EE  071EE   WHILE                    ** 48/49 **
+ 07221  07221   INDEX@                   ** 48/49 **
+ 07249  07249   ISTOP@                   ** 48/49 **
+ 07258  07258   JINDEX@                  ** 48/49 **
+ 07264  07264   JSTOP@                   ** 48/49 **
+ 07270  07270   INDEXSTO                 ** 48/49 **
+ 07295  07295   ISTOPSTO                 ** 48/49 **
+ 072AD  072AD   JINDEXSTO                ** 48/49 **
+ 072C2  072C2   JSTOPSTO                 ** 48/49 **
+ 07334  07334   LOOP                     ** 48/49 **
+ 073A5  073A5   +LOOP                    ** 48/49 **
+ 073C3  073C3   ZERO_DO                  ** 48/49 **
+ 073CE  073CE   ONE_DO                   ** 48/49 **
+ 073DB  073DB   #1+_ONE_DO               ** 48/49 **
+ 073F7  073F7   DO                       ** 48/49 **
+ 07497  07497   ABND                     ** 48/49 **
+ 074D0  074D0   BIND                     ** 48/49 **
+ 074E4  074E4   DOBIND                   ** 48/49 **
+ 075A5  075A5   GETLAM                   ** 48/49 **
+ 075E9  075E9   PUTLAM                   ** 48/49 **
+ 07638  07638   SETHASH                  ** 48/49 **
+ 0764E  0764E   SETMESG                  ** 48/49 **
+ 07661  07661   SET                      ** 48/49 **
+ 076AE  076AE   OFFSRRP                  ** 48/49 **
+ 07709  07709   TOSRRP                   ** 48/49 **
+ 07943  07943   @LAM                     ** 48/49 **
+ 0797B  0797B   @                        ** 48/49 **
+ 07D1B  07D1B   STOLAM                   ** 48/49 **
+ 07D27  07D27   STO                      ** 48/49 **
+ 07E50  07E50   #>ROMPTR                 ** 48/49 **
+ 07E99  07E99   ROMPTR@                  ** 48/49 **
+ 081D9  081D9   BAKNAME                  ** 48/49 **
+ 082E3  082E3   RAM-WORDNAME             ** 48/49 **
+ 08309  08309   MYRAMROMPAIR             ** 48/49 **
+ 08326  08326   LASTRAM-WORD             ** 48/49 **
+ 08376  08376   PREVRAM-WORD             ** 48/49 **
+ 083D1  083D1   GETRRP                   ML, U.B.S.
+ 085D3  085D3   REPLACE                  ** 48/49 **
+ 08696  08696   CREATE                   ** 48/49 **
+ 08C27  08C27   PURGE                    ** 48/49 **
+ 08CCC  08CCC   ROMPTR>#                 ** 48/49 **
+ 08D08  08D08   CONTEXT!                 ** 48/49 **
+ 08D5A  08D5A   CONTEXT@                 ** 48/49 **
+ 08D66  08D66   SysPtr@                  ** 48/49 **
+ 08D92  08D92   HOMEDIR                  ** 48/49 **
+ 08D92  08D92   SYSCONTEXT               ** 48/49 **
+ 08DD4  08DD4   SYSRRP?                  ** 48/49 **
+ 0948E  0905F   BAK>OB
+ 0970A  092DB   InitEnab
+ -----  25565   LineW
+ -----  2556A   LineB
+ -----  2556F   LineG1
+ -----  25574   LineG2
+ -----  25579   LineXor
+ -----  2557E   Sub
+ -----  25583   Repl
+ -----  25588   Gor
+ -----  2558D   Gxor
+ -----  25592   SubRepl
+ -----  25597   SubGor
+ -----  2559C   SubGxor
+ -----  255A1   Grey?
+ -----  255A6   ZoomX
+ -----  255AB   ZoomY
+ -----  255B0   ScrollVGrob
+ -----  255B5   Distance
+ -----  255BA   PixonW
+ -----  255BF   PixonB
+ -----  255C4   PixonG1
+ -----  255C9   PixonG2
+ -----  255CE   PixonXor
+ -----  255D3   FBoxG1
+ -----  255D8   FBoxG2
+ -----  255DD   FBoxB
+ -----  255E2   FBoxXor
+ -----  255E7   LBoxW
+ -----  255EC   LBoxG1
+ -----  255F1   LBoxG2
+ -----  255F6   LBoxB
+ -----  255FB   LBoxXor
+ 53860  25636   HISTON?
+ 38D33  2564D   SetNAppKeyOK
+ 38D4F  2565A   DoStdKeys?               U.B.S.
+ 38D5D  2565F   SetDoStdKeys
+ 38D8A  25671   SetAppSuspOK
+ 38D9B  25676   ClrAppSuspOK
+ 38CDF  25683   SetBadPOLUI              U.B.S.
+ 38CFB  25690   AppMode?
+ 38D09  25695   SetAppMode
+ 38D17  2569A   ClrAppMode
+ 538C0  256A2   UNDO_ON?
+ 538CE  256A7   UNDO_ON
+ 538DC  256AC   UNDO_OFF
+ 538F8  256BE   NOBLINK
+ 53968  256EA   AlgEntry?
+ 53976  25719   SetAlgEntry
+ 53984  2571E   ClrAlgEntry
+ 53A3C  25790   INSERT?
+ 53A2E  25795   INSERT_MODE
+ 53A20  2579A   REPLACE_MODE
+ 53A4A  257A2   EditLExists?
+ 53A90  257BE   ClrNewEditL
+ 53AE4  257E2   NoIgnoreAlm
+ 417F3  2580E   SetRebuild
+ 418A4  25845   MenuDef@
+ 418D4  25863   MenuRowAct!
+ 418F4  25877   LabelDef!
+ 41904  25886   DoLabel
+ 41914  2588B   MenuKeyNS!
+ 41924  25890   MenuKeyNS@
+ 41934  2589A   DoMenuKeyNS
+ 41944  2589F   MenuKeyLS!
+ 41964  258B3   MenuKeyRS!
+ 41984  258C7   ReviewKey!
+ 419E4  25908   LastMenuDef!
+ 419F4  2590D   LastMenuDef@
+ 40A95  2593F   KeyOb0
+ 40A6F  25949   KeyOb!
+ 40A82  2594E   KeyOb@
+ 41F3F  25967   GetUserKeys
+ 4248E  2597B   CtlAlarm!
+ 424A1  25980   CtlAlarm@                U.B.S.
+ 0BCCF  25E67   !*triand
+ 0BC6F  25E68   !*trior
+ 51BE4  25E69   %+SWAP
+ 3FDFE  25E6A   'DoBadKey
+ 3FE12  25E6B   'DoBadKeyT
+ 3AA0A  25E6C   1A/LockA
+ 15978  25E6D   1stkdecomp$w
+ 3FDBD  25E6E   2DropBadKey
+ 41422  25E6F   >Review$
+ 4243E  25E70   ?ATTNQUIT
+ 42078  25E71   ?BlinkCursor
+ 3FF1B  25E72   ?CaseKeyDef
+ 3FF48  25E73   ?CaseRomptr@
+ 40E3D  25E74   ?ClrAlg
+ 40E5B  25E75   ?ClrAlgSetPr
+ 3FA7A  25E76   ?Key>UKeyOb
+ 26A2D  25E77   ?OKINALG
+ 1854F  25E78   ?PURGE_HERE
+ 18513  25E79   ?STO_HERE
+ 18513  25E79   XEQSTOID
+ 42113  25E7A   ALARMxcp
+ 1568F  25E7B   ALGeq?
+ 18873  25E7C   AND$
+ 420F5  25E7D   ATTNxcp
+ 126DF  25E7E   BLANKIT
+ 3EC99  25E7F   Box/StdLabel
+ 3ECB2  25E80   Box/StdLbl:
+ 51EFA  25E81   C%1/
+ 519CB  25E82   C%>%%
+ 519DF  25E83   C%>%%SWAP
+ 52062  25E84   C%ABS
+ 52863  25E85   C%ACOS
+ 52836  25E86   C%ACOSH
+ 52305  25E87   C%ALOG
+ 52099  25E88   C%ARG
+ 52804  25E89   C%ASIN
+ 5281D  25E8A   C%ASINH
+ 52675  25E8B   C%ATAN
+ 527EB  25E8C   C%ATANH
+ 52571  25E8D   C%COS
+ 52648  25E8E   C%COSH
+ 52374  25E8F   C%C^C
+ 52360  25E90   C%C^R
+ 52193  25E91   C%EXP
+ 521E3  25E92   C%LN
+ 522BF  25E93   C%LOG
+ 52342  25E94   C%R^C
+ 520CB  25E95   C%SGN
+ 52530  25E96   C%SIN
+ 5262F  25E97   C%SINH
+ 52107  25E98   C%SQRT
+ 525B7  25E99   C%TAN
+ 5265C  25E9A   C%TANH
+ 519B7  25E9B   C>Im%
+ 519A3  25E9C   C>Re%
+ 23768  25E9D   CK0ATTNABORT
+ 1592D  25E9E   CK1NoBlame
+ 37B44  25E9F   CKREF
+ 12770  25EA0   COERCE$22
+ 184E1  25EA1   CREATEDIR
+ 1578D  25EA2   CRUNCH
+ 15941  25EA3   CRUNCHNoBlame
+ 41111  25EA6   CheckMenuRow
+ 41CA2  25EA7   Ck&DecKeyLoc
+ 142FB  25EA8   Ck&Freeze
+ 41D92  25EA9   CodePl>%rc.p
+ 15B13  25EAA   DECOMP$
+ 12725  25EAB   DISPROW1*
+ 12748  25EAC   DISPROW2*
+ 1270C  25EAD   DISPSTATUS2
+ 1502F  25EAE   DO#EXIT
+ 15048  25EAF   DO$EXIT
+ 15007  25EB0   DO%EXIT
+ 14088  25EB1   DO>STR
+ 1415A  25EB2   DOBEEP
+ 140F1  25EB3   DOCHR
+ 140AB  25EB4   DODISP
+ 1572B  25EB5   DORCLE
+ 15717  25EB6   DOSTOE
+ 14137  25EB7   DOSTR>
+ 186E8  25EB8   DOTVARS%
+ 18779  25EB9   DOVARS
+ 167BF  25EBA   DPRADIX?
+ 5179E  25EBB   DUPGROBDIM
+ 3A4CE  25EBC   Disp5x7
+ 153FC  25EBD   DispVarsUtil
+ 3EE1A  25EBE   Do1st/2nd+:
+ 3FDD1  25EBF   DoBadKey
+ 42475  25EC0   DoCAlarmKey
+ 40DD4  25EC1   DoDelim
+ 40DF7  25EC2   DoDelims
+ 3B211  25EC3   DoFirstRow
+ 185C7  25EC4   DoHere:
+ 40454  25EC5   DoKeyOb
+ 40DC0  25EC6   DoMenuKey
+ 40350  25EC7   DoNameKeyLRS
+ 40337  25EC8   DoNameKeyRS
+ 3A71C  25EC9   DoNextRow
+ 3ADED  25ECA   DoPlotMenu
+ 3A735  25ECB   DoPrevRow
+ 3BE54  25ECC   DoSolvrMenu
+ 3FDC7  25ECD   DropBadKey
+ 15A0E  25ECE   EDITDECOMP$
+ 15744  25ECF   EQUATION
+ 1583C  25ED0   EVALCRUNCH
+ 3EE47  25ED1   Echo2Macros
+ 3BDFA  25ED2   EditMenu
+ 152FF  25ED3   EqList?
+ 12B85  25ED4   FlashMsg
+ 5187F  25ED5   GBUFFGROBDIM
+ 42159  25ED6   GETKEY
+ 420A0  25ED7   GETKEY*
+ 12F94  25ED8   GROB>GDISP
+ 4203C  25ED9   GetKeyOb
+ 415C9  25EDA   GetMenu%
+ 26162  25EDB   GetNextToken
+ 3FE44  25EDC   H/W>KeyCode
+ 3FE26  25EDD   H/WKey>KeyOb
+ 12B6C  25EDE   HARDHEIGHT
+ 408AA  25EDF   ImmedEntry?
+ 40F86  25EE0   InitMenu
+ 41679  25EE1   InitMenu%
+ 41741  25EE2   InitTrack:
+ 42402  25EE3   KEYINBUFFER?
+ 1553B  25EE4   KeepUnit
+ 3FB1A  25EE5   Key>StdKeyOb
+ 3FA57  25EE6   Key>U/SKeyOb
+ 18621  25EE7   LastNonNull
+ 41175  25EE8   LoadTouchTbl
+ 40D25  25EE9   LockAlpha
+ 3FE7B  25EEA   ModifierKey?
+ 0AB82  25EEB   NEXTLIBBAK
+ 1613F  25EEC   NULL$TEMP
+ 4245C  25EED   NoAttn?Semi
+ 40D93  25EEE   NoEdit?case
+ 3EC85  25EEF   NoExitAction
+ 18887  25EF0   OR$
+ 1848C  25EF1   PATHDIR
+ 1863A  25EF2   PrevNonNull
+ 53BDD  25EF3   RAD?
+ 130AC  25EF4   RECLAIMDISP
+ 40E88  25EF5   REPEATER
+ 51735  25EF6   REPEATERCH
+ 1853B  25EF7   SAFE@_HERE
+ 127A7  25EF8   SEP$NL
+ 42131  25EFA   SLEEPxcp
+ 4139B  25EFB   SaveLastMenu
+ 3FCAF  25EFC   SetKeysNS
+ 3A9E7  25EFD   SetSomeRow
+ 410C6  25EFE   SetThisRow
+ 151A6  25EFF   SolvMenuInit
+ 41008  25F00   StartMenu
+ 3ED0C  25F01   Std/BoxLabel
+ 401D4  25F02   StdMenuKeyLS
+ 4019D  25F03   StdMenuKeyNS
+ 1446F  25F04   SuspendOK?
+ 3A9CE  25F05   TurnOffKey
+ 42249  25F06   UART?
+ 42145  25F07   UARTxcp
+ 40D39  25F08   UnLockAlpha
+ 41A8D  25F09   UserKeys?
+ 17B86  25F0A   VLM
+ 41F65  25F0B   WaitForKey
+ 40F22  25F0C   XEQStoKey
+ 1889B  25F0D   XOR$
+ 128B0  25F0E   XYGROBDISP
+ 162B8  25F0F   a%>$
+ 162AC  25F0F   a%>$,
+ 15A40  25F10   ederr
+ 15B31  25F11   editdecomp$w
+ 14C17  25F12   sstDISP
+ 159EB  25F13   stkdecomp$w
+ 18595  25F14   XEQPGDIR
+ -----  25F15   >FONT
+ -----  25F16   DISP_LINE
+ -----  25F17   GetMetaVStackDROP
+ -----  25F18   GetVStack
+ -----  25F19   PopMetaVStack
+ -----  25F1A   PopMetaVStackDROP
+ -----  25F1B   PopVStack
+ -----  25F1C   PopVStackAbove
+ -----  25F1D   PushMetaVStack&Drop
+ -----  25F1E   PushVStack
+ -----  25F1F   PushVStack&Clear
+ -----  25F20   PushVStack&Keep
+ -----  25F21   PushVStack&KeepDROP
+ -----  25F22   RestoreSysFlags
+ -----  25F23   SaveSysFlags
+ 1200C  25F24   RIGHT$3x6
+ 18C4A  25F25   CKNNOLASTWD
+ -----  25F2A   Keyword?
+ 4E266  25F2B   CHECKMENU
+ 644EE  25F2C   Find1stT.1
+ 3E586  25F2D   TogInsertKey
+ -----  25F63   !REDIMUSER
+ -----  25F68   !REDIMTEMP
+ 265ED  25F6D   realPAcode
+ 167D8  25F72   #:>$
+ 167E4  25F77   #>$
+ 11D00  25F7C   $>GROB
+ 11F80  25F81   $>grob
+ -----  25F86   $>GROBCR
+ -----  25F8B   $>grobCR
+ -----  25F90   >LANGUAGE
+ -----  25F95   LANGUAGE>
+ 1884D  25F9A   0LASTOWDOB!
+ 1884D  25F9A   0LastRomWrd!
+ 715B1  25F9F   ?ACCPTR>
+ 12655  25FA4   ABUFF
+ 422A1  25FA9   ALARM?
+ 42262  25FAE   ATTN?
+ 123C8  25FB3   BIGDISPN
+ 12429  25FB3   DISPN
+ 12415  25FB8   BIGDISPROW1
+ 1245B  25FB8   DISP@01
+ 1245B  25FB8   DISPROW1
+ 12405  25FBD   BIGDISPROW2
+ 1246B  25FBD   DISP@09
+ 1246B  25FBD   DISPROW2
+ 123F5  25FC2   BIGDISPROW3
+ 1247B  25FC2   DISP@17
+ 1247B  25FC2   DISPROW3
+ 123E5  25FC7   BIGDISPROW4
+ 1248B  25FC7   DISP@25
+ 1248B  25FC7   DISPROW4
+ 1249B  25FCC   DISPROW5
+ 124BB  25FD1   DISPROW7
+ 124CB  25FD6   DISPROW8
+ -----  25FDB   DISPROW9
+ -----  25FE0   DISPROW10
+ -----  25FE5   DISPLASTROW
+ -----  25FEA   DISPLASTROWBUT1
+ 1215E  25FEF   CENTER$3x5
+ -----  25FF4   CENTER$5x7
+ -----  25FF9   LEFT$3x5
+ -----  25FFE   LEFT$5x7
+ -----  26003   LEFT$5x7Arrow
+ -----  26008   LEFT$3x5Arrow
+ -----  2600D   LEFT$5x7CRArrow
+ -----  26012   LEFT$3x5CRArrow
+ -----  26017   LEFT$5x7CR
+ -----  2601C   LEFT$3x5CR
+ 134AE  26021   CLEARVDISP
+ 5380E  2602B   COERCEFLAG
+ 13E85  26030   CURSOR_OFF
+ 1133A  26035   ClrAlphaAnn
+ 1136E  2603A   ClrLeftAnn
+ 11354  2603F   ClrRightAnn
+ 53761  26044   ClrSysFlag
+ 53755  26049   ClrUserFlag
+ 166FB  2604E   DOENG
+ 166E3  26053   DOFIX
+ 166EF  26058   DOSCI
+ 16707  2605D   DOSTD
+ 18308  26062   DropSysObs
+ 141E5  26067   ERRBEEP
+ -----  2606C   ERASE&LEFT$5x7
+ -----  26071   ERASE&LEFT$3x5
+ 419C4  26076   ExitAction!
+ 12665  26076   GBUFF
+ 11679  2607B   GROB!
+ 11A6D  26080   GROB!ZERO
+ 50578  26085   GROBDIM
+ 1518D  2608A   GsstFIN
+ 12635  2608F   HARDBUFF
+ 12645  26094   HARDBUFF2
+ 12DD1  26099   HEIGHTENGROB
+ 122FF  2609E   INVGROB
+ 13061  260A3   KILLGDISP
+ 4186E  260A8   LastMenuRow!
+ 41881  260AD   LastMenuRow@
+ 1158F  260B2   MAKEGROB
+ 41848  260B7   MenuRow!
+ 4185B  260BC   MenuRow@
+ 10FC6  260C1   NOHALTERR
+ 27244  260C6   NOTLISTcase
+ 27264  260CB   NOTROMPcase
+ 27254  260D0   NOTSECOcase
+ 1380F  260D5   PIXOFF3
+ 13825  260DA   PIXON3
+ 1383B  260DF   PIXOFF
+ 1384A  260E4   PIXON
+ 13986  260E9   PIXON?3
+ 13992  260EE   PIXON?
+ 355C8  260F3   PULLCMPEL
+ 355B8  260F8   PULLREALEL
+ 356F3  260FD   PUTCMPEL
+ 35628  26102   PUTEL
+ 3566F  26107   PUTREALEL
+ 11511  2610C   PrgmEntry?
+ 14EA5  26111   RDUP
+ 11016  26116   SETCIRCERR
+ 13F29  2611B   SETCURSOR                U.B.S.
+ 40EE7  26120   SLOW
+ 40F02  26125   VERYSLOW
+ 40F12  2612A   VERYVERYSLOW
+ 1192F  2612F   SUBGROB
+ 10F86  26134   SYNTAXERR
+ 1132D  26139   SetAlphaAnn
+ 11361  2613E   SetLeftAnn
+ 11533  26143   SetPrgmEntry
+ 11347  26148   SetRightAnn
+ 53731  2614D   SetSysFlag
+ 53725  26152   SetUserFlag
+ 40792  26157   SystemLevel?
+ 4227F  26161   TIMEOUT?
+ 1314D  26166   TOADISP
+ 13135  2616B   TOGDISP
+ 53784  26170   TestSysFlag
+ 53778  26175   TestUserFlag
+ 137B6  2617F   WINDOWCORNER
+ 13220  26184   WINDOWDOWN
+ 134E4  26189   WINDOWLEFT
+ 1357F  2618E   WINDOWRIGHT
+ 131C8  26193   WINDOWUP
+ 13679  26198   WINDOWXY
+ 1605F  2619D   addtics
+ 15A60  261A2   rstfmt1
+ 15A8B  261A7   savefmt1
+ 141B2  261AC   setbeep
+ 1686A  261B1   stackitw
+ 29BC2  261B6   subpdcdptch
+ 0BD60  261BB   tok8trior
+ 01F6D  261C0   CLCD10
+ 01FA7  261C5   CLEARLCD
+ 00D71  261CA   FLUSH
+ 00D71  261CA   FLUSHKEYS
+ 51A07  261CF   %%>C%
+ 51B2A  261D4   C%%0=
+ 519F8  261D9   C%%>C%
+ 51B91  261DE   C%%CHS
+ 51BC1  261E3   C%%CONJ
+ 51B43  261E8   C%0=
+ 51B70  261ED   C%CHS
+ 51BB2  261F2   C%CONJ
+ 124AB  261F7   DISPROW6
+ 51A37  261FC   Re>C%
+ 29A8D  26201   nextsym'R
+ 0BD54  26206   tok8cktrior
+ -----  2620B   >MINIFONT
+ -----  26210   CHECK_SCAN_FONT
+ -----  26215   DropVStack
+ -----  2621A   FONT>
+ -----  2621F   FSCANFONT
+ -----  26224   GetElemBotVStack
+ -----  26229   GetElemTopVStack
+ -----  2622E   SetVStackProtectWord
+ -----  26233   GetVStackProtectWord
+ -----  26238   GetFontCmdHeight
+ -----  2623D   GetFontHeight
+ -----  26242   GetFontStkHeight
+ -----  26242   StackFontHeight
+ -----  26247   GetHeader
+ -----  2624C   GetMetaVStack
+ -----  26251   InitVirtualStack
+ -----  26256   INITMKFONT
+ -----  2625B   MINIFONT>
+ -----  26260   nDISPSTACK
+ -----  26265   PushMetaVStack
+ -----  2626A   PutElemBotVStack
+ -----  2626F   PutElemTopVStack
+ -----  26274   RCL_NB_AFF_LGN
+ -----  26279   RCL_NB_AFF_LGNSTK
+ -----  2627E   SCANFONT
+ -----  26283   SetHeader
+ -----  26288   StackLineHeight
+ -----  2628D   STO_ML_DISP_SIZE
+ 18A15  26292   CK0NOLASTWD
+ 18AB2  26297   CK1NOLASTWD
+ 18A8D  2629C   CK2NOLASTWD
+ 18A68  262A1   CK3NOLASTWD
+ 18B9F  262A6   CK4NOLASTWD
+ 18B7A  262AB   CK5NOLASTWD
+ 18A1E  262B0   CK0
+ 18AA5  262B5   CK1
+ 18A80  262BA   CK2
+ 18A5B  262BF   CK3
+ 18B92  262C4   CK4
+ 18B6D  262C9   CK5
+ 18C34  262CE   CKN
+ 18CA2  262D8   SETSIZEERR
+ 18CB2  262DD   SETTYPEERR
+ 18CC2  262E2   SETSTACKERR
+ 18C92  262E7   SETNONEXTERR
+ 18CD7  262EC   %ABSCOERCE
+ 18CEA  262F1   COERCE
+ 18DBF  262F6   UNCOERCE
+ 18EBA  262FB   COMPEVAL
+ 18ECE  26300   CK1&Dispatch
+ 18EDF  26305   CK2&Dispatch
+ 18EF0  2630A   CK3&Dispatch
+ 18F01  2630F   CK4&Dispatch
+ 18F12  26314   CK5&Dispatch
+ 18F23  26319   EvalNoCK
+ 18F9D  2631E   CK&DISPATCH0
+ 18FA9  26323   CK&DISPATCH2
+ 18FB2  26328   CK&DISPATCH1
+ 191B9  2632D   #*OVF
+ -----  2639B   MATATLOOP
+ -----  263D2   !MATTRNnc
+ 159FA  26459   setStdWid                U.B.S.
+ -----  2645E   setStdEditWid
+ 11432  264CC   FIRSTC@                  U.B.S.
+ 11442  264D1   SETFIRSTC_0              U.B.S.
+ 11462  264DB   FIRSTC+                  U.B.S.
+ 13EBC  2657B   CURSOR_OFF0              U.B.S.
+ 13ED2  26580   CURSOR_OFF+              U.B.S
+ 13EF1  26585   CURSOR@                  U.B.S.
+ 13F01  2658A   CURSOR+                  U.B.S.
+ -----  265B7   Z>
+ -----  265BC   Z<
+ -----  265C1   Z=
+ -----  265C6   Z<>
+ -----  265CB   Z>=
+ -----  265D0   Z<=
+ 11D8F  266B1   $5x7                     ML
+ 0A00E  266B8   CKLBCRC                  ML
+ 09B73  266BF   COMPCONFCRC              ML
+ 10F80  266C6   ErrjmpC                  ML
+ 26FAE  266CD   GETPTRFALSE              ML
+ 25CE1  266D4   GETPTRTRUE               ML
+ 10F40  266DB   GPErrjmpC                ML
+ 54266  266E2   GPPushA                  ML
+ 2FFBA  266E9   GetStrLen                ML
+ 2FFB7  266F0   GetStrLenC               ML
+ 2FFB4  266F7   GetStrLenStk             ML
+ 5422C  266FE   PUSHhxs                  ML
+ 3251C  26705   PopASavptr               ML
+ 3251F  2670C   PopSavptr                ML
+ 0A532  26713   SAFESKIPOB               ML
+ 539F9  2671A   SetISysFlag              ML
+ 16671  26721   Shrink$                  ML
+ 136AA  26728   WindowXY                 ML
+ 423D3  26736   clrtimeout               ML
+ 137DC  2673D   corner                   ML
+ 115B3  2674B   makegrob                 ML
+ 53B31  26752   setflag                  ML
+ 423BB  26759   settimeout               ML
+ 1165A  26760   w->W                     ML
+ 010E5  26767   AllowIntr                ML
+ 008E6  2676E   BITMAP                   ML
+ 01FD3  26775   Coldstart                ML
+ 01C31  2677C   D0->Row1                 ML
+ 01C58  26783   D0->Sft1                 ML
+ 009A5  2678A   Debounce                 ML
+ 01115  26791   DisableIntr              ML
+ 01BBD  26798   DispOff                  ML
+ 01B8F  2679F   DispOn                   ML
+ 00D57  267A6   Flush                    ML
+ 00D8E  267AD   FlushAttn                ML
+ 012EE  267B4   GetTimChk                ML
+ 0130E  267BB   GetTime++                ML
+ 00C74  267C2   OnKeyDown?               ML
+ 00C80  267C9   OnKeyStable?             ML
+ 01AD7  267D0   RCKBp                    ML
+ 01307  267D7   SavPtrTime*              ML
+ 007B5  267DE   SrvcKbdAB                ML
+ 01FBD  267E5   norecPWLseq              ML
+ 01FBD  267E5   Warmstart                ML
+ 018E2  267EC   clkspd                   ML
+ 017A6  267F3   makebeep                 ML
+ 01FDA  267FA   norecCSseq               ML
+ 0131D  26801   srvc_timer2              ML
+ -----  26808   aBZU                     ML
+ -----  2680F   AFFICHE.REG              ML
+ -----  26816   AFFICHE.SBR              ML
+ -----  2681D   AFFICHEPIX.SBR           ML
+ -----  2682B   BLKSWAP+                 ML
+ -----  26832   CHANGE_FLAG              ML
+ -----  26839   CHANGE_FLAG2             ML
+ 16683  26840   Clean$                   ML, U.B.S.
+ 16677  26847   Clean$R0                 ML, U.B.S.
+ -----  2684E   CleanVirtualStack        ML
+ -----  26855   CMDSIZE                  ML
+ -----  2685C   DBUG                     ML
+ -----  26863   DBUG.TOUCHE              ML
+ -----  26871   EndTempOb                ML
+ -----  26871   NEWADR                   ML
+ -----  26878   GET.FONT                 ML
+ -----  2687F   GET_@FONTE               ML
+ -----  26886   GET_@TAB                 ML
+ -----  2688D   GET_ATTRIBN.REAL         ML
+ -----  26894   GET_HEADER               ML
+ -----  2689B   GET_HEADERTYPE           ML
+ -----  268A2   GET_HFONTE               ML
+ -----  268A9   GET_HFONTECMD            ML
+ -----  268B0   GET_HFONTESTK            ML
+ -----  268B7   GET_HFONTESTKD1C         ML
+ -----  268BE   GET_NBLIGNE              ML
+ -----  268C5   GET_NBLIGNESTK           ML
+ -----  268CC   GETBOTTEMP               ML
+ -----  268D3   GetStrLenL               ML
+ -----  268DA   GETX.VISIBLE             ML
+ -----  268E1   GETX.VISIBLE.STR         ML
+ -----  268E8   GPPushR0Lp               ML
+ -----  268EF   GPPushALp                ML
+ -----  268F6   INIT_AFFICHELIGNE        ML
+ -----  268FD   INIT_AFFICHELIGNENORM    ML
+ -----  26904   Init_MetaKernelFont      ML
+ -----  2690B   INV.ZONE                 ML
+ -----  26912   InverseParcelle          ML
+ -----  26919   MAKEBOT$N                ML
+ -----  26920   MAKERAM$                 ML
+ -----  26927   MINI_DISP                ML
+ -----  2692E   MINI_DISP_AWP            ML
+ -----  26935   MINI_DISP_PARAM          ML
+ -----  2693C   MINI_DISP_VAL            ML
+ -----  26943   MiniFontCmd?             ML
+ -----  2694A   MiniFontStk?             ML
+ -----  26951   PUSHzint                 ML
+ -----  26958   PUSHzintLoop             ML
+ -----  26966   SCAN.FONTE               ML
+ -----  2696D   SCREEN.MARGIN2           ML
+ -----  26974   SCREEN.MARGIN            ML
+ -----  2697B   SET_HEADER               ML
+ -----  26982   Shrink$Any               ML
+ -----  26989   Shrink$AnySafe           ML
+ -----  26990   SIZEPLUS                 ML
+ -----  26990   Stretch$                 ML
+ -----  26997   STOFONT                  ML
+ -----  2699E   STOMINIFONT              ML
+ -----  269A5   Stretch$Any              ML
+ -----  269AC   STYLE.MINIFONT           ML
+ -----  269B3   SWAPMEM                  ML
+ -----  269BA   SWAPMEM_D0D1C            ML
+ -----  269C1   SWAPMEM_D0D1C_nofree     ML
+ -----  269C8   SWAPMEM_D0D1D            ML
+ -----  269CF   SWAPMEM_D0D1D_nofree     ML
+ -----  269D6   SWAPMEM_nofree           ML
+ -----  269DD   SWAPMEMEQ                ML
+ -----  269E4   SWAPMEMEQ_D0D1C          ML
+ -----  269EB   WIPESPACE                ML
+ -----  269F2   AMULT34                  ML
+ -----  269F9   CMULT34                  ML
+ -----  26A00   MULTBAC                  ML
+ -----  26A07   MULTB+A*C                ML
+ -----  26A0E   HEXTODEC                 ML
+ -----  26A15   ADivC                    ML
+ -----  26A1C   BMULT34                  ML
+ -----  26A23   ADIV6                    ML
+ -----  26A2A   ADIV3                    ML
+ 53A05  26A31   D0=ALoop                 ML, U.B.S.
+ -----  26A38   DISP_DEC                 ML
+ -----  26A4D   Shrink$List              ML
+ 52AB7  26A62   POPC%                    ML, U.B.S.
+ 52ADB  26A69   PUSHC%                   ML, U.B.S.
+ 52B57  26A70   POPC%%                   ML, U.B.S.
+ 52B95  26A77   PUSHC%%                  ML, U.B.S.
+ -----  26A93   aLineB                   ML
+ -----  26A9A   aLineW                   ML
+ -----  26AA1   aLineG1                  ML
+ -----  26AA8   aLineG2                  ML
+ -----  26AAF   aLineXor                 ML
+ -----  26AB6   aCircleB                 ML
+ -----  26ABD   aCircleW                 ML
+ -----  26AC4   aCircleG1                ML
+ -----  26ACB   aCircleG2                ML
+ -----  26AD2   aCircleXor               ML
+ -----  26AD9   aSubReplRepl             ML
+ -----  26AE0   aSubReplGor              ML
+ -----  26AE7   aSubReplGxor             ML
+ -----  26AEE   ComputePixel             ML
+ -----  26AF5   aGrey?                   ML
+ -----  26AFC   aGNeg                    ML
+ -----  26B03   aScroolVGrob             ML
+ -----  26B0A   aDistance                ML
+ -----  26B11   aPixonW                  ML
+ -----  26B18   aPixonB                  ML
+ -----  26B1F   aPixonG1                 ML
+ -----  26B26   aPixonG2                 ML
+ -----  26B2D   aPixonXor                ML
+ -----  26B34   aFBoxB                   ML
+ -----  26B3B   aFBoxW                   ML
+ -----  26B42   aFBoxG1                  ML
+ -----  26B49   aFBoxG2                  ML
+ -----  26B50   aFBoxXor                 ML
+ -----  26B57   aLBoxB                   ML
+ -----  26B5E   aLBoxW                   ML
+ -----  26B65   aLBoxG1                  ML
+ -----  26B6C   aLBoxG2                  ML
+ -----  26B73   aLBoxXor                 ML
+ -----  26B7A   Arrows                   ML
+ -----  26B81   ACCESSID1                ML
+ -----  26B88   ACCESSID2                ML
+ -----  26B8F   ACCESSID3                ML
+ -----  26B96   ACCESSID4                ML
+ -----  26B9D   ACCESSID5                ML
+ -----  26BA4   ACCESSID6                ML
+ -----  26BAB   ACCESSID7                ML
+ -----  26BB2   GetBankAccess            ML
+ -----  26BB9   ACCESSBank0              ML
+ -----  26BC0   ACCESSBank1              ML
+ -----  26BC7   ACCESSBank2              ML
+ -----  26BCE   ACCESSBank3              ML
+ -----  26BD5   ACCESSBank4              ML
+ -----  26BDC   ACCESSBank5              ML
+ -----  26BE3   ACCESSBank6              ML
+ -----  26BEA   ACCESSBank7              ML
+ -----  26BF1   ACCESSBank8              ML
+ -----  26BF8   ACCESSBank9              ML
+ -----  26BFF   ACCESSBank10             ML
+ -----  26C06   ACCESSBank11             ML
+ -----  26C0D   ACCESSBank12             ML
+ -----  26C14   ACCESSBank13             ML
+ -----  26C1B   ACCESSBank14             ML
+ -----  26C22   ACCESSBank15             ML
+ -----  26C29   ACCESSIDn                ML
+ -----  26C30   ACCESSRAM0               ML
+ -----  26C37   ACCESSERAM1              ML
+ -----  26C3E   ACCESSERAM2              ML
+ -----  26C45   NEWACCESSRAM             ML
+ -----  26C4C   RclCompareNames          ML
+ -----  26C53   CompareACbBytes          ML
+ -----  26C5A   FindInDir                ML
+ -----  26C61   ScanEveryObjects         ML
+ -----  26C68   RclAssembly              ML
+ -----  26C6F   ValidPortTag?            ML
+ 18CA7  26CA7   DOSIZEERR                ML
+ 1265A  26CD8   addrADISP                ML
+ 4226A  26CDF   addrATTNFLG              ML
+ 136AC  26CE6   addrLINECNTg             ML
+ 1263A  26CED   addrVDISP                ML
+ 1264A  26CF4   addrVDISP2               ML
+ 42284  26CFB   adrTIMEOUTCLK            ML
+ 0D5E5  26E60   ASRW5
+ 0D5F6  26E71   ASLW5
+ 0D607  26E82   CSRW5
+ 0D618  26E93   CSLW5
+ 0D62F  26F00   DCHXW
+ 50262  26F36   %1+
+ 50276  26F4A   %1-
+ 53EE4  2709E   MPY
+ 320B1  27103   %80
+ 494B4  27118   %.1
+ 2D3FB  27142   LAMLNAME
+ 4744F  27155   'IDX
+ 2E99E  2716D   StdIOPAR
+ 2E4F0  27195   CRLF$
+ 25446  272D9   tok->
+ 15777  272FE   NULLID
+ 40788  275C6   TakeOver
+ 4085A  275EE   Modifier
+ 40828  275FD   MenuKey
+ 407FB  27620   MenuMaker
+ 34301  27882   Attn#
+ 31F4A  27A3A   StdPRTPAR
+ 0F688  27A89   %%2PI
+ 5129C  27B43   'IDFUNCTION
+ 512C4  27B6B   'IDPOLAR
+ 512D8  27B7F   'IDPARAMETER
+ 4CF68  27C33   ExitFcn
+ 5053C  27D3F   CROSSGROB
+ 5055A  27D5D   MARKGROB
+ 5196A  27DBF   C%-1
+ 524AF  27DE4   C%0
+ 524F7  27E09   C%1
+ 5193B  27E2E   C%%1
+ 415F1  27E5D   %100
+ 14483  27E72   nohalt
+ 0BBED  27E87   TrueTrue
+ 0BC01  27E9B   failed
+ 3E2DD  27EAF   <SkipKey
+ 3E35F  27EFB   >SkipKey
+ 3E3E1  27F47   <DelKey
+ 3E4CA  27F9A   >DelKey
+ 3EC71  27FED   NullMenuKey
+ 5FB76  28001   ROT#1+UNROT
+ 5E4A9  28071   #1-SWAP
+ 5E4A9  28071   pull
+ 5E4BD  28085   pullrev
+ 51843  28099   SWAP#1+SWAP
+ 51857  280AD   SWAP#1-SWAP
+ 51893  280C1   ORDERXY#
+ 518CA  280F8   ORDERXY%
+ 4F1D8  2812F   SWAPTRUE
+ 5E370  28143   NDUPN
+ 5DE7D  28187   reversym
+ 28558  281D5   #1-UNROT
+ 169A5  28211   NDROPFALSE
+ 2E31F  283A3   Push#FLoop
+ 2F934  283E8   FalseFalse
+ 5182F  283FC   ISTOP-INDEX
+ 5E652  286E7   symcomp
+ 5E0DA  293F8   P{}N
+ 5DE55  2962A   RDROPFALSE
+ 5E3AC  2963E   psh&
+ 5E401  29693   psh1top&
+ 5E415  296A7   top&
+ 5E4D1  2973B   pshtop&
+ 5E4EA  29754   pullpsh1&
+ 5E706  29821   psh1&
+ 5E7A5  298C0   psh1&rev
+ 5E67A  29972   pshzer
+ 5EA9F  29986   pshzerpsharg
+ 5EB1C  29A5D   psh
+ 5EB58  29A8F   roll2ND                  U.B.S.
+ 5EBDB  29B12   unroll2ND                U.B.S.
+ 5A036  29CB9   uncrunch
+ 23EED  29D18   ONE{}N
+ 2512D  29D6A   delimcase
+ 255BD  29E29   ngsizecase
+ 2534A  29E67   nultrior
+ 2856C  29E99   tok=casedrop
+ 2520A  29ED0   'Rapndit
+ 25223  29EE9   DaDGNTc
+ 38C08  29F25   AppDisplay!
+ 38C18  29F35   AppDisplay@
+ 38C38  29F55   AppKeys!
+ 38C58  29F75   AppKeys0
+ 38C68  2A055   AppExitCond!
+ 38C78  2A065   AppExitCond@
+ 38C98  2A145   AppError!
+ 38CAB  2A158   AppError@
+ 0CA60  2A4AA   ATTNchk
+ 31416  2A4FC   WaitTbz0                 U.B.S.
+ 30805  2A5CA   SUB$1#
+ 40882  2A7A7   CkSecoType               U.B.S.
+ 39AF1  2A7F7   DispTimeReq?
+ -----  2A842   Decomp1Line
+ -----  2A85D   DecompEdit
+ -----  2A878   Decomp#Line
+ -----  2A893   Decomp#Disp
+ -----  2A8AE   DecompEcho
+ -----  2A8C9   DecompStd1Line
+ -----  2A8E4   DecompStd1Line32
+ -----  2A904   RPNDecomp1Line
+ -----  2A924   RPNDecompEdit
+ -----  2A944   RPNDecomp#Line
+ -----  2A964   RPNDecomp#Disp
+ -----  2A984   RPNDecompEcho
+ -----  2A9A4   RPNDecompStd1Line
+ -----  2A9C4   RPNDecompStd1Line32
+ -----  2A9E9   RunRPN:
+ -----  2AA43   AlgDecomp
+ -----  2AA70   CASEVAL
+ -----  2AAE0   SimplifyExpression
+ -----  2AB69   RunInApprox
+ -----  2ABD7   RunSafeFlagsNoError
+ -----  2ABF0   RunSafeFlags
+ -----  2AC0E   DoRunSafe
+ 255FB  2AC72   need'case
+ 179E8  2ACA9   addrTEMPTOP
+ 448C1  2ACB0   ?TogU/LCase
+ 517F3  2AD81   EQUALcasedrop
+ 5E984  2ADBD   nonopcase
+ 5EDFC  2ADE0   numb1stcase
+ 5EE10  2AE32   M-1stcasechs
+ 5EF15  2AF37   AEQ1stcase
+ 5EFD9  2AFFB   MEQ1stcase
+ 5EFF9  2B01B   MEQopscase
+ 5F048  2B06A   AEQopscase
+ 5F061  2B083   Mid1stcase
+ 5F0AA  2B0CC   idntcase
+ 5F0CD  2B0EF   idntlamcase
+ 5F0FA  2B11C   num0=case
+ 5F127  2B149   %0=case
+ 5F13B  2B15D   C%0=case
+ 5F154  2B176   num1=case
+ 5F181  2B1A3   %1=case
+ 5F19F  2B1C1   C%1=case
+ 5F1BD  2B1DF   num2=case
+ 5F1EA  2B20C   %2=case
+ 5F208  2B22A   C%2=case
+ 5F23A  2B25C   num-1=case
+ 5F267  2B289   %-1=case
+ 5F285  2B2A7   C%-1=case
+ 5FB49  2B2C5   NOTcaseFALSE
+ 42E27  2B31A   Roll&Do:
+ 42E86  2B351   Rcl&Do:
+ 34D2B  2B3A6   1NULLLAM{}
+ 34D30  2B3AB   NULLLAM
+ 52D26  2B3B7   4NULLLAM{}
+ 2EC11  2B3FD   %IP>#
+ 1DC00  2B42A   PUTLIST
+ 38985  2B475   ParOuterLoop
+ 389BC  2B4AC   POLSaveUI
+ 38A64  2B542   POLSetUI
+ 38AEB  2B628   POLKeyUI
+ 38B45  2B682   POLErrorTrap
+ 38B77  2B6B4   POLResUI&Err
+ 38B90  2B6CD   POLRestoreUI
+ 38BD6  2B709   InitPOLVars              U.B.S.
+ 3858E  2B74F   StartupProc
+ 0E7D3  2B7CC   addrClkOnNib
+ 3A9B8  2B90B   'DROPFALSE
+ 5573D  2BAB3   COLAthexFCN
+ 558DC  2BB21   sscknum2
+ 558F5  2BB3A   sncknum2
+ 5590E  2BB53   nscknum2
+ 545A0  2BCA2   cknumdsptch1
+ 49C54  2BF1C   CkEQUtil
+ 38F28  2BF3A   DA1OK?NOTIT
+ 38F41  2BF53   DA2aOK?NOTIT
+ 38F5A  2BF6C   DA2bOK?NOTIT
+ 38F73  2BF85   DA3OK?NOTIT
+ 7DBA0  2C039   nWHEREIFTE
+ 7DBAB  2C044   nWHEREDER
+ 7DBB6  2C04F   nWHEREINTG
+ 7DBC1  2C05A   nWHERESUM
+ 7DBCC  2C065   nWHEREWHERE
+ 7DBE2  2C07B   D/D*
+ 7DBED  2C086   D/D+
+ 7DBF8  2C091   D/D-
+ 7DC03  2C09C   D/D/
+ 7DC0E  2C0A7   derquot
+ 7DC54  2C0ED   derprod1
+ 7DC72  2C10B   D/D=
+ 7DC72  2C10B   D/Dalg=
+ 7DC7D  2C116   D/DABS
+ 7DC88  2C121   easyabs
+ 7DCA1  2C13A   D/DACOS
+ 7DCAC  2C145   D/DACOSH
+ 7DCB7  2C150   D/DALOG
+ 7DCC2  2C15B   D/DARG
+ 7DCCD  2C166   D/DASIN
+ 7DCD8  2C171   D/DASINH
+ 7DCE3  2C17C   D/DATAN
+ 7DCEE  2C187   D/DATANH
+ 7DCF9  2C192   D/DCHS
+ 7DD17  2C1B0   D/DCONJ
+ 7DD35  2C1CE   D/DCOS
+ 7DD40  2C1D9   D/DCOSH
+ 7DD4B  2C1E4   D/DEXP
+ 7DD4B  2C1E4   D/DEXPM1
+ 7DD56  2C1EF   D/DINV
+ 7DD61  2C1FA   D/DLN
+ 7DD6C  2C205   D/DLNP1
+ 7DD77  2C210   D/DLOG
+ 7DD82  2C21B   D/DIFTE
+ 7DD8D  2C226   D/DSIN
+ 7DD98  2C231   D/DSINH
+ 7DDA3  2C23C   D/DSQ
+ 7DDAE  2C247   D/DSQRT
+ 7DDB9  2C252   D/DTAN
+ 7DDC4  2C25D   D/DTANH
+ 7DDCF  2C268   D/D^
+ 7DDDA  2C273   D/D^X
+ 7DDE5  2C27E   D/D^Y
+ 7DDF0  2C289   D/DDER
+ 7DDFB  2C294   D/DWHERE
+ 7DE06  2C29F   D/DINTEGRAL
+ 7DE11  2C2AA   D/DSUM
+ 7DE1C  2C2B5   D/DAPPLY
+ 7DEE2  2C2C0   nCustomMenu
+ 7DEED  2C2CB   nCOLCTQUOTE
+ 7DEF8  2C2D6   SPLITWHERE
+ 39B0A  2C2F9   DispStsBound
+ 395BA  2C305   DispStatus
+ 3959C  2C311   ?DispStatus
+ 39B85  2C341   ?DispStack
+ 199EB  2C371   DoInputForm
+ 7DF71  2C37D   PTYPE>PINFO
+ 7DF7C  2C388   MOVEVAR
+ 7DF87  2C393   COPYVAR
+ 10B5E  2D74F   um*
+ 10B68  2D759   um/
+ 10B72  2D763   um^
+ 10B7C  2D76D   umP
+ 10B86  2D777   umEND
+ 0FA69  2D848   tok_g
+ 0FA8E  2D86D   tok_m
+ 0FACE  2D8AD   tok_s
+ 0FCE6  2D949   UMSIGN
+ 0FCFA  2D95D   UMIP
+ 0FD0E  2D971   UMFP
+ 0FD22  2D985   UMFLOOR
+ 0FD36  2D999   UMCEIL
+ 0FD68  2D9CB   UMRND
+ 0FD8B  2D9EE   UMTRC
+ 10E68  2DA11   cfF
+ 10E82  2DA2B   cfC
+ 0D6D8  2DCB5   FLOAT
+ 0D744  2DD27   Day>Date
+ 0D809  2DDD5   getBPOFF
+ 0D8AE  2DE26   mpop1%
+ 0DB51  2DE4A   dowutil
+ 0DB91  2DEAA   HXDCW
+ 0D4AD  2DEBB   DAY#
+ 3A1CA  2DFCC   ?DispMenu
+ 3A1E8  2DFE0   DispMenu
+ 3A1FC  2DFF4   DispMenu.1
+ 3A297  2E0D5   Grob>Menu
+ 3A2B5  2E0F3   Str>Menu
+ 3A2C9  2E107   Seco>Menu
+ 3A2DD  2E11B   Id>Menu
+ 3A328  2E166   MakeStdLabel
+ 3A38A  2E189   MakeBoxLabel
+ 3A3EC  2E1EB   MakeDirLabel
+ 3A44E  2E24D   MakeInvLabel
+ 3A4AB  2E2AA   MakeLabel
+ 3A00D  2EE5A   DispEditLine
+ 39515  2EE5B   DispTime?                U.B.S.
+ 3A578  2EE5C   BlankDA12
+ 386D8  2EE5D   ?FlashAlert
+ 38728  2EE5E   SysErrorTrap
+ -----  2EE5F   SysErrorTrapConfirm
+ 38908  2EE60   DoWarning
+ 38926  2EE61   FlashWarning
+ 38DAC  2EE62   DA1OK?
+ 38EB5  2EE63   DA3OK?
+ 3922F  2EE64   SetDAsTemp
+ 391DA  2EE65   SetDA12a3NCh             U.B.S.
+ 38FB9  2EE66   DA2aLess1OK?
+ 38FD2  2EE67   SetDA1Valid
+ 38FFF  2EE68   SetDA2bValid
+ 3902C  2EE69   SetDA1Temp
+ 39059  2EE6A   SetDA2bTemp
+ 39072  2EE6B   SetDA3Temp
+ 39086  2EE6C   SetDA2aEcho
+ 39144  2EE6D   ClrDAsOK
+ 3912B  2EE6E   ClrDA3OK
+ 3919E  2EE6F   SetDA12NoCh
+ 391C6  2EE70   SetDA13NoCh
+ 3921B  2EE71   SetDA12Temp
+ 393D3  2EE72   SetDA1NoCh
+ 393FD  2EE73   SetDA2aNoCh
+ 39489  2EE74   ClrDA1Bad
+ 394B3  2EE75   ClrDA2aBad
+ 39427  2EE76   SetDA2bNoCh
+ 39451  2EE77   SetDA3NoCh
+ 3947B  2EE78   SetDA1Bad
+ 394A5  2EE79   SetDA2aBad
+ 394CF  2EE7A   SetDA2bBad
+ 394F9  2EE7B   SetDA3Bad
+ 391EE  2EE7C   SetDAsNoCh               U.B.S.
+ 39531  2EE7D   ClrDA1IsStat
+ 3953F  2EE7E   DA2bIsEdL?               U.B.S.
+ 3954D  2EE7F   SetDA2bIsEdL             U.B.S.
+ 3955B  2EE80   ClrDA2bIsEdL             U.B.S.
+ 39435  2EE81   ClrDA2bNoCh
+ 39045  2EE8A   SetDA2aTemp
+ 390A4  2EE8B   MENoP&FixDA1
+ 390CC  2EE8D   ClrDA1OK
+ 390E5  2EE8E   ClrDA2aOK
+ 390FE  2EE8F   ClrDA2bOK
+ 39117  2EE90   ClrDA2OK
+ 3915D  2EE91   SetDA2Valid
+ 3918A  2EE93   SetDA2NoCh
+ 391B2  2EE94   SetDA23NoCh
+ 39301  2EEA0   SetDA3ValidF
+ 3937F  2EEA5   SetDA2bTempF             U.B.S.
+ 39371  2EEA6   DA2bTemp?                U.B.S.
+ 3938D  2EEA7   ClrDA2bTemp              U.B.S.
+ 39515  2EEAB   DA1IsStatus?             U.B.S.
+ 39523  2EEAC   SetDA1IsStat
+ 3957A  2EEAE   SetNoRollDA2
+ 3958B  2EEAF   ClrNoRollDA2
+ 3946D  2EEB0   DA1Bad?
+ 39497  2EEB1   DA2aBad?
+ 394C1  2EEB2   DA2bBad?                 U.B.S.
+ 394DD  2EEB3   ClrDA2bBad
+ 394EB  2EEB4   DA3Bad?                  U.B.S.
+ 39507  2EEB5   ClrDA3Bad
+ 39419  2EEB7   DA2bNoCh?
+ 2E6EB  2EEBB   SENDLIST
+ 2E7EF  2EEBC   GETNAME
+ 2E876  2EEBD   DOFINISH
+ 2E8D1  2EEBE   DOPKT
+ 2EA4F  2EEBF   GetIOPAR
+ 2EB37  2EEC0   DOOPENIO
+ 2EC84  2EEC1   DOBAUD
+ 2ECCA  2EEC2   DOPARITY
+ 2ED10  2EEC3   DOTRANSIO
+ 2EDA6  2EEC4   DOKERRM
+ 2EDE1  2EEC5   DOBUFLEN
+ 2EE18  2EEC6   DOSBRK
+ 2EE97  2EEC7   DOSRECV
+ 3136C  2EEC8   FLUSHRSBUF
+ 315C6  2EEC9   CLOSEUART
+ 31854  2EECA   docr
+ 31868  2EECB   DOCR
+ 31EE2  2EECC   DOPRLCD
+ 31FFD  2EECD   DODELAY
+ 3252B  2EECE   SetEcma94
+ 0CBFA  2EECF   TOD
+ 0CC0E  2EED0   DATE
+ 0CC39  2EED1   DDAYS
+ 0CC5B  2EED2   DATE+DAYS
+ 0D304  2EED3   TIMESTR
+ 0E083  2EED4   Clr8
+ 0E097  2EED5   Clr8-15
+ 0E128  2EED6   HBUFF_X_Y
+ 0EB81  2EED7   CLKTICKS
+ 0EB81  2EED8   SysTime
+ 32FF9  2EED9   SYMBNUMSOLVE
+ 2C22F  2EEDA   STATCLST
+ 2C2D9  2EEDB   STATSADD%
+ 2C535  2EEDC   STATN
+ 2C558  2EEDD   STATSMAX
+ 2C571  2EEDE   STATMEAN
+ 2C58A  2EEDF   STATSMIN
+ 2C5A3  2EEE0   STATSTDEV
+ 2C5BC  2EEE1   STATTOT
+ 2C5D5  2EEE2   STATVAR
+ 42AE4  2EEE3   EchoChrKey
+ 42BD4  2EEE4   Echo$Key
+ 42D32  2EEE5   EditLevel1
+ 44277  2EEE6   InitEd&Modes
+ 4428B  2EEE7   InitEdLine
+ 44394  2EEE8   InitEdModes
+ 443CB  2EEE9   EditString
+ 444A5  2EEEA   CURSOR_END?
+ 44683  2EEEB   EDITLINE$
+ 44730  2EEEC   EDITPARTS
+ 4488A  2EEED   NoEditLine?
+ 47984  2EEEE   APPprompt1!
+ 491D5  2EEEF   AUTOSCALE
+ 49709  2EEF0   PromptIdUtil
+ 4AE3C  2EEF1   PUTSCALE
+ 4AF77  2EEF2   PUTINDEP
+ 4AF8B  2EEF3   PUTINDEPLIST
+ 4B012  2EEF4   PUTRES
+ 4B062  2EEF5   GETPTYPE
+ 4B076  2EEF6   PUTPTYPE
+ 4B553  2EEF7   VSCALE
+ 4B5AD  2EEF8   HSCALE
+ 4B60C  2EEF9   DOERASE
+ 4DA0D  2EEFA   CROSS_HAIRS
+ 4DA76  2EEFB   CROSS_OFF
+ 4E2AC  2EEFC   MENUOFF
+ 4E360  2EEFD   MENUOFF?
+ 4E442  2EEFE   CURRENTMARK?
+ 4E6EF  2EEFF   DispCoord1
+ 4F0AC  2EF01   DOPX>C
+ 4F179  2EF02   DOC>PX
+ 503D4  2EF03   DOLCD>
+ 50438  2EF04   DO>LCD
+ 5046A  2EF05   DOCLLCD
+ 51148  2EF06   CKPICT
+ 54C63  2EF07   nmetasyms
+ 58D75  2EF26   SYMSHOW
+ 390B3  2EF59   MENP&FixDA12
+ 35491  2EF5A   apndvarlst
+ 3A546  2EF5E   BlankDA1
+ 42F44  2EF5F   InputLine
+ 4CE6F  2EF60   DOGRAPHIC
+ 4F052  2EF61   WINDOW#
+ 238A4  2EF62   palparse
+ 3866F  2EF66   SysMenuCheck
+ 386A1  2EF67   SysDisplay
+ 0ED78  2EF68   ClrDouseAlm              U.B.S.
+ -----  2EF69   EvalParsed
+ 40AD9  2EF6A   Parse.1
+ -----  2EF6B   Parse.2
+ 40BC9  2EF6C   AtUserStack
+ 40BDD  2EF6D   GetLastEdit              U.B.S.
+ 40B2E  2EF6E   ParseFail
+ 40B56  2EF6F   DispBadToken             U.B.S.
+ -----  2EF70   ParseFail2
+ -----  2EF71   DispBadToken2
+ 40CE9  2EF72   CacheStack
+ -----  2EF73   ?Space/Go>
+ -----  2EF74   CMD_PLUS
+ -----  2EF75   AddTrailingSpace
+ -----  2EF76   AddLeadingSpace
+ -----  2EF77   CMD_PAGEL
+ -----  2EF78   CMD_PAGER
+ -----  2EF79   CMD_PAGEU
+ -----  2EF7A   CMD_PAGED
+ -----  2EF7B   CMD_BAK
+ -----  2EF7C   CMD_NXT
+ -----  2EF7D   CMD_DEB_LINE
+ -----  2EF7E   CMD_END_LINE
+ -----  2EF7F   CMD_UP
+ -----  2EF80   CMD_DOWN
+ -----  2EF81   CMD_DROP
+ -----  2EF82   CMD_DEL
+ -----  2EF83   CMD_STO_DEBUT
+ -----  2EF84   CMD_STO_FIN
+ -----  2EF85   RCL_CMD_DEB
+ -----  2EF86   RCL_CMD_FIN
+ -----  2EF87   RCL_CMD_POS
+ -----  2EF88   CMD_CUT
+ -----  2EF89   CUT.EXT
+ -----  2EF8A   CMD_COPY
+ -----  2EF8B   STO_CURS_POS
+ -----  2EF8C   STO_CURS_POS2
+ -----  2EF8D   STO_CURS_POS3
+ -----  2EF8E   STO_CURS_POS4
+ -----  2EF8F   STO_CURS_POS_VIS
+ -----  2EF90   CAL_CURS_POS_VIS
+ -----  2EF91   CAL_CURS_POS
+ -----  2EF92   XLINE_SIZE?
+ -----  2EF93   VERIF_SELECTION
+ -----  2EF94   PASTE.EXT
+ -----  2EF95   DEL_CMD
+ -----  2EF96   NO_AFFCMD
+ 42CFB  2EF97   InsertEcho               U.B.S.
+ 38FEB  2EF98   SetDA2aValid
+ 39018  2EF99   SetDA3Valid
+ -----  2EF9A   CommandLineHeight
+ 50B17  2EF9F   LINEON
+ 50B08  2EFA0   LINEOFF
+ 50AF9  2EFA1   TOGLINE
+ 50AEA  2EFA2   LINEON3
+ 50ACC  2EFA3   LINEOFF3
+ 50ADB  2EFA4   TOGLINE3
+ 53C37  2EFA5   DOHEX
+ 53C43  2EFA6   DOBIN
+ 53C4F  2EFA7   DOOCT
+ 53C5B  2EFA8   DODEC
+ 53CAA  2EFAA   dostws
+ 53D04  2EFAC   bitAND
+ 53D15  2EFAD   bitOR
+ 53D26  2EFAE   bitXOR
+ 53D4E  2EFAF   bitNOT
+ 53D5E  2EFB0   bitSL
+ 53D6E  2EFB1   bitSLB
+ 53D81  2EFB2   bitSR
+ 53D91  2EFB3   bitSRB
+ 53DA4  2EFB4   bitRR
+ 53DE1  2EFB5   bitRRB
+ 53E0C  2EFB6   bitRL
+ 53E3B  2EFB7   bitRLB
+ 53E65  2EFB8   bitASR
+ 53EA0  2EFB9   bit+
+ 53EB0  2EFBA   bit-
+ 53ED3  2EFBC   bit*
+ 53F05  2EFBD   bit/
+ 54039  2EFBE   WORDSIZE
+ 54050  2EFBF   BASE
+ 54061  2EFC0   HXS>$
+ 540BB  2EFC1   hxs>$
+ 5429F  2EFC2   bit%#/
+ 542BD  2EFC3   bit#%/
+ 542D1  2EFC4   bit%#*
+ 542EA  2EFC5   bit#%*
+ 542FE  2EFC6   bit%#-
+ 5431C  2EFC7   bit#%-
+ 54330  2EFC8   bit%#+
+ 54349  2EFC9   bit#%+
+ 5435D  2EFCA   HXS>%
+ 543F9  2EFCB   %>#
+ 544D9  2EFCC   HXS==HXS
+ 54500  2EFCD   HXS>HXS
+ 5452C  2EFCE   HXS>=HXS
+ 54552  2EFCF   HXS<HXS
+ 5A310  2EFEC   symbn
+ 505E4  2F007   getxpos
+ 506AB  2F008   getypos
+ 0F218  2F019   UNIT>$
+ 4E347  2F031   TURNMENUON
+ 4E2CF  2F034   TURNMENUOFF
+ 40C76  2F05E   SaveLastEdit
+ 2E9CB  2F062   StoIOPAR
+ 31F7D  2F063   StoPRTPAR
+ 2EA6A  2F064   Sys@
+ 47467  2F066   STOAPPLDATA
+ 5A01D  2F073   SWAPcompSWAP
+ 385E8  2F075   InitSysUI
+ 0F3E4  2F076   puretemp?
+ 0F33A  2F07A   UM>U
+ 10047  2F07B   U>nbr
+ 0F598  2F07C   UM#?
+ 0FBAB  2F07D   UM%
+ 0FC3C  2F07E   UM%CH
+ 0FCCD  2F07F   UM%T
+ 0F792  2F080   UM*
+ 0F6A2  2F081   UM+
+ 0F774  2F082   UM-
+ 0F823  2F083   UM/
+ 0F5D4  2F085   UM<=?
+ 0F5AC  2F086   UM<?
+ 0F584  2F087   UM=?
+ 0F5E8  2F088   UM>=?
+ 0F5C0  2F089   UM>?
+ 0F5FC  2F08A   UMABS
+ 0F615  2F08B   UMCHS
+ 0F371  2F08C   UMCONV
+ 0F660  2F08D   UMCOS
+ 0FB6F  2F08E   UMMAX
+ 0FB8D  2F08F   UMMIN
+ 0F945  2F090   UMSI
+ 0F62E  2F091   UMSIN
+ 0F913  2F092   UMSQ
+ 0F92C  2F093   UMSQRT
+ 0F674  2F094   UMTAN
+ 0F34E  2F095   UMU>
+ 0F8FA  2F096   UMXROOT
+ 10065  2F098   Unbr>U
+ 0FE44  2F099   U>NCQ
+ 0F41B  2F09A   TempConv
+ 4B710  2F0A1   RESETDEPTH
+ 0E724  2F0AC   PURGALARM%               U.B.S.
+ 32161  2F0BC   PRINT
+ 4B765  2F0C5   PLOTPREP
+ 4C09B  2F0D5   NEWINDEP
+ 4B323  2F0DB   MAKEPICT#
+ 2EAE2  2F0E6   KERMOPEN
+ 2E6BE  2F0E7   InitIOEnv
+ 510AD  2F0E8   INDEPVAR
+ 4A95A  2F0EC   ICMPDRPRTDRP
+ 544EC  2F0EE   HXS#HXS
+ 5453F  2F0EF   HXS<=HXS
+ 4B139  2F0FE   GETXMAX
+ 4B10C  2F0FF   GETXMIN
+ 4B120  2F100   GETYMIN
+ 4CF05  2F105   GDISPCENTER
+ 4AF63  2F106   GETINDEP
+ 4B0DA  2F107   GETPMIN&MAX
+ 514AF  2F108   GETRHS
+ 505C6  2F109   GETXPOS
+ 4B7D8  2F10A   GetRes
+ 4AFDB  2F10D   GETRES
+ 4B14D  2F10E   GETYMAX
+ 0EB31  2F113   FNDALARM{}               U.B.S.
+ 42BB6  2F11C   Echo$NoChr00
+ 44FE7  2F13C   DoOldMatrix
+ 50758  2F13F   DRAWLINE#3
+ 44C31  2F142   DoNewMatrix
+ 0CD3F  2F153   CLKADJ*                  U.B.S.
+ 30B1D  2F15A   CHOOSE_INIT              U.B.S.
+ 51125  2F15B   CLEARMENU
+ 0E06F  2F15E   Clr16
+ 51166  2F162   CHECKPICT
+ 4A9AF  2F163   CHECKPVARS
+ 45676  2F16D   Blank$
+ 324A6  2F177   AllowPrlcdCl
+ 0E235  2F178   ALARMS@
+ 42EC7  2F179   AdjEdModes
+ 479A7  2F17A   APPprompt2
+ 51532  2F17E   2HXSLIST?
+ 514DC  2F180   1REV
+ 17980  2F190   DcompWidth@
+ 1795A  2F191   !DcompWidth
+ -----  2F192   DoNewEqw
+ 10ADB  2F193   UobROT                   U.B.S.
+ -----  2F194   CMD_PLUS2
+ -----  2F195   CMD_PLUS3
+ -----  2F196   RCL_CMD
+ -----  2F197   RCL_CMD2
+ -----  2F198   STO_CMD_MODE
+ -----  2F199   RCL_CMD_MODE
+ 42D46  2F19A   ViewLevel1
+ -----  2F19B   OngoingText?
+ -----  2F19E   DispCommandLine
+ -----  2F19F   ?DispCommandLine
+ -----  2F1A1   ErrorHandled?
+ -----  2F1A3   SysErrorTrapAction
+ -----  2F1A5   AskQuestion              ($ -> T/F)
+ -----  2F1A7   CHARSEDIT
+ -----  2F1A8   EditFont
+ -----  2F1A9   EDITF
+ 0EE50  2F1AB   Date>hxs13
+ -----  2F1AC   StrEdit
+ 42D82  2F1AD   CharEdit
+ 42DC8  2F1AE   ObEdit
+ -----  2F1AF   AlgObEdit
+ -----  2F1BF   Decomp%Short
+ 35D08  2F1C6   DROP3PICK                U.B.S.
+ -----  2F205   laMGET0
+ -----  2F215   CircleB
+ -----  2F216   CircleG1
+ -----  2F217   CircleG2
+ -----  2F218   CircleW
+ -----  2F219   CircleXor
+ -----  2F21A   Dither
+ -----  2F21B   ToGray
+ -----  2F21C   Lift
+ -----  2F21D   ViewObject
+ -----  2F21E   ViewStrObject
+ -----  2F21F   ViewGrobObject
+ 1DABB  2F222   #1+ROT
+ 22618  2F223   %>TAG
+ 1C6E3  2F23E   DOSTOSYSF
+ 20B9A  2F24E   LISTRCL
+ 1A1FC  2F257   OCRC%
+ 20CAD  2F258   PICTRCL
+ 1C637  2F259   RCLSYSF
+ 1C64E  2F25B   RCLUSERF
+ 21CBA  2F25D   SETROMPART
+ 1A16F  2F265   UPDIR
+ 225F5  2F266   USER$>TAG
+ 1A265  2F267   VARSIZE
+ 1A738  2F268   Wait/GetKey
+ 21B5A  2F292   XEQIOBACKUP
+ 20FF2  2F296   XEQORDER
+ 20F8A  2F297   XEQPURGEPICT
+ 20B81  2F2A3   XEQRCL
+ 21C6F  2F2A7   XEQSETLIB
+ 20B00  2F2A9   XEQSHOWLS
+ 1A7C9  2F2D4   dowait
+ -----  2F2DA   AlgCharEdit
+ -----  2F2DB   DOTEXTINFO
+ -----  2F2DC   ClearSelection
+ -----  2F2DD   DoFarBS
+ -----  2F2DE   DoFarDel
+ -----  2F2DF   EditSelect
+ -----  2F2E0   ViewEditGrob
+ -----  2F2E1   SELECT.LINE
+ -----  2F2E2   SELECT.LINEEND
+ -----  2F2E3   EVAL.LINE
+ -----  2F2E4   DO>BEG
+ -----  2F2E5   DO>END
+ -----  2F2E6   GOTOLABEL
+ -----  2F2E7   SELECT.FONT
+ -----  2F2E8   DOFIND
+ -----  2F2E9   DOREPL
+ -----  2F2EA   DONEXT
+ -----  2F2EB   DOREPLACE
+ -----  2F2EC   DOREPLACE/NEXT
+ -----  2F2ED   REPLACEALL
+ -----  2F2EE   DO<Skip
+ -----  2F2EF   DO>Skip
+ -----  2F2F0   DO<Del
+ -----  2F2F1   DO>Del
+ -----  2F2F2   FindStrInCmd
+ -----  2F2F3   GET.W->
+ -----  2F2F4   GET.W<-
+ -----  2F2F5   PUT_FONTE
+ -----  2F2F6   GET_CUR_FONT.EXT
+ -----  2F2F7   PUT_STYLE
+ -----  2F2F8   EXEC_CMD
+ -----  2F2F9   DODEL.L
+ -----  2F2FA   CMD_COPY.SBR
+ -----  2F2FB   EVAL.SELECTION
+ -----  2F2FC   REPLACEALLNOSCREEN
+ 2EB62  2F2FF   OpenIO
+ 430CF  2F300   DispILPrompt
+ 3161E  2F312   OpenUartClr
+ 31608  2F313   OpenUart?Clr             U.B.S.
+ 0E3DF  2F314   RCLALARM%                U.B.S.
+ 50E59  2F315   !#1+IF<dim-1
+ 50EA5  2F316   !#1-IF>0
+ 24EA6  2F317   {}>DIR
+ 55288  2F318   1GETLAMSWP1+
+ 30914  2F319   ACK_INIT
+ 2E4DC  2F31A   APNDCRLF
+ 3A55F  2F31B   BlankDA2
+ 3A591  2F31C   BlankDA2a
+ 515B4  2F31D   BOTROW
+ 2E108  2F31E   BUILDKPACKET
+ 4F408  2F31F   C%>#
+ 511E3  2F320   CHECKHEIGHT
+ 42C3D  2F321   CkChr00
+ 4F7E6  2F324   CKGROBFITS
+ 2D9B2  2F325   ClrServMode
+ 40C94  2F326   CMDSTO
+ 256E4  2F327   convertbase
+ 4ECAD  2F328   CROSSMARKON
+ 0CFD9  2F329   Date>d$
+ 30D31  2F32A   DECODE
+ 4A055  2F32B   DISPCOORD2
+ 4E582  2F32C   DRAWBOX#
+ 4C639  2F32D   drax
+ 4D11E  2F32E   DROPDEADTRUE
+ 2DDC4  2F32F   DropSysErr$
+ 30BD7  2F330   ENCODE
+ 30BBE  2F331   ENCODE1PKT
+ 4E46A  2F332   EQCURSOR?
+ 2D517  2F333   EXCHINITPK
+ 25C41  2F334   Extobcode
+ 49BA5  2F335   FcnUtilEnd
+ 0EBD5  2F336   FindNext
+ 17ADB  2F337   FixRRP
+ 3205C  2F338   GetChkPRTPAR
+ 4A0AA  2F339   GetEqN
+ 2F39C  2F33A   GetKermPkt#
+ 307E2  2F33B   GETKP
+ 25452  2F33C   getmatchtok
+ 4B364  2F33D   GETPARAM
+ 4ADB0  2F33E   GETSCALE
+ 314E5  2F33F   GETSERIAL
+ 5068D  2F340   GETYPOS
+ 4CEE7  2F341   GraphicExit
+ 4F78C  2F342   GROB+#
+ 2F383  2F343   IncrLAMPKNO
+ 43200  2F344   InputLAttn
+ 43179  2F345   InputLEnter
+ 2EC25  2F346   IOCheckReal
+ 516AE  2F347   JUMPBOT
+ 516E5  2F348   JUMPLEFT
+ 51703  2F349   JUMPRIGHT
+ 51690  2F34A   JUMPTOP
+ 2D730  2F34B   KDispRow2
+ 2D74E  2F34C   KDispStatus2
+ 3016B  2F34D   KINVISLF
+ 2FEDD  2F34E   KVIS
+ 2FEC9  2F34F   KVISLF
+ 2D441  2F350   'LamKPSto
+ 50D78  2F351   LASTPT?
+ 515FA  2F352   LEFTCOL
+ 4E37E  2F353   LINECHANGE
+ 24C0D  2F354   List
+ 4AAEA  2F355   MAKEPVARS
+ 28296  2F356   metatail
+ 25632  2F357   newBASE
+ 4E4B0  2F358   NEWMARK
+ 179D0  2F359   NEXTRRPOB
+ 4BFAE  2F35A   NEXTSTEP
+ 3303F  2F35B   NUMSOLVE
+ 216D8  2F35C   OB>BAKcode
+ 3187C  2F35D   OpenIOPrt
+ 4B6D9  2F35E   PLOTERR
+ 50DA5  2F35F   PlotOneMore?
+ 4E497  2F360   PREMARKON
+ 32B74  2F361   PrintGrob
+ 32387  2F362   PRINTxNLF
+ 5133C  2F363   PtoR
+ 31444  2F364   PUTSERIAL
+ 4B1AC  2F365   PUTXMAX
+ 4B166  2F366   PUTXMIN
+ 4B1CF  2F367   PUTYMAX
+ 4B189  2F368   PUTYMIN
+ 510D5  2F369   RECORDX&YC%
+ 323F9  2F36A   REMAP
+ 5160E  2F36B   RIGHTCOL
+ 0E0FB  2F36C   Rows8-15
+ 4D16E  2F36D   SCROLLDOWN
+ 4D150  2F36E   SCROLLLEFT
+ 4D18C  2F36F   SCROLLRIGHT
+ 4D132  2F370   SCROLLUP
+ 2FEA1  2F371   SENDACK
+ 2D58C  2F372   SENDEOT
+ 2E0C7  2F373   SENDERROR
+ 2E0A9  2F374   SENDNAK
+ 2FEB5  2F375   SENDNULLACK
+ 2E0F4  2F376   SENDPKT
+ 2EEC4  2F377   SendSetup
+ 4325A  2F378   SetCursor
+ 391EE  2F379   SetDA123NoCh
+ 39207  2F37A   SetDA2OKTemp
+ 2EC34  2F37B   SetIOPARErr
+ 4CF41  2F37C   SETLOOPENV
+ 2D9A1  2F37D   SetServMode
+ 48FF9  2F37E   SORTASLOW
+ 0E6ED  2F37F   STOALM
+ 2E9E6  2F380   SysSTO
+ 0D06A  2F381   TOD>t$
+ 5072B  2F382   TOGGLELINE#3
+ 0E0AB  2F383   TOP16
+ 0E0D3  2F384   TOP8
+ 515A0  2F385   TOPROW
+ 2EFD7  2F386   TRPACKETFAIL
+ 3133B  2F387   UARTBUFLEN
+ 0E66A  2F388   VerifyTOD
+ 30794  2F389   VERSTRING
+ 51645  2F38A   WINDOWBOT?
+ 5165E  2F38B   WINDOWLEFT?
+ 51677  2F38C   WINDOWRIGHT?
+ 5162C  2F38D   WINDOWTOP?
+ 56101  2F38E   xnsgeneral
+ 5611F  2F38F   xsngeneral
+ 560ED  2F390   xssgeneral
+ 29DFC  2F458   SETIVLERR
+ 29E21  2F47D   PACKSB
+ 29E46  2F4A2   PACK
+ 29FD0  2F62C   POP1%SPLITA
+ 29FDA  2F636   POP1%
+ 2A002  2F65E   POP2%
+ 2A188  2F7E4   PUSH%
+ 2A23D  2F899   PUSH%LOOP
+ 2A2B4  2F937   %0
+ 2A2C9  2F94C   %1
+ 2A2DE  2F961   %2
+ 2A2F3  2F976   %3
+ 2A308  2F98B   %4
+ 2A31D  2F9A0   %5
+ 2A332  2F9B5   %6
+ 2A347  2F9CA   %7
+ 2A35C  2F9DF   %8
+ 2A371  2F9F4   %9
+ 2A386  2FA09   %-1
+ 2A39B  2FA1E   %-2
+ 2A3B0  2FA33   %-3
+ 2A3C5  2FA48   %-4
+ 2A3DA  2FA5D   %-5
+ 2A3EF  2FA72   %-6
+ 2A404  2FA87   %-7
+ 2A419  2FA9C   %-8
+ 2A42E  2FAB1   %-9
+ 2A443  2FAC6   %PI
+ 2A458  2FADB   %%PI                     U.B.S.
+ 2A472  2FAF5   %MAXREAL
+ 2A487  2FB0A   %-MAXREAL
+ 2A49C  2FB1F   %MINREAL
+ 2A4B1  2FB34   %-MINREAL
+ 2A4C6  2FB49   %%0
+ 2A4E0  2FB63   %%1
+ 2A4FA  2FB7D   %%2
+ 2A514  2FB97   %%3
+ 2A52E  2FBB1   %%4
+ 2A548  2FBCB   %%5
+ 2A562  2FBE5   %%.1
+ 2A57C  2FBFF   %%.5
+ 2A596  2FC19   %%10
+ 1CC03  2FCE6   %11
+ 1CC1D  2FCFB   %12
+ 1CC37  2FD10   %13
+ 1CC51  2FD25   %14
+ 1CC85  2FD3A   %15
+ 1CD3A  2FD4F   %16
+ 1CD54  2FD64   %17
+ 1CDF2  2FD79   %18
+ 1CE07  2FD8E   %19
+ 1CC6B  2FDA3   %20
+ 1CCA4  2FDB8   %21
+ 1CCC3  2FDCD   %22
+ 1CCE2  2FDE2   %23
+ 1CD01  2FDF7   %24
+ 1CD20  2FE0C   %25
+ 1CD73  2FE21   %26
+ 1CD8D  2FE36   %27
+ 2A5B0  2FF9B   %%>%
+ 2A5C1  2FFAC   %>%%
+ 2A5D2  2FFBD   SETDEG
+ 2A5F0  2FFDB   SETRAD
+ 2A604  2FFEF   SETGRAD
+ 2A622  3000D   %D>R
+ 2A62C  30017   PI/180
+ 2A655  30040   %R>D
+ 2A673  3005E   %>HMS
+ 2A68C  30077   %HMS>
+ 2A6A0  3008B   %HMS+
+ 2A6C8  300B3   %HMS-
+ 2A6DC  300C7   %%MAX
+ 2A6F5  300E0   %MAX
+ 2A70E  300F9   %MIN
+ 2A727  30112   %%0<
+ 2A738  30123   %0<
+ 2A75A  30145   %%0=
+ 2A76B  30156   %0=
+ 2A788  30173   %%0>
+ 2A799  30184   %0>
+ 2A7BB  301A6   %%0<>
+ 2A7CF  301BA   %0<>
+ 2A7E3  301CE   %%0>=
+ 2A7F7  301E2   %0>=
+ 2A80B  301F6   %%0<=
+ 2A81F  3020A   %%<
+ 2A871  3025C   %<
+ 2A87F  3026A   %%>
+ 2A88A  30275   %>
+ 2A895  30280   %%>=
+ 2A8A0  3028B   %>=
+ 2A8AB  30296   %%<=
+ 2A8B6  302A1   %<=
+ 2A8C1  302AC   %=
+ 2A8CC  302B7   %<>
+ 2A8D7  302C2   %SGN
+ 2A8F0  302DB   %%ABS
+ 2A900  302EB   %ABS
+ 2A910  302FB   %%CHS
+ 2A920  3030B   %CHS
+ 2A930  3031B   %MANTISSA
+ 2A943  3032E   %%+
+ 2A94F  3033A   %%-
+ 2A95B  30346   %>%%-
+ 2A974  3035F   %+
+ 2A981  3036C   %-
+ 2A99A  30385   %%*
+ 2A9BC  303A7   %*
+ 2A9C9  303B4   %OF
+ 2A9E8  303D3   %%/
+ 2A9FE  303E9   %/
+ 2AA0B  303F6   %T
+ 2AA30  3041B   %CH
+ 2AA5F  3044A   %%^
+ 2AA70  3045B   %^
+ 2AA81  3046C   %NROOT
+ 2AA92  3047D   %%1/
+ 2AA9E  30489   %>%%1/
+ 2AAAF  3049A   %1/
+ 2AAEA  304D5   %%SQRT
+ 2AAF6  304E1   %>%%SQRT
+ 2AB09  304F4   %SQRT
+ 2AB1C  30507   %%EXP
+ 2AB2F  3051A   %EXP
+ 2AB42  3052D   %EXPM1
+ 2AB5B  30546   %%LN
+ 2AB6E  30559   %LN
+ 2AB81  3056C   %LOG
+ 2AB94  3057F   %%LNP1
+ 2ABA7  30592   %LNP1
+ 2ABBA  305A5   %ALOG
+ 2ABDC  305C7   %MOD
+ 2ABEF  305DA   %SIN
+ 2AC06  305F1   %%SIN
+ 2AC17  30602   %%SINDEG
+ 2AC27  30612   %%SINRAD
+ 2AC40  3062B   %COS
+ 2AC57  30642   %%COS
+ 2AC68  30653   %%COSDEG
+ 2AC78  30663   %%COSRAD
+ 2AC91  3067C   %TAN
+ 2ACA8  30693   %%TANRAD
+ 2ACC1  306AC   %ASIN
+ 2ACD8  306C3   %%ASINRAD
+ 2ACF1  306DC   %ACOS
+ 2AD08  306F3   %%ACOSRAD
+ 2AD21  3070C   %ATAN
+ 2AD38  30723   %ANGLE
+ 2AD4F  3073A   %%ANGLE
+ 2AD5B  30746   %>%%ANGLE
+ 2AD6C  30757   %%ANGLEDEG
+ 2AD7C  30767   %%ANGLERAD
+ 2AD95  30780   %%SINH
+ 2ADAE  30799   %SINH
+ 2ADC7  307B2   %%COSH
+ 2ADDA  307C5   %COSH
+ 2ADED  307D8   %TANH
+ 2AE00  307EB   %ASINH
+ 2AE13  307FE   %ACOSH
+ 2AE26  30811   %ATANH
+ 2AE39  30824   %EXPONENT
+ 2AE4C  30837   %NFACT
+ 2AE62  3084D   %COMB
+ 2AE75  30860   %PERM
+ 2AF27  30912   %%H>HMS
+ 2AF4D  30938   %FP
+ 2AF60  3094B   %IP
+ 2AF73  3095E   %CEIL
+ 2AF86  30971   %FLOOR
+ 2AF99  30984   %%FLOOR
+ 2AF99  30984   %%INT
+ 2AFC2  309AD   %RAN
+ 2B044  30A2F   %RANDOMIZE
+ 2B07B  30A66   DORANDOMIZE
+ 2B0C4  30AAF   %FACT
+ 2B1FF  30BEA   %%7
+ 2B2DC  30CC7   %%12
+ 2B300  30CEB   %%60
+ 2B3DD  30DC8   %%.4
+ 2B45C  30E47   2%>%%
+ 2B470  30E5B   2%%>%
+ 2B48E  30E79   %REC>%POL
+ 2B498  30E83   %%R>P
+ 2B4BB  30EA6   %POL>%REC
+ 2B4C5  30EB0   %%P>R
+ 2B4F2  30EDD   %SPH>%REC
+ 2B529  30F14   RNDXY
+ 2B53D  30F28   TRCXY
+ 2B67D  31066   aMODF
+ 2B770  31123   aH>HMS
+ 2BC4A  31131   SPLITA
+ 2BCA0  31187   SPLTAC
+ 2BD32  31219   Y<=X
+ 2BD76  3125D   TST15
+ 2BE53  3133A   XYEX
+ 2BE61  31348   STAB0
+ 2BE6F  31356   STAB2
+ 2BE7D  31364   STCD0
+ 2BE8B  31372   STCD2
+ 2BE99  31380   EXAB0
+ 2BEA7  3138E   EXAB2
+ 2BEB5  3139C   RCAB0
+ 2BEC0  313A7   RCAB2
+ 2BECB  313B2   RCCD0
+ 2BED6  313BD   RCCD2
+ 2BEE1  313C8   CCSB1
+ 2BEEC  313D3   RNDC[B]
+ 2BFE3  314CA   GETAB1
+ 2BFFD  314E4   GETAB0
+ 2C031  31518   GETCD0
+ 2C04B  31532   PUTAB0
+ 2B789  31568   1/X15
+ 2B7A7  31586   RSUB1
+ 2B7B0  3158F   RADD1
+ 2B7CA  315A9   RADDF
+ 2B7DC  315BB   ADDF
+ 2B91E  316FD   MULTF
+ 2B977  31756   DIVF
+ 2BA0F  317EE   SQRF
+ 2BBB5  31994   DIV2
+ 2BBE2  319C1   CLRFRC
+ 03FEF  33107   any                      #0h
+ 03FEF  33107   BINT0                    #0h
+ 03FEF  33107   ZERO                     #0h
+ 03FF9  33111   BINT1                    #1h
+ 03FF9  33111   MEMERR                   #1h
+ 03FF9  33111   ONE                      #1h
+ 03FF9  33111   real                     #1h
+ 04003  3311B   BINT2                    #2h
+ 04003  3311B   cmp                      #2h
+ 04003  3311B   TWO                      #2h
+ 0400D  33125   BINT3                    #3h
+ 0400D  33125   str                      #3h
+ 0400D  33125   THREE                    #3h
+ 04017  3312F   arry                     #4h
+ 04017  3312F   BINT4                    #4h
+ 04017  3312F   FOUR                     #4h
+ 04021  33139   BINT5                    #5h
+ 04021  33139   FIVE                     #5h
+ 04021  33139   list                     #5h
+ 0402B  33143   BINT6                    #6h
+ 0402B  33143   id                       #6h
+ 0402B  33143   idnt                     #6h
+ 0402B  33143   SIX                      #6h
+ 04035  3314D   BINT7                    #7h
+ 04035  3314D   lam                      #7h
+ 04035  3314D   SEVEN                    #7h
+ 0403F  33157   BINT8                    #8h
+ 0403F  33157   EIGHT                    #8h
+ 0403F  33157   seco                     #8h
+ 04049  33161   BINT9                    #9h
+ 04049  33161   NINE                     #9h
+ 04049  33161   symb                     #9h
+ 04053  3316B   BINT10                   #Ah
+ 04053  3316B   sym                      #Ah
+ 04053  3316B   TEN                      #Ah
+ 0405D  33175   BINT11                   #Bh
+ 0405D  33175   ELEVEN                   #Bh
+ 0405D  33175   hxs                      #Bh
+ 04067  3317F   BINT12                   #Ch
+ 04067  3317F   grob                     #Ch
+ 04067  3317F   TWELVE                   #Ch
+ 04071  33189   BINT13                   #Dh
+ 04071  33189   TAGGED                   #Dh
+ 04071  33189   THIRTEEN                 #Dh
+ 0407B  33193   BINT14                   #Eh
+ 0407B  33193   EXT                      #Eh
+ 0407B  33193   FOURTEEN                 #Eh
+ 0407B  33193   unitob                   #Eh
+ 04085  3319D   BINT15                   #Fh
+ 04085  3319D   FIFTEEN                  #Fh
+ 04085  3319D   rompointer               #Fh
+ 0408F  331A7   BINT16                   #10h
+ 0408F  331A7   REALOB                   #10h
+ 0408F  331A7   SIXTEEN                  #10h
+ 04099  331B1   2REAL                    #11h
+ 04099  331B1   BINT17                   #11h
+ 04099  331B1   REALREAL                 #11h
+ 04099  331B1   SEVENTEEN                #11h
+ 040A3  331BB   BINT18                   #12h
+ 040A3  331BB   EIGHTEEN                 #12h
+ 040AD  331C5   BINT19                   #13h
+ 040AD  331C5   NINETEEN                 #13h
+ 040B7  331CF   BINT20                   #14h
+ 040B7  331CF   TWENTY                   #14h
+ 040C1  331D9   BINT21                   #15h
+ 040C1  331D9   TWENTYONE                #15h
+ 040CB  331E3   BINT22                   #16h
+ 040CB  331E3   TWENTYTWO                #16h
+ 040D5  331ED   BINT23                   #17h
+ 040D5  331ED   TWENTYTHREE              #17h
+ 040DF  331F7   BINT24                   #18h
+ 040DF  331F7   TWENTYFOUR               #18h
+ 040E9  33201   BINT25                   #19h
+ 040E9  33201   TWENTYFIVE               #19h
+ 040F3  3320B   BINT26                   #1Ah
+ 040F3  3320B   REALSYM                  #1Ah
+ 040F3  3320B   TWENTYSIX                #1Ah
+ 040FD  33215   BINT27                   #1Bh
+ 040FD  33215   TWENTYSEVEN              #1Bh
+ 04107  3321F   BINT28                   #1Ch
+ 04107  3321F   TWENTYEIGHT              #1Ch
+ 04111  33229   BINT29                   #1Dh
+ 04111  33229   TWENTYNINE               #1Dh
+ 0411B  33233   BINT30                   #1Eh
+ 0411B  33233   REALEXT                  #1Eh
+ 0411B  33233   THIRTY                   #1Eh
+ 04125  3323D   BINT31                   #1Fh
+ 04125  3323D   THIRTYONE                #1Fh
+ 0412F  33247   BINT32                   #20h
+ 0412F  33247   THIRTYTWO                #20h
+ 04139  33251   BINT33                   #21h
+ 04139  33251   THIRTYTHREE              #21h
+ 04143  3325B   BINT34                   #22h
+ 04143  3325B   THIRTYFOUR               #22h
+ 0414D  33265   BINT35                   #23h
+ 0414D  33265   THIRTYFIVE               #23h
+ 04157  3326F   BINT36                   #24h
+ 04157  3326F   THIRTYSIX                #24h
+ 04161  33279   BINT37                   #25h
+ 04161  33279   THIRTYSEVEN              #25h
+ 0416B  33283   BINT38                   #26h
+ 0416B  33283   THIRTYEIGHT              #26h
+ 04175  3328D   BINT39                   #27h
+ 04175  3328D   THIRTYNINE               #27h
+ 0417F  33297   BINT40                   #28h
+ 0417F  33297   FORTY                    #28h
+ 0417F  33297   FOURTY                   #28h
+ 04189  332A1   BINT41                   #29h
+ 04189  332A1   FORTYONE                 #29h
+ 04193  332AB   BINT42                   #2Ah
+ 04193  332AB   FORTYTWO                 #2Ah
+ 0419D  332B5   BINT43                   #2Bh
+ 0419D  332B5   FORTYTHREE               #2Bh
+ 64B12  332BF   BINT44                   #2Ch
+ 64B12  332BF   FORTYFOUR                #2Ch (aka illnameerr)
+ 64B1C  332C9   BINT45                   #2Dh
+ 64B1C  332C9   FORTYFIVE                #2Dh
+ 64B26  332D3   BINT46                   #2Eh
+ 64B26  332D3   FORTYSIX                 #2Eh
+ 64B30  332DD   BINT47                   #2Fh
+ 64B30  332DD   FORTYSEVEN               #2Fh (aka rrp)
+ 64B3A  332E7   BINT48                   #30h
+ 64B3A  332E7   FORTYEIGHT               #30h
+ 64B44  332F1   BINT49                   #31h
+ 64B44  332F1   FORTYNINE                #31h
+ 64B4E  332FB   BINT50                   #32h
+ 64B4E  332FB   FIFTY                    #32h
+ 64B58  33305   BINT51                   #33h
+ 64B58  33305   FIFTYONE                 #33h (aka 2STR)
+ 64B62  3330F   BINT52                   #34h
+ 64B62  3330F   FIFTYTWO                 #34h (aka THREEFOUR)
+ 64B6C  33319   BINT53                   #35h
+ 64B6C  33319   FIFTYTHREE               #35h (aka THREEFIVE)
+ 64B6C  33319   STRLIST                  #35h
+ 64B76  33323   BINT54                   #36h
+ 64B76  33323   FIFTYFOUR                #36h
+ 64B80  3332D   BINT55                   #37h
+ 64B80  3332D   FIFTYFIVE                #37h (aka #THREESEVEN)
+ 64B8A  33337   BINT56                   #38h
+ 64B8A  33337   FIFTYSIX                 #38h
+ 64B94  33341   BINT57                   #39h
+ 64B94  33341   FIFTYSEVEN               #39h
+ 64B9E  3334B   BINT58                   #3Ah
+ 64B9E  3334B   FIFTYEIGHT               #3Ah
+ 64BA8  33355   BINT59                   #3Bh
+ 64BA8  33355   FIFTYNINE                #3Bh
+ 64BB2  3335F   BINT60                   #3Ch
+ 64BB2  3335F   SIXTY                    #3Ch
+ 64BBC  33369   BINT61                   #3Dh
+ 64BBC  33369   SIXTYONE                 #3Dh
+ 64BC6  33373   BINT62                   #3Eh
+ 64BC6  33373   SIXTYTWO                 #3Eh
+ 64BD0  3337D   BINT63                   #3Fh
+ 64BD0  3337D   SIXTYTHREE               #3Fh (aka BINT3Fh)
+ 64BDA  33387   BINT40h                  #40h
+ 64BDA  33387   BINT64                   #40h
+ 64BDA  33387   SIXTYFOUR                #40h
+ 64BDA  33387   YHI                      #40h
+ 64BE4  33391   ARRYREAL                 #41h
+ 64BE4  33391   BINT65                   #41h
+ 64BE4  33391   BINT_65d                 #41h
+ 64BEE  3339B   BINT66                   #42h
+ 64BEE  3339B   FOURTWO                  #42h (aka ARRYCMP)
+ 64BF8  333A5   BINT67                   #43h
+ 64BF8  333A5   FOURTHREE                #43h
+ 64C02  333AF   BINT68                   #44h
+ 64C02  333AF   SIXTYEIGHT               #44h (aka 2ARRY)
+ 64C0C  333B9   BINT69                   #45h
+ 64C0C  333B9   FOURFIVE                 #45h (aka ARRYLIST)
+ 64C16  333C3   BINT70                   #46h
+ 64C16  333C3   SEVENTY                  #46h (aka ARRYID)
+ -----  333CD   BINT71                   #47h
+ -----  333D7   BINT72                   #48h
+ -----  333E1   BINT73                   #49h
+ 64C20  333EB   BINT74                   #4Ah
+ 64C20  333EB   SEVENTYFOUR              #4Ah (aka ARRYSYM)
+ -----  333F5   BINT75                   #4Bh
+ -----  333FF   BINT76                   #4Ch
+ -----  33409   BINT77                   #4Dh
+ -----  33413   BINT78                   #4Eh
+ 64C2A  3341D   BINT79                   #4Fh
+ 64C2A  3341D   SEVENTYNINE              #4Fh
+ 64C3A  33427   BINT80                   #50h
+ 64C34  33427   EIGHTY                   #50h (aka LISTOB)
+ 64C3E  33431   BINT81                   #51h
+ 64C3E  33431   EIGHTYONE                #51h
+ 64C3E  33431   LISTREAL                 #51h
+ 64C48  3343B   BINT82                   #52h
+ 64C48  3343B   LISTCMP                  #52h
+ 64C52  33445   BINT83                   #53h
+ 64C52  33445   FIVETHREE                #53h
+ 64C5C  3344F   BINT84                   #54h
+ 64C5C  3344F   FIVEFOUR                 #54h
+ 64C66  33459   2LIST                    #55h
+ 64C66  33459   BINT85                   #55h
+ 64C70  33463   BINT86                   #56h
+ 64C70  33463   FIVESIX                  #56h (aka LISTID)
+ 64C7A  3346D   BINT87                   #57h
+ 64C7A  3346D   LISTLAM                  #57h
+ -----  33477   BINT88                   #58h
+ -----  33481   BINT89                   #59h
+ -----  3348B   BINT90                   #5Ah
+ 64C84  33495   BINT91                   #5Bh
+ 64C84  33495   BINT_91d                 #5Bh
+ -----  3349F   BINT92                   #5Ch
+ -----  334A9   BINT93                   #5Dh
+ -----  334B3   BINT94                   #5Eh
+ -----  334BD   BINT95                   #5Fh
+ 64C8E  334C7   BINT96                   #60h
+ 64C8E  334C7   BINT_96d                 #60h (aka idntany)
+ 64C98  334D1   BINT97                   #61h
+ 64C98  334D1   IDREAL                   #61h
+ 64CA2  334DB   BINT98                   #62h U.B.S. (aka IDCMP, NINETYEIGHT)
+ -----  334E5   BINT99                   #63h
+ 64CAC  334EF   BINT100                  #64h
+ 64CAC  334EF   ONEHUNDRED               #64h (aka IDARRY)
+ 64CB6  334F9   BINT101                  #65h U.B.S. (aka IDLIST, SIXFIVE)
+ -----  33503   BINT102                  #66h
+ -----  3350D   BINT103                  #67h
+ -----  33517   BINT104                  #68h
+ -----  33521   BINT105                  #69h
+ -----  3352B   BINT106                  #6Ah
+ -----  33535   BINT107                  #6Bh
+ -----  3353F   BINT108                  #6Ch
+ -----  33549   BINT109                  #6Dh
+ -----  33553   BINT110                  #6Eh
+ 64CC0  3355D   BINT111                  #6Fh
+ 64CC0  3355D   char                     #6Fh
+ 64CCA  33567   BINT112                  #70h U.B.S. (aka lamany)
+ 64CD4  33571   BINT113                  #71h U.B.S. (aka LAMREAL)
+ 64CDE  3357B   BINT114                  #72h U.B.S. (aka BINT_114d)
+ 64CE8  33585   BINT115                  #73h
+ 64CE8  33585   BINT_115d                #73h
+ 64CF2  3358F   BINT116                  #74h
+ 64CF2  3358F   BINT_116d                #74h
+ 64CFC  33599   BINT117                  #75h U.B.S. (aka BINT_117d, LAMLIST)
+ -----  335A3   BINT118                  #76h
+ -----  335AD   BINT119                  #77h
+ -----  335B7   BINT120                  #78h
+ -----  335C1   BINT121                  #79h
+ 64D06  335CB   BINT122                  #7Ah
+ 64D06  335CB   BINT_122d                #7Ah
+ -----  335D5   BINT123                  #7Bh
+ -----  335DF   BINT124                  #7Ch
+ -----  335E9   BINT125                  #7Dh
+ -----  335F3   BINT126                  #7Eh
+ -----  335FD   BINT127                  #7Fh
+ 64D10  33607   BINT128                  #80h
+ 64D10  33607   BINT80h                  #80h (aka BINT_128d)
+ -----  33611   BINT129                  #81h
+ 64D1A  3361B   BINT130                  #82h
+ 64D1A  3361B   BINT_130d                #82h
+ 64D1A  3361B   XHI-1                    #82h
+ 64D24  33625   BINT131                  #83h
+ 64D24  33625   BINT_131d                #83h
+ 64D24  33625   XHI                      #83h
+ 64D2E  3362F   library                  #8Fh U.B.S., NOT YET SUPPORTED IN VGER
+ 64D38  33639   SYMBREAL                 #91h
+ 64D42  33643   SYMBCMP                  #92h U.B.S., NOT YET SUPPORTED IN VGER
+ 64D4C  3364D   SYMBSYM                  #9Ah U.B.S., NOT YET SUPPORTED IN VGER
+ 64D56  33657   SYMBUNIT                 #9Eh
+ 64D60  33661   backup                   #9Fh U.B.S., NOT YET SUPPORTED IN VGER
+ 64D6A  3366B   SYMOB                    #A0h
+ 64D74  33675   SYMREAL                  #A1h
+ 64D7E  3367F   SYMCMP                   #A2h U.B.S., NOT YET SUPPORTED IN VGER
+ 64D88  33689   SYMLIST                  #A5h U.B.S., NOT YET SUPPORTED IN VGER
+ 64D92  33693   SYMID                    #A6h
+ 64D9C  3369D   SYMLAM                   #A7h
+ 64DA6  336A7   SYMSYMB                  #A9h U.B.S., NOT YET SUPPORTED IN VGER
+ 64DB0  336B1   SYMSYM                   #AAh
+ 64DBA  336BB   SYMEXT                   #AEh
+ 64DC4  336C5   HXSREAL                  #B1h U.B.S., NOT YET SUPPORTED IN VGER
+ 64DCE  336CF   2HXS                     #BBh U.B.S., NOT YET SUPPORTED IN VGER
+ 64DD8  336D9   BINTC0h                  #C0h
+ 64DE2  336E3   2GROB                    #CCh
+ 64DEC  336ED   TAGGEDANY                #D0h
+ 64DF6  336F7   EXTREAL                  #E1h
+ 64E00  33701   EXTSYM                   #EAh (aka UNITSYM)
+ 64E0A  3370B   2EXT                     #EEh
+ 64E14  33715   ROMPANY                  #F0h
+ 64E1E  3371F   BINT253                  #FDh
+ 64E28  33729   BINT255d                 #FFh
+ 64E32  33733   REALOBOB                 #100h (aka FSTFLOATROM#)
+ 64E3C  3373D   #_102                    #102h (aka #_258_d, Err#Chr00)
+ 64E46  33747   #SyntaxErr               #106h U.B.S.
+ 64E50  33751   BINT_263d                #107h U.B.S., NOT YET SUPPORTED IN VGER (aka #ObTypeBase)
+ 64E5A  3375B   REALREALOB               #110h U.B.S., NOT YET SUPPORTED IN VGER
+ 64E64  33765   3REAL                    #111h
+ 64E6E  3376F   Err#Kill                 #123h U.B.S., NOT YET SUPPORTED IN VGER (aka #_291_d, #_123)
+ 64E78  33779   Err#NoLstStk             #124h U.B.S., NOT YET SUPPORTED IN VGER (aka #_292_d, #_124)
+ 64E82  33783   #NoRoomForSt             #131h U.B.S., NOT YET SUPPORTED IN VGER (aka BINT_305d)
+ 64E8C  3378D   #Warning:NL              #132h U.B.S., NOT YET SUPPORTED IN VGER (aka BINT_306d)
+ 64E96  33797   REALSTRSTR               #133h U.B.S., NOT YET SUPPORTED IN VGER (aka #Error:, BINT_307d)
+ 64EA0  337A1   VLMpurgemsg              #134h U.B.S., NOT YET SUPPORTED IN VGER
+ 64EAA  337AB   VLMmsg                   #135h U.B.S., NOT YET SUPPORTED IN VGER
+ 64EB4  337B5   REALSTRID                #136h U.B.S., NOT YET SUPPORTED IN VGER (aka VLMstkmsg)
+ 64EBE  337BF   VLMundomsg               #137h U.B.S., NOT YET SUPPORTED IN VGER
+ 64EC8  337C9   VLMhistmsg               #138h U.B.S., NOT YET SUPPORTED IN VGER
+ 64ED2  337D3   VLMUserKeys              #139h U.B.S., NOT YET SUPPORTED IN VGER
+ 64EDC  337DD   VLMAlarmMsg              #13Ah U.B.S., NOT YET SUPPORTED IN VGER
+ 64EE6  337E7   VLMlastargs              #13Bh U.B.S., NOT YET SUPPORTED IN VGER
+ 64EF0  337F1   VLMcmdlmsg               #13Dh U.B.S., NOT YET SUPPORTED IN VGER
+ 64EFA  337FB   Err#Cont                 #13Eh U.B.S., NOT YET SUPPORTED IN VGER
+ 64F04  33805   INTEGER337               #151h (aka REALLISTREAL)
+ 64F0E  3380F   CMPOBOB                  #200h U.B.S., NOT YET SUPPORTED IN VGER
+ 64F18  33819   Err#NoLstArg             #205h U.B.S., NOT YET SUPPORTED IN VGER (aka #_517_d, #_205)
+ 64F22  33823   STRREALREAL              #311h U.B.S., NOT YET SUPPORTED IN VGER
+ 64F2C  3382D   ARRYREALREAL             #411h U.B.S., NOT YET SUPPORTED IN VGER
+ 64F36  33837   ARRYREALCMP              #412h U.B.S., NOT YET SUPPORTED IN VGER
+ 64F40  33841   3ARRY                    #444h U.B.S., NOT YET SUPPORTED IN VGER
+ 64F4A  3384B   ARRYLISTREAL             #451h U.B.S., NOT YET SUPPORTED IN VGER
+ 64F54  33855   ARRYLISTCMP              #452h U.B.S., NOT YET SUPPORTED IN VGER
+ 64F5E  3385F   LISTREALOB               #510h U.B.S., NOT YET SUPPORTED IN VGER
+ 64F68  33869   LISTREALREAL             #511h U.B.S., NOT YET SUPPORTED IN VGER
+ 64F72  33873   LISTLISTOB               #550h U.B.S., NOT YET SUPPORTED IN VGER
+ 64F7C  3387D   IDREALOB                 #610h U.B.S., NOT YET SUPPORTED IN VGER
+ 64F86  33887   IDLISTOB                 #650h U.B.S., NOT YET SUPPORTED IN VGER
+ 64F90  33891   LAMANYANY                #700h U.B.S., NOT YET SUPPORTED IN VGER (aka FSTMACROROM#, LSTBIMACROM#)
+ 64F9A  3389B   PROGIDREAL               #861h U.B.S., NOT YET SUPPORTED IN VGER
+ 64FA4  338A5   PROGIDCMP                #862h U.B.S., NOT YET SUPPORTED IN VGER
+ 64FAE  338AF   PROGIDLIST               #865h U.B.S., NOT YET SUPPORTED IN VGER
+ 64FB8  338B9   PROGIDEXT                #86Eh U.B.S., NOT YET SUPPORTED IN VGER
+ 64FC2  338C3   ATTNERR                  #A03h
+ 64FCC  338CD   SYMREALREAL              #A11h U.B.S., NOT YET SUPPORTED IN VGER
+ 64FD6  338D7   SYMREALCMP               #A12h U.B.S., NOT YET SUPPORTED IN VGER
+ 64FE0  338E1   SYMREALSYM               #A1Ah U.B.S., NOT YET SUPPORTED IN VGER
+ 64FEA  338EB   SYMCMPREAL               #A21h U.B.S., NOT YET SUPPORTED IN VGER
+ 64FF4  338F5   SYMCMPCMP                #A22h U.B.S., NOT YET SUPPORTED IN VGER
+ 64FFE  338FF   SYMCMPSYM                #A2Ah U.B.S., NOT YET SUPPORTED IN VGER
+ 65008  33909   SYMIDREAL                #A61h U.B.S., NOT YET SUPPORTED IN VGER
+ 65012  33913   SYMIDCMP                 #A62h U.B.S., NOT YET SUPPORTED IN VGER
+ 6501C  3391D   SYMIDLIST                #A65h U.B.S., NOT YET SUPPORTED IN VGER
+ 65026  33927   SYMIDEXT                 #A6Eh U.B.S., NOT YET SUPPORTED IN VGER
+ 65030  33931   SYMSYMREAL               #AA1h U.B.S., NOT YET SUPPORTED IN VGER
+ 6503A  3393B   SYMSYMCMP                #AA2h U.B.S., NOT YET SUPPORTED IN VGER
+ 65044  33945   3SYM                     #AAAh U.B.S., NOT YET SUPPORTED IN VGER
+ 6504E  3394F   XFERFAIL                 #C06h U.B.S., NOT YET SUPPORTED IN VGER
+ 65058  33959   PROTERR                  #C07h U.B.S., NOT YET SUPPORTED IN VGER
+ 65062  33963   InvalServCmd             #C08h U.B.S., NOT YET SUPPORTED IN VGER
+ 6506C  3396D   Connecting               #C0Ah
+ 65076  33977   Retry                    #C0Bh U.B.S., NOT YET SUPPORTED IN VGER
+ 65080  33981   #CAlarmErr               #DFFh U.B.S.
+ 6508A  3398B   EXTOBOB                  #E00h
+ 65094  33995   #EXITERR                 #70000h
+ 6509E  3399F   MINUSONE                 #FFFFFh
+ 650A8  339A9   %e
+ 650BD  339BE   %.5
+ 650D2  339D3   %-.5                     U.B.S., NOT YET SUPPORTED IN VGER
+ 650E7  339E8   %10
+ 650FC  339FD   %180
+ 65111  33A12   %200                     U.B.S., NOT YET SUPPORTED IN VGER
+ 65126  33A27   %360
+ 6513B  33A3C   %400                     U.B.S., NOT YET SUPPORTED IN VGER
+ 65150  33A51   tok]                     "]", U.B.S., NOT YET SUPPORTED IN VGER (aka rbrac)
+ 6515C  33A5D   lbrac                    "[ ", U.B.S., NOT YET SUPPORTED IN VGER
+ 6516A  33A6B   tok[                     "[", U.B.S., NOT YET SUPPORTED IN VGER
+ 65176  33A77   tok{                     "{"
+ 65182  33A83   tok}                     "}", U.B.S., NOT YET SUPPORTED IN VGER
+ 6518E  33A8F   toksharp                 "#"
+ 6519A  33A9B   tokuscore                "_", U.B.S., NOT YET SUPPORTED IN VGER
+ 651A6  33AA7   tok$                     "$", U.B.S., NOT YET SUPPORTED IN VGER
+ 651B2  33AB3   tok&                     "&", U.B.S., NOT YET SUPPORTED IN VGER
+ 651BE  33ABF   tokESC                   "\027"
+ 651CA  33ACB   tok>>                    "\>>", U.B.S., NOT YET SUPPORTED IN VGER
+ 651D6  33AD7   tok<<                    "\<<"
+ 651E2  33AE3   tokexponent              "E"
+ 651EE  33AEF   tokanglesign             "\<)", U.B.S., NOT YET SUPPORTED IN VGER
+ 651FA  33AFB   tokSIGMA                 "\GS", U.B.S., NOT YET SUPPORTED IN VGER
+ 65206  33B07   tokWHERE                 "|", U.B.S., NOT YET SUPPORTED IN VGER
+ 65212  33B13   14SPACES$                "              ", U.B.S., NOT YET SUPPORTED IN VGER
+ 65238  33B39   NEWLINE$                 "\010" (aka LF$)
+ 65244  33B45   $DER                     "der", U.B.S., NOT YET SUPPORTED IN VGER
+ 65254  33B55   SPACE$                   " "
+ 65254  33B55   tok_                     " " (same as SPACE$)
+ 65260  33B61   tokUNKNOWN               "UNKNOWN", U.B.S., NOT YET SUPPORTED IN VGER
+ 65278  33B79   tokquote                 """
+ 65284  33B85   tok'                     "'"
+ 65290  33B91   tok,                     ","
+ 6529C  33B9D   tok.                     "."
+ 652A8  33BA9   tok;                     ";", U.B.S., NOT YET SUPPORTED IN VGER
+ 652B4  33BB5   toklparen                "(", U.B.S., NOT YET SUPPORTED IN VGER
+ 652C0  33BC1   tokrparen                ")", U.B.S., NOT YET SUPPORTED IN VGER
+ 652CC  33BCD   tok^                     "^", U.B.S., NOT YET SUPPORTED IN VGER
+ 652D8  33BD9   tok*                     "*", U.B.S., NOT YET SUPPORTED IN VGER
+ 652E4  33BE5   tok/                     "/", U.B.S., NOT YET SUPPORTED IN VGER
+ 652F0  33BF1   tok+                     "+", U.B.S., NOT YET SUPPORTED IN VGER
+ 652FC  33BFD   tok-                     "-"
+ 65308  33C09   tok=                     "="
+ 65314  33C15   tokSQRT                  "\v/", U.B.S., NOT YET SUPPORTED IN VGER
+ 65320  33C21   tokDER                   "\.d", U.B.S., NOT YET SUPPORTED IN VGER
+ 6532C  33C2D   tokCTGROB                "GROB", U.B.S., NOT YET SUPPORTED IN VGER
+ 6533E  33C3F   tokCTSTR                 "C$", U.B.S., NOT YET SUPPORTED IN VGER
+ 6534C  33C4D   tok0                     "0"
+ 65358  33C59   tok1                     "1"
+ 65364  33C65   tok2                     "2", U.B.S., NOT YET SUPPORTED IN VGER
+ 65370  33C71   tok3                     "3", U.B.S., NOT YET SUPPORTED IN VGER
+ 6537C  33C7D   tok4                     "4", U.B.S., NOT YET SUPPORTED IN VGER
+ 65388  33C89   tok5                     "5", U.B.S., NOT YET SUPPORTED IN VGER
+ 65394  33C95   tok6                     "6", U.B.S., NOT YET SUPPORTED IN VGER
+ 653A0  33CA1   tok7                     "7", U.B.S., NOT YET SUPPORTED IN VGER
+ 653AC  33CAD   tok8                     "8"
+ 653B8  33CB9   tok9                     "9"
+ 6541E  33D2B   CHR_00
+ 65425  33D32   CHR_...
+ 6542C  33D39   CHR_DblQuote
+ 65433  33D40   CHR_#
+ 6543A  33D47   CHR_*
+ 65441  33D4E   CHR_+
+ 65448  33D55   CHR_,
+ 6544F  33D5C   CHR_-
+ 65456  33D63   CHR_.
+ 6545D  33D6A   CHR_/
+ 65464  33D71   CHR_0
+ 6546B  33D78   CHR_1
+ 65472  33D7F   CHR_2
+ 65479  33D86   CHR_3
+ 65480  33D8D   CHR_4
+ 65487  33D94   CHR_5
+ 6548E  33D9B   CHR_6
+ 65495  33DA2   CHR_7
+ 6549C  33DA9   CHR_8
+ 654A3  33DB0   CHR_9
+ 654AA  33DB7   CHR_:
+ 654B1  33DBE   CHR_;
+ 654B8  33DC5   CHR_<
+ 654BF  33DCC   CHR_=
+ 654C6  33DD3   CHR_>
+ 654CD  33DDA   CHR_A
+ 654D4  33DE1   CHR_B
+ 654DB  33DE8   CHR_C
+ 654E2  33DEF   CHR_D
+ 654E9  33DF6   CHR_E
+ 654F0  33DFD   CHR_F
+ 654F7  33E04   CHR_G
+ 654FE  33E0B   CHR_H
+ 65505  33E12   CHR_I
+ 6550C  33E19   CHR_J
+ 65513  33E20   CHR_K
+ 6551A  33E27   CHR_L
+ 65521  33E2E   CHR_M
+ 65528  33E35   CHR_N
+ 6552F  33E3C   CHR_O
+ 65536  33E43   CHR_P
+ 6553D  33E4A   CHR_Q
+ 65544  33E51   CHR_R
+ 6554B  33E58   CHR_S
+ 65552  33E5F   CHR_T
+ 65559  33E66   CHR_U
+ 65560  33E6D   CHR_V
+ 65567  33E74   CHR_W
+ 6556E  33E7B   CHR_X
+ 65575  33E82   CHR_Y
+ 6557C  33E89   CHR_Z
+ 65583  33E90   CHR_a
+ 6558A  33E97   CHR_b
+ 65591  33E9E   CHR_c
+ 65598  33EA5   CHR_d
+ 6559F  33EAC   CHR_e
+ 655A6  33EB3   CHR_f
+ 655AD  33EBA   CHR_g
+ 655B4  33EC1   CHR_h
+ 655BB  33EC8   CHR_i
+ 655C2  33ECF   CHR_j
+ 655C9  33ED6   CHR_k
+ 655D0  33EDD   CHR_l
+ 655D7  33EE4   CHR_m
+ 655DE  33EEB   CHR_n
+ 655E5  33EF2   CHR_o
+ 655EC  33EF9   CHR_p
+ 655F3  33F00   CHR_q
+ 655FA  33F07   CHR_r
+ 65601  33F0E   CHR_s
+ 65608  33F15   CHR_t
+ 6560F  33F1C   CHR_u
+ 65616  33F23   CHR_v
+ 6561D  33F2A   CHR_w
+ 65624  33F31   CHR_x
+ 6562B  33F38   CHR_y
+ 65632  33F3F   CHR_z
+ 65639  33F46   CHR_->
+ 65640  33F4D   CHR_<<
+ 65647  33F54   CHR_>>
+ 6564E  33F5B   CHR_Angle
+ 65655  33F62   CHR_Deriv
+ 6565C  33F69   CHR_Integral
+ 65663  33F70   CHR_LeftPar
+ 6566A  33F77   CHR_Newline
+ 65671  33F7E   CHR_Pi
+ 65678  33F85   CHR_RightPar
+ 6567F  33F8C   CHR_Sigma
+ 65686  33F93   CHR_Space
+ 6568D  33F9A   CHR_UndScore
+ 65694  33FA1   CHR_[
+ 6569B  33FA8   CHR_]
+ 656A2  33FAF   CHR_{
+ 656A9  33FB6   CHR_}
+ 656B0  33FBD   CHR_<=
+ 656B7  33FC4   CHR_>=
+ 656BE  33FCB   CHR_<>
+ 656C5  33FD2   $_R<<
+ 656D5  33FE2   $_R<Z
+ 656E5  33FF2   $_XYZ
+ 656F5  34002   $_<<>>
+ 65703  34010   $_{}
+ 65711  3401E   $_[]
+ 6571F  3402C   $_''
+ 6572D  3403A   $_::
+ 6573B  34048   $_LRParens
+ 65749  34056   $_2DQ
+ 65757  34064   $_ECHO
+ 65769  34076   $_EXIT
+ 6577B  34088   $_Undefined
+ 65797  340A4   $_RAD
+ 657A7  340B4   $_GRAD
+ 60EBD  34144   RSWAP
+ 60EE7  3416E   ROTSWAP
+ 60EE7  3416E   XYZ>YXZ
+ 60F0E  34195   ROTDROPSWAP
+ 60F0E  34195   UNROTSWAPDROP
+ 60F0E  34195   XYZ>ZY
+ 60F21  341A8   ROTDROP
+ 60F21  341A8   XYZ>YZ
+ 60F33  341BA   SWAPROT
+ 60F33  341BA   UNROTSWAP
+ 60F33  341BA   XYZ>ZYX
+ 60F4B  341D2   3DROP
+ 60F4B  341D2   XYZ>
+ 60F7E  341D7   4DROP
+ 60F7E  341D7   XYZW>
+ 60F72  341DC   5DROP
+ 60F66  341E8   6DROP
+ 60F54  341F4   7DROP
+ 60F83  34202   4DropLoop
+ 60F9B  3421A   SWAPDROP
+ 60F9B  3421A   XY>Y
+ 60FAC  3422B   3UNROLL
+ 60FAC  3422B   UNROT
+ 60FAC  3422B   XYZ>ZXY
+ 60FBB  3423A   4ROLL
+ 60FBB  3423A   FOURROLL
+ 60FBB  3423A   XYZW>YZWX
+ 60FD8  34257   5ROLL
+ 60FD8  34257   FIVEROLL
+ 61002  34281   6ROLL
+ 61002  34281   SIXROLL
+ 6103C  342BB   8ROLL
+ 6103C  342BB   EIGHTROLL
+ 6106B  342EA   7ROLL
+ 6106B  342EA   SEVENROLL
+ 61099  3432C   DUP4UNROLL
+ 6109E  34331   4UNROLL
+ 6109E  34331   FOURUNROLL
+ 6109E  34331   XYZW>WXYZ
+ 610C4  34357   5UNROLL
+ 610C4  34357   FIVEUNROLL
+ 610FA  3438D   6UNROLL
+ 610FA  3438D   SIXUNROLL
+ 6112A  343BD   ROTROT2DROP
+ 6112A  343BD   UNROT2DROP
+ 6112A  343BD   XYZ>Z
+ 6113C  343CF   4UNROLL3DROP
+ 6113C  343CF   XYZW>W
+ 6114E  343E1   2RDROP
+ 61160  343F3   3RDROP
+ 61172  34405   #-PICK
+ 61184  34417   #+PICK
+ 6119E  34431   DUP#1+PICK
+ 611A3  34436   #1+PICK
+ 611BE  34451   #2+PICK
+ 611D2  34465   #3+PICK
+ 611E1  34474   #4+PICK
+ 611FE  34485   3PICK
+ 6121C  3448A   4PICK
+ 6123A  3448F   5PICK
+ 6125E  34494   6PICK
+ 61282  34499   7PICK
+ 612A9  3449E   8PICK
+ 612CC  344CB   #-ROLL
+ 612DE  344DD   #+ROLL
+ 612F3  344F2   #1+ROLL
+ 61305  34504   get1
+ 61318  34517   #2+ROLL
+ 6132C  3452B   #-UNROLL
+ 6133E  3453D   #+UNROLL
+ 61353  34552   #1+UNROLL
+ 61365  34564   #2+UNROLL
+ 61380  3457F   DUPUNROT
+ 61380  3457F   SWAPOVER
+ 615E0  34611   1PUTLAM
+ 613B6  34616   1GETLAM
+ 615F0  3461B   2PUTLAM
+ 613E7  34620   2GETLAM
+ 61600  34625   3PUTLAM
+ 6140E  3462A   3GETLAM
+ 61615  3462F   4PUTLAM
+ 61438  34634   4GETLAM
+ 61625  34639   5PUTLAM
+ 6145C  3463E   5GETLAM
+ 61635  34643   6PUTLAM
+ 6146C  34648   6GETLAM
+ 61645  3464D   7PUTLAM
+ 6147C  34652   7GETLAM
+ 61655  34657   8PUTLAM
+ 6148C  3465C   8GETLAM
+ 61665  34661   9PUTLAM
+ 6149C  34666   9GETLAM
+ 61675  3466B   10PUTLAM
+ 614AC  34670   10GETLAM
+ 61685  34675   11PUTLAM
+ 614BC  3467A   11GETLAM
+ 61695  3467F   12PUTLAM
+ 614CC  34684   12GETLAM
+ 616A5  34689   13PUTLAM
+ 614DC  3468E   13GETLAM
+ 616B5  34693   14PUTLAM
+ 614EC  34698   14GETLAM
+ 616C5  3469D   15PUTLAM
+ 614FC  346A2   15GETLAM
+ 616D5  346A7   16PUTLAM
+ 6150C  346AC   16GETLAM
+ 616E5  346B1   17PUTLAM
+ 6151C  346B6   17GETLAM
+ 616F5  346BB   18PUTLAM
+ 6152C  346C0   18GETLAM
+ 61705  346C5   19PUTLAM
+ 6153C  346CA   19GETLAM
+ 61715  346CF   20PUTLAM
+ 6154C  346D4   20GETLAM
+ 61725  346D9   21PUTLAM
+ 6155C  346DE   21GETLAM
+ 61735  346E3   22PUTLAM
+ 6156C  346E8   22GETLAM
+ 61610  34797   DUP4PUTLAM
+ 61745  347AB   DUPTEMPENV
+ 617D8  3483E   GETLAMPAIR
+ 6186C  348D2   #=case
+ 6187C  348E2   OVER#=case
+ 61891  348F7   DUP#0=case
+ 61896  348FC   #0=case
+ 618A8  3490E   DUP#0=csedrp
+ 618BA  34920   EQcasedrop
+ 618D3  34939   #=casedrop
+ 618E8  3494E   NOTcasedrop
+ 618F7  3495D   casedrop
+ 61910  34976   NOTcase2drop
+ 6191F  34985   case2drop
+ 61933  34999   EQcase
+ 6194B  349B1   caseDROP
+ 61960  349C6   NOTcaseDROP
+ 61970  349D6   case2DROP
+ 61984  349EA   NOTcase2DROP
+ 61993  349F9   case
+ 619AD  34A13   NOTcase
+ 619BC  34A22   IT
+ 619CB  34A31   GOTO
+ 619E0  34A46   ?GOTO
+ 619F3  34A59   NOT?GOTO
+ 61A02  34A68   popflag
+ 61A18  34A7E   #0=?SEMI
+ 61A2C  34A92   NOT?SEMI
+ 61A3B  34AA1   ?SEMI
+ 61A47  34AAD   SEMILOOP
+ 61A58  34ABE   ITE_DROP
+ 61A6D  34AD3   COLA_EVAL
+ 61A8E  34AF4   COLARPITE
+ 61AD8  34B3E   ITE
+ 61AE9  34B4F   2'RCOLARPITE
+ 61B45  34BAB   2@REVAL
+ 61B55  34BBB   3@REVAL
+ 61B72  34BD8   NOT?DROP
+ 61B89  34BEF   ticR
+ 61C1C  34C82   EXPAND
+ 61CE9  34D00   CACHE
+ 61D3A  34D51   SAVELAM
+ 61D41  34D58   SAVESTACK
+ 61EA7  34EBE   DUMP
+ 61F8F  34FA6   undo
+ 61FA9  34FC0   DUPROM-WORD?
+ 61FB6  34FCD   ROM-WORD?
+ 61FCF  34FE6   Rom-Word?
+ 62001  35018   2SWAP
+ 62020  35037   DUPTYPECHAR?
+ 62025  3503C   TYPECHAR?
+ 62035  35046   DUPTYPEIDNT?
+ 6203A  3504B   TYPEIDNT?
+ -----  35082   DUPTYPEFLASHPTR?
+ -----  35087   TYPEFLASHPTR?
+ -----  35091   DUPTYPEZINT?
+ -----  35096   TYPEZINT?
+ -----  350A0   DUPTYPELNGREAL?
+ -----  350A5   TYPELNGREAL?
+ -----  350AF   DUPTYPELNGCMP?
+ -----  350B4   TYPELNGCMP?
+ -----  350BE   DUPTYPEFONT?
+ -----  350C3   TYPEFONT?
+ -----  350CD   DUPTYPEAPLET?
+ -----  350D2   TYPEAPLET?
+ 62115  350DC   DUPTYPELAM?
+ 6211A  350E1   TYPELAM?
+ 6212A  350EB   DUPTYPEBINT?
+ 6212F  350F0   TYPEBINT?
+ 6213F  350FA   DUPTYPEHSTR?
+ 62144  350FF   TYPEHSTR?
+ 62154  35109   DTYPECSTR?
+ 62154  35109   DUPTYPECSTR?
+ 62159  3510E   TYPECSTR?
+ 62169  35118   DTYPEREAL?
+ 62169  35118   DUPTYPEREAL?
+ 6216E  3511D   TYPEREAL?
+ 6217E  35127   DUPTYPECMP?
+ 62183  3512C   TYPECMP?
+ 62193  35136   DTYPEARRY?
+ 62193  35136   DUPTYPEARRY?
+ 62198  3513B   TYPEARRY?
+ 621A8  35145   DUPTYPEROMP?
+ 621AD  3514A   TYPEROMP?
+ 621BD  35154   DUPTYPERRP?
+ 621C2  35159   TYPERRP?
+ 621D2  35163   DUPTYPESYMB?
+ 621D7  35168   TYPESYMB?
+ 621E7  35172   DTYPECOL?
+ 621E7  35172   DUPTYPECOL?
+ 621EC  35177   TYPECOL?
+ 621FC  35181   DUPTYPEGROB?
+ 62201  35186   TYPEGROB?
+ 62211  35190   DTYPELIST?
+ 62211  35190   DUPTYPELIST?
+ 62216  35195   TYPELIST?
+ 62226  3519F   DUPTYPETAG?
+ 6222B  351A4   TYPETAGGED?
+ 6204A  351AE   DUPTYPEEXT?
+ 6204F  351B3   TYPEEXT?
+ 62073  351F0   GPOverWrT/FL
+ 62076  351F3   GPOverWrTLp
+ 6207D  351FA   OverWrF/TLp
+ 62080  351FD   OverWrTLoop
+ 62096  35213   GPOverWrFLp
+ 6209D  3521A   OverWrT/FLp
+ 620A0  3521D   OverWrFLoop
+ 620B6  35233   GPPushT/FLp
+ 620B9  35236   GPPushTLoop
+ 620C0  3523D   PushF/TLoop
+ 620C3  35240   DOTRUE
+ 620C3  35240   PushTLoop
+ 620D2  3524F   GPPushFLoop
+ 620D9  35256   PushT/F
+ 620D9  35256   PushT/FLoop
+ 620DC  35259   DOFALSE
+ 620DC  35259   PushFLoop
+ 620EB  35268   OVER#=
+ 62103  35280   DROPTRUE
+ 6210C  35289   DROPFALSE
+ 6223B  35292   TYPERARRY?
+ 62256  352AD   TYPECARRY?
+ 62266  352BD   DUP#0=
+ 62289  352E0   #3=
+ 6229A  352F1   #2=
+ 622A7  352FE   #1=
+ 622B6  3530D   #1<>
+ 622C5  3531C   DUP#1=
+ 622D4  3532B   DUP#0<>
+ 622E5  3533C   !insert$
+ 622EF  35346   SWAP&$
+ 62312  35369   !!append$?
+ 62376  353CD   !append$
+ 62394  353EB   !!insert$
+ 623A0  353F7   !!append$
+ 62474  354CB   'RSaveRomWrd
+ 62474  354CB   'RSAVEWORD
+ 624BA  35511   #MIN
+ 624C6  3551D   #MAX
+ 624FB  35552   #-#2/
+ 62535  3558C   DROPZERO
+ 6254E  355A5   2DROP00
+ 6262A  355D0   #6-
+ 6261A  355D5   #5-
+ 6260A  355DA   #4-
+ 625FA  355DF   #3-
+ 6256A  355FD   #3+
+ 6257A  35602   #4+
+ 6258A  35607   #5+
+ 6259A  3560C   #6+
+ 625AA  35611   #7+
+ 625BA  35616   #8+
+ 625CA  3561B   #9+
+ 625DA  35620   #10+
+ 625EA  3562A   #12+
+ 6264E  35675   #10*
+ 62674  3569B   #8*
+ 62691  356B8   #6*
+ 626AE  356D5   5skipcola
+ 626DC  35703   3skipcola
+ 626E5  3570C   2skipcola
+ 626EE  35715   skipcola
+ 626F7  3571E   DUP#2+
+ 6270C  35733   DROPSWAP
+ 62726  3574D   DROPSWAPDROP
+ 62726  3574D   ROT2DROP
+ 62726  3574D   XYZ>Y
+ 62747  3576E   SWAPDUP
+ 62775  3579C   ROTDUP
+ 62794  357BB   SWAP#-
+ 627A7  357CE   DROPDUP
+ 627BB  357E2   DUPLEN$
+ 627D5  357FC   #+DUP
+ 627EB  35812   Push2#aLoop
+ 627F8  3581F   #-DUP
+ 62809  35830   #1+DUP
+ 6281A  35841   #1-DUP
+ 62830  35857   SWAPDROPDUP
+ 6284B  35872   SWAPDROPSWAP
+ 6284B  35872   UNROTDROP
+ 6284B  35872   XYZ>ZX
+ 62864  3588B   4ROLLDROP
+ 62880  358A7   5ROLLDROP
+ 6289B  358C2   2DUP#<
+ 628B5  358DC   2DUP#=
+ 628D1  358F8   2DUP#>
+ 628EB  35912   DUP#1+
+ 62904  3592B   SWAP#1+
+ 62904  3592B   SWP1+
+ 6292F  35956   DUP#1-
+ 62946  3596D   DROPONE
+ 62958  3597F   RDROPCOLA
+ 6296D  35994   COLACOLA
+ 62986  359AD   COLAcase
+ 629A1  359C8   COLANOTcase
+ 629BC  359E3   ORcase
+ 629D0  359F7   REQcase
+ 629E9  35A10   REQcasedrop
+ 62A02  35A29   SAFESTO
+ 62A2F  35A56   DUPSAFE@
+ 62A34  35A5B   SAFE@
+ 62A61  35A88   ?>ROMPTR
+ 62A84  35AAB   ?ROMPTR>
+ 62ABB  35AE2   MACRODCMP
+ 62B0B  35B32   2DROPFALSE
+ 62B1F  35B46   PALPTRDCMP
+ 62B5B  35B82   palrompdcmp
+ 62B6F  35B96   #0=UNTIL
+ 62B88  35BAF   INCOMPDROP
+ 62B9C  35BC3   NTHCOMPDROP
+ 62BB0  35BD7   APPEND_SPACE
+ 62BC4  35BEB   7UNROLL
+ 62BD8  35BFF   RESOROMP
+ 62BF1  35C18   %10*
+ 62C05  35C2C   DUP@
+ 62C19  35C40   DUPROMPTR@
+ 62C2D  35C54   #=ITE
+ 62C41  35C68   INNERDUP
+ 62C55  35C7C   NOTAND
+ 62C69  35C90   TOTEMPSWAP
+ 62C7D  35CA4   ROT2DUP
+ 62C91  35CB8   ROTAND
+ 62CA5  35CCC   ROTOVER
+ 62CB9  35CE0   DUPDUP
+ 62CCD  35CF4   OVERDUP
+ 62CE1  35D08   COERCEDUP
+ 62CF5  35D1C   UNROTDUP
+ 611F9  35D30   2DUPSWAP
+ 611F9  35D30   DUP3PICK
+ 62D09  35D44   4UNROLLDUP
+ 62D1D  35D58   NTHCOMDDUP
+ 62D31  35D6C   OVERSWAP
+ 62D31  35D6C   OVERUNROT
+ 62D45  35D80   ROLLSWAP
+ 62D59  35D94   NULL$SWAP
+ 62D6D  35DA8   SUB$SWAP
+ 62D81  35DBC   %MAXorder
+ 62D9F  35DDA   ?SKIPSWAP
+ 62DB3  35DEE   1ABNDSWAP
+ 62DCC  35E07   ROT#+SWAP
+ 62DCC  35E07   ROT+SWAP
+ 62DE5  35E20   4PICK#+SWAP
+ 62DE5  35E20   4PICK+SWAP
+ 62DFE  35E39   #+SWAP
+ 62E12  35E4D   #-SWAP
+ 62E26  35E61   #1+SWAP
+ 62E3A  35E75   ZEROSWAP
+ 62E4E  35E89   #1-1SWAP
+ 62E67  35EA2   ONESWAP
+ 62E7B  35EB6   COERCESWAP
+ 62E8F  35ECA   %>%%SWAP
+ 62EA3  35EDE   %%*SWAP
+ 62EB7  35EF2   XYZ>ZTRUE
+ 62ECB  35F06   4ROLLSWAP
+ 62EDF  35F1A   3PICKSWAP
+ 62EF3  35F2E   4PICKSWAP
+ 62F07  35F42   1GETSWAP
+ 62F1B  35F56   ?SWAP
+ 62F2F  35F6A   !append$SWAP
+ 62F43  35F7E   NOT?SWAPDROP
+ 62F5C  35F97   ?SWAPDROP
+ 62F75  35FB0   #1+NDROP
+ 62F75  35FB0   N+1DROP
+ 62F89  35FC4   ROLLDROP
+ 62F9D  35FD8   MDIMSDROP
+ 62FB1  35FF3   DUPROT
+ 62FC5  36007   DROPROT
+ 62FD9  3601B   #1-ROT
+ 62FED  3602F   %%*ROT
+ 63001  36043   4ROLLROT
+ 63001  36043   FOURROLLROT
+ 63015  36057   4UNROLLROT
+ 63029  3606B   DROPOVER
+ 6303D  3607F   EQOVER
+ 63051  36093   #+OVER
+ 63065  360A7   #-OVER
+ 63079  360BB   ZEROOVER
+ 6308D  360CF   UNROTOVER
+ 630A1  360E3   4ROLLOVER
+ 630B5  360F7   3PICKOVER
+ 630C9  3610B   4PICKOVER
+ 630DD  3611F   DUPPICK
+ 630F1  36133   DUPROLL
+ 63105  36147   OVER#2+UNROL
+ 63119  3615B   8UNROLL
+ 6312D  3616F   10UNROLL
+ 63141  36183   OVERARSIZE
+ 63155  3619E   'ERRJMP
+ 63169  361B2   caseERRJMP
+ 6317D  361C6   ?CARCOMP
+ 63191  361DA   NEWLINE$&$
+ 63191  361DA   NEWLINE&$
+ 631A5  361EE   #1-{}N
+ 631B9  36202   TWO{}N
+ 631CD  36216   THREE{}N
+ 631E1  3622A   DUPINCOMP
+ 631F5  3623E   SWAPINCOMP
+ 63209  36252   DUPNULL$?
+ 6321D  36266   DUPNULLCOMP?
+ 63231  3627A   DUPLENCOMP
+ 63245  3628E   #1-SUB$
+ 63259  362A2   1_#1-SUB
+ 63259  362A2   1_#1-SUB$
+ 6326D  362B6   LAST$
+ 63281  362CA   #1+LAST$
+ 63295  362DE   DUP$>ID
+ 632A9  362F2   SWAP%>C%
+ 632BD  36306   'NOP
+ 632D1  3631A   ::NEVAL
+ 632E5  3632E   2GETEVAL
+ 632F9  36342   DROPRDROP
+ 63312  3635B   SWAPCOLA
+ 63326  3636F   XYZ>ZCOLA
+ 6333A  36383   #0=?SKIP
+ 63353  3639C   #1=?SKIP
+ 6336C  363B5   #=?SKIP
+ 63385  363CE   ONE_EQ
+ 63399  363E2   #>?SKIP
+ 633B2  363FB   COLASKIP
+ 633C6  3640F   NOT_UNTIL
+ 633DF  36428   NOT_WHILE
+ 633F8  36441   DUP#0<>WHILE
+ 63411  3645A   DUPINDEX@
+ 63425  3646E   SWAPINDEX@
+ 63439  36482   OVERINDEX@
+ 6344D  36496   SWAPLOOP
+ 63466  364AF   DROPLOOP
+ 6347F  364C8   DUP#0_DO
+ 63498  364E1   toLEN_DO
+ 634B6  364FF   1GETABND
+ 634CA  36513   DUP1LAMBIND
+ 634CF  36518   1LAMBIND
+ 634E3  3652C   caseTRUE
+ 634F7  36540   TRUEFALSE
+ 634F7  36540   TrueFalse
+ 6350B  36554   FALSETRUE
+ 6350B  36554   FalseTrue
+ 6351F  36568   ZEROFALSE
+ 63533  3657C   ONEFALSE
+ 63547  36590   #=casedrpfls
+ 6356A  365B3   casedrpfls
+ 63583  365CC   case2drpfls
+ 6359C  365E5   caseFALSE
+ 635B0  365F9   ORNOT
+ 635C4  3660D   EQUALNOT
+ 635D8  36621   2DUPEQ
+ 635EC  36635   DUPEQ:
+ 635F1  3663A   EQ:
+ 63605  3664E   EQOR
+ 63619  36662   EQUALOR
+ 6362D  36676   2#0=OR
+ 6364B  36694   OVER#0=
+ 6365F  366A8   OVER#<
+ 63673  366BC   #<3
+ 63687  366D0   DUP#<7
+ 636A0  366E9   INNER#1=
+ 636B4  366FD   #5=
+ 636C8  36711   #2<>
+ 636DC  36725   OVER#>
+ 636F0  36739   #>1
+ 636F0  36739   ONE#>
+ 63704  3674D   2DUP#+
+ 63704  3674D   DUP3PICK#+
+ 63718  36761   ROT#+
+ 6372C  36775   OVER#+
+ 63740  36789   3PICK#+
+ 63754  3679D   4PICK#+
+ 63768  367B1   ROT#-
+ 6377C  367C5   OVER#-
+ 63790  367D9   INDEX@#-
+ 637A4  367ED   SWAPOVER#-
+ 637B8  36801   ROT#1+
+ 637CC  36815   #-+1
+ 637CC  36815   #1--
+ 637E0  36829   SWAP#1-
+ 637F4  3683D   DROP#1-
+ 63808  36851   #+-1
+ 63808  36851   $1-+
+ 6381C  36865   COLAITE
+ 6383A  36883   ERROROUT
+ 6384E  36897   D0=DSKTOP
+ 6385D  368A6   D1=DSKTOP
+ 6386C  368B5   SWAP2DUP
+ 63880  368C9   RSKIP
+ 6389E  368E7   GROB!ZERODRP
+ 638B2  368FB   casedrptru
+ 638CB  36914   NOTcaseTRUE
+ 638E4  3692D   ?SEMIDROP
+ 638FD  36946   SWAPUnDROP
+ 63911  3695A   SWAPUnNDROP
+ 63925  3696E   DUP'
+ 63939  36982   SWAP'
+ 6394D  36996   DROP'
+ 63961  369AA   OVER'
+ 63975  369BE   STO'
+ 63989  369D2   TRUE'
+ 6399D  369E6   ONEFALSE'
+ 639B6  369FF   FALSE'
+ 639CA  36A13   #1+'
+ 639DE  36A27   'R'R
+ 639FC  36A4A   'RRDROP
+ 63A15  36A63   ONECOLA
+ 63A29  36A77   dvarlsBIND
+ 63A3D  36A8B   'LAMLNAMESTO
+ 63A56  36AA4   'xDEREQ
+ 63A6F  36ABD   DUPNULL{}?
+ 63A88  36AD6   DUPZERO
+ 63A9C  36AEA   DUPONE
+ 63AB0  36AFE   SWAPONE
+ 63AC4  36B12   ONEDUP
+ 63AC4  36B12   ONEONE
+ 63AD8  36B26   DUPTWO
+ 63AEC  36B3A   NOTcsdrpfls
+ 63B05  36B53   caseSIZEERR
+ 63B19  36B67   NcaseSIZEERR
+ 63B2D  36B7B   CKREAL
+ 63B46  36BAA   NcaseTYPEERR
+ 63B5A  36BBE   'x*                      Not supported in Vger?
+ 63B6E  36BD2   'xDER
+ 63B82  36BE6   %%/>%
+ 63B96  36BFA   UNCOERCE%%
+ 63BAA  36C0E   DUP%0=
+ 63BBE  36C22   SWAP%%/
+ 63BD2  36C36   caseDrpBadKy
+ 63BEB  36C4F   caseDEADKEY
+ 63BEB  36C4F   caseDoBadKey
+ 63C04  36C68   GROBDIMw
+ 63C18  36C7C   %%*UNROT
+ 63C2C  36C90   SWAP4ROLL
+ 63C2C  36C90   XYZW>YWZX
+ 63C40  36CA4   2DUP5ROLL
+ 63C54  36CB8   SWAP3PICK
+ 63C68  36CCC   3PICK3PICK
+ 63C7C  36CE0   SWAP4PICK
+ 63C90  36CF4   OVER5PICK
+ 63CA4  36D08   EQUALcasedrp
+ 63CBD  36D21   DUP#0=csDROP
+ 63CD6  36D3A   jEQcase
+ 63CEA  36D4E   ANDcase
+ 63CFE  36D62   EQUALcase
+ 63D12  36D76   #<case
+ 63D26  36D8A   #1=case
+ 63D3A  36D9E   #<>case
+ 63D4E  36DB2   #>2case
+ 63D67  36DCB   #>case
+ 63D7B  36DDF   j%0=case
+ 63D8F  36DF3   REALcase
+ 63DA3  36E07   dARRYcase
+ 63DB7  36E43   dLISTcase
+ 63DCB  36E57   EditExstCase
+ 63DDF  36E6B   ANDNOTcase
+ 63DF3  36E7F   EQUALNOTcase
+ 63E07  36E93   dIDNTNcase
+ 63E1B  36EA7   dREALNcase
+ 63E2F  36EBB   EQIT
+ 63E48  36ED4   DUP#0=IT
+ 63E61  36EED   ANDITE
+ 63E75  36F01   EQITE
+ 63E89  36F15   #0=ITE
+ 63E9D  36F29   #<ITE
+ 63EB1  36F3D   #>ITE
+ 63EC5  36F51   DUP#0=ITE
+ 63ED9  36F65   UserITE
+ 63EED  36F79   SysITE
+ 63F01  36F8D   top&Cr
+ 63F1A  36FA6   metaROTDUP
+ 63F2E  36FBA   ROTUntop&
+ 63F42  36FCE   roll2top&
+ 63F42  36FCE   rolltwotop&
+ 63F56  36FE2   plDRPpZparg
+ 63F6A  36FF6   &$SWAP
+ 63F7E  3700A   SWAPCKREF
+ 63F92  3701E   pZpargSWAPUn
+ 63FA6  37032   DROPNDROP
+ 63FBA  37046   2OVER
+ 63FCE  3705A   ?Ob>Seco
+ 63FE7  37073   Ob>Seco
+ 63FFB  37087   2Ob>Seco
+ 6400F  3709B   ExitAtLOOP
+ 6400F  3709B   ZEROISTOPSTO
+ 64023  370AF   RclHiddenVar
+ 64037  370C3   WithHidden
+ 64078  37104   StoHiddenVar
+ 6408C  37118   PuHiddenVar
+ 640A0  3712C   SaveVarRes
+ 640BE  3714A   SetHiddenRes
+ 640FA  37186   RestVarRes
+ 64127  371B3   Embedded?
+ 6416D  371F9   UStackDepth
+ 64190  3721C   Sig?ErrJmp
+ 641CC  37258   DupAndThen
+ 641FC  37287   ZEROZERO
+ 64209  37294   #ZERO#ONE
+ 6427A  37305   #ZERO#SEVEN
+ 6428A  37315   #ONE#27
+ 6429D  37328   #TWO#ONE
+ 642AF  3733A   #TWO#TWO
+ 642BF  3734A   #TWO#FOUR
+ 642D1  3735C   #THREE#FOUR
+ 642E3  3736E   #FIVE#FOUR
+ 64309  37380   ZEROZEROZERO
+ 6431D  37394   ZEROZEROONE
+ 64331  373A8   ZEROZEROTWO
+ 21660  374BE   SWAPDROPTRUE
+ 64345  3760D   SubMetaOb
+ 643BD  37685   SubMetaOb1
+ 643EF  376B7   matchob?
+ 643F9  376C1   matchob?Lp
+ 64426  376EE   POSCOMP
+ 6443A  37702   nextpos
+ 6448A  37752   #=POSCOMP
+ 644A3  3776B   EQUALPOSCOMP
+ 644BC  37784   NTHOF
+ 644D0  37798   Find1stTrue
+ 6452F  377C5   Lookup
+ 64548  377DE   Lookup.1
+ 64593  37829   EQLookup
+ 645B1  378FA   POS$
+ 645B1  378FA   POSCHR
+ 645BD  37906   POS$REV
+ 645BD  37906   POSCHRREV
+ 6475C  37AA5   CHR>$
+ 64775  37ABE   STRIPTAGS
+ 647A2  37AEB   STRIPTAGSl2
+ 647BB  37B04   TAGOBS
+ 6480B  37B54   NEXTCOMPOB
+ 648BD  37C06   >LASTRAM-WORD
+ 22EC3  37F48  xIF
+ 22EFA  37F7F  xTHEN                     User RPL: THEN after IF
+ 22FB5  3805D  xELSE
+ 22FD5  3807D  xIFEND                    User RPL: END after IF
+ 22FEB  38093  xALG->                    User RPL: -> in << -> x 'x' >>
+ 23033  380DB  xWHILE
+ 2305D  38105  xREPEAT
+ 230C3  3816B  xDO
+ 230ED  38195  xUNTIL
+ 23103  381AB  xSTART
+ 231A0  38252  xSTARTVAR                 User RPL: FOR
+ 2324C  3831C  xNEXT
+ 23380  3851F  xSTEP
+ 233DF  387AC  xIFERR
+ 23472  3880D  xHALT
+ 2349C  38837  xSILENT'
+ 234C1  3885C  xRPN->                    User RPL: -> in << -> x << x >> >>
+ 235FE  38999  x>>ABND                   User RPL: first >> in << -> x << >> >>
+ 2361E  389B9  x<<
+ 23639  389D4  x>>
+ 23654  389EF  x'                        User RPL: first tic in << 'X' >>
+ 23679  38A14  xENDTIC                   User RPL: second tic in << 'X' >>
+ 23694  38A2F  xWHILEEND                 User RPL: END after WHILE
+ 236B9  38A54  xENDDO                    User RPL: END after DO
+ 2371F  38ABA  xERRTHEN                  User RPL: THEN after IFERR
+ 2378D  38B28  xCASE
+ 237A8  38B43  xTHENCASE                 User RPL: THEN after CASE
+ 23813  38BAE  xDIR
+ 23824  38BBF  xPROMPT
+ 23813  38C1B  xGROB
+ -----  38C2C  xEVAL>                    User RPL: back-tic [`]
+ -----  38D2F  xNOEVAL>                  ??
+ -----  38D72  xSTRUCT>                  ??
+ -----  38D83  x<STRUCT
+ -----  38D94  xSTRUCT->                 ??
+ 1957B  38DE1  xASR
+ 1959B  38E01  xRL
+ 195BB  38E21  xRLB
+ 195DB  38E41  xRR
+ 195FB  38E61  xRRB
+ 1961B  38E81  xSL
+ 1963B  38EA1  xSLB
+ 1965B  38EC1  xSR
+ 1967B  38EE1  xSRB
+ 1969B  38F01  xR>B
+ 196BB  38F21  xB>R
+ 196DB  38F41  xCONVERT
+ 1971B  38F81  xUVAL
+ 1974F  38FB5  x>UNIT
+ 19771  38FD7  xUBASE
+ 197A5  3900B  xUFACT
+ 197F7  3905D  xTIME
+ 19812  39078  xDATE
+ 1982D  39093  xTICKS
+ 19848  390AE  xWSLOG
+ 19863  390C9  xACKALL
+ 1987E  390E4  xACK
+ 1989E  39104  xSETDATE
+ 198BE  39124  xSETTIME
+ 198DE  39144  xCLKADJ
+ 198FE  39164  xSTOALARM
+ 19928  3918E  xRCLALARM
+ 19948  391AE  xFINDALARM
+ 19972  391D8  xDELALARM
+ 19992  391F8  xTSTR
+ 199B2  39218  xDDAYS
+ 199D2  39238  xDATE+
+ 1A105  393CA  xCRDIR
+ 1A125  393EA  xPATH
+ 1A140  39405  xHOME
+ 1A15B  39420  xUPDIR
+ 1A194  3943B  xVARS
+ 1A1AF  39456  xTVARS
+ 1A1D9  39480  xBYTES
+ 1A2BC  394AA  xNEWOB
+ 1A2DA  394C8   INHARDROM?
+ 1A303  394F1  xKILL
+ 1A31E  3950C  xOFF
+ 1A339  39527  xDOERR
+ 1A36D  3955B  xERR0
+ 1A388  39576  xERRN
+ 1A3A3  39591  xERRM
+ 1A3BE  395AC  xEVAL
+ 1A3FE  395F3  xIFTE
+ 1A4CD  396A4  xIFT
+ 1A52E  39705  xSYSEVAL
+ 1A584  39725  xDISP
+ 1A5A4  39745  xFREEZE
+ 1A5C4  39765  xBEEP
+ 1A5E4  39785  x>NUM
+ 1A604  397E5  xLAST                     User RPL: LASTARG
+ 1A71F  39819  xWAIT
+ 1A858  39839  xCLLCD
+ 1A873  39854  xKEY
+ 1A8BB  3989C  xCONT
+ 1A8D8  398B9  x=
+ 1A995  39976  xNEG
+ 1AA1F  39A07  xABS
+ 1AA6E  39A6C  xCONJ
+ 1AABD  39AC7  xPI
+ 1AADF  39AE4  xMAXR
+ 1AB01  39B01  xMINR
+ 1AB23  39B1E  xCONSTANTe                User RPL: e
+ 1AB45  39B3B  xi                        User RPL: i
+ 1AB67  39B58  x+
+ 1ACDD  39CD5  xNEGNEG
+ 1AD09  39CFC  x-
+ 1ADEE  39DE8  x*
+ 1AF05  39F49  x/
+ 1B02D  3A097  x^
+ 1B185  3A200   rpnXROOT                 User RPL: XROOT in RPN syntax
+ 1B1CA  3A278  xXROOT
+ 1B278  3A32B  xINV
+ 1B2DB  3A390  xARG
+ 1B32A  3A3EE  xSIGN
+ 1B374  3A442  xSQRT
+ 1B426  3A4EF  xSQ
+ 1B4AC  3A57C  xSIN
+ 1B505  3A5D0  xCOS
+ 1B55E  3A624  xTAN
+ 1B5B7  3A678  xSINH
+ 1B606  3A6C2  xCOSH
+ 1B655  3A70C  xTANH
+ 1B6A4  3A756  xASIN
+ 1B72F  3A7DC  xACOS
+ 1B79C  3A844  xATAN
+ 1B7EB  3A88E  xASINH
+ 1B830  3A8D8  xACOSH
+ 1B8A2  3A94F  xATANH
+ 1B905  3A9B7  xEXP
+ 1B94F  3AA01  xLN
+ 1B9C6  3AA73  xLOG
+ 1BA3D  3AAE5  xALOG
+ 1BA8C  3AB2F  xLNP1
+ 1BAC2  3AB6F  xEXPM
+ 1BB02  3ABAF  xFACT
+ 1BB41  3ABFD   preFACT                  User RPL: FACT ( prefix form of ! )
+ 1BB6D  3AC3D  xIP
+ 1BBA3  3AC87  xFP
+ 1BBD9  3ACD1  xFLOOR
+ 1BC0F  3AD1B  xCEIL
+ 1BC45  3AD65  xXPON
+ 1BC71  3ADA5  xMAX
+ 1BCE3  3AE2B  xMIN
+ 1BD55  3AEB1  xRND
+ 1BDD1  3AF3E  xTRNC
+ 1BE4D  3AFCB  xMOD
+ 1BE9C  3B02E  xMANT
+ 1BEC8  3B06E  xD>R
+ 1BEF4  3B0AE  xR>D
+ 1BF1E  3B0EC  x>HMS
+ 1BF3E  3B10C  xHMS>
+ 1BF5E  3B12C  xHMS+
+ 1BF7E  3B14C  xHMS-
+ 1BF9E  3B16C  xRNRM
+ 1BFBE  3B193  xCNRM
+ 1BFDE  3B1BA  xDET
+ 1BFFE  3B1E1  xDOT
+ 1C01E  3B208  xCROSS
+ 1C03E  3B22F  xRSD
+ 1C060  3B251  x%
+ 1C0D7  3B2DC  x%T
+ 1C149  3B362  x%CH
+ 1C1B9  3B3E6  xRAND
+ 1C1D4  3B401  xRDZ
+ 1C1F6  3B423  xCOMB
+ 1C236  3B477  xPERM
+ 1C274  3B4C9  xSF
+ 1C2D5  3B4E9  xCF
+ 1C313  3B509  xFS?
+ 1C360  3B529  xFC?
+ 1C399  3B549  xDEG
+ 1C3B4  3B564  xRAD
+ 1C3CF  3B57F  xGRAD
+ 1C3EA  3B59A  xFIX
+ 1C41E  3B5BA  xSCI
+ 1C452  3B5DA  xENG
+ 1C486  3B5FA  xSTD
+ 1C4A1  3B615  xFS?C
+ 1C520  3B635  xFC?C
+ 1C559  3B655  xBIN
+ 1C574  3B670  xDEC
+ 1C58F  3B68B  xHEX
+ 1C5AA  3B6A6  xOCT
+ 1C5C5  3B6C1  xSTWS
+ 1C5FE  3B6FA  xRCWS
+ 1C619  3B715  xRCLF
+ 1C67F  3B749  xSTOF
+ 1C6A2  3B76C   DOSTOALLF
+ 1C783  3B7D2  x>LIST
+ 1C79E  3B7ED  xR>C
+ 1C7CA  3B819  xRE
+ 1C819  3B87E  xIM
+ 1C85C  3B8D7  xSUB
+ 1C8EA  3B9D2  xREPL
+ 1C95A  3BAC1  xLIST>
+ 1C98E  3BAF5  xC>R
+ 1C9B8  3BB1F  xSIZE
+ 1CAB4  3BB94  xPOS
+ 1CB0B  3BBBE  x>STR
+ 1CB26  3BBD9  xSTR>
+ 1CB46  3BBF9  xNUM
+ 1CB66  3BC19  xCHR
+ 1CB86  3BC39  xTYPE
+ 1CB90  3BC43   XEQTYPE
+ 1CE28  3BDB2  xVTYPE
+ 1CEE3  3BDE6  xEQ>
+ 1CF7B  3BE38  xOBJ>
+ 1D009  3BE9B  x>ARRY
+ 1D092  3BEC5  xARRY>
+ 1D0DF  3BEEC  xRDM
+ 1D186  3BF77  xCON
+ 1D2DC  3C02E  xIDN
+ 1D392  3C084  xTRN
+ 1D407  3C0BF  xPUT
+ 1D5DF  3C139  xPUTI
+ 1D7C6  3C1C7  xGET
+ 1D8C7  3C22D  xGETI
+ 1DD06  3C2AC  xV>
+ 1DE66  3C2D6  x>V2
+ 1DEC2  3C30A  x>V3
+ 1E04A  3C33E  xINDEP
+ 1E07E  3C372  xPMIN
+ 1E09E  3C392  xPMAX
+ 1E0BE  3C3B2  xAXES
+ 1E0E8  3C3DC  xCENTR
+ 1E126  3C41A  xRES
+ 1E150  3C444  x*H
+ 1E170  3C464  x*W
+ 1E190  3C484  xDRAW
+ 1E1AB  3C49F  xAUTO
+ 1E1C6  3C4BA  xDRAX
+ 1E1E1  3C4D5  xSCALE
+ 1E201  3C4F5  xPDIM
+ 1E22B  3C51F  xDEPND
+ 1E25F  3C553  xERASE
+ 1E27A  3C56E  xPX>C
+ 1E29A  3C58E  xC>PX
+ 1E2BA  3C5AE  xGRAPH
+ 1E2D5  3C5C9  xLABEL
+ 1E2F0  3C5E4  xPVIEW
+ 1E31A  3C60E  xPIXON
+ 1E344  3C638  xPIXOFF
+ 1E36E  3C662  xPIX?
+ 1E398  3C68C  xLINE
+ 1E3C2  3C6B6  xTLINE
+ 1E3EC  3C6E0  xBOX
+ 1E416  3C70A  xBLANK
+ 1E436  3C72A  xPICT
+ 1E456  3C74A  xGOR
+ 1E4E4  3C7D8  xGXOR
+ 1E572  3C866  xLCD>
+ 1E58D  3C881  x>LCD
+ 1E5AD  3C8A1  x>GROB
+ 1E5D2  3C8C6  xARC
+ 1E606  3C8FA  xTEXT
+ 1E621  3C915  xXRNG
+ 1E641  3C935  xYRNG
+ 1E661  3C955  xFUNCTION
+ 1E681  3C967  xCONIC
+ 1E6A1  3C979  xPOLAR
+ 1E6C1  3C98B  xPARAMETRIC
+ 1E6E1  3C99D  xTRUTH
+ 1E701  3C9AF  xSCATTER
+ 1E721  3C9C1  xHISTOGRAM
+ 1E741  3C9D3  xBAR
+ 1E761  3C9E5  xSAME
+ 1E783  3CA07  xAND
+ 1E809  3CA8D  xOR
+ 1E88F  3CB13  xNOT
+ 1E8F6  3CB7A  xXOR
+ 1E972  3CBF6  x==
+ 1EA9D  3CD21  x#?                       User RPL: \=/
+ 1EBBE  3CE42  x<                        User RPL: same as x<?
+ 1EBBE  3CE42  x<?                       User RPL: same as x<
+ 1EC5D  3CEE1  x>                        User RPL: same as x>?
+ 1EC5D  3CEE1  x>?                       User RPL: same as x>
+ 1ECFC  3CF80  x<=?
+ 1ED9B  3D01F  x>=?
+ 1EE38  3D0BC  xOLDPRT                   (not useful in Vger)
+ 1EE53  3D0D7  xPR1
+ 1EE6E  3D0F2  xPRSTC
+ 1EE89  3D10D  xPRST
+ 1EEA4  3D128  xCR
+ 1EEBF  3D143  xPRVAR
+ 1EF43  3D1C7  xDELAY
+ 1EF63  3D1E7  xPRLCD
+ 1EFD2  3D258  xDER
+ 1F05B  3D2B4   CKSYMBTYPE
+ 1F133  3D393  xRCEQ
+ 1F14E  3D3AE  xSTEQ
+ 1F16E  3D3CE  xROOT
+ 1F223  3D47E  xINTEGRAL                 User RPL: algebraic integral symbol
+ 1F2C9  3D503  xSUM
+ 1F3F3  3D605  xWHERE                    User RPL: |
+ 1F500  3D6F6  xQUOTE
+ 1F5C5  3D7AC  xAPPLY
+ 1F640  3D81D  xFCNAPPLY
+ 1F9C4  3DA3E  x->Q
+ 1F9E9  3DA63  x->QPI
+ 1FA59  3DAD0  xMATCHUP                  User RPL: \|^MATCH
+ 1FA8D  3DB04  xMATCHDN                  User RPL: \|vMATCH
+ 1FAEB  3DB62  xFORMUNIT                 User RPL: _
+ 1FB5D  3DBCA  xPREDIV
+ 1FB87  3DBEA  xDUP
+ 1FBA2  3DC05  xDUP2
+ 1FBBD  3DC20  xSWAP
+ 1FBD8  3DC3B  xDROP
+ 1FBF3  3DC56  xDROP2
+ 1FC0E  3DC71  xROT
+ 1FC29  3DC8C  xOVER
+ 1FC44  3DCA7  xDEPTH
+ 1FC64  3DCC7  xDROPN
+ 1FC7F  3DCE2  xDUPN
+ 1FC9A  3DCFD  xPICK
+ 1FCB5  3DD18  xROLL
+ 1FCD0  3DD33  xROLLD
+ 1FCEB  3DD4E  xCLEAR
+ 1FD0B  3DD6E  xSTOSIGMA
+ 1FD2B  3DD8E  xCLSIGMA
+ 1FD46  3DDA9  xRCLSIGMA                 User RPL: RCL\GS
+ 1FD61  3DDC4  xSIGMA+
+ 1FD8B  3DDEE  xSIGMA-
+ 1FDA6  3DE09  xNSIGMA                   User RPL: N\GS
+ 1FDC1  3DE24  xCORR
+ 1FDDC  3DE3F  xCOV
+ 1FDF7  3DE5A  xSUMX
+ 1FE12  3DE75  xSUMY
+ 1FE2D  3DE90  xSUMX2
+ 1FE48  3DEAB  xSUMY2
+ 1FE63  3DEC6  xSUMXY
+ 1FE7E  3DEE1  xMAXSIGMA                 User RPL: MAX\GS
+ 1FE99  3DEFC  xMEAN
+ 1FEB4  3DF17  xMINSIGMA                 User RPL: MIN\GS
+ 1FECF  3DF32  xSDEV
+ 1FEEA  3DF4D  xTOT
+ 1FF05  3DF68  xVAR
+ 1FF20  3DF83  xLR
+ 1FF7A  3DFDD  xPREDV
+ 1FF9A  3DFFD  xPREDY
+ 1FFBA  3E01D  xPREDX
+ 1FFDA  3E03D  xXCOL
+ 1FFFA  3E05D  xYCOL
+ 2001A  3E07D  xUTPC
+ 2003A  3E09D  xUTPN
+ 2005A  3E0BD  xUTPF
+ 2007A  3E0DD  xUTPT
+ 2009A  3E0FD  xSIGMACOL
+ 200C4  3E127  xSCLSIGMA                 User RPL: SCL\GS
+ 200F3  3E156  xSIGMALINE
+ 2010E  3E171  xBINS
+ 20133  3E196  xBARPLOT
+ 20167  3E1CA  xHISTPLOT
+ 2018C  3E1EF  xSCATRPLOT
+ 201B1  3E214  xLINFIT
+ 201D6  3E239  xLOGFIT
+ 201FB  3E25E  xEXPFIT
+ 20220  3E283  xPWRFIT
+ 2025E  3E2C1  xBESTFIT
+ 202CE  3E331  xSINV
+ 2034D  3E35B  xSNEG
+ 203CC  3E385  xSCONJ
+ 2044B  3E3AF  xSTO+
+ 20538  3E406  xSTO-
+ 2060C  3E46C  xSTO/
+ 20753  3E4D2  xSTO*
+ 208F4  3E54C  xINCR
+ 209AA  3E576  xDECR
+ 20A15  3E5A0  xCOLCT
+ 20A49  3E5E9  xEXPAN
+ 20A7D  3E632  xRULES
+ 20A93  3E648  xISOL
+ 20AB3  3E66F  xQUAD
+ 20AD3  3E696  xSHOW
+ 20B20  3E6CA  xTAYLR
+ 20B40  3E6F1  xRCL
+ 20CCD  3E739  xSTO
+ -----  3E823  xSTO>                     User RPL: algebraic STO
+ 20D65  3E85C  xDEFINE
+ 20EFE  3E87C  xPURGE
+ 20FAA  3E8C1  xMEM
+ 20FD9  3E8F0  xORDER
+ 210FC  3E91A  xCLUSR                    User RPL: alias for CLVAR
+ 2115D  3E97B  xTMENU
+ 21196  3E9D4  xMENU
+ 211E1  3EA2E  xRCLMENU
+ 211FC  3EA49  xPVARS
+ 2123A  3EAA7  xPGDIR
+ 2125A  3EAC7  xARCHIVE
+ 2133C  3EAE7  xRESTORE
+ 2137F  3EB16  xMERGE                    (not useful in 49G)
+ 213D1  3EB2C  xFREE                     (not useful in 49G)
+ 2142D  3EB42  xLIBS
+ 21448  3EB64  xATTACH
+ 2147C  3EB84  xDETACH
+ 21E75  3EC35  xXMIT
+ 21E95  3EC55  xSRECV
+ 21EB5  3EC75  xOPENIO
+ 21ED5  3EC95  xCLOSEIO
+ 21EF0  3ECB0  xSEND
+ 21F24  3ECE4  xKGET
+ 21F62  3ED22  xRECN
+ 21F96  3ED56  xRECV
+ 21FB6  3ED76  xFINISH
+ 21FD1  3ED91  xSERVER
+ 21FEC  3EDAC  xCKSM
+ 2200C  3EDCC  xBAUD
+ 2202C  3EDEC  xPARITY
+ 2204C  3EE0C  xTRANSIO
+ 2206C  3EE2C  xKERRM
+ 22087  3EE47  xBUFLEN
+ 220A2  3EE62  xSTIME
+ 220C2  3EE82  xSBRK
+ 220DD  3EE9D  xPKT
+ 224CA  3EEBD  xINPUT
+ 224F4  3EEE7  xASN
+ 22514  3EF07  xSTOKEYS
+ 22548  3EF3B  xDELKEYS
+ 22586  3EF79  xRCLKEYS
+ 225BE  3EFB1  x->TAG
+ 22633  3EFEF  xDTAG
+ -----  3F007  xINT                      User RPL: alias for integral
+ -----  3F033  xANS
+ -----  3F053  x;
+ -----  3F070  xR>I
+ -----  3F0B7  xI>R
+05B0AB  3F0FC  xNOVAL
+ -----  3F11C  xCMDAPPLY
+ -----  3F218  xRPL>
+ -----  3F22E  xUNROT                    New HP49 User RPL command
+ -----  3F249  xUNPICK                   New HP49 User RPL command
+ -----  3F264  xNIP
+ -----  3F27F  xPICK3
+ -----  3F29A  xDUPDUP
+ -----  3F2B5  xNDUPN
+ -----  3F2DF  xFAST3D
+ 194F7  3F481   COERCE2
+ 1950B  3F495   UNCOERCE2
+ -----  80058   NEXTIRQ
+ 800F5  800F5   IRAMBUFF                 Stable in 48G only, not 48S
+ 806FD  806FD   EDITLINE                 Stable in 48G only, not 48S
+ 8071B  8071B   CONTEXT                  Stable in 48G only, not 48S
+ -----  80EDC   DEPTHSAVE
+ -----  80F02   SystemFlags
+ -----  80F5A   LASTARGCOUNT
+ -----  81006   IOCsave
+ -----  860B8   CurROMBank2
+ -----  860CC   FlashROMTAB2
+ ----- 004002  ^RunChooseSimple
+00E0B1 007002  ^Ck&DoMsgBox
+0910B0 02E002  ^DoAlert                  $ --> displays alert messagebox
+02E0B3 09D002  ^DoCKeyOK
+02D0B3 09E002  ^DoCKeyCancel
+02A0B3 09F002  ^DoCKeyCheck
+02B0B3 0A0002  ^DoCKeyChAll
+0090B1 0AE002  ^DoMKeyOK
+0590B0 0AF002  ^DoKeyCancel
+02C0B3 0B0002  ^DoCKeyUnChAll
+0360B3 0B1002  ^LEDispItem
+0350B3 0B2002  ^LEDispList
+0300B3 0B3002  ^LEDispPrompt
+05A0B0 0B4002  ^DoKeyOK
+0560B0 0B5002  ^DoKeyEdit
+0C80B0 0BB002  ^GetFieldVals
+0130B0 0BC002  ^IFEDispField
+0B006B 0BE002  ^ChangeFocus
+ ----- 06C003  ^laDELROW
+ ----- 06D003  ^laINSROW
+ ----- 06E003  ^laGPROW
+0130E0 0A4003  ^BRdone
+0450E0 0A5003  ^BRDispItems
+0490E0 0A6003  ^BRinverse
+0520E0 0A7003  ^BRViewItem
+0530E0 0AB003  ^BRGetItem
+ 3745E 0AC003  ^SWAPROWS                 Valid with ROM revision > 1.10 only
+ ----- 001004  ^FSTR1
+ ----- 002004  ^FSTR2
+ ----- 003004  ^FSTR3
+ ----- 004004  ^FSTR4
+ ----- 005004  ^FSTR5
+ ----- 006004  ^FSTR6
+ ----- 007004  ^FSTR7
+ ----- 008004  ^FSTR8
+ ----- 009004  ^FSTR9
+ ----- 00A004  ^FSTR10
+ ----- 00B004  ^FSTR11
+ ----- 00C004  ^FSTR12
+ ----- 00D004  ^FSTR13
+ ----- 00E004  ^algparse
+ ----- 00F004  ^algunwrap
+ ----- 010004  ^EQW3
+ ----- 011004  ^EQW3Edit
+ ----- 012004  ^EQW3StartEdit
+ ----- 013004  ^EQW3ViewMargin
+ ----- 014004  ^EQW3ViewLeftX
+ ----- 015004  ^EQW3ViewRightX
+ ----- 016004  ^EQW3ViewLeft
+ ----- 017004  ^EQW3ViewRight
+ ----- 018004  ^EQW3ViewRightRPL
+ ----- 019004  ^EQW3GROB
+ ----- 01A004  ^EQW3GROBStk
+ ----- 01B004  ^EQW3CursorOn
+ ----- 01C004  ^EQW3CursorOff
+ ----- 01D004  ^EQW3Code
+ ----- 01E004  ^EQW3GROBsys
+ ----- 01F004  ^EQW3GROBmini
+ ----- 020004  ^IfMain
+ ----- 021004  ^IfSetFieldVisible
+ ----- 022004  ^IfSetSelected
+ ----- 023004  ^IfSetGrob
+ ----- 024004  ^IfSetFieldValue
+ ----- 025004  ^IfSetCurrentFieldValue
+ ----- 026004  ^IfGetFieldValue
+ ----- 027004  ^IfGetCurrentFieldValue
+ ----- 028004  ^IfGetFieldMessageHandler
+ ----- 029004  ^IfGetFieldType
+ ----- 02A004  ^IfGetFieldObjectsType
+ ----- 02B004  ^IfGetFieldDecompObject
+ ----- 02C004  ^IfGetFieldChooseData
+ ----- 02D004  ^IfGetFieldChooseDecomp
+ ----- 02E004  ^IfGetFieldResetValue
+ ----- 02F004  ^IfSetFieldResetValue
+ ----- 030004  ^IfGetFieldInternalValue
+ ----- 031004  ^IfDisplayFromData
+ ----- 032004  ^IfGetNbFields
+ ----- 033004  ^IfCheckSetValue
+ ----- 034004  ^IfCheckFieldtype
+ ----- 035004  ^IfReset
+ ----- 036004  ^IfSetField
+ ----- 037004  ^IfKeyChoose
+ ----- 038004  ^IfKeyEdit
+ ----- 039004  ^IfKeyTypes
+ ----- 03A004  ^IfKeyCalc
+ ----- 03B004  ^IfKeyInvertCheck
+ ----- 03C004  ^IfONKeyPress
+ ----- 03D004  ^IfEnterKeyPress
+ ----- 03E004  ^IfSetGrob3
+ ----- 03F004  ^IfSetHelpString
+ ----- 040004  ^IfSetTitle
+ ----- 041004  ^IfSetTitle2
+ ----- 042004  ^IfMain2
+ ----- 043004  ^IfPutFieldsOnStack
+ ----- 044004  ^IfSetFieldPos
+ ----- 045004  ^IfGetFieldPos
+ ----- 046004  ^IfDisplayFromData2
+ ----- 047004  ^IfSetAllLabelsMessages
+ ----- 048004  ^IfSetAllHelpStrings
+ ----- 049004  ^IfCreateTitleGrob
+ ----- 04A004  ^IfInitDepth
+ ----- 04B004  ^IfTet
+ ----- 04C004  ^IfGetPrlgFromTypes
+ ----- 04D004  ^IsUncompressDataString
+ ----- 04E004  ^KeyLookup
+ ----- 067004  ^Filer
+ ----- 068004  ^Arbo
+ ----- 069004  ^RENAME
+ ----- 06D004  ^FILER_MANAGER
+ ----- 06E004  ^FILER_MANAGERTYPE
+ ----- 06F004  ^FontBrowser
+0B41D8 070004  ^BrowseMem.1
+ ----- 08E006  ^BerlekampP
+ ----- 08F006  ^Berlekamp
+ ----- 090006  ^ErrInfRes
+ ----- 091006  ^ErrUndefRes
+ ----- 092006  ^ErrBadDim
+ ----- 093006  ^ALG48MSOLV
+ ----- 094006  ^GMSOLV
+ ----- 095006  ^GBASIS
+ ----- 096006  ^GSOLVE
+ ----- 097006  ^GFACTOR
+ ----- 098006  ^GREDUCE
+ ----- 099006  ^REDUCE
+ ----- 09A006  ^FASTREDUCE
+ ----- 09B006  ^ONE{}POLY
+ ----- 09C006  ^TWO{}POLY
+ ----- 09D006  ^THREE{}POLY
+ ----- 09E006  ^TWO::POLY
+ ----- 09F006  ^::POLY
+ ----- 0A0006  ^{}POLY
+ ----- 0A1006  ^>TPOLY
+ ----- 0A2006  ^>HPOLY
+ ----- 0A3006  ^>TPOLYN
+ ----- 0A4006  ^>HPOLYN
+ ----- 0A5006  ^MKPOLY
+ ----- 0A6006  ^ONE>POLY
+ ----- 0A7006  ^>POLY
+ ----- 0A8006  ^ALG48FCTR?
+ ----- 0A9006  ^MFactTriv
+ ----- 0AA006  ^CheckPNoExt
+ ----- 0AB006  ^PPP
+ ----- 0AC006  ^PFactor
+ ----- 0AD006  ^PSqff
+ ----- 0AE006  ^PHFctr
+ ----- 0AF006  ^PHFctr1
+ ----- 0B0006  ^PHFctr0
+ ----- 0B1006  ^DeCntMulti
+ ----- 0B2006  ^DoLS
+ ----- 0B3006  ^PNFctr
+ ----- 0B4006  ^PSQFF
+ ----- 0B5006  ^LiftZAdic
+ ----- 0B6006  ^LFCProd
+ ----- 0B7006  ^UFactor
+ ----- 0B8006  ^UFactor1
+ ----- 0B9006  ^MonicLf
+ ----- 0BA006  ^DemonicLf
+ ----- 0BB006  ^LiftLinear
+ ----- 0BC006  ^LiftGeneral
+ ----- 0BD006  ^UFactorDeg2
+ ----- 0BE006  ^CombineFac
+ ----- 0BF006  ^CombProd
+ ----- 0C0006  ^CombInit
+ ----- 0C1006  ^CombNext
+ ----- 0C2006  ^RmCombNext
+ ----- 0C3006  ^PFactTriv
+ ----- 0C4006  ^VarFactor
+ ----- 0C5006  ^PFactPowCnt
+ ----- 0C6006  ^PDivLk
+ ----- 0C7006  ^Prime+
+ ----- 0C8006  ^Prime-
+ ----- 0C9006  ^ZFactor
+ ----- 0CA006  ^NFactor
+ ----- 0CB006  ^NFactorSpc
+ ----- 0CC006  ^DupTypeS?
+ ----- 0CD006  ^SFactor
+ ----- 0CE006  ^SPollard
+ ----- 0CF006  ^BFactor
+ ----- 0D0006  ^BrentPow
+ ----- 0D1006  ^ZPrime?
+ ----- 0D2006  ^ZIsPrime?
+ ----- 0D3006  ^SIsPrime?
+ ----- 0D4006  ^BIsPrime?
+ ----- 0D5006  ^BRabin
+ ----- 0D6006  ^ZTrialDiv2
+ ----- 0D7006  ^ZTrialPrime?
+ ----- 0D8006  ^ZTrialDiv
+ ----- 0D9006  ^QMod
+ ----- 0DA006  ^QMODSYMext
+ ----- 0DB006  ^ModPow
+ ----- 0DC006  ^ZQUOText
+ ----- 0DD006  ^ZMod
+ ----- 0DE006  ^ZDIVext
+ ----- 0DF006  ^QRoot
+ ----- 0E0006  ^ZSQRT
+ ----- 0E1006  ^PEvalMod
+ ----- 0E2006  ^QAddMod
+ ----- 0E3006  ^QSubMod
+ ----- 0E4006  ^QMulMod
+ ----- 0E5006  ^QDivMod
+ ----- 0E6006  ^QInvMod
+ ----- 0E7006  ^QGcdMod
+ ----- 0E8006  ^QGcdExMod
+ ----- 0E9006  ^IsV>V?
+ ----- 0EA006  ^PEvalFast?
+ ----- 0EB006  ^PZadic
+ ----- 0EC006  ^GCDHEUext
+ ----- 0ED006  ^H>Z
+ ----- 0EE006  ^#>Z
+ ----- 0EF006  ^Z2BIN
+ ----- 0F0006  ^COERCE2Z
+ ----- 0F1006  ^Z>S
+ ----- 0F2006  ^S>Z
+ ----- 0F3006  ^S>Z?
+ ----- 0F4006  ^Z>ZH
+ ----- 0F5006  ^R>Z
+ ----- 0F6006  ^Z>R
+ ----- 0F7006  ^DupQIsZero?
+ ----- 0F8006  ^QIsZero?
+ ----- 0F9006  ^DupZIsOne?
+ ----- 0FA006  ^ZIsOne?
+ ----- 0FB006  ^DupZIsNeg?
+ ----- 0FC006  ^ZIsNeg?
+ ----- 0FD006  ^ListPos
+ ----- 0FE006  ^AppendList
+ ----- 0FF006  ^Contains?
+ ----- 100006  ^SortList
+ ----- 101006  ^ZTrim
+ ----- 102006  ^ZAbs
+ ----- 103006  ^PNMax
+ ----- 104006  ^LISTMAXext
+ ----- 105006  ^ZNMax
+ ----- 106006  ^ZNMin
+ ----- 107006  ^ZNLT?
+ ----- 108006  ^DISTDIVext
+ ----- 109006  ^DupZIsTwo?
+ ----- 10A006  ^DupZIsEven?
+ ----- 10B006  ^Univar?
+ ----- 10C006  ^SUnivar?
+ ----- 10D006  ^ZBits
+ ----- 10E006  ^ZBit?
+ ----- 10F006  ^LOPMext
+ ----- 110006  ^SWAPRMULT
+ ----- 111006  ^QMul
+ ----- 112006  ^RMULText
+ ----- 113006  ^RASOP
+ ----- 114006  ^SWAPRSUB
+ ----- 115006  ^QSub
+ ----- 116006  ^RSUBext
+ ----- 117006  ^SWAPRADD
+ ----- 118006  ^QAdd
+ ----- 119006  ^RADDext
+ ----- 11A006  ^SWAPRDIV
+ ----- 11B006  ^RDIVext
+ ----- 11C006  ^QDiv
+ ----- 11D006  ^R15SIMP
+ ----- 11E006  ^PPow#
+ ----- 11F006  ^RP#
+ ----- 120006  ^MPext
+ ----- 121006  ^MP0
+ ----- 122006  ^MPEXEC
+ ----- 123006  ^RPext
+ ----- 124006  ^PREPARext
+ ----- 125006 ^x+ext
+ ----- 126006 ^x-ext
+ ----- 127006 ^x*ext
+ ----- 128006 ^x=ext
+ ----- 129006 ^x/ext
+ ----- 12A006  ^2SYMBINCOMP
+ ----- 12B006 ^x^ext
+ ----- 12C006  ^EXPAND^
+ ----- 12D006  ^addtXROOT
+ ----- 12E006 ^xssSYMXROOT
+ ----- 12F006  ^addtMIN
+ ----- 130006 ^xssSYMMIN
+ ----- 131006  ^addtMAX
+ ----- 132006 ^xssSYMMAX
+ ----- 133006  ^addt<
+ ----- 134006 ^xssSYM<?
+ ----- 135006  ^addt<=
+ ----- 136006 ^xssSYM<=?
+ ----- 137006  ^addt>
+ ----- 138006 ^xssSYM>?
+ ----- 139006  ^addt>=
+ ----- 13A006 ^xssSYM>=?
+ ----- 13B006  ^addt==
+ ----- 13C006 ^xssSYM=?
+ ----- 13D006  ^addt!=
+ ----- 13E006 ^xssSYM#?
+ ----- 13F006  ^addt%
+ ----- 140006 ^xssSYM%
+ ----- 141006  ^addt%CH
+ ----- 142006 ^xssSYM%CH
+ ----- 143006  ^addt%T
+ ----- 144006 ^xssSYM%T
+ ----- 145006  ^addtMOD
+ ----- 146006 ^xssSYMMOD
+ ----- 147006  ^addtTRNC
+ ----- 148006 ^xssSYMTRCXY
+ ----- 149006  ^addtRND
+ ----- 14A006 ^xssSYMRNDXY
+ ----- 14B006  ^addtCOMB
+ ----- 14C006 ^xssSYMCOMB
+ ----- 14D006  ^addtPERM
+ ----- 14E006 ^xssSYMPERM
+ ----- 14F006  ^addtOR
+ ----- 150006 ^xssSYMOR
+ ----- 151006  ^addtAND
+ ----- 152006 ^xssSYMAND
+ ----- 153006  ^addtXOR
+ ----- 154006 ^xssSYMXOR
+ ----- 155006  ^2LAMBIND
+ ----- 156006  ^3LAMBIND
+ ----- 157006  ^SYMBINCOMP
+ ----- 158006  ^CKINNERCOMP
+ ----- 159006  ^DUPCKLEN{}
+ ----- 15A006  ^CKCARCOMP
+ ----- 15B006  ^CARCOMPext
+ ----- 15C006  ^RISCH13
+ ----- 15D006  ^CXRIext
+ ----- 15E006  ^RIXCext
+ ----- 15F006  ^IRXCext
+ ----- 160006  ^IRXC2
+ ----- 161006  ^SWAPNDXF
+ ----- 162006  ^NDXFext
+ ----- 163006  ^SWAPFXND
+ ----- 164006  ^FXNDext
+ ----- 165006  ^QXNDext
+ ----- 166006  ^NDXQext
+ ----- 167006  ^TYPEIRRQ?
+ ----- 168006  ^DTYPEIRRQ?
+ ----- 169006  ^BESTMATRIXTYPE
+ ----- 16A006  ^{}TO[]
+ ----- 16B006  ^[]TO{}
+ ----- 16C006  ^DUPNULL[]?
+ 357A8 16D006  ^MDIMS
+ 035A9 16E006  ^DIMLIMITS
+ ----- 16F006  ^CKSAMESIZE
+ ----- 170006  ^DTYPENDO?
+ ----- 171006  ^DTYPFMAT?
+ ----- 172006  ^CKNUMARRY
+ ----- 173006  ^2DMATRIX?
+ ----- 174006  ^MATRIXDIM
+ ----- 175006  ^SAMEMATRIX
+ ----- 176006  ^SAMEMATSCTYPE
+ ----- 177006  ^CKMATRIXELEM
+ ----- 178006  ^MATRIX2ARRAY
+ ----- 179006  ^MATRIX2LIST
+ ----- 17A006  ^LIST2MATRIX
+ ----- 17B006  ^LENMATRIX
+ ----- 17C006  ^XEQARRY>
+ ----- 17D006  ^MATEXPLODE
+ ----- 17E006  ^ARRAY2MATRIX
+ ----- 17F006  ^XEQ>ARRY
+ ----- 180006  ^XEQ>ARRAY1
+ ----- 181006  ^CKALG
+ ----- 182006  ^TYPEZ?
+ ----- 183006  ^DUPTYPEZ?
+ ----- 184006  ^CK1Z
+ ----- 185006  ^CK2Z
+ ----- 186006  ^CK3Z
+ ----- 187006  ^CK1Cext
+ ----- 188006  ^C2C%%
+ ----- 189006  ^ZZ2C%%ext
+ ----- 18A006  ^Z2%%
+ ----- 18B006  ^C%>C%%
+ ----- 18C006  ^E%%>C%%
+ ----- 18D006  ^R2Zext
+ ----- 18E006  ^Z2Sext
+ ----- 18F006  ^CKFPOLYext
+ ----- 190006  ^CK2FPOLY
+ ----- 191006  ^IDNTLAM?
+ ----- 192006  ^FLOAT?
+ ----- 193006  ^CKSYMREALCMP
+ ----- 194006  ^TYPEIDNTLAM?
+ ----- 195006  ^REAL?
+ ----- 196006  ^TYPEREALZINT?
+ ----- 197006  ^OBJ2REAL
+ ----- 198006  ^METAINT?
+ ----- 199006  ^METAPOSINT?
+ ----- 19A006  ^OBJINT?
+ ----- 19B006  ^OBJPOSINT?
+ ----- 19C006  ^CKINT>0
+ ----- 19D006  ^Z>#
+ ----- 19E006  ^CLEANIDLAM
+ ----- 19F006  ^ssSYMDER
+ ----- 1A0006  ^SYMDER
+ ----- 1A1006  ^DERIVext
+ ----- 1A2006  ^siSYMDER
+ ----- 1A3006  ^DERIVIDNT
+ ----- 1A4006  ^DERIVIDNT1
+ ----- 1A5006  ^DERIV
+ ----- 1A6006  ^METADERIV
+ ----- 1A7006  ^DO>STRID
+ ----- 1A8006  ^METADEROP
+ ----- 1A9006  ^METADER+
+ ----- 1AA006  ^METADER-
+ ----- 1AB006  ^METADER*
+ ----- 1AC006  ^METADER/
+ ----- 1AD006  ^METADER^
+ ----- 1AE006  ^METADERFCN
+ ----- 1AF006  ^METADERDER
+ ----- 1B0006  ^METADERI4
+ ----- 1B1006  ^METADERI3
+ ----- 1B2006  ^METADERIFTE
+ ----- 1B3006  ^DERARG
+ ----- 1B4006  ^METADEREXP
+ ----- 1B5006  ^METADERLN
+ ----- 1B6006  ^METADERLNP1
+ ----- 1B7006  ^METADERLOG
+ ----- 1B8006  ^METADERALOG
+ ----- 1B9006  ^METADERABS
+ ----- 1BA006  ^METADERINV
+ ----- 1BB006  ^METADERNEG
+ ----- 1BC006  ^METADERSQRT
+ ----- 1BD006  ^METADER&NEG
+ ----- 1BE006  ^METADERSQ
+ ----- 1BF006  ^METADERSIN
+ ----- 1C0006  ^METADERCOS
+ ----- 1C1006  ^METADERTAN
+ ----- 1C2006  ^METADERSINH
+ ----- 1C3006  ^METADERCOSH
+ ----- 1C4006  ^METADERTANH
+ ----- 1C5006  ^METADERASIN
+ ----- 1C6006  ^METADERACOS
+ ----- 1C7006  ^METADERATAN
+ ----- 1C8006  ^METADERASH
+ ----- 1C9006  ^METADERACH
+ ----- 1CA006  ^METADERATH
+ ----- 1CB006  ^pshder*
+ ----- 1CC006  ^SQRTINVpshd*
+ ----- 1CD006  ^ckaddt*
+ ----- 1CE006  ^ckaddt+
+ ----- 1CF006  ^ckaddt-
+ ----- 1D0006  ^VERNUMext
+ ----- 1D1006  ^MENUXYext
+ ----- 1D2006  ^SAVECASFLAGS
+ ----- 1D3006  ^SAFEPURGE
+ ----- 1D4006  ^RESTORECASFLAGS
+ ----- 1D5006  ^CASFLAGEVAL
+ ----- 1D6006  ^FLAGEXPAND
+ ----- 1D7006  ^EXPANDBOTH
+ ----- 1D8006  ^FLAGFACTOR
+ ----- 1D9006  ^FLAGLISTEXEC
+ ----- 1DA006  ^FLAGSYMBEXEC
+ ----- 1DB006  ^FLAGIDNTEXEC
+ ----- 1DC006  ^FLAGINTVX
+ ----- 1DD006  ^DERVX
+ ----- 1DE006  ^SOLVEXFLOAT
+ ----- 1DF006  ^SYMLIMIT
+ ----- 1E0006  ^FLAGMATRIXLIMIT
+ ----- 1E1006  ^TAYLOR0
+ ----- 1E2006  ^FLAGSERIES
+ ----- 1E3006  ^PLOTSTK
+ ----- 1E4006  ^PLOTADD
+ ----- 1E5006  ^FLAGIBP
+ ----- 1E6006  ^FLAGPREVAL
+ ----- 1E7006  ^MATRIXRISCH
+ ----- 1E8006  ^FLAGRISCH
+ ----- 1E9006  ^FLAGDERIV
+ ----- 1EA006  ^FLAGLAP
+ ----- 1EB006  ^FLAGILAP
+ ----- 1EC006  ^FLAGDESOLVE
+ ----- 1ED006  ^FLAGLDSSOLV
+ ----- 1EE006  ^FLAGLDECSOLV
+ ----- 1EF006  ^FLAGTEXPAND
+ ----- 1F0006  ^FLAGLIN
+ ----- 1F1006  ^FLAGTSIMP
+ ----- 1F2006  ^FLAGLNCOLLECT
+ ----- 1F3006  ^FLAGEXPLN
+ ----- 1F4006  ^FLAGSINCOS
+ ----- 1F5006  ^FLAGTLIN
+ ----- 1F6006  ^FLAGTCOLLECT
+ ----- 1F7006  ^FLAGTRIG
+ ----- 1F8006  ^FLAGTRIGCOS
+ ----- 1F9006  ^FLAGTRIGSIN
+ ----- 1FA006  ^FLAGTRIGTAN
+ ----- 1FB006  ^FLAGTAN2SC
+ ----- 1FC006  ^FLAGHALFTAN
+ ----- 1FD006  ^FLAGTAN2SC2
+ ----- 1FE006  ^FLAGATAN2S
+ ----- 1FF006  ^FLAGASIN2T
+ ----- 200006  ^FLAGASIN2C
+ ----- 201006  ^FLAGACOS2S
+ ----- 202006  ^CK&CONVINT
+ ----- 203006  ^CK&CONV2INT
+ ----- 204006  ^CONVBACK2INT
+ ----- 205006  ^CONVBACKINT
+ ----- 206006  ^STEPIDIV2
+ ----- 207006  ^FLAGDIV2
+ ----- 208006  ^FLAGGCD
+ ----- 209006  ^PEGCD
+ ----- 20A006  ^IEGCD
+ ----- 20B006  ^ABCUV
+ ----- 20C006  ^IABCUV
+ ----- 20D006  ^FLAGLGCD
+ ----- 20E006  ^FLAGLCM
+ ----- 20F006  ^FLAGSIMP2
+ ----- 210006  ^FLAGPARTFRAC
+ ----- 211006  ^FLAGPROPFRAC
+ ----- 212006  ^FLAGPTAYL
+ ----- 213006  ^FLAGHORNER
+ ----- 214006  ^EULER
+ ----- 215006  ^PA2B2
+ ----- 216006  ^FLAGCHINREM
+ ----- 217006  ^ICHINREM
+ ----- 218006  ^ISPRIME
+ ----- 219006  ^SOLVE1EQ
+ ----- 21A006  ^SOLVEMANYEQ
+ ----- 21B006  ^ZEROS1EQ
+ ----- 21C006  ^ZEROSMANYEQ
+ ----- 21D006  ^FCOEF
+ ----- 21E006  ^FROOTS
+ ----- 21F006  ^FACTORS
+ ----- 220006  ^DIVIS
+ ----- 221006  ^STUDMULT
+ ----- 222006  ^STUDDIV
+ ----- 223006  ^rref
+ ----- 224006  ^FLAGQXA
+ ----- 225006  ^FLAGAXQ
+ ----- 226006  ^FLAGGAUSS
+ ----- 227006  ^FLAGSYLVESTER
+ ----- 228006  ^PCAR
+ ----- 229006  ^MADNOCK
+ ----- 22A006  ^SYSTEM
+ ----- 22B006  ^VANDERMONDE
+ ----- 22C006  ^HILBERTNOCK
+ ----- 22D006  ^FLAGJORDAN
+ ----- 22E006  ^CURL
+ ----- 22F006  ^DIVERGENCE
+ ----- 230006  ^LAPLACIAN
+ ----- 231006  ^HESSIAN
+ ----- 232006  ^HERMITE
+ ----- 233006  ^TCHEBNOCK
+ ----- 234006  ^LEGENDRE
+ ----- 235006  ^LAGRANGE
+ ----- 236006  ^FOURIER
+ ----- 237006  ^SIGNE
+ ----- 238006  ^TABVAR
+ ----- 239006  ^FLAGDIVPC
+ ----- 23A006  ^FLAGTRUNC
+ ----- 23B006  ^FLAGSEVAL
+ ----- 23C006  ^XNUM
+ ----- 23D006  ^REORDER
+ ----- 23E006  ^USERLVAR
+ ----- 23F006  ^USERLIDNT
+ ----- 240006  ^EXLR
+ ----- 241006  ^ADDTMOD
+ ----- 242006  ^MADDTMOD
+ ----- 243006  ^SUBTMOD
+ ----- 244006  ^MSUBTMOD
+ ----- 245006  ^MULTMOD
+ ----- 246006  ^MAT*SCMOD
+ ----- 247006  ^SC*MATMOD
+ ----- 248006  ^MAT*MATMOD
+ ----- 249006  ^DIVMOD
+ ----- 24A006  ^GCD1MOD
+ ----- 24B006  ^INVMOD
+ ----- 24C006  ^MINVMOD
+ ----- 24D006  ^FLAGDIV2MOD
+ ----- 24E006  ^FLAGPOWMOD
+ ----- 24F006  ^FLAGMPOWMOD
+ ----- 250006  ^EXPAMOD
+ ----- 251006  ^FLAGEXPAMOD
+ ----- 252006  ^FLAGFACTORMOD
+ ----- 253006  ^MFACTORMOD
+ ----- 254006  ^RREFMOD
+ ----- 255006  ^KEYEVAL
+ ----- 256006  ^LIFCext
+ ----- 257006  ^EvalNoCKx*
+ ----- 258006  ^EvalNoCKx+
+ ----- 259006  ^EvalNoCKx-
+ ----- 25A006  ^EvalNoCKx/
+ ----- 25B006  ^EvalNoCKx^
+ ----- 25C006  ^EvalNoCKxCHS
+ ----- 25D006  ^EvalNoCKxINV
+ ----- 25E006  ^EvalNoCKxMOD
+ ----- 25F006  ^EvalNoCKxPERM
+ ----- 260006  ^EvalNoCKxCOMB
+ ----- 261006  ^EvalNoCKxOR
+ ----- 262006  ^EvalNoCKxAND
+ ----- 263006  ^EvalNoCKxXOR
+ ----- 264006  ^EvalNoCKxXROOT
+ ----- 265006  ^TABVALext
+ ----- 266006  ^TOLISText
+ ----- 267006  ^FROMLISText
+ ----- 268006  ^PFEXECext
+ ----- 269006  ^LOP1ext
+ ----- 26A006  ^LOPAext
+ ----- 26B006  ^LISTSECOext
+ ----- 26C006  ^rpnQOBJext
+ ----- 26D006  ^CK1TONOext
+ ----- 26E006  ^COLCext
+ 57D90 26F006  ^SYMCOLCT
+ ----- 270006  ^COLC1
+ ----- 271006  ^COLC2
+ ----- 272006  ^MULMULText
+ ----- 273006  ^METAMULMULT
+ ----- 274006  ^METAMM2
+ ----- 275006  ^COMPLISText
+ ----- 276006  ^METACOMPRIM
+ ----- 277006  ^METACOMP0
+ ----- 278006  ^METACOMP1
+ ----- 279006  ^ADDLISText
+ ----- 27A006  ^DIVISext
+ ----- 27B006  ^FACT1ext
+ ----- 27C006  ^FACTOext
+ ----- 27D006  ^ZFACTO
+ ----- 27E006  ^SOLVext
+ ----- 27F006  ^FRND
+ ----- 280006  ^BICARREE?
+ ----- 281006  ^REALBICAR
+ ----- 282006  ^FEVIDENText
+ ----- 283006  ^EVIDENText
+ ----- 284006  ^EVIDSOLV
+ ----- 285006  ^DEG2ext
+ ----- 286006  ^METADEG2
+ ----- 287006  ^METADEG1
+ ----- 288006  ^DEG1
+ ----- 289006  ^FDEG2ext
+ ----- 28A006  ^PIext
+ ----- 28B006  ^RACTOFACext
+ ----- 28C006  ^FACTORACext
+ ----- 28D006  ^RFACText
+ ----- 28E006  ^RFACT2ext
+ ----- 28F006  ^RFACTSTEP3
+ ----- 290006  ^RFACTSTEP5
+ ----- 291006  ^METASOLV
+ ----- 292006  ^METASOLVOUT
+ ----- 293006  ^METASOLV2
+ ----- 294006  ^METASOLV4
+ ----- 295006  ^ADDMULTIPL
+ ----- 296006  ^FACTOOBJext
+ ----- 297006  ^SLVARext
+ ----- 298006  ^SIMPLIFY
+ ----- 299006  ^SIMP1ext
+ ----- 29A006  ^SYMEXPAN
+ ----- 29B006  ^SIMPVAR
+ ----- 29C006  ^ID>DERext
+ ----- 29D006  ^SIMPIDNT
+ ----- 29E006  ^RCLALLIDNT
+ ----- 29F006  ^RCL1IDNT
+ ----- 2A0006  ^SIMPSYMBS
+ ----- 2A1006  ^SYMINTEGRAL
+ ----- 2A2006  ^SIMPUSERFCN
+ ----- 2A3006  ^EVALUSERFCN
+ ----- 2A4006  ^SIMP|                    (that's chr 124, the WHERE character)
+ ----- 2A5006  ^DENOLCMext
+ ----- 2A6006  ^METADENOLCM
+ ----- 2A7006  ^SWPSIMPNDXF
+ ----- 2A8006  ^SIMPNDXFext
+ ----- 2A9006  ^SIMPext
+ ----- 2AA006  ^SIMPEXTOK
+ ----- 2AB006  ^MAKEPROFOND
+ ----- 2AC006  ^SLOWSIMP2L
+ ----- 2AD006  ^SIMPGCDext
+ ----- 2AE006  ^SIMP3ext
+ ----- 2AF006  ^SIMP3LISText
+ ----- 2B0006  ^SIMP3LSTSLOW
+ ----- 2B1006  ^LPGCDext
+ ----- 2B2006  ^SLOWGCDext
+ ----- 2B3006  ^QGcd
+ ----- 2B4006  ^GCDext
+ ----- 2B5006  ^CGCDext
+ ----- 2B6006  ^CMODext
+ ----- 2B7006  ^ZGCDext
+ ----- 2B8006  ^ZGcd
+ ----- 2B9006  ^TSIMP2ext
+ ----- 2BA006  ^TSIMPext
+ ----- 2BB006  ^TSIMP3ext
+ ----- 2BC006  ^LASTCOMP
+ ----- 2BD006  ^SQFF2ext
+ ----- 2BE006  ^PPZ
+ ----- 2BF006  ^PZHSTR
+ ----- 2C0006  ^HORNER1ext
+ ----- 2C1006  ^PEval
+ ----- 2C2006  ^RISCHext
+ ----- 2C3006  ^risch/
+ ----- 2C4006  ^rischABS
+ ----- 2C5006  ^IBP
+ ----- 2C6006  ^SQRT_IN?
+ ----- 2C7006  ^IS_SQRT?
+ ----- 2C8006  ^XROOT_IN?
+ ----- 2C9006  ^IS_XROOT?
+ ----- 2CA006  ^STOPRIMIT
+ ----- 2CB006  ^CONTAINS_LN?
+ ----- 2CC006  ^ISNT_IDNT?
+ ----- 2CD006  ^RISCHPF
+ ----- 2CE006  ^RISCHRAT
+ ----- 2CF006  ^rischlogpart
+ ----- 2D0006  ^PREVALext
+ ----- 2D1006  ^WARNSING
+ ----- 2D2006  ^INText
+ ----- 2D3006  ^INT3
+ ----- 2D4006  ^FOURIERext
+ ----- 2D5006  ^3DUP
+ ----- 2D6006  ^#3+ROLL
+ ----- 2D7006  ^2DROPTRUE
+ ----- 2D8006  ^IRRQ#ULTIMATE
+ ----- 2D9006  ^LESSCOMPLEX?
+ ----- 2DA006  ^LISTIRRQ
+ ----- 2DB006  ^LIST1i-1-i
+ ----- 2DC006  ^LIST10-10
+ ----- 2DD006  ^TABLECOSext
+ ----- 2DE006  ^TABLETANext
+ ----- 2DF006  ^DROPZ1
+ ----- 2E0006  ^DROPZ0
+ ----- 2E1006  ^TESTINFINI
+ ----- 2E2006  ^INFINIext
+ ----- 2E3006  ^MINUSINFext
+ ----- 2E4006  ^PLUSINFext
+ ----- 2E5006  ^?ext
+ ----- 2E6006  ^POSINFext
+ ----- 2E7006  ^POSUNDEFext
+ ----- 2E8006  ^pisur2
+ ----- 2E9006  ^pisur-2
+ ----- 2EA006  ^pi
+ ----- 2EB006  ^metapi
+ ----- 2EC006  ^'xPI
+ ----- 2ED006  ^metai
+ ----- 2EE006  ^'xi
+ ----- 2EF006  ^ipi                      --> 'i*pi'
+ ----- 2F0006  ^metaipi
+ ----- 2F1006  ^meta-pi
+ ----- 2F2006  ^metapi/2
+ ----- 2F3006  ^metapi/4
+ ----- 2F4006  ^meta-pi/2
+ ----- 2F5006  ^meta-pi/4
+ ----- 2F6006  ^pifois2
+ ----- 2F7006  ^deuxipi                  --> '2*i*pi'
+ ----- 2F8006  ^metapi*2
+ ----- 2F9006  ^base_ln
+ ----- 2FA006  ^meta_e
+ ----- 2FB006  ^NEXTPext
+ ----- 2FC006  ^INSERT{}N
+ ----- 2FD006  ^COMPRIMext
+ ----- 2FE006  ^TCOLLECT
+ ----- 2FF006  ^SIGMAEXPext
+ ----- 300006  ^LINEXPext
+ ----- 301006  ^SIGMAEXP2ext
+ ----- 302006  ^TCHEBext
+ ----- 303006  ^SINEXPA
+ ----- 304006  ^METASINEXPA
+ ----- 305006  ^SINEXPA+
+ ----- 306006  ^SINEXPA-
+ ----- 307006  ^SINEXPA*
+ ----- 308006  ^SINEXPA*1
+ ----- 309006  ^COSEXPA
+ ----- 30A006  ^METACOSEXPA
+ ----- 30B006  ^COSEXPA+
+ ----- 30C006  ^COSEXPA-
+ ----- 30D006  ^COSEXPA*
+ ----- 30E006  ^COSEXPA*1
+ ----- 30F006  ^EXPEXPA
+ ----- 310006  ^METAEXPEXPA
+ ----- 311006  ^EXPEXPA+
+ ----- 312006  ^EXPEXPA-
+ ----- 313006  ^EXPEXPA*
+ ----- 314006  ^EXPEXPANEG
+ ----- 315006  ^EXPEXPA*1
+ ----- 316006  ^LNEXPA
+ ----- 317006  ^METALNEXPA
+ ----- 318006  ^LNEXPA*
+ ----- 319006  ^LNEXPA/
+ ----- 31A006  ^LNEXPA^
+ ----- 31B006  ^LINEXPA
+ ----- 31C006  ^MTRIG2SYMB
+ ----- 31D006  ^LNCOLCext
+ ----- 31E006  ^METATANEXPA
+ ----- 31F006  ^TEXPAext
+ ----- 320006  ^MAT+
+ ----- 321006  ^MADD
+ ----- 322006  ^MAT-
+ ----- 323006  ^MSUB
+ ----- 324006  ^VADD
+ ----- 325006  ^VSUB
+ ----- 326006  ^MAT*
+ ----- 327006  ^MMMULT
+ ----- 328006  ^MVMULT
+ ----- 329006  ^SCL*MAT
+ ----- 32A006  ^MAT*SCL
+ ----- 32B006  ^VPMULT
+ ----- 32C006  ^MAT^
+ ----- 32D006  ^MATCROSS
+ ----- 32E006  ^MATDOT
+ ----- 32F006  ^RNDARRY
+ ----- 330006  ^TRCARRY
+ ----- 331006  ^XYext
+ ----- 332006  ^MAT/SCL
+ ----- 333006  ^MAT/
+ ----- 334006  ^MATCHS
+ ----- 335006  ^MATSQUARE
+ ----- 336006  ^MATCONJ
+ ----- 337006  ^MATRE
+ ----- 338006  ^MATIM
+ ----- 339006  ^MATTRACE
+ 3811F 33A006  ^MATTRN
+ ----- 33B006  ^MATTRAN
+ ----- 33C006  ^mattran
+ ----- 33D006  ^mattrn
+ ----- 33E006  ^MATSUB
+ ----- 33F006  ^submeta
+ ----- 340006  ^MATREPL
+ 37E0F 341006  ^MATREDIM
+ ----- 342006  ^VRRDM
+ ----- 343006  ^VRRDMmeta
+ ----- 344006  ^MATRANM
+ ----- 345006  ^DIMRANM
+ ----- 346006  ^MATDET
+ ----- 347006  ^MATRDET
+ ----- 348006  ^MATFNORM
+ ----- 349006  ^MATRNORM
+ ----- 34A006  ^MATCNORM
+ ----- 34B006  ^MATRREF
+ ----- 34C006  ^MATREF
+ ----- 34D006  ^MATRANK
+ ----- 34E006  ^MATINV
+ ----- 34F006  ^MATREFRREF
+ ----- 350006  ^INXREDext
+ ----- 351006  ^METAMATRED
+ ----- 352006  ^METAPIVOT
+ ----- 353006  ^PIVOTNORM
+ ----- 354006  ^PIVOTFLOAT
+ ----- 355006  ^SYSText
+ ----- 356006  ^STOSYSText
+ ----- 357006  ^MAKESYSText
+ ----- 358006  ^VARGENext
+ ----- 359006  ^NULLVECTOR?
+ 03685 35A006  ^FINDELN                  U.B.S.
+ ----- 35B006  ^PULLEL[S]
+ 1DBB0 35C006  ^BANGARRY                 U.B.S.
+ ----- 35D006  ^PUT[]
+ 03562 35E006  ^ARSIZE
+ ----- 35F006  ^MATRIX>DIAG
+ ----- 360006  ^MATRIXDIAG>
+ ----- 361006  ^la+ELEMsym
+ ----- 362006  ^INSERTROW[]
+ ----- 363006  ^insertrow[]
+ ----- 364006  ^INSERTCOL[]
+ ----- 365006  ^INSERT[]ROW[]
+ ----- 366006  ^INSERT[]COL[]
+ ----- 367006  ^MATRIXRCI
+ ----- 368006  ^MATRIXRCIJ
+ ----- 369006  ^MATRIXCSWAP
+ ----- 36A006  ^MATRIXRSWAP
+ ----- 36B006  ^MATRIX-ROW
+ ----- 36C006  ^METAMAT-ROW
+ ----- 36D006  ^MATRIX-COL
+ ----- 36E006  ^METAMATCSWAP
+ ----- 36F006  ^METAMATRSWAP
+ ----- 370006  ^STOMAText
+ ----- 371006  ^MATIDN
+ 35CAE 372006  ^MATCON
+ 03442 373006  ^MAKEARRY
+ ----- 374006  ^OBJDIMS2MAT
+ ----- 375006  ^LCPROG2M
+ ----- 376006  ^MAKE2DMATRIX
+ ----- 377006  ^make2dmatrix
+ ----- 378006  ^ADDMATOBJext
+ ----- 379006  ^VUNARYOP
+ ----- 37A006  ^VBINARYOP
+ ----- 37B006  ^PEVAL
+ ----- 37C006  ^MATEGVL
+ ----- 37D006  ^ROOTM2ROOT
+ ----- 37E006  ^MADJ
+ ----- 37F006  ^MATEGV
+ ----- 380006  ^JORDAN
+ ----- 381006  ^QXA
+ ----- 382006  ^AXQ
+ ----- 383006  ^GAUSS
+ ----- 384006  ^SYLVESTER
+ ----- 385006  ^metasplit
+ ----- 386006  ^m-1&m+1
+ ----- 387006  ^meta1/meta
+ ----- 388006  ^1&meta
+ ----- 389006  ^meta/2
+ ----- 38A006  ^addt2
+ ----- 38B006  ^addt/
+ ----- 38C006  ^meta2*
+ ----- 38D006  ^meta1-sq
+ ----- 38E006  ^metasq+1
+ ----- 38F006  ^metasq-1
+ ----- 390006  ^meta-1
+ ----- 391006  ^NDROPZERO
+ ----- 392006  ^2DROPZ0
+ ----- 393006  ^metaadd
+ ----- 394006  ^metasub
+ ----- 395006  ^metamult
+ ----- 396006  ^metadiv
+ ----- 397006  ^meta^
+ ----- 398006  ^addt^
+ ----- 399006  ^metapow
+ ----- 39A006  ^metafraction?
+ ----- 39B006  ^metaxroot
+ ----- 39C006  ^top&addt*
+ ----- 39D006  ^top&addt/
+ ----- 39E006  ^addti
+ ----- 39F006  ^metaEQUAL?
+ ----- 3A0006  ^2metaundef#
+ ----- 3A1006  ^1metaundef#
+ ----- 3A2006  ^metaundef
+ ----- 3A3006  ^2metainf#
+ ----- 3A4006  ^1metainf#
+ ----- 3A5006  ^metainftype
+ ----- 3A6006  ^unsignedinf
+ ----- 3A7006  ^plusinf
+ ----- 3A8006  ^NDROPplusinf
+ ----- 3A9006  ^minusinf
+ ----- 3AA006  ^NDROPminusinf
+ ----- 3AB006  ^MetaAdd
+ ----- 3AC006 ^xssSYM+
+ ----- 3AD006  ^MetaSub
+ ----- 3AE006 ^xssSYM-
+ ----- 3AF006  ^MetaMul
+ ----- 3B0006 ^xssSYM*
+ ----- 3B1006  ^MetaDiv
+ ----- 3B2006 ^xssSYM/
+ ----- 3B3006  ^NDROPZ0
+ ----- 3B4006  ^NDROPZ1
+ ----- 3B5006  ^MetaPow
+ ----- 3B6006 ^xssSYM^
+ ----- 3B7006  ^MetaNeg
+ ----- 3B8006 ^xSYMCHS
+ ----- 3B9006  ^metaneg
+ ----- 3BA006  ^metackneg
+ ----- 3BB006  ^metasimp
+ ----- 3BC006  ^metapi?
+ ----- 3BD006  ^metaCOMPARE
+ ----- 3BE006  ^STRICTmetaCOMPARE
+ ----- 3BF006  ^EQUALPOSMETA
+ ----- 3C0006  ^EQUALPOS2META
+ ----- 3C1006  ^vgerxssSYMSUM
+ ----- 3C2006  ^DISTRIB/
+ ----- 3C3006  ^metareal?
+ ----- 3C4006  ^ModExpa
+ ----- 3C5006  ^ModAdd
+ ----- 3C6006  ^ModSub
+ ----- 3C7006  ^ModMul
+ ----- 3C8006  ^ModDiv
+ ----- 3C9006  ^ModDiv2
+ ----- 3CA006  ^ModInv
+ ----- 3CB006  ^ModGcd
+ ----- 3CC006  ^ModLGCD
+ ----- 3CD006  ^ModLOPD
+ ----- 3CE006  ^MODULOMODext
+ ----- 3CF006  ^MODULOMAText
+ ----- 3D0006  ^Mod
+ ----- 3D1006  ^ModFctr
+ ----- 3D2006  ^PARTFRAC
+ ----- 3D3006  ^INPARTFRAC
+ ----- 3D4006  ^PARTFRACRAT
+ ----- 3D5006  ^PFext
+ ----- 3D6006  ^IEGCDext
+ ----- 3D7006  ^REGCDext
+ ----- 3D8006  ^EGCDext
+ ----- 3D9006  ^INEGCD
+ ----- 3DA006  ^EGCDSWAP
+ ----- 3DB006  ^EGCDNEWG
+ ----- 3DC006  ^PDer
+ ----- 3DD006  ^INTEGRext
+ ----- 3DE006  ^LRDMext
+ ----- 3DF006  ^RRDMext
+ ----- 3E0006  ^DEGREext
+ ----- 3E1006  ^FHORNER
+ ----- 3E2006  ^HORNext
+ ----- 3E3006  ^HORN1
+ ----- 3E4006  ^MHORNext
+ ----- 3E5006  ^PTAYLext
+ ----- 3E6006  ^LAGRANGEext
+ ----- 3E7006  ^PSEUDOPREP
+ ----- 3E8006  ^PSEUDODIV
+ ----- 3E9006  ^IDIV2
+ ----- 3EA006  ^BESTDIV2
+ ----- 3EB006  ^CDIV2ext
+ ----- 3EC006  ^QUOText
+ ----- 3ED006  ^NEWDIVext
+ ----- 3EE006  ^QDivRem
+ ----- 3EF006  ^DIV2LISText
+ ----- 3F0006  ^DIVOBJext
+ ----- 3F1006  ^DIVMETAOBJ
+ ----- 3F2006  ^LOPDext
+ ----- 3F3006  ^QUOTOBJext
+ ----- 3F4006  ^DIVISIBLE?
+ ----- 3F5006  ^QDiv?
+ ----- 3F6006  ^FastDiv?
+ ----- 3F7006  ^POTENCEext
+ ----- 3F8006  ^PDIV2ext
+ ----- 3F9006  ^PSetSign
+ ----- 3FA006  ^PLCZ
+ ----- 3FB006  ^HSECO2RCext
+ ----- 3FC006  ^SECO2CMPext
+ ----- 3FD006  ^SECO2CMPPOL
+ ----- 3FE006  ^SECO2CMPCART
+ ----- 3FF006  ^VALOBJext
+ ----- 400006  ^R2SYM
+ ----- 401006  ^VAL2ext
+ ----- 402006  ^INVAL2
+ ----- 403006  ^METAVAL2
+ ----- 404006  ^VAL1
+ ----- 405006  ^VAL1M
+ ----- 406006  ^addt0meta
+ ----- 407006  ^HALFTAN
+ ----- 408006  ^COS2TAN/2
+ ----- 409006  ^cos2tan/2
+ ----- 40A006  ^1-x^2/1+x^2
+ ----- 40B006  ^SIN2TAN/2
+ ----- 40C006  ^sin2tan/2
+ ----- 40D006  ^2x/1+x^2
+ ----- 40E006  ^TAN2TAN/2
+ ----- 40F006  ^tan2tan/2
+ ----- 410006  ^addtTAN/2
+ ----- 411006  ^TRIGTAN
+ ----- 412006  ^COS2TAN
+ ----- 413006  ^cos2tan
+ ----- 414006  ^SIN2TAN
+ ----- 415006  ^sin2tan
+ ----- 416006  ^TRIGext
+ ----- 417006  ^HYP2EXPext
+ ----- 418006  ^EXPLNext
+ ----- 419006  ^SERIESEXPLN
+ ----- 41A006  ^LNP12LN
+ ----- 41B006  ^LOG2LN
+ ----- 41C006  ^ALOG2EXP
+ ----- 41D006  ^EXPM2EXP
+ ----- 41E006  ^SQRT2LNEXP
+ ----- 41F006  ^sqrt2lnexp
+ ----- 420006  ^TAN2EXP
+ ----- 421006  ^tan2exp
+ ----- 422006  ^ASIN2LN
+ ----- 423006  ^asin2ln
+ ----- 424006  ^ACOS2LN
+ ----- 425006  ^acos2ln
+ ----- 426006  ^TAN2SCext
+ ----- 427006  ^TAN2SC
+ ----- 428006  ^sin/cos
+ ----- 429006  ^SIN2TCext
+ ----- 42A006  ^SIN2TC
+ ----- 42B006  ^cos*tan
+ ----- 42C006  ^COS2ext
+ ----- 42D006  ^sqrt1-sin^2
+ ----- 42E006  ^SIN2ext
+ ----- 42F006  ^sqrt1-cos^2
+ ----- 430006  ^ATAN2Sext
+ ----- 431006  ^ATAN2ASIN
+ ----- 432006  ^atan2asin
+ ----- 433006  ^ASIN2Text
+ ----- 434006  ^ASIN2ATAN
+ ----- 435006  ^asin2atan
+ ----- 436006  ^ASIN2Cext
+ ----- 437006  ^ASIN2ACOS
+ ----- 438006  ^pi/2-acos
+ ----- 439006  ^pi/2-meta
+ ----- 43A006  ^ACOS2Sext
+ ----- 43B006  ^pi/2-asin
+ ----- 43C006  ^ACOS2ASIN
+ ----- 43D006  ^ATAN2LNext
+ ----- 43E006  ^atan2ln
+ ----- 43F006  ^TAN2SC2ext
+ ----- 440006  ^TAN2SC2
+ ----- 441006  ^2*1-cos/sin
+ ----- 442006  ^TAN2CS2
+ ----- 443006  ^2*sin/1+cos
+ ----- 444006  ^SIN2EXPext
+ ----- 445006  ^sin2exp
+ ----- 446006  ^COS2EXPext
+ ----- 447006  ^cos2exp
+ ----- 448006  ^SINH2EXPext
+ ----- 449006  ^sinh2exp
+ ----- 44A006  ^COSH2EXPext
+ ----- 44B006  ^cosh2exp
+ ----- 44C006  ^TANH2EXPext
+ ----- 44D006  ^tanh2exp
+ ----- 44E006  ^ASINH2LNext
+ ----- 44F006  ^asinh2ln
+ ----- 450006  ^ACOSH2LNext
+ ----- 451006  ^acosh2ln
+ ----- 452006  ^ATANH2LNext
+ ----- 453006  ^atanh2ln
+ ----- 454006  ^XROOT2ext
+ ----- 455006 ^xroot2expln
+ ----- 456006  ^LN2ext
+ ----- 457006  ^SINCOSext
+ ----- 458006  ^exp2sincos
+ ----- 459006  ^metai*
+ ----- 45A006  ^LN2ATAN
+ ----- 45B006  ^VAR=LIST
+ ----- 45C006  ^IDNTEXEC
+ ----- 45D006  ^SYMISOL
+ ----- 45E006  ^SYMQFORM
+ ----- 45F006  ^LISTEXEC
+ ----- 460006  ^LISTEXEC1
+ ----- 461006  ^SECOEXEC
+ ----- 462006  ^EQUATION?
+ ----- 463006  ^USERFCN?
+ ----- 464006  ^SYMBEXEC
+ ----- 465006  ^MEVALext
+ ----- 466006  ^CASNUMEVAL
+ ----- 467006  ^CASCOMPEVAL
+ ----- 468006  ^REPLACE2BY1
+ ----- 469006  ^NR_REPLACE
+ 547B5 46A006  ^SYMBWHERE
+ ----- 46B006  ^CASCRUNCH
+ ----- 46C006  ^APPROXCOMPEVAL
+ ----- 46D006  ^LIMIText
+ ----- 46E006  ^REWRITEIFINF
+ ----- 46F006  ^SYMTAYLOR
+ ----- 470006  ^SYMPAPRX
+ ----- 471006  ^TRUNCDL
+ ----- 472006  ^LIMSERIES!
+ ----- 473006  ^LIMITX!
+ ----- 474006  ^LIMITNOVX!
+ ----- 475006  ^LIMERR0!
+ ----- 476006  ^LIMERR1!
+ ----- 477006  ^LIMIT!
+ ----- 478006  ^LIMSTEP1!
+ ----- 479006  ^LIMSTEP2!
+ ----- 47A006  ^LIMSTEP3!
+ ----- 47B006  ^LIMSTEP4!
+ ----- 47C006  ^LIMLIM!
+ ----- 47D006  ^n{}N
+ ----- 47E006  ^LIMLIM1!
+ ----- 47F006  ^LIMCMPL!
+ ----- 480006  ^LIMEQUFR!
+ ----- 481006  ^LIMEQU!
+ ----- 482006  ^LIMEQU0!
+ ----- 483006  ^LIM+-!
+ ----- 484006  ^LIMERR10!
+ ----- 485006  ^LIMNEG!
+ ----- 486006  ^LIMRAC!
+ ----- 487006  ^LIMINV!
+ ----- 488006  ^LIM/!
+ ----- 489006  ^LIMPOW!
+ ----- 48A006  ^LIMSQ!
+ ----- 48B006  ^LIM*!
+ ----- 48C006  ^LIMDIVPC!
+ ----- 48D006  ^DIVPC!
+ ----- 48E006  ^LIMPROFEND!
+ ----- 48F006  ^LIMPROF!
+ ----- 490006  ^LIM%#!
+ ----- 491006  ^LIMPROF0!
+ ----- 492006  ^LIMPROF1!
+ ----- 493006  ^LIMPROF2!
+ ----- 494006  ^LIMINVLN!
+ ----- 495006  ^LIMLN!
+ ----- 496006  ^LIMEXP!
+ ----- 497006  ^LIMSINCOS!
+ ----- 498006  ^LIMATAN!
+ ----- 499006  ^LIMASIN!
+ ----- 49A006  ^LIMSQRT!
+ ----- 49B006  ^LIMFLOOR!
+ ----- 49C006  ^LIMABS!
+ ----- 49D006  ^LPROF!
+ ----- 49E006  ^LIM#VARX!
+ ----- 49F006  ^LIMBETA!
+ ----- 4A0006  ^LIMALPHA!
+ ----- 4A1006  ^HORNEXP!
+ ----- 4A2006  ^HORNCOS!
+ ----- 4A3006  ^HORNSIN!
+ ----- 4A4006  ^LIMSC0!
+ ----- 4A5006  ^LIMSC1!
+ ----- 4A6006  ^HORNATAN!
+ ----- 4A7006  ^LIMATAS!
+ ----- 4A8006  ^HORNASIN!
+ ----- 4A9006  ^HORNASIN1!
+ ----- 4AA006  ^HORNLN!
+ ----- 4AB006  ^LNOBJ!
+ ----- 4AC006  ^NEWLIMHORN
+ ----- 4AD006  ^LIMHORN!
+ ----- 4AE006  ^LRDM!
+ ----- 4AF006  ^LIMDL!
+ ----- 4B0006  ^LIMDLINF!
+ ----- 4B1006  ^LIMINFSIGN!
+ ----- 4B2006  ^LIMMAX!
+ ----- 4B3006  ^LIMCOMP!
+ ----- 4B4006  ^VARCOMP2!
+ ----- 4B5006  ^LIMSORT!
+ ----- 4B6006  ^VARCOMP!
+ ----- 4B7006  ^VARCOMPLN!
+ ----- 4B8006  ^VARCOMP3!
+ ----- 4B9006  ^VARCOMP31!
+ ----- 4BA006  ^VARCOMP32!
+ ----- 4BB006  ^VARCOMP33!
+ ----- 4BC006  ^LIMERR6!
+ ----- 4BD006  ^LIMVALOBJ!
+ ----- 4BE006  ^LIMVAL!
+ ----- 4BF006  ^EQUIV!
+ ----- 4C0006  ^LVARXNX2!
+ ----- 4C1006  ^SIMP1!
+ ----- 4C2006  ^FindCurVar
+ ----- 4C3006  ^LIMVAR!
+ ----- 4C4006  ^VAR%
+ ----- 4C5006  ^ISOL1
+ ----- 4C6006  ^ISOLALL
+ ----- 4C7006  ^ISOL2ext
+ ----- 4C8006  ^BEZOUTMSOLV
+ ----- 4C9006  ^ROOT{}N
+ ----- 4CA006  ^MHORNER
+ ----- 4CB006  ^MHORNER1
+ ----- 4CC006  ^SQFFext
+ ----- 4CD006  ^MSQFF
+ ----- 4CE006  ^%1TWO
+ ----- 4CF006  ^MZSQFF
+ ----- 4D0006  ^MZSQFF1
+ ----- 4D1006  ^MSECOSQFF
+ ----- 4D2006  ^MLISTSQFF
+ ----- 4D3006  ^METASQFFext
+ ----- 4D4006  ^SECOSQFFext
+ ----- 4D5006  ^CSQFFext
+ ----- 4D6006  ^SUMSQRext
+ ----- 4D7006  ^VXXLext
+ ----- 4D8006  ^METALISTVXXL
+ ----- 4D9006  ^VXXLFext
+ ----- 4DA006  ^VXXL1ext
+ ----- 4DB006  ^VXXL0
+ ----- 4DC006  ^VXXL2NR
+ ----- 4DD006  ^VXXL2
+ ----- 4DE006  ^LIDNText
+ ----- 4DF006  ^LVARXNXext
+ ----- 4E0006  ^ISPOLYNOMIAL?
+ ----- 4E1006  ^2POLYNOMIAL?
+ ----- 4E2006  ^VXINDEP?
+ ----- 4E3006  ^LVARXNX2ext
+ ----- 4E4006  ^RLVARext
+ ----- 4E5006  ^LLVARDext
+ ----- 4E6006  ^VXLVARext
+ ----- 4E7006  ^LVARext
+ ----- 4E8006  ^VX>LVARext
+ ----- 4E9006  ^VX>
+ ----- 4EA006  ^VX!
+ ----- 4EB006  ^prepvarlist
+ ----- 4EC006  ^LIDNTLVAR
+ ----- 4ED006  ^LISTOPRAC
+ ----- 4EE006  ^LISTOPext
+ ----- 4EF006  ^LISTOPSQRT
+ ----- 4F0006  ^LVARDext
+ ----- 4F1006  ^>VARLIST
+ ----- 4F2006  ^DEPTHext
+ ----- 4F3006  ^DEPTHOBJext
+ ----- 4F4006  ^TRIMext
+ ----- 4F5006  ^PTrim
+ ----- 4F6006  ^TRIMOBJext
+ ----- 4F7006  ^NEWTRIMext
+ ----- 4F8006  ^>POLYTRIM
+ ----- 4F9006  ^ELMGext
+ ----- 4FA006  ^SWAPRNEG
+ ----- 4FB006  ^QNeg
+ ----- 4FC006  ^RNEGext
+ ----- 4FD006  ^SWAPRRE
+ ----- 4FE006  ^RREext
+ ----- 4FF006  ^SWAPRIM
+ ----- 500006  ^RIMext
+ ----- 501006 ^xREext
+ ----- 502006 ^xSYMRE
+ ----- 503006 ^xIMext
+ ----- 504006 ^xSYMIM
+ ----- 505006  ^RCONJext
+ ----- 506006  ^addtCONJ
+ ----- 507006 ^xSYMCONJ
+ ----- 508006  ^QCONJext
+ ----- 509006  ^QABSext
+ ----- 50A006  ^RABSext
+ ----- 50B006  ^ZABS
+ ----- 50C006  ^CZABS
+ ----- 50D006 ^xABSext
+ ----- 50E006  ^addtABS
+ ----- 50F006 ^xSYMABS
+ ----- 510006  ^addtABSEXACT
+ ----- 511006  ^addtSIGN
+ ----- 512006 ^xSYMSIGN
+ ----- 513006  ^addtARG
+ ----- 514006 ^xSYMARG
+ ----- 515006  ^ARG2
+ ----- 516006  ^INTERNALARG2
+ ----- 517006  ^QUADRANT
+ ----- 518006  ^CNORMext
+ ----- 519006  ^CXIRext
+ ----- 51A006  ^QNORMext
+ ----- 51B006  ^SXSQRext
+ ----- 51C006  ^XSQRext
+ ----- 51D006  ^CK%%SQRT
+ ----- 51E006  ^C%%SQRT
+ ----- 51F006  ^ZINTSQRT
+ ----- 520006  ^SHALT
+ ----- 521006  ^CKLN
+ ----- 522006 ^xLNext
+ ----- 523006  ^addtLN
+ ----- 524006 ^xSYMLN
+ ----- 525006  ^EXPANDLN
+ ----- 526006  ^CMPLXLN
+ ----- 527006  ^LNATANext
+ ----- 528006  ^REALLN
+ ----- 529006 ^xEXPext
+ ----- 52A006 ^xINVext
+ ----- 52B006 ^xvext                     square root
+ ----- 52C006 ^xCOSext
+ ----- 52D006 ^xSINext
+ ----- 52E006 ^xTANext
+ ----- 52F006 ^xCOSHext
+ ----- 530006 ^xSINHext
+ ----- 531006 ^xTANHext
+ ----- 532006 ^xASINext
+ ----- 533006 ^xACOSext
+ ----- 534006 ^xATANext
+ ----- 535006  ^addtCOS
+ ----- 536006 ^xSYMCOS
+ ----- 537006  ^addtSIN
+ ----- 538006 ^xSYMSIN
+ ----- 539006  ^addtTAN
+ ----- 53A006 ^xSYMTAN
+ ----- 53B006  ^addtSINACOS
+ ----- 53C006  ^addtASIN
+ ----- 53D006 ^xSYMASIN
+ ----- 53E006  ^addtACOS
+ ----- 53F006 ^xSYMACOS
+ ----- 540006  ^addtATAN
+ ----- 541006 ^xSYMATAN
+ ----- 542006  ^addtSINH
+ ----- 543006 ^xSYMSINH
+ ----- 544006  ^addtCOSH
+ ----- 545006 ^xSYMCOSH
+ ----- 546006  ^addtTANH
+ ----- 547006 ^xSYMTANH
+ ----- 548006 ^xATANHext
+ ----- 549006  ^addtATANH
+ ----- 54A006 ^xSYMATANH
+ ----- 54B006 ^xASINHext
+ ----- 54C006  ^addtASINH
+ ----- 54D006 ^xSYMASINH
+ ----- 54E006 ^xACOSHext
+ ----- 54F006  ^addtACOSH
+ ----- 550006 ^xSYMACOSH
+ ----- 551006  ^addtSQRT
+ ----- 552006 ^xSYMSQRT
+ ----- 553006 ^xSQext
+ ----- 554006  ^addtSQ
+ ----- 555006 ^xSYMSQ
+ ----- 556006  ^addtINV
+ ----- 557006 ^xSYMINV
+ ----- 558006  ^addtEXP
+ ----- 559006 ^xSYMEXP
+ ----- 55A006  ^addtD->R
+ ----- 55B006 ^xSYMD>R
+ ----- 55C006  ^addtR->D
+ ----- 55D006 ^xSYMR>D
+ ----- 55E006  ^addtFLOOR
+ ----- 55F006 ^xSYMFLOOR
+ ----- 560006  ^addtCEIL
+ ----- 561006 ^xSYMCEIL
+ ----- 562006  ^addtIP
+ ----- 563006 ^xSYMIP
+ ----- 564006  ^addtFP
+ ----- 565006 ^xSYMFP
+ ----- 566006  ^addtXPON
+ ----- 567006 ^xSYMXPON
+ ----- 568006  ^addtMANT
+ ----- 569006 ^xSYMMANT
+ ----- 56A006  ^addtLNP1
+ ----- 56B006 ^xSYMLNP1
+ ----- 56C006  ^addtLOG
+ ----- 56D006 ^xSYMLOG
+ ----- 56E006  ^addtALOG
+ ----- 56F006 ^xSYMALOG
+ ----- 570006  ^addtEXPM
+ ----- 571006 ^xSYMEXPM1
+ ----- 572006  ^factorial
+ ----- 573006  ^facts
+ ----- 574006  ^addtFACT
+ ----- 575006 ^xSYMFACT
+ ----- 576006  ^factzint
+ ----- 577006  ^addtNOT
+ ----- 578006 ^xSYMNOT
+ ----- 579006  ^Verbose1
+ ----- 57A006  ^Verbose2
+ ----- 57B006  ^Verbose3
+ ----- 57C006  ^VerboseN
+ ----- 57D006  ^GETERABLEMSG
+ ----- 57E006  ^ERABLEERROR
+ ----- 57F006  ^CANTFACTOR
+ ----- 580006  ^TRANSCERROR
+ ----- 581006  ^NONUNARYERR
+ ----- 582006  ^INTERNALERR
+ ----- 583006  ^INVALIDOP
+ ----- 584006  ^ISOLERR
+ ----- 585006  ^NONINTERR
+ ----- 586006  ^INTVARERR
+ ----- 587006  ^Z>#ERR
+ ----- 588006  ^Z<0ERR
+ ----- 589006  ^VXINDEPERR
+ ----- 58A006  ^NONPOLYSYST
+ ----- 58B006  ^COMPLEXERR
+ ----- 58C006  ^VALMUSTBE0
+ ----- 58D006  ^SWITCHNOTALLOWED
+ ----- 58E006  ^ERR$EVALext
+ ----- 58F006  ^Sys1IT
+ ----- 001007  ^ListToArry
+ ----- 002007  ^ArryToMatrix
+ ----- 003007  ^ArryToList
+ ----- 004007  ^DIMS
+ ----- 005007  ^RunDoOldMatrix
+ ----- 006007  ^RunDoNewMatrix
+ ----- 007007  ^DoNewMatrixReal
+ ----- 008007  ^DoNewMatrixCplx
+ ----- 009007  ^DoOldMatrixReal
+ ----- 00A007  ^DoOldMatrixCplx
+ ----- 00B007  ^DoNewMatrixRealOrCplx
+ ----- 00C007  ^DEB.MATRIX
+ ----- 00D007  ^DEB.MATRIXTYPE
+ ----- 073007  ^QpiZ
+ ----- 074007  ^QPI
+ ----- 075007  ^QpiSym
+ ----- 076007  ^QpiArry
+ ----- 077007  ^QpiList
+ ----- 078007  ^Qpi
+ ----- 079007  ^Qpi%
+ ----- 07A007  ^GetRoot
+ ----- 07B007  ^Approx
+ ----- 07C007  ^#FACT
+ ----- 07D007  ^CHECKSING
+ ----- 07E007  ^DESOLVE
+ ----- 07F007  ^ODE_INT
+ ----- 080007  ^LINSOLV
+ ----- 081007  ^LDECSOLV
+ ----- 082007  ^LDEGENE
+ ----- 083007  ^LDEPART
+ ----- 084007  ^LDSSOLVext
+ ----- 085007  ^ODETYPESTO
+ ----- 086007  ^ODE_SEPAR
+ ----- 087007  ^LAPext
+ ----- 088007  ^ILAPext
+ ----- 089007  ^ILAPRAText
+ ----- 08A007  ^ILAPDELTA
+ ----- 08B007  ^ILAPEXP
+ ----- 08C007  ^ILAPEXPSC
+ ----- 08D007  ^MENUext
+ ----- 08E007  ^WRITEMENU
+ ----- 08F007  ^CFGDISPLAY
+ ----- 090007  ^NEWVX
+ ----- 091007  ^NEWMODULO
+ ----- 092007  ^SWITCHON
+ ----- 093007  ^SWITCHOFF
+ ----- 094007  ^FLAGNAME
+ ----- 095007  ^COMPLEXON
+ ----- 096007  ^COMPLEXOFF
+ ----- 097007  ^EXACTON
+ ----- 098007  ^EXACTOFF
+ ----- 099007  ^COMPLEXMODE
+ ----- 09A007  ^SETCOMPLEX
+ ----- 09B007  ^COMPLEX?
+ ----- 09C007  ^REALMODE
+ ----- 09D007  ^CLRCOMPLEX
+ ----- 09E007  ^EXACTMODE
+ ----- 09F007  ^SETEXACT
+ ----- 0A0007  ^NUMMODE
+ ----- 0A1007  ^CLREXACT
+ ----- 0A2007  ^EXACT?
+ ----- 0A3007  ^STEPBYSTEP
+ ----- 0A4007  ^NOSTEPBYSTEP
+ ----- 0A5007  ^VERBOSEMODE
+ ----- 0A6007  ^SILENTMODE
+ ----- 0A7007  ^RECURMODE
+ ----- 0A8007  ^NONRECMODE
+ ----- 0A9007  ^PLUSAT0
+ ----- 0AA007  ^SETPLUSAT0
+ ----- 0AB007  ^PLUSATINFTY
+ ----- 0AC007  ^CLRPLUSAT0
+ ----- 0AD007  ^SPARSEDATA
+ ----- 0AE007  ^FULLDATA
+ ----- 0AF007  ^RIGORMODE
+ ----- 0B0007  ^SLOPPYMODE
+ ----- 0B1007  ^SLOPPY?
+ ----- 0B2007  ^MENUCHOOSE?
+ ----- 0B3007  ^MENUCHOOSE
+ ----- 0B4007  ^MENUGENE1
+ ----- 0B5007  ^MENUBASE1
+ ----- 0B6007  ^MENUCMPLX1
+ ----- 0B7007  ^MENUTRIG1
+ ----- 0B8007  ^MENUMAT1
+ ----- 0B9007  ^MENUARIT1
+ ----- 0BA007  ^MENUSOLVE1
+ ----- 0BB007  ^MENUEXPLN1
+ ----- 0BC007  ^MENUDIFF1
+ ----- 0BD007  ^PROMPTSTO1
+ ----- 0BE007  ^XGROBext
+ ----- 0BF007  ^GROBADDext
+ ----- 0C0007  ^DISPLAYext
+ ----- 0C1007  ^SCROLLext
+ ----- 0C2007  ^RCLMODULO
+ ----- 0C3007  ^RCLPERIOD
+ ----- 0C4007  ^RCLVX
+ ----- 0C5007  ^STOVX
+ ----- 0C6007  ^STOMODULO
+ ----- 0C7007  ^RCLEPS
+ ----- 0C8007  ^ISIDREAL?
+ ----- 0C9007  ^ADDTOREAL
+ ----- 0CA007  ^RESETCASCFG
+ ----- 0CB007  ^FRACPARITY
+ ----- 0CC007  ^POLYPARITY
+ ----- 0CD007  ^PARITYTEST
+ ----- 0CE007  ^COSTEST
+ ----- 0CF007  ^SHRINKEVEN
+ ----- 0D0007  ^SINTEST
+ ----- 0D1007  ^SHRINK2SYM
+ ----- 0D2007  ^SHRINKSYM
+ ----- 0D3007  ^SHRINK2ASYM
+ ----- 0D4007  ^SHRINKASYM
+ ----- 0D5007  ^FR2ND%
+ ----- 0D6007  ^POLYSYM
+ ----- 0D7007  ^POLYASYM
+ ----- 0D8007  ^P2P#
+ ----- 0D9007  ^NDEvalN/D
+ ----- 0DA007  ^PEvalN/D
+ ----- 0DB007  ^POSITIFext
+ ----- 0DC007  ^SIGNE1ext
+ ----- 0DD007  ^SIGNEext
+ ----- 0DE007  ^SIGNUNDEF
+ ----- 0DF007  ^SIGNPLUS
+ ----- 0E0007  ^SIGNMOINS
+ ----- 0E1007  ^SIGNELN
+ ----- 0E2007  ^SIGNEEXP
+ ----- 0E3007  ^SIGNESIN
+ ----- 0E4007  ^SIGNECOS
+ ----- 0E5007  ^SIGNETAN
+ ----- 0E6007  ^SIGNEATAN
+ ----- 0E7007  ^SIGNESQRT
+ ----- 0E8007  ^SUBSIGNE
+ ----- 0E9007  ^SIGNERIGHT
+ ----- 0EA007  ^SIGNELEFT
+ ----- 0EB007  ^>SIGNE
+ ----- 0EC007  ^SIGNE>
+ ----- 0ED007  ^SIGNMULText
+ ----- 0EE007  ^ZSIGNECK
+ ----- 0EF007  ^SIGNEERROR
+ ----- 0F0007  ^ZSIGNE
+ ----- 0F1007  ^zsigne
+ ----- 0F2007  ^PASCAL_NEXTLINE
+ ----- 0F3007  ^DELTAPSOLVE
+ ----- 0F4007  ^SOLVEMETASYST
+ ----- 0F5007  ^REDUCEMETASYST
+ ----- 0F6007  ^REDUCEMETAPSYST
+ ----- 0F7007  ^SOLVECRAMER
+ ----- 0F8007  ^QUOTExSIGMA
+ ----- 0F9007  ^SUM
+ ----- 0FA007  ^FLAGSUM
+ ----- 0FB007  ^SUMVX
+ ----- 0FC007  ^FLAGSUMVX
+ ----- 0FD007  ^RATSUM
+ ----- 0FE007  ^FTAYL
+ ----- 0FF007  ^CSTFRACTION?
+ ----- 100007  ^NONRATSUM
+ ----- 101007  ^LINEARAPPLY
+ ----- 102007  ^linearapply              Valid with ROM revision > 1.10 only
+ ----- 103007  ^meta_cst?                Valid with ROM revision > 1.10 only
+ ----- 104007  ^HYPERGEO                 Valid with ROM revision > 1.10 only
+ ----- 105007  ^fk+1/fk                  Valid with ROM revision > 1.10 only
+ ----- 106007  ^A/B2PQR                  Valid with ROM revision > 1.10 only
+ ----- 107007  ^GOSPER?                  Valid with ROM revision > 1.10 only
+ ----- 108007  ^ZEILBERGER               Valid with ROM revision > 1.10 only
+ ----- 109007  ^SYMPSI                   Valid with ROM revision > 1.10 only
+ ----- 10A007  ^sympsi                   Valid with ROM revision > 1.10 only
+ ----- 10B007  ^SYMPSIN                  Valid with ROM revision > 1.10 only
+ ----- 10C007  ^sympsin                  Valid with ROM revision > 1.10 only
+ ----- 10D007  ^IBERNOULLI               Valid with ROM revision > 1.10 only
+ ----- 10E007  ^FLAGRESULTANT            Valid with ROM revision > 1.10 only
+ ----- 10F007  ^RESULTANT                Valid with ROM revision > 1.10 only
+ ----- 110007  ^RESULTANTLP              Valid with ROM revision > 1.10 only
+ ----- 111007  ^RESPSHIFTQ               Valid with ROM revision > 1.10 only
+ ----- 112007  ^ADDONEVAR                Valid with ROM revision > 1.10 only
+ ----- 113007  ^IROOTS                   Valid with ROM revision > 1.10 only
+ ----- 114007  ^TYPEGAUSSINT?            Valid with ROM revision > 1.10 only
+ ----- 115007  ^DTYPEGAUSSINT?           Valid with ROM revision > 1.10 only
+ ----- 116007  ^DUPTYPEGAUSSINT?         Valid with ROM revision > 1.10 only
+ ----- 117007  ^PPZZ                     Valid with ROM revision > 1.10 only
+ ----- 118007  ^DISTRIB*                 Valid with ROM revision > 1.10 only
+ ----- 119007  ^NONALGERR                Valid with ROM revision > 1.10 only
+ ----- 11A007  ^ALGCASCOMPEVAL           Valid with ROM revision > 1.10 only
+ ----- 11B007  ^%PSI                     Valid with ROM revision > 1.10 only
+ ----- 11C007  ^%%PSI                    Valid with ROM revision > 1.10 only
+ 0C506 125067   rGETATELN                Not supported in Vger
+0050B0 0050B0  ~IFMenuRow1               ** 48/49 **
+0060B0 0060B0  ~IFMenuRow2               ** 48/49 **
+0850B0 0860B0  ~grobAlertIcon
+0860B0 0870B0  ~grobCheckKey
+0C50B0 0C80B0  ~gFldVal
+0D50B0 0D80B0  ~sFldVal
+0DB0B0 0DE0B0  ~nNullBind
+0000B1 0000B1  ~DoMsgBox                 ** 48/49 **
+0020B1 0040B1  ~MsgBoxMenu
+0000B3 0000B3  ~Choose                   ** 48/49 **
+0050B3 0050B3  ~ChooseMenu0              ** 48/49 **
+0060B3 0060B3  ~ChooseMenu1              ** 48/49 **
+0070B3 0070B3  ~ChooseMenu2              ** 48/49 **
+0660B3 0630B3  ~ChooseSimple
+ 1508E 0150DD  xDBUG                     U.B.S. (ROMPTR in Vger)
+0030E0 0030E0  ~BRStoC1                  ** 48/49 **
+0100E0 0100E0  ~BRbrowse                 ** 48/49 **
+0120E0 0130E0  ~BRoutput
+0170E0 0180E0  ~BRRclCurRow
+0180E0 0190E0  ~BRRclC1
+0120E4 0120E4  ~MESRclEqn                ** 48/49 **
+0060E7 0060E7  ~UTBADATERR               ** 48/49 **
+0110E7 0110E7  ~UTVUNS1Arg               ** 48/49 **
+0630E3 02E0E7  ~PCunpack
+0580E7 02F0E7  ~UTTYPEEXT0?
+01E0E8 01E0E8  ~INTEMPOB?                ** 48/49 **  ob --> ob T/F
+ 1D054 614158   XEQ>ARRAY                Not supported in Vger
+ 31289 207162   POPUART                  Not supported in Vger
+ 325AA 2081BA   ChkLowBat                Not supported in Vger
+ 27D00 2112AB   check_pdata              Not supported in Vger
+ ----- 000314 ~xEXPAND
+ ----- 001314 ~xFACTOR
+ ----- 002314 ~xSUBST
+ ----- 003314 ~xDERVX
+ ----- 004314 ~xINTVX
+ ----- 005314 ~xLIMIT
+ ----- 006314 ~xTAYLOR0
+ ----- 007314 ~xSERIES
+ ----- 008314 ~xSOLVEVX
+ ----- 009314 ~xPLOT
+ ----- 00A314 ~xPLOTADD
+ ----- 00B314 ~xIBP
+ ----- 00C314 ~xPREVAL
+ ----- 00D314 ~xRISCH
+ ----- 00E314 ~xDERIV
+ ----- 00F314 ~xDESOLVE
+ ----- 010314 ~xLAP
+ ----- 011314 ~xILAP
+ ----- 012314 ~xLDEC
+ ----- 013314 ~xTEXPAND
+ ----- 014314 ~xLIN
+ ----- 015314 ~xTSIMP
+ ----- 016314 ~xLNCOLLECT
+ ----- 017314 ~xEXPLN
+ ----- 018314 ~xSINCOS
+ ----- 019314 ~xTLIN
+ ----- 01A314 ~xTCOLLECT
+ ----- 01B314 ~xTRIG
+ ----- 01C314 ~xTRIGCOS
+ ----- 01D314 ~xTRIGSIN
+ ----- 01E314 ~xTRIGTAN
+ ----- 01F314 ~xTAN2SC
+ ----- 020314 ~xHALFTAN
+ ----- 021314 ~xTAN2SC2
+ ----- 022314 ~xATAN2S
+ ----- 023314 ~xASIN2T
+ ----- 024314 ~xASIN2C
+ ----- 025314 ~xACOS2S
+ ----- 026314 ~xDIV2
+ ----- 027314 ~xIDIV2
+ ----- 028314 ~xQUOT
+ ----- 029314 ~xIQUOT
+ ----- 02A314 ~xREMAINDER
+ ----- 02B314 ~xIREMAINDER
+ ----- 02C314 ~xGCD
+ ----- 02D314 ~xLCM
+ ----- 02E314 ~xEGCD
+ ----- 02F314 ~xIEGCD
+ ----- 030314 ~xABCUV
+ ----- 031314 ~xIABCUV
+ ----- 032314 ~xLGCD
+ ----- 033314 ~xSIMP2
+ ----- 034314 ~xPARTFRAC
+ ----- 035314 ~xPROPFRAC
+ ----- 036314 ~xPTAYL
+ ----- 037314 ~xHORNER
+ ----- 038314 ~xEULER
+ ----- 039314 ~xPA2B2
+ ----- 03A314 ~xCHINREM
+ ----- 03B314 ~xICHINREM
+ ----- 03C314 ~xISPRIME?
+ ----- 03D314 ~xNEXTPRIME
+ ----- 03E314 ~xPREVPRIME
+ ----- 03F314 ~xSOLVE
+ ----- 040314 ~xZEROS
+ ----- 041314 ~xFCOEF
+ ----- 042314 ~xFROOTS
+ ----- 043314 ~xFACTORS
+ ----- 044314 ~xDIVIS
+ ----- 045314 ~xTRAN
+ ----- 046314 ~xHADAMARD
+ ----- 047314 ~xrref
+ ----- 048314 ~xREF
+ ----- 049314 ~xAXM
+ ----- 04A314 ~xAXL
+ ----- 04B314 ~xQXA
+ ----- 04C314 ~xAXQ
+ ----- 04D314 ~xGAUSS
+ ----- 04E314 ~xSYLVESTER
+ ----- 04F314 ~xPCAR
+ ----- 050314 ~xJORDAN
+ ----- 051314 ~xMAD
+ ----- 052314 ~xLINSOLVE
+ ----- 053314 ~xVANDERMONDE
+ ----- 054314 ~xHILBERT
+ ----- 055314 ~xLCXM
+ ----- 056314 ~xDIV
+ ----- 057314 ~xCURL
+ ----- 058314 ~xLAPL
+ ----- 059314 ~xHESS
+ ----- 05A314 ~xLEGENDRE
+ ----- 05B314 ~xTCHEBYCHEFF
+ ----- 05C314 ~xHERMITE
+ ----- 05D314 ~xLAGRANGE
+ ----- 05E314 ~xFOURIER
+ ----- 05F314 ~xSIGNTAB
+ ----- 060314 ~xTABVAR
+ ----- 061314 ~xTABVAL
+ ----- 062314 ~xDIVPC
+ ----- 063314 ~xTRUNC
+ ----- 064314 ~xSEVAL
+ ----- 065314 ~xTEVAL
+ ----- 066314 ~xMAP
+ ----- 067314 ~xXNUM
+ ----- 068314 ~xXQ
+ ----- 069314 ~xREORDER
+ ----- 06A314 ~xLVAR
+ ----- 06B314 ~xFXND
+ ----- 06C314 ~xEXLR
+ ----- 06D314 ~xLNAME
+ ----- 06E314 ~xADDTMOD
+ ----- 06F314 ~xSUBTMOD
+ ----- 070314 ~xMULTMOD
+ ----- 071314 ~xDIVMOD
+ ----- 072314 ~xDIV2MOD
+ ----- 073314 ~xPOWMOD
+ ----- 074314 ~xINVMOD
+ ----- 075314 ~xGCDMOD
+ ----- 076314 ~xEXPANDMOD
+ ----- 077314 ~xFACTORMOD
+ ----- 078314 ~xRREFMOD
+ ----- 079314 ~xMODSTO
+ ----- 07A314 ~xMENUXY
+ ----- 07B314 ~xKEYEVAL
+ ----- 07C314 ~xGROBADD
+ ----- 07D314 ~xSCROLL
+ ----- 07E314 ~xCASCFG
+ ----- 07F314 ~xMAIN
+ ----- 080314 ~xBASE
+ ----- 081314 ~xCMPLX
+ ----- 082314 ~xTRIGO
+ ----- 083314 ~xMATR
+ ----- 084314 ~xDIFF
+ ----- 085314 ~xARIT
+ ----- 086314 ~xSOLVER
+ ----- 087314 ~xEXP&LN
+ ----- 088314 ~xEPSX0
+ ----- 089314 ~x?
+ ----- 08A314 ~x\9F                      User RPL command: infinity
+ ----- 08B314 ~xPROMPTSTO
+ ----- 08C314 ~xVER
+ 2D396 20335D   MAXRETRY                 Not supported in Vger
+ 2D3A0 203367   LAMPKNO                  Not supported in Vger
+ 2D3B1 203378   LAMPACKET                Not supported in Vger
+ 49BD2 22438B   RootUtil                 Not supported in Vger
+ 2D3C6 20338D   LAMRETRY                 Not supported in Vger
+ 2D3EE 2033B5   LAMKP                    Not supported in Vger
+ 2D40E 2033C2   LAMOBJ                   Not supported in Vger
+ 2D41D 2033D1   LAMOPOS                  Not supported in Vger
+ 71C3B 1223EA   rNTHELCOMP               Not supported in Vger
+ 0D7A1 2093F0   CLKUTL1                  Not supported in Vger
+ 2D45A 20340E   LAMKLIST                 Not supported in Vger
+ 5435D 21F416   #>%                      Not supported in Vger
+ 2D46D 203421   LAMKMODE                 Not supported in Vger
+ 2D493 203447   LAMKRM                   Not supported in Vger
+ 0D92C 20944D   POPDATE%                 Not supported in Vger
+ 0D948 20946C   POPTIME%                 Not supported in Vger
+ 4E776 229477   Z-BOX                    Not supported in Vger
+ 315F9 2074A8   CloseUart                Not supported in Vger
+ 0D9C7 2094F6   CKTIME                   Not supported in Vger
+ 4AB1C 2254FE   ID_X                     Not supported in Vger
+ 4AB2A 22550C   PvarsC%0                 Not supported in Vger
+ 4AB59 22553B   ID_Y                     Not supported in Vger
+ 6594E 23954E   putnibs                  Not supported in Vger
+ 6595A 23955A   getnibs                  Not supported in Vger
+ 71DB2 122561   RPTRACC                  Not supported in Vger
+ 2D5E1 203595   SEND_PACKET              Not supported in Vger
+ 0DB3A 209672   YMD>Ticks                Not supported in Vger
+ 39FB0 3246CF   AbbrevStack?             Not supported in Vger
+ 39FC1 3246E0   SetAbbrevStk             Not supported in Vger
+ 39FD2 3246F1   ClrAbbrevStk             Not supported in Vger
+ 32B08 208715   ErrFixEIRU               Not supported in Vger
+ 32B1A 208727   FixEIRU                  Not supported in Vger
+ 32CAF 2088BC   ChkGrHook                Not supported in Vger
+ 32CB6 2088C3   adrGraphPrtH             Not supported in Vger
+ 2F989 2058FF   RecvNextPkt              Not supported in Vger
+ 138CA 114BA0   pixon2                   Not supported in Vger
+ 138EF 114BC5   GETPIX                   Not supported in Vger
+ 138F2 114BC8   GETPIX3                  Not supported in Vger
+ 4CE4C 227C0B   EXITFCNsto               Not supported in Vger
+ 0CBC4 208C71   ErrTime                  Not supported in Vger
+ 30E4E 206D01   PutSerialECk             Not supported in Vger
+ 30ED2 206D85   OUTUART                  Not supported in Vger
+ 323E9 207FB1   PSubErr                  Not supported in Vger
+ 11CF3  -----   $>BIGGROB                Not in Vger!
+ 39BF3  -----   ?RollUpDA2               Not in Vger!
+ 312DA  -----   adr_uart_han             apparently not in Vger
+ 3981B  -----   AlgEntryStat             Not in Vger!
+ 39673  -----   AngleStatus              Not in Vger!
+ 70601  -----   BANKMTHDS                Not in Vger!
+ 66EA5  -----   BigCursor                Not in Vger!
+ 44F42  -----   BindMatVars              Not in Vger!
+ 39632  -----   Blank&GROB!              Not in Vger!
+ 444EE  -----   Char>Edit                Not in Vger!
+ 396C8  -----   ComVecStatus             Not in Vger!
+ 4651C  -----   CopyColsLeft             Not in Vger!
+ 4677E  -----   CopyColsRght             Not in Vger!
+ 46625  -----   CopyRowsDown             Not in Vger!
+ 46409  -----   CopyRowsUp               Not in Vger!
+ 427AF  -----   Cursor&Disp              Not in Vger!
+ 13D8C  -----   CURSOR1                  Not in Vger!
+ 13DB4  -----   CURSOR2                  Not in Vger!
+ 13D28  -----   cursorblink+             Not in Vger!
+ 13D55  -----   cursorblink-             Not in Vger!
+ 424DA  -----   DCursor                  Not in Vger!
+ 13B51  -----   DISPCHAR+PC              Not in Vger!
+ 398F4  -----   DispDir?Tim1             Not in Vger!
+ 39958  -----   DispDir?Tim2             Not in Vger!
+ 3988B  -----   DispDir?Time             Not in Vger!
+ 133AB  -----   disprange                Not in Vger!
+ 00019  -----   ENTERCODE                Not in Vger!
+ 21922  -----   GetBVars                 Not in Vger!
+ 45D1F  -----   GetElt                   Not in Vger!
+ 45AE0  -----   GetMat/Vec               Not in Vger!
+ 45023  -----   InitOldMat               Not in Vger!
+ 3E5CD  -----   IStackKey                Not in Vger!
+ 2F211  -----   LAMKML                   Not in Vger!
+ 426F1  -----   LastERow?                Not in Vger!
+ 4256B  -----   LCursor                  Not in Vger!
+ 39F6F  -----   LINESOFSTACK             Not in Vger!
+ 15E83  -----   longhxs                  Not in Vger!
+ 7DF0E  -----   MANMENU*/                Not in Vger!
+ 7DF03  -----   MANMENU+-                Not in Vger!
+ 7DF66  -----   MANMENUATG               Not in Vger!
+ 7DF3A  -----   MANMENUCSIV              Not in Vger!
+ 7DF50  -----   MANMENUCX                Not in Vger!
+ 7DF45  -----   MANMENUEQ                Not in Vger!
+ 7DF24  -----   MANMENUEXP               Not in Vger!
+ 7DF2F  -----   MANMENULN                Not in Vger!
+ 7DF5B  -----   MANMENUTRG               Not in Vger!
+ 7DF19  -----   MANMENU^                 Not in Vger!
+ 66ECD  -----   MediumCursor             Not in Vger!
+ 7DEA0  -----   nINTGACOS                Not in Vger!
+ 7DECC  -----   nINTGALOG                Not in Vger!
+ 7DE95  -----   nINTGASIN                Not in Vger!
+ 7DEAB  -----   nINTGATAN                Not in Vger!
+ 7DE5E  -----   nINTGCOS                 Not in Vger!
+ 7DE7F  -----   nINTGCOSH                Not in Vger!
+ 7DED7  -----   nINTGEXPM                Not in Vger!
+ 7DE27  -----   nINTGINV                 Not in Vger!
+ 7DEB6  -----   nINTGLN                  Not in Vger!
+ 7DEC1  -----   nINTGLOG                 Not in Vger!
+ 7DE32  -----   nINTGSIGN                Not in Vger!
+ 7DE53  -----   nINTGSIN                 Not in Vger!
+ 7DE74  -----   nINTGSINH                Not in Vger!
+ 7DE48  -----   nINTGSQ                  Not in Vger!
+ 7DE3D  -----   nINTGSQRT                Not in Vger!
+ 7DE69  -----   nINTGTAN                 Not in Vger!
+ 7DE8A  -----   nINTGTANH                Not in Vger!
+ 7DBD7  -----   nWHEREFCNAPP             Not in Vger!
+ 39971  -----   PathStatus               Not in Vger!
+ 49AD3  -----   PointDerivUt             Not in Vger!
+ 49F06  -----   PointMoveCur             Not in Vger!
+ 0AAB2  -----   PORTSTATUS               Not in Vger!
+ 39853  -----   PrgmEntrStat             Not in Vger!
+ 0C147  -----   restoreiram              Not in Vger!
+ 45C2F  -----   RowElt#                  Not in Vger!
+ 4489E  -----   ROWNUM                   Not in Vger!
+ 00001  -----   Sfkey1                   Not in Vger!
+ 00006  -----   Sfkey6                   Not in Vger!
+ 66EF1  -----   SmallCursor              Not in Vger!
+ 659DE  -----   Symb>HBuff               Not in Vger!
+ 4272D  -----   TopERow?                 Not in Vger!
+ 42660  -----   UCursor                  Not in Vger!
+ 39748  -----   UserFlagStat             Not in Vger!
+ 397BB  -----   UserKeysStat             Not in Vger!
+ 0931B  -----   X@                       Not in Vger!
