@@ -21,10 +21,13 @@ Slot=0
 Emu48Ram=C:\Users\julien\Documents\Debug4x\Emu\default 48GX.e48
 Emu48Port2=C:\Program Files (x86)\Hewlett-Packard\Debug4x\Emu\default 48GX.bin
 Emu49Ram=C:\Users\julien\Documents\Debug4x\Emu\default 50G.e49
-FilePath=smhp50ed.hp
+FilePath=grayscales.hp
 DirPath=
 RPL_INCLUDE=
 SasmParams=
 LRFiles=
 [Files]
-file1=smhp_editor_50.s
+file1=grayscales.s
+[Edit]
+edit2=>grayscales.s
+edit3=C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\editor\smhp_editor_50.s

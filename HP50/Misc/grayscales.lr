@@ -1,0 +1,67 @@
+Saturn Loader, Ver. version 3.0.9, 08/03/10
+
+
+Output Module:
+Module=grayscales.o
+  Start=00000 End=002B1 Length=002B2   Symbols=  35 References=  44
+  Date=Sat Mar 25 00:27:17 2017   Title=
+
+
+Source modules:
+Module=grayscales.o
+  Start=00000 End=002B1 Length=002B2
+  Date=Sat Mar 25 00:27:17 2017   Title=                                        Sat Mar 25 00:27:17 2017
+
+Saturn Cross Reference Listing
+
+*grayscales.o                    * 00000 - 000A2
+
+@                                *       - 002AD
+
+BLABLA                           = 805F5 - 0015A
+
+COEFFIMAGE                       = 80345 - 000F3
+COUNT_IT                         = 8032B - 00148
+
+DOCODE                           *       - 00005
+DOCOL                            *       - 00000
+
+EC1                              = 80100 - 0003F 0010F
+EC2                              = 80105 - 00062 00121
+
+GEST                             = 8600D - 000AB 001BC 0022C 00292
+GEST2                            = 80092 - 00237 00287
+GETPTRLOOP                       *       - 002A3
+GRISOFF                          * 001A1 - 0029D
+GRISON                           * 0007D -
+
+HEADERADD                        = 00128 - 00018 00279
+HEXDCW                           = 2DEAA -
+HORLOGE                          = 0012E - 0007F 001A7
+HORLOGE2                         = 0012F - 000CC
+
+IntMan                           * 000CA -
+IntMan.Fin                       * 00158 - 000DC
+IntMan.Suite                     * 000DF - 000D9
+
+KEY                              = 0020F - 0025A 0026D
+
+MAKE$N                           *       - 0002D 00050
+
+QUIT                             * 00266 - 00275
+
+SAVE_IT                          = 80335 - 000B6 001B1
+SAVPTR                           *       - 00011
+SAVSCREEN                        = 80319 - 001F0
+SAV_TIMER                        = 80323 - 001C7
+SCR                              = 8031E -
+SCREEN                           = 8068D - 00208
+SCREENADD                        = 00120 - 0012B 001FA 0020F
+SEMI                             *       - 002A8
+
+TEST_QUIT                        * 00253 - 0024B
+TIMER2                           = 00138 - 001E5
+
+WTF                              = 005DB - 0018E
+
+/SLOAD:  End of Saturn Loader Execution
