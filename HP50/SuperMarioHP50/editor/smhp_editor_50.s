@@ -1,4 +1,9 @@
 
+ASSEMBLEM
+
+!RPL
+
+RPL
 ::
 CODEM
 
@@ -23,6 +28,24 @@ DC SCREENADD 	00120  %  Screen
 DC HEXDCW 	2DEAA  %  Make Hex
 DC KEY    	0020F  %  OUT=C C=IN
 
+% Constants for the Annunciator bit locations below
+DC ANNUNCIATORS_IO 1
+DC ANNUNCIATORS_Alert 3
+DC ANNUNCIATORS_LShift 4
+DC ANNUNCIATORS_RShift 5
+DC ANNUNCIATORS_Alpha 6
+DC ANNUNCIATORS_Busy 7
+
+DC ANNCTRL_LShift 0
+DC ANNCTRL_RShift 1
+DC ANNCTRL_Alpha 2
+DC ANNCTRL_Alert 3
+DC ANNCTRL_Busy 4
+DC ANNCTRL_IO 5
+
+DC PASTDUE_flag 0
+   
+   
 CP=80100
 DCCP 5 EC0             % address of our custom screen surface
 DCCP 5 EC1             % address of our offscreen surface
@@ -41,6 +64,8 @@ D0=(5)Y DAT0=A.A
 D0=(5)B DAT0=A.A
 D0=(5)S DAT0=A.A
 D0=(5)X2 DAT0=A.A
+
+GOSUBL HIDE_ANNUN
 
 GOSUBL INI.STACK
 
@@ -160,6 +185,7 @@ GOSBVL =KEY
 ?C#0.B GOYES QUIT
 
 *FINALQUIT
+%GOSUBL HIDE_ANNUN
 % reset menu height and screen then quit
 LA 37 D0=(5)HEADERADD DAT0=A.B
 D0=(5)$8068D A=DAT0.A
@@ -576,6 +602,62 @@ A-1.B DAT0=A.B
 A=R2.A A-26.A R2=A.A
 GOSUBL DISP.LEVEL
 ST=0.0
+RTN
+
+*SHOW_ANNUN
+
+      D1=(5)ANNUNCIATORS         % load address of ANNUNCIATORS in D1
+      C=DAT1 B                   % copy the byte into C.B
+      CBIT=1 ANNUNCIATORS_IO     % turn on the I/O Annunciator bit
+      CBIT=1 ANNUNCIATORS_Alert  % turn on the Alert Annunciator bit
+      CBIT=1 ANNUNCIATORS_LShift % turn on the Left Shift Annunciator bit
+      CBIT=1 ANNUNCIATORS_RShift % turn on the Right Shift Annunciator bit
+      CBIT=1 ANNUNCIATORS_Alpha  % turn on the Alpha Annunciator bit
+      CBIT=1 ANNUNCIATORS_Busy   % turn on the Busy Annunciator bit
+      DAT1=C B                   % write the byte back to memory
+
+      D1=(5)ANNCTRL              % load address of ANNCTRL in D1
+      C=DAT1 B                   % copy the byte into C.B
+      CBIT=1 ANNCTRL_IO          % turn on the I/O Annunciator bit
+      CBIT=1 ANNCTRL_Alert       % turn on the Alert Annunciator bit
+      CBIT=1 ANNCTRL_LShift      % turn on the Left Shift Annunciator bit
+      CBIT=1 ANNCTRL_RShift      % turn on the Right Shift Annunciator bit
+      CBIT=1 ANNCTRL_Alpha       % turn on the Alpha Annunciator bit
+      CBIT=1 ANNCTRL_Busy        % turn on the Busy Annunciator bit
+      DAT1=C B                   % write the byte back to memory
+
+      % set PASTDUE flag so that Alert annunciator will be left intact
+      D1=(5)PASTDUE              % load address of PASTDUE into D
+      C=DAT1 B                   % copy D1.B into C
+      CBIT=1 PASTDUE_flag        % set appropriate bit (defined above) to 1
+      DAT1=C B                   % copy C.B back into memory at PASTDUE
+RTN
+
+*HIDE_ANNUN
+      D1=(5)ANNUNCIATORS         % load address of ANNUNCIATORS in D1
+      C=DAT1 B                   % copy the byte into C.B
+      CBIT=0 ANNUNCIATORS_IO     % turn off the I/O Annunciator bit
+      CBIT=0 ANNUNCIATORS_Alert  % turn off the Alert Annunciator bit
+      CBIT=0 ANNUNCIATORS_LShift % turn off the Left Shift Annunciator bit
+      CBIT=0 ANNUNCIATORS_RShift % turn off the Right Shift Annunciator bit
+      CBIT=0 ANNUNCIATORS_Alpha  % turn off the Alpha Annunciator bit
+      CBIT=0 ANNUNCIATORS_Busy   % turn off the Busy Annunciator bit
+      DAT1=C B                   % write the byte back to memory
+
+      D1=(5)ANNCTRL              % load address of ANNCTRL in D1
+      C=DAT1 B                   % copy the byte into C.B
+      CBIT=0 ANNCTRL_IO          % turn off the I/O Annunciator bit
+      CBIT=0 ANNCTRL_Alert       % turn off the Alert Annunciator bit
+      CBIT=0 ANNCTRL_LShift      % turn off the Left Shift Annunciator bit
+      CBIT=0 ANNCTRL_RShift      % turn off the Right Shift Annunciator bit
+      CBIT=0 ANNCTRL_Alpha       % turn off the Alpha Annunciator bit
+      CBIT=0 ANNCTRL_Busy        % turn off the Busy Annunciator bit
+      DAT1=C B                   % write the byte back to memory
+
+      D1=(5)PASTDUE              % load address of PASTDUE into D
+      C=DAT1 B                   % copy D1.B into C
+      CBIT=0 PASTDUE_flag        % set appropriate bit (defined above) to 0
+      DAT1=C B                   % copy C.B back into memory at PASTDUE
 RTN
 
 ENDCODE
