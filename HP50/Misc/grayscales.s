@@ -132,8 +132,7 @@ INTON
 % Restauration menu écran
 D0=(5)SCREEN D1=(5)SCREENADD
 C=DAT0.A DAT1=C.A
-D0=(2)$95 D1=(2)$30 C=DAT0.A
-DAT1=C.A
+D0=(2)$95 D1=(2)$30 C=DAT0.A DAT1=C.A
 RTN
 
 *_EndGest
@@ -144,7 +143,8 @@ D0=(5)GEST A=DAT0.W
 D1=(5)GEST2 DAT1=A.W
 
 % Detournement
-DAT0=C.A D0+10 DAT0=C.A
+%DAT0=C.A D0+10 DAT0=C.A
+GOSUBL GRISON
 
 % Main loop
 {

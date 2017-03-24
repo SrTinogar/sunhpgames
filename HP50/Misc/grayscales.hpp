@@ -9,7 +9,7 @@ UseDefaultEntryList=1
 WarnRamChanges=1
 LoadOnly=0
 EMUVisible=1
-ProjectTab=1
+ProjectTab=0
 InformHeight=50
 EntryPointList=
 Title=New_Project
@@ -30,4 +30,3 @@ LRFiles=
 file1=grayscales.s
 [Edit]
 edit2=>grayscales.s
-edit3=C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\editor\smhp_editor_50.s
