@@ -30,3 +30,4 @@ LRFiles=
 file1=grayscales.s
 [Edit]
 edit2=>grayscales.s
+edit3=C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s
