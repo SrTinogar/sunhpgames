@@ -3,112 +3,113 @@ Saturn Loader, Ver. version 3.0.9, 08/03/10
 
 Output Module:
 Module=smhp50ed.o
-  Start=00000 End=0145F Length=01460   Symbols=  70 References= 178
-  Date=Fri Mar 24 22:09:33 2017   Title=
+  Start=00000 End=01482 Length=01483   Symbols=  71 References= 181
+  Date=Sun Mar 26 00:02:57 2017   Title=
 
 
 Source modules:
 Module=smhp_editor_50.o
-  Start=00000 End=0145F Length=01460
-  Date=Fri Mar 24 22:09:33 2017   Title=                                        Fri Mar 24 22:09:33 2017
+  Start=00000 End=01482 Length=01483
+  Date=Sun Mar 26 00:02:57 2017   Title=                                        Sun Mar 26 00:02:57 2017
 
 Saturn Cross Reference Listing
 
-@                                *       - 0145B
+@                                *       - 0147E
 
-AF                               * 001F6 - 0014C 0017B
-ANNCTRL                          *       - 013AF 01419
-ANNCTRL_Alert                    = 00003 - 013C0 0142A
-ANNCTRL_Alpha                    = 00002 - 013CF 01439
-ANNCTRL_Busy                     = 00004 - 013D4 0143E
-ANNCTRL_IO                       = 00005 - 013BB 01425
-ANNCTRL_LShift                   = 00000 - 013C5 0142F
-ANNCTRL_RShift                   = 00001 - 013CA 01434
-ANNUNCIATORS                     *       - 01384 013EE
-ANNUNCIATORS_Alert               = 00003 - 01395 013FF
-ANNUNCIATORS_Alpha               = 00006 - 013A4 0140E
-ANNUNCIATORS_Busy                = 00007 - 013A9 01413
-ANNUNCIATORS_IO                  = 00001 - 01390 013FA
-ANNUNCIATORS_LShift              = 00004 - 0139A 01404
-ANNUNCIATORS_RShift              = 00005 - 0139F 01409
+AF                               * 00219 - 00139 00163 00192
+ANNCTRL                          *       - 013D2 0143C
+ANNCTRL_Alert                    = 00003 - 013E3 0144D
+ANNCTRL_Alpha                    = 00002 - 013F2 0145C
+ANNCTRL_Busy                     = 00004 - 013F7 01461
+ANNCTRL_IO                       = 00005 - 013DE 01448
+ANNCTRL_LShift                   = 00000 - 013E8 01452
+ANNCTRL_RShift                   = 00001 - 013ED 01457
+ANNUNCIATORS                     *       - 013A7 01411
+ANNUNCIATORS_Alert               = 00003 - 013B8 01422
+ANNUNCIATORS_Alpha               = 00006 - 013C7 01431
+ANNUNCIATORS_Busy                = 00007 - 013CC 01436
+ANNUNCIATORS_IO                  = 00001 - 013B3 0141D
+ANNUNCIATORS_LShift              = 00004 - 013BD 01427
+ANNUNCIATORS_RShift              = 00005 - 013C2 0142C
 
-B                                = 80114 - 00048 0070E 00757 00EC4 01148 011CD
-BCL                              * 011CB - 0127E 012C5
+B                                = 80114 - 00048 00731 0077A 00EE7 0116B 011F0
+BCL                              * 011EE - 012A1 012E8
 
-CUBE                             * 006BD - 00126 00699 0073C 00781
-CUBE.M                           * 00742 - 001C8
-CUBE.P                           * 006F9 - 001C2
+CUBE                             * 006E0 - 00126 006BC 0075F 007A4
+CUBE.M                           * 00765 - 001DF
+CUBE.P                           * 0071C - 001D9
 
-D.BLOC                           * 00EA6 - 0069F
-D.PIT                            * 00FAD - 006AB
-D.SIZE                           * 00F72 - 006A5
-D.X                              * 00EE1 - 006B1
-D.Y                              * 00F37 - 006B7
-DAT                              * 010AD - 01049
-DISP.LEVEL                       * 0115B - 00120 0132E 01379
-DISP_N                           * 00FEB - 00EDD 00F33 00F6E 00FA9 00FE7 01042
+D.BLOC                           * 00EC9 - 006C2
+D.PIT                            * 00FD0 - 006CE
+D.SIZE                           * 00F95 - 006C8
+D.X                              * 00F04 - 006D4
+D.Y                              * 00F5A - 006DA
+DAT                              * 010D0 - 0106C
+DISP.LEVEL                       * 0117E - 00120 01351 0139C
+DISP_N                           * 0100E - 00F00 00F56 00F91 00FCC 0100A 01065
 DOCODE                           *       - 00005
 DOCOL                            *       - 00000
-DSP                              * 01003 -
+DSP                              * 01026 -
 
-EC0                              = 80100 - 00020 0009C 000A6 0010C 001F8
-EC1                              = 80105 - 0002A 000E0 000EA 0013F 00165 00194
-                                 + 0027D 0065F 006C8 00EA8 00EE3 00F39 00F74
-                                 + 00FAF 01111 0115D
+EC0                              = 80100 - 00020 0009C 000A6 0010C 0021B
+EC1                              = 80105 - 0002A 000E0 000EA 0012C 00156 0017C
+                                 + 001AB 002A0 00682 006EB 00ECB 00F06 00F5C
+                                 + 00F97 00FD2 01134 01180
 
-FINALQUIT                        * 00241 -
+FINALQUIT                        * 00264 -
 
-GETPTR                           *       - 00789 00811
-GETPTRLOOP                       *       - 00268
-GET_DAT                          * 01047 - 00FED
+GETPTR                           *       - 007AC 00834
+GETPTRLOOP                       *       - 0028B
+GET_DAT                          * 0106A - 01010
 
-HEADERADD                        = 00128 - 00079 0024A
-HEXDCW                           = 2DEAA - 00ECE 00F24 00F5F 00F9A 00FD8
-HIDE_ANNUN                       * 013EC - 00066
+HEADERADD                        = 00128 - 00079 0026D
+HEXDCW                           = 2DEAA - 00EF1 00F47 00F82 00FBD 00FFB
+HIDE_ANNUN                       * 0140F - 00066
 
-INC                              * 00F11 - 00F1F
-INI.STACK                        * 00787 - 0006C
+INC                              * 00F34 - 00F42
+INI.STACK                        * 007AA - 0006C
 
-JUCURSOR                         * 0026D - 001CE 00306 00360 003C1 0041E 01155
+JUCURSOR                         * 00290 - 001F1 00329 00383 003E4 00441 01178
 
-KEY                              = 0020F - 00224 00237 002B2 00313 0036D 003CE
-                                 + 00700 00749 010BB 012E6 0133E
+KEY                              = 0020F - 00247 0025A 002D5 00336 00390 003F1
+                                 + 00723 0076C 010DE 01309 01361
 
-LCD                              * 0012A - 001F2
+LCD                              * 0012A - 00215
 
-MAKE$N                           *       - 0008A 000CE 007D1
-MKS                              * 007CD - 007A4 007B6 007C7
+MAKE$N                           *       - 0008A 000CE 007F4
+MKS                              * 007F0 - 007C7 007D9 007EA
 
-NCURSER                          * 0027B - 002DE 00338 00396 003F3 01102
+NCURSER                          * 0029E - 00301 0035B 003B9 00416 01125
+NOGS                             * 001BF - 0013E
 
-PASTDUE                          *       - 013DA 01444
-PASTDUE_flag                     = 00000 - 013E6 01450
+PASTDUE                          *       - 013FD 01467
+PASTDUE_flag                     = 00000 - 01409 01473
 
-QUIT                             * 00230 - 0023F 00829
+QUIT                             * 00253 - 00262 0084C
 
-S                                = 80119 - 00052 00F09 00FCB 010D3 012CC 012F4
-                                 + 0134C
-SAVPTR                           *       - 00011 00790 00823 00834
-SCREENADD                        = 00120 - 00116 0025E
-SEMI                             *       - 01456
-SHOW_ANNUN                       * 01382 -
+S                                = 80119 - 00052 00F2C 00FEE 010F6 012EF 01317
+                                 + 0136F
+SAVPTR                           *       - 00011 007B3 00846 00857
+SCREENADD                        = 00120 - 00116 00281
+SEMI                             *       - 01479
+SHOW_ANNUN                       * 013A5 -
 
-TAB                              * 00452 - 001AA
-TB                               * 00366 - 001E6
-TD                               * 002AB - 001D4
-TDRAW                            * 010B4 - 001BC
-TG                               * 0030C - 001DA
-TH                               * 003C7 - 001E0
-TNEXT                            * 012DF - 001B0
-TPREV                            * 01337 - 001B6
-TQ                               * 0021D - 001EC
+TAB                              * 00475 - 001C1
+TB                               * 00389 - 00209
+TD                               * 002CE - 001F7
+TDRAW                            * 010D7 - 001D3
+TG                               * 0032F - 001FD
+TH                               * 003EA - 00203
+TNEXT                            * 01302 - 001C7
+TPREV                            * 0135A - 001CD
+TQ                               * 00240 - 0020F
 
-X                                = 8010A - 00034 002C0 002E4 00321 0033E 00428
-                                 + 00EFF 010C9 01181
-X2                               = 8011E - 0005C 0084E 00F90 012FE
-XY                               * 00424 - 00287 0111B
+X                                = 8010A - 00034 002E3 00307 00344 00361 0044B
+                                 + 00F22 010EC 011A4
+X2                               = 8011E - 0005C 00871 00FB3 01321
+XY                               * 00447 - 002AA 0113E
 
-Y                                = 8010F - 0003E 0037B 0039C 003DC 003F9 00438
-                                 + 00F55 0119D
+Y                                = 8010F - 0003E 0039E 003BF 003FF 0041C 0045B
+                                 + 00F78 011C0
 
 /SLOAD:  End of Saturn Loader Execution

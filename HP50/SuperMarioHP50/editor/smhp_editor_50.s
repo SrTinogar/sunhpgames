@@ -109,6 +109,11 @@ GOSUBL CUBE
 
 *LCD
 
+% Monochrome
+D1=(5)EC1 A=DAT1.A D1=A
+GOSUBL AF
+GOTO NOGS
+
 % Grayscale
 
 A=0.W
@@ -144,7 +149,7 @@ D1=A
 
 % end of grayscale
 
-
+*NOGS
 
 GOSUBL TAB
 GOSUBL TNEXT
@@ -153,7 +158,7 @@ GOSUBL TDRAW
 GOSUBL CUBE.P
 GOSUBL CUBE.M
 
-%LC 04000 { C-1.A UPNC }  % Slow up !
+LC 04000 { C-1.A UPNC }  % Slow up !
 
 GOSUBL JUCURSOR
 

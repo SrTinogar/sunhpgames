@@ -28,3 +28,5 @@ SasmParams=
 LRFiles=
 [Files]
 file1=smhp_editor_50.s
+[Edit]
+edit2=>smhp_editor_50.s
