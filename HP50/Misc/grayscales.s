@@ -74,11 +74,11 @@ GOTOL _EndGest
 % Attention: il faut toujours appeller RemoveIntMan quand on quitte le programe
 *GRISON
 D0=(5)HORLOGE LC(2)$70 DAT0=C.B % Prend le controle sur l'horloge 2 et inhibe la 1
-D0=(2)$38 C=0.W C+10 A 	% Place du temps dans l'horloge pour qu'on ait une interruption
-DAT0=C.8 A=PC GOINC IntMan
-C+A.A D0=(5)GEST A=DAT0.16 % Calcul l'adresse du gestionnaire, sauvegarde des adresses de detournement
+D0=(2)$38 C=0.W C+10.A DAT0=C.8 % Place du temps dans l'horloge pour qu'on ait une interruption
+A=PC GOINC IntMan         	% Calcul l'adresse du gestionnaire
+C+A.A D0=(5)GEST A=DAT0.16 	% Sauvegarde des adresses de detournement
 D1=(5)SAVE_IT DAT1=A.16
-DAT0=C.A D0+10 DAT0=C.A % Detourne les inters
+DAT0=C.A D0+10 DAT0=C.A 	% Detourne les inters
 RTN
 
 % ------ Int Man ------
@@ -93,11 +93,11 @@ GOTO IntMan.Fin
 *IntMan.Suite
 LC(2)$07 DAT1=C.B
 %Pour etre sur que l'horloge est bien configurer l'Attente VBL
-D1=(2)$28 { C=DAT1.B ?C=0.B UP }
+D1=(5)HEADERADD C=0.W { C=DAT1.6 ?C#0.W UP }
 
 % Affichage des ecrans
-D1=(5)COEFFIMAGE A=DAT1.P
-A-1.A ?A#0.P SKIPYES  % On cherche quel est l'ecran a afficher
+D1=(5)COEFFIMAGE A=DAT1.P A-1.A
+?A#0.P SKIPYES  % On cherche quel est l'ecran a afficher
 {
    LA(1)$3 DAT1=A.P D1=(5)EC1 A=DAT1.A
    % Le fait de mettre 3 comme coefficient d'image permet d'afficher l'ecran 2
@@ -112,7 +112,7 @@ ST=1.0
 
 % Recharge horloge pour avoir une inter dans un peu moins d'une vbl
 C=0.W LC(3)$07C
-D1=(2)$38 DAT1=C.8
+D1=(5)TIMER2 DAT1=C.8
 D1=(5)COUNT_IT C=DAT1.W C+1.W DAT1=C.W
 % Le gestionnaire contient
 % egalement une variable contenant le nombre d'interruption effectuees
@@ -133,30 +133,22 @@ RTI
 *GRISOFF
 LC 10 D0=(5)HORLOGE DAT0=C.B
 D0=(5)SAVE_IT A=DAT0.15
-D1=(5)GEST DAT1=A 15
+D1=(5)GEST DAT1=A.15
 D1=(5)SAV_TIMER C=DAT1.8
-D1+8 A=DAT1 W ASLC
-A+A W A+A W C+A W
+D1+8 A=DAT1.W ASLC
+A+A.W A+A.W C+A.W
 D1=(5)TIMER2 DAT1=C.8
 D0=(5)SAVSCREEN
 C=DAT0.A D0=(5)SCREENADD DAT0=C.A
-INTON
 
 % Restauration menu écran
-D0=(5)SCREEN D1=(5)SCREENADD
-C=DAT0.A DAT1=C.A
+D0=(5)SCREEN D1=(5)SCREENADD C=DAT0.A DAT1=C.A
 D0=(2)$95 D1=(2)$30 C=DAT0.A DAT1=C.A
 RTN
 
 *_EndGest
 
 
-% Sauvegarde des 16 quartets de #8600Dh en #80092h
-D0=(5)GEST A=DAT0.W
-D1=(5)GEST2 DAT1=A.W
-
-% Detournement
-DAT0=C.A D0+10 DAT0=C.A
 GOSUBL GRISON
 
 % Main loop
@@ -177,13 +169,8 @@ GOSBVL =KEY
 D1=(5)HEADERADD LC 7 DAT1=C.1 	% Show menu
 
 
-
-% Fin du detournement
-D0=(5)GEST2 C=DAT0.W D0=(5)GEST DAT0=C.W
-
 GOSUBL GRISOFF
-%D0=(5)SCREEN A=DAT0.A           % Bring back screen
-%D0=(5)SCREENADD DAT0=A.A    	%
+INTON
 LOADRPL
 
 

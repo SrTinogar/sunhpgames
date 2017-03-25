@@ -1,4 +1,4 @@
-Saturn Assembler                                       Sat Mar 25 03:54:36 2017
+Saturn Assembler                                       Sat Mar 25 05:21:52 2017
 V3.0.9 (04/15/2007)                                      grayscales.a   Page    1
 
     1               * File  grayscales.s    1
@@ -58,7 +58,7 @@ V3.0.9 (04/15/2007)                                      grayscales.a   Page    
    55 00000 00000           CON(5)  =DOCOL
    56               * File  grayscales.s    30
    57 00005 00000           CON(5)  =DOCODE
-   58 0000A 14810           REL(5)  LBL000
+   58 0000A 71810           REL(5)  LBL000
    59               * File  grayscales.s    31
    60
    61               * File  grayscales.s    32
@@ -5602,7 +5602,7 @@ V3.0.9 (04/15/2007)                                      grayscales.a   Page    
  5599
  5600               * File  grayscales.s    68
  5601               * File  grayscales.s    69
- 5602 01617 8CEA10          GOLONG  _EndGest
+ 5602 01617 8C5B10          GOLONG  _EndGest
  5603               * File  grayscales.s    70
  5604 0161D         .MyInt
  5605               * File  grayscales.s    71
@@ -5620,8 +5620,8 @@ V3.0.9 (04/15/2007)                                      grayscales.a   Page    
  5617 0162B 1983            D0=(2)  #38
  5618 0162F AF2             C=0     W
  5619 01632 818F29          C=C+    10      A
- 5620               * File  grayscales.s    78
- 5621 01638 15C7            DAT0=C  8
+ 5620 01638 15C7            DAT0=C  8
+ 5621               * File  grayscales.s    78
  5622 0163C 81B4            A=PC
  5623 01640 34A2000         LC(5)   (=IntMan)-(*)
  5624               * File  grayscales.s    79
@@ -5652,7 +5652,7 @@ V3.0.9 (04/15/2007)                                      grayscales.a   Page    
  5649 01674 808B3           ?CBIT=1 3
  5650 01679 60              GOYES   =IntMan.Suite
  5651               * File  grayscales.s    91
- 5652 0167B 6C70            GOTO    =IntMan.Fin
+ 5652 0167B 6780            GOTO    =IntMan.Fin
  5653               * File  grayscales.s    92
  5654
  5655               * File  grayscales.s    93
@@ -5662,299 +5662,273 @@ V3.0.9 (04/15/2007)                                      grayscales.a   Page    
  5659 01683 14D             DAT1=C  B
  5660               * File  grayscales.s    95
  5661               * File  grayscales.s    96
- 5662 01686 1D82            D1=(2)  #28
- 5663                       {
- 5664 0168A 14F             C=DAT1  B
- 5665 0168D 96A             ?C=0    B
- 5666 01690 AF              UP
- 5667               * File  grayscales.s    97
- 5668
- 5669               * File  grayscales.s    98
- 5670               * File  grayscales.s    99
- 5671                       }
- 5672 01692 1F54308         D1=(5)  (=COEFFIMAGE)
- 5673 01699 1530            A=DAT1  P
- 5674               * File  grayscales.s    100
- 5675 0169D CC              A=A-    1       A
- 5676 0169F 90C             ?A#0    P
- 5677               * File  grayscales.s    101
- 5678 016A2 A1              SKIPYES{
- 5679               * File  grayscales.s    102
- 5680 016A4 808203          LA(1)   #3
- 5681 016AA 1510            DAT1=A  P
- 5682 016AE 1F64308         D1=(5)  (=EC1)
- 5683 016B5 143             A=DAT1  A
- 5684               * File  grayscales.s    103
- 5685               * File  grayscales.s    104
- 5686               * File  grayscales.s    105
- 5687               * File  grayscales.s    106
- 5688               * File  grayscales.s    107
- 5689 016B8 6110            }SKELSE{
- 5690               * File  grayscales.s    108
- 5691 016BC 1510            DAT1=A  P
- 5692 016C0 1FB4308         D1=(5)  (=EC2)
- 5693 016C7 143             A=DAT1  A
- 5694               * File  grayscales.s    109
- 5695               * File  grayscales.s    110
- 5696                       }
- 5697 016CA 1F02100         D1=(5)  (=SCREENADD)
- 5698 016D1 141             DAT1=A  A
- 5699               * File  grayscales.s    111
- 5700 016D4 850             ST=1    0
- 5701               * File  grayscales.s    112
- 5702
- 5703               * File  grayscales.s    113
- 5704               * File  grayscales.s    114
- 5705 016D7 AF2             C=0     W
- 5706 016DA 31C9            LC(2)   #9C
- 5707               * File  grayscales.s    115
- 5708 016DE 1D83            D1=(2)  #38
- 5709 016E2 15D7            DAT1=C  8
- 5710               * File  grayscales.s    116
- 5711 016E6 1FB2308         D1=(5)  (=COUNT_IT)
- 5712 016ED 1577            C=DAT1  W
- 5713 016F1 B76             C=C+    1       W
- 5714 016F4 1557            DAT1=C  W
- 5715               * File  grayscales.s    117
- 5716               * File  grayscales.s    118
- 5717               * File  grayscales.s    119
- 5718
- 5719               * File  grayscales.s    120
- 5720 016F8         =IntMan.Fin
- 5721               * File  grayscales.s    121
- 5722 016F8 1F5F508         D1=(5)  (=REGBK)
- 5723 016FF 1537            A=DAT1  W
- 5724               * File  grayscales.s    122
- 5725 01703 1C4             D1-     5
- 5726 01706 147             C=DAT1  A
- 5727 01709 06              RSTK=C
- 5728               * File  grayscales.s    123
- 5729 0170B 1C4             D1-     5
- 5730 0170E 147             C=DAT1  A
- 5731 01711 822             HST=0   2
- 5732               * File  grayscales.s    124
- 5733 01714 F6              CSR     A
- 5734 01716 20              P=      0
- 5735 01718 B06             C=C+    1       P
- 5736 0171B 440             SKIPC{
- 5737 0171E 05              SETDEC
- 5738               * File  grayscales.s    125
- 5739                       }
- 5740 01720 21              P=      1
- 5741 01722 A0E             C=C-    1       P
- 5742 01725 80D2            P=C     2
- 5743 01729 1FBD500         D1=(5)  (=WTF)
- 5744               * File  grayscales.s    126
- 5745 01730 1577            C=DAT1  W
- 5746 01734 135             D1=C
- 5747 01737 07              C=RSTK
- 5748               * File  grayscales.s    127
- 5749 01739 84E             ST=0    14
- 5750               * File  grayscales.s    128
- 5751 0173C 0F              RTI
- 5752               * File  grayscales.s    129
- 5753
- 5754               * File  grayscales.s    130
- 5755               * File  grayscales.s    131
- 5756               * File  grayscales.s    132
- 5757               * File  grayscales.s    133
- 5758 0173E         =GRISOFF
- 5759               * File  grayscales.s    134
- 5760 0173E 3101            LCHEX   10
- 5761 01742 1BE2100         D0=(5)  (=HORLOGE)
- 5762 01749 14C             DAT0=C  B
- 5763               * File  grayscales.s    135
- 5764 0174C 1B53308         D0=(5)  (=SAVE_IT)
- 5765 01753 15AE            A=DAT0  15
- 5766               * File  grayscales.s    136
- 5767 01757 1FD0068         D1=(5)  (=GEST)
- 5768 0175E 159E            DAT1=A  15
- 5769               * File  grayscales.s    137
- 5770 01762 1F32308         D1=(5)  (=SAV_TIMER)
- 5771 01769 15F7            C=DAT1  8
- 5772               * File  grayscales.s    138
- 5773 0176D 177             D1+     8
- 5774 01770 1537            A=DAT1  W
- 5775 01774 810             ASLC
- 5776               * File  grayscales.s    139
- 5777 01777 A74             A=A+A   W
- 5778 0177A A74             A=A+A   W
- 5779 0177D A72             C=C+A   W
- 5780               * File  grayscales.s    140
- 5781 01780 1F83100         D1=(5)  (=TIMER2)
- 5782 01787 15D7            DAT1=C  8
- 5783               * File  grayscales.s    141
- 5784 0178B 1B91308         D0=(5)  (=SAVSCREEN)
- 5785               * File  grayscales.s    142
- 5786 01792 146             C=DAT0  A
- 5787 01795 1B02100         D0=(5)  (=SCREENADD)
- 5788 0179C 144             DAT0=C  A
- 5789               * File  grayscales.s    143
- 5790 0179F 8080            INTON
- 5791               * File  grayscales.s    144
- 5792
+ 5662 01686 1F82100         D1=(5)  (=HEADERADD)
+ 5663 0168D AF2             C=0     W
+ 5664                       {
+ 5665 01690 15F5            C=DAT1  6
+ 5666 01694 97E             ?C#0    W
+ 5667 01697 9F              UP
+ 5668               * File  grayscales.s    97
+ 5669
+ 5670               * File  grayscales.s    98
+ 5671               * File  grayscales.s    99
+ 5672                       }
+ 5673 01699 1F54308         D1=(5)  (=COEFFIMAGE)
+ 5674 016A0 1530            A=DAT1  P
+ 5675 016A4 CC              A=A-    1       A
+ 5676               * File  grayscales.s    100
+ 5677 016A6 90C             ?A#0    P
+ 5678               * File  grayscales.s    101
+ 5679 016A9 A1              SKIPYES{
+ 5680               * File  grayscales.s    102
+ 5681 016AB 808203          LA(1)   #3
+ 5682 016B1 1510            DAT1=A  P
+ 5683 016B5 1F64308         D1=(5)  (=EC1)
+ 5684 016BC 143             A=DAT1  A
+ 5685               * File  grayscales.s    103
+ 5686               * File  grayscales.s    104
+ 5687               * File  grayscales.s    105
+ 5688               * File  grayscales.s    106
+ 5689               * File  grayscales.s    107
+ 5690 016BF 6110            }SKELSE{
+ 5691               * File  grayscales.s    108
+ 5692 016C3 1510            DAT1=A  P
+ 5693 016C7 1FB4308         D1=(5)  (=EC2)
+ 5694 016CE 143             A=DAT1  A
+ 5695               * File  grayscales.s    109
+ 5696               * File  grayscales.s    110
+ 5697                       }
+ 5698 016D1 1F02100         D1=(5)  (=SCREENADD)
+ 5699 016D8 141             DAT1=A  A
+ 5700               * File  grayscales.s    111
+ 5701 016DB 850             ST=1    0
+ 5702               * File  grayscales.s    112
+ 5703
+ 5704               * File  grayscales.s    113
+ 5705               * File  grayscales.s    114
+ 5706 016DE AF2             C=0     W
+ 5707 016E1 32C70           LC(3)   #07C
+ 5708               * File  grayscales.s    115
+ 5709 016E6 1F83100         D1=(5)  (=TIMER2)
+ 5710 016ED 15D7            DAT1=C  8
+ 5711               * File  grayscales.s    116
+ 5712 016F1 1FB2308         D1=(5)  (=COUNT_IT)
+ 5713 016F8 1577            C=DAT1  W
+ 5714 016FC B76             C=C+    1       W
+ 5715 016FF 1557            DAT1=C  W
+ 5716               * File  grayscales.s    117
+ 5717               * File  grayscales.s    118
+ 5718               * File  grayscales.s    119
+ 5719
+ 5720               * File  grayscales.s    120
+ 5721 01703         =IntMan.Fin
+ 5722               * File  grayscales.s    121
+ 5723 01703 1F5F508         D1=(5)  (=REGBK)
+ 5724 0170A 1537            A=DAT1  W
+ 5725               * File  grayscales.s    122
+ 5726 0170E 1C4             D1-     5
+ 5727 01711 147             C=DAT1  A
+ 5728 01714 06              RSTK=C
+ 5729               * File  grayscales.s    123
+ 5730 01716 1C4             D1-     5
+ 5731 01719 147             C=DAT1  A
+ 5732 0171C 822             HST=0   2
+ 5733               * File  grayscales.s    124
+ 5734 0171F F6              CSR     A
+ 5735 01721 20              P=      0
+ 5736 01723 B06             C=C+    1       P
+ 5737 01726 440             SKIPC{
+ 5738 01729 05              SETDEC
+ 5739               * File  grayscales.s    125
+ 5740                       }
+ 5741 0172B 21              P=      1
+ 5742 0172D A0E             C=C-    1       P
+ 5743 01730 80D2            P=C     2
+ 5744 01734 1FBD500         D1=(5)  (=WTF)
+ 5745               * File  grayscales.s    126
+ 5746 0173B 1577            C=DAT1  W
+ 5747 0173F 135             D1=C
+ 5748 01742 07              C=RSTK
+ 5749               * File  grayscales.s    127
+ 5750 01744 84E             ST=0    14
+ 5751               * File  grayscales.s    128
+ 5752 01747 0F              RTI
+ 5753               * File  grayscales.s    129
+ 5754
+ 5755               * File  grayscales.s    130
+ 5756               * File  grayscales.s    131
+ 5757               * File  grayscales.s    132
+ 5758               * File  grayscales.s    133
+ 5759 01749         =GRISOFF
+ 5760               * File  grayscales.s    134
+ 5761 01749 3101            LCHEX   10
+ 5762 0174D 1BE2100         D0=(5)  (=HORLOGE)
+ 5763 01754 14C             DAT0=C  B
+ 5764               * File  grayscales.s    135
+ 5765 01757 1B53308         D0=(5)  (=SAVE_IT)
+ 5766 0175E 15AE            A=DAT0  15
+ 5767               * File  grayscales.s    136
+ 5768 01762 1FD0068         D1=(5)  (=GEST)
+ 5769 01769 159E            DAT1=A  15
+ 5770               * File  grayscales.s    137
+ 5771 0176D 1F32308         D1=(5)  (=SAV_TIMER)
+ 5772 01774 15F7            C=DAT1  8
+ 5773               * File  grayscales.s    138
+ 5774 01778 177             D1+     8
+ 5775 0177B 1537            A=DAT1  W
+ 5776 0177F 810             ASLC
+ 5777               * File  grayscales.s    139
+ 5778 01782 A74             A=A+A   W
+ 5779 01785 A74             A=A+A   W
+ 5780 01788 A72             C=C+A   W
+ 5781               * File  grayscales.s    140
+ 5782 0178B 1F83100         D1=(5)  (=TIMER2)
+ 5783 01792 15D7            DAT1=C  8
+ 5784               * File  grayscales.s    141
+ 5785 01796 1B91308         D0=(5)  (=SAVSCREEN)
+ 5786               * File  grayscales.s    142
+ 5787 0179D 146             C=DAT0  A
+ 5788 017A0 1B02100         D0=(5)  (=SCREENADD)
+ 5789 017A7 144             DAT0=C  A
+ 5790               * File  grayscales.s    143
+ 5791
+ 5792               * File  grayscales.s    144
  5793               * File  grayscales.s    145
- 5794               * File  grayscales.s    146
- 5795 017A3 1BD8608         D0=(5)  (=SCREEN)
- 5796 017AA 1F02100         D1=(5)  (=SCREENADD)
- 5797               * File  grayscales.s    147
- 5798 017B1 146             C=DAT0  A
- 5799 017B4 145             DAT1=C  A
- 5800               * File  grayscales.s    148
- 5801 017B7 1959            D0=(2)  #95
- 5802 017BB 1D03            D1=(2)  #30
- 5803 017BF 146             C=DAT0  A
- 5804 017C2 145             DAT1=C  A
- 5805               * File  grayscales.s    149
- 5806 017C5 01              RTN
- 5807               * File  grayscales.s    150
- 5808
- 5809               * File  grayscales.s    151
- 5810 017C7         _EndGest
- 5811               * File  grayscales.s    152
+ 5794 017AA 1BD8608         D0=(5)  (=SCREEN)
+ 5795 017B1 1F02100         D1=(5)  (=SCREENADD)
+ 5796 017B8 146             C=DAT0  A
+ 5797 017BB 145             DAT1=C  A
+ 5798               * File  grayscales.s    146
+ 5799 017BE 1959            D0=(2)  #95
+ 5800 017C2 1D03            D1=(2)  #30
+ 5801 017C6 146             C=DAT0  A
+ 5802 017C9 145             DAT1=C  A
+ 5803               * File  grayscales.s    147
+ 5804 017CC 01              RTN
+ 5805               * File  grayscales.s    148
+ 5806
+ 5807               * File  grayscales.s    149
+ 5808 017CE         _EndGest
+ 5809               * File  grayscales.s    150
+ 5810
+ 5811               * File  grayscales.s    151
  5812
- 5813               * File  grayscales.s    153
- 5814
- 5815               * File  grayscales.s    154
- 5816               * File  grayscales.s    155
- 5817 017C7 1BD0068         D0=(5)  (=GEST)
- 5818 017CE 1527            A=DAT0  W
- 5819               * File  grayscales.s    156
- 5820 017D2 1F29008         D1=(5)  (=GEST2)
- 5821 017D9 1517            DAT1=A  W
+ 5813               * File  grayscales.s    152
+ 5814 017CE 8E94EF          GOSUBL  =GRISON
+ 5815               * File  grayscales.s    153
+ 5816
+ 5817               * File  grayscales.s    154
+ 5818               * File  grayscales.s    155
+ 5819                       {
+ 5820               * File  grayscales.s    156
+ 5821
  5822               * File  grayscales.s    157
- 5823
+ 5823 017D4 8E4000          GOSUBL  =TEST_QUIT
  5824               * File  grayscales.s    158
- 5825               * File  grayscales.s    159
- 5826 017DD 144             DAT0=C  A
- 5827 017E0 169             D0+     10
- 5828 017E3 144             DAT0=C  A
- 5829               * File  grayscales.s    160
- 5830 017E6 8E13EF          GOSUBL  =GRISON
- 5831               * File  grayscales.s    161
- 5832
- 5833               * File  grayscales.s    162
- 5834               * File  grayscales.s    163
- 5835                       {
- 5836               * File  grayscales.s    164
- 5837
- 5838               * File  grayscales.s    165
- 5839 017EC 8E4000          GOSUBL  =TEST_QUIT
- 5840               * File  grayscales.s    166
- 5841 017F2 69FF            UP
- 5842               * File  grayscales.s    167
- 5843               * File  grayscales.s    168
- 5844
- 5845               * File  grayscales.s    169
- 5846                       }
- 5847 017F6         =TEST_QUIT
- 5848               * File  grayscales.s    170
- 5849 017F6 32100           LCHEX   001
- 5850 017FB 8FF0200         GOSBVL  =KEY
- 5851               * File  grayscales.s    171
- 5852 01802 808A0           ?CBIT=0 0
- 5853 01807 00              RTNYES
- 5854               * File  grayscales.s    172
- 5855 01809         =QUIT
- 5856               * File  grayscales.s    173
- 5857 01809 32FF1           LC(3)   #1FF
- 5858               * File  grayscales.s    174
- 5859 0180E 8FF0200         GOSBVL  =KEY
- 5860               * File  grayscales.s    175
- 5861 01815 93E             ?C#0    X
- 5862 01818 1F              GOYES   =QUIT
- 5863               * File  grayscales.s    176
+ 5825 017DA 69FF            UP
+ 5826               * File  grayscales.s    159
+ 5827               * File  grayscales.s    160
+ 5828
+ 5829               * File  grayscales.s    161
+ 5830                       }
+ 5831 017DE         =TEST_QUIT
+ 5832               * File  grayscales.s    162
+ 5833 017DE 32100           LCHEX   001
+ 5834 017E3 8FF0200         GOSBVL  =KEY
+ 5835               * File  grayscales.s    163
+ 5836 017EA 808A0           ?CBIT=0 0
+ 5837 017EF 00              RTNYES
+ 5838               * File  grayscales.s    164
+ 5839 017F1         =QUIT
+ 5840               * File  grayscales.s    165
+ 5841 017F1 32FF1           LC(3)   #1FF
+ 5842               * File  grayscales.s    166
+ 5843 017F6 8FF0200         GOSBVL  =KEY
+ 5844               * File  grayscales.s    167
+ 5845 017FD 93E             ?C#0    X
+ 5846 01800 1F              GOYES   =QUIT
+ 5847               * File  grayscales.s    168
+ 5848
+ 5849               * File  grayscales.s    169
+ 5850 01802 1F82100         D1=(5)  (=HEADERADD)
+ 5851 01809 307             LCHEX   7
+ 5852 0180C 15D0            DAT1=C  1
+ 5853               * File  grayscales.s    170
+ 5854
+ 5855               * File  grayscales.s    171
+ 5856
+ 5857               * File  grayscales.s    172
+ 5858 01810 8E33FF          GOSUBL  =GRISOFF
+ 5859               * File  grayscales.s    173
+ 5860 01816 8080            INTON
+ 5861               * File  grayscales.s    174
+ 5862 0181A 8F00000         GOSBVL  =GETPTRLOOP
+ 5863               * File  grayscales.s    175
  5864
- 5865               * File  grayscales.s    177
- 5866 0181A 1F82100         D1=(5)  (=HEADERADD)
- 5867 01821 307             LCHEX   7
- 5868 01824 15D0            DAT1=C  1
+ 5865               * File  grayscales.s    176
+ 5866
+ 5867               * File  grayscales.s    177
+ 5868 01821         LBL000
  5869               * File  grayscales.s    178
- 5870
+ 5870 01821 00000           CON(5)  =SEMI
  5871               * File  grayscales.s    179
- 5872
+ 5872 01826 00000           CON(5)  =@
  5873               * File  grayscales.s    180
  5874
  5875               * File  grayscales.s    181
- 5876               * File  grayscales.s    182
- 5877 01828 1B29008         D0=(5)  (=GEST2)
- 5878 0182F 1567            C=DAT0  W
- 5879 01833 1BD0068         D0=(5)  (=GEST)
- 5880 0183A 1547            DAT0=C  W
- 5881               * File  grayscales.s    183
- 5882
- 5883               * File  grayscales.s    184
- 5884 0183E 8EAFEF          GOSUBL  =GRISOFF
- 5885               * File  grayscales.s    185
- 5886               * File  grayscales.s    186
- 5887               * File  grayscales.s    187
- 5888 01844 8F00000         GOSBVL  =GETPTRLOOP
- 5889               * File  grayscales.s    188
- 5890
- 5891               * File  grayscales.s    189
- 5892
- 5893               * File  grayscales.s    190
- 5894 0184B         LBL000
- 5895               * File  grayscales.s    191
- 5896 0184B 00000           CON(5)  =SEMI
- 5897               * File  grayscales.s    192
- 5898 01850 00000           CON(5)  =@
- 5899               * File  grayscales.s    193
- 5900
- 5901               * File  grayscales.s    194
- 5902
-Saturn Assembler                                       Sat Mar 25 03:54:36 2017
+ 5876
+Saturn Assembler                                       Sat Mar 25 05:21:52 2017
 V3.0.9 (04/15/2007)   Symbol Table                       grayscales.a   Page    2
 
  .MyInt                            Rel    5661 #0000161D -  5604  5595
- @                                 Ext                   -  5898
-=COEFFIMAGE                        Abs  525125 #00080345 -    44  5672
-=COUNT_IT                          Abs  525099 #0008032B -    40  5711
+ @                                 Ext                   -  5872
+=COEFFIMAGE                        Abs  525125 #00080345 -    44  5673
+=COUNT_IT                          Abs  525099 #0008032B -    40  5712
  DOCODE                            Ext                   -    57
  DOCOL                             Ext                   -    55
 =EC1                               Abs  525126 #00080346 -    46    80  2826
-                                        5682
+                                        5683
 =EC2                               Abs  525131 #0008034B -    48    93  5572
-                                        5692
-=GEST                              Abs  548877 #0008600D -    21  5626  5767
-                                        5817  5879
-=GEST2                             Abs  524434 #00080092 -    23  5820  5877
- GETPTRLOOP                        Ext                   -  5888
-=GRISOFF                           Rel    5950 #0000173E -  5758  5884
-=GRISON                            Rel    5661 #0000161D -  5611  5830
-=HEADERADD                         Abs     296 #00000128 -     5    66  5866
+                                        5693
+=GEST                              Abs  548877 #0008600D -    21  5626  5768
+=GEST2                             Abs  524434 #00080092 -    23
+ GETPTRLOOP                        Ext                   -  5862
+=GRISOFF                           Rel    5961 #00001749 -  5759  5858
+=GRISON                            Rel    5661 #0000161D -  5611  5814
+=HEADERADD                         Abs     296 #00000128 -     5    66  5662
+                                        5850
 =HEXDCW                            Abs  188074 #0002DEAA -    19
-=HORLOGE                           Abs     302 #0000012E -     9  5613  5761
+=HORLOGE                           Abs     302 #0000012E -     9  5613  5762
 =HORLOGE2                          Abs     303 #0000012F -    11  5646
 =IntMan                            Rel    5738 #0000166A -  5643  5623
-=IntMan.Fin                        Rel    5880 #000016F8 -  5720  5652
+=IntMan.Fin                        Rel    5891 #00001703 -  5721  5652
 =IntMan.Suite                      Rel    5759 #0000167F -  5656  5650
-=KEY                               Abs     527 #0000020F -    15  5850  5859
- LBL000                            Rel    6219 #0000184B -  5894    58
+=KEY                               Abs     527 #0000020F -    15  5834  5843
+ LBL000                            Rel    6177 #00001821 -  5868    58
  MAKE$N                            Ext                   -    74    87
-=QUIT                              Rel    6153 #00001809 -  5855  5862
-=REGBK                             Abs  525813 #000805F5 -    25  5722
-=SAVE_IT                           Abs  525109 #00080335 -    42  5629  5764
+=QUIT                              Rel    6129 #000017F1 -  5839  5846
+=REGBK                             Abs  525813 #000805F5 -    25  5723
+=SAVE_IT                           Abs  525109 #00080335 -    42  5629  5765
  SAVPTR                            Ext                   -    62
-=SAVSCREEN                         Abs  525081 #00080319 -    34  5784
-=SAV_TIMER                         Abs  525091 #00080323 -    38  5770
+=SAVSCREEN                         Abs  525081 #00080319 -    34  5785
+=SAV_TIMER                         Abs  525091 #00080323 -    38  5771
 =SCR                               Abs  525086 #0008031E -    36
-=SCREEN                            Abs  525965 #0008068D -    27  5795
-=SCREENADD                         Abs     288 #00000120 -     7  5697  5787
-                                        5796
- SEMI                              Ext                   -  5896
-=TEST_QUIT                         Rel    6134 #000017F6 -  5847  5839
-=TIMER2                            Abs     312 #00000138 -    13  5781
-=WTF                               Abs    1499 #000005DB -    17  5743
- _EndGest                          Rel    6087 #000017C7 -  5810  5602
+=SCREEN                            Abs  525965 #0008068D -    27  5794
+=SCREENADD                         Abs     288 #00000120 -     7  5698  5788
+                                        5795
+ SEMI                              Ext                   -  5870
+=TEST_QUIT                         Rel    6110 #000017DE -  5831  5823
+=TIMER2                            Abs     312 #00000138 -    13  5709  5782
+=WTF                               Abs    1499 #000005DB -    17  5744
+ _EndGest                          Rel    6094 #000017CE -  5808  5602
  lBlcB20                           Rel    2832 #00000B10 -  2822
  lBlcB21                           Rel    2874 #00000B3A -  2844
  lBlcB22                           Rel    5600 #000015E0 -  5568
  lBlcB23                           Rel    5642 #0000160A -  5592
- lBlcB24                           Rel    5778 #00001692 -  5671
- lBlcB25                           Rel    5834 #000016CA -  5696
- lBlcB26                           Rel    5920 #00001720 -  5739
- lBlcB27                           Rel    6134 #000017F6 -  5846
+ lBlcB24                           Rel    5785 #00001699 -  5672
+ lBlcB25                           Rel    5841 #000016D1 -  5697
+ lBlcB26                           Rel    5931 #0000172B -  5740
+ lBlcB27                           Rel    6110 #000017DE -  5830
  lBloB10                           Rel     112 #00000070 -    99
  lBloB10s                          Rel    2832 #00000B10 -  2822  2822    99
  lBloB11                           Rel    2854 #00000B26 -  2831  2837
@@ -5963,17 +5937,17 @@ V3.0.9 (04/15/2007)   Symbol Table                       grayscales.a   Page    
  lBloB12s                          Rel    5600 #000015E0 -  5568  5568  2845
  lBloB13                           Rel    5622 #000015F6 -  5577  5583
  lBloB13s                          Rel    5642 #0000160A -  5592  5592
- lBloB14                           Rel    5770 #0000168A -  5663  5666
- lBloB14s                          Rel    5778 #00001692 -  5671  5671
- lBloB15                           Rel    5796 #000016A4 -  5678
- lBloB15s                          Rel    5820 #000016BC -  5689  5678
- lBloB16                           Rel    5820 #000016BC -  5689
- lBloB16s                          Rel    5834 #000016CA -  5696  5696  5689
- lBloB17                           Rel    5918 #0000171E -  5736
- lBloB17s                          Rel    5920 #00001720 -  5739  5739  5736
- lBloB18                           Rel    6124 #000017EC -  5835  5841
- lBloB18s                          Rel    6134 #000017F6 -  5846  5846
-Saturn Assembler                                       Sat Mar 25 03:54:36 2017
+ lBloB14                           Rel    5776 #00001690 -  5664  5667
+ lBloB14s                          Rel    5785 #00001699 -  5672  5672
+ lBloB15                           Rel    5803 #000016AB -  5679
+ lBloB15s                          Rel    5827 #000016C3 -  5690  5679
+ lBloB16                           Rel    5827 #000016C3 -  5690
+ lBloB16s                          Rel    5841 #000016D1 -  5697  5697  5690
+ lBloB17                           Rel    5929 #00001729 -  5737
+ lBloB17s                          Rel    5931 #0000172B -  5740  5740  5737
+ lBloB18                           Rel    6100 #000017D4 -  5819  5825
+ lBloB18s                          Rel    6110 #000017DE -  5830  5830
+Saturn Assembler                                       Sat Mar 25 05:21:52 2017
 V3.0.9 (04/15/2007)   Statistics                         grayscales.a   Page    3
 
 Input Parameters
