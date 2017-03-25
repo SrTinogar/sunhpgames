@@ -1,18 +1,17 @@
-
 ASSEMBLEM
 
+DC HEADERADD 	00128  	%  Header height
+DC SCREENADD 	00120  	%  Screen
 DC HORLOGE	0012E
 DC HORLOGE2	0012F
 DC TIMER2	00138
-DC HEADERADD 	00128  	%  Header height
-DC SCREENADD 	00120  	%  Screen
-DC WTF		005DB	%
-DC HEXDCW 	2DEAA  	%  Make Hex
 DC KEY    	0020F  	%  OUT=C C=IN
+DC WTF		005DB	%  ?
+DC HEXDCW 	2DEAA  	%  Make Hex
 DC GEST 	8600D
 DC GEST2	80092
-DC SCREEN	8068D
-DC BLABLA	805F5
+DC BLABLA	805F5	% ?
+DC SCREEN	8068D   % Screen address
 
 % InterrupHandler49 constantes
 CP=80319
@@ -25,10 +24,8 @@ DCCP 1 COEFFIMAGE
 DCCP 5 EC1             	% address of our offscreen surface1
 DCCP 5 EC2             	% address of our offscreen surface2
 
-
 !RPL
 
-RPL
 ::
 CODEM
 
@@ -45,6 +42,23 @@ D0=(5)EC1 DAT0=A.A
 LC(5)$00AA1 GOSBVL =MAKE$N
 D0+1 AD0EX ABIT=0.0
 D0=(5)EC2 DAT0=A.A
+
+% Clear our EC1
+D0=(5)EC1 A=DAT0.A D0=A
+LC(2)$25 %AA
+A=0.W { DAT0=A.W D0+16 C-1.B UPNC }
+LC(2)$55 %AA
+LA(5)$FFFFF { DAT0=A.A D0+5 DAT0=A.A D0+5 DAT0=A.A D0+5 DAT0=A.1 D0+1 C-1.B UPNC }
+LC(2)$25 %AA
+A=0.W { DAT0=A.W D0+16 C-1.B UPNC }
+
+% Clear our custom screen surface EC2
+D0=(5)EC2 A=DAT0.A D0=A
+LC(2)$75 %AA
+A=0.W { DAT0=A.W D0+16 C-1.B UPNC }
+LC(2)$25 %AA
+LA(5)$FFFFF { DAT0=A.A D0+5 DAT0=A.A D0+5 DAT0=A.A D0+5 DAT0=A.1 D0+1 C-1.B UPNC }
+
 
 
 % Recuperation de l'adresse du gestionnaire
