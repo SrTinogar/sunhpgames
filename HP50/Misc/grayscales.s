@@ -120,7 +120,7 @@ D1=(5)COUNT_IT C=DAT1.W C+1.W DAT1=C.W
 *IntMan.Fin % On restaure les registres sauvegardes par la routine
 D1=(5)REGBK A=DAT1.W
 D1-5 C=DAT1.A RSTK=C
-D1-5 C=DAT1.A HST=0.2 % HST=1.2 %HST=02
+D1-5 C=DAT1.A HST=2.2 %HST=02
 CSR.A P=0 C+1.P SKIPC { SETDEC }
 P=1 C-1.P P=C.2 D1=(5)WTF
 C=DAT1.W D1=C C=RSTK
