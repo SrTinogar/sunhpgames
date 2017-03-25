@@ -111,10 +111,9 @@ D1=(5)SCREENADD DAT1=A.A % On ecrit l'ecran
 ST=1.0
 
 % Recharge horloge pour avoir une inter dans un peu moins d'une vbl
-C=0.W LC(3)$07C
+C=0.W LC(2)$9C % LC(3)$07C
 D1=(2)$38 DAT1=C.8
-D1=(5)COUNT_IT
-C=DAT1.W C+1.W DAT1=C.W
+D1=(5)COUNT_IT C=DAT1.W C+1.W DAT1=C.W
 % Le gestionnaire contient
 % egalement une variable contenant le nombre d'interruption effectuees
 
