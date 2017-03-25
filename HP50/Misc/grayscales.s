@@ -91,7 +91,7 @@ D1=(5)HORLOGE2 C=DAT1.B
 GOTO IntMan.Fin
 
 *IntMan.Suite
-LC(1)$7 DAT1=C.B
+LC(2)$07 DAT1=C.B
 %Pour etre sur que l'horloge est bien configurer l'Attente VBL
 D1=(2)$28 { C=DAT1.B ?C=0.B UP }
 
@@ -157,7 +157,7 @@ D0=(5)GEST A=DAT0.W
 D1=(5)GEST2 DAT1=A.W
 
 % Detournement
-%DAT0=C.A D0+10 DAT0=C.A
+DAT0=C.A D0+10 DAT0=C.A
 GOSUBL GRISON
 
 % Main loop
