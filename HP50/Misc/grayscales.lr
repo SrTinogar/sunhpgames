@@ -3,22 +3,20 @@ Saturn Loader, Ver. version 3.0.9, 08/03/10
 
 Output Module:
 Module=grayscales.o
-  Start=00000 End=0184E Length=0184F   Symbols=  35 References=  47
-  Date=Sat Mar 25 02:16:21 2017   Title=
+  Start=00000 End=0184B Length=0184C   Symbols=  35 References=  47
+  Date=Sat Mar 25 03:02:42 2017   Title=
 
 
 Source modules:
 Module=grayscales.o
-  Start=00000 End=0184E Length=0184F
-  Date=Sat Mar 25 02:16:21 2017   Title=                                        Sat Mar 25 02:16:21 2017
+  Start=00000 End=0184B Length=0184C
+  Date=Sat Mar 25 03:02:42 2017   Title=                                        Sat Mar 25 03:02:42 2017
 
 Saturn Cross Reference Listing
 
 *grayscales.o                    * 00000 - 01642
 
-@                                *       - 0184A
-
-BLABLA                           = 805F5 - 016FA
+@                                *       - 01847
 
 COEFFIMAGE                       = 80345 - 01693
 COUNT_IT                         = 8032B - 016E8
@@ -29,39 +27,41 @@ DOCOL                            *       - 00000
 EC1                              = 80346 - 0003F 00B17 016AF
 EC2                              = 8034B - 00062 015E7 016C1
 
-GEST                             = 8600D - 0164B 0175C 017CC 0182F
-GEST2                            = 80092 - 017D7 01824
-GETPTRLOOP                       *       - 01840
-GRISOFF                          * 01741 - 0183A
-GRISON                           * 0161D - 017E2
+GEST                             = 8600D - 0164B 01759 017C9 0182C
+GEST2                            = 80092 - 017D4 01821
+GETPTRLOOP                       *       - 0183D
+GRISOFF                          * 0173E - 01837
+GRISON                           * 0161D - 017DF
 
-HEADERADD                        = 00128 - 00018 01816
+HEADERADD                        = 00128 - 00018 01813
 HEXDCW                           = 2DEAA -
-HORLOGE                          = 0012E - 0161F 01747
+HORLOGE                          = 0012E - 0161F 01744
 HORLOGE2                         = 0012F - 0166C
 
 IntMan                           * 0166A -
 IntMan.Fin                       * 016F8 - 0167C
 IntMan.Suite                     * 0167F - 01679
 
-KEY                              = 0020F - 017F7 0180A
+KEY                              = 0020F - 017F4 01807
 
 MAKE$N                           *       - 0002D 00050
 
-QUIT                             * 01803 - 01812
+QUIT                             * 01800 - 0180F
 
-SAVE_IT                          = 80335 - 01656 01751
+REGBK                            = 805F5 - 016FA
+
+SAVE_IT                          = 80335 - 01656 0174E
 SAVPTR                           *       - 00011
-SAVSCREEN                        = 80319 - 01790
-SAV_TIMER                        = 80323 - 01767
+SAVSCREEN                        = 80319 - 0178D
+SAV_TIMER                        = 80323 - 01764
 SCR                              = 8031E -
-SCREEN                           = 8068D - 017A8
-SCREENADD                        = 00120 - 016CB 0179A 017AF
-SEMI                             *       - 01845
+SCREEN                           = 8068D - 017A5
+SCREENADD                        = 00120 - 016CB 01797 017AC
+SEMI                             *       - 01842
 
-TEST_QUIT                        * 017F0 - 017E8
-TIMER2                           = 00138 - 01785
+TEST_QUIT                        * 017ED - 017E5
+TIMER2                           = 00138 - 01782
 
-WTF                              = 005DB - 0172E
+WTF                              = 005DB - 0172B
 
 /SLOAD:  End of Saturn Loader Execution

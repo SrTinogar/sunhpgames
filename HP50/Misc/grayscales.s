@@ -10,7 +10,7 @@ DC WTF		005DB	%  ?
 DC HEXDCW 	2DEAA  	%  Make Hex
 DC GEST 	8600D
 DC GEST2	80092
-DC BLABLA	805F5	% ?
+DC REGBK	805F5	% Registers backup
 DC SCREEN	8068D   % Screen address
 
 % InterrupHandler49 constantes
@@ -91,7 +91,7 @@ D1=(5)HORLOGE2 C=DAT1.B
 GOTO IntMan.Fin
 
 *IntMan.Suite
- LC(1)$7 DAT1=C.B
+LC(1)$7 DAT1=C.B
 %Pour etre sur que l'horloge est bien configurer l'Attente VBL
 D1=(2)$28 { C=DAT1.B ?C=0.B UP }
 
@@ -114,13 +114,14 @@ ST=1.0
 C=0.W LC(3)$07C
 D1=(2)$38 DAT1=C.8
 D1=(5)COUNT_IT
-C=DAT1.W C+1.W DAT1=C.W % Le gestionnaire contient
-
+C=DAT1.W C+1.W DAT1=C.W
+% Le gestionnaire contient
 % egalement une variable contenant le nombre d'interruption effectuees
+
 *IntMan.Fin % On restaure les registres sauvegardes par la routine
-D1=(5)BLABLA A=DAT1.W
+D1=(5)REGBK A=DAT1.W
 D1-5 C=DAT1.A RSTK=C
-D1-5 C=DAT1.A HST=1.2 %HST=02
+D1-5 C=DAT1.A HST=0.2 % HST=1.2 %HST=02
 CSR.A P=0 C+1.P SKIPC { SETDEC }
 P=1 C-1.P P=C.2 D1=(5)WTF
 C=DAT1.W D1=C C=RSTK
