@@ -30,3 +30,4 @@ LRFiles=
 file1=smhp_editor_50.s
 [Edit]
 edit2=>smhp_editor_50.s
+edit3=C:\Users\julien\Documents\hp48games\HP50\SuperMarioHP50\game\smhp_game_50.s
