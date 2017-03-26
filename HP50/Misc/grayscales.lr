@@ -3,65 +3,67 @@ Saturn Loader, Ver. version 3.0.9, 08/03/10
 
 Output Module:
 Module=grayscales.o
-  Start=00000 End=0182A Length=0182B   Symbols=  35 References=  45
-  Date=Sat Mar 25 23:59:22 2017   Title=
+  Start=00000 End=01840 Length=01841   Symbols=  37 References=  47
+  Date=Sun Mar 26 03:06:20 2017   Title=
 
 
 Source modules:
 Module=grayscales.o
-  Start=00000 End=0182A Length=0182B
-  Date=Sat Mar 25 23:59:22 2017   Title=                                        Sat Mar 25 23:59:22 2017
+  Start=00000 End=01840 Length=01841
+  Date=Sun Mar 26 03:06:20 2017   Title=                                        Sun Mar 26 03:06:20 2017
 
 Saturn Cross Reference Listing
 
-*grayscales.o                    * 00000 - 01642
+*grayscales.o                    * 00000 - 0163A
 
-@                                *       - 01826
+@                                *       - 0183C
 
-COEFFIMAGE                       = 80345 - 0169B
-COUNT_IT                         = 8032B - 016F3
+COEFFIMAGE                       = 80345 - 01693
+COUNT_IT                         = 8032B - 016EB
 
 DOCODE                           *       - 00005
 DOCOL                            *       - 00000
 
-EC1                              = 80346 - 0003F 00B17 016B7
-EC2                              = 8034B - 00062 015E7 016C9
+EC1                              = 80346 - 00037 00B0F 016AF
+EC2                              = 8034B - 0005A 015DF 016C1
 
-GEST                             = 8600D - 0164B 01764
+GEST                             = 8600D - 01643 0175C
 GEST2                            = 80092 -
-GETPTRLOOP                       *       - 0181C
-GRISOFF                          * 01749 - 01812
-GRISON                           * 0161D - 017D0
+GETPTRLOOP                       *       - 0180C
+GRISOFF                          * 01741 - 01802
+GRISON                           * 01615 - 017C8
 
-HEADERADD                        = 00128 - 00018 01688 01804
+HEADERADD                        = 00128 - 01680 0181A 0182D
 HEXDCW                           = 2DEAA -
-HORLOGE                          = 0012E - 0161F 0174F
-HORLOGE2                         = 0012F - 0166C
+HIDE_MENU                        * 01811 - 00018
+HORLOGE                          = 0012E - 01617 01747
+HORLOGE2                         = 0012F - 01664
 
-IntMan                           * 0166A -
-IntMan.Fin                       * 01703 - 0167C
-IntMan.Suite                     * 0167F - 01679
+IntMan                           * 01662 -
+IntMan.Fin                       * 016FB - 01674
+IntMan.Suite                     * 01677 - 01671
 
-KEY                              = 0020F - 017E5 017F8
+KEY                              = 0020F - 017DD 017F0
 
-MAKE$N                           *       - 0002D 00050
+MAKE$N                           *       - 00025 00048
 
-QUIT                             * 017F1 - 01800
+QUIT                             * 017E9 - 017F8
 
-REGBK                            = 805F5 - 01705
+REGBK                            = 805F5 - 016FD
 
-SAVE_IT                          = 80335 - 01656 01759
+SAVE_IT                          = 80335 - 0164E 01751
 SAVPTR                           *       - 00011
-SAVSCREEN                        = 80319 - 01798
-SAV_TIMER                        = 80323 - 0176F
+SAVSCREEN                        = 80319 - 01790
+SAV_TIMER                        = 80323 - 01767
 SCR                              = 8031E -
-SCREEN                           = 8068D - 017AC
-SCREENADD                        = 00120 - 016D3 017A2 017B3
-SEMI                             *       - 01821
+SCREEN                           = 8068D - 017A4
+SCREENADD                        = 00120 - 016CB 0179A 017AB
+SEMI                             *       - 01837
+SHOW_MENU                        * 01824 - 017FC
 
-TEST_QUIT                        * 017DE - 017D6
-TIMER2                           = 00138 - 016E8 0178D
+TEST_QUIT                        * 017D6 - 017CE
+TIMER2                           = 00138 - 016E0 01785
 
-WTF                              = 005DB - 01736
+WTF                              = 005DB - 0172E
 
 /SLOAD:  End of Saturn Loader Execution
