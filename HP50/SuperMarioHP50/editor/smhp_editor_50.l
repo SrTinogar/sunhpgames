@@ -1,4 +1,4 @@
-Saturn Assembler                                       Sun Mar 26 01:24:42 2017
+Saturn Assembler                                       Sun Mar 26 01:34:07 2017
 V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    1
 
     1               * File  smhp_editor_50.s        1
@@ -1381,7 +1381,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
  1374               * File  smhp_editor_50.s        358
  1375
  1376               * File  smhp_editor_50.s        359
- 1377 00856 31D0            LC(2)   13
+ 1377 00856 31C0            LC(2)   12
  1378 0085A 1BE1108         D0=(5)  (=X2)
  1379 00861 14C             DAT0=C  B
  1380               * File  smhp_editor_50.s        360
@@ -3804,7 +3804,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
  3789 01469 00000           CON(5)  =SEMI
  3790               * File  smhp_editor_50.s        659
  3791 0146E 00000           CON(5)  =@
-Saturn Assembler                                       Sun Mar 26 01:24:42 2017
+Saturn Assembler                                       Sun Mar 26 01:34:07 2017
 V3.0.9 (04/15/2007)   Symbol Table                       smhp_editor_50 Page    2
 
  @                                 Ext                   -  3791
@@ -4012,7 +4012,7 @@ V3.0.9 (04/15/2007)   Symbol Table                       smhp_editor_50 Page    
  lBloB1Es                          Rel    1638 #00000666 -  1146  1146   631
  lBloB1F                           Rel    1675 #0000068B -  1163  1172
  lBloB1Fs                          Rel    1701 #000006A5 -  1177  1177
-Saturn Assembler                                       Sun Mar 26 01:24:42 2017
+Saturn Assembler                                       Sun Mar 26 01:34:07 2017
 V3.0.9 (04/15/2007)   Statistics                         smhp_editor_50 Page    3
 
 Input Parameters

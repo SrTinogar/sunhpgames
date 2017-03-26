@@ -3,196 +3,216 @@ Saturn Loader, Ver. version 3.0.9, 08/03/10
 
 Output Module:
 Module=smhp50game.o
-  Start=00000 End=04E7E Length=04E7F   Symbols= 131 References= 433
-  Date=Thu Mar 23 21:37:22 2017   Title=
+  Start=00000 End=04F59 Length=04F5A   Symbols= 151 References= 470
+  Date=Sun Mar 26 01:48:46 2017   Title=
 
 
 Source modules:
 Module=smhp_game_50.o
-  Start=00000 End=04E7E Length=04E7F
-  Date=Thu Mar 23 21:37:22 2017   Title=                                        Thu Mar 23 21:37:22 2017
+  Start=00000 End=04F59 Length=04F5A
+  Date=Sun Mar 26 01:48:46 2017   Title=                                        Sun Mar 26 01:48:46 2017
 
 Saturn Cross Reference Listing
 
-@                                *       - 04E7A
-@LIFT                            = 8012B - 000CA 01D17 01D82 01FA5 03F90 03FFE
-                                 + 0432F
+@                                *       - 04F55
+@LIFT                            = 8012B - 000CA 01CF8 01D63 01F86 03F71 03FDF
+                                 + 04310
 
-AA2                              * 04624 - 0460A 04614
-AA3                              * 04806 - 047F6
-AC                               * 014B3 - 014A8
-ADD.CHAMP                        * 043E2 - 02694
-ADD2_LIFT                        * 01D80 - 01973
-ADDOBJ.A.C.B.R4                  * 0483E - 04519
-ADDOBJET                         * 048E9 - 017ED 0180E
-ADDOBJET2                        * 048B8 - 0193D 0195E
-ADD_LIFT                         * 01D15 - 01823
-AF                               * 03F6B - 03E99 03EBB 03EDD
-AH                               * 0421C - 0420D
-AI                               * 042C8 - 042B9
-AX                               = 80160 - 048DD 04914 04997
-AY                               = 80165 - 04932 049A7
+AA2                              * 04605 - 045EB 045F5
+AA3                              * 047E7 - 047D7
+AC                               * 01494 - 01489
+ADD.CHAMP                        * 043C3 - 02675
+ADD2_LIFT                        * 01D61 - 01954
+ADDOBJ.A.C.B.R4                  * 0481F - 044FA
+ADDOBJET                         * 048CA - 017CE 017EF
+ADDOBJET2                        * 04899 - 0191E 0193F
+ADD_LIFT                         * 01CF6 - 01804
+AF                               * 03F4C - 03E7A 03E9C 03EBE
+AH                               * 041FD - 041EE
+AI                               * 042A9 - 0429A
+ANNCTRL                          *       - 04E83 04EED
+ANNCTRL_Alert                    = 00003 - 04E94 04EFE
+ANNCTRL_Alpha                    = 00002 - 04EA3 04F0D
+ANNCTRL_Busy                     = 00004 - 04EA8 04F12
+ANNCTRL_IO                       = 00005 - 04E8F 04EF9
+ANNCTRL_LShift                   = 00000 - 04E99 04F03
+ANNCTRL_RShift                   = 00001 - 04E9E 04F08
+ANNUNCIATORS                     *       - 04E58 04EC2
+ANNUNCIATORS_Alert               = 00003 - 04E69 04ED3
+ANNUNCIATORS_Alpha               = 00006 - 04E78 04EE2
+ANNUNCIATORS_Busy                = 00007 - 04E7D 04EE7
+ANNUNCIATORS_IO                  = 00001 - 04E64 04ECE
+ANNUNCIATORS_LShift              = 00004 - 04E6E 04ED8
+ANNUNCIATORS_RShift              = 00005 - 04E73 04EDD
+AX                               = 80160 - 048BE 048F5 04978
+AY                               = 80165 - 04913 04988
 
 BAD                              * 00067 - 0004F 00061
-BCL                              * 01780 - 01889 018D9
-BIG_CLIP                         * 0143F - 0140D 0141C
+BCL                              * 01761 - 0186A 018BA
+BIG_CLIP                         * 01420 - 013EE 013FD
 
-CCC                              * 04C1C - 04C15
-CHUTE2                           * 046E8 - 046C4
-CIEL                             * 025F4 - 01582
-CLEAR.STABLE                     * 0451F - 01292
-CLEARED                          * 01CE4 - 04249
-CL_LIFT                          * 01FA3 - 0128C
-COIN                             = 80115 - 02729 0274F 02896 028FA 04C1E
-COINS                            * 02715 - 0130D 028C5 028DE 04E6F
-COINUP                           * 027AD - 021C3 022F4 023BA 023E2 026A3
-CRC                              = 00104 - 044BC
-CUBES                            = 8013B - 01218 0182F 0197F 021C9 022FA 023C0
-                                 + 02475 0251B 025D2 026A9
+CCC                              * 04BFD - 04BF6
+CHUTE2                           * 046C9 - 046A5
+CIEL                             * 025D5 - 01563
+CLEAR.STABLE                     * 04500 - 01290
+CLEARED                          * 01CC5 - 0422A
+CL_LIFT                          * 01F84 - 0128A
+COIN                             = 80115 - 0270A 02730 02877 028DB 04BFF
+COINS                            * 026F6 - 0130B 028A6 028BF 04E50
+COINUP                           * 0278E - 021A4 022D5 0239B 023C3 02684
+CRC                              = 00104 - 0449D
+CUBES                            = 8013B - 01218 01810 01960 021AA 022DB 023A1
+                                 + 02456 024FC 025B3 0268A
 
-DISP.A.C.R4.B                    * 01C31 - 0143B 040C2 044A7 04597 04729 049FB
-                                 + 04B55 04CFD
-DISP.COL.D                       * 018E0 - 012F5 01A80
-DISP.LEVEL                       * 01750 - 012FB
-DISP.PANEL                       * 01A86 - 01301
-DISP.SPRITE                      * 01DE5 - 01BB8
-DIVISION                         * 04E1A -
+DISP.A.C.R4.B                    * 01C12 - 0141C 040A3 04488 04578 0470A 049DC
+                                 + 04B36 04CDE
+DISP.COL.D                       * 018C1 - 012F3 01A61
+DISP.LEVEL                       * 01731 - 012F9
+DISP.PANEL                       * 01A67 - 012FF
+DISP.SPRITE                      * 01DC6 - 01B99
+DIVISION                         * 04DFB -
 DOCODE                           *       - 00005
 DOCOL                            *       - 00000
 
-E                                * 0423E - 04232
+E                                * 0421F - 04213
 
-FIN                              * 01E59 - 046EA 04834 0483A 04B10 04CB8 04E16
-FIXCIEL                          * 02236 - 0158E
-FIXSOL                           * 021EB - 01571 016A5 04131
-FLAG01                           = 80100 - 0129C 04AD3 04C4D 04C78 04DD9 04E33
-                                 + 04E54
-FLAGS                            * 04E31 - 0131F
-FLIP                             * 014EF - 01319 01337 016BB
+FIN                              * 01E3A - 046CB 04815 0481B 04AF1 04C99 04DF7
+FIXCIEL                          * 02217 - 0156F
+FIXSOL                           * 021CC - 01552 01686 04112
+FLAG01                           = 80100 - 0129A 04AB4 04C2E 04C59 04DBA 04E14
+                                 + 04E35
+FLAGS                            * 04E12 - 0131D
+FLIP                             * 014D0 - 01317 01335 0169C
 
-GETPTRLOOP                       *       - 013BD
+GETPTRLOOP                       *       - 0139E
 
-HEADERADD                        = 00128 - 01222 01386 014F8
+HEADERADD                        = 00128 - 014D9 03E61 03E83 03EA5 04F33 04F46
 HEXDCW                           = 2DEAA -
+HIDE_ANNUN                       * 04EC0 - 01232
+HIDE_MENU                        * 04F2A - 01238
 
-INDICATOR                        = 0010C - 01391
+INDICATOR                        = 0010C -
 
-JUMPING                          * 01559 - 014D0
+JUMPING                          * 0153A - 014B1
 
-KEY                              = 0020F - 0134E 01468 0204E 03F36 03F55 041FA
-                                 + 042A6
-KEYS                             * 02047 - 00069 01360 01379 0144D
+KEY                              = 0020F - 0134C 01449 0202F 03F17 03F36 041DB
+                                 + 04287
+KEYS                             * 02028 - 00069 0135E 01377 0142E
 
-LEVEL                            = 80136 - 00081 0124C
-LEVEL.DATA                       = 8011E - 0011B 01259 016C5 016E3 0170B 0176D
-                                 + 01901 01A6D 0214D 022D7 0239D 02461 02507
-                                 + 025BE 02670
-LEVEL.SURFACE                    = 80119 - 00108 01511 01752 018E2 019E1 027E8
-                                 + 043EC
-LIFT                             * 04065 - 01C02
-LIFT.LEFT                        * 0432D - 0418F
-LIFTS                            * 01BE7 - 01325
-LMAX                             = 00004 - 01BEE 01D2A 01D95 01FB8 04342
-LOAD_L                           * 03F8E - 01BF9
-LOST_LIFE                        * 0201E - 02185 04618 047FA
+LEVEL                            = 80136 - 00081 0124A
+LEVEL.DATA                       = 8011E - 0011B 01257 016A6 016C4 016EC 0174E
+                                 + 018E2 01A4E 0212E 022B8 0237E 02442 024E8
+                                 + 0259F 02651
+LEVEL.SURFACE                    = 80119 - 00108 014F2 01733 018C3 019C2 027C9
+                                 + 043CD
+LIFT                             * 04046 - 01BE3
+LIFT.LEFT                        * 0430E - 04170
+LIFTS                            * 01BC8 - 01323
+LMAX                             = 00004 - 01BCF 01D0B 01D76 01F99 04323
+LOAD_L                           * 03F6F - 01BDA
+LOST_LIFE                        * 01FFF - 02166 045F9 047DB
 
-M.ANIM                           = 80127 - 012B2 013DC 01459 0427B 04309
+M.ANIM                           = 80127 - 012B0 013BD 0143A 0425C 042EA
 MAKE$N                           *       - 00092
-MARIO                            * 013C2 - 0132B
-MCLIPB                           = 80109 - 012D0 013C7 014D6 01659
-MCLIPH                           = 80107 - 012C6 013EE 015DE 01628 02062 020CE
-                                 + 02226 025FC 045D1 047BD 04A8F 04BE9 04D91
-MJUMP                            = 80140 - 01491 014C2 015B6 01666 02014 0203D
-                                 + 021AE
-MLOST                            * 016B5 - 014E9
-MURD                             * 02267 - 04211
-MURD_T                           * 02497 - 04144 04647 04739 04A0B 04B65 04D0D
-MURG                             * 0231C - 042BD
-MURG_T                           * 0253D - 041B7 0466B 0475D 04A2F 04B89 04D31
-MX                               = 8010B - 01427 017A4 01FE9 0212E 022B8 02324
-                                 + 0237C 02651 027F6 040D5 0421E 042CA 0440F
-                                 + 04440 04469 045A7 04793 04A65 04BBF 04D67
-MY                               = 80110 - 01431 015CC 017C8 02078 020B7 02105
-                                 + 021ED 02238 0228F 02353 02628 027BE 040FF
-                                 + 04487 044F0 045DE 047CA 04A9C 04BF6 04D9E
+MARIO                            * 013A3 - 01329
+MCLIPB                           = 80109 - 012CE 013A8 014B7 0163A
+MCLIPH                           = 80107 - 012C4 013CF 015BF 01609 02043 020AF
+                                 + 02207 025DD 045B2 0479E 04A70 04BCA 04D72
+MJUMP                            = 80140 - 01472 014A3 01597 01647 01FF5 0201E
+                                 + 0218F
+MLOST                            * 01696 - 014CA
+MURD                             * 02248 - 041F2
+MURD_T                           * 02478 - 04125 04628 0471A 049EC 04B46 04CEE
+MURG                             * 022FD - 0429E
+MURG_T                           * 0251E - 04198 0464C 0473E 04A10 04B6A 04D12
+MX                               = 8010B - 01408 01785 01FCA 0210F 02299 02305
+                                 + 0235D 02632 027D7 040B6 041FF 042AB 043F0
+                                 + 04421 0444A 04588 04774 04A46 04BA0 04D48
+MY                               = 80110 - 01412 015AD 017A9 02059 02098 020E6
+                                 + 021CE 02219 02270 02334 02609 0279F 040E0
+                                 + 04468 044D1 045BF 047AB 04A7D 04BD7 04D7F
 
-ND                               * 0429D - 04207 04219
-NDISP                            * 01864 -
-NDT.2                            * 01E06 - 01DE8
-NEXT.ADDOBJET                    * 0491C - 048E6
-NEXTUP                           * 0003C - 01D11
-NG                               * 0432B - 042B3 042C5 042D8
+ND                               * 0427E - 041E8 041FA
+NDISP                            * 01845 -
+NDT.2                            * 01DE7 - 01DC9
+NEXT.ADDOBJET                    * 048FD - 048C7
+NEXTUP                           * 0003C - 01CF2
+NG                               * 0430C - 04294 042A6 042B9
 NOCLEAR                          * 000C2 - 000A9
-NODISP                           * 0182D - 017D3 017F4 01815 0182A
-NODISP2                          * 0197D - 01944 01965 0197A
-NOGRAY                           * 03EE1 -
-NUMBER.AC                        * 01B16 - 026EC 02711 02737 0275D 02783 027A9
+NODISP                           * 0180E - 017B4 017D5 017F6 0180B
+NODISP2                          * 0195E - 01925 01946 0195B
+NOGRAY                           * 03EC2 -
+NUMBER.AC                        * 01AF7 - 026CD 026F2 02718 0273E 02764 0278A
 
-OBJ.CHAMP.UP                     * 04B14 - 01E41
-OBJ.HEART.UP                     * 049C0 - 01E4D
-OBJ.KOOPA                        * 046EE - 01E3B
-OBJ.STAR.UP                      * 04CBC - 01E47
-OBJ.TORTLE                       * 04542 - 01E35
-ORIGSCREEN                       = 8068D - 013A5
+OBJ.CHAMP.UP                     * 04AF5 - 01E22
+OBJ.HEART.UP                     * 049A1 - 01E2E
+OBJ.KOOPA                        * 046CF - 01E1C
+OBJ.STAR.UP                      * 04C9D - 01E28
+OBJ.TORTLE                       * 04523 - 01E16
+ORIGSCREEN                       = 8068D - 01386
 
-POSX                             = 80130 - 016CC 016EA 01712 01A3C 02908
-PRES                             * 03E7B - 03F68
-PRESENTATION                     * 02913 - 01246 0136F
+PASTDUE                          *       - 04EAE 04F18
+PASTDUE_flag                     = 00000 - 04EBA 04F24
+POSX                             = 80130 - 016AD 016CB 016F3 01A1D 028E9
+PRES                             * 03E5C - 03F49
+PRESENTATION                     * 028F4 - 01244 0136D
 
-QUIT                             * 01373 - 00072 03F63
+QUIT                             * 01371 - 00072 03F44
 
-REPLAY                           * 0124A - 0174C 03F4A
-RESET.1                          * 02903 - 016FF 01727
-RESET.CONTER                     * 028E4 - 01240 01369 03F44
+REPLAY                           * 01248 - 0172D 03F2B
+RESET.1                          * 028E4 - 016E0 01708
+RESET.CONTER                     * 028C5 - 0123E 01367 03F25
 
-SAVE_L                           * 03FFC - 01C0E
+SAVE_L                           * 03FDD - 01BEF
 SAVPTR                           *       - 00011
-SCREENADD                        = 00120 - 01236 013AF 014F1
-SCROL.COUNTER                    = 80118 - 012A7 01A17 01A54 020EE 02271 0233B
-                                 + 02402 024A1 0255C 0260F 02824 04435
-SCROLG                           * 019DC - 04236
-SDATA                            = 80153 - 048C4 048F5 04985
-SEMI                             *       - 04E75
-SMAX                             = 0000F - 04392 0485E 0494F
-SOL                              * 0205C - 014AC 01565 01699
-SOL_T                            * 023F1 - 0469C 046CE 046DE 0480B 04AE7 04C8F
-                                 + 04DED
-SP.LOAD                          * 01E5B - 01BAF
-SP.SAVE                          * 01F1E - 01BC4
-SPRITES                          * 01B9D - 01331
-STABLE                           = 8014C - 000DD 01E0E 01E5D 01F20 0437F 04521
-                                 + 0484B 0493C
-STACK                            = 80142 - 00034 0003E 01CFE
-STAGE                            = 80133 - 00026 01CEC 02775 0279B
-STAGES                           * 02761 - 01313
-START                            = 80147 - 02917 03EE7
-STOP                             * 0135E - 01746
-STYPE                            = 80151 - 048BA 048EB 04975
-SX                               = 80156 - 01DEC 01EEF 01F68 01FDF 02442 024E8
-                                 + 02545 0259D 03FC9 0402F 0406C 040A5 040CB
-                                 + 04154 04195 041C7 0457A 0459D 04657 0467B
-                                 + 0470C 04749 0476D 04789 049DE 04A1B 04A3F
-                                 + 04A5B 04B38 04B75 04B99 04BB5 04CE0 04D1D
-                                 + 04D41 04D5D
-SY                               = 8015B - 01EFF 01F78 02419 024BF 02574 03FD9
-                                 + 0403F 040B8 040F5 0458D 045C7 046A5 0471F
-                                 + 047B3 04814 049F1 04A85 04AF0 04B4B 04BDF
-                                 + 04C98 04CF3 04D87 04DF6
+SCREENADD                        = 00120 - 01228 01390 014D2
+SCROL.COUNTER                    = 80118 - 012A5 019F8 01A35 020CF 02252 0231C
+                                 + 023E3 02482 0253D 025F0 02805 04416
+SCROLG                           * 019BD - 04217
+SDATA                            = 80153 - 048A5 048D6 04966
+SEMI                             *       - 04F50
+SHOW_ANNUN                       * 04E56 -
+SHOW_MENU                        * 04F3D - 01380
+SMAX                             = 0000F - 04373 0483F 04930
+SOL                              * 0203D - 0148D 01546 0167A
+SOL_T                            * 023D2 - 0467D 046AF 046BF 047EC 04AC8 04C70
+                                 + 04DCE
+SP.LOAD                          * 01E3C - 01B90
+SP.SAVE                          * 01EFF - 01BA5
+SPRITES                          * 01B7E - 0132F
+STABLE                           = 8014C - 000DD 01DEF 01E3E 01F01 04360 04502
+                                 + 0482C 0491D
+STACK                            = 80142 - 00034 0003E 01CDF
+STAGE                            = 80133 - 00026 01CCD 02756 0277C
+STAGES                           * 02742 - 01311
+START                            = 80147 - 028F8 03EC8
+STOP                             * 0135C - 01727
+STYPE                            = 80151 - 0489B 048CC 04956
+SX                               = 80156 - 01DCD 01ED0 01F49 01FC0 02423 024C9
+                                 + 02526 0257E 03FAA 04010 0404D 04086 040AC
+                                 + 04135 04176 041A8 0455B 0457E 04638 0465C
+                                 + 046ED 0472A 0474E 0476A 049BF 049FC 04A20
+                                 + 04A3C 04B19 04B56 04B7A 04B96 04CC1 04CFE
+                                 + 04D22 04D3E
+SY                               = 8015B - 01EE0 01F59 023FA 024A0 02555 03FBA
+                                 + 04020 04099 040D6 0456E 045A8 04686 04700
+                                 + 04794 047F5 049D2 04A66 04AD1 04B2C 04BC0
+                                 + 04C79 04CD4 04D68 04DD7
 
-T.ANIM                           = 80129 - 012BC
-TESTD                            * 041EE - 01441
-TESTG                            * 0429F - 01447
-TICK                             = 80123 - 012E1 0426E 042FC
-TICK.COUNTER                     = 80125 - 012EB 04255 042E3
-TORTLE_HIT                       * 01FCE - 04626
+T.ANIM                           = 80129 - 012BA
+TESTD                            * 041CF - 01422
+TESTG                            * 04280 - 01428
+TICK                             = 80123 - 012DF 0424F 042DD
+TICK.COUNTER                     = 80125 - 012E9 04236 042C4
+TORTLE_HIT                       * 01FAF - 04607
 
-VIE                              = 80104 - 0172D 026DF 02704 028B1 028ED 04ABC
-                                 + 04C39 04DC2
-VIES                             * 026CB - 01307 028CB 04E4E
+VIE                              = 80104 - 0170E 026C0 026E5 02892 028CE 04A9D
+                                 + 04C1A 04DA3
+VIES                             * 026AC - 01305 028AC 04E2F
 
-WTF                              * 03F2F - 03EE2
+WTF                              * 03F10 - 03EC3
 
-YD                               * 0420A - 04184 041F1
-YG                               * 042B6 - 041E8
+YD                               * 041EB - 04165 041D2
+YG                               * 04297 - 041C9
 
 /SLOAD:  End of Saturn Loader Execution

@@ -356,7 +356,7 @@ SKIP {
 
 A=DAT1.A A+16.A R2=A.A  	%  R2=Level +5(header) +5(size) +6(SML)
 
-LC(2)#13 D0=(5)X2 DAT0=C.B
+LC(2)#12 D0=(5)X2 DAT0=C.B      % 12 screens of level (was 13)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
 % TILES DATAS  in R3
