@@ -1,4 +1,4 @@
-Bad characteres convertion
+﻿Bad characteres convertion
 ==========================
 
 ç is ->
@@ -32,6 +32,10 @@ DC MKSTR  05B7D
 Un écran HP48 mesure en mémoire 136x64 = 8704b = 2176q = #880h
 Un écran HP50 mesure en mémoire 136x80 = 10880b = 2720q = #AA0h
 
+Keys :
 
+H: LC 050 / CBIT 7 ; LC 030 / CBIT 7
+G: LC 060 / CBIT 7
+M: LC 050 / CBIT 6
 
 
