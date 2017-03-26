@@ -50,10 +50,10 @@ DC PASTDUE_flag 0
 CP=80100
 DCCP 5 EC0             	% address of our custom screen surface
 DCCP 5 EC1             	% address of our offscreen surface
-DCCP 5 X
-DCCP 5 Y
-DCCP 5 B
-DCCP 5 S
+DCCP 5 X                % Cursor X
+DCCP 5 Y                % Cursor Y
+DCCP 5 B                % Selected Tile index
+DCCP 5 S 		% Screen index ( 0-12 )
 DCCP 5 X2 		%
 
 % Clear our allocated constantes addresses
@@ -327,6 +327,7 @@ RTN
 *INI.STACK
 LOAD
 SAVE
+%LC(5)#13*#13*#8*#2 B=C.A
 LC(5)#1283*#2 B=C.A
 A=DAT1.A
 ?A=0.A GOYES MKS  		% SML*********** Level String not found ?
@@ -476,11 +477,11 @@ GOSUBL JUCURSOR
 RTN
 
 *DISP.LEVEL
-D0=(5)EC1 A=DAT0.A R4=A.A
-LC(2)TW_MAX D=C.B % X
-LC(2)TH_MAX B=C.B % Y
-A=R2.A
+D0=(5)EC1 A=DAT0.A R4=A.A   	% Screen surface
+LC(2)TW_MAX D=C.B 		% X
+LC(2)TH_MAX B=C.B 		% Y
 D0=(5)X C=DAT0.B
+A=R2.A
 {
  ?C=0.B EXIT
  C-1.B A-2.A UP

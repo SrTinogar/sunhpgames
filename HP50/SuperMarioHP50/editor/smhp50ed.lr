@@ -4,13 +4,13 @@ Saturn Loader, Ver. version 3.0.9, 08/03/10
 Output Module:
 Module=smhp50ed.o
   Start=00000 End=01472 Length=01473   Symbols=  77 References= 190
-  Date=Sun Mar 26 18:51:11 2017   Title=
+  Date=Sun Mar 26 19:30:59 2017   Title=
 
 
 Source modules:
 Module=smhp_editor_50.o
   Start=00000 End=01472 Length=01473
-  Date=Sun Mar 26 18:51:11 2017   Title=                                        Sun Mar 26 18:51:11 2017
+  Date=Sun Mar 26 19:30:59 2017   Title=                                        Sun Mar 26 19:30:59 2017
 
 Saturn Cross Reference Listing
 
@@ -111,7 +111,7 @@ TQ                               * 00236 - 00167
 TW_MAX                           = 0000D - 0117B 01270
 
 X                                = 8010A - 00034 002CE 002F2 0032F 0034C 00436
-                                 + 00F0D 010D7 0118F
+                                 + 00F0D 010D7 01189
 X2                               = 8011E - 0005C 0085C 00F9E 012EB
 XY                               * 00432 - 00295 01129
 
