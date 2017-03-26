@@ -1,4 +1,4 @@
-Saturn Assembler                                       Sun Mar 26 06:28:56 2017
+Saturn Assembler                                       Sun Mar 26 18:51:11 2017
 V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    1
 
     1               * File  smhp_editor_50.s        1
@@ -164,7 +164,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
   161               * File  smhp_editor_50.s        85
   162 00099 AF0             A=0     W
   163               * File  smhp_editor_50.s        86
-  164 0009C 1B82100         D0=(5)  #00128
+  164 0009C 1B82100         D0=(5)  (=HEADERADD)
   165               * File  smhp_editor_50.s        87
   166                       {
   167               * File  smhp_editor_50.s        88
@@ -185,7 +185,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
   182               * File  smhp_editor_50.s        94
   183 000BF AF0             A=0     W
   184               * File  smhp_editor_50.s        95
-  185 000C2 1B82100         D0=(5)  #00128
+  185 000C2 1B82100         D0=(5)  (=HEADERADD)
   186               * File  smhp_editor_50.s        96
   187                       {
   188               * File  smhp_editor_50.s        97
@@ -210,7 +210,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
   207               * File  smhp_editor_50.s        105
   208 000EE AF0             A=0     W
   209               * File  smhp_editor_50.s        106
-  210 000F1 1B82100         D0=(5)  #00128
+  210 000F1 1B82100         D0=(5)  (=HEADERADD)
   211               * File  smhp_editor_50.s        107
   212                       {
   213               * File  smhp_editor_50.s        108
@@ -3637,7 +3637,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
  3623               * File  smhp_editor_50.s        581
  3624 01324         =TPREV
  3625               * File  smhp_editor_50.s        582
- 3626 01324 32020           LCHEX   020
+ 3626 01324 32060           LCHEX   060
  3627 01329 8FF0200         GOSBVL  =KEY
  3628               * File  smhp_editor_50.s        583
  3629 01330 808A7           ?CBIT=0 7
@@ -3805,7 +3805,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
  3790 01469 00000           CON(5)  =SEMI
  3791               * File  smhp_editor_50.s        660
  3792 0146E 00000           CON(5)  =@
-Saturn Assembler                                       Sun Mar 26 06:28:56 2017
+Saturn Assembler                                       Sun Mar 26 18:51:11 2017
 V3.0.9 (04/15/2007)   Symbol Table                       smhp_editor_50 Page    2
 
  @                                 Ext                   -  3792
@@ -3855,7 +3855,8 @@ V3.0.9 (04/15/2007)   Symbol Table                       smhp_editor_50 Page    
  GETPTR                            Ext                   -  1293  1351
  GETPTRLOOP                        Ext                   -   406
 =GET_DAT                           Rel    4181 #00001055 -  3188  3137
-=HEADERADD                         Abs     296 #00000128 -    38  3771  3781
+=HEADERADD                         Abs     296 #00000128 -    38   164   185
+                                         210  3771  3781
 =HEXDCW                            Abs  188074 #0002DEAA -    42  3016  3052
                                         3076  3100  3125
 =HIDE_ANNUN                        Rel    5081 #000013D9 -  3712   134
@@ -4013,7 +4014,7 @@ V3.0.9 (04/15/2007)   Symbol Table                       smhp_editor_50 Page    
  lBloB1Es                          Rel    1638 #00000666 -  1146  1146   631
  lBloB1F                           Rel    1675 #0000068B -  1163  1172
  lBloB1Fs                          Rel    1701 #000006A5 -  1177  1177
-Saturn Assembler                                       Sun Mar 26 06:28:56 2017
+Saturn Assembler                                       Sun Mar 26 18:51:11 2017
 V3.0.9 (04/15/2007)   Statistics                         smhp_editor_50 Page    3
 
 Input Parameters

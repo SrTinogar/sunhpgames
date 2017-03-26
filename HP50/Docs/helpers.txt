@@ -34,6 +34,7 @@ Un écran HP50 mesure en mémoire 136x80 = 10880b = 2720q = #AA0h
 
 Keys :
 
+I: LC 008 / CBIT 7
 H: LC 050 / CBIT 7 ; LC 030 / CBIT 7
 G: LC 060 / CBIT 7
 M: LC 050 / CBIT 6
