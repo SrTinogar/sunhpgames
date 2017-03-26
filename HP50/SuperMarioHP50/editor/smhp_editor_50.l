@@ -1,4 +1,4 @@
-Saturn Assembler                                       Sun Mar 26 01:21:49 2017
+Saturn Assembler                                       Sun Mar 26 01:24:42 2017
 V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    1
 
     1               * File  smhp_editor_50.s        1
@@ -3781,9 +3781,9 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
  3766               * File  smhp_editor_50.s        649
  3767 01443         =HIDE_MENU
  3768               * File  smhp_editor_50.s        650
- 3769 01443 80820F          LAHEX   F
- 3770 01449 1B82100         D0=(5)  (=HEADERADD)
- 3771 01450 1580            DAT0=A  1
+ 3769 01443 80821F3         LAHEX   3F
+ 3770 0144A 1B82100         D0=(5)  (=HEADERADD)
+ 3771 01451 148             DAT0=A  B
  3772               * File  smhp_editor_50.s        651
  3773 01454 01              RTN
  3774               * File  smhp_editor_50.s        652
@@ -3791,9 +3791,9 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
  3776               * File  smhp_editor_50.s        653
  3777 01456         =SHOW_MENU
  3778               * File  smhp_editor_50.s        654
- 3779 01456 808207          LAHEX   7
- 3780 0145C 1B82100         D0=(5)  (=HEADERADD)
- 3781 01463 1580            DAT0=A  1
+ 3779 01456 8082173         LAHEX   37
+ 3780 0145D 1B82100         D0=(5)  (=HEADERADD)
+ 3781 01464 148             DAT0=A  B
  3782               * File  smhp_editor_50.s        655
  3783 01467 01              RTN
  3784               * File  smhp_editor_50.s        656
@@ -3804,7 +3804,7 @@ V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    
  3789 01469 00000           CON(5)  =SEMI
  3790               * File  smhp_editor_50.s        659
  3791 0146E 00000           CON(5)  =@
-Saturn Assembler                                       Sun Mar 26 01:21:49 2017
+Saturn Assembler                                       Sun Mar 26 01:24:42 2017
 V3.0.9 (04/15/2007)   Symbol Table                       smhp_editor_50 Page    2
 
  @                                 Ext                   -  3791
@@ -4012,7 +4012,7 @@ V3.0.9 (04/15/2007)   Symbol Table                       smhp_editor_50 Page    
  lBloB1Es                          Rel    1638 #00000666 -  1146  1146   631
  lBloB1F                           Rel    1675 #0000068B -  1163  1172
  lBloB1Fs                          Rel    1701 #000006A5 -  1177  1177
-Saturn Assembler                                       Sun Mar 26 01:21:49 2017
+Saturn Assembler                                       Sun Mar 26 01:24:42 2017
 V3.0.9 (04/15/2007)   Statistics                         smhp_editor_50 Page    3
 
 Input Parameters

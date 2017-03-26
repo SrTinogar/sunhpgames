@@ -4,13 +4,13 @@ Saturn Loader, Ver. version 3.0.9, 08/03/10
 Output Module:
 Module=smhp50ed.o
   Start=00000 End=01472 Length=01473   Symbols=  77 References= 187
-  Date=Sun Mar 26 01:21:49 2017   Title=
+  Date=Sun Mar 26 01:24:42 2017   Title=
 
 
 Source modules:
 Module=smhp_editor_50.o
   Start=00000 End=01472 Length=01473
-  Date=Sun Mar 26 01:21:49 2017   Title=                                        Sun Mar 26 01:21:49 2017
+  Date=Sun Mar 26 01:24:42 2017   Title=                                        Sun Mar 26 01:24:42 2017
 
 Saturn Cross Reference Listing
 
@@ -62,7 +62,7 @@ GETPTR                           *       - 00797 0081F
 GETPTRLOOP                       *       - 00276
 GET_DAT                          * 01055 - 00FFB
 
-HEADERADD                        = 00128 - 0144B 0145E
+HEADERADD                        = 00128 - 0144C 0145F
 HEXDCW                           = 2DEAA - 00EDC 00F32 00F6D 00FA8 00FE6
 HIDE_ANNUN                       * 013D9 - 0006C
 HIDE_MENU                        * 01443 - 00066
