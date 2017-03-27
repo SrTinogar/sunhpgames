@@ -1,0 +1,79 @@
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%							%
+		%		   SuperMarioHP50			%
+		%							%
+		%	By Julien Meyer - (C)Jadeware 1999/2017		%
+		%		http://www.jadegame.com			%
+		%	https://github.com/brizzly/sunhpgames		%
+		%							%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+	SuperMarioHP is a (new) fast arcade free game for your Hp50g Calc.
+
+
+Presentation
+============
+
+Yeah it’s me, Mario on HP50 !	
+
+
+Before playing SuperMarioHP
+===========================
+
+Download SMHP50.DIR in your HP50 in binary, using Kermit protocol or HPConnect.
+This is a Directory object. To play SuperMarioHP, you hit PLAY. 
+A level editor « EDITOR » is provided to let the community make levels ;-)
+Send me your level to : jadeware@gmail.com I’ll review add it to future release.
+
+
+Using it for the first time
+===========================
+
+Go to the SMHP directory. Hit PLAY or put a level (SML******) in the Stack then hit COD.
+
+
+
+What are SuperMarioHP game Keys ?
+=================================
+
+	During the game, SuperMarioHP original keys are:
+
+			[Left Right arrows]	Move
+			[H]			Jump
+			[DROP]			BACK TO MAIN PAGE
+
+
+What are SuperMarioHP Level editor Keys ?
+=========================================
+
+
+			[Arrows]	Move cursor
+			[+ or -]	Select tile
+			[+/-]		Draw tile
+			[G or I]	Previous or Next screen (0-12)
+			[ENTER]		Save and quit
+
+
+What can I do with this game ?
+==============================
+
+SuperMarioHP is free with source code, so you can distribute to your friends, on the
+Internet, etc.. Even fork Github and do whatever you want with it. Even create and share new levels.
+
+I hope you'll enjoy playing this game during boring lessons, during plane,
+train, and wherever you want :-)
+
+I will be very glad to receive your remarks concerning this game, if you
+want to write to me, here is my new e-mail address: <jadeware@gmail.com>
+
+
+			      HAVE FUN !!
+
+
+	-----------------------------------------------------------
+	Julien MEYER - Alias: SunHP e-mail: jadeware@gmail.com
+		     Web site: http://www.jadegame.com
+	Github (sources): https://github.com/brizzly/sunhpgames
+	-----------------------------------------------------------
