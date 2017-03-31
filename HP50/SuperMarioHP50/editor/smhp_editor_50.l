@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 Saturn Assembler                                       Sun Mar 26 19:30:59 2017
 V3.0.9 (04/15/2007)                                      smhp_editor_50 Page    1
 
@@ -4017,10 +4018,305 @@ V3.0.9 (04/15/2007)   Symbol Table                       smhp_editor_50 Page    
  lBloB1Fs                          Rel    1701 #000006A5 -  1177  1177
 Saturn Assembler                                       Sun Mar 26 19:30:59 2017
 V3.0.9 (04/15/2007)   Statistics                         smhp_editor_50 Page    3
+=======
+Saturn Assembler                                       Fri Mar 24 11:19:46 2017
+V3.0.8 (12/06/2002)                                      smhp_editor_50 Page    1
+
+    1
+    2 00000       ::
+    3 00000       CODEM
+    4
+    5 00000       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    6 00000       %
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+    7 00000       %               SuperMarioHP50 Level Editor
+*** ERROR: Duplicate symbol ***
+    8 00000       %
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+    9 00000       %               Arrow to move cursor
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   10 00000       %               +/- to Draw tile
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   11 00000       %               + or - to Select tile
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   12 00000       %               G or I to change page
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   13 00000       %               Enter to quit
+*** ERROR: Duplicate symbol ***
+   14 00000       %
+*** ERROR: Duplicate symbol ***
+   15 00000       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   16
+   17 00000       SAVE
+   18 00000       INTOFF
+   19 00000       CLRST
+   20
+*** ERROR: Illegal mnemonic ***
+   21 00000       DC HEADERADD    00128  %  Header height
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   22 00000       DC SCREENADD    00120  %  Screen
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   23 00000       DC HEXDCW       2DEAA  %  Make Hex
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   24 00000       DC KEY          0020F  %  OUT=C C=IN
+   25
+   26 00000       CP=80100
+*** ERROR: Illegal mnemonic ***
+   27 00000       DCCP 5 EC0             % address of our custom screen surface
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   28 00000       DCCP 5 EC1             % address of our offscreen surface
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   29 00000       DCCP 5 X
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   30 00000       DCCP 5 Y
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   31 00000       DCCP 5 B
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   32 00000       DCCP 5 S
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   33 00000       DCCP 5 X2
+   34
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   35 00000       % Clear our allocated constantes addresses
+   36 00000       A=0.A
+*** ERROR: Illegal mnemonic ***
+   37 00000       D0=(5)EC0 DAT0=A.A
+*** ERROR: Illegal mnemonic ***
+   38 00000       D0=(5)EC1 DAT0=A.A
+*** ERROR: Illegal mnemonic ***
+   39 00000       D0=(5)X DAT0=A.A
+*** ERROR: Illegal mnemonic ***
+   40 00000       D0=(5)Y DAT0=A.A
+*** ERROR: Illegal mnemonic ***
+   41 00000       D0=(5)B DAT0=A.A
+*** ERROR: Illegal mnemonic ***
+   42 00000       D0=(5)S DAT0=A.A
+*** ERROR: Illegal mnemonic ***
+   43 00000       D0=(5)X2 DAT0=A.A
+   44
+*** ERROR: Illegal mnemonic ***
+   45 00000       GOSUBL INI.STACK
+   46
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   47 00000       % set menu heigh to 0
+*** ERROR: Illegal mnemonic ***
+   48 00000       LA 3F D0=(5)HEADERADD DAT0=A.B
+   49
+   50
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   51 00000       % create custom screen surface and store address in EC0
+   52 00000 8F000 LC(5)$00AA1 GOSBVL =MAKE$N
+            00
+   53 00007 132   D0+1 AD0EX ABIT=0.0
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   54 0000A       D0=(5)EC0 DAT0=A.A
+   55
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   56 0000A       % Clear our custom screen surface
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   57 0000A       D0=(5)EC0 A=DAT0.A D0=A
+   58 0000A       LC(2)$AA
+   59 0000A       A=0.W
+*** ERROR: Illegal mnemonic ***
+   60 0000A       { DAT0=A.W D0+16 C-1.B UPNC }
+   61
+   62
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   63 0000A       % create offscreen surface and store address in EC1
+   64 0000A 8F000 LC(5)$01541 GOSBVL =MAKE$N
+            00
+*** ERROR: Duplicate symbol ***
+   65 00011 132   D0+1 AD0EX ABIT=0.0
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   66 00014       D0=(5)EC1 DAT0=A.A
+   67
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   68 00014       % Clear our offscreen surface
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   69 00014       D0=(5)EC1 A=DAT0.A D0=A
+   70 00014       LC(3)$154
+*** ERROR: Duplicate symbol ***
+   71 00014       A=0.W
+*** ERROR: Illegal mnemonic ***
+   72 00014       { DAT0=A.W D0+16 C-1.X UPNC }
+   73
+   74
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   75 00014       % Assign out custom screen surface to Screen
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   76 00014       D0=(5)EC0 A=DAT0.A
+*** ERROR: Illegal mnemonic ***
+   77 00014       D0=(5)SCREENADD DAT0=A.A
+   78
+   79
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   80 00014       GOSUBL DISP.LEVEL
+   81
+   82
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   83 00014       GOSUBL CUBE
+   84
+   85             *LCD
+   86
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   87 00014       % Grayscale
+   88
+*** ERROR: Duplicate symbol ***
+   89 00014       A=0.W
+*** ERROR: Illegal mnemonic ***
+   90 00014       D0=(5) $00128 % HEADERADD
+   91 00014       {
+*** ERROR: Illegal mnemonic ***
+   92 00014        A=DAT0 6
+   93 00014 6FFF   ?A#0.W UP
+   94 00018       }
+*** ERROR: Illegal mnemonic ***
+   95 00018       D1=(5)EC1 A=DAT1.A D1=A
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   96 00018       GOSUBL AF
+   97
+*** ERROR: Duplicate symbol ***
+   98 00018       A=0.W
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+   99 00018       D0=(5) $00128 % HEADERADD
+  100 00018       {
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+  101 00018        A=DAT0 6
+*** ERROR: Duplicate symbol ***
+  102 00018 6FFF   ?A#0.W UP
+  103 0001C       }
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+  104 0001C       D1=(5)EC1 A=DAT1.A
+*** ERROR: Illegal mnemonic ***
+  105 0001C       LC(5)$00AA0 A+C.A
+  106 0001C       D1=A
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+  107 0001C       GOSUBL AF
+  108
+*** ERROR: Duplicate symbol ***
+  109 0001C       A=0.W
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+  110 0001C       D0=(5) $00128 % HEADERADD
+  111 0001C       {
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+  112 0001C        A=DAT0 6
+*** ERROR: Duplicate symbol ***
+  113 0001C 6FFF   ?A#0.W UP
+  114 00020       }
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+  115 00020       D1=(5)EC1 A=DAT1.A
+*** ERROR: Illegal mnemonic ***
+*** ERROR: Duplicate symbol ***
+  116 00020       LC(5)$00AA0 A+C.A
+*** ERROR: Duplicate symbol ***
+  117 00020       D1=A
+*** ERROR: Illegal mnemonic ***
+  118 00020       %GOSUBL AF
+  119
+*** ERROR: Duplicate symbol ***
+  120 00020       % end of grayscale
+Saturn Assembler                                       Fri Mar 24 11:19:46 2017
+V3.0.8 (12/06/2002)   Symbol Table                       smhp_editor_50 Page    2
+
+ %                                 Rel       0 #00000000 -     6     7     8
+                                           9    10    11    12    13    14    35
+                                          47    51    56    63    68    75    87
+                                         120
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  Rel       0 #00000000 -     5    15
+ %GOSUBL                           Rel      32 #00000020 -   118
+ :                                 Rel       0 #00000000 -     2
+ ?A#0.W                            Rel      20 #00000014 -    93   102   113
+ A=0.A                             Rel       0 #00000000 -    36
+ A=0.W                             Rel      10 #0000000A -    59    71    89
+                                          98   109
+ A=DAT0                            Rel      20 #00000014 -    92   101   112
+ CLRST                             Rel       0 #00000000 -    19
+ CODEM                             Rel       0 #00000000 -     3
+ CP=80100                          Rel       0 #00000000 -    26
+ D0+1                              Rel       7 #00000007 -    53    65
+ D0=(5)                            Rel      20 #00000014 -    90    99   110
+ D0=(5)B                           Rel       0 #00000000 -    41
+ D0=(5)EC0                         Rel       0 #00000000 -    37    54    57
+                                          76
+ D0=(5)EC1                         Rel       0 #00000000 -    38    66    69
+ D0=(5)S                           Rel       0 #00000000 -    42
+ D0=(5)SCREENADD                   Rel      20 #00000014 -    77
+ D0=(5)X                           Rel       0 #00000000 -    39
+ D0=(5)X2                          Rel       0 #00000000 -    43
+ D0=(5)Y                           Rel       0 #00000000 -    40
+ D1=(5)EC1                         Rel      24 #00000018 -    95   104   115
+ D1=A                              Rel      28 #0000001C -   106   117
+ DC                                Rel       0 #00000000 -    21    22    23
+                                          24
+ DCCP                              Rel       0 #00000000 -    27    28    29
+                                          30    31    32    33
+ GOSUBL                            Rel       0 #00000000 -    45    80    83
+                                          96   107
+ INTOFF                            Rel       0 #00000000 -    18
+ LA                                Rel       0 #00000000 -    48
+ LC(2)$AA                          Rel      10 #0000000A -    58
+ LC(3)$154                         Rel      20 #00000014 -    70
+ LC(5)$00AA0                       Rel      28 #0000001C -   105   116
+ LC(5)$00AA1                       Rel       0 #00000000 -    52
+ LC(5)$01541                       Rel      10 #0000000A -    64
+ MAKE$N                            Ext                   -    52    64
+ SAVE                              Rel       0 #00000000 -    17
+ lBlcB22                           Rel      24 #00000018 -    94
+ lBlcB23                           Rel      28 #0000001C -   103
+ lBlcB24                           Rel      32 #00000020 -   114
+ lBloB10                           Rel      10 #0000000A -    60
+ lBloB11                           Rel      20 #00000014 -    72
+ lBloB12                           Rel      20 #00000014 -    91    93
+ lBloB12s                          Rel      24 #00000018 -    94
+ lBloB13                           Rel      24 #00000018 -   100   102
+ lBloB13s                          Rel      28 #0000001C -   103
+ lBloB14                           Rel      28 #0000001C -   111   113
+ lBloB14s                          Rel      32 #00000020 -   114
+Saturn Assembler                                       Fri Mar 24 11:19:46 2017
+V3.0.8 (12/06/2002)   Statistics                         smhp_editor_50 Page    3
+>>>>>>> Stashed changes
 
 Input Parameters
 
-  Source file name is smhp_editor_50.a
+  Source file name is smhp_editor_50.s
 
   Listing file name is smhp_editor_50.l
 
@@ -4035,4 +4331,4 @@ Warnings:
 
 Errors:
 
-  None
+  70 errors (first 7/last 120)
