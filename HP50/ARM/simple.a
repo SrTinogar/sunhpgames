@@ -1,29 +1,31 @@
 * File	simple.s	1
+* CODE
+	CON(5)	=DOCODE
+	REL(5)	LBL000
 * File	simple.s	2
 
 * File	simple.s	3
+
 * File	simple.s	4
 
 * File	simple.s	5
-	CON(5)	=DOCODE
-	REL(5)	LBL000
+SAVE
 * File	simple.s	6
 
 * File	simple.s	7
-
+A+1.A
 * File	simple.s	8
 
 * File	simple.s	9
-	GOSBVL	=SAVPTR
+LOAD
 * File	simple.s	10
-	GOSBVL	=GETPTR
+
 * File	simple.s	11
-
+LOADRPL
 * File	simple.s	12
-	GOSBVL	=GETPTRLOOP
-* File	simple.s	13
 
-* File	simple.s	14
+* File	simple.s	13
+* ENDCODE
 LBL000
-* File	simple.s	15
+* File	simple.s	14
 	CON(5)	=@

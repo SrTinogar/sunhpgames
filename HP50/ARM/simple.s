@@ -1,12 +1,11 @@
-ASSEMBLEM
-
-!RPL
-
-CODEM
+CODE
 
 
 
 SAVE
+
+A+1.A
+
 LOAD
 
 LOADRPL

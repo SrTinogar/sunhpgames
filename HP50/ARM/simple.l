@@ -1,48 +1,48 @@
-Saturn Assembler                                       Fri Mar 31 08:27:28 2017
+Saturn Assembler                                       Fri Mar 31 09:19:34 2017
 V3.0.8 (12/06/2002)                                      simple.a       Page    1
 
     1             * File  simple.s        1
-    2             * File  simple.s        2
-    3
-    4             * File  simple.s        3
-    5             * File  simple.s        4
+    2             * CODE
+    3 00000 00000         CON(5)  =DOCODE
+    4 00005 50000         REL(5)  LBL000
+    5             * File  simple.s        2
     6
-    7             * File  simple.s        5
-    8 00000 00000         CON(5)  =DOCODE
-    9 00005 A1000         REL(5)  LBL000
-   10             * File  simple.s        6
-   11
-   12             * File  simple.s        7
-   13
-   14             * File  simple.s        8
-   15
-   16             * File  simple.s        9
-   17 0000A 8F000         GOSBVL  =SAVPTR
-            00
-   18             * File  simple.s        10
-   19 00011 8F000         GOSBVL  =GETPTR
-            00
-   20             * File  simple.s        11
-   21
-   22             * File  simple.s        12
-   23 00018 8F000         GOSBVL  =GETPTRLOOP
-            00
-   24             * File  simple.s        13
-   25
-   26             * File  simple.s        14
-   27 0001F       LBL000
-   28             * File  simple.s        15
-   29 0001F 00000         CON(5)  =@
-Saturn Assembler                                       Fri Mar 31 08:27:28 2017
+    7             * File  simple.s        3
+    8
+    9             * File  simple.s        4
+   10
+   11             * File  simple.s        5
+   12 0000A       SAVE
+   13             * File  simple.s        6
+   14
+   15             * File  simple.s        7
+   16 0000A       A+1.A
+   17             * File  simple.s        8
+   18
+   19             * File  simple.s        9
+   20 0000A       LOAD
+   21             * File  simple.s        10
+   22
+   23             * File  simple.s        11
+   24 0000A       LOADRPL
+   25             * File  simple.s        12
+   26
+   27             * File  simple.s        13
+   28             * ENDCODE
+   29 0000A       LBL000
+   30             * File  simple.s        14
+   31 0000A 00000         CON(5)  =@
+Saturn Assembler                                       Fri Mar 31 09:19:34 2017
 V3.0.8 (12/06/2002)   Symbol Table                       simple.a       Page    2
 
- @                                 Ext                   -    29
- DOCODE                            Ext                   -     8
- GETPTR                            Ext                   -    19
- GETPTRLOOP                        Ext                   -    23
- LBL000                            Rel      31 #0000001F -    27     9
- SAVPTR                            Ext                   -    17
-Saturn Assembler                                       Fri Mar 31 08:27:28 2017
+ @                                 Ext                   -    31
+ A+1.A                             Rel      10 #0000000A -    16
+ DOCODE                            Ext                   -     3
+ LBL000                            Rel      10 #0000000A -    29     4
+ LOAD                              Rel      10 #0000000A -    20
+ LOADRPL                           Rel      10 #0000000A -    24
+ SAVE                              Rel      10 #0000000A -    12
+Saturn Assembler                                       Fri Mar 31 09:19:34 2017
 V3.0.8 (12/06/2002)   Statistics                         simple.a       Page    3
 
 Input Parameters
