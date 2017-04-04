@@ -1,160 +1,391 @@
-"!NO CODE !RPL
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	1
+
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	2
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	3
+
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	4
 * This program display a 131*64 graphic in a pretty way :-) * DO LCD->, run it, and enjoy!
 * This program has been created by Philippe Pamart
-::
+* ::
 * remove the menu and test for a grob
-CK1&Dispatch grob
-::
-TURNMENUOFF
-CODE
-% R0a: X
-% R1a: Y
-% R2a: @ grob
-SAVE GOSBVL DisableIntr
-A=DAT1.A D0=A LC 00014 A+C.A R2=A.A % adr 1st pixels of the grob D0+10 A=0.W A=DAT0.10 C=0.W LC 8300040 ?A=C.W % test the size
-{ *.End GOSBVL AllowIntr LOADRPL } % if not ok, return to RPL
-GOSBVL "D0->Row1" D1=A D0-15 C=DAT0.A C-15.A GOSBVL WIPEOUT % erase s creen
-GOSUB .PointAndLine C=R0.A C-1.A UPNC
-}
-A=R1.W A-1.A R1=A.A {
-% test the current point % go one pixel on the right
-% go one line higher
-% ready to scan from right to left
-% No interrupts
-LC 0003F R1=C.W {
-LC 00082 {
-R0=C.A
-LC 001 GOSBVL OUTCINRTN ?CBIT=1.6 -> .End % If backspace, then stop
-% initial position in Z
-% we are ready to scan right to left
-% save the counter
-LC 001 GOSBVL OUTCINRTN ?CBIT=1.6 -> .End % If backspace, then stop GOSUB .PointAndLine % test the current point
-A=R0.A A+1.A R0=A.A LC 83 ?A#C.B UP % go one pixel on the left
-}
-A=R1.A A-1.A R1=A.A UPNC % go one line higher (if not finish) }
-GOTO .End
-*.PointAndLine % This test the current pix, returns % if the pixel is white, draw a line
-% if it is black
-A=R1.A A+A.A C=R2.A C+A.A ASL.A A+C.A % Aa: @ line of pixel in the grob
-C=R0.A P=C.0 CSRB.A CSRB.A A+C.A D0=A % D0: point on the pixel to test ,
-% P = number of the pixel to test in % nibble (in Z/4Z)
-LC 2481248124812481 P=0 A=DAT0.B A&C.P ?A=0.P RTY GOSUB LIGNE GOSUB LIGNE GOSBVL "D0->Row1" D0-20 A=R0.A C=R1.A GOVLNG aPixonB
-*LIGNE
-GOSBVL "D0->Row1" D0-20 A=R0.A B=A.A LA 00041 C=R1.A D=C.A C=0.A GOVLNG aLineXor
-ENDCODE ;
-;
-@"
-"!NO CODE !RPL :: TURNMENUOFF
-CODE
+* CK1&Dispatch grob
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	10
+	CON(5)	=DOCOL
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	11
+	CON(5)	=DOCODE
+	REL(5)	LBL000
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	12
+
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	13
+*| C:\Users\julien\Documents\hp48games\HP50\ARM\test.s: 13: error: Unknown instruction TURNMENUOFF
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	14
+*| C:\Users\julien\Documents\hp48games\HP50\ARM\test.s: 14: error: Unknown instruction CODE
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	15
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	16
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	17
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	18
+	GOSBVL	=SAVPTR
+	GOSBVL	=DisableIntr
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	19
+	A=DAT1	A
+	D0=A
+	LCHEX	00014
+	A=A+C	A
+	R2=A.f	A
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	20
+	{
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	21
+.End
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	22
+	GOSBVL	=AllowIntr
+	GOSBVL	=GETPTRLOOP
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	23
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	24
+
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	25
+	}
+	GOSBVL	="D0->Row1"
+	D1=A
+	D0-	15
+	C=DAT0	A
+	C=C-	15	A
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	26
+	GOSBVL	=WIPEOUT
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	27
+	{
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	28
+	GOSUB	.PointAndLine
+	C=R0.f	A
+	C=C-	1	A
+	UPNC
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	29
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	30
+	}
+	A=R1
+	A=A-	1	A
+	R1=A.f	A
+	{
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	31
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	32
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	33
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	34
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	35
+	LCHEX	0003F
+	R1=C
+	{
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	36
+	LCHEX	00082
+	{
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	37
+	R0=C.f	A
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	38
+	LCHEX	001
+	GOSBVL	=OUTCINRTN
+	?CBIT=1	6
+	GOYES	.End
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	39
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	40
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	41
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	42
+	LCHEX	001
+	GOSBVL	=OUTCINRTN
+	?CBIT=1	6
+	GOYES	.End
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	43
+	A=R0.f	A
+	A=A+	1	A
+	R0=A.f	A
+	LCHEX	83
+	?A#C	B
+	UP
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	44
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	45
+	}
+	A=R1.f	A
+	A=A-	1	A
+	R1=A.f	A
+	UPNC
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	46
+	GOTO	.End
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	47
+.PointAndLine
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	48
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	49
+	A=R1.f	A
+	A=A+A	A
+	C=R2.f	A
+	C=C+A	A
+	ASL	A
+	A=A+C	A
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	50
+	C=R0.f	A
+	P=C	0
+	CSRB.f	A
+	CSRB.f	A
+	A=A+C	A
+	D0=A
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	51
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	52
+	LCHEX	2481248124812481
+	P=	0
+	A=DAT0	B
+	A=A&C	P
+	?A=0	P
+	RTNYES
+	GOSUB	=LIGNE
+	GOSUB	=LIGNE
+	GOSBVL	="D0->Row1"
+	D0-	20
+	A=R0.f	A
+	C=R1.f	A
+	GOVLNG	=aPixonB
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	53
+=LIGNE
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	54
+	GOSBVL	="D0->Row1"
+	D0-	20
+	A=R0.f	A
+	B=A	A
+	LAHEX	00041
+	C=R1.f	A
+	D=C	A
+	C=0	A
+	GOVLNG	=aLineXor
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	55
+LBL000
+	CON(5)	=SEMI
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	56
+*| C:\Users\julien\Documents\hp48games\HP50\ARM\test.s: 56: error: Unmatched control word: ;
+
+	CON(5)	=SEMI
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	57
+	CON(5)	=@"
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	58
+*| C:\Users\julien\Documents\hp48games\HP50\ARM\test.s: 58: error: Invalid string:  "!NO CODE !RPL :: TURNMENUOFF
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	59
+* CODE
+	CON(5)	=DOCODE
+	REL(5)	LBL001
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	60
 % % % % % % % % % %
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	61
 % Cp: pixel mask
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	62
 % test the pixel. if white, return
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	63
 % else, draw line twice in Xor mode % and draw the pixel in black.
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	64
 % D0 point on the screen % A/B: X coordinates
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	65
 % C/D: Y coordinates % draw the line!
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	66
 ( turn into RPL mode)
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	67
 ( open a RPL program )
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	68
 ( remove the menu line )
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	69
 % open an assembly program
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	70
 this program takes control of the screen and
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	71
 display a mandelbrot set using the standard algorythm ie: for each point from x=-1.5 to 0.5,
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	72
 for each point from y=-1 to 1 if any an, n<256 in the serie
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	73
 a0=x+iy (complex number), an+1=a0+an2
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	74
 has an absolute value > 2, the point is not part of the set the numbers are stored on 32 bits.
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	75
 the numbers are shifted by 12 bits, the lower 12 bits representing the decimal part of the number (in 1/4096)
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	76
 SAVE INTOFF SKUB { *start
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	77
 !ARM
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	78
 STMDB sp! {R4 R5 R6 R7 R8 LP}
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	79
 LDR R2, [R1, #2324] LDR R3, [R1, #2340]
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	80
 MOV R7 R2 MOV R8 R3 MOV R6 256
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	81
 % save the RPL pointers
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	82
 % disable keyboard interrupts % jump over the ARM code
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	83
 % switch to ARM mode
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	84
 % save registers in the stack
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	85
 % load R2=x (content of saturn % reg B, nibbles 0-7)
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	86
 % load R3=y (content of saturn % reg B, nibbles 0-7)
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	87
 % copy X in r7
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	88
 % copy Y in r8
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	89
 % copy 256 in R6
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	90
 % r4= x2 << 12 % r4= x2
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	91
 % r5= y2
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	92
 {
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	93
 MUL R4, R2, R2 MOV R4 R4 >> 12 MUL R5, R3, R3 MOV R5 R5 >> 12
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	94
 ADD LP R4 R5 CMP LP $4000 EXITGT
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	95
 SUBR4R4R5
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	96
 MULR3R2R3
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	97
 ADDR2R7R4
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	98
 MOVR3R3>> ADDR3R8R3
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	99
 SUBSR6R61 UPNE
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	100
 11
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	101
 % LP = x2 + y2
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	102
 % if abs2 an > 4 % exit
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	103
 % r4= x2-y2
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	104
 % R3= X*Y
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	105
 % r2= X + x2-y2 = new x
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	106
 % r3= x*y*2
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	107
 % r3= Y+2*x*y = new Y
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	108
 % decrement loop counter % up if not 0
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	109
 % we have looped 256 times and abs(An)<2, the point is in the set! LDRB R6 [R1 2408] % clear the flag ST0
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	110
 BIC R6 R6 1
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	111
 STRB R6 [R1 2408]
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	112
 LDMIA sp! {R4 R5 R6 R7 R8 PC} % restore all registers and return }
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	113
 % we have reached a An where abs(An)>2,the point is out of the set
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	114
 LDRB R6 [R1 2408]
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	115
 ORR R6 R6 1
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	116
 STRB R6 [R1 2408]
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	117
 LDMIA sp! {R4 R5 R6 R7 R8 PC}
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	118
 !ASM
 *end
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	120
 }
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	121
 C=RSTK D0=C D1=80100
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	122
 LC(5) end-start MOVEDN C=0.B SETLNED
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	123
 D1=8229E
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	124
 LC A9 A=0.W A-1.W { DAT1=A.W D1+16 C-1.B UPNC } % paint it in black
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	125
 D0=00120 LC 8229E DAT0=C.A D0=C
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	126
 LC FFFFEFFF D=C.W LC 4F R3=C.B
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	127
 {
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	128
 C=0.W LC 1800 C=-C.W B=C.W LC 82
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	129
 A=0.S A+1.S
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	130
 {
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	131
 RSTK=C
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	132
 LC 80100 ARMSAT ?ST=0.0
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	133
 {
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	134
 C=DAT0.S C-A.S DAT0=C.S
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	135
 % point the screen to that memory % D0 point on that memory
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	136
 % D=Y=-1
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	137
 % loop 80 times
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	138
 % B=X=-1.5
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	139
 % loop 131 times % set bit 0 in As
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	140
 % save loop counter in RSTK
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	141
 % evaluate the ARM code
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	142
 % if point is in the set, do nothing
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	143
 % else, turn the pixel off
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	144
 % next pixel
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	145
 % increment X
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	146
 % count down and loop
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	147
 % next graphic line
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	148
 % increment Y
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	149
 % count down and loop
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	150
 % wait for no key down
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	151
 }
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	152
 A+A.S SKNC { D0+1 A+1.S }
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	153
 C=0.W LC 40 B+C.W C=RSTK C-1.B UPNC
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	154
 }
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	155
 D0+2
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	156
 C=0.W LC 66 D+C.W C=R3.W C-1.B R3=C.W UPNC
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	157
 }
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	158
 LC FF OUT=C { C=IN2 ?C=0.B UP }
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	159
 % set the flag ST0
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	160
 % restore all registers and return % back in ASM mode
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	161
 % D0 points on ARM instruction % D1 points at a place where
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	162
 % I can copy the program
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	163
 % copy n nibbles
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	164
 % hide the header
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	165
 % point on 2Kb free memory
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	166
 { C=IN2 ?C#0.B UP }
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	167
 INTON
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	168
 LC 10 SETLNED
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	169
 SCREEN CD0EX D0=00120 DAT0=C.A LOADRPL
-ENDCODE ;
-@"
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	170
+ENDCODE;
+* File	C:\Users\julien\Documents\hp48games\HP50\ARM\test.s	171
+@
