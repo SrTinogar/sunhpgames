@@ -1,0 +1,88 @@
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%						%
+		%		   DrMARIO			%
+		%						%
+		%	By Julien Meyer - SunHP (C) 1998	%
+		%						%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+	DrMARIO is a new fast arcade freeware game for your Hp48g(X).
+
+
+Presentation
+============
+
+	
+
+
+Before playing Meganoid
+=======================
+
+Download DrMARIO.LIB in your HP48 in binary, using Kermit protocol.
+Meganoid is a library object. To use it, you must store it in a port:
+
+
+
+- Put the library in the stack, then: 'DrMARIO.LIB' PURGE
+
+- type 0, 1, or 2 [..32], then STO according to whether you have a plug-in
+  card.
+
+
+Then press [ON]-[C].  (Press and hold [ON], then press [C] and release
+them both).  The calculator will perform a warm start.
+Meganoid Gold is now installed and ready for use.
+
+
+Using it for the first time
+===========================
+
+Go to the library menu.
+Press the white soft-key underneath the name DrMARIO.  If DrMARIO does not
+appear in the menu, press [NXT] until it appears.
+
+
+What are DrMARIO Keys ?
+========================
+
+
+
+	During the game, DrMARIO original keys are:
+
+			[DEL]	PAUSE ON/OFF
+			[DROP]	BACK TO DESK
+
+
+	During the presentation, adjust the LCD contrast, using:
+
+			[+] Contrast UP
+			[-] Contrast DOWN
+
+
+
+About DrMARIO Bonus
+====================
+
+
+What can I do with this game ?
+==============================
+
+DrMARIO is freeware, so you can distribute to your friends, on the
+Internet, etc.. I hope you'll enjoy playing this game during boring
+lessons, during the plane, the train, and wherever you want :-)
+
+Never forget that the Hp48 is the best calculator ever made on earth !!
+
+I will be very glad to receive your remarks concerning this game, if you
+want to write to me, here is my e-mail address: <meyert@club-internet.fr>
+
+
+			      HAVE FUN !!
+
+
+	-----------------------------------------------------------
+	Julien MEYER - Alias: SunHP e-mail: meyert@club-internet.fr
+		     Web site: http://www.chez.com/sunhp
+	-----------------------------------------------------------

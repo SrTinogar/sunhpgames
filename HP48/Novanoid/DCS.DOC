@@ -1,0 +1,71 @@
+---------------------------------------------
+The Programs:
+
+EDIT:   Place a real number on the stack and EDIT will edit that level.
+
+DIAMONDS: Play Diamonds.  This is so you can quickly play your new levels.
+
+XPND:   Place a real number on the stack, and XPND will append that number
+        of NULL levels to the end of the 'LEVELS.D12' library object.
+
+ORDER:  Place a list of real numbers on the stack, and this command will
+        order your levels.  It works just like the user-RPL ORDER command.
+
+CONCAT: Place two level objects on the stack (Library Data) and CONCAT will
+        Concatenate the two objects.  The result is one single level object.
+
+ABOUT:  As the name says.
+
+DIALEVELS: Recall the DIAMONDS' levels on the stack (Library Data).
+
+---------------------------------------------
+
+If no 'LEVELS.D12' is present in the current directory path, then one is
+created in the current directory, with 1 NULL level in it.  So, if there
+is no 'LEVELS.D12' present, and you execute n XPND, 'LEVELS.D12' is created,
+and contains n+1 NULL levels.
+
+Keys to use with EDIT :
+
+cursor keys:  move the cursor
+[<=]       :  Quit and save changes.
+[*]        :  Toggle between bricks/ball mode.
+[ON]       :  Abort Edit (changes are lost, after confirmation).
+[OFF]      :  Turn the calculator off.
+
+In ball mode:
+
+[+/-]      :  Toggle fast/slow ball movements.
+[EEX]      :  Change the ball direction (start moving up or down).
+
+In bricks mode :
+
+[ENTER]    :  Place a brick.
+[DEL]      :  Delete a brick.
+[+] or [-] :  Change the current brick.
+[NXT]      :  Edit the next level.
+[PREV]     :  Edit the previous level.
+[D]        :  Delete the current level (after confirmation).
+[I]        :  Insert a null level.
+
+---------------------------------------------
+
+Each level must contain at least one regular brick and 
+one Diamond brick (brick #2).
+You may not have more than 99 levels in one levels object.
+
+--------------------------------------------
+
+This library has been written using only supported entries,
+so it may work fine on any HP48.
+However I cannot be taken responsible for any dammage caused
+by the use or misuse of this library.
+
+--------------------------------------------
+
+Thanks to :
+
+- Douglas Cannon for suggestions and writting this doc.
+- Detlef Muller & Raimond Hellstern for their Sys-Rpl tools.
+
+-------------------------------------------

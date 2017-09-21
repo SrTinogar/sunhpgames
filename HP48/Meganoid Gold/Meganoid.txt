@@ -1,0 +1,108 @@
+
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		%						%
+		%		MEGANOID GOLD			%
+		%						%
+		%	By Julien Meyer - SunHP (C) 1997	%
+		%						%
+		%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+	MEGANOID GOLD is a new fast arcade freeware game for your Hp48g(X).
+
+
+Presentation
+============
+
+All this game is written in assembly machine language. That's why this game
+is fast, and beautiful. I use greyscales grafics, the buzzer, buffer memory.
+In this version, there are 3th best Meganoid player name's with their score,
+at end of the game. Try to put your name in this top score, if you could :-)
+MEGANOID is a Breakout game, you have to destroy a wall with a ball. Each
+time you break a brick you win points and maybe some bonus.
+
+
+Before playing Meganoid
+=======================
+
+Download MEGANOID.LIB in your HP48 in binary, using Kermit protocol.
+Meganoid is a library object. To use it, you must store it in a port:
+
+
+- Put the library in level 1 of the stack.
+
+- type 0, 1, or 2 [..32], then STO according to whether you have a plug-in
+  card.
+
+
+Then press [ON]-[C].  (Press and hold [ON], then press [C] and release
+them both).  The calculator will perform a warm start.
+Meganoid Gold is now installed and ready for use.
+
+
+Using it for the first time
+===========================
+
+Go to the library menu.
+Press the white soft-key underneath the name MEGA.  If MEGA does not
+appear in the menu, press [NXT] until it appears.
+
+
+What are Meganoid Keys ?
+========================
+
+You play meganoid with any keys you want, just define them using [D]
+menu key during presentation. Standart KeyS are:
+
+
+			[A] 	SOUND ON/OFF
+			[B] 	PLAY !!
+			[C] 	1P/2P
+			[D] 	KEYS
+			[E] 	ABOUT (in French)
+			[F] 	QUIT..
+
+
+	You can play Meganoid with in 1P Mode, using:
+
+			[4] 	LEFT
+			[6] 	RIGHT
+
+
+	If you play Meganoid with 2P Mode, keys are:
+
+			[GREEN] LEFT	1P
+			[1] 	RIGHT	1P
+			[9] 	LEFT	2P
+			[/] 	RIGHT	2P
+
+
+	During the game, Meganoid original keys are:
+
+			[DEL]	PAUSE ON/OFF
+			[DROP]	BACK TO DESK
+
+
+	During the presentation, adjust the LCD contrast, using:
+
+			[+] Contrast UP
+			[-] Contrast DOWN
+
+
+What can I do with this game ?
+==============================
+
+Meganoid is freeware, so you can distribute to your friends, on the
+Internet, etc.. I hope you'll enjoy playing this game during boring
+lessons, during the plane, the train, and wherever you want :-)
+
+Never forget that HP48 is the best calculator ever made on earth !!
+
+
+			      HAVE FUN !!
+
+
+	-----------------------------------------------------------
+	Julien MEYER - Alias: SunHP e-mail: meyert@club-internet.fr
+		     Web site: http://www.chez.com/sunhp
+	-----------------------------------------------------------

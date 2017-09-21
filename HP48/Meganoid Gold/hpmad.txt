@@ -1,0 +1,16 @@
+*HPMAD
+GOSBVL  01C31
+LC 01
+*boucle
+A=DAT0  W
+A=A+A   W
+DAT0=A  W
+D0=D0+  16
+A=DAT0  W
+ASRB
+DAT0=A  15
+D0=D0+  16
+D0=D0+  2
+C=C-1 B
+GONC boucle
+RTN

@@ -1,0 +1,70 @@
+%%HP: T(3)A(D)F(.);
+"
+A=0 W
+C=0 W
+A=B W
+C=D W
+AD0EX
+CD1EX
+A=0 W
+C=0 W
+LC 5
+B=C A
+D=C A
+LA 3
+C=0 W
+*SN1..
+C=0 W
+OUT=C
+LC 800
+OUT=C
+C=0 W
+OUT=C
+LC 800
+OUT=C
+*AT1..
+B=B-1 A
+GONC AT1..
+B=0 W
+C=0 W
+C=D A
+B=C A
+D=D-1 A
+C=0 W
+A=A-1 A
+GONC SN1..
+A=0 W
+C=0 W
+LC 20
+B=C A
+D=C A
+LA 5
+C=0 W
+*SN2..
+C=0 W
+OUT=C
+LC 800
+OUT=C
+C=0 W
+OUT=C
+*AT2..
+B=B-1 A
+GONC AT2..
+B=0 W
+C=0 W
+C=D A
+B=C A
+D=D+1 A
+C=0 W
+A=A-1 A
+GONC SN2..
+A=0 W
+C=0 W
+AD0EX
+CD1EX
+B=A W
+D=C W
+A=0 W
+C=0 W
+
+@"

@@ -1,0 +1,20 @@
+** Meganoid v2.0 by SunHP **
+Copyright (c) 1997 by SunHP
+
+Standard keys are:
+
+[A] sound ON/OFF
+[B] Play
+[C] 1P/2P
+[D] Keys
+[E] About
+[F] quit
+
+[green shift] left 1P
+[1] right 1P
+[3] left 2P
+[-] right 2P
+[DROP] quit
+
+Have Fun,
+SunHP
